@@ -21,7 +21,7 @@ on:
       platforms:
         description: "Plataformas (separadas por vírgula)"
         required: false
-        default: "twitter,instagram,facebook"
+        default: "instagram,facebook"
 
 jobs:
   post:
@@ -55,7 +55,7 @@ jobs:
           IG_DEFAULT_IMAGE_URL: ${{ secrets.IG_DEFAULT_IMAGE_URL }}
           DRY_RUN: ${{ inputs.dry_run || 'false' }}
         run: |
-          PLATFORMS="${{ inputs.platforms || 'twitter,instagram,facebook' }}"
+          PLATFORMS="${{ inputs.platforms || 'instagram,facebook' }}"
           python src/main.py --platforms "$PLATFORMS" ${{ inputs.dry_run == 'true' && '--dry-run' || '' }}
 
       - name: Upload logs
