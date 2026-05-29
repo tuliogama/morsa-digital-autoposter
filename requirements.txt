@@ -1,0 +1,3 @@
+# Sem dependências externas — usa apenas stdlib do Python 3.12
+# (urllib, json, xml, hashlib, hmac, secrets, logging)
+# Anthropic API é chamada diretamente via urllib para zero deps

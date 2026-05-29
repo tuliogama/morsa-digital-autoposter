@@ -1,0 +1,29 @@
+{
+  "brand": {
+    "name": "Morsa Digital",
+    "handle": "@morsadigital",
+    "language": "pt-BR",
+    "tone": {
+      "twitter": "descontraido_nerd",
+      "instagram": "descontraido_nerd",
+      "facebook": "acessivel_informativo"
+    }
+  },
+  "news": {
+    "max_age_hours": 48,
+    "min_score_hackernews": 50,
+    "topics": [
+      "inteligência artificial", "IA", "machine learning",
+      "programação", "desenvolvimento", "software",
+      "games", "gaming", "videogame",
+      "gadgets", "smartphones", "Apple", "Google", "Microsoft",
+      "open source", "Linux", "segurança", "privacidade",
+      "startups", "tecnologia"
+    ]
+  },
+  "posting": {
+    "max_posts_per_run": 3,
+    "platforms": ["twitter", "instagram", "facebook"],
+    "avoid_duplicate_hours": 12
+  }
+}
