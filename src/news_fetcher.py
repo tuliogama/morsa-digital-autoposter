@@ -14,19 +14,19 @@ logger = logging.getLogger(__name__)
 
 # Fontes RSS nerd/geek/pop — Brasil e internacional
 NERD_RSS_FEEDS = [
-    # Brasil ✅ URLs verificadas
-    ("Omelete", "https://feeds.feedburner.com/omelete"),
-    ("IGN Brasil", "https://br.ign.com/feed.xml"),
-    ("Jovem Nerd", "https://feeds.feedburner.com/JovemNerd"),
-    ("Pipoca Moderna", "https://www.pipocamoderna.com.br/feed/"),
-    # Internacional ✅ URLs verificadas
-    ("IGN", "https://feeds.feedburner.com/ign/all"),
-    ("Kotaku", "https://kotaku.com/rss"),
-    ("ComicBook", "https://comicbook.com/feed/"),
-    ("Screen Rant", "https://screenrant.com/feed/"),
-    ("Polygon", "https://www.polygon.com/rss/index.xml"),
-    ("The Verge", "https://www.theverge.com/rss/index.xml"),
-    ("Game Informer", "https://www.gameinformer.com/rss.xml"),
+    # Brasil ✅ verificados em maio/2026
+    ("IGN Brasil",          "https://br.ign.com/feed.xml"),
+    ("Cinema com Rapadura", "https://cinemacomrapadura.com.br/feed/"),
+    # Internacional ✅ verificados em maio/2026
+    ("IGN",         "https://feeds.feedburner.com/ign/all"),
+    ("Kotaku",      "https://kotaku.com/rss"),
+    ("ComicBook",   "https://comicbook.com/feed/"),
+    ("Den of Geek", "https://www.denofgeek.com/feed/"),
+    ("The Verge",   "https://www.theverge.com/rss/index.xml"),
+    ("Deadline",    "https://deadline.com/feed/"),
+    ("Variety",     "https://variety.com/feed/"),
+    # Mortos: Omelete (404), JovemNerd (redirect), Screen Rant (timeout),
+    #         Polygon (timeout), Game Informer (timeout)
 ]
 
 HEADERS = {
@@ -65,9 +65,8 @@ def _fetch_url(url: str, timeout: int = 10) -> Optional[str]:
 def _is_nerd_content(title: str, source: str) -> bool:
     """Verifica se o conteúdo é relevante para o público nerd/geek/pop."""
     # Fontes 100% nerd — aceitar tudo
-    nerd_sources = {"Omelete", "IGN Brasil", "The Enemy", "Jovem Nerd",
-                    "Pipoca Moderna", "IGN", "Kotaku", "ComicBook",
-                    "Screen Rant", "Game Informer", "Polygon"}
+    nerd_sources = {"IGN Brasil", "Cinema com Rapadura", "IGN", "Kotaku",
+                    "ComicBook", "Den of Geek", "Screen Rant", "Polygon"}
     if source in nerd_sources:
         return True
 
