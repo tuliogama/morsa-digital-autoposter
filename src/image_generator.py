@@ -26,8 +26,8 @@ COLOR_BLACK  = (0, 0, 0)
 COLOR_WHITE  = (255, 255, 255)
 COLOR_DARK   = (15, 15, 15)    # fundo escuro
 
-LOGO_SIZE    = 120   # px — logo redondinha
-LOGO_MARGIN  = 30    # distância das bordas
+LOGO_SIZE    = 140   # px — logo redondinha
+LOGO_MARGIN  = 40    # distância das bordas
 
 ASSETS_DIR   = Path(__file__).parent.parent / "assets"
 LOGO_PATH    = ASSETS_DIR / "morsa_logo.png"
@@ -133,11 +133,29 @@ def _add_gradient_overlay(img):
 
 
 def _paste_logo(base_img, logo_size: int = LOGO_SIZE, margin: int = LOGO_MARGIN):
-    """Cola a logo redondinha no canto inferior direito."""
+    """Cola a logo redondinha no canto inferior direito com halo para contraste."""
+    from PIL import Image, ImageDraw
+
     logo = _round_logo(logo_size)
-    x = base_img.width - logo_size - margin
-    y = base_img.height - logo_size - margin
+
+    # Halo semitransparente por baixo da logo (garante visibilidade em qualquer fundo)
+    halo_size = logo_size + 16
+    halo = Image.new("RGBA", (halo_size, halo_size), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(halo)
+    draw.ellipse((0, 0, halo_size - 1, halo_size - 1), fill=(0, 0, 0, 120))
+
     base_rgba = base_img.convert("RGBA")
+
+    # Posição: canto inferior direito, margem consistente
+    x = base_rgba.width - logo_size - margin
+    y = base_rgba.height - logo_size - margin
+
+    # Cola halo centrado sob a logo
+    halo_x = x - (halo_size - logo_size) // 2
+    halo_y = y - (halo_size - logo_size) // 2
+    base_rgba.paste(halo, (halo_x, halo_y), halo)
+
+    # Cola logo sobre o halo
     base_rgba.paste(logo, (x, y), logo)
     return base_rgba
 

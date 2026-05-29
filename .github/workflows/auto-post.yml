@@ -2,13 +2,19 @@ name: Morsa Digital — Auto Post
 
 on:
   schedule:
-    # Horários em UTC (Brasil = UTC-3)
-    # 09:00 BRT = 12:00 UTC
-    # 14:00 BRT = 17:00 UTC
+    # Horários em UTC (Brasil = UTC-3) — 6 posts/dia
+    # 08:00 BRT = 11:00 UTC
+    # 10:30 BRT = 13:30 UTC
+    # 13:00 BRT = 16:00 UTC
+    # 16:00 BRT = 19:00 UTC
     # 19:00 BRT = 22:00 UTC
-    - cron: "0 12 * * *"   # manhã
-    - cron: "0 17 * * *"   # tarde
-    - cron: "0 22 * * *"   # noite
+    # 21:30 BRT = 00:30 UTC
+    - cron: "0 11 * * *"    # 08h BRT
+    - cron: "30 13 * * *"   # 10h30 BRT
+    - cron: "0 16 * * *"    # 13h BRT
+    - cron: "0 19 * * *"    # 16h BRT
+    - cron: "0 22 * * *"    # 19h BRT
+    - cron: "30 0 * * *"    # 21h30 BRT
 
   workflow_dispatch:
     inputs:
@@ -21,7 +27,7 @@ on:
       platforms:
         description: "Plataformas (separadas por vírgula)"
         required: false
-        default: "instagram,facebook"
+        default: "instagram"
 
 jobs:
   post:
@@ -55,7 +61,7 @@ jobs:
           IG_DEFAULT_IMAGE_URL: ${{ secrets.IG_DEFAULT_IMAGE_URL }}
           DRY_RUN: ${{ inputs.dry_run || 'false' }}
         run: |
-          PLATFORMS="${{ inputs.platforms || 'instagram,facebook' }}"
+          PLATFORMS="${{ inputs.platforms || 'instagram' }}"
           python src/main.py --platforms "$PLATFORMS" ${{ inputs.dry_run == 'true' && '--dry-run' || '' }}
 
       - name: Upload logs
