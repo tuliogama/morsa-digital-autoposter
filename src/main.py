@@ -82,6 +82,11 @@ def main():
     # 2. Gerar posts com IA
     logger.info("Gerando posts com Claude AI...")
     posts = generate_all_posts(news, platforms=platforms)
+
+    # Injetar news_item no post para geração de imagem
+    news_by_title = {n["title"]: n for n in news}
+    for post in posts:
+        post["news_item"] = news_by_title.get(post.get("source_title", ""), {})
     logger.info(f"{len(posts)} posts gerados")
 
     if not posts:
