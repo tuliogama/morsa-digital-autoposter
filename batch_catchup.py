@@ -17,7 +17,7 @@ logger = logging.getLogger("catchup")
 GRAPH_URL       = "https://graph.facebook.com/v19.0"
 MAX_POSTS       = 8     # máximo de posts nessa sessão
 DELAY_BETWEEN   = 45    # segundos entre posts
-LOOKBACK_DAYS   = 7     # janela de busca
+LOOKBACK_DAYS   = 3     # janela de busca
 
 
 def get_posted_captions(ig_user_id: str, token: str) -> set[str]:
