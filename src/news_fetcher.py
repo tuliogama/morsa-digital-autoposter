@@ -14,21 +14,19 @@ logger = logging.getLogger(__name__)
 
 # Fontes RSS nerd/geek/pop — Brasil e internacional
 NERD_RSS_FEEDS = [
-    # Brasil
-    ("Omelete", "https://www.omelete.com.br/rss/tudo"),
+    # Brasil ✅ URLs verificadas
+    ("Omelete", "https://feeds.feedburner.com/omelete"),
     ("IGN Brasil", "https://br.ign.com/feed.xml"),
-    ("The Enemy", "https://www.theenemy.com.br/feed"),
-    ("Jovem Nerd", "https://jovemnerd.com.br/feed/"),
+    ("Jovem Nerd", "https://feeds.feedburner.com/JovemNerd"),
     ("Pipoca Moderna", "https://www.pipocamoderna.com.br/feed/"),
-    # Internacional
+    # Internacional ✅ URLs verificadas
     ("IGN", "https://feeds.feedburner.com/ign/all"),
     ("Kotaku", "https://kotaku.com/rss"),
-    ("io9 / Gizmodo", "https://gizmodo.com/rss"),
-    ("ComicBook", "https://comicbook.com/rss/all"),
+    ("ComicBook", "https://comicbook.com/feed/"),
     ("Screen Rant", "https://screenrant.com/feed/"),
-    ("Game Informer", "https://www.gameinformer.com/rss.xml"),
     ("Polygon", "https://www.polygon.com/rss/index.xml"),
-    ("The Verge (Tech/Culture)", "https://www.theverge.com/rss/index.xml"),
+    ("The Verge", "https://www.theverge.com/rss/index.xml"),
+    ("Game Informer", "https://www.gameinformer.com/rss.xml"),
 ]
 
 HEADERS = {
