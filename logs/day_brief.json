@@ -1,34 +1,34 @@
 {
-  "strategy_note": "Domine o feed com anúncios diretos e afirmações sobre franquias consagradas. Foco em personagens icônicos e confirmações de estúdios que geram FOMO emocional.",
+  "strategy_note": "Focar em anúncios diretos e afirmações emotivas sobre franquias consolidadas (Marvel, DC, animação). Evitar conteúdo genérico de tech/games sem conexão emocional clara.",
   "prioritize_categories": [
-    "cinema",
-    "séries",
-    "games"
+    "Marvel/Superheroes",
+    "Animação/Anime",
+    "Franquias Blockbuster"
   ],
   "prioritize_sources": [
     "r/marvelstudios",
-    "r/StarWars",
-    "r/PS5"
+    "r/DC_Cinematic",
+    "IGN Brasil",
+    "AnimeUnited"
   ],
   "avoid_topics": [
-    "Toy Story 5",
-    "X-Men '97",
-    "Tom Holland Punisher",
-    "Marcia Lucas",
-    "Dorohedoro",
-    "GTA 6",
-    "Jogo BR no Switch"
+    "GTA 6 desenvolvimento",
+    "Robótica/IA futurista",
+    "Dorohedoro revival",
+    "Xbox/Phil Spencer",
+    "Fable delays",
+    "Games indie brasileiros"
   ],
   "recommended_hook_style": "anuncio_direto",
-  "content_angle": "Confirmações e revelações de personagens/franquias que o fã 'jurava que nunca veria', criando tensão emocional imediata",
+  "content_angle": "Revelações exclusivas e confirmações de atores sobre projetos já em desenvolvimento (tipo Tom Holland + Punisher), ao invés de rumores genéricos",
   "topics_to_explore": [
-    "Stray Nintendo Switch 2",
-    "Sony State of Play revelações",
+    "Milly Alcock como Supergirl e responsabilidade do papel",
     "Naruto revival 2027",
-    "Milly Alcock Supergirl",
-    "One Piece 1184"
+    "Sony State of Play countdown",
+    "Hayao Miyazaki personagem Studio Ghibli",
+    "Morte de Marcia Lucas (Star Wars editor)"
   ],
-  "engagement_insight": "Posts com hook de 'anúncio direto' sobre confirmações de franquias geram 2.5x mais engajamento. Emoticons de destruição emocional (💔⚡) aumentam taxa de cliques. Evite perguntas abertas e anúncios genéricos de tecnologia.",
-  "generated_at": "2026-05-30T12:06:46.054857+00:00",
+  "engagement_insight": "Posts com celebridades confirmando informações e posts que evocam nostalgia/emoção (destruir você 💔, JURAVA que tinha morrido) geram 3-7x mais engajamento que pautas de tecnologia ou games em desenvolvimento",
+  "generated_at": "2026-05-30T12:19:11.165123+00:00",
   "date": "2026-05-30"
 }
