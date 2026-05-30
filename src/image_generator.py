@@ -237,14 +237,24 @@ def _paste_logo(base_img, logo_size: int = LOGO_SIZE, margin: int = LOGO_MARGIN)
 
 
 def _load_font(size: int):
-    """Carrega fonte bold disponível no sistema."""
+    """Carrega fonte — prioriza Bebas Neue (condensada bold, estilo IGN Brasil)."""
     from PIL import ImageFont
+
+    # Bebas Neue no repositório — funciona local e no GitHub Actions
+    bebas = ASSETS_DIR / "fonts" / "BebasNeue.ttf"
+    if bebas.exists():
+        try:
+            return ImageFont.truetype(str(bebas), size)
+        except Exception:
+            pass
+
+    # Fallback: fontes bold do sistema
     paths = [
+        "/Library/Fonts/Impact.ttf",
+        "/usr/share/fonts/truetype/msttcorefonts/Impact.ttf",
         "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
         "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
-        "/usr/share/fonts/truetype/freefont/FreeSansBold.ttf",
         "/System/Library/Fonts/Helvetica.ttc",
-        "/Library/Fonts/Arial Bold.ttf",
     ]
     for fp in paths:
         try:
