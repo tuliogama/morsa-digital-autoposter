@@ -1,6 +1,8 @@
 .env
 .env.local
 logs/
+!logs/posts_log.json
+!logs/day_brief.json
 __pycache__/
 *.pyc
 *.pyo
