@@ -187,7 +187,7 @@ def publish(post: dict) -> dict:
     # 6. Registrar no log persistente
     try:
         from posts_log import record_post
-        record_post(media_id, "instagram", news_item, caption)
+        record_post(media_id, "instagram", news_item, caption, image_url=image_url)
     except Exception as e:
         logger.warning(f"Falha ao registrar no posts_log: {e}")
 

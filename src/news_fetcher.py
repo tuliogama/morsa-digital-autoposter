@@ -44,6 +44,19 @@ HEADERS = {
 }
 
 # Palavras-chave para filtrar fontes mistas (Verge, Deadline, Variety, Gizmodo)
+# Palavras que indicam conteúdo a rejeitar independente da fonte
+BLOCK_KEYWORDS = [
+    # Podcasts
+    "podcast", "episódio", "episode", "ep.", " ep ", "rapaduracast", "nerdcast",
+    "jovemnerd", "maniacast", "ouça", "ouça agora", "escute",
+    # Listas/clickbait sem novidade factual
+    "melhores animes de", "melhores games de", "melhores filmes de",
+    "top 10", "top 5", "top 3", "ranking dos",
+    # Conteúdo proibido
+    "política", "eleição", "crypto", "bitcoin", "nft", "invest",
+    "fake news", "teoria da conspiração", "hoax",
+]
+
 NERD_KEYWORDS = [
     "game", "games", "gaming", "gta", "playstation", "xbox", "nintendo",
     "ps5", "steam", "indie", "rpg", "esport", "zelda", "call of duty",
@@ -67,7 +80,15 @@ def _fetch_url(url: str, timeout: int = 10) -> Optional[str]:
         return None
 
 
+def _is_blocked(title: str) -> bool:
+    """Rejeita podcasts, listas genéricas e conteúdo proibido independente da fonte."""
+    title_lower = title.lower()
+    return any(kw in title_lower for kw in BLOCK_KEYWORDS)
+
+
 def _is_nerd_content(title: str, source: str) -> bool:
+    if _is_blocked(title):
+        return False
     if source in NERD_SOURCES:
         return True
     title_lower = title.lower()

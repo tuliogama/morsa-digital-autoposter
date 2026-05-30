@@ -34,7 +34,7 @@ def _save(posts: list[dict]):
     LOG_PATH.write_text(json.dumps(posts, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
-def record_post(media_id: str, platform: str, news_item: dict, caption: str):
+def record_post(media_id: str, platform: str, news_item: dict, caption: str, image_url: str = ""):
     """Registra um post publicado no log persistente."""
     posts = _load()
     entry = {
@@ -43,6 +43,7 @@ def record_post(media_id: str, platform: str, news_item: dict, caption: str):
         "title": news_item.get("title", ""),
         "source": news_item.get("source", ""),
         "url": news_item.get("url", ""),
+        "image_url": image_url,
         "caption_preview": caption[:200],
         "published_at": datetime.now(timezone.utc).isoformat(),
         "metrics": {},
@@ -50,35 +51,47 @@ def record_post(media_id: str, platform: str, news_item: dict, caption: str):
     posts.append(entry)
     _save(posts)
     # Invalidar cache para que a próxima checagem releia o estado atualizado
-    global _api_words_cache
-    _api_words_cache = None
+    global _api_titles_cache
+    _api_titles_cache = None
     logger.info(f"Post registrado no log: {entry['title'][:60]}")
 
 
-def _fetch_api_posted_words() -> set:
+def _key_words(text: str) -> set:
     """
-    Fallback: busca os últimos 50 posts do Instagram via API e extrai palavras.
-    Usado quando posts_log.json não está disponível (primeira run, runner efêmero).
-    Resultado cacheado em memória durante a run.
+    Extrai palavras-chave de um texto para comparação de duplicatas.
+    Inclui palavras com >3 letras (pega nomes como 'lucas', 'wars', 'jedi').
     """
-    global _api_words_cache
-    if _api_words_cache is not None:
-        return _api_words_cache
+    return {w.lower() for w in text.split() if len(w) > 3 and w.isalpha()}
+
+
+# Cache: {media_id: first_line_of_caption}
+_api_titles_cache: Optional[dict] = None
+
+
+def _fetch_api_recent(limit: int = 20) -> dict:
+    """
+    Busca os últimos N posts do Instagram via API.
+    Retorna {media_id: first_line_of_caption} dos últimos 3 dias.
+    Cacheado em memória durante a run.
+    """
+    global _api_titles_cache
+    if _api_titles_cache is not None:
+        return _api_titles_cache
 
     token = os.environ.get("FB_ACCESS_TOKEN", "")
     ig_user_id = os.environ.get("IG_USER_ID", "")
     if not token or not ig_user_id:
-        _api_words_cache = set()
-        return _api_words_cache
+        _api_titles_cache = {}
+        return _api_titles_cache
 
     try:
         url = (f"https://graph.facebook.com/v19.0/{ig_user_id}/media"
-               f"?fields=caption,timestamp&limit=50&access_token={token}")
+               f"?fields=id,caption,timestamp&limit={limit}&access_token={token}")
         with urllib.request.urlopen(url, timeout=10) as r:
             data = json.loads(r.read())
 
-        words = set()
-        cutoff = datetime.now(timezone.utc) - timedelta(days=7)
+        result = {}
+        cutoff = datetime.now(timezone.utc) - timedelta(days=3)
         for post in data.get("data", []):
             try:
                 ts = datetime.fromisoformat(post.get("timestamp", "").replace("Z", "+00:00"))
@@ -86,27 +99,33 @@ def _fetch_api_posted_words() -> set:
                     continue
             except Exception:
                 pass
-            cap = post.get("caption", "").lower()
-            words.update(w for w in cap.split() if len(w) > 4 and w.isalpha())
+            cap = post.get("caption", "")
+            first_line = cap.split("\n")[0][:120] if cap else ""
+            result[post["id"]] = first_line
 
-        _api_words_cache = words
-        logger.info(f"Dedup API: {len(words)} palavras carregadas dos últimos 50 posts")
-        return words
+        _api_titles_cache = result
+        logger.info(f"Dedup API: {len(result)} posts recentes carregados (últimos 3 dias)")
+        return result
     except Exception as e:
         logger.warning(f"Dedup API falhou: {e}")
-        _api_words_cache = set()
-        return _api_words_cache
+        _api_titles_cache = {}
+        return _api_titles_cache
 
 
 def is_duplicate(title: str, platform: str = "instagram", lookback_days: int = 7) -> bool:
     """
     Verifica duplicata em duas camadas:
-    1. posts_log.json — checagem por título exato (preciso, cobre posts desta run)
-    2. Instagram API — checagem por sobreposição de palavras nas captions (fallback robusto)
+    1. posts_log.json — overlap de palavras-chave no título (threshold: 2)
+    2. Instagram API — overlap com primeiras linhas das últimas 20 captions (threshold: 2)
+
+    Threshold 2 (palavras >3 letras) captura nomes próprios como "Marcia Lucas",
+    "Star Wars", "Toy Story" que antes escapavam com threshold 3 e palavras >4 letras.
     """
-    title_words = {w.lower() for w in title.split() if len(w) > 4 and w.isalpha()}
+    title_words = _key_words(title)
     if not title_words:
         return False
+
+    THRESHOLD = 2  # 2 palavras-chave em comum = mesmo assunto
 
     # Camada 1: posts_log.json (título → título)
     posts = _load()
@@ -122,18 +141,21 @@ def is_duplicate(title: str, platform: str = "instagram", lookback_days: int = 7
                 continue
         except Exception:
             continue
-        existing_words = {w.lower() for w in p.get("title", "").split() if len(w) > 4 and w.isalpha()}
-        if len(title_words & existing_words) >= 3:
-            logger.info(f"Duplicata (log local): '{title[:60]}'")
+        existing_words = _key_words(p.get("title", ""))
+        overlap = title_words & existing_words
+        if len(overlap) >= THRESHOLD:
+            logger.info(f"Duplicata (log local): '{title[:60]}' — overlap={overlap}")
             return True
 
-    # Camada 2: Instagram API — palavras das captions publicadas
+    # Camada 2: Instagram API — primeiras linhas das últimas 20 captions
     if platform == "instagram":
-        api_words = _fetch_api_posted_words()
-        overlap = title_words & api_words
-        if len(overlap) >= 3:
-            logger.info(f"Duplicata (API Instagram): '{title[:60]}' — overlap={overlap}")
-            return True
+        recent = _fetch_api_recent(limit=20)
+        for mid, first_line in recent.items():
+            api_words = _key_words(first_line)
+            overlap = title_words & api_words
+            if len(overlap) >= THRESHOLD:
+                logger.info(f"Duplicata (API Instagram): '{title[:60]}' — overlap={overlap}")
+                return True
 
     return False
 
