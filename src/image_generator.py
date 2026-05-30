@@ -160,69 +160,117 @@ def _paste_logo(base_img, logo_size: int = LOGO_SIZE, margin: int = LOGO_MARGIN)
     return base_rgba
 
 
-def _create_branded_background(title: str = "") -> "Image":
-    """Cria fundo branded (preto + diagonal laranja) quando não há imagem."""
-    from PIL import Image, ImageDraw, ImageFont
+def _load_font(size: int):
+    """Carrega fonte bold disponível no sistema."""
+    from PIL import ImageFont
+    paths = [
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+        "/usr/share/fonts/truetype/freefont/FreeSansBold.ttf",
+        "/System/Library/Fonts/Helvetica.ttc",
+        "/Library/Fonts/Arial Bold.ttf",
+    ]
+    for fp in paths:
+        try:
+            return ImageFont.truetype(fp, size)
+        except Exception:
+            continue
+    return ImageFont.load_default()
+
+
+def _wrap_text(draw, text: str, font, max_w: int) -> list[str]:
+    """Quebra texto em linhas que cabem em max_w pixels."""
+    words = text.split()
+    lines, line = [], ""
+    for word in words:
+        test = (line + " " + word).strip()
+        try:
+            bbox = draw.textbbox((0, 0), test, font=font)
+            if bbox[2] > max_w and line:
+                lines.append(line)
+                line = word
+            else:
+                line = test
+        except Exception:
+            line = test
+    if line:
+        lines.append(line)
+    return lines
+
+
+def _create_branded_background(title: str = "", source: str = "") -> "Image":
+    """
+    Fundo branded profissional quando não há imagem do artigo.
+    Design: fundo escuro texturizado + bloco laranja + título em destaque + badge da fonte.
+    """
+    from PIL import Image, ImageDraw
 
     img = Image.new("RGBA", (POST_W, POST_H), (*COLOR_DARK, 255))
     draw = ImageDraw.Draw(img)
 
-    # Diagonal laranja no topo direito
-    draw.polygon(
-        [(POST_W * 0.45, 0), (POST_W, 0), (POST_W, POST_H * 0.55)],
-        fill=(*COLOR_ORANGE, 220)
-    )
+    # --- Elementos geométricos de fundo ---
+    # Bloco laranja grande no topo (1/3 superior)
+    draw.rectangle([(0, 0), (POST_W, int(POST_H * 0.38))], fill=(*COLOR_ORANGE, 255))
 
-    # Linha laranja sutil
-    draw.line([(0, POST_H - 180), (POST_W, POST_H - 180)],
-              fill=(*COLOR_ORANGE, 80), width=2)
+    # Círculo decorativo semitransparente no canto superior direito
+    cx, cy, cr = POST_W + 80, -80, 380
+    draw.ellipse([(cx - cr, cy - cr), (cx + cr, cy + cr)], fill=(0, 0, 0, 40))
 
-    # Título centralizado se fornecido
+    # Linha separadora
+    sep_y = int(POST_H * 0.38)
+    draw.line([(0, sep_y), (POST_W, sep_y)], fill=(*COLOR_ORANGE, 180), width=6)
+
+    # Pequenos retângulos decorativos no canto inferior esquerdo
+    for i in range(3):
+        x0 = 60 + i * 24
+        draw.rectangle([(x0, POST_H - 220), (x0 + 12, POST_H - 180)],
+                       fill=(*COLOR_ORANGE, 120 - i * 30))
+
+    # --- Texto do título ---
     if title:
-        font_size = 72
-        font_paths = [
-            "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",          # Ubuntu/Linux
-            "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",   # Ubuntu alt
-            "/System/Library/Fonts/Helvetica.ttc",                            # macOS
-            "/System/Library/Fonts/Arial Bold.ttf",                           # macOS alt
-            "/Library/Fonts/Arial Bold.ttf",
-        ]
-        font = None
-        for fp in font_paths:
-            try:
-                font = ImageFont.truetype(fp, font_size)
-                break
-            except Exception:
-                continue
-
-        margin_x = 80
+        margin_x = 70
         max_w = POST_W - margin_x * 2
-        words = title.split()
-        lines, line = [], ""
-        for word in words:
-            test = (line + " " + word).strip()
-            if font:
-                bbox = draw.textbbox((0, 0), test, font=font)
-                if bbox[2] > max_w and line:
-                    lines.append(line)
-                    line = word
-                else:
-                    line = test
-            else:
-                line = test
-        if line:
-            lines.append(line)
 
-        total_h = len(lines) * (font_size + 16)
-        y = (POST_H - total_h) // 2
+        # Fonte grande para o bloco laranja (parte superior)
+        font_title = _load_font(68)
+        lines = _wrap_text(draw, title, font_title, max_w)
+
+        # Limitar a 4 linhas
+        if len(lines) > 4:
+            lines = lines[:3] + [lines[3][:30] + "..."]
+
+        line_h = 80
+        total_h = len(lines) * line_h
+        # Centralizar verticalmente no bloco laranja
+        y = max(40, (int(POST_H * 0.38) - total_h) // 2)
+
         for ln in lines:
-            if font:
-                bbox = draw.textbbox((0, 0), ln, font=font)
+            try:
+                bbox = draw.textbbox((0, 0), ln, font=font_title)
                 x = (POST_W - (bbox[2] - bbox[0])) // 2
-            else:
+            except Exception:
                 x = margin_x
-            draw.text((x, y), ln, fill=COLOR_WHITE, font=font)
-            y += font_size + 16
+            # Sombra sutil
+            draw.text((x + 2, y + 2), ln, fill=(0, 0, 0, 100), font=font_title)
+            draw.text((x, y), ln, fill=COLOR_WHITE, font=font_title)
+            y += line_h
+
+    # --- Badge da fonte no canto inferior esquerdo ---
+    if source:
+        font_badge = _load_font(38)
+        badge_text = source.upper()
+        badge_x, badge_y = 70, POST_H - 230
+        try:
+            bbox = draw.textbbox((0, 0), badge_text, font=font_badge)
+            bw = bbox[2] - bbox[0] + 30
+            bh = bbox[3] - bbox[1] + 16
+            draw.rounded_rectangle([(badge_x - 10, badge_y - 8),
+                                     (badge_x + bw, badge_y + bh)],
+                                    radius=8, fill=(*COLOR_ORANGE, 220))
+            draw.text((badge_x + 5, badge_y), badge_text,
+                      fill=COLOR_WHITE, font=font_badge)
+        except Exception:
+            pass
 
     return img
 
@@ -231,26 +279,136 @@ def _create_branded_background(title: str = "") -> "Image":
 # Download de imagens de artigos
 # ---------------------------------------------------------------------------
 
+def _fetch_image_bytes(img_url: str) -> Optional[bytes]:
+    """Baixa bytes de uma URL de imagem."""
+    try:
+        req = urllib.request.Request(img_url, headers=HEADERS)
+        with urllib.request.urlopen(req, timeout=10) as r:
+            data = r.read()
+        # Validar que é imagem real (mínimo 5KB)
+        if len(data) > 5000:
+            return data
+    except Exception as e:
+        logger.debug(f"Falha ao baixar imagem {img_url[:60]}: {e}")
+    return None
+
+
+def _youtube_thumbnail(url: str) -> Optional[bytes]:
+    """Extrai thumbnail de URLs do YouTube."""
+    import re
+    patterns = [
+        r'(?:youtube\.com/watch\?v=|youtu\.be/)([A-Za-z0-9_-]{11})',
+        r'youtube\.com/embed/([A-Za-z0-9_-]{11})',
+        r'youtube\.com/shorts/([A-Za-z0-9_-]{11})',
+    ]
+    for pat in patterns:
+        m = re.search(pat, url)
+        if m:
+            vid = m.group(1)
+            for quality in ["maxresdefault", "sddefault", "hqdefault"]:
+                data = _fetch_image_bytes(f"https://img.youtube.com/vi/{vid}/{quality}.jpg")
+                if data:
+                    logger.info(f"YouTube thumbnail ({quality}): {vid}")
+                    return data
+    return None
+
+
+def _reddit_external_url(url: str) -> Optional[str]:
+    """Para posts do Reddit, tenta extrair a URL externa linkada via JSON API."""
+    import re
+    if "reddit.com/r/" not in url:
+        return None
+    try:
+        json_url = url.rstrip("/") + ".json?limit=1"
+        req = urllib.request.Request(json_url, headers=HEADERS)
+        with urllib.request.urlopen(req, timeout=8) as r:
+            data = json.loads(r.read())
+        post = data[0]["data"]["children"][0]["data"]
+        ext_url = post.get("url", "")
+        # Só retornar se não for reddit.com em si
+        if ext_url and "reddit.com" not in ext_url:
+            logger.info(f"Reddit external URL: {ext_url[:60]}")
+            return ext_url
+        # Tentar preview de imagem do Reddit
+        preview = post.get("preview", {})
+        images = preview.get("images", [])
+        if images:
+            img_url = images[0].get("source", {}).get("url", "").replace("&amp;", "&")
+            if img_url:
+                logger.info(f"Reddit preview image encontrada")
+                return img_url  # URL direta de imagem
+    except Exception as e:
+        logger.debug(f"Reddit JSON falhou: {e}")
+    return None
+
+
 def _fetch_article_image(url: str) -> Optional[bytes]:
-    """Tenta baixar a og:image do artigo."""
+    """
+    Tenta obter imagem do artigo com múltiplas estratégias:
+    1. YouTube thumbnail (para links de trailer)
+    2. Reddit: extrai URL externa e usa estratégia sobre ela
+    3. og:image do HTML da página
+    """
+    import re
+
+    if not url:
+        return None
+
+    # Estratégia 1: YouTube direto
+    if "youtube.com" in url or "youtu.be" in url:
+        data = _youtube_thumbnail(url)
+        if data:
+            return data
+
+    # Estratégia 2: Reddit — resolver URL real
+    if "reddit.com" in url:
+        resolved = _reddit_external_url(url)
+        if resolved:
+            # Se a URL resolvida for YouTube
+            if "youtube.com" in resolved or "youtu.be" in resolved:
+                data = _youtube_thumbnail(resolved)
+                if data:
+                    return data
+            # Se for URL de imagem direta
+            if any(resolved.lower().endswith(ext) for ext in [".jpg", ".jpeg", ".png", ".webp"]):
+                data = _fetch_image_bytes(resolved)
+                if data:
+                    return data
+            # Tentar og:image da URL resolvida
+            data = _fetch_article_image(resolved)
+            if data:
+                return data
+        logger.info(f"Reddit sem imagem utilizável para: {url[:60]}")
+        return None
+
+    # Estratégia 3: og:image do HTML
     try:
         req = urllib.request.Request(url, headers=HEADERS)
         with urllib.request.urlopen(req, timeout=8) as resp:
-            html = resp.read().decode("utf-8", errors="replace")
-        # og:image
-        import re
-        m = re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']', html)
-        if not m:
-            m = re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']', html)
-        if m:
-            img_url = m.group(1)
-            if not img_url.startswith("http"):
-                img_url = urllib.parse.urljoin(url, img_url)
-            req2 = urllib.request.Request(img_url, headers=HEADERS)
-            with urllib.request.urlopen(req2, timeout=10) as r:
-                return r.read()
+            html = resp.read(200_000).decode("utf-8", errors="replace")
+
+        # Múltiplos padrões de og:image
+        patterns = [
+            r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
+            r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
+            r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']',
+            r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']twitter:image["\']',
+        ]
+        for pat in patterns:
+            m = re.search(pat, html, re.IGNORECASE)
+            if m:
+                img_url = m.group(1).replace("&amp;", "&")
+                if not img_url.startswith("http"):
+                    img_url = urllib.parse.urljoin(url, img_url)
+                data = _fetch_image_bytes(img_url)
+                if data:
+                    logger.info(f"og:image encontrada: {img_url[:60]}")
+                    return data
+
+        logger.info(f"Nenhuma og:image em: {url[:60]}")
     except Exception as e:
-        logger.debug(f"Não conseguiu imagem de {url}: {e}")
+        logger.info(f"Falha ao buscar HTML de {url[:60]}: {e}")
+
     return None
 
 
@@ -286,29 +444,33 @@ def _resize_crop_center(img, target_w: int, target_h: int) -> "Image":
 # Upload para Imgur (gratuito, sem autenticação)
 # ---------------------------------------------------------------------------
 
-IMGUR_CLIENT_ID = "546c25a59c58ad7"  # Client-ID público padrão do Imgur
+IMGUR_CLIENT_ID = os.environ.get("IMGUR_CLIENT_ID", "546c25a59c58ad7")
 
 
-def _upload_to_imgur(image_bytes: bytes) -> Optional[str]:
-    """Sobe a imagem pro Imgur e retorna a URL pública."""
-    try:
-        b64 = base64.b64encode(image_bytes).decode("utf-8")
-        payload = urllib.parse.urlencode({"image": b64, "type": "base64"}).encode()
-        req = urllib.request.Request(
-            "https://api.imgur.com/3/image",
-            data=payload,
-            headers={
-                "Authorization": f"Client-ID {IMGUR_CLIENT_ID}",
-                "User-Agent": HEADERS["User-Agent"],
-            },
-            method="POST"
-        )
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            result = json.loads(resp.read())
-        if result.get("success"):
-            return result["data"]["link"]
-    except Exception as e:
-        logger.warning(f"Falha upload Imgur: {e}")
+def _upload_to_imgur(image_bytes: bytes, retries: int = 2) -> Optional[str]:
+    """Sobe a imagem pro Imgur com retry. Client-ID via env var IMGUR_CLIENT_ID."""
+    for attempt in range(retries + 1):
+        try:
+            b64 = base64.b64encode(image_bytes).decode("utf-8")
+            payload = urllib.parse.urlencode({"image": b64, "type": "base64"}).encode()
+            req = urllib.request.Request(
+                "https://api.imgur.com/3/image",
+                data=payload,
+                headers={
+                    "Authorization": f"Client-ID {IMGUR_CLIENT_ID}",
+                    "User-Agent": HEADERS["User-Agent"],
+                },
+                method="POST"
+            )
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                result = json.loads(resp.read())
+            if result.get("success"):
+                return result["data"]["link"]
+            logger.warning(f"Imgur retornou sucesso=false: {result}")
+        except Exception as e:
+            logger.warning(f"Imgur tentativa {attempt+1}/{retries+1} falhou: {e}")
+            if attempt < retries:
+                import time; time.sleep(2)
     return None
 
 
@@ -332,6 +494,7 @@ def generate_post_image(news_item: dict) -> Optional[str]:
     from PIL import Image
 
     title = news_item.get("title", "")
+    source = news_item.get("source", "")
     article_url = news_item.get("url", "")
 
     # 1. Tentar obter imagem do artigo
@@ -340,11 +503,13 @@ def generate_post_image(news_item: dict) -> Optional[str]:
         img_bytes = _fetch_article_image(article_url)
         if img_bytes:
             base_img = _load_image_from_bytes(img_bytes)
+            if base_img:
+                logger.info("Imagem do artigo carregada com sucesso")
 
-    # 2. Se não encontrou imagem → fundo branded
+    # 2. Se não encontrou imagem → fundo branded com título e fonte
     if base_img is None:
-        logger.info("Sem imagem do artigo — usando fundo branded Morsa")
-        base_img = _create_branded_background(title)
+        logger.info(f"Sem imagem para '{title[:50]}' — usando branded background")
+        base_img = _create_branded_background(title, source)
     else:
         # Redimensionar/recortar para 4:5
         base_img = _resize_crop_center(base_img, POST_W, POST_H)

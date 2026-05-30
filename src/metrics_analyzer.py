@@ -7,6 +7,7 @@ import logging
 import os
 import urllib.request
 from datetime import datetime, timezone, timedelta
+from typing import Optional
 
 logger = logging.getLogger(__name__)
 
@@ -133,8 +134,6 @@ def performance_report(top_n: int = 5) -> str:
     return "\n".join(lines)
 
 
-# Fix missing Optional import
-from typing import Optional
 
 
 if __name__ == "__main__":

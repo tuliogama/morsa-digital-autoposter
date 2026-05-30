@@ -7,6 +7,9 @@ import logging
 import os
 import urllib.request
 from datetime import datetime, timezone, timedelta
+
+# Morsa Digital opera em BRT (UTC-3)
+BRT = timezone(timedelta(hours=-3))
 from pathlib import Path
 from typing import Optional
 
@@ -149,7 +152,7 @@ def analyze_competitors() -> dict:
         ("AnimeUnited",         "https://animeunited.com.br/feed/"),
     ]
 
-    today = datetime.now(timezone.utc).date()
+    today = datetime.now(BRT).date()
     topics_today = []
 
     for name, feed_url in competitor_feeds:
@@ -245,12 +248,12 @@ Responda APENAS o JSON, sem texto adicional."""
                 result = result[4:]
         brief = json.loads(result.strip())
         brief["generated_at"] = datetime.now(timezone.utc).isoformat()
-        brief["date"] = datetime.now(timezone.utc).date().isoformat()
+        brief["date"] = datetime.now(BRT).date().isoformat()
         return brief
     except Exception as e:
         logger.warning(f"Falha ao gerar Day Brief com Claude: {e}")
         return {
-            "date": datetime.now(timezone.utc).date().isoformat(),
+            "date": datetime.now(BRT).date().isoformat(),
             "strategy_note": "Análise automática indisponível — usando critérios padrão.",
             "prioritize_categories": ["anime", "games", "filmes", "series"],
             "prioritize_sources": ["IGN Brasil", "Cinema com Rapadura"],
@@ -326,7 +329,7 @@ def load_todays_brief() -> Optional[dict]:
     try:
         brief = json.loads(BRIEF_PATH.read_text())
         brief_date = brief.get("date", "")
-        today = datetime.now(timezone.utc).date().isoformat()
+        today = datetime.now(BRT).date().isoformat()
         if brief_date == today:
             return brief
     except Exception:

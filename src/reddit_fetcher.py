@@ -204,13 +204,23 @@ def fetch_subreddit_trending(subreddit: str, limit: int = 10) -> list[dict]:
 
         # Score via contagem de comentários no conteúdo (aproximação)
         # RSS do Reddit não expõe upvotes — usamos como proxy a posição
+        # Extrair URL externa do conteúdo RSS (para imagem e referência)
+        import re as _re
+        ext_url = link
+        url_match = _re.search(r'<a[^>]+href=["\']([^"\']+)["\'][^>]*>\s*\[link\]', content_text)
+        if url_match:
+            candidate = url_match.group(1)
+            if "reddit.com" not in candidate:
+                ext_url = candidate
+
         items.append({
             "source": f"Reddit r/{subreddit}",
             "subreddit": subreddit,
             "title": title,
-            "url": link,
+            "url": ext_url,           # URL externa para imagem; fallback = link do post
+            "reddit_url": link,       # URL do post no Reddit
             "description": content_text[:300],
-            "score": max(0, limit - len(items)) * 100,  # proxy por posição no hot
+            "score": max(0, limit - len(items)) * 100,
             "published_at": ts.isoformat() if ts else "",
             "flair": "",
         })
