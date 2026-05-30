@@ -2,18 +2,12 @@ name: Morsa Digital — Auto Post
 
 on:
   schedule:
-    # Horários em UTC (Brasil = UTC-3) — 6 posts/dia
-    # 08:00 BRT = 11:00 UTC
-    # 10:30 BRT = 13:30 UTC
-    # 13:00 BRT = 16:00 UTC
-    # 16:00 BRT = 19:00 UTC
-    # 19:00 BRT = 22:00 UTC
-    # 21:30 BRT = 00:30 UTC
-    - cron: "0 11 * * *"    # 08h BRT
+    # Horários em UTC (Brasil = UTC-3) — 6 runs/dia × 2 posts = 12 posts/dia
+    - cron: "0 11 * * *"    # 08h00 BRT
     - cron: "30 13 * * *"   # 10h30 BRT
-    - cron: "0 16 * * *"    # 13h BRT
-    - cron: "0 19 * * *"    # 16h BRT
-    - cron: "0 22 * * *"    # 19h BRT
+    - cron: "0 16 * * *"    # 13h00 BRT
+    - cron: "0 19 * * *"    # 16h00 BRT
+    - cron: "0 22 * * *"    # 19h00 BRT
     - cron: "30 0 * * *"    # 21h30 BRT
 
   workflow_dispatch:
@@ -25,19 +19,32 @@ on:
         type: choice
         options: ["false", "true"]
       platforms:
-        description: "Plataformas (separadas por vírgula)"
+        description: "Plataformas"
         required: false
         default: "instagram"
+      skip_brief:
+        description: "Pular análise CMO (usar brief do dia se disponível)"
+        required: false
+        default: "false"
+        type: choice
+        options: ["false", "true"]
 
 jobs:
   post:
-    name: Gerar e publicar posts
+    name: CMO → Curadoria → Publicação
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
+    # Evita runs simultâneos que causariam posts duplicados
+    concurrency:
+      group: morsa-post
+      cancel-in-progress: false
 
     steps:
-      - name: Checkout
+      - name: Checkout (com histórico para commit de log)
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -48,13 +55,9 @@ jobs:
       - name: Instalar dependências
         run: pip install -r requirements.txt
 
-      - name: Executar autoposter
+      - name: Executar ciclo CMO completo
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
-          TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
-          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
-          TWITTER_ACCESS_SECRET: ${{ secrets.TWITTER_ACCESS_SECRET }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
@@ -64,12 +67,26 @@ jobs:
           DELAY_BETWEEN_POSTS: "90"
         run: |
           PLATFORMS="${{ inputs.platforms || 'instagram' }}"
-          python src/main.py --platforms "$PLATFORMS" ${{ inputs.dry_run == 'true' && '--dry-run' || '' }}
+          SKIP_BRIEF="${{ inputs.skip_brief || 'false' }}"
+          CMD="python src/main.py --platforms $PLATFORMS"
+          [ "${{ inputs.dry_run }}" = "true" ] && CMD="$CMD --dry-run"
+          [ "$SKIP_BRIEF" = "true" ] && CMD="$CMD --skip-brief"
+          $CMD
 
-      - name: Upload logs
+      # Persiste posts_log.json e day_brief.json no repo para dedup cross-run
+      - name: Persistir log de posts no repositório
+        if: ${{ inputs.dry_run != 'true' }}
+        run: |
+          git config user.name "morsa-bot"
+          git config user.email "bot@morsadigital.com"
+          git add logs/posts_log.json logs/day_brief.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "chore: atualiza posts_log e day_brief [skip ci]"
+          git push origin main 2>/dev/null || true
+
+      - name: Upload logs de run
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: run-logs-${{ github.run_id }}
-          path: logs/
+          path: logs/run_*.json
           retention-days: 30

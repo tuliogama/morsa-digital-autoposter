@@ -101,29 +101,43 @@ def _call_claude(system_prompt: str, user_message: str) -> str:
         raise RuntimeError(f"Claude API erro {e.code}: {body}")
 
 
-def select_best_news(news_items: list[dict], count: int = 5) -> list[dict]:
-    """Usa Claude para escolher as notícias mais relevantes e engajadoras."""
+def select_best_news(news_items: list[dict], count: int = 5, brief: dict = None) -> list[dict]:
+    """Usa Claude para escolher as notícias mais relevantes, guiado pelo Day Brief do CMO."""
     if not news_items:
         return []
 
     titles_block = "\n".join(
         f"{i+1}. [{item['source']}] {item['title']}"
-        for i, item in enumerate(news_items[:25])
+        for i, item in enumerate(news_items[:30])
     )
 
+    # Contexto do Day Brief se disponível
+    brief_context = ""
+    if brief:
+        brief_context = (
+            f"\nDIRETRIZES DO DIA (Day Brief do CMO):\n"
+            f"- Estratégia: {brief.get('strategy_note', '')}\n"
+            f"- Priorizar categorias: {', '.join(brief.get('prioritize_categories', []))}\n"
+            f"- Priorizar fontes: {', '.join(brief.get('prioritize_sources', []))}\n"
+            f"- Ângulo editorial: {brief.get('content_angle', '')}\n"
+            f"- Tópicos em alta para explorar: {', '.join(brief.get('topics_to_explore', []))}\n"
+            f"- EVITAR (já cobertos ou baixo engajamento): {', '.join(brief.get('avoid_topics', [])[:5])}\n"
+        )
+
     prompt = (
-        f"Lista de notícias recentes:\n\n{titles_block}\n\n"
-        f"Selecione os {count} itens mais relevantes para o público brasileiro que ama "
-        f"filmes, séries, animes, doramas, games e cultura pop/nerd/geek. "
-        f"PRIORIZE: lançamentos, trailers, notícias de franquias populares (Marvel, DC, Star Wars, anime, Nintendo, PlayStation...). "
-        f"EVITE: notícias de IA genérica, robôs, finanças, política, celebridades sem relação com cultura pop. "
+        f"Lista de notícias disponíveis:\n\n{titles_block}\n"
+        f"{brief_context}\n"
+        f"Selecione os {count} itens com maior potencial de engajamento para o público brasileiro "
+        f"que ama filmes, séries, animes, doramas, games e cultura pop/nerd/geek. "
+        f"PRIORIZE: lançamentos, trailers, franquias populares (Marvel, DC, Star Wars, anime, Nintendo, PlayStation). "
+        f"EVITE: IA genérica, robótica, finanças, política, celebridades sem relação com cultura pop. "
         f"Responda APENAS com os números separados por vírgula, ex: 1,3,7,12,15"
     )
 
     try:
         result = _call_claude(
-            "Você é curador de conteúdo geek/nerd/pop para o público brasileiro. "
-            "Prioriza filmes, séries, animes, doramas e games. Ignora tech genérico.",
+            "Você é curador sênior de conteúdo geek/nerd/pop para o público brasileiro. "
+            "Toma decisões editoriais baseadas em dados de performance e tendências do dia.",
             prompt,
         )
         indices = [int(x.strip()) - 1 for x in result.split(",") if x.strip().isdigit()]
@@ -134,16 +148,31 @@ def select_best_news(news_items: list[dict], count: int = 5) -> list[dict]:
         return news_items[:count]
 
 
-def generate_post(news_item: dict, platform: str) -> dict:
-    """Gera um post para a plataforma especificada com base na notícia."""
+def generate_post(news_item: dict, platform: str, brief: dict = None) -> dict:
+    """Gera um post para a plataforma especificada, orientado pelo Day Brief do CMO."""
     config = PLATFORM_PROMPTS.get(platform)
     if not config:
         raise ValueError(f"Plataforma desconhecida: {platform}")
 
+    # Contexto do Day Brief para orientar o tom e estilo
+    brief_context = ""
+    if brief:
+        hook = brief.get("recommended_hook_style", "")
+        insight = brief.get("engagement_insight", "")
+        angle = brief.get("content_angle", "")
+        if hook or insight or angle:
+            brief_context = (
+                f"\nCONTEXTO DO DIA (use para calibrar o tom):\n"
+                f"- Hook que está performando: {hook}\n"
+                f"- Ângulo editorial de hoje: {angle}\n"
+                f"- Insight de engajamento: {insight}\n"
+            )
+
     user_msg = (
         f"Notícia: {news_item['title']}\n"
         f"Fonte: {news_item['source']}\n"
-        f"URL: {news_item.get('url', '')}\n\n"
+        f"URL: {news_item.get('url', '')}\n"
+        f"{brief_context}\n"
         f"Gere um post para {platform} (máx {config['max_chars']} caracteres)."
     )
 

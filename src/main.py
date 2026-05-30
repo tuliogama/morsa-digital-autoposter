@@ -1,6 +1,6 @@
 """
-Entry point do Morsa Digital Autoposter.
-Uso: python src/main.py [--dry-run] [--platforms twitter,instagram,facebook]
+Morsa Digital Autoposter — ciclo CMO completo.
+Uso: python src/main.py [--dry-run] [--platforms instagram] [--skip-brief]
 """
 import argparse
 import json
@@ -30,13 +30,6 @@ PUBLISHERS = {
 }
 
 
-def load_config() -> dict:
-    config_path = Path(__file__).parent.parent / "config" / "settings.json"
-    if config_path.exists():
-        return json.loads(config_path.read_text())
-    return {}
-
-
 def save_run_log(posts: list[dict], results: list[dict], dry_run: bool):
     logs_dir = Path(__file__).parent.parent / "logs"
     logs_dir.mkdir(exist_ok=True)
@@ -47,101 +40,145 @@ def save_run_log(posts: list[dict], results: list[dict], dry_run: bool):
         "dry_run": dry_run,
         "posts_generated": len(posts),
         "results": results,
-        "posts": posts,
+        "posts": [{k: v for k, v in p.items() if k != "news_item"} for p in posts],
     }, indent=2, ensure_ascii=False))
     logger.info(f"Log salvo em {log_file}")
 
 
 def main():
     parser = argparse.ArgumentParser(description="Morsa Digital Autoposter")
-    parser.add_argument("--dry-run", action="store_true", help="Gera posts mas não publica")
-    parser.add_argument(
-        "--platforms",
-        default="twitter,instagram,facebook",
-        help="Plataformas separadas por vírgula",
-    )
+    parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--platforms", default="instagram")
+    parser.add_argument("--skip-brief", action="store_true",
+                        help="Pula análise do CMO e usa brief do dia se disponível")
     args = parser.parse_args()
 
     platforms = [p.strip() for p in args.platforms.split(",") if p.strip()]
     dry_run = args.dry_run or os.environ.get("DRY_RUN", "").lower() == "true"
+    posts_per_run = int(os.environ.get("POSTS_PER_RUN", "2"))
+    delay_between = int(os.environ.get("DELAY_BETWEEN_POSTS", "90"))
 
     if dry_run:
-        logger.info("=== MODO DRY RUN — posts NÃO serão publicados ===")
+        logger.info("=== MODO DRY RUN ===")
 
-    logger.info(f"Iniciando Morsa Digital Autoposter | plataformas: {platforms}")
+    logger.info(f"Morsa Digital Autoposter | plataformas: {platforms} | {posts_per_run} posts/run")
 
-    # 1. Buscar notícias
-    logger.info("Buscando notícias tech recentes...")
-    news = fetch_all_news(limit=30)
+    # ------------------------------------------------------------------ #
+    # ETAPA 1 — CMO Brain: análise diária                                 #
+    # ------------------------------------------------------------------ #
+    brief = None
+    try:
+        from cmo_brain import run_daily_analysis, load_todays_brief
+
+        if args.skip_brief:
+            brief = load_todays_brief()
+            if brief:
+                logger.info(f"Brief do dia carregado (gerado às {brief.get('generated_at','?')[:16]})")
+            else:
+                logger.info("Sem brief do dia — rodando análise completa...")
+                brief = run_daily_analysis()
+        else:
+            brief = run_daily_analysis()
+
+    except Exception as e:
+        logger.warning(f"CMO Brain falhou — continuando sem brief: {e}")
+
+    # ------------------------------------------------------------------ #
+    # ETAPA 2 — Busca de notícias                                         #
+    # ------------------------------------------------------------------ #
+    logger.info("Buscando notícias...")
+    news = fetch_all_news(limit=40, include_reddit=True)
     logger.info(f"{len(news)} notícias encontradas")
 
     if not news:
-        logger.error("Nenhuma notícia encontrada. Abortando.")
+        logger.error("Nenhuma notícia. Abortando.")
         sys.exit(1)
 
-    # 1b. Filtrar duplicatas via log persistente
+    # ------------------------------------------------------------------ #
+    # ETAPA 3 — Deduplicação contra log persistente                       #
+    # ------------------------------------------------------------------ #
     try:
         from posts_log import is_duplicate
         before = len(news)
         news = [n for n in news if not is_duplicate(n["title"], platform="instagram")]
-        logger.info(f"Após dedup local: {len(news)}/{before} notícias únicas")
+        logger.info(f"Dedup: {len(news)}/{before} notícias únicas")
     except Exception as e:
-        logger.warning(f"Dedup local falhou: {e}")
+        logger.warning(f"Dedup falhou: {e}")
 
-    # 2. Gerar posts com IA (2 por execução = 12/dia com 6 runs)
-    posts_per_run = int(os.environ.get("POSTS_PER_RUN", "2"))
-    logger.info(f"Gerando {posts_per_run} post(s) por execução...")
+    if not news:
+        logger.info("Todas as notícias já foram publicadas. Nada a fazer.")
+        return
+
+    # ------------------------------------------------------------------ #
+    # ETAPA 4 — Curadoria orientada pelo Day Brief                        #
+    # ------------------------------------------------------------------ #
     from content_generator import select_best_news, generate_post
-    best_news = select_best_news(news, count=posts_per_run)
+
+    logger.info(f"Selecionando {posts_per_run} melhores notícias...")
+    if brief:
+        logger.info(f"Estratégia do dia: {brief.get('strategy_note', '')}")
+    best_news = select_best_news(news, count=posts_per_run, brief=brief)
+
+    if not best_news:
+        logger.error("Claude não selecionou nenhuma notícia. Abortando.")
+        sys.exit(1)
+
+    # ------------------------------------------------------------------ #
+    # ETAPA 5 — Geração de posts                                          #
+    # ------------------------------------------------------------------ #
     posts = []
     for n in best_news:
         for platform in platforms:
             try:
-                post = generate_post(n, platform)
+                post = generate_post(n, platform, brief=brief)
                 posts.append(post)
+                logger.info(f"Post gerado [{platform}]: {n['title'][:70]}")
             except Exception as e:
-                logger.error(f"Erro ao gerar post [{platform}] {n['title'][:50]}: {e}")
-    logger.info(f"{len(posts)} posts gerados")
+                logger.error(f"Erro ao gerar post [{platform}]: {e}")
 
     if not posts:
         logger.error("Nenhum post gerado. Abortando.")
         sys.exit(1)
 
+    # Preview
     for post in posts:
         logger.info(f"\n{'='*60}")
         logger.info(f"PLATAFORMA: {post['platform'].upper()}")
         logger.info(f"FONTE: {post['source_title'][:80]}")
-        logger.info(f"CONTEÚDO:\n{post['content']}")
+        logger.info(f"LEGENDA:\n{post['content']}")
         logger.info(f"{'='*60}")
 
     if dry_run:
         save_run_log(posts, [], dry_run=True)
-        logger.info("Dry run concluído. Nenhum post foi publicado.")
+        logger.info("Dry run concluído. Nenhum post publicado.")
         return
 
-    # 3. Publicar com delay entre posts para não parecer spam
+    # ------------------------------------------------------------------ #
+    # ETAPA 6 — Publicação com delay entre posts                          #
+    # ------------------------------------------------------------------ #
     results = []
     for i, post in enumerate(posts):
         if i > 0:
-            delay = int(os.environ.get("DELAY_BETWEEN_POSTS", "90"))
-            logger.info(f"Aguardando {delay}s antes do próximo post...")
-            time.sleep(delay)
+            logger.info(f"Aguardando {delay_between}s antes do próximo post...")
+            time.sleep(delay_between)
+
         platform = post["platform"]
         if platform not in PUBLISHERS:
-            logger.warning(f"Publisher não encontrado para: {platform}")
+            logger.warning(f"Publisher não encontrado: {platform}")
             continue
+
         try:
             result = PUBLISHERS[platform](post)
             results.append({"status": "ok", **result})
-            logger.info(f"Publicado em {platform}: {result}")
+            logger.info(f"✅ Publicado [{platform}]: {result}")
         except Exception as e:
-            logger.error(f"Erro ao publicar em {platform}: {e}")
+            logger.error(f"❌ Erro [{platform}]: {e}")
             results.append({"platform": platform, "status": "error", "error": str(e)})
 
     save_run_log(posts, results, dry_run=False)
 
     ok = sum(1 for r in results if r.get("status") == "ok")
-    logger.info(f"\nConcluído: {ok}/{len(results)} posts publicados com sucesso")
+    logger.info(f"\nConcluído: {ok}/{len(results)} posts publicados")
 
 
 if __name__ == "__main__":
