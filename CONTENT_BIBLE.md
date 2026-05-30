@@ -1,6 +1,6 @@
 # Morsa Digital — Bíblia de Conteúdo e Checklist Obrigatório
 
-> Este documento define as regras inegociáveis do @morsadigital no Instagram.
+> Última atualização: 2026-05-30 (baseada em análise real de 50 posts, 27.136 seguidores)
 > O pipeline segue este checklist antes de cada post, sem exceção.
 
 ---
@@ -11,96 +11,192 @@
 
 **Tom de voz:** fã apaixonado + jornalista. Direto, opinativo, humano — nunca corporativo, nunca bot.
 
-**Temas permitidos:**
-- Filmes e séries (Marvel, DC, Star Wars, Disney, A24, streaming)
-- Animes e mangás (One Piece, Demon Slayer, Jujutsu Kaisen, Dragon Ball, Naruto, etc.)
-- Games (Nintendo, PlayStation, Xbox, PC Gaming, Indies)
-- Doramas e K-Drama
-- Quadrinhos e cultura geek/nerd em geral
+**Temas por prioridade (baseado em dados reais):**
+
+| Prioridade | Tema | Eng médio | Observação |
+|-----------|------|-----------|------------|
+| 🥇 | MCU / Marvel | 70 | Maior audiência ativa |
+| 🥇 | DC / Batman / Super-heróis | 70 | Mesmo nível MCU |
+| 🥈 | Cinema / Oscar / Estreias | 66 | Posts de evento explodem |
+| 🥈 | Séries (Netflix, HBO, Disney+) | 60 | Consistente |
+| 🥉 | Games (PS5, Xbox, Nintendo) | 40 | Público menor, mas ativo |
+| — | Star Wars | 34 | Underperforma — cobrir só grandes notícias |
+| — | Anime | 6 | Poucos dados; testar com cautela |
 
 **Contas da operação:**
 - Instagram: @morsadigital (`IG_USER_ID=17841405897887153`)
 - Facebook Page ID: `108393784135641`
-- ⚠️ NUNCA misturar com @tuliogama ou @ordemsithbrasil (projetos separados)
-- ⚠️ Twitter/X: SKIP permanente — erro 402, nunca tentar
+- ⚠️ NUNCA misturar com @tuliogama ou @ordemsithbrasil
+- ⚠️ Twitter/X: SKIP permanente — erro 402
 
 ---
 
-## 2. CHECKLIST OBRIGATÓRIO — PRÉ-PUBLICAÇÃO
+## 2. O QUE OS DADOS ENSINAM
+
+### 2.1 Tipo de hook — impacto direto no engajamento
+
+| Hook | Eng médio | Qtd | Diagnóstico |
+|------|-----------|-----|-------------|
+| ✅ Afirmação direta | **69** | 27 | Melhor desempenho — usar sempre que possível |
+| ✅ Anúncio/confirmação | 60 | 5 | Segunda melhor opção |
+| ✅ Pergunta direta | 55 | 3 | Gera comentários |
+| ⚠️ Expectativa/nostalgia | 51 | 7 | Funciona mas não lidera |
+| ❌ Emoji no início | **22** | 8 | **3× pior** — proibido |
+
+**Conclusão: começar com emoji derruba o engajamento pela metade. Proibido.**
+
+### 2.2 Volume × qualidade
+
+| Período | Posts | Eng médio |
+|---------|-------|-----------|
+| Mar/2026 | 7 | **123** |
+| Abr/2026 | 15 | 83 |
+| Mai/2026 | 28 | **27** |
+
+**Conclusão: volume alto derruba qualidade. Preferir 8–12 posts/dia com curadoria rigorosa.**
+
+### 2.3 Melhor horário BRT (dados reais)
+
+Picos de engajamento: **13h, 17h, 19h**
+Horário com mais posts e consistência: **10h**
+Pior janela: madrugada (00h–02h)
+
+### 2.4 Melhor dia da semana
+
+| Dia | Eng médio |
+|-----|-----------|
+| 🥇 Terça | **95** |
+| 🥈 Domingo | 77 |
+| 🥉 Segunda | 70 |
+| Quarta | 68 |
+| Quinta | 56 |
+| Sexta | 38 |
+| ❌ Sábado | **27** |
+
+**Conclusão: posts mais caprichados devem sair na terça. Sábado é o pior dia.**
+
+### 2.5 Conteúdo que gera comentários (discussão)
+1. Reações em tempo real (Oscar, estreias, revelações ao vivo)
+2. Perguntas diretas com CTA opinativo
+3. Posts nostálgicos que pedem identificação ("qual cena te marca?")
+
+---
+
+## 3. CHECKLIST OBRIGATÓRIO — PRÉ-PUBLICAÇÃO
 
 Cada post passa por estes 8 pontos. Falhar em qualquer um = **pular para próxima notícia**.
 
 ### ✅ PONTO 1 — Fonte válida
-- [ ] A notícia vem de um dos **13 feeds RSS autorizados** (ver Seção 4)
-- [ ] Reddit: usado **APENAS como sinal de tendência** no CMO Brain — **NUNCA** como fonte de post
-- [ ] Fonte removida da lista: Omelete (feed 404), Cinema com Rapadura (podcasts dominam o feed)
+- [ ] Vem de um dos **13 feeds RSS autorizados** (ver Seção 6)
+- [ ] Reddit: **APENAS sinal de tendência** no CMO Brain — nunca fonte de post
+- [ ] Removidos: Omelete (feed 404), Cinema com Rapadura (podcasts dominam)
 
-### ✅ PONTO 2 — Tipo de conteúdo permitido
-- [ ] É notícia factual: trailer, lançamento, anúncio oficial, data confirmada, resultado
-- [ ] **NÃO É** nenhum dos seguintes (rejeitar imediatamente):
-  - Podcast ou episódio de podcast (RapaduraCast, NerdCast, etc.)
-  - Lista genérica ("os melhores X de Y") sem novidade factual
-  - Notícia de IA genérica / robótica / automação industrial
-  - Finanças, crypto, NFT, investimentos
-  - Política, eleições, governo
-  - Clickbait sem fonte verificável ("vai acontecer?", "pode ser que...")
-  - Celebridade sem ligação direta com cultura pop (ex: casamento de ator, saúde pessoal)
-  - Conteúdo NSFW, violência explícita, suicídio, assédio
+### ✅ PONTO 2 — Tipo de conteúdo
+**Aceitar:**
+- Notícias factuais: trailer, lançamento, data confirmada, anúncio oficial, resultado
+- Eventos em tempo real: premiações, revelações, conferências
+- Conteúdo que gera opinião: polêmicas da indústria, mudanças em franquias
 
-### ✅ PONTO 3 — Anti-duplicata (2 camadas obrigatórias)
-- [ ] **Camada 1 — posts_log.json:** comparar título da notícia com últimos 20 posts publicados
-  - Overlap de ≥ 2 palavras-chave com >3 letras = duplicata → rejeitar
-  - Checar também nomes próprios (ex: "Marcia Lucas" = 2 palavras > 3 letras = bloqueia)
-- [ ] **Camada 2 — Instagram API:** comparar com primeiras linhas das últimas 20 captions publicadas
-  - Se o tema já foi coberto nos últimos 3 dias = rejeitar, mesmo título diferente
-  - Exemplo: múltiplos artigos sobre a morte da Marcia Lucas → só o primeiro passa
+**Rejeitar imediatamente:**
+- ❌ Podcast ou episódio (RapaduraCast, NerdCast, qualquer "ep.")
+- ❌ Lista genérica sem novidade ("melhores de 2025", "top 10")
+- ❌ IA genérica / robótica / automação industrial
+- ❌ Finanças, crypto, NFT, investimentos
+- ❌ Política, eleições, governo
+- ❌ Clickbait sem fonte verificável
+- ❌ Celebridade sem ligação com cultura pop
+- ❌ NSFW, violência explícita, saúde mental negativa
 
-### ✅ PONTO 4 — Imagem real obrigatória
-- [ ] A notícia tem **imagem real do artigo** (og:image, twitter:image ou YouTube thumbnail)
-- [ ] A imagem foi **processada**: redimensionada para **1080×1350px (4:5 vertical)**
-- [ ] A imagem tem **logo Morsa Digital** no canto inferior direito
-- [ ] A imagem foi **publicada em CDN público** (Imgur → catbox.moe como fallback)
-- [ ] **PROIBIDO:** imagem horizontal, mockup com texto, fundo laranja com título, imagem sem logo
-- [ ] Se não conseguir imagem com logo no formato certo → **pular para próxima notícia**
+### ✅ PONTO 3 — Anti-duplicata (2 camadas)
+- [ ] **Camada 1 — posts_log.json:** overlap de ≥2 palavras-chave (>3 letras) com últimos 7 dias → rejeitar
+- [ ] **Camada 2 — Instagram API:** comparar com primeiras linhas das últimas 20 captions → rejeitar se tema já coberto em 3 dias
+- [ ] Nomes próprios contam: "Marcia Lucas" = 2 palavras = bloqueia duplicatas
 
-### ✅ PONTO 5 — Qualidade da legenda
-- [ ] Começa com **hook direto** — sem emoji no início, sem "Olha só:", sem "Você sabia que?"
-- [ ] Tem **corpo informativo** de 3–5 parágrafos curtos (max 150 palavras total)
-- [ ] Tem **CTA variado** no final — nunca repetir o mesmo chamado em posts seguidos
-- [ ] Tem **hashtags relevantes** (8–12) — mix de franquia + categoria + pt-BR
-- [ ] Não começa parágrafo com emoji
-- [ ] Não usa tom corporativo, formal ou "robô"
+### ✅ PONTO 4 — Imagem (inegociável)
+- [ ] **Imagem real do artigo** (og:image, twitter:image ou YouTube thumbnail)
+- [ ] **Processada:** 1080×1350px (4:5 vertical)
+- [ ] **Logo Morsa Digital** no canto inferior direito
+- [ ] **Upload em CDN** (Imgur → catbox.moe fallback)
+- [ ] ❌ **PROIBIDO:** horizontal, mockup, fundo laranja com texto, sem logo, og:image raw sem logo
+- [ ] Sem imagem com logo = **pular post**, tentar próximo candidato
+
+### ✅ PONTO 5 — Legenda (baseada nos dados)
+
+**Estrutura obrigatória:**
+```
+[Hook — afirmação direta OU anúncio, SEM emoji, SEM "Olha só:"]
+
+[Parágrafo 1: o que é + contexto — máx. 3 frases]
+
+[Parágrafo 2: por que importa para o fã — conexão emocional]
+
+[Parágrafo 3 (opcional): dado extra ou curiosidade]
+
+[CTA — pergunta ou chamada, variada a cada post]
+
+#hashtag1 #hashtag2 (8–12 hashtags, mix franquia + categoria)
+```
+
+**Regras derivadas dos dados:**
+- ✅ Começar com afirmação direta — eng médio 69
+- ✅ Usar perguntas no CTA — gera comentários
+- ✅ Mencionar nome da franquia no corpo (SEO)
+- ❌ Nunca começar com emoji — queda de 3× no eng
+- ❌ Nunca começar parágrafo com emoji
+- ❌ Não repetir mesmo CTA em posts consecutivos
+- ❌ Máx. 12 hashtags
+- ❌ Tom corporativo ou de press release
 
 ### ✅ PONTO 6 — Configuração técnica
-- [ ] `like_and_view_counts_disabled=true` enviado na criação do container
-- [ ] Post registrado em `logs/posts_log.json` imediatamente após publicação
+- [ ] `like_and_view_counts_disabled=true` no container
+- [ ] `publish_to_facebook=true` + `facebook_page_id` (quando `pages_manage_posts` ativo)
+- [ ] Post registrado em `logs/posts_log.json` após publicação
 
 ### ✅ PONTO 7 — Sequência de publicação
-1. Publicar no **Feed** (container → publish)
-2. Tentar compartilhar nos **Stories** via `source_type=FEED_MEDIA` (fallback silencioso se falhar)
-3. Registrar no log (`record_post`)
+1. Publicar no **Feed**
+2. Tentar **Stories** via `source_type=FEED_MEDIA` (fallback silencioso)
+3. Registrar no log
 
 ### ✅ PONTO 8 — Pós-publicação
-- [ ] `posts_log.json` commitado no GitHub após cada run (para dedup cross-run)
-- [ ] `day_brief.json` commitado junto (para continuidade da análise CMO)
+- [ ] `posts_log.json` commitado no GitHub após cada run
+- [ ] `day_brief.json` commitado junto
 
 ---
 
-## 3. CICLO CMO — ANÁLISE OBRIGATÓRIA ANTES DE CADA BATCH
+## 4. CICLO CMO — ANÁLISE ANTES DE CADA BATCH
 
-A cada execução (6×/dia), **antes** de selecionar qualquer notícia:
+A cada execução, **antes** de selecionar notícias:
 
-1. **Métricas dos últimos 20 posts** — identificar o que engajou, o que não engajou
-2. **Classificar hooks** — qual estilo de abertura está performando (pergunta? dado? afirmação?)
-3. **Cobertura dos concorrentes** — o que IGN Brasil, GameBlast, AnimeUnited publicaram hoje
-4. **Tendências Reddit** — o que está em alta nos subreddits relevantes (só para orientação, nunca para post direto)
-5. **Day Brief** gerado por Claude — orientações estratégicas para o dia
+1. **Métricas dos últimos 20 posts** — eng score, hooks que performaram
+2. **Classificar padrões** — afirmação vs pergunta vs emoji (ver Seção 2.1)
+3. **Cobertura dos concorrentes** — o que IGN Brasil, GameBlast, AnimeUnited publicaram
+4. **Tendências Reddit** — sinal de alta (nunca fonte direta de post)
+5. **Day Brief com Claude** — orientações estratégicas para o dia
 
-O brief é salvo e reutilizado durante o dia. Reanálise completa apenas 1×/dia.
+O brief é reutilizado durante o dia. Reanálise completa 1×/dia.
 
 ---
 
-## 4. FONTES AUTORIZADAS (13 feeds RSS)
+## 5. VOLUME E HORÁRIOS
+
+**Target baseado em dados:** 8–12 posts/dia (qualidade > quantidade)
+**Máximo configurado:** 18/dia (3 posts × 6 runs) — ativar só em datas especiais
+
+| Run | Horário BRT | Target |
+|-----|-------------|--------|
+| 1 | 08:00 | 3 |
+| 2 | 10:30 | 3 |
+| 3 | 13:00 | 3 |
+| 4 | 16:00 | 3 |
+| 5 | 19:00 | 3 |
+| 6 | 21:30 | 3 |
+
+**Atenção:** GitHub Actions crons podem atrasar 30–60min em horários de pico.
+Se um run não sair no horário, disparar manualmente via Actions → Run workflow.
+
+---
+
+## 6. FONTES AUTORIZADAS (13 feeds RSS)
 
 | # | Fonte | Idioma | Categoria |
 |---|-------|--------|-----------|
@@ -111,165 +207,66 @@ O brief é salvo e reutilizado durante o dia. Reanálise completa apenas 1×/dia
 | 5 | Kotaku | EN | Games |
 | 6 | ComicBook | EN | Quadrinhos + MCU |
 | 7 | Den of Geek | EN | Séries + Filmes + Geek |
-| 8 | The Verge | EN | Tech + Cultura (filtrar palavras-chave) |
-| 9 | Deadline | EN | Cinema (filtrar palavras-chave) |
-| 10 | Variety | EN | Cinema (filtrar palavras-chave) |
+| 8 | The Verge | EN | Tech + Cultura (filtrado) |
+| 9 | Deadline | EN | Cinema (filtrado) |
+| 10 | Variety | EN | Cinema (filtrado) |
 | 11 | Anime News Network | EN | Anime + Manga |
 | 12 | Eurogamer | EN | Games |
-| 13 | Gizmodo | EN | Tech + Cultura (filtrar palavras-chave) |
+| 13 | Gizmodo | EN | Tech + Cultura (filtrado) |
 
 **Removidos:** Omelete (feed 404), Cinema com Rapadura (podcast domina)
-**Reddit:** nunca como fonte de post — só tendência para o CMO Brain
 
 ---
 
-## 5. REGRAS DE IMAGEM — DETALHAMENTO TÉCNICO
+## 7. REGRAS DE IMAGEM — DETALHAMENTO
 
 ```
 OBRIGATÓRIO:
-✅ Dimensões: 1080 × 1350px (formato 4:5 vertical)
-✅ Logo Morsa Digital: canto inferior direito, tamanho 140px, halo escuro
-✅ Gradiente escuro na parte inferior (facilita leitura de texto sobre a imagem)
-✅ Imagem real do artigo (og:image, twitter:image ou YouTube thumbnail)
-✅ Upload em CDN público (Imgur ou catbox.moe como fallback)
+✅ 1080 × 1350px (4:5 vertical)
+✅ Logo Morsa Digital — canto inferior direito, 140px, halo escuro
+✅ Gradiente escuro na parte inferior
+✅ Imagem real do artigo (og:image, twitter:image, YouTube thumbnail)
+✅ Upload CDN: Imgur → catbox.moe (fallback automático)
 
 PROIBIDO:
-❌ Imagem horizontal (16:9, 4:3, qualquer ratio diferente de 4:5)
-❌ Mockup com texto gerado (fundo laranja + título em branco)
-❌ Imagem sem logo Morsa Digital
-❌ og:image raw sem processamento (sem redimensionamento e sem logo)
+❌ Qualquer ratio diferente de 4:5
+❌ Mockup gerado (fundo laranja + título em branco)
+❌ Imagem sem logo
+❌ og:image raw sem processamento
 ❌ Placeholder genérico
-❌ Se não tem imagem real → post é pulado, próxima notícia
+❌ Se não tem imagem real → pular post
 ```
 
 ---
 
-## 6. REGRAS DE LEGENDA — DETALHAMENTO
+## 8. ERROS CONHECIDOS E CORREÇÕES
 
-### Estrutura obrigatória:
-```
-[Hook — 1 frase forte, sem emoji no início]
-
-[Parágrafo 1: contexto da notícia — o que é, de onde vem]
-
-[Parágrafo 2: por que importa para o fã — conexão emocional ou cultural]
-
-[Parágrafo 3 (opcional): dado extra, comparação, curiosidade]
-
-[CTA — pergunta ou chamada para ação variada]
-
-#hashtag1 #hashtag2 ... (8-12 hashtags)
-```
-
-### Tipos de hook que funcionam:
-- **Anúncio direto:** "X foi confirmado para Y — e muda tudo."
-- **Dado surpreendente:** "Depois de 13 anos, Call of Duty volta para Nintendo."
-- **Afirmação provocativa:** "Fable foi adiado de novo e Xbox continua sem resposta."
-- **Expectativa cumprida:** "A gente esperou 2 anos. One Piece finalmente confirmou."
-
-### Proibido na legenda:
-- ❌ Começar com emoji
-- ❌ Começar parágrafo com emoji
-- ❌ "Olha só:", "Sabia que?", "Incrível:", "Uau!"
-- ❌ Tom de press release corporativo
-- ❌ Repetir o mesmo CTA em posts consecutivos
-- ❌ Mais de 12 hashtags
+| Erro | Causa | Status |
+|------|-------|--------|
+| Post duplicado (ex: Marcia Lucas) | Threshold 3 palavras >4 letras perdia nomes | ✅ Corrigido: threshold 2 palavras >3 letras |
+| Imagem sem logo / horizontal | Imgur 429 + fallback og:image raw | ✅ Corrigido: catbox.moe fallback; sem logo = skip |
+| Post de podcast entrou | Sem filtro por tipo | ✅ Corrigido: BLOCK_KEYWORDS no news_fetcher |
+| Reddit como fonte de post | Sem separação clara | ✅ Corrigido: Reddit apenas no CMO Brain |
+| Mockup com texto | Branded background como fallback | ✅ Corrigido: removido permanentemente |
+| Repost cross-run | posts_log.json não persistia | ✅ Corrigido: git commit + permissions: write |
+| Cron atrasado/pulado | GitHub Actions instável | ⚠️ Monitorar; disparar manualmente se necessário |
+| Like count visível | Falta `instagram_manage_comments` | ⚠️ Pendente — workaround: desabilitar no app |
 
 ---
 
-## 7. VOLUME E HORÁRIOS
-
-**Target:** 12–18 posts/dia  
-**Configuração:** 6 runs/dia × 3 posts/run = 18 máximo
-
-| Run | Horário BRT | Posts |
-|-----|-------------|-------|
-| 1 | 08:00 | 3 |
-| 2 | 10:30 | 3 |
-| 3 | 13:00 | 3 |
-| 4 | 16:00 | 3 |
-| 5 | 19:00 | 3 |
-| 6 | 21:30 | 3 |
-
----
-
-## 8. FLUXO COMPLETO DE UMA RUN (passo a passo do sistema)
-
-```
-START
-  │
-  ▼
-[1] CMO Brain
-    ├── Busca últimos 20 posts IG (métricas)
-    ├── Analisa hooks que engajaram
-    ├── Verifica concorrentes (RSS)
-    ├── Coleta trends Reddit (só leitura)
-    └── Gera Day Brief com Claude → salva day_brief.json
-
-  │
-  ▼
-[2] Busca de notícias
-    └── 13 feeds RSS → filtra NSFW, podcast, política, clickbait → max 50 notícias
-
-  │
-  ▼
-[3] Deduplicação (2 camadas)
-    ├── Layer 1: posts_log.json — overlap título ≥ 2 palavras-chave
-    └── Layer 2: Instagram API — primeiras linhas das últimas 20 captions
-
-  │
-  ▼
-[4] Curadoria com Claude
-    └── Seleciona top 12 candidatos (posts_per_run × 4) orientado pelo Day Brief
-
-  │
-  ▼
-[5] Para cada candidato (até posts_per_run publicados):
-    ├── Gera legenda com Claude Haiku
-    ├── Busca og:image do artigo
-    ├── Processa imagem: resize 1080×1350 + gradiente + logo Morsa
-    ├── Upload Imgur → catbox.moe (fallback)
-    ├── SE sem imagem processada com logo → PULAR, próximo candidato
-    ├── Cria container IG (like_count_disabled=true)
-    ├── Publica no Feed
-    ├── Tenta Stories (feed post reshare)
-    └── Registra em posts_log.json
-
-  │
-  ▼
-[6] Commit posts_log.json + day_brief.json → GitHub
-    └── Garante persistência para próxima run
-
-END
-```
-
----
-
-## 9. ERROS CONHECIDOS E SUAS CORREÇÕES
-
-| Erro | Causa | Correção implementada |
-|------|-------|-----------------------|
-| Post duplicado (Marcia Lucas) | Threshold de 3 palavras perdia nomes de 2 partes | Threshold reduzido para 2 palavras >3 letras |
-| Imagem sem logo / horizontal | Imgur 429 + fallback og:image raw | catbox.moe como fallback; sem imagem com logo = skip |
-| Post de podcast entrou | Sem filtro de tipo de conteúdo | Filtro explícito: podcast, lista genérica, clickbait |
-| Reddit como fonte de post | Sem separação clara Reddit/RSS | Reddit removido do pool de candidatos |
-| Mockup com texto | Fundo branded como fallback | Branded background removido completamente |
-| Repost cross-run | posts_log.json não persistia | Git commit após cada run + `permissions: write` |
-
----
-
-## 10. PERMISSÕES META — STATUS
+## 9. PERMISSÕES META — STATUS
 
 | Permissão | Status | Impacto |
 |-----------|--------|---------|
 | `instagram_basic` | ✅ Ativo | Ler perfil |
 | `instagram_content_publish` | ✅ Ativo | Publicar posts e Stories |
-| `instagram_manage_comments` | ⚠️ Pendente | Desabilitar likes via update pós-publicação |
+| `pages_manage_posts` | ⚠️ Pendente | Cross-post automático IG → Facebook |
+| `instagram_manage_comments` | ⚠️ Pendente | Desabilitar likes via API |
 | `instagram_manage_insights` | ⚠️ Pendente | Métricas reais (alcance, salvos) |
-| `instagram_manage_broadcast_messages` | ⚠️ Pendente | Postar na comunidade Clã do Morsa |
+| `instagram_manage_broadcast_messages` | ⚠️ Pendente | Comunidade Clã do Morsa |
 
-**Para adicionar:** Meta Developer → App "Morsa Digital" → App Review → solicitar cada permissão
+**Para adicionar:** Meta Developer → App "Morsa Digital" → App Review → solicitar permissão → regenerar token → `gh secret set FB_ACCESS_TOKEN`
 
 ---
 
-*Última atualização: 2026-05-30*
+*Bíblia baseada em análise real: 50 posts, 27.136 seguidores, dados de mar–mai 2026*
