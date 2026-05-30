@@ -65,6 +65,8 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IMGUR_CLIENT_ID: ${{ secrets.IMGUR_CLIENT_ID }}
           MORSA_BROADCAST_CHANNEL_ID: ${{ secrets.MORSA_BROADCAST_CHANNEL_ID }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
           DRY_RUN: ${{ inputs.dry_run || 'false' }}
           POSTS_PER_RUN: "3"
           DELAY_BETWEEN_POSTS: "90"

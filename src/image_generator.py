@@ -473,10 +473,55 @@ def _upload_to_imgur(image_bytes: bytes, retries: int = 1) -> Optional[str]:
     return None
 
 
+def _upload_to_github(image_bytes: bytes) -> Optional[str]:
+    """
+    Upload via GitHub Contents API — usa o próprio repositório como CDN.
+    Completamente confiável no GitHub Actions (usa GITHUB_TOKEN já disponível).
+    Salva em images/ com nome baseado em timestamp, retorna URL raw.githubusercontent.com.
+    """
+    token = os.environ.get("GITHUB_TOKEN", "") or os.environ.get("GH_TOKEN", "")
+    repo  = os.environ.get("GITHUB_REPOSITORY", "tuliogama/morsa-digital-autoposter")
+    if not token:
+        logger.debug("GITHUB_TOKEN não disponível — pulando upload GitHub")
+        return None
+
+    import time as _time
+    filename = f"images/post_{int(_time.time())}.jpg"
+    b64 = base64.b64encode(image_bytes).decode("utf-8")
+
+    payload = json.dumps({
+        "message": f"img: {filename} [skip ci]",
+        "content": b64,
+    }).encode("utf-8")
+
+    req = urllib.request.Request(
+        f"https://api.github.com/repos/{repo}/contents/{filename}",
+        data=payload,
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+            "User-Agent": HEADERS["User-Agent"],
+        },
+        method="PUT",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            result = json.loads(resp.read())
+        raw_url = result.get("content", {}).get("download_url", "")
+        if raw_url:
+            return raw_url
+        # Fallback manual da URL raw
+        branch = "main"
+        return f"https://raw.githubusercontent.com/{repo}/{branch}/{filename}"
+    except Exception as e:
+        logger.debug(f"GitHub upload falhou: {e}")
+        return None
+
+
 def _upload_to_catbox(image_bytes: bytes) -> Optional[str]:
-    """
-    Fallback de upload: catbox.moe — gratuito, sem autenticação, sem rate limit em CI.
-    """
+    """Fallback: catbox.moe."""
     try:
         boundary = "----MorsaBoundary7x3k"
         body = (
@@ -487,7 +532,6 @@ def _upload_to_catbox(image_bytes: bytes) -> Optional[str]:
             f'Content-Disposition: form-data; name="fileToUpload"; filename="morsa_post.jpg"\r\n'
             f"Content-Type: image/jpeg\r\n\r\n"
         ).encode() + image_bytes + f"\r\n--{boundary}--\r\n".encode()
-
         req = urllib.request.Request(
             "https://catbox.moe/user/api.php",
             data=body,
@@ -501,14 +545,23 @@ def _upload_to_catbox(image_bytes: bytes) -> Optional[str]:
             url = resp.read().decode().strip()
         if url.startswith("https://"):
             return url
-        logger.debug(f"Catbox resposta inesperada: {url[:60]}")
     except Exception as e:
         logger.debug(f"Catbox falhou: {e}")
     return None
 
 
 def _upload_image(image_bytes: bytes) -> Optional[str]:
-    """Tenta Imgur → catbox.moe. Retorna None se ambos falharem."""
+    """
+    Upload em cascata:
+    1. GitHub (repo próprio — 100% confiável no Actions)
+    2. Imgur (funciona localmente)
+    3. catbox.moe (fallback externo)
+    """
+    url = _upload_to_github(image_bytes)
+    if url:
+        logger.info(f"Imagem publicada (GitHub CDN): {url[:70]}")
+        return url
+
     url = _upload_to_imgur(image_bytes)
     if url:
         logger.info(f"Imagem publicada (Imgur): {url}")

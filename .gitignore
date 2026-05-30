@@ -1,5 +1,7 @@
 .env
 .env.local
+# Imagens geradas para posts — mantidas no repo como CDN
+# images/ rastreada intencionalmente (não ignorar)
 logs/
 !logs/posts_log.json
 !logs/day_brief.json
