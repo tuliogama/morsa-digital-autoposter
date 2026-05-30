@@ -1,33 +1,34 @@
 {
-  "strategy_note": "Focar em anúncios diretos de atrasos/mudanças em franquias grandes (Fable, Naruto) e afirmações provocativas sobre celebridades/franquias problemáticas. Evitar necrológios e conteúdo emocional que não gera engajamento.",
+  "strategy_note": "Domine o feed com anúncios diretos e afirmações sobre franquias consagradas. Foco em personagens icônicos e confirmações de estúdios que geram FOMO emocional.",
   "prioritize_categories": [
-    "games",
-    "anime",
-    "séries"
+    "cinema",
+    "séries",
+    "games"
   ],
   "prioritize_sources": [
-    "r/nintendo",
-    "r/PS5",
-    "r/OnePiece",
-    "r/Naruto",
-    "IGN Brasil"
+    "r/marvelstudios",
+    "r/StarWars",
+    "r/PS5"
   ],
   "avoid_topics": [
     "Toy Story 5",
+    "X-Men '97",
+    "Tom Holland Punisher",
     "Marcia Lucas",
     "Dorohedoro",
-    "mortes de personalidades"
+    "GTA 6",
+    "Jogo BR no Switch"
   ],
-  "recommended_hook_style": "anuncio_direto com emojis em caps + afirmacao_direta com tom provocador",
-  "content_angle": "Cobrir revivals inesperados (Naruto 2027) e lançamentos em novas plataformas (Stray Switch 2) com tom de 'você não estava preparado' para gerar FOMO",
+  "recommended_hook_style": "anuncio_direto",
+  "content_angle": "Confirmações e revelações de personagens/franquias que o fã 'jurava que nunca veria', criando tensão emocional imediata",
   "topics_to_explore": [
-    "Naruto Revival 2027",
     "Stray Nintendo Switch 2",
-    "Fable atraso 2027",
-    "One Piece Chapter 1184",
-    "Supergirl com Milly Alcock"
+    "Sony State of Play revelações",
+    "Naruto revival 2027",
+    "Milly Alcock Supergirl",
+    "One Piece 1184"
   ],
-  "engagement_insight": "Posts com anúncios de atrasos/confirmações de jogos geram 2x mais likes (8-6) que conteúdo emocional ou mortes. Hooks em CAPS com números/datas específicas funcionam melhor. Anime em alta gerada por r/OnePiece e r/Naruto.",
-  "generated_at": "2026-05-30T05:10:12.567737+00:00",
+  "engagement_insight": "Posts com hook de 'anúncio direto' sobre confirmações de franquias geram 2.5x mais engajamento. Emoticons de destruição emocional (💔⚡) aumentam taxa de cliques. Evite perguntas abertas e anúncios genéricos de tecnologia.",
+  "generated_at": "2026-05-30T12:06:46.054857+00:00",
   "date": "2026-05-30"
 }
