@@ -26,11 +26,20 @@ PLATFORM_PROMPTS = {
     "instagram": {
         "max_chars": 2200,
         "system": (
-            "Você é o social media da Morsa Digital — canal tech brasileiro descontraído, nerd e autêntico. "
-            "Escreve legendas de Instagram sobre tecnologia com personalidade: tom informal mas informativo, "
-            "emojis para separar seções, gírias nerds OK. Estrutura: gancho forte (1 linha) + desenvolvimento "
-            "(3-5 linhas) + CTA ('Conta nos comentários...', 'Você sabia?'...) + 5-8 hashtags ao final. "
-            "Nunca inventa fatos — apenas comenta/adapta o que foi informado."
+            "Você é o social media da Morsa Digital — perfil brasileiro de cultura geek/nerd/pop. "
+            "Foco total em: filmes, séries, animes, doramas, games e cultura pop. "
+            "Escreve legendas de Instagram com personalidade: tom informal, animado, cheio de referências nerds. "
+            "ESTRUTURA OBRIGATÓRIA:\n"
+            "1. Gancho forte com emoji (1 linha — frase de impacto, pode ser pergunta ou exclamação)\n"
+            "2. Desenvolvimento (3-5 linhas — contexto da notícia de forma envolvente)\n"
+            "3. CTA engajador ('Conta nos comentários!', 'O que você acha?', 'Você vai assistir?'...)\n"
+            "4. Hashtags (5-8, todas no final, nunca antes do texto)\n\n"
+            "REGRAS ABSOLUTAS:\n"
+            "- NUNCA comece com hashtag, '#', '@' ou qualquer símbolo\n"
+            "- NUNCA use '#post', '#instagram', '#repost' ou similares\n"
+            "- A legenda começa SEMPRE com o emoji do gancho, nada antes\n"
+            "- Hashtags SÓ no final, após uma linha em branco\n"
+            "- Nunca inventa fatos — apenas comenta/adapta o que foi informado"
         ),
     },
     "facebook": {
@@ -88,14 +97,18 @@ def select_best_news(news_items: list[dict], count: int = 5) -> list[dict]:
     )
 
     prompt = (
-        f"Lista de notícias tech recentes:\n\n{titles_block}\n\n"
-        f"Selecione os {count} itens mais relevantes para o público brasileiro que gosta de tecnologia, "
-        f"games, IA, gadgets e programação. Responda APENAS com os números separados por vírgula, ex: 1,3,7,12,15"
+        f"Lista de notícias recentes:\n\n{titles_block}\n\n"
+        f"Selecione os {count} itens mais relevantes para o público brasileiro que ama "
+        f"filmes, séries, animes, doramas, games e cultura pop/nerd/geek. "
+        f"PRIORIZE: lançamentos, trailers, notícias de franquias populares (Marvel, DC, Star Wars, anime, Nintendo, PlayStation...). "
+        f"EVITE: notícias de IA genérica, robôs, finanças, política, celebridades sem relação com cultura pop. "
+        f"Responda APENAS com os números separados por vírgula, ex: 1,3,7,12,15"
     )
 
     try:
         result = _call_claude(
-            "Você é curador de conteúdo tech para o público brasileiro.",
+            "Você é curador de conteúdo geek/nerd/pop para o público brasileiro. "
+            "Prioriza filmes, séries, animes, doramas e games. Ignora tech genérico.",
             prompt,
         )
         indices = [int(x.strip()) - 1 for x in result.split(",") if x.strip().isdigit()]

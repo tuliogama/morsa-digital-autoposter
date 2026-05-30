@@ -35,20 +35,23 @@ HEADERS = {
 
 # Palavras-chave para filtrar conteúdo nerd/geek/pop relevante
 NERD_KEYWORDS = [
-    # Games
+    # Games — foco principal
     "game", "games", "gaming", "gta", "playstation", "xbox", "nintendo",
     "ps5", "ps4", "steam", "indie", "rpg", "fps", "esport", "esports",
     "minecraft", "fortnite", "league of legends", "valorant", "zelda",
-    # Filmes/Séries
+    "hogwarts", "elden ring", "call of duty", "resident evil", "final fantasy",
+    # Filmes e séries — foco principal
     "marvel", "dc", "star wars", "disney", "netflix", "hbo", "amazon prime",
-    "anime", "manga", "série", "filme", "trailer", "season", "temporada",
-    "avengers", "batman", "spider-man", "pokemon", "one piece", "naruto",
-    # Tecnologia geek
-    "ia", "ai", "inteligência artificial", "spacex", "nasa", "elon musk",
-    "openai", "chatgpt", "robô", "robot", "hack", "hacker", "cyberpunk",
-    # Pop culture / Quadrinhos
-    "cosplay", "comic", "quadrinhos", "nerd", "geek", "otaku",
-    "convention", "sdcc", "comic con",
+    "anime", "manga", "série", "séries", "filme", "filmes", "trailer", "season",
+    "temporada", "avengers", "batman", "spider-man", "superman", "deadpool",
+    "stranger things", "the last of us", "house of dragon", "sandman",
+    # Anime e dorama — foco principal
+    "pokemon", "one piece", "naruto", "demon slayer", "attack on titan",
+    "jujutsu kaisen", "dragon ball", "bleach", "dorama", "k-drama", "kdrama",
+    "anime", "manga", "shonen", "seinen", "netflix anime",
+    # Quadrinhos / pop culture
+    "cosplay", "comic", "comics", "quadrinhos", "nerd", "geek", "otaku",
+    "convention", "sdcc", "comic con", "warner", "universal",
 ]
 
 
@@ -233,13 +236,10 @@ def _parse_date(raw: str) -> Optional[datetime]:
 
 def fetch_all_news(limit: int = 30) -> list[dict]:
     """Agrega notícias nerd/geek/pop de todas as fontes."""
-    logger.info("Buscando notícias nerd dos RSS feeds (Omelete, IGN, Kotaku...)...")
+    logger.info("Buscando notícias de filmes, séries, animes, games e cultura pop...")
     rss = fetch_rss(max_per_feed=5)
 
-    logger.info("Buscando conteúdo nerd/geek no HackerNews...")
-    hn = fetch_hackernews_nerd(max_items=10)
-
-    all_items = rss + hn
+    all_items = rss
 
     # Deduplicar por título similar
     seen_titles = set()
@@ -250,15 +250,10 @@ def fetch_all_news(limit: int = 30) -> list[dict]:
             seen_titles.add(key)
             unique.append(item)
 
-    # Prioriza fontes brasileiras (mais relevantes para o público)
-    br_sources = {"Omelete", "IGN Brasil", "The Enemy", "Jovem Nerd", "Pipoca Moderna"}
-    br_items = [i for i in unique if i["source"] in br_sources]
+    # Prioriza fontes brasileiras (mais relevantes para o público BR)
+    br_sources = {"IGN Brasil", "Cinema com Rapadura"}
+    br_items   = [i for i in unique if i["source"] in br_sources]
     intl_items = [i for i in unique if i["source"] not in br_sources]
 
-    # HackerNews com score alto vai na frente das internacionais
-    hn_items = sorted([i for i in intl_items if i["source"] == "HackerNews"],
-                      key=lambda x: x["score"], reverse=True)
-    other_intl = [i for i in intl_items if i["source"] != "HackerNews"]
-
-    combined = br_items + hn_items + other_intl
+    combined = br_items + intl_items
     return combined[:limit]
