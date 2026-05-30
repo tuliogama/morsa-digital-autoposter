@@ -87,7 +87,7 @@ def main():
     # ETAPA 2 — Busca de notícias                                         #
     # ------------------------------------------------------------------ #
     logger.info("Buscando notícias...")
-    news = fetch_all_news(limit=40, include_reddit=True)
+    news = fetch_all_news(limit=50)
     logger.info(f"{len(news)} notícias encontradas")
 
     if not news:
@@ -115,19 +115,12 @@ def main():
     from content_generator import select_best_news, generate_post
     from publishers.instagram import NoImageError
 
-    # Separar fontes RSS (têm og:image) de Reddit (imagem incerta)
-    # RSS vai primeiro para que Claude priorize fontes com imagem garantida
-    rss_news = [n for n in news if "Reddit" not in n.get("source", "")]
-    reddit_news = [n for n in news if "Reddit" in n.get("source", "")]
-    news_prioritized = rss_news + reddit_news
-    logger.info(f"Fontes: {len(rss_news)} RSS + {len(reddit_news)} Reddit")
-
-    # Selecionar 6× mais candidatos do que necessário para cobrir posts sem imagem
-    candidates_count = posts_per_run * 6
-    logger.info(f"Selecionando até {candidates_count} candidatos para garantir {posts_per_run} com imagem...")
+    # Selecionar 4× candidatos para cobrir possíveis falhas de imagem
+    candidates_count = posts_per_run * 4
+    logger.info(f"Selecionando até {candidates_count} candidatos de {len(news)} notícias...")
     if brief:
         logger.info(f"Estratégia do dia: {brief.get('strategy_note', '')}")
-    best_news = select_best_news(news_prioritized, count=candidates_count, brief=brief)
+    best_news = select_best_news(news, count=candidates_count, brief=brief)
 
     if not best_news:
         logger.error("Claude não selecionou nenhuma notícia. Abortando.")

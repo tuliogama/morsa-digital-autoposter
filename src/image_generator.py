@@ -447,8 +447,8 @@ def _resize_crop_center(img, target_w: int, target_h: int) -> "Image":
 IMGUR_CLIENT_ID = os.environ.get("IMGUR_CLIENT_ID", "546c25a59c58ad7")
 
 
-def _upload_to_imgur(image_bytes: bytes, retries: int = 2) -> Optional[str]:
-    """Sobe a imagem pro Imgur com retry. Client-ID via env var IMGUR_CLIENT_ID."""
+def _upload_to_imgur(image_bytes: bytes, retries: int = 1) -> Optional[str]:
+    """Sobe a imagem pro Imgur."""
     for attempt in range(retries + 1):
         try:
             b64 = base64.b64encode(image_bytes).decode("utf-8")
@@ -462,15 +462,65 @@ def _upload_to_imgur(image_bytes: bytes, retries: int = 2) -> Optional[str]:
                 },
                 method="POST"
             )
-            with urllib.request.urlopen(req, timeout=30) as resp:
+            with urllib.request.urlopen(req, timeout=20) as resp:
                 result = json.loads(resp.read())
             if result.get("success"):
                 return result["data"]["link"]
-            logger.warning(f"Imgur retornou sucesso=false: {result}")
         except Exception as e:
-            logger.warning(f"Imgur tentativa {attempt+1}/{retries+1} falhou: {e}")
+            logger.debug(f"Imgur tentativa {attempt+1}/{retries+1} falhou: {e}")
             if attempt < retries:
                 import time; time.sleep(2)
+    return None
+
+
+def _upload_to_catbox(image_bytes: bytes) -> Optional[str]:
+    """
+    Fallback de upload: catbox.moe — gratuito, sem autenticação, sem rate limit em CI.
+    """
+    try:
+        boundary = "----MorsaBoundary7x3k"
+        body = (
+            f"--{boundary}\r\n"
+            f'Content-Disposition: form-data; name="reqtype"\r\n\r\n'
+            f"fileupload\r\n"
+            f"--{boundary}\r\n"
+            f'Content-Disposition: form-data; name="fileToUpload"; filename="morsa_post.jpg"\r\n'
+            f"Content-Type: image/jpeg\r\n\r\n"
+        ).encode() + image_bytes + f"\r\n--{boundary}--\r\n".encode()
+
+        req = urllib.request.Request(
+            "https://catbox.moe/user/api.php",
+            data=body,
+            headers={
+                "Content-Type": f"multipart/form-data; boundary={boundary}",
+                "User-Agent": HEADERS["User-Agent"],
+            },
+            method="POST",
+        )
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            url = resp.read().decode().strip()
+        if url.startswith("https://"):
+            return url
+        logger.debug(f"Catbox resposta inesperada: {url[:60]}")
+    except Exception as e:
+        logger.debug(f"Catbox falhou: {e}")
+    return None
+
+
+def _upload_image(image_bytes: bytes) -> Optional[str]:
+    """Tenta Imgur → catbox.moe. Retorna None se ambos falharem."""
+    url = _upload_to_imgur(image_bytes)
+    if url:
+        logger.info(f"Imagem publicada (Imgur): {url}")
+        return url
+
+    logger.warning("Imgur indisponível — tentando catbox.moe...")
+    url = _upload_to_catbox(image_bytes)
+    if url:
+        logger.info(f"Imagem publicada (catbox.moe): {url}")
+        return url
+
+    logger.warning("Todos os serviços de upload falharam — post será pulado")
     return None
 
 
@@ -478,71 +528,28 @@ def _upload_to_imgur(image_bytes: bytes, retries: int = 2) -> Optional[str]:
 # Função principal
 # ---------------------------------------------------------------------------
 
-def _extract_direct_image_url(article_url: str) -> Optional[str]:
-    """
-    Extrai a URL direta da og:image do artigo sem fazer download.
-    Usada como fallback quando o upload para Imgur falha.
-    """
-    import re
-    if not article_url or "reddit.com" in article_url:
-        return None
-    try:
-        req = urllib.request.Request(article_url, headers=HEADERS)
-        with urllib.request.urlopen(req, timeout=8) as resp:
-            html = resp.read(100_000).decode("utf-8", errors="replace")
-        patterns = [
-            r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
-            r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
-            r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']',
-            r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']twitter:image["\']',
-        ]
-        for pat in patterns:
-            m = re.search(pat, html, re.IGNORECASE)
-            if m:
-                img_url = m.group(1).replace("&amp;", "&")
-                if img_url.startswith("http"):
-                    return img_url
-    except Exception:
-        pass
-    return None
-
-
 def generate_post_image(news_item: dict) -> Optional[str]:
     """
-    Gera imagem 4:5 (1080x1350) com imagem real do artigo + logo Morsa.
+    Gera imagem 4:5 (1080×1350px) com imagem real do artigo + logo Morsa Digital.
+    Logo e formato 4:5 são obrigatórios — sem eles o post não sai.
+
     Fluxo:
-      1. Busca imagem do artigo
-      2. Processa (resize 4:5 + gradiente + logo) e sobe para Imgur
-      3. Se Imgur falhar por rate limit → usa URL direta do og:image (sem logo)
-    Retorna None apenas se não houver nenhuma imagem real disponível.
+      1. Busca imagem real do artigo (og:image, youtube thumbnail, etc.)
+      2. Processa: resize 4:5 + gradiente + logo Morsa
+      3. Upload: Imgur → fallback catbox.moe
+      4. Se não encontrar imagem OU upload falhar → retorna None (post pulado)
     """
+    if not _pil_available():
+        logger.warning("Pillow não instalado — imagem não gerada")
+        return None
+
     title = news_item.get("title", "")
     article_url = news_item.get("url", "")
 
     if not article_url:
         return None
 
-    # YouTube: URL direta do thumbnail (sem precisar de upload)
-    if "youtube.com" in article_url or "youtu.be" in article_url:
-        import re
-        for pat in [r'(?:youtube\.com/watch\?v=|youtu\.be/)([A-Za-z0-9_-]{11})',
-                    r'youtube\.com/embed/([A-Za-z0-9_-]{11})']:
-            m = re.search(pat, article_url)
-            if m:
-                thumb = f"https://img.youtube.com/vi/{m.group(1)}/maxresdefault.jpg"
-                logger.info(f"YouTube thumbnail direto: {thumb[:60]}")
-                return thumb
-
-    if not _pil_available():
-        # Sem Pillow: tenta URL direta do og:image
-        direct = _extract_direct_image_url(article_url)
-        if direct:
-            logger.info(f"Pillow indisponível — usando og:image direta: {direct[:60]}")
-        return direct
-
-    from PIL import Image
-
-    # 1. Buscar imagem do artigo
+    # 1. Buscar imagem real do artigo
     img_bytes = _fetch_article_image(article_url)
     if not img_bytes:
         logger.info(f"Sem imagem real para '{title[:50]}' — post será pulado")
@@ -550,12 +557,12 @@ def generate_post_image(news_item: dict) -> Optional[str]:
 
     base_img = _load_image_from_bytes(img_bytes)
     if not base_img:
-        logger.info(f"Imagem corrompida para '{title[:50]}' — post será pulado")
+        logger.info(f"Imagem inválida para '{title[:50]}' — post será pulado")
         return None
 
     logger.info("Imagem do artigo carregada com sucesso")
 
-    # 2. Processar: resize 4:5 + gradiente + logo
+    # 2. Processar: resize 4:5 + gradiente escuro + logo Morsa
     base_img = _resize_crop_center(base_img, POST_W, POST_H)
     base_img = _add_gradient_overlay(base_img)
     final_img = _paste_logo(base_img)
@@ -564,20 +571,7 @@ def generate_post_image(news_item: dict) -> Optional[str]:
     buf = io.BytesIO()
     final_rgb.save(buf, format="JPEG", quality=92, optimize=True)
     image_bytes = buf.getvalue()
-    logger.info(f"Imagem gerada: {len(image_bytes) // 1024}KB")
+    logger.info(f"Imagem processada: {len(image_bytes) // 1024}KB")
 
-    # 3. Upload para Imgur
-    public_url = _upload_to_imgur(image_bytes)
-    if public_url:
-        logger.info(f"Imagem publicada no Imgur: {public_url}")
-        return public_url
-
-    # 4. Imgur falhou (rate limit / erro) → usar URL direta do og:image como fallback
-    logger.warning("Imgur indisponível — usando URL direta do og:image como fallback")
-    direct = _extract_direct_image_url(article_url)
-    if direct:
-        logger.info(f"Fallback og:image: {direct[:60]}")
-        return direct
-
-    logger.info(f"Sem URL de imagem disponível para '{title[:50]}' — post será pulado")
-    return None
+    # 3. Upload (Imgur → catbox.moe)
+    return _upload_image(image_bytes)

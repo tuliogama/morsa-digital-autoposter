@@ -66,7 +66,7 @@ jobs:
           IMGUR_CLIENT_ID: ${{ secrets.IMGUR_CLIENT_ID }}
           MORSA_BROADCAST_CHANNEL_ID: ${{ secrets.MORSA_BROADCAST_CHANNEL_ID }}
           DRY_RUN: ${{ inputs.dry_run || 'false' }}
-          POSTS_PER_RUN: "2"
+          POSTS_PER_RUN: "3"
           DELAY_BETWEEN_POSTS: "90"
         run: |
           PLATFORMS="${{ inputs.platforms || 'instagram' }}"
