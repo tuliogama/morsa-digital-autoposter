@@ -478,56 +478,106 @@ def _upload_to_imgur(image_bytes: bytes, retries: int = 2) -> Optional[str]:
 # Função principal
 # ---------------------------------------------------------------------------
 
+def _extract_direct_image_url(article_url: str) -> Optional[str]:
+    """
+    Extrai a URL direta da og:image do artigo sem fazer download.
+    Usada como fallback quando o upload para Imgur falha.
+    """
+    import re
+    if not article_url or "reddit.com" in article_url:
+        return None
+    try:
+        req = urllib.request.Request(article_url, headers=HEADERS)
+        with urllib.request.urlopen(req, timeout=8) as resp:
+            html = resp.read(100_000).decode("utf-8", errors="replace")
+        patterns = [
+            r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
+            r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
+            r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']',
+            r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']twitter:image["\']',
+        ]
+        for pat in patterns:
+            m = re.search(pat, html, re.IGNORECASE)
+            if m:
+                img_url = m.group(1).replace("&amp;", "&")
+                if img_url.startswith("http"):
+                    return img_url
+    except Exception:
+        pass
+    return None
+
+
 def generate_post_image(news_item: dict) -> Optional[str]:
     """
-    Gera imagem 4:5 (1080x1350) com imagem real do artigo.
-    Retorna None se não encontrar imagem real — nunca usa mockup/branded background.
+    Gera imagem 4:5 (1080x1350) com imagem real do artigo + logo Morsa.
+    Fluxo:
+      1. Busca imagem do artigo
+      2. Processa (resize 4:5 + gradiente + logo) e sobe para Imgur
+      3. Se Imgur falhar por rate limit → usa URL direta do og:image (sem logo)
+    Retorna None apenas se não houver nenhuma imagem real disponível.
     """
-    if not _pil_available():
-        logger.warning("Pillow não instalado — imagem não gerada")
-        return None
-
-    from PIL import Image
-
     title = news_item.get("title", "")
     article_url = news_item.get("url", "")
 
-    # 1. Tentar obter imagem real do artigo
-    base_img = None
-    if article_url:
-        img_bytes = _fetch_article_image(article_url)
-        if img_bytes:
-            base_img = _load_image_from_bytes(img_bytes)
-            if base_img:
-                logger.info("Imagem do artigo carregada com sucesso")
+    if not article_url:
+        return None
 
-    # 2. Sem imagem real → retornar None (post será pulado)
-    if base_img is None:
+    # YouTube: URL direta do thumbnail (sem precisar de upload)
+    if "youtube.com" in article_url or "youtu.be" in article_url:
+        import re
+        for pat in [r'(?:youtube\.com/watch\?v=|youtu\.be/)([A-Za-z0-9_-]{11})',
+                    r'youtube\.com/embed/([A-Za-z0-9_-]{11})']:
+            m = re.search(pat, article_url)
+            if m:
+                thumb = f"https://img.youtube.com/vi/{m.group(1)}/maxresdefault.jpg"
+                logger.info(f"YouTube thumbnail direto: {thumb[:60]}")
+                return thumb
+
+    if not _pil_available():
+        # Sem Pillow: tenta URL direta do og:image
+        direct = _extract_direct_image_url(article_url)
+        if direct:
+            logger.info(f"Pillow indisponível — usando og:image direta: {direct[:60]}")
+        return direct
+
+    from PIL import Image
+
+    # 1. Buscar imagem do artigo
+    img_bytes = _fetch_article_image(article_url)
+    if not img_bytes:
         logger.info(f"Sem imagem real para '{title[:50]}' — post será pulado")
         return None
 
-    # Redimensionar/recortar para 4:5
+    base_img = _load_image_from_bytes(img_bytes)
+    if not base_img:
+        logger.info(f"Imagem corrompida para '{title[:50]}' — post será pulado")
+        return None
+
+    logger.info("Imagem do artigo carregada com sucesso")
+
+    # 2. Processar: resize 4:5 + gradiente + logo
     base_img = _resize_crop_center(base_img, POST_W, POST_H)
-
-    # 3. Gradiente escuro na parte inferior
     base_img = _add_gradient_overlay(base_img)
-
-    # 4. Logo redondinha no canto inferior direito
     final_img = _paste_logo(base_img)
 
-    # 5. Converter para RGB e salvar em bytes
     final_rgb = final_img.convert("RGB")
     buf = io.BytesIO()
     final_rgb.save(buf, format="JPEG", quality=92, optimize=True)
     image_bytes = buf.getvalue()
-
     logger.info(f"Imagem gerada: {len(image_bytes) // 1024}KB")
 
-    # 6. Upload para Imgur
+    # 3. Upload para Imgur
     public_url = _upload_to_imgur(image_bytes)
     if public_url:
-        logger.info(f"Imagem publicada: {public_url}")
-    else:
-        logger.warning("Falha no upload — usando IG_DEFAULT_IMAGE_URL como fallback")
+        logger.info(f"Imagem publicada no Imgur: {public_url}")
+        return public_url
 
-    return public_url
+    # 4. Imgur falhou (rate limit / erro) → usar URL direta do og:image como fallback
+    logger.warning("Imgur indisponível — usando URL direta do og:image como fallback")
+    direct = _extract_direct_image_url(article_url)
+    if direct:
+        logger.info(f"Fallback og:image: {direct[:60]}")
+        return direct
+
+    logger.info(f"Sem URL de imagem disponível para '{title[:50]}' — post será pulado")
+    return None
