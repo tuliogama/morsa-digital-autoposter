@@ -108,7 +108,7 @@ def select_best_news(news_items: list[dict], count: int = 5, brief: dict = None)
 
     titles_block = "\n".join(
         f"{i+1}. [{item['source']}] {item['title']}"
-        for i, item in enumerate(news_items[:30])
+        for i, item in enumerate(news_items[:50])
     )
 
     # Contexto do Day Brief se disponível
@@ -128,9 +128,13 @@ def select_best_news(news_items: list[dict], count: int = 5, brief: dict = None)
         f"Lista de notícias disponíveis:\n\n{titles_block}\n"
         f"{brief_context}\n"
         f"Selecione os {count} itens com maior potencial de engajamento para o público brasileiro "
-        f"que ama filmes, séries, animes, doramas, games e cultura pop/nerd/geek. "
-        f"PRIORIZE: lançamentos, trailers, franquias populares (Marvel, DC, Star Wars, anime, Nintendo, PlayStation). "
-        f"EVITE: IA genérica, robótica, finanças, política, celebridades sem relação com cultura pop. "
+        f"que ama filmes, séries, animes, doramas, games e cultura pop/nerd/geek.\n"
+        f"PRIORIZE (nesta ordem):\n"
+        f"1. Fontes de portais/sites (IGN, Kotaku, GameBlast, AnimeUnited, etc.) — têm imagem garantida\n"
+        f"2. Lançamentos, trailers, anúncios oficiais de franquias populares (Marvel, DC, Star Wars, anime, Nintendo, PlayStation)\n"
+        f"3. Reddit r/... apenas se for notícia factual muito relevante sem cobertura nos portais\n"
+        f"EVITE: IA genérica, robótica, finanças, política, celebridades sem relação com cultura pop, "
+        f"posts do Reddit que parecem ser só imagens/memes sem link externo.\n"
         f"Responda APENAS com os números separados por vírgula, ex: 1,3,7,12,15"
     )
 
