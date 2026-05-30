@@ -1,34 +1,34 @@
 {
-  "strategy_note": "Focar em anúncios diretos e afirmações que geram urgência e curiosidade imediata. Evitar perguntas abertas e posts informativos puros que não conectam emocionalmente com a audiência.",
+  "strategy_note": "Dobrar aposta em anúncios diretos e afirmações sobre franquias consolidadas que geram emoção. Evitar tópicos genéricos de tech/games sem conexão emocional clara.",
   "prioritize_categories": [
-    "cinema",
-    "séries",
-    "games"
+    "Cinema/Franquias",
+    "Anime/Mangá",
+    "Cultura Pop Nostálgica"
   ],
   "prioritize_sources": [
     "IGN Brasil",
-    "AnimeUnited",
-    "r/marvelstudios"
+    "r/marvelstudios",
+    "r/StarWars",
+    "r/OnePiece"
   ],
   "avoid_topics": [
-    "Marcia Lucas Star Wars",
-    "relacionamentos em filmes",
-    "animes de 2025 em tom descontraído",
-    "GTA 6 encerramento de dev",
-    "Xbox CEO warning",
-    "Fable delay",
-    "desenvolvimento democrático de games"
+    "GTA 6 dev news",
+    "robótica futurista",
+    "Dorohedoro",
+    "Tom Holland/Punisher",
+    "Marcia Lucas obituário"
   ],
   "recommended_hook_style": "anuncio_direto",
-  "content_angle": "Revelar detalhes bombásticos sobre personagens e decisões criativas que quebram expectativas dos fãs, criando 'plot twists' narrativos que geram comentários imediatos.",
+  "content_angle": "Revelar detalhes emocionantes e impactantes sobre personagens/cenas icônicas que farão a audiência se sentir 'destruída' ou surpreendida — foco em 'você não esperava por isso'",
   "topics_to_explore": [
-    "Spidey e Punisher parceria confirmada Tom Holland",
-    "Personagem Studio Ghibli forma real Miyazaki revelação",
-    "Naruto revival 2027 confirmado após 10 anos",
-    "Nintendo Switch 2 Stray lançamento",
-    "Sony State of Play countdown"
+    "Studio Ghibli personagem revelação",
+    "Naruto revival 2027",
+    "Sony State of Play",
+    "One Piece último capítulo",
+    "Supergirl Milly Alcock responsabilidade do papel",
+    "Stray no Switch 2"
   ],
-  "engagement_insight": "Posts com hooks diretos que anunciam revelações ou confirmações (tipo 'Tom Holland confirmou' ou 'vai ter uma cena que vai destruir você') geram 30-54 pontos de engajamento. Perguntas genéricas e posts sobre falecimentos não geram tração com essa audiência.",
-  "generated_at": "2026-05-30T12:43:06.519945+00:00",
+  "engagement_insight": "Posts com hooks 'anuncio_direto' (Toy Story 5) e 'afirmacao_direta' sobre personagens/sagas conhecidas geram 3-5x mais engajamento; conteúdo emocional e nostálgico supera notícias secas de desenvolvimento",
+  "generated_at": "2026-05-30T13:45:53.815926+00:00",
   "date": "2026-05-30"
 }
