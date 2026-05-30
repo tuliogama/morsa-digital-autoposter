@@ -1,34 +1,38 @@
 {
-  "strategy_note": "Dobrar aposta em anúncios diretos e afirmações sobre franquias consolidadas que geram emoção. Evitar tópicos genéricos de tech/games sem conexão emocional clara.",
+  "strategy_note": "Explorar anúncios diretos e afirmações que geram impacto emocional imediato. Focar em franquias consolidadas e personagens icônicos que disparam nostalgia e curiosidade.",
   "prioritize_categories": [
-    "Cinema/Franquias",
-    "Anime/Mangá",
-    "Cultura Pop Nostálgica"
+    "Cinema",
+    "Animação",
+    "Games"
   ],
   "prioritize_sources": [
-    "IGN Brasil",
-    "r/marvelstudios",
-    "r/StarWars",
-    "r/OnePiece"
+    "Reddit r/marvelstudios",
+    "Reddit r/StarWars",
+    "IGN Brasil"
   ],
   "avoid_topics": [
-    "GTA 6 dev news",
-    "robótica futurista",
-    "Dorohedoro",
-    "Tom Holland/Punisher",
-    "Marcia Lucas obituário"
+    "Irmão do Jorel prêmios internacionais",
+    "Netflix remakes/clássicos retornando",
+    "Dorohedoro volta",
+    "Uncharted PS5",
+    "X-Men '97",
+    "Marcia Lucas",
+    "GTA 6",
+    "Xbox CEO",
+    "Fable delay",
+    "Witcher 3",
+    "Stray Switch 2"
   ],
   "recommended_hook_style": "anuncio_direto",
-  "content_angle": "Revelar detalhes emocionantes e impactantes sobre personagens/cenas icônicas que farão a audiência se sentir 'destruída' ou surpreendida — foco em 'você não esperava por isso'",
+  "content_angle": "Posicionar revelações de personagens/cenas específicas como 'vai destruir você' emocionalmente — criar expectativa com dados concretos (morte de Marcia Lucas provou funcionar; Thunderbolts cast return, Supergirl responsibility moment funcionam bem em trends).",
   "topics_to_explore": [
-    "Studio Ghibli personagem revelação",
-    "Naruto revival 2027",
-    "Sony State of Play",
-    "One Piece último capítulo",
-    "Supergirl Milly Alcock responsabilidade do papel",
-    "Stray no Switch 2"
+    "Marcia Lucas e seu legado em Star Wars",
+    "Thunderbolts: atrizes retornando ao MCU",
+    "Milly Alcock como Supergirl e peso da responsabilidade",
+    "Sony State of Play countdown (leak/antecipação)",
+    "One Piece 1184 e tendências anime 2025"
   ],
-  "engagement_insight": "Posts com hooks 'anuncio_direto' (Toy Story 5) e 'afirmacao_direta' sobre personagens/sagas conhecidas geram 3-5x mais engajamento; conteúdo emocional e nostálgico supera notícias secas de desenvolvimento",
-  "generated_at": "2026-05-30T13:45:53.815926+00:00",
+  "engagement_insight": "Posts com gancho de 'anúncio direto' + emoção (destruir/choque) geram 60pts. Afirmações diretas que contextualizam morte/retorno de atores/personagens mantêm 36pts. Evitar tópicos genéricos sobre séries (Irmão do Jorel, Dorohedoro) que caem para 6pts — focar em impactos humanos reais (falecimentos, castings, responsabilidades).",
+  "generated_at": "2026-05-30T14:50:36.600000+00:00",
   "date": "2026-05-30"
 }
