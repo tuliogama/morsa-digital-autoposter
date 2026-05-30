@@ -1,0 +1,85 @@
+name: Watchdog — Garantir posts nos horários
+
+# Roda a cada 15 minutos e verifica se o pipeline principal deveria ter rodado.
+# Se o horário chegou e o último run foi há mais de 100 minutos, dispara.
+# Solução para o cron nativo do GitHub Actions ser instável (pode atrasar 1h+).
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # a cada 15 minutos, 24h/dia
+
+jobs:
+  watchdog:
+    name: Verificar e disparar se necessário
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+
+    steps:
+      - name: Checar horário e disparar pipeline se necessário
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          # ── Horários alvo em minutos desde meia-noite UTC ──────────────
+          # BRT = UTC-3, logo:
+          #  08:00 BRT = 11:00 UTC = 660 min
+          #  10:30 BRT = 13:30 UTC = 810 min
+          #  13:00 BRT = 16:00 UTC = 960 min
+          #  16:00 BRT = 19:00 UTC = 1140 min
+          #  19:00 BRT = 22:00 UTC = 1320 min
+          #  21:30 BRT = 00:30 UTC = 30 min (meia-noite + 30)
+          TARGETS="660 810 960 1140 1320 30"
+          WINDOW=20        # janela de ±20 min em torno de cada horário alvo
+          MIN_INTERVAL=100 # intervalo mínimo entre runs (min) para evitar duplicatas
+
+          NOW_H=$(date -u +%H)
+          NOW_M=$(date -u +%M)
+          NOW_MINS=$(( NOW_H * 60 + NOW_M ))
+          echo "Hora atual UTC: ${NOW_H}:${NOW_M} (${NOW_MINS} min)"
+
+          # ── Verificar se estamos na janela de algum horário alvo ────────
+          IN_WINDOW=false
+          for T in $TARGETS; do
+            DIFF=$(( NOW_MINS - T ))
+            [ $DIFF -lt 0 ] && DIFF=$(( -DIFF ))
+            # Tratamento de wrap-around na meia-noite (ex: alvo=30, agora=1435)
+            [ $DIFF -gt 720 ] && DIFF=$(( 1440 - DIFF ))
+            if [ $DIFF -le $WINDOW ]; then
+              IN_WINDOW=true
+              echo "✅ Dentro da janela do alvo ${T} min UTC (diff=${DIFF} min)"
+              break
+            fi
+          done
+
+          if [ "$IN_WINDOW" = "false" ]; then
+            echo "⏸  Fora de qualquer janela de execução. Nada a fazer."
+            exit 0
+          fi
+
+          # ── Verificar quando foi o último run do pipeline principal ─────
+          LAST_RUN_AT=$(gh run list \
+            --repo "$REPO" \
+            --workflow=auto-post.yml \
+            --limit=1 \
+            --json createdAt \
+            --jq '.[0].createdAt // empty' 2>/dev/null || echo "")
+
+          if [ -z "$LAST_RUN_AT" ]; then
+            echo "Nenhum run anterior encontrado — disparando."
+          else
+            LAST_EPOCH=$(date -d "$LAST_RUN_AT" +%s 2>/dev/null || echo 0)
+            NOW_EPOCH=$(date +%s)
+            DIFF_MIN=$(( (NOW_EPOCH - LAST_EPOCH) / 60 ))
+            echo "Último run: $LAST_RUN_AT (há ${DIFF_MIN} min)"
+
+            if [ $DIFF_MIN -lt $MIN_INTERVAL ]; then
+              echo "✋ Último run foi há ${DIFF_MIN} min — abaixo do intervalo mínimo de ${MIN_INTERVAL} min. Pulando."
+              exit 0
+            fi
+          fi
+
+          # ── Disparar o pipeline principal ──────────────────────────────
+          echo "🚀 Disparando auto-post.yml..."
+          gh workflow run auto-post.yml --repo "$REPO"
+          echo "✅ Workflow disparado com sucesso."
