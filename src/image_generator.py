@@ -480,12 +480,8 @@ def _upload_to_imgur(image_bytes: bytes, retries: int = 2) -> Optional[str]:
 
 def generate_post_image(news_item: dict) -> Optional[str]:
     """
-    Gera imagem 4:5 (1080x1350) com:
-      - Imagem do artigo (ou fundo branded)
-      - Gradiente escuro na parte inferior
-      - Logo Morsa Digital redondinha no canto inferior direito
-
-    Retorna URL pública da imagem ou None em caso de falha.
+    Gera imagem 4:5 (1080x1350) com imagem real do artigo.
+    Retorna None se não encontrar imagem real — nunca usa mockup/branded background.
     """
     if not _pil_available():
         logger.warning("Pillow não instalado — imagem não gerada")
@@ -494,10 +490,9 @@ def generate_post_image(news_item: dict) -> Optional[str]:
     from PIL import Image
 
     title = news_item.get("title", "")
-    source = news_item.get("source", "")
     article_url = news_item.get("url", "")
 
-    # 1. Tentar obter imagem do artigo
+    # 1. Tentar obter imagem real do artigo
     base_img = None
     if article_url:
         img_bytes = _fetch_article_image(article_url)
@@ -506,13 +501,13 @@ def generate_post_image(news_item: dict) -> Optional[str]:
             if base_img:
                 logger.info("Imagem do artigo carregada com sucesso")
 
-    # 2. Se não encontrou imagem → fundo branded com título e fonte
+    # 2. Sem imagem real → retornar None (post será pulado)
     if base_img is None:
-        logger.info(f"Sem imagem para '{title[:50]}' — usando branded background")
-        base_img = _create_branded_background(title, source)
-    else:
-        # Redimensionar/recortar para 4:5
-        base_img = _resize_crop_center(base_img, POST_W, POST_H)
+        logger.info(f"Sem imagem real para '{title[:50]}' — post será pulado")
+        return None
+
+    # Redimensionar/recortar para 4:5
+    base_img = _resize_crop_center(base_img, POST_W, POST_H)
 
     # 3. Gradiente escuro na parte inferior
     base_img = _add_gradient_overlay(base_img)

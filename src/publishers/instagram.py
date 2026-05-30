@@ -2,10 +2,13 @@
 Publica posts no Instagram via Meta Graph API (conta Business/Creator).
 Requer: IG_USER_ID, FB_ACCESS_TOKEN
 
-Fluxo:
+Fluxo por post:
   1. Gera imagem 4:5 (1080x1350) com logo Morsa Digital
   2. Sobe para Imgur (URL pública)
-  3. Cria container no Instagram → publica
+  3. Cria container no Instagram → publica no Feed
+  4. Tenta desabilitar contagem de likes (requer instagram_manage_comments)
+  5. Posta a mesma imagem nos Stories
+  6. Compartilha na comunidade "Clã do Morsa" (requer MORSA_BROADCAST_CHANNEL_ID)
 """
 import json
 import logging
@@ -14,37 +17,45 @@ import sys
 import time
 import urllib.parse
 import urllib.request
+from typing import Optional
 
-# Adicionar src ao path para importar image_generator
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 logger = logging.getLogger(__name__)
 
 GRAPH_URL = "https://graph.facebook.com/v19.0"
 
-DEFAULT_IMAGE_URL = os.environ.get(
-    "IG_DEFAULT_IMAGE_URL",
-    "https://via.placeholder.com/1080x1350/1a1a2e/ffffff?text=Morsa+Digital",
-)
+
+class NoImageError(Exception):
+    """Lançada quando não há imagem real disponível para o post."""
+
+
+def _post(url: str, params: dict) -> dict:
+    body = urllib.parse.urlencode(params).encode("utf-8")
+    req = urllib.request.Request(
+        url, data=body, method="POST",
+        headers={"Content-Type": "application/x-www-form-urlencoded"},
+    )
+    with urllib.request.urlopen(req, timeout=15) as resp:
+        return json.loads(resp.read().decode("utf-8"))
 
 
 def _create_container(ig_user_id: str, token: str, caption: str, image_url: str) -> str:
-    params = {
+    result = _post(f"{GRAPH_URL}/{ig_user_id}/media", {
         "image_url": image_url,
         "caption": caption,
         "like_and_view_counts_disabled": "true",
         "access_token": token,
-    }
-    body = urllib.parse.urlencode(params).encode("utf-8")
-    req = urllib.request.Request(
-        f"{GRAPH_URL}/{ig_user_id}/media",
-        data=body,
-        method="POST",
-        headers={"Content-Type": "application/x-www-form-urlencoded"},
-    )
-    with urllib.request.urlopen(req, timeout=15) as resp:
-        result = json.loads(resp.read().decode("utf-8"))
-        return result["id"]
+    })
+    return result["id"]
+
+
+def _publish_container(ig_user_id: str, token: str, container_id: str) -> str:
+    result = _post(f"{GRAPH_URL}/{ig_user_id}/media_publish", {
+        "creation_id": container_id,
+        "access_token": token,
+    })
+    return result["id"]
 
 
 def _disable_like_count(media_id: str, token: str) -> bool:
@@ -52,52 +63,91 @@ def _disable_like_count(media_id: str, token: str) -> bool:
     Tenta desabilitar contagem de likes pós-publicação.
     Requer instagram_manage_comments — falha silenciosamente se não disponível.
     """
-    params = {
-        "like_and_view_counts_disabled": "true",
-        "access_token": token,
-    }
-    body = urllib.parse.urlencode(params).encode("utf-8")
-    req = urllib.request.Request(
-        f"{GRAPH_URL}/{media_id}",
-        data=body,
-        method="POST",
-        headers={"Content-Type": "application/x-www-form-urlencoded"},
-    )
     try:
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            result = json.loads(resp.read().decode("utf-8"))
-            return result.get("success", False)
+        result = _post(f"{GRAPH_URL}/{media_id}", {
+            "like_and_view_counts_disabled": "true",
+            "access_token": token,
+        })
+        return result.get("success", False)
     except Exception as e:
-        logger.debug(f"like_count disable pós-publicação indisponível (normal sem instagram_manage_comments): {e}")
+        logger.debug(f"like_count disable pós-publicação indisponível: {e}")
         return False
 
 
-def _publish_container(ig_user_id: str, token: str, container_id: str) -> str:
-    params = {
-        "creation_id": container_id,
-        "access_token": token,
-    }
-    body = urllib.parse.urlencode(params).encode("utf-8")
-    req = urllib.request.Request(
-        f"{GRAPH_URL}/{ig_user_id}/media_publish",
-        data=body,
-        method="POST",
-        headers={"Content-Type": "application/x-www-form-urlencoded"},
-    )
-    with urllib.request.urlopen(req, timeout=15) as resp:
-        result = json.loads(resp.read().decode("utf-8"))
-        return result["id"]
+def _post_to_stories(ig_user_id: str, token: str, image_url: str) -> Optional[str]:
+    """
+    Posta a mesma imagem nos Stories do Instagram.
+    Requer instagram_content_publish (já temos).
+    """
+    try:
+        container_id = _post(f"{GRAPH_URL}/{ig_user_id}/media", {
+            "image_url": image_url,
+            "media_type": "STORIES",
+            "access_token": token,
+        })["id"]
+
+        time.sleep(5)
+
+        media_id = _publish_container(ig_user_id, token, container_id)
+        logger.info(f"Story publicado: {media_id}")
+        return media_id
+    except Exception as e:
+        logger.warning(f"Falha ao publicar Story: {e}")
+        return None
+
+
+def _post_to_broadcast_channel(token: str, media_id: str) -> bool:
+    """
+    Compartilha o post no canal de transmissão (comunidade) do Instagram.
+    Requer MORSA_BROADCAST_CHANNEL_ID no environment.
+    """
+    channel_id = os.environ.get("MORSA_BROADCAST_CHANNEL_ID", "")
+    if not channel_id:
+        logger.debug("MORSA_BROADCAST_CHANNEL_ID não configurado — comunidade ignorada")
+        return False
+
+    try:
+        result = _post(f"{GRAPH_URL}/{channel_id}/messages", {
+            "message_type": "SHARED_POST",
+            "media_id": media_id,
+            "access_token": token,
+        })
+        success = bool(result.get("id") or result.get("success"))
+        if success:
+            logger.info(f"Post compartilhado na comunidade Clã do Morsa")
+        return success
+    except Exception as e:
+        logger.warning(f"Falha ao compartilhar na comunidade: {e}")
+        return False
+
+
+def _get_broadcast_channel_id(ig_user_id: str, token: str) -> Optional[str]:
+    """
+    Busca o ID do canal de transmissão "Clã do Morsa".
+    Usar para descobrir o MORSA_BROADCAST_CHANNEL_ID pela primeira vez.
+    """
+    try:
+        url = f"{GRAPH_URL}/{ig_user_id}/broadcast_channels?access_token={token}"
+        with urllib.request.urlopen(url, timeout=10) as r:
+            data = json.loads(r.read())
+        channels = data.get("data", [])
+        for ch in channels:
+            logger.info(f"Canal encontrado: id={ch.get('id')} name={ch.get('name')}")
+        return channels[0]["id"] if channels else None
+    except Exception as e:
+        logger.warning(f"Falha ao listar canais de transmissão: {e}")
+        return None
 
 
 def publish(post: dict) -> dict:
-    """Publica imagem com legenda no Instagram."""
+    """Publica imagem com legenda no Instagram. Lança NoImageError se sem imagem real."""
     ig_user_id = os.environ["IG_USER_ID"]
     token = os.environ["FB_ACCESS_TOKEN"]
 
     caption = post["content"]
     news_item = post.get("news_item", {})
 
-    # 1. Gerar imagem 4:5 com logo Morsa Digital
+    # 1. Gerar imagem real (sem imagem → pula o post)
     image_url = None
     try:
         from image_generator import generate_post_image
@@ -105,34 +155,39 @@ def publish(post: dict) -> dict:
     except Exception as e:
         logger.warning(f"Falha ao gerar imagem: {e}")
 
-    # 2. Fallback para imagem padrão
     if not image_url:
-        image_url = os.environ.get("IG_DEFAULT_IMAGE_URL", DEFAULT_IMAGE_URL)
-        logger.info(f"Usando imagem de fallback: {image_url}")
+        raise NoImageError(f"Sem imagem real para: {news_item.get('title', '')[:60]}")
 
     logger.info(f"Imagem para Instagram: {image_url}")
 
-    # 3. Criar container e publicar
+    # 2. Criar container e publicar no Feed
     container_id = _create_container(ig_user_id, token, caption, image_url)
     logger.info(f"Container IG criado: {container_id} — aguardando processamento...")
-    time.sleep(8)  # API precisa de alguns segundos para processar a imagem
+    time.sleep(8)
 
     media_id = _publish_container(ig_user_id, token, container_id)
-    logger.info(f"Instagram post publicado: {media_id}")
+    logger.info(f"Instagram feed publicado: {media_id}")
 
-    # Tentar desabilitar likes pós-publicação (requer instagram_manage_comments)
+    # 3. Desabilitar contagem de likes (requer instagram_manage_comments)
     time.sleep(3)
-    disabled = _disable_like_count(media_id, token)
-    if disabled:
-        logger.info(f"Contagem de likes desabilitada para {media_id}")
+    if _disable_like_count(media_id, token):
+        logger.info("Contagem de likes desabilitada via update pós-publicação")
     else:
-        logger.info("like_count_disabled enviado na criação — update pós-publicação requer instagram_manage_comments")
+        logger.info("like_count_disabled enviado na criação (update requer instagram_manage_comments)")
 
-    # Registrar no log persistente para deduplicação e análise
+    # 4. Publicar nos Stories com a mesma imagem
+    time.sleep(3)
+    _post_to_stories(ig_user_id, token, image_url)
+
+    # 5. Compartilhar na comunidade Clã do Morsa
+    time.sleep(2)
+    _post_to_broadcast_channel(token, media_id)
+
+    # 6. Registrar no log persistente
     try:
         from posts_log import record_post
         record_post(media_id, "instagram", news_item, caption)
     except Exception as e:
         logger.warning(f"Falha ao registrar no posts_log: {e}")
 
-    return {"platform": "instagram", "id": media_id}
+    return {"platform": "instagram", "id": media_id, "image_url": image_url}

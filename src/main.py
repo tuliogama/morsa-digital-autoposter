@@ -113,72 +113,71 @@ def main():
     # ETAPA 4 — Curadoria orientada pelo Day Brief                        #
     # ------------------------------------------------------------------ #
     from content_generator import select_best_news, generate_post
+    from publishers.instagram import NoImageError
 
-    logger.info(f"Selecionando {posts_per_run} melhores notícias...")
+    # Selecionar mais candidatos do que necessário para cobrir posts sem imagem
+    candidates_count = posts_per_run * 4
+    logger.info(f"Selecionando até {candidates_count} candidatos para garantir {posts_per_run} com imagem...")
     if brief:
         logger.info(f"Estratégia do dia: {brief.get('strategy_note', '')}")
-    best_news = select_best_news(news, count=posts_per_run, brief=brief)
+    best_news = select_best_news(news, count=candidates_count, brief=brief)
 
     if not best_news:
         logger.error("Claude não selecionou nenhuma notícia. Abortando.")
         sys.exit(1)
 
-    # ------------------------------------------------------------------ #
-    # ETAPA 5 — Geração de posts                                          #
-    # ------------------------------------------------------------------ #
-    posts = []
-    for n in best_news:
-        for platform in platforms:
-            try:
-                post = generate_post(n, platform, brief=brief)
-                posts.append(post)
-                logger.info(f"Post gerado [{platform}]: {n['title'][:70]}")
-            except Exception as e:
-                logger.error(f"Erro ao gerar post [{platform}]: {e}")
-
-    if not posts:
-        logger.error("Nenhum post gerado. Abortando.")
-        sys.exit(1)
-
-    # Preview
-    for post in posts:
-        logger.info(f"\n{'='*60}")
-        logger.info(f"PLATAFORMA: {post['platform'].upper()}")
-        logger.info(f"FONTE: {post['source_title'][:80]}")
-        logger.info(f"LEGENDA:\n{post['content']}")
-        logger.info(f"{'='*60}")
-
     if dry_run:
-        save_run_log(posts, [], dry_run=True)
-        logger.info("Dry run concluído. Nenhum post publicado.")
+        # Em dry run, apenas mostrar os candidatos
+        for n in best_news[:posts_per_run]:
+            logger.info(f"\n{'='*60}\nFONTE: {n['title'][:80]}\nURL: {n.get('url','')}\n{'='*60}")
+        save_run_log([], [], dry_run=True)
+        logger.info("Dry run concluído.")
         return
 
     # ------------------------------------------------------------------ #
-    # ETAPA 6 — Publicação com delay entre posts                          #
+    # ETAPA 5+6 — Geração e publicação (pula posts sem imagem real)       #
     # ------------------------------------------------------------------ #
     results = []
-    for i, post in enumerate(posts):
-        if i > 0:
+    published = 0
+
+    for n in best_news:
+        if published >= posts_per_run:
+            break
+
+        if published > 0:
             logger.info(f"Aguardando {delay_between}s antes do próximo post...")
             time.sleep(delay_between)
 
-        platform = post["platform"]
-        if platform not in PUBLISHERS:
-            logger.warning(f"Publisher não encontrado: {platform}")
-            continue
+        for platform in platforms:
+            if platform not in PUBLISHERS:
+                logger.warning(f"Publisher não encontrado: {platform}")
+                continue
 
-        try:
-            result = PUBLISHERS[platform](post)
-            results.append({"status": "ok", **result})
-            logger.info(f"✅ Publicado [{platform}]: {result}")
-        except Exception as e:
-            logger.error(f"❌ Erro [{platform}]: {e}")
-            results.append({"platform": platform, "status": "error", "error": str(e)})
+            try:
+                post = generate_post(n, platform, brief=brief)
+                logger.info(f"\n{'='*60}")
+                logger.info(f"PLATAFORMA: {post['platform'].upper()}")
+                logger.info(f"FONTE: {post['source_title'][:80]}")
+                logger.info(f"LEGENDA:\n{post['content']}")
+                logger.info(f"{'='*60}")
 
-    save_run_log(posts, results, dry_run=False)
+                result = PUBLISHERS[platform](post)
+                results.append({"status": "ok", **result})
+                logger.info(f"✅ Publicado [{platform}]: {result}")
+                published += 1
+
+            except NoImageError as e:
+                logger.info(f"⏭️  Pulando '{n['title'][:60]}' — sem imagem real. Tentando próximo...")
+                break  # tenta próximo candidato
+
+            except Exception as e:
+                logger.error(f"❌ Erro [{platform}]: {e}")
+                results.append({"platform": platform, "status": "error", "error": str(e)})
+
+    save_run_log([], results, dry_run=False)
 
     ok = sum(1 for r in results if r.get("status") == "ok")
-    logger.info(f"\nConcluído: {ok}/{len(results)} posts publicados")
+    logger.info(f"\nConcluído: {ok}/{posts_per_run} posts publicados")
 
 
 if __name__ == "__main__":
