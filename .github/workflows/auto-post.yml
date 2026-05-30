@@ -34,6 +34,8 @@ jobs:
     name: CMO → Curadoria → Publicação
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: write   # necessário para commitar posts_log.json de volta ao repo
     # Evita runs simultâneos que causariam posts duplicados
     concurrency:
       group: morsa-post
