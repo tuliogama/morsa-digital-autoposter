@@ -1,33 +1,34 @@
 {
-  "strategy_note": "Explorar anúncios diretos e afirmações impactantes sobre franquias consolidadas (Marvel, animação, games) que geram picos de engajamento. Evitar conteúdo genérico sobre tecnologia futura que não ressoa com o público nerd/geek.",
+  "strategy_note": "Focar em anúncios diretos e afirmações que geram urgência e curiosidade imediata. Evitar perguntas abertas e posts informativos puros que não conectam emocionalmente com a audiência.",
   "prioritize_categories": [
-    "Marvel/Spider-Man",
-    "Animação/Studio Ghibli",
-    "Games/Nintendo Switch 2"
+    "cinema",
+    "séries",
+    "games"
   ],
   "prioritize_sources": [
-    "r/marvelstudios",
     "IGN Brasil",
-    "r/nintendo"
+    "AnimeUnited",
+    "r/marvelstudios"
   ],
   "avoid_topics": [
-    "Robôs/IA futurista",
-    "GTA 6 desenvolvimento",
-    "Dorohedoro",
-    "Marcia Lucas",
-    "Uncharted promoção",
-    "X-Men '97 spoilers",
-    "Toy Story 5"
+    "Marcia Lucas Star Wars",
+    "relacionamentos em filmes",
+    "animes de 2025 em tom descontraído",
+    "GTA 6 encerramento de dev",
+    "Xbox CEO warning",
+    "Fable delay",
+    "desenvolvimento democrático de games"
   ],
   "recommended_hook_style": "anuncio_direto",
-  "content_angle": "Focar em revelações exclusivas de atores/criadores e confirmações oficiais de casting/storylines que mexem emocionalmente com o público fã, especialmente do MCU e franquias clássicas.",
+  "content_angle": "Revelar detalhes bombásticos sobre personagens e decisões criativas que quebram expectativas dos fãs, criando 'plot twists' narrativos que geram comentários imediatos.",
   "topics_to_explore": [
-    "Supergirl com Milly Alcock e o peso da responsabilidade",
-    "Stray no Nintendo Switch 2 - primeira vez em console Nintendo",
-    "Naruto revival 2027 - 10 anos depois",
-    "Sony State of Play em contagem regressiva"
+    "Spidey e Punisher parceria confirmada Tom Holland",
+    "Personagem Studio Ghibli forma real Miyazaki revelação",
+    "Naruto revival 2027 confirmado após 10 anos",
+    "Nintendo Switch 2 Stray lançamento",
+    "Sony State of Play countdown"
   ],
-  "engagement_insight": "Posts anunciando confirmações diretas de celebridades (Tom Holland, Hayao Miyazaki) sobre mudanças em personagens/franquias geram 3-5x mais engajamento que especulações genéricas. Emoção + revelação exclusiva = alta performance.",
-  "generated_at": "2026-05-30T12:26:22.346806+00:00",
+  "engagement_insight": "Posts com hooks diretos que anunciam revelações ou confirmações (tipo 'Tom Holland confirmou' ou 'vai ter uma cena que vai destruir você') geram 30-54 pontos de engajamento. Perguntas genéricas e posts sobre falecimentos não geram tração com essa audiência.",
+  "generated_at": "2026-05-30T12:43:06.519945+00:00",
   "date": "2026-05-30"
 }
