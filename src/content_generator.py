@@ -156,6 +156,7 @@ def generate_post(news_item: dict, platform: str) -> dict:
         "source_title": news_item["title"],
         "source": news_item["source"],
         "generated_at": datetime.utcnow().isoformat(),
+        "news_item": news_item,
     }
 
 

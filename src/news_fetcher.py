@@ -17,16 +17,20 @@ NERD_RSS_FEEDS = [
     # Brasil ✅ verificados em maio/2026
     ("IGN Brasil",          "https://br.ign.com/feed.xml"),
     ("Cinema com Rapadura", "https://cinemacomrapadura.com.br/feed/"),
+    ("GameBlast",           "https://www.gameblast.com.br/feeds/posts/default"),
+    ("AnimeUnited",         "https://animeunited.com.br/feed/"),
     # Internacional ✅ verificados em maio/2026
-    ("IGN",         "https://feeds.feedburner.com/ign/all"),
-    ("Kotaku",      "https://kotaku.com/rss"),
-    ("ComicBook",   "https://comicbook.com/feed/"),
-    ("Den of Geek", "https://www.denofgeek.com/feed/"),
-    ("The Verge",   "https://www.theverge.com/rss/index.xml"),
-    ("Deadline",    "https://deadline.com/feed/"),
-    ("Variety",     "https://variety.com/feed/"),
-    # Mortos: Omelete (404), JovemNerd (redirect), Screen Rant (timeout),
-    #         Polygon (timeout), Game Informer (timeout)
+    ("IGN",              "https://feeds.feedburner.com/ign/all"),
+    ("Kotaku",           "https://kotaku.com/rss"),
+    ("ComicBook",        "https://comicbook.com/feed/"),
+    ("Den of Geek",      "https://www.denofgeek.com/feed/"),
+    ("The Verge",        "https://www.theverge.com/rss/index.xml"),
+    ("Deadline",         "https://deadline.com/feed/"),
+    ("Variety",          "https://variety.com/feed/"),
+    ("Anime News Network", "https://www.animenewsnetwork.com/all/rss.xml"),
+    ("Eurogamer",        "https://www.eurogamer.net/?format=rss"),
+    # Mortos: Omelete (404), JovemNerd (404), Screen Rant (timeout),
+    #         Polygon (timeout), Game Informer (timeout), Voxel (404)
 ]
 
 HEADERS = {
@@ -69,7 +73,8 @@ def _is_nerd_content(title: str, source: str) -> bool:
     """Verifica se o conteúdo é relevante para o público nerd/geek/pop."""
     # Fontes 100% nerd — aceitar tudo
     nerd_sources = {"IGN Brasil", "Cinema com Rapadura", "IGN", "Kotaku",
-                    "ComicBook", "Den of Geek", "Screen Rant", "Polygon"}
+                    "ComicBook", "Den of Geek", "GameBlast", "AnimeUnited",
+                    "Anime News Network", "Eurogamer"}
     if source in nerd_sources:
         return True
 
@@ -234,12 +239,22 @@ def _parse_date(raw: str) -> Optional[datetime]:
     return None
 
 
-def fetch_all_news(limit: int = 30) -> list[dict]:
+def fetch_all_news(limit: int = 30, include_reddit: bool = True) -> list[dict]:
     """Agrega notícias nerd/geek/pop de todas as fontes."""
     logger.info("Buscando notícias de filmes, séries, animes, games e cultura pop...")
     rss = fetch_rss(max_per_feed=5)
 
-    all_items = rss
+    # Reddit trends (filtrado + validado pelo Claude)
+    reddit_items = []
+    if include_reddit:
+        try:
+            from reddit_fetcher import fetch_reddit_trends
+            reddit_items = fetch_reddit_trends(max_per_sub=3, validate=True)
+            logger.info(f"Reddit: {len(reddit_items)} trends validadas")
+        except Exception as e:
+            logger.warning(f"Reddit fetch falhou: {e}")
+
+    all_items = rss + reddit_items
 
     # Deduplicar por título similar
     seen_titles = set()
@@ -250,10 +265,12 @@ def fetch_all_news(limit: int = 30) -> list[dict]:
             seen_titles.add(key)
             unique.append(item)
 
-    # Prioriza fontes brasileiras (mais relevantes para o público BR)
+    # Prioridade: BR > Reddit trending (alta relevância) > internacional
     br_sources = {"IGN Brasil", "Cinema com Rapadura"}
-    br_items   = [i for i in unique if i["source"] in br_sources]
-    intl_items = [i for i in unique if i["source"] not in br_sources]
+    br_items     = [i for i in unique if i["source"] in br_sources]
+    reddit_trend = [i for i in unique if i["source"].startswith("Reddit")]
+    intl_items   = [i for i in unique if i["source"] not in br_sources
+                    and not i["source"].startswith("Reddit")]
 
-    combined = br_items + intl_items
+    combined = br_items + reddit_trend + intl_items
     return combined[:limit]

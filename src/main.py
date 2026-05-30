@@ -7,13 +7,13 @@ import json
 import logging
 import os
 import sys
+import time
 from datetime import datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
 from news_fetcher import fetch_all_news
-from content_generator import generate_all_posts
 from publishers import twitter, instagram, facebook
 
 logging.basicConfig(
@@ -79,21 +79,34 @@ def main():
         logger.error("Nenhuma notícia encontrada. Abortando.")
         sys.exit(1)
 
-    # 2. Gerar posts com IA
-    logger.info("Gerando posts com Claude AI...")
-    posts = generate_all_posts(news, platforms=platforms)
+    # 1b. Filtrar duplicatas via log persistente
+    try:
+        from posts_log import is_duplicate
+        before = len(news)
+        news = [n for n in news if not is_duplicate(n["title"], platform="instagram")]
+        logger.info(f"Após dedup local: {len(news)}/{before} notícias únicas")
+    except Exception as e:
+        logger.warning(f"Dedup local falhou: {e}")
 
-    # Injetar news_item no post para geração de imagem
-    news_by_title = {n["title"]: n for n in news}
-    for post in posts:
-        post["news_item"] = news_by_title.get(post.get("source_title", ""), {})
+    # 2. Gerar posts com IA (2 por execução = 12/dia com 6 runs)
+    posts_per_run = int(os.environ.get("POSTS_PER_RUN", "2"))
+    logger.info(f"Gerando {posts_per_run} post(s) por execução...")
+    from content_generator import select_best_news, generate_post
+    best_news = select_best_news(news, count=posts_per_run)
+    posts = []
+    for n in best_news:
+        for platform in platforms:
+            try:
+                post = generate_post(n, platform)
+                posts.append(post)
+            except Exception as e:
+                logger.error(f"Erro ao gerar post [{platform}] {n['title'][:50]}: {e}")
     logger.info(f"{len(posts)} posts gerados")
 
     if not posts:
         logger.error("Nenhum post gerado. Abortando.")
         sys.exit(1)
 
-    # Exibir preview
     for post in posts:
         logger.info(f"\n{'='*60}")
         logger.info(f"PLATAFORMA: {post['platform'].upper()}")
@@ -106,9 +119,13 @@ def main():
         logger.info("Dry run concluído. Nenhum post foi publicado.")
         return
 
-    # 3. Publicar
+    # 3. Publicar com delay entre posts para não parecer spam
     results = []
-    for post in posts:
+    for i, post in enumerate(posts):
+        if i > 0:
+            delay = int(os.environ.get("DELAY_BETWEEN_POSTS", "90"))
+            logger.info(f"Aguardando {delay}s antes do próximo post...")
+            time.sleep(delay)
         platform = post["platform"]
         if platform not in PUBLISHERS:
             logger.warning(f"Publisher não encontrado para: {platform}")

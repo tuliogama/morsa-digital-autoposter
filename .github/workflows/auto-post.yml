@@ -60,6 +60,8 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_DEFAULT_IMAGE_URL: ${{ secrets.IG_DEFAULT_IMAGE_URL }}
           DRY_RUN: ${{ inputs.dry_run || 'false' }}
+          POSTS_PER_RUN: "2"
+          DELAY_BETWEEN_POSTS: "90"
         run: |
           PLATFORMS="${{ inputs.platforms || 'instagram' }}"
           python src/main.py --platforms "$PLATFORMS" ${{ inputs.dry_run == 'true' && '--dry-run' || '' }}

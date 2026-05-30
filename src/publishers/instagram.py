@@ -32,6 +32,7 @@ def _create_container(ig_user_id: str, token: str, caption: str, image_url: str)
     params = {
         "image_url": image_url,
         "caption": caption,
+        "like_and_view_counts_disabled": "true",
         "access_token": token,
     }
     body = urllib.parse.urlencode(params).encode("utf-8")
@@ -93,4 +94,12 @@ def publish(post: dict) -> dict:
 
     media_id = _publish_container(ig_user_id, token, container_id)
     logger.info(f"Instagram post publicado: {media_id}")
+
+    # Registrar no log persistente para deduplicação e análise
+    try:
+        from posts_log import record_post
+        record_post(media_id, "instagram", news_item, caption)
+    except Exception as e:
+        logger.warning(f"Falha ao registrar no posts_log: {e}")
+
     return {"platform": "instagram", "id": media_id}
