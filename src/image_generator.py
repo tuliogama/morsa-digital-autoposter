@@ -132,6 +132,114 @@ def _add_gradient_overlay(img):
     return Image.alpha_composite(img.convert("RGBA"), overlay)
 
 
+def _add_text_overlay(img, title: str, source: str) -> "Image":
+    """
+    Adiciona título chamativo + badge da fonte sobre o gradiente inferior.
+    Layout editorial: título bold em branco (2 linhas max) + badge laranja da fonte.
+    Não polui a imagem — ocupa só a área escura do gradiente.
+    """
+    from PIL import Image, ImageDraw
+
+    if not title:
+        return img
+
+    img = img.convert("RGBA")
+    draw = ImageDraw.Draw(img)
+
+    W, H = img.size
+    MARGIN_X   = 56          # margem lateral
+    MAX_W      = W - MARGIN_X * 2 - LOGO_SIZE - 20  # deixa espaço para a logo
+    BADGE_H    = 36          # altura do badge da fonte
+    BADGE_PAD  = 14          # padding horizontal do badge
+    LINE_GAP   = 10          # espaço entre linhas do título
+    BLOCK_BOTTOM = H - LOGO_MARGIN - LOGO_SIZE // 2  # alinha com centro da logo
+
+    # ── Fontes ────────────────────────────────────────────────────────────────
+    font_title  = _load_font(52)
+    font_badge  = _load_font(24)
+
+    # ── Quebrar título em linhas (max 2) ──────────────────────────────────────
+    words = title.split()
+    lines, line = [], ""
+    for word in words:
+        test = (line + " " + word).strip()
+        try:
+            bbox = draw.textbbox((0, 0), test, font=font_title)
+            if bbox[2] - bbox[0] > MAX_W and line:
+                lines.append(line)
+                line = word
+            else:
+                line = test
+        except Exception:
+            line = test
+    if line:
+        lines.append(line)
+
+    # Truncar a 2 linhas — última linha com "…" se necessário
+    if len(lines) > 2:
+        lines = lines[:2]
+        last = lines[1]
+        while last:
+            test = last + "…"
+            try:
+                bbox = draw.textbbox((0, 0), test, font=font_title)
+                if bbox[2] - bbox[0] <= MAX_W:
+                    lines[1] = test
+                    break
+            except Exception:
+                break
+            last = last.rsplit(" ", 1)[0]
+
+    # ── Calcular altura do bloco de texto ────────────────────────────────────
+    try:
+        sample_bbox = draw.textbbox((0, 0), "Ag", font=font_title)
+        line_h = sample_bbox[3] - sample_bbox[1]
+    except Exception:
+        line_h = 58
+
+    title_block_h = len(lines) * line_h + (len(lines) - 1) * LINE_GAP
+    badge_total_h = BADGE_H + 12  # badge + espaço acima
+
+    total_block_h = badge_total_h + title_block_h
+    y_start = BLOCK_BOTTOM - total_block_h
+
+    # ── Renderizar badge da fonte ─────────────────────────────────────────────
+    if source:
+        badge_text = source.upper()
+        try:
+            bb = draw.textbbox((0, 0), badge_text, font=font_badge)
+            bw = bb[2] - bb[0] + BADGE_PAD * 2
+        except Exception:
+            bw = 120
+        bh = BADGE_H
+        bx, by = MARGIN_X, y_start
+        # Fundo laranja arredondado
+        try:
+            draw.rounded_rectangle(
+                [(bx, by), (bx + bw, by + bh)],
+                radius=6,
+                fill=(*COLOR_ORANGE, 230),
+            )
+        except AttributeError:
+            draw.rectangle([(bx, by), (bx + bw, by + bh)], fill=(*COLOR_ORANGE, 230))
+        draw.text(
+            (bx + BADGE_PAD, by + (bh - (bb[3] - bb[1])) // 2),
+            badge_text,
+            fill=COLOR_WHITE,
+            font=font_badge,
+        )
+
+    # ── Renderizar título ────────────────────────────────────────────────────
+    y = y_start + badge_total_h
+    for ln in lines:
+        # Sombra sutil para legibilidade máxima
+        draw.text((MARGIN_X + 2, y + 2), ln, fill=(0, 0, 0, 160), font=font_title)
+        draw.text((MARGIN_X, y), ln, fill=COLOR_WHITE, font=font_title)
+        y += line_h + LINE_GAP
+
+    return img
+
+
 def _paste_logo(base_img, logo_size: int = LOGO_SIZE, margin: int = LOGO_MARGIN):
     """Cola a logo redondinha no canto inferior direito com halo para contraste."""
     from PIL import Image, ImageDraw
@@ -615,9 +723,10 @@ def generate_post_image(news_item: dict) -> Optional[str]:
 
     logger.info("Imagem do artigo carregada com sucesso")
 
-    # 2. Processar: resize 4:5 + gradiente escuro + logo Morsa
+    # 2. Processar: resize 4:5 + gradiente + título/fonte + logo Morsa
     base_img = _resize_crop_center(base_img, POST_W, POST_H)
     base_img = _add_gradient_overlay(base_img)
+    base_img = _add_text_overlay(base_img, title, news_item.get("source", ""))
     final_img = _paste_logo(base_img)
 
     final_rgb = final_img.convert("RGB")
