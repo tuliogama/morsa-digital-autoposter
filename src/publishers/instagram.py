@@ -41,12 +41,18 @@ def _post(url: str, params: dict) -> dict:
 
 
 def _create_container(ig_user_id: str, token: str, caption: str, image_url: str) -> str:
-    result = _post(f"{GRAPH_URL}/{ig_user_id}/media", {
+    params = {
         "image_url": image_url,
         "caption": caption,
         "like_and_view_counts_disabled": "true",
         "access_token": token,
-    })
+    }
+    # Cross-post para Facebook se pages_manage_posts estiver disponível
+    fb_page_id = os.environ.get("FB_PAGE_ID", "")
+    if fb_page_id:
+        params["publish_to_facebook"] = "true"
+        params["facebook_page_id"] = fb_page_id
+    result = _post(f"{GRAPH_URL}/{ig_user_id}/media", params)
     return result["id"]
 
 
