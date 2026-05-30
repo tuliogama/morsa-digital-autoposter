@@ -1,5 +1,5 @@
 """
-Busca notícias nerd/geek/pop/games de fontes brasileiras e internacionais.
+Busca notícias de Star Wars e cultura geek/sci-fi para @ordemsithbrasil.
 Reddit é usado APENAS como sinal de tendência no CMO Brain — nunca como fonte de posts.
 """
 import json
@@ -13,61 +13,64 @@ from typing import Optional
 
 logger = logging.getLogger(__name__)
 
-# 13 feeds RSS nerd/geek/pop — sem Omelete (404) e sem Cinema com Rapadura
-NERD_RSS_FEEDS = [
-    # Brasil
-    ("IGN Brasil",          "https://br.ign.com/feed.xml"),
-    ("GameBlast",           "https://www.gameblast.com.br/feeds/posts/default"),
-    ("AnimeUnited",         "https://animeunited.com.br/feed/"),
-    # Internacional
-    ("IGN",                 "https://feeds.feedburner.com/ign/all"),
-    ("Kotaku",              "https://kotaku.com/rss"),
+# Feeds RSS focados em Star Wars + sci-fi/geek complementar
+RSS_FEEDS = [
+    # Star Wars primário
+    ("StarWars.com",        "https://www.starwars.com/news/rss"),
+    ("IGN Star Wars",       "https://feeds.feedburner.com/ign/all"),
     ("ComicBook",           "https://comicbook.com/feed/"),
     ("Den of Geek",         "https://www.denofgeek.com/feed/"),
-    ("The Verge",           "https://www.theverge.com/rss/index.xml"),
+    # Séries e cinema sci-fi complementar
     ("Deadline",            "https://deadline.com/feed/"),
     ("Variety",             "https://variety.com/feed/"),
-    ("Anime News Network",  "https://www.animenewsnetwork.com/all/rss.xml"),
-    ("Eurogamer",           "https://www.eurogamer.net/?format=rss"),
-    ("Gizmodo",             "https://gizmodo.com/rss"),
+    ("The Verge",           "https://www.theverge.com/rss/index.xml"),
+    # Games (KOTOR, Jedi: Fallen Order, etc.)
+    ("IGN",                 "https://feeds.feedburner.com/ign/all"),
+    ("Kotaku",              "https://kotaku.com/rss"),
+    # BR
+    ("IGN Brasil",          "https://br.ign.com/feed.xml"),
 ]
 
-# Fontes 100% nerd — aceitar todos os artigos sem filtro de keyword
-NERD_SOURCES = {
-    "IGN Brasil", "GameBlast", "AnimeUnited",
-    "IGN", "Kotaku", "ComicBook", "Den of Geek",
-    "Anime News Network", "Eurogamer",
-}
+# Palavras-chave Star Wars — aceitar qualquer artigo que mencione
+STARWARS_KEYWORDS = [
+    "star wars", "starwars", "jedi", "sith", "vader", "darth",
+    "skywalker", "luke", "leia", "han solo", "obi-wan", "kenobi",
+    "palpatine", "emperor", "yoda", "mando", "mandalorian", "grogu",
+    "ahsoka", "andor", "boba fett", "clone wars", "bad batch",
+    "acolyte", "skeleton crew", "the force", "lightsaber", "death star",
+    "millennium falcon", "x-wing", "tie fighter", "rebel", "empire",
+    "republic", "separatist", "galactic", "coruscant", "tatooine",
+    "george lucas", "lucasfilm", "disney star wars",
+    "kotor", "knights of the old republic", "jedi fallen order",
+    "jedi survivor", "outlaws", "squadrons",
+]
+
+# Palavras-chave sci-fi/geek complementar (para fontes mistas)
+SCIFI_KEYWORDS = [
+    "sci-fi", "science fiction", "marvel", "dc comics", "avengers",
+    "batman", "superman", "alien", "predator", "dune", "blade runner",
+    "foundation", "rings of power", "house of dragon", "game of thrones",
+    "witcher", "cyberpunk", "matrix", "terminator", "back to the future",
+    "indiana jones", "jurassic", "avatar", "guardians", "thor",
+]
+
+# Fontes 100% relevantes — aceitar tudo sem filtro
+PRIORITY_SOURCES = {"StarWars.com", "IGN Star Wars"}
+
+# Fontes mistas — filtrar por palavras-chave
+MIXED_SOURCES = {"IGN", "IGN Brasil", "Kotaku", "ComicBook", "Den of Geek",
+                 "Deadline", "Variety", "The Verge"}
+
+BLOCK_KEYWORDS = [
+    "podcast", "episódio", "episode", " ep ", "ep.", "ouça", "escute",
+    "top 10", "top 5", "ranking dos", "melhores de",
+    "política", "eleição", "crypto", "bitcoin", "nft",
+    "fake news", "hoax",
+]
 
 HEADERS = {
-    "User-Agent": "MorsaDigital-Autoposter/1.0 (https://instagram.com/morsadigital)"
+    "User-Agent": "OrdemSithBrasil-Autoposter/1.0 (https://instagram.com/ordemsithbrasil)"
 }
-
-# Palavras-chave para filtrar fontes mistas (Verge, Deadline, Variety, Gizmodo)
-# Palavras que indicam conteúdo a rejeitar independente da fonte
-BLOCK_KEYWORDS = [
-    # Podcasts
-    "podcast", "episódio", "episode", "ep.", " ep ", "rapaduracast", "nerdcast",
-    "jovemnerd", "maniacast", "ouça", "ouça agora", "escute",
-    # Listas/clickbait sem novidade factual
-    "melhores animes de", "melhores games de", "melhores filmes de",
-    "top 10", "top 5", "top 3", "ranking dos",
-    # Conteúdo proibido
-    "política", "eleição", "crypto", "bitcoin", "nft", "invest",
-    "fake news", "teoria da conspiração", "hoax",
-]
-
-NERD_KEYWORDS = [
-    "game", "games", "gaming", "gta", "playstation", "xbox", "nintendo",
-    "ps5", "steam", "indie", "rpg", "esport", "zelda", "call of duty",
-    "resident evil", "final fantasy", "pokemon",
-    "marvel", "dc", "star wars", "disney", "netflix", "hbo", "amazon prime",
-    "anime", "manga", "série", "séries", "filme", "filmes", "trailer", "season",
-    "temporada", "avengers", "batman", "spider-man", "superman", "deadpool",
-    "one piece", "naruto", "demon slayer", "attack on titan", "jujutsu kaisen",
-    "dragon ball", "bleach", "dorama", "k-drama",
-    "cosplay", "comic", "comics", "nerd", "geek", "otaku", "comic con",
-]
 
 
 def _fetch_url(url: str, timeout: int = 10) -> Optional[str]:
@@ -80,63 +83,48 @@ def _fetch_url(url: str, timeout: int = 10) -> Optional[str]:
         return None
 
 
-def _is_blocked(title: str) -> bool:
-    """Rejeita podcasts, listas genéricas e conteúdo proibido independente da fonte."""
-    title_lower = title.lower()
-    return any(kw in title_lower for kw in BLOCK_KEYWORDS)
-
-
-def _is_nerd_content(title: str, source: str) -> bool:
-    if _is_blocked(title):
+def _is_relevant(title: str, source: str) -> bool:
+    if any(kw in title.lower() for kw in BLOCK_KEYWORDS):
         return False
-    if source in NERD_SOURCES:
+    if source in PRIORITY_SOURCES:
         return True
     title_lower = title.lower()
-    return any(kw in title_lower for kw in NERD_KEYWORDS)
+    return (
+        any(kw in title_lower for kw in STARWARS_KEYWORDS) or
+        any(kw in title_lower for kw in SCIFI_KEYWORDS)
+    )
 
 
-def _text(element, tag: str, ns: dict = None) -> Optional[str]:
-    el = element.find(tag, ns) if ns else element.find(tag)
-    if el is not None and el.text:
-        return el.text.strip()
-    return None
+def _text(el, tag, ns=None):
+    e = el.find(tag, ns) if ns else el.find(tag)
+    return (e.text or "").strip() if e is not None and e.text else None
 
 
-def _attr(element, tag: str, attr: str, ns: dict = None) -> Optional[str]:
-    el = element.find(tag, ns) if ns else element.find(tag)
-    if el is not None:
-        return el.get(attr, "").strip() or None
-    return None
+def _attr(el, tag, attr, ns=None):
+    e = el.find(tag, ns) if ns else el.find(tag)
+    return e.get(attr, "").strip() if e is not None else None
 
 
 def _parse_date(raw: str) -> Optional[datetime]:
     if not raw:
         return None
-    formats = [
-        "%a, %d %b %Y %H:%M:%S %z",
-        "%a, %d %b %Y %H:%M:%S GMT",
-        "%Y-%m-%dT%H:%M:%S%z",
-        "%Y-%m-%dT%H:%M:%SZ",
-        "%Y-%m-%dT%H:%M:%S+00:00",
-        "%d/%m/%Y %H:%M:%S",
-    ]
-    for fmt in formats:
+    for fmt in ["%a, %d %b %Y %H:%M:%S %z", "%a, %d %b %Y %H:%M:%S GMT",
+                "%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%dT%H:%M:%SZ",
+                "%Y-%m-%dT%H:%M:%S+00:00"]:
         try:
             dt = datetime.strptime(raw.strip(), fmt)
-            if dt.tzinfo is None:
-                dt = dt.replace(tzinfo=timezone.utc)
-            return dt
+            return dt.replace(tzinfo=timezone.utc) if dt.tzinfo is None else dt
         except ValueError:
             continue
     return None
 
 
 def fetch_rss(max_per_feed: int = 6) -> list[dict]:
-    """Busca artigos de todos os feeds RSS nerd/geek/pop."""
     items = []
     cutoff = datetime.now(timezone.utc) - timedelta(hours=72)
+    seen_urls = set()
 
-    for feed_name, feed_url in NERD_RSS_FEEDS:
+    for feed_name, feed_url in RSS_FEEDS:
         raw = _fetch_url(feed_url)
         if not raw:
             continue
@@ -156,22 +144,18 @@ def fetch_rss(max_per_feed: int = 6) -> list[dict]:
             title = (_text(entry, "title") or _text(entry, "atom:title", ns) or "").strip()
             link  = (_text(entry, "link")  or _attr(entry, "atom:link", "href", ns) or "").strip()
 
-            if not title or not link:
+            if not title or not link or link in seen_urls:
                 continue
-            if not _is_nerd_content(title, feed_name):
+            if not _is_relevant(title, feed_name):
                 continue
 
-            pub_raw = (
-                _text(entry, "pubDate") or _text(entry, "atom:published", ns)
-                or _text(entry, "atom:updated", ns) or ""
-            )
+            pub_raw = (_text(entry, "pubDate") or _text(entry, "atom:published", ns) or
+                       _text(entry, "atom:updated", ns) or "")
             ts = _parse_date(pub_raw)
             if ts and ts < cutoff:
                 continue
 
-            description = (
-                _text(entry, "description") or _text(entry, "atom:summary", ns) or ""
-            )[:300]
+            description = (_text(entry, "description") or _text(entry, "atom:summary", ns) or "")[:300]
 
             items.append({
                 "source": feed_name,
@@ -181,6 +165,7 @@ def fetch_rss(max_per_feed: int = 6) -> list[dict]:
                 "score": 0,
                 "published_at": ts.isoformat() if ts else "",
             })
+            seen_urls.add(link)
             count += 1
 
         time.sleep(0.2)
@@ -190,25 +175,16 @@ def fetch_rss(max_per_feed: int = 6) -> list[dict]:
 
 def fetch_all_news(limit: int = 40) -> list[dict]:
     """
-    Agrega notícias nerd/geek/pop dos 13 feeds RSS.
-    Reddit NÃO entra aqui — é usado apenas como sinal de tendência no CMO Brain.
+    Agrega notícias de Star Wars e sci-fi/geek dos feeds RSS.
+    Reddit NÃO entra aqui — apenas sinal de tendência no CMO Brain.
     """
-    logger.info("Buscando notícias de filmes, séries, animes, games e cultura pop...")
+    logger.info("Buscando notícias de Star Wars e sci-fi/geek...")
     items = fetch_rss(max_per_feed=6)
 
-    # Deduplicar por título similar
-    seen, unique = set(), []
-    for item in items:
-        key = item["title"].lower()[:60]
-        if key not in seen:
-            seen.add(key)
-            unique.append(item)
+    # Prioridade: Star Wars direto > outros
+    sw   = [i for i in items if any(k in i["title"].lower() for k in STARWARS_KEYWORDS)]
+    rest = [i for i in items if i not in sw]
+    combined = sw + rest
 
-    # Prioridade: BR primeiro, depois internacional
-    br_sources = {"IGN Brasil", "GameBlast", "AnimeUnited"}
-    br    = [i for i in unique if i["source"] in br_sources]
-    intl  = [i for i in unique if i["source"] not in br_sources]
-
-    combined = br + intl
-    logger.info(f"RSS: {len(br)} BR + {len(intl)} internacional = {len(combined)} notícias")
+    logger.info(f"RSS: {len(sw)} Star Wars direto + {len(rest)} sci-fi/geek = {len(combined)} notícias")
     return combined[:limit]

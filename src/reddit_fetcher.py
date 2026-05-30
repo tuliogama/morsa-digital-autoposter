@@ -13,29 +13,29 @@ from typing import Optional
 logger = logging.getLogger(__name__)
 
 HEADERS = {
-    "User-Agent": "MorsaDigital-Autoposter/1.0 (by /u/morsadigital)"
+    "User-Agent": "OrdemSithBrasil-Autoposter/1.0 (by /u/ordemsithbrasil)"
 }
 
-# Subreddits relevantes — apenas cultura pop/nerd/geek
+# Subreddits focados em Star Wars e sci-fi complementar
 SUBREDDITS = [
-    # Games
-    "games", "gaming", "nintendo", "PS5", "xboxone", "pcgaming",
-    "indiegaming", "gamedev",
-    # Filmes e séries
-    "movies", "television", "marvelstudios", "DC_Cinematic",
-    "StarWars", "television",
-    # Anime e manga
-    "anime", "manga", "OnePiece", "DemonSlayer", "Naruto",
-    "DragonBallZ", "attackontitan", "JujutsuKaisen",
-    # Brasil
-    "brasil", "gamesEcultura",
+    # Star Wars — primário
+    "StarWars", "starwarsspeculation", "TheMandalorianTV",
+    "BookOfBobaFett", "andor", "ahsokaTV", "SkeletonCrewTV",
+    "PrequelMemes", "sequelmemes", "HighRepublicEra",
+    # Lucasfilm / Disney
+    "movies", "television",
+    # Games Star Wars
+    "FallenOrder", "StarWarsOutlaws", "KotOR",
+    # Sci-fi complementar
+    "scifi", "marvelstudios",
 ]
 
-# Subreddits 100% seguros — sem filtro de keyword (já são nichados)
+# Subreddits Star Wars — sem filtro de keyword (já são nichados)
 SAFE_SUBREDDITS = {
-    "marvelstudios", "DC_Cinematic", "StarWars", "OnePiece",
-    "DemonSlayer", "Naruto", "DragonBallZ", "attackontitan",
-    "JujutsuKaisen", "nintendo", "PS5",
+    "StarWars", "starwarsspeculation", "TheMandalorianTV",
+    "BookOfBobaFett", "andor", "ahsokaTV", "SkeletonCrewTV",
+    "PrequelMemes", "sequelmemes", "HighRepublicEra",
+    "FallenOrder", "StarWarsOutlaws", "KotOR",
 }
 
 # Palavras que invalidam o post imediatamente (além do flag NSFW da API)
