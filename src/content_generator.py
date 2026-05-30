@@ -106,6 +106,39 @@ def _call_claude(system_prompt: str, user_message: str) -> str:
         raise RuntimeError(f"Claude API erro {e.code}: {body}")
 
 
+def generate_image_headline(news_item: dict) -> str:
+    """
+    Gera um headline curto e impactante para sobrepor na imagem — estilo IGN Brasil.
+    ALL CAPS aplicado depois. Claude retorna em caixa normal.
+    Máximo 8 palavras, sem reticências, com SEO.
+    """
+    title = news_item.get("title", "")
+    description = news_item.get("description", "")[:300]
+
+    try:
+        result = _call_claude(
+            "Você é editor de headline de um portal brasileiro de cultura pop/nerd/geek. "
+            "Cria manchetes curtas, diretas e impactantes — no estilo IGN Brasil. "
+            "Nunca usa reticências. Nunca usa clickbait barato. Sempre factual.",
+            f"Notícia: {title}\nContexto: {description}\n\n"
+            "Crie UMA manchete de impacto para sobrepor em imagem de post Instagram. "
+            "Regras: máximo 8 palavras, sem reticências (...), sem ponto final, "
+            "inclua o nome do personagem/jogo/série para SEO, "
+            "seja direto e factual — não invente. "
+            "Responda APENAS a manchete, sem aspas, sem explicação."
+        )
+        # Limpar e retornar
+        headline = result.strip().strip('"').strip("'").strip()
+        # Remover reticências se Claude ignorar a instrução
+        headline = headline.replace("...", "").replace("…", "").strip()
+        return headline if headline else title[:60]
+    except Exception:
+        # Fallback: usar título truncado de forma limpa
+        words = title.split()
+        fallback = " ".join(words[:7])
+        return fallback
+
+
 def select_best_news(news_items: list[dict], count: int = 5, brief: dict = None) -> list[dict]:
     """Usa Claude para escolher as notícias mais relevantes, guiado pelo Day Brief do CMO."""
     if not news_items:
@@ -185,12 +218,16 @@ def generate_post(news_item: dict, platform: str, brief: dict = None) -> dict:
 
     content = _call_claude(config["system"], user_msg)
 
+    # Gera headline curto para sobrepor na imagem (estilo IGN Brasil)
+    image_headline = generate_image_headline(news_item)
+
     return {
         "platform": platform,
         "content": content,
         "url": news_item.get("url", ""),
         "source_title": news_item["title"],
         "source": news_item["source"],
+        "image_headline": image_headline,
         "generated_at": datetime.utcnow().isoformat(),
         "news_item": news_item,
     }

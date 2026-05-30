@@ -154,11 +154,12 @@ def publish(post: dict) -> dict:
     caption = post["content"]
     news_item = post.get("news_item", {})
 
-    # 1. Gerar imagem real (sem imagem → pula o post)
+    # 1. Gerar imagem real com headline gerado pelo CMO
     image_url = None
+    image_headline = post.get("image_headline", news_item.get("title", ""))
     try:
         from image_generator import generate_post_image
-        image_url = generate_post_image(news_item)
+        image_url = generate_post_image(news_item, headline=image_headline)
     except Exception as e:
         logger.warning(f"Falha ao gerar imagem: {e}")
 

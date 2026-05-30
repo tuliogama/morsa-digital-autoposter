@@ -136,8 +136,8 @@ def _add_gradient_overlay(img):
 
 def _add_text_overlay(img, title: str, source: str = "") -> "Image":
     """
-    Título chamativo sobre o gradiente inferior — estilo editorial, sem poluição.
-    Sem badge de fonte. Só o texto como headline de impacto.
+    Headline estilo IGN Brasil: ALL CAPS, branco com borda preta,
+    centralizado na parte inferior da imagem. Sem painel, sem badge.
     """
     from PIL import Image, ImageDraw
 
@@ -148,15 +148,17 @@ def _add_text_overlay(img, title: str, source: str = "") -> "Image":
     draw = ImageDraw.Draw(img)
 
     W, H = img.size
-    MARGIN_X     = 56
-    MAX_W        = W - MARGIN_X * 2   # usa toda a largura — logo fica abaixo, não ao lado
-    LINE_GAP     = 14
-    BLOCK_BOTTOM = H - LOGO_MARGIN - LOGO_SIZE - 24  # posiciona o bloco acima da logo
+    MARGIN_X     = 52
+    MAX_W        = W - MARGIN_X * 2
+    LINE_GAP     = 8
+    BLOCK_BOTTOM = H - LOGO_MARGIN - LOGO_SIZE - 28
 
-    font = _load_font(58)
+    # ALL CAPS
+    text = title.upper()
+    font = _load_font(72)
 
-    # ── Quebrar em linhas (max 2) ─────────────────────────────────────────────
-    words = title.split()
+    # ── Quebrar em linhas (max 3) ─────────────────────────────────────────────
+    words = text.split()
     lines, line = [], ""
     for word in words:
         test = (line + " " + word).strip()
@@ -171,38 +173,37 @@ def _add_text_overlay(img, title: str, source: str = "") -> "Image":
             line = test
     if line:
         lines.append(line)
-
-    if len(lines) > 2:
-        lines = lines[:2]
-        # Trunca última linha com "…"
-        last = lines[1]
-        while last:
-            try:
-                if draw.textbbox((0, 0), last + "…", font=font)[2] <= MAX_W:
-                    lines[1] = last + "…"
-                    break
-            except Exception:
-                break
-            last = last.rsplit(" ", 1)[0]
+    lines = lines[:3]
 
     # ── Altura do bloco ───────────────────────────────────────────────────────
     try:
-        bb = draw.textbbox((0, 0), "Ag", font=font)
+        bb = draw.textbbox((0, 0), "AG", font=font)
         line_h = bb[3] - bb[1]
     except Exception:
-        line_h = 68
+        line_h = 80
 
     block_h = len(lines) * line_h + (len(lines) - 1) * LINE_GAP
-    y = BLOCK_BOTTOM - block_h
+    y_start = BLOCK_BOTTOM - block_h
 
-    # ── Renderizar ────────────────────────────────────────────────────────────
-    for ln in lines:
-        # Sombra difusa (3 camadas offset) para garantir leitura em qualquer fundo
-        for dx, dy, alpha in [(3, 3, 120), (1, 2, 80), (0, 1, 50)]:
-            draw.text((MARGIN_X + dx, y + dy), ln,
-                      fill=(0, 0, 0, alpha), font=font)
-        draw.text((MARGIN_X, y), ln, fill=COLOR_WHITE, font=font)
-        y += line_h + LINE_GAP
+    # ── Renderizar: borda preta + texto branco ────────────────────────────────
+    STROKE = 3  # espessura da borda preta
+    for i, ln in enumerate(lines):
+        y = y_start + i * (line_h + LINE_GAP)
+        try:
+            tw = draw.textbbox((0, 0), ln, font=font)[2]
+        except Exception:
+            tw = MAX_W
+        x = (W - tw) // 2  # centralizado
+
+        # Borda preta (stroke simulado por offsets)
+        for dx in range(-STROKE, STROKE + 1):
+            for dy in range(-STROKE, STROKE + 1):
+                if dx != 0 or dy != 0:
+                    draw.text((x + dx, y + dy), ln,
+                              fill=(0, 0, 0, 220), font=font)
+
+        # Texto branco por cima
+        draw.text((x, y), ln, fill=COLOR_WHITE, font=font)
 
     return img
 
@@ -656,7 +657,7 @@ def _upload_image(image_bytes: bytes) -> Optional[str]:
 # Função principal
 # ---------------------------------------------------------------------------
 
-def generate_post_image(news_item: dict) -> Optional[str]:
+def generate_post_image(news_item: dict, headline: str = "") -> Optional[str]:
     """
     Gera imagem 4:5 (1080×1350px) com imagem real do artigo + logo Morsa Digital.
     Logo e formato 4:5 são obrigatórios — sem eles o post não sai.
@@ -690,10 +691,11 @@ def generate_post_image(news_item: dict) -> Optional[str]:
 
     logger.info("Imagem do artigo carregada com sucesso")
 
-    # 2. Processar: resize 4:5 + gradiente + título/fonte + logo Morsa
+    # 2. Processar: resize 4:5 + gradiente + headline + logo Morsa
+    display_headline = headline if headline else title
     base_img = _resize_crop_center(base_img, POST_W, POST_H)
     base_img = _add_gradient_overlay(base_img)
-    base_img = _add_text_overlay(base_img, title, news_item.get("source", ""))
+    base_img = _add_text_overlay(base_img, display_headline)
     final_img = _paste_logo(base_img)
 
     final_rgb = final_img.convert("RGB")
