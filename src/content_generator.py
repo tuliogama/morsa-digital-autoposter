@@ -49,12 +49,17 @@ PLATFORM_PROMPTS = {
             "   - 1-2 tags amplas em português (ex: #CulturaPop, #MundoNerd)\n\n"
             "SEO NO INSTAGRAM: use palavras-chave relevantes naturalmente no texto (não só nas hashtags). "
             "O algoritmo indexa o texto da legenda. Se a notícia é sobre GTA 6, mencione 'GTA 6' no texto.\n\n"
-            "PROIBIDO:\n"
-            "- Começar com hashtag, @, ou '#post'/'#instagram'\n"
+            "PROIBIDO (qualquer um desses = reescrever do zero):\n"
+            "- Começar com hashtag, @, emoji ou '#post'/'#instagram'\n"
             "- Emojis no início de cada parágrafo (parece bot)\n"
-            "- Frases genéricas: 'Incrível notícia!', 'Que novidade!', 'Você sabia que...'\n"
+            "- Frases genéricas de página barata: 'Incrível notícia!', 'Que novidade!', 'Você sabia que...', "
+            "'Você jurava que...', 'Você ainda acredita que...', 'Isso vai te surpreender', 'Olha só:', "
+            "'Não vai acreditar', 'Todo mundo está falando sobre', 'É isso mesmo!'\n"
+            "- Exagero clickbait: 'vai DESTRUIR você', 'vai te deixar de queixo caído', 'ninguém esperava'\n"
+            "- Tom de fofoca ou sensacionalismo barato\n"
             "- Mesmo CTA toda legenda\n"
-            "- Inventar fatos — adapta apenas o que foi informado"
+            "- Inventar fatos — adapta apenas o que foi informado\n"
+            "- Mais de 12 hashtags"
         ),
     },
     "facebook": {
