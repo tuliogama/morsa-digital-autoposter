@@ -74,25 +74,26 @@ def _disable_like_count(media_id: str, token: str) -> bool:
         return False
 
 
-def _post_to_stories(ig_user_id: str, token: str, image_url: str) -> Optional[str]:
+def _post_to_stories(ig_user_id: str, token: str, feed_media_id: str) -> Optional[str]:
     """
-    Posta a mesma imagem nos Stories do Instagram.
+    Compartilha o post do feed nos Stories (card do feed, não imagem avulsa).
     Requer instagram_content_publish (já temos).
     """
     try:
         container_id = _post(f"{GRAPH_URL}/{ig_user_id}/media", {
-            "image_url": image_url,
             "media_type": "STORIES",
+            "source_type": "FEED_MEDIA",
+            "source_media_id": feed_media_id,
             "access_token": token,
         })["id"]
 
         time.sleep(5)
 
-        media_id = _publish_container(ig_user_id, token, container_id)
-        logger.info(f"Story publicado: {media_id}")
-        return media_id
+        story_id = _publish_container(ig_user_id, token, container_id)
+        logger.info(f"Story (reshare do feed) publicado: {story_id}")
+        return story_id
     except Exception as e:
-        logger.warning(f"Falha ao publicar Story: {e}")
+        logger.warning(f"Falha ao compartilhar feed post no Story: {e}")
         return None
 
 
@@ -175,9 +176,9 @@ def publish(post: dict) -> dict:
     else:
         logger.info("like_count_disabled enviado na criação (update requer instagram_manage_comments)")
 
-    # 4. Publicar nos Stories com a mesma imagem
+    # 4. Compartilhar o post do feed nos Stories
     time.sleep(3)
-    _post_to_stories(ig_user_id, token, image_url)
+    _post_to_stories(ig_user_id, token, media_id)
 
     # 5. Compartilhar na comunidade Clã do Morsa
     time.sleep(2)
