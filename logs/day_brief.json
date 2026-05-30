@@ -1,36 +1,33 @@
 {
-  "strategy_note": "Domine o dia com anúncios diretos e afirmações assertivas sobre games e entretenimento em alta. Evite perguntas abertas e foque em notícias com impacto emocional imediato.",
+  "strategy_note": "Focar em anúncios diretos de atrasos/mudanças em franquias grandes (Fable, Naruto) e afirmações provocativas sobre celebridades/franquias problemáticas. Evitar necrológios e conteúdo emocional que não gera engajamento.",
   "prioritize_categories": [
     "games",
-    "animes",
-    "séries/filmes"
+    "anime",
+    "séries"
   ],
   "prioritize_sources": [
     "r/nintendo",
     "r/PS5",
     "r/OnePiece",
-    "r/Naruto"
+    "r/Naruto",
+    "IGN Brasil"
   ],
   "avoid_topics": [
-    "Punisher Spider-Man",
-    "Dorohedoro revival",
-    "desenvolvimento democrático de games",
-    "Xbox CEO",
-    "Fable delay",
-    "Witcher 3",
-    "games BR no Switch"
+    "Toy Story 5",
+    "Marcia Lucas",
+    "Dorohedoro",
+    "mortes de personalidades"
   ],
-  "recommended_hook_style": "anuncio_direto",
-  "content_angle": "Celebre personagens icônicos e retornos épicos (Naruto 2027, Stray no Switch 2) com tom de urgência; aproveite mortes/homenagens (Marcia Lucas) para conteúdo emocional que cria comentários",
+  "recommended_hook_style": "anuncio_direto com emojis em caps + afirmacao_direta com tom provocador",
+  "content_angle": "Cobrir revivals inesperados (Naruto 2027) e lançamentos em novas plataformas (Stray Switch 2) com tom de 'você não estava preparado' para gerar FOMO",
   "topics_to_explore": [
-    "Stray chegando no Nintendo Switch 2",
-    "Naruto revival confirmado para 2027",
-    "One Piece capítulo 1184 em alta",
-    "Marcia Lucas (editor de Star Wars) faleceu",
-    "Milly Alcock em Supergirl",
-    "Emilia Clarke crítica Secret Invasion"
+    "Naruto Revival 2027",
+    "Stray Nintendo Switch 2",
+    "Fable atraso 2027",
+    "One Piece Chapter 1184",
+    "Supergirl com Milly Alcock"
   ],
-  "engagement_insight": "Anúncios diretos com emojis de impacto (🎮⚡) e afirmações assertivas geram 3-4x mais likes. Notícias com confirmações de atores/devs e delays funcionam melhor que questionamentos sobre tendências futuras.",
-  "generated_at": "2026-05-30T04:41:57.687437+00:00",
+  "engagement_insight": "Posts com anúncios de atrasos/confirmações de jogos geram 2x mais likes (8-6) que conteúdo emocional ou mortes. Hooks em CAPS com números/datas específicas funcionam melhor. Anime em alta gerada por r/OnePiece e r/Naruto.",
+  "generated_at": "2026-05-30T05:10:12.567737+00:00",
   "date": "2026-05-30"
 }
