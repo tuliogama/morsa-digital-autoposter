@@ -115,28 +115,29 @@ def _generate_fallback_logo(size: int):
 
 
 def _add_gradient_overlay(img):
-    """Adiciona gradiente escuro na parte inferior para facilitar leitura."""
+    """Gradiente escuro na parte inferior — cobertura maior para suportar texto."""
     from PIL import Image, ImageDraw
 
     overlay = Image.new("RGBA", img.size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(overlay)
 
-    grad_h = int(img.height * 0.40)
+    grad_h = int(img.height * 0.52)   # 52% para o texto respirar bem
     y_start = img.height - grad_h
 
     for y in range(grad_h):
-        alpha = int(200 * (y / grad_h))
+        # Curva mais suave no início, mais densa no final
+        t = y / grad_h
+        alpha = int(210 * (t ** 0.7))
         draw.line([(0, y_start + y), (img.width, y_start + y)],
                   fill=(0, 0, 0, alpha))
 
     return Image.alpha_composite(img.convert("RGBA"), overlay)
 
 
-def _add_text_overlay(img, title: str, source: str) -> "Image":
+def _add_text_overlay(img, title: str, source: str = "") -> "Image":
     """
-    Adiciona título chamativo + badge da fonte sobre o gradiente inferior.
-    Layout editorial: título bold em branco (2 linhas max) + badge laranja da fonte.
-    Não polui a imagem — ocupa só a área escura do gradiente.
+    Título chamativo sobre o gradiente inferior — estilo editorial, sem poluição.
+    Sem badge de fonte. Só o texto como headline de impacto.
     """
     from PIL import Image, ImageDraw
 
@@ -147,25 +148,21 @@ def _add_text_overlay(img, title: str, source: str) -> "Image":
     draw = ImageDraw.Draw(img)
 
     W, H = img.size
-    MARGIN_X   = 56          # margem lateral
-    MAX_W      = W - MARGIN_X * 2 - LOGO_SIZE - 20  # deixa espaço para a logo
-    BADGE_H    = 36          # altura do badge da fonte
-    BADGE_PAD  = 14          # padding horizontal do badge
-    LINE_GAP   = 10          # espaço entre linhas do título
-    BLOCK_BOTTOM = H - LOGO_MARGIN - LOGO_SIZE // 2  # alinha com centro da logo
+    MARGIN_X     = 56
+    MAX_W        = W - MARGIN_X * 2   # usa toda a largura — logo fica abaixo, não ao lado
+    LINE_GAP     = 14
+    BLOCK_BOTTOM = H - LOGO_MARGIN - LOGO_SIZE - 24  # posiciona o bloco acima da logo
 
-    # ── Fontes ────────────────────────────────────────────────────────────────
-    font_title  = _load_font(52)
-    font_badge  = _load_font(24)
+    font = _load_font(58)
 
-    # ── Quebrar título em linhas (max 2) ──────────────────────────────────────
+    # ── Quebrar em linhas (max 2) ─────────────────────────────────────────────
     words = title.split()
     lines, line = [], ""
     for word in words:
         test = (line + " " + word).strip()
         try:
-            bbox = draw.textbbox((0, 0), test, font=font_title)
-            if bbox[2] - bbox[0] > MAX_W and line:
+            w = draw.textbbox((0, 0), test, font=font)[2]
+            if w > MAX_W and line:
                 lines.append(line)
                 line = word
             else:
@@ -175,66 +172,36 @@ def _add_text_overlay(img, title: str, source: str) -> "Image":
     if line:
         lines.append(line)
 
-    # Truncar a 2 linhas — última linha com "…" se necessário
     if len(lines) > 2:
         lines = lines[:2]
+        # Trunca última linha com "…"
         last = lines[1]
         while last:
-            test = last + "…"
             try:
-                bbox = draw.textbbox((0, 0), test, font=font_title)
-                if bbox[2] - bbox[0] <= MAX_W:
-                    lines[1] = test
+                if draw.textbbox((0, 0), last + "…", font=font)[2] <= MAX_W:
+                    lines[1] = last + "…"
                     break
             except Exception:
                 break
             last = last.rsplit(" ", 1)[0]
 
-    # ── Calcular altura do bloco de texto ────────────────────────────────────
+    # ── Altura do bloco ───────────────────────────────────────────────────────
     try:
-        sample_bbox = draw.textbbox((0, 0), "Ag", font=font_title)
-        line_h = sample_bbox[3] - sample_bbox[1]
+        bb = draw.textbbox((0, 0), "Ag", font=font)
+        line_h = bb[3] - bb[1]
     except Exception:
-        line_h = 58
+        line_h = 68
 
-    title_block_h = len(lines) * line_h + (len(lines) - 1) * LINE_GAP
-    badge_total_h = BADGE_H + 12  # badge + espaço acima
+    block_h = len(lines) * line_h + (len(lines) - 1) * LINE_GAP
+    y = BLOCK_BOTTOM - block_h
 
-    total_block_h = badge_total_h + title_block_h
-    y_start = BLOCK_BOTTOM - total_block_h
-
-    # ── Renderizar badge da fonte ─────────────────────────────────────────────
-    if source:
-        badge_text = source.upper()
-        try:
-            bb = draw.textbbox((0, 0), badge_text, font=font_badge)
-            bw = bb[2] - bb[0] + BADGE_PAD * 2
-        except Exception:
-            bw = 120
-        bh = BADGE_H
-        bx, by = MARGIN_X, y_start
-        # Fundo laranja arredondado
-        try:
-            draw.rounded_rectangle(
-                [(bx, by), (bx + bw, by + bh)],
-                radius=6,
-                fill=(*COLOR_ORANGE, 230),
-            )
-        except AttributeError:
-            draw.rectangle([(bx, by), (bx + bw, by + bh)], fill=(*COLOR_ORANGE, 230))
-        draw.text(
-            (bx + BADGE_PAD, by + (bh - (bb[3] - bb[1])) // 2),
-            badge_text,
-            fill=COLOR_WHITE,
-            font=font_badge,
-        )
-
-    # ── Renderizar título ────────────────────────────────────────────────────
-    y = y_start + badge_total_h
+    # ── Renderizar ────────────────────────────────────────────────────────────
     for ln in lines:
-        # Sombra sutil para legibilidade máxima
-        draw.text((MARGIN_X + 2, y + 2), ln, fill=(0, 0, 0, 160), font=font_title)
-        draw.text((MARGIN_X, y), ln, fill=COLOR_WHITE, font=font_title)
+        # Sombra difusa (3 camadas offset) para garantir leitura em qualquer fundo
+        for dx, dy, alpha in [(3, 3, 120), (1, 2, 80), (0, 1, 50)]:
+            draw.text((MARGIN_X + dx, y + dy), ln,
+                      fill=(0, 0, 0, alpha), font=font)
+        draw.text((MARGIN_X, y), ln, fill=COLOR_WHITE, font=font)
         y += line_h + LINE_GAP
 
     return img
