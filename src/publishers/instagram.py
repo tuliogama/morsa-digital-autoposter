@@ -47,6 +47,31 @@ def _create_container(ig_user_id: str, token: str, caption: str, image_url: str)
         return result["id"]
 
 
+def _disable_like_count(media_id: str, token: str) -> bool:
+    """
+    Tenta desabilitar contagem de likes pós-publicação.
+    Requer instagram_manage_comments — falha silenciosamente se não disponível.
+    """
+    params = {
+        "like_and_view_counts_disabled": "true",
+        "access_token": token,
+    }
+    body = urllib.parse.urlencode(params).encode("utf-8")
+    req = urllib.request.Request(
+        f"{GRAPH_URL}/{media_id}",
+        data=body,
+        method="POST",
+        headers={"Content-Type": "application/x-www-form-urlencoded"},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            result = json.loads(resp.read().decode("utf-8"))
+            return result.get("success", False)
+    except Exception as e:
+        logger.debug(f"like_count disable pós-publicação indisponível (normal sem instagram_manage_comments): {e}")
+        return False
+
+
 def _publish_container(ig_user_id: str, token: str, container_id: str) -> str:
     params = {
         "creation_id": container_id,
@@ -94,6 +119,14 @@ def publish(post: dict) -> dict:
 
     media_id = _publish_container(ig_user_id, token, container_id)
     logger.info(f"Instagram post publicado: {media_id}")
+
+    # Tentar desabilitar likes pós-publicação (requer instagram_manage_comments)
+    time.sleep(3)
+    disabled = _disable_like_count(media_id, token)
+    if disabled:
+        logger.info(f"Contagem de likes desabilitada para {media_id}")
+    else:
+        logger.info("like_count_disabled enviado na criação — update pós-publicação requer instagram_manage_comments")
 
     # Registrar no log persistente para deduplicação e análise
     try:
