@@ -173,6 +173,12 @@ def _add_text_overlay(img, title: str, source: str = "") -> "Image":
             line = test
     if line:
         lines.append(line)
+    # Se sobrou conteúdo depois da 3ª linha, adiciona reticências na última
+    if len(lines) > 3:
+        last = lines[2]
+        while last and draw.textbbox((0, 0), last + "…", font=font)[2] > MAX_W:
+            last = last.rsplit(" ", 1)[0]
+        lines[2] = last + "…"
     lines = lines[:3]
 
     # ── Altura do bloco ───────────────────────────────────────────────────────
@@ -507,13 +513,17 @@ def _load_image_from_bytes(data: bytes) -> Optional["Image"]:
 
 
 def _resize_crop_center(img, target_w: int, target_h: int) -> "Image":
-    """Redimensiona e recorta mantendo proporção, centralizando."""
+    """
+    Redimensiona e recorta para target_w×target_h mantendo proporção.
+    Horizontalmente: centraliza. Verticalmente: ancora no terço superior
+    (bias 0.35) para preservar rostos e sujeitos que raramente ficam
+    na metade inferior da foto.
+    """
     from PIL import Image
     src_ratio = img.width / img.height
     tgt_ratio = target_w / target_h
 
     if src_ratio > tgt_ratio:
-        # imagem mais larga — ajustar pela altura
         new_h = target_h
         new_w = int(new_h * src_ratio)
     else:
@@ -522,7 +532,9 @@ def _resize_crop_center(img, target_w: int, target_h: int) -> "Image":
 
     img = img.resize((new_w, new_h), Image.LANCZOS)
     left = (new_w - target_w) // 2
-    top = (new_h - target_h) // 2
+    # 0.35 = ancora o sujeito no terço superior; 0.5 seria centro puro
+    top = int((new_h - target_h) * 0.35)
+    top = max(0, min(top, new_h - target_h))
     return img.crop((left, top, left + target_w, top + target_h))
 
 
