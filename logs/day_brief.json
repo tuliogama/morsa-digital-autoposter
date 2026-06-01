@@ -1,38 +1,19 @@
 {
-  "strategy_note": "Explorar anúncios diretos e afirmações que geram impacto emocional imediato. Focar em franquias consolidadas e personagens icônicos que disparam nostalgia e curiosidade.",
+  "date": "2026-06-01",
+  "strategy_note": "Análise automática indisponível — usando critérios padrão.",
   "prioritize_categories": [
-    "Cinema",
-    "Animação",
-    "Games"
+    "anime",
+    "games",
+    "filmes",
+    "series"
   ],
   "prioritize_sources": [
-    "Reddit r/marvelstudios",
-    "Reddit r/StarWars",
-    "IGN Brasil"
+    "IGN Brasil",
+    "Cinema com Rapadura"
   ],
-  "avoid_topics": [
-    "Irmão do Jorel prêmios internacionais",
-    "Netflix remakes/clássicos retornando",
-    "Dorohedoro volta",
-    "Uncharted PS5",
-    "X-Men '97",
-    "Marcia Lucas",
-    "GTA 6",
-    "Xbox CEO",
-    "Fable delay",
-    "Witcher 3",
-    "Stray Switch 2"
-  ],
-  "recommended_hook_style": "anuncio_direto",
-  "content_angle": "Posicionar revelações de personagens/cenas específicas como 'vai destruir você' emocionalmente — criar expectativa com dados concretos (morte de Marcia Lucas provou funcionar; Thunderbolts cast return, Supergirl responsibility moment funcionam bem em trends).",
-  "topics_to_explore": [
-    "Marcia Lucas e seu legado em Star Wars",
-    "Thunderbolts: atrizes retornando ao MCU",
-    "Milly Alcock como Supergirl e peso da responsabilidade",
-    "Sony State of Play countdown (leak/antecipação)",
-    "One Piece 1184 e tendências anime 2025"
-  ],
-  "engagement_insight": "Posts com gancho de 'anúncio direto' + emoção (destruir/choque) geram 60pts. Afirmações diretas que contextualizam morte/retorno de atores/personagens mantêm 36pts. Evitar tópicos genéricos sobre séries (Irmão do Jorel, Dorohedoro) que caem para 6pts — focar em impactos humanos reais (falecimentos, castings, responsabilidades).",
-  "generated_at": "2026-05-30T14:50:36.600000+00:00",
-  "date": "2026-05-30"
+  "avoid_topics": [],
+  "recommended_hook_style": "afirmacao_direta",
+  "content_angle": "Cobertura ampla de cultura pop",
+  "topics_to_explore": [],
+  "engagement_insight": "Dados insuficientes para análise."
 }
