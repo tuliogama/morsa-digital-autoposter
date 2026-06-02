@@ -157,7 +157,7 @@ def main():
                 post = generate_post(n, platform, brief=brief)
                 logger.info(f"\n{'='*60}")
                 logger.info(f"PLATAFORMA: {post['platform'].upper()}")
-                logger.info(f"FONTE: {post['source_title'][:80]}")
+                logger.info(f"FONTE: {post.get('source_title', post.get('title', ''))[:80]}")
                 logger.info(f"LEGENDA:\n{post['content']}")
                 logger.info(f"{'='*60}")
 
