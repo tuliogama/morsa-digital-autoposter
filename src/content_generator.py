@@ -70,6 +70,8 @@ def _call_groq(system: str, user_msg: str, max_tokens: int = 600) -> str:
         headers={
             "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json",
+            "User-Agent": "curl/7.88.1",
+            "Accept": "*/*",
         },
         method="POST",
     )

@@ -11,7 +11,13 @@
     "IGN Brasil",
     "Cinema com Rapadura"
   ],
-  "avoid_topics": [],
+  "avoid_topics": [
+    "Emilia Clarke acabou de validar o que a gente sentiu por ANOS sobre o final de D",
+    "A armadura de Lex Luthor em Man of Tomorrow é exatamente o tipo de coisa que div",
+    "Eiichiro Oda está oficialmente criando algo que ninguém pediu, mas que todo mund",
+    "A Wizards of the Coast quer ressuscitar uma lenda e tem tudo para pisar feio na ",
+    "Tomb Raider King finalmente sai do limbo e você ainda não sabe por onde começar "
+  ],
   "recommended_hook_style": "afirmacao_direta",
   "content_angle": "Cobertura ampla de cultura pop",
   "topics_to_explore": [],
