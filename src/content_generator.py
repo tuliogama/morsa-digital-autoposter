@@ -114,15 +114,42 @@ def _call_groq(system: str, user_msg: str, max_tokens: int = 600) -> str:
         return json.loads(r.read())["choices"][0]["message"]["content"].strip()
 
 
-def _template_caption(news_item: dict, platform: str) -> str:
-    """Fallback sem IA quando a API não está disponível."""
-    title  = news_item.get("title", "")
-    source = news_item.get("source", "")
-    tags   = "#MundoNerd #CulturaPop #GeekBrasil"
-    return f"{title}\n\nVia {source}.\n\n{tags}"
+class CaptionGenerationError(Exception):
+    """Lançada quando não é possível gerar uma legenda de qualidade. Post deve ser pulado."""
+
+
+def _validate_caption(content: str, source: str) -> bool:
+    """
+    Rejeita legendas que parecem scraping ou estão vazias.
+    Retorna False se a legenda não serve para publicar.
+    """
+    if not content or len(content) < 120:
+        return False
+    # Indicadores de fallback ou scraping
+    bad_patterns = [
+        f"via {source.lower()}",
+        f"segundo o {source.lower()}",
+        f"de acordo com o {source.lower()}",
+        f"o {source.lower()} informou",
+        f"o {source.lower()} destacou",
+        f"o {source.lower()} relatou",
+        "#mundонerd #culturaрор #geekbrasil",  # template genérico
+        "mundонerd",
+        "#MundoNerd #CulturaPop #GeekBrasil",
+    ]
+    content_lower = content.lower()
+    source_lower = source.lower()
+    for pat in bad_patterns:
+        if pat.lower() in content_lower:
+            return False
+    # Não pode mencionar a fonte como origem do conteúdo
+    if source_lower and f"o {source_lower}" in content_lower:
+        return False
+    return True
 
 
 def generate_post(news_item: dict, platform: str, brief: dict = None) -> dict:
+    import re
     cfg    = PLATFORM_PROMPTS.get(platform, PLATFORM_PROMPTS["instagram"])
     title  = news_item.get("title", "")
     url    = news_item.get("url", "")
@@ -130,21 +157,38 @@ def generate_post(news_item: dict, platform: str, brief: dict = None) -> dict:
 
     user_msg = (
         f"Escreva a legenda completa para o {platform.capitalize()} sobre esta notícia.\n\n"
-        f"Título: {title}\n"
-        f"Fonte: {source}\n\n"
-        f"IMPORTANTE: siga exatamente o formato com linha em branco entre cada bloco. "
-        f"Não truncar. Hashtags só relacionadas a esta notícia específica."
+        f"Título: {title}\n\n"
+        f"IMPORTANTE:\n"
+        f"- Escreva como se a Morsa Digital estivesse reportando a notícia — NUNCA mencione o nome da fonte no texto\n"
+        f"- Siga o formato com linha em branco entre cada bloco\n"
+        f"- Não truncar — termine todas as frases\n"
+        f"- Hashtags só relacionadas a esta notícia específica, nada genérico"
     )
 
-    try:
-        content = _call_groq(cfg["system"], user_msg, max_tokens=700)
-        # Normalizar espaçamentos: garantir \n\n entre blocos
-        import re
-        content = re.sub(r'\n[ \t]*\n+', '\n\n', content).strip()
-        logger.info(f"Legenda gerada via Groq ({len(content)} chars)")
-    except Exception as e:
-        logger.warning(f"Groq falhou ({e}) — usando template")
-        content = _template_caption(news_item, platform)
+    content = None
+    last_error = None
+
+    # Tentar até 2 vezes antes de desistir
+    for attempt in range(2):
+        try:
+            raw = _call_groq(cfg["system"], user_msg, max_tokens=700)
+            raw = re.sub(r'\n[ \t]*\n+', '\n\n', raw).strip()
+
+            if _validate_caption(raw, source):
+                content = raw
+                logger.info(f"Legenda gerada via Groq ({len(content)} chars)")
+                break
+            else:
+                logger.warning(f"Legenda rejeitada na validação (tentativa {attempt+1})")
+        except Exception as e:
+            last_error = e
+            logger.warning(f"Groq falhou tentativa {attempt+1}: {e}")
+
+    if not content:
+        # Sem legenda válida → sinaliza para pular o post
+        raise CaptionGenerationError(
+            f"Não foi possível gerar legenda de qualidade para: {title[:60]}"
+        )
 
     # Headline para a imagem: gerado pelo Groq — curto, completo, sem reticências
     try:

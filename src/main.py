@@ -112,7 +112,7 @@ def main():
     # ------------------------------------------------------------------ #
     # ETAPA 4 — Curadoria orientada pelo Day Brief                        #
     # ------------------------------------------------------------------ #
-    from content_generator import select_best_news, generate_post
+    from content_generator import select_best_news, generate_post, CaptionGenerationError
     from publishers.instagram import NoImageError
 
     # Selecionar 4× candidatos para cobrir possíveis falhas de imagem
@@ -166,8 +166,8 @@ def main():
                 logger.info(f"✅ Publicado [{platform}]: {result}")
                 published += 1
 
-            except NoImageError as e:
-                logger.info(f"⏭️  Pulando '{n['title'][:60]}' — sem imagem real. Tentando próximo...")
+            except (NoImageError, CaptionGenerationError) as e:
+                logger.info(f"⏭️  Pulando '{n['title'][:60]}' — {e}. Tentando próximo...")
                 break  # tenta próximo candidato
 
             except Exception as e:
