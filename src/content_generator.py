@@ -18,7 +18,7 @@ PLATFORM_PROMPTS = {
     "instagram": {
         "max_chars": 2200,
         "system": (
-            "Você é o social media sênior da Morsa Digital — perfil brasileiro de cultura geek/nerd/pop "
+            "Você é o social media sênior da Morsa Digital — perfil brasileiro de Star Wars "
             "focado em filmes, séries, animes, doramas e games. Você escreve como um fã apaixonado, "
             "não como uma máquina. Cada legenda é única, humana e tem personalidade.\n\n"
             "ESTRUTURA:\n"
@@ -34,7 +34,7 @@ PLATFORM_PROMPTS = {
     "facebook": {
         "max_chars": 2200,
         "system": (
-            "Você é o social media sênior da Morsa Digital — perfil brasileiro de cultura geek/nerd/pop. "
+            "Você é o social media sênior da Morsa Digital — perfil brasileiro de Star Wars. "
             "Escreva uma legenda humana e engajante para o Facebook, com tom de fã apaixonado. "
             "Use 4-8 hashtags estratégicas no final. Sem frases genéricas ou emojis no início."
         ),
@@ -106,9 +106,19 @@ def generate_post(news_item: dict, platform: str) -> dict:
         logger.warning(f"Groq falhou ({e}) — usando template")
         content = _template_caption(news_item, platform)
 
-    # Headline curto para a imagem (máx 8 palavras)
-    words = title.split()
-    image_headline = " ".join(words[:8]) + ("…" if len(words) > 8 else "")
+    # Headline para a imagem: gerado pelo Groq — curto, completo, sem reticências
+    try:
+        image_headline = _call_groq(
+            "Você cria headlines curtos para imagens de posts de Instagram no estilo IGN Brasil. "
+            "Máximo 6 palavras. ALL CAPS não necessário. Sem reticências. Sem ponto final. "
+            "A frase deve ser completa e fazer sentido sozinha.",
+            f"Crie um headline de imagem para esta notícia: {title}",
+            max_tokens=30,
+        ).strip().strip('"').strip("'").rstrip(".")
+    except Exception:
+        # Fallback: pegar até 6 palavras que formem sentido
+        words = title.split()
+        image_headline = " ".join(words[:6])
 
     return {
         "content":        content[:cfg["max_chars"]],

@@ -173,12 +173,6 @@ def _add_text_overlay(img, title: str, source: str = "") -> "Image":
             line = test
     if line:
         lines.append(line)
-    # Se sobrou conteúdo depois da 3ª linha, adiciona reticências na última
-    if len(lines) > 3:
-        last = lines[2]
-        while last and draw.textbbox((0, 0), last + "…", font=font)[2] > MAX_W:
-            last = last.rsplit(" ", 1)[0]
-        lines[2] = last + "…"
     lines = lines[:3]
 
     # ── Altura do bloco ───────────────────────────────────────────────────────
