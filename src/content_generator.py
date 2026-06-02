@@ -122,7 +122,7 @@ def _template_caption(news_item: dict, platform: str) -> str:
     return f"{title}\n\nVia {source}.\n\n{tags}"
 
 
-def generate_post(news_item: dict, platform: str) -> dict:
+def generate_post(news_item: dict, platform: str, brief: dict = None) -> dict:
     cfg    = PLATFORM_PROMPTS.get(platform, PLATFORM_PROMPTS["instagram"])
     title  = news_item.get("title", "")
     url    = news_item.get("url", "")
