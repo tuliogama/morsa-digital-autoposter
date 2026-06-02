@@ -166,3 +166,38 @@ def generate_post(news_item: dict, platform: str) -> dict:
         "news_item":      news_item,
         "image_headline": image_headline,
     }
+
+
+def select_best_news(news_list: list, count: int = 6, brief: dict = None) -> list:
+    """
+    Usa Groq para selecionar e ordenar as melhores notícias do dia.
+    Fallback: retorna as primeiras `count` notícias.
+    """
+    if not news_list:
+        return []
+
+    try:
+        titles = "\n".join(
+            f"{i+1}. [{n['source']}] {n['title']}"
+            for i, n in enumerate(news_list[:20])
+        )
+        strategy = brief.get('strategy_note', '') if brief else ''
+
+        result = _call_groq(
+            "Você é um CMO de mídia social especializado em cultura pop/nerd/geek brasileira. "
+            "Selecione as notícias com maior potencial de engajamento para o @morsadigital. "
+            "Priorize: novidades de filmes/séries/animes/games populares, exclusivos, polêmicas relevantes. "
+            "Evite: notícias antigas, conteúdo genérico, repetições de tema. "
+            "Responda APENAS com os números separados por vírgula. Ex: 3,1,7,2",
+            f"Estratégia do dia: {strategy}\n\nNotícias disponíveis:\n{titles}\n\n"
+            f"Selecione os {count} melhores índices em ordem de prioridade:",
+            max_tokens=50,
+        )
+        indices = [int(x.strip()) - 1 for x in result.split(',') if x.strip().isdigit()]
+        selected = [news_list[i] for i in indices if 0 <= i < len(news_list)]
+        if selected:
+            return selected[:count]
+    except Exception as e:
+        logger.warning(f"select_best_news Groq falhou ({e}) — usando ordem original")
+
+    return news_list[:count]
