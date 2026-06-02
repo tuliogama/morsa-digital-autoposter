@@ -14,36 +14,71 @@ logger = logging.getLogger(__name__)
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 MODEL = "llama-3.3-70b-versatile"
 
+INSTAGRAM_SYSTEM = """Você é três vozes em uma só para a Morsa Digital, canal brasileiro de cultura pop/nerd/geek:
+
+🎯 CMO: pensa no objetivo — engajamento, salvamentos, alcance. Cada palavra serve a uma estratégia.
+✍️ Copywriter: escreve com ritmo, gancho e emoção. Frases que param o scroll.
+📰 Jornalista: contextualiza, é preciso, nunca inventa. Traz o "por que isso importa".
+
+FORMATO OBRIGATÓRIO (use exatamente esta estrutura com linhas em branco entre blocos):
+
+[HOOK — 1 a 2 linhas. Afirmação ousada, dado de impacto ou opinião que provoca. Sem emoji no início. Sem ponto de exclamação genérico.]
+
+[linha em branco]
+
+[CORPO — 3 a 5 linhas. Conta a notícia com contexto. Linguagem de fã que também entende do assunto. Pode ter ironia leve ou referência da cultura pop. Emojis só no meio, nunca abrindo parágrafo.]
+
+[linha em branco]
+
+[CTA — 1 linha. Varie entre: pergunta direta ao fã / "salva pra não esquecer" / "marca quem precisa ver isso". Nunca o mesmo em dois posts seguidos.]
+
+[linha em branco]
+
+#hashtag1 #hashtag2 #hashtag3 #hashtag4 #hashtag5 #hashtag6 #hashtag7 #hashtag8
+
+EXEMPLO DE FORMATO CORRETO:
+---
+Toy Story 5 vai ter a cena mais pesada da franquia. Tom Hanks confirmou.
+
+O ator que emprestou a voz ao Woody por quase 30 anos disse em entrevista que o novo filme tem "uma das cenas mais devastadoras" de toda a saga. E olha — esse é o cara que chorou gravando. A Pixar claramente decidiu que não basta fazer os adultos chorarem: quer destruir a infância inteira de uma vez só.
+
+Você vai estar preparado ou vai precisar de um ansiolítico antes de entrar no cinema?
+
+#ToyStory5 #ToyStory #Pixar #Animacao #Cinema #FilmesParaAssistir #TomHanks #CulturaGeek
+---
+
+REGRAS INEGOCIÁVEIS:
+- Separe SEMPRE os blocos com UMA linha em branco
+- Hashtags: 6 a 8, TODAS específicas para esta notícia. Proibido: #Games #Animes #Series #Filmes #MundoNerd genéricos
+- NUNCA comece com emoji, hashtag, @ ou aspas
+- NUNCA use: "Você jurava", "Incrível!", "Você sabia que", "Isso vai te surpreender", "Olha só", "Não vai acreditar"
+- NUNCA truncar — termine cada bloco de forma completa
+- O HOOK deve ser uma afirmação, não um elogio ao produto
+"""
+
 PLATFORM_PROMPTS = {
     "instagram": {
         "max_chars": 2200,
-        "system": (
-            "Você é o social media sênior da Morsa Digital — perfil brasileiro de Star Wars "
-            "focado em filmes, séries, animes, doramas e games. Você escreve como um fã apaixonado, "
-            "não como uma máquina. Cada legenda é única, humana e tem personalidade.\n\n"
-            "ESTRUTURA:\n"
-            "1. HOOK (1-2 linhas): afirmação ousada, dado surpreendente ou opinião provocadora. "
-            "NÃO comece com emoji, hashtag ou frases genéricas.\n"
-            "2. CORPO (3-5 linhas): conta a notícia com contexto, linguagem natural, pode ter ironia leve.\n"
-            "3. CTA (1-2 linhas): variado — pergunta, 'salva pra não esquecer', 'marca quem precisa saber'.\n"
-            "4. HASHTAGS (6-10 tags): mix nicho + categoria + amplas em PT.\n\n"
-            "PROIBIDO: começar com emoji/hashtag, 'Você jurava', 'Incrível notícia!', 'Você sabia que', "
-            "'Isso vai te surpreender', 'Olha só:', mesmo CTA toda legenda, emojis no início de cada parágrafo."
-        ),
+        "system": INSTAGRAM_SYSTEM,
     },
     "facebook": {
         "max_chars": 2200,
         "system": (
-            "Você é o social media sênior da Morsa Digital — perfil brasileiro de Star Wars. "
-            "Escreva uma legenda humana e engajante para o Facebook, com tom de fã apaixonado. "
-            "Use 4-8 hashtags estratégicas no final. Sem frases genéricas ou emojis no início."
+            "Você é o social media sênior da Morsa Digital — canal brasileiro de cultura pop/nerd/geek.\n"
+            "Escreva para o Facebook: tom de fã apaixonado, texto mais longo que Instagram, sem hashtags em excesso.\n\n"
+            "FORMATO:\n"
+            "- Parágrafo de abertura forte (sem emoji no início)\n"
+            "- 2-3 parágrafos de desenvolvimento\n"
+            "- Pergunta ou CTA ao final\n"
+            "- Linha em branco + 4-6 hashtags relevantes\n\n"
+            "Separe parágrafos com linha em branco. Nunca truncar."
         ),
     },
     "twitter": {
         "max_chars": 280,
         "system": (
-            "Você é o social media da Morsa Digital — canal tech brasileiro descontraído e nerd. "
-            "Escreva um tweet de no máximo 280 caracteres com personalidade. Inclua 2-3 hashtags."
+            "Você é o social media da Morsa Digital — canal nerd BR.\n"
+            "Tweet: máx 260 chars + 2-3 hashtags. Personalidade, direto ao ponto. Sem emoji no início."
         ),
     },
 }
@@ -61,7 +96,7 @@ def _call_groq(system: str, user_msg: str, max_tokens: int = 600) -> str:
             {"role": "system", "content": system},
             {"role": "user",   "content": user_msg},
         ],
-        "temperature": 0.8,
+        "temperature": 0.7,
     }).encode()
 
     req = urllib.request.Request(
@@ -94,13 +129,18 @@ def generate_post(news_item: dict, platform: str) -> dict:
     source = news_item.get("source", "")
 
     user_msg = (
-        f"Crie uma legenda para o {platform.capitalize()} sobre esta notícia:\n"
-        f"Título: {title}\nFonte: {source}\nURL: {url}\n\n"
-        f"Escreva a legenda completa pronta para publicar."
+        f"Escreva a legenda completa para o {platform.capitalize()} sobre esta notícia.\n\n"
+        f"Título: {title}\n"
+        f"Fonte: {source}\n\n"
+        f"IMPORTANTE: siga exatamente o formato com linha em branco entre cada bloco. "
+        f"Não truncar. Hashtags só relacionadas a esta notícia específica."
     )
 
     try:
-        content = _call_groq(cfg["system"], user_msg)
+        content = _call_groq(cfg["system"], user_msg, max_tokens=700)
+        # Normalizar espaçamentos: garantir \n\n entre blocos
+        import re
+        content = re.sub(r'\n[ \t]*\n+', '\n\n', content).strip()
         logger.info(f"Legenda gerada via Groq ({len(content)} chars)")
     except Exception as e:
         logger.warning(f"Groq falhou ({e}) — usando template")
