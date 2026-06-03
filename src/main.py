@@ -100,7 +100,7 @@ def main():
     try:
         from posts_log import is_duplicate
         before = len(news)
-        news = [n for n in news if not is_duplicate(n["title"], platform="instagram")]
+        news = [n for n in news if not is_duplicate(n["title"], platform="instagram", url=n.get("url",""))]
         logger.info(f"Dedup: {len(news)}/{before} notícias únicas")
     except Exception as e:
         logger.warning(f"Dedup falhou: {e}")

@@ -112,34 +112,48 @@ def _fetch_api_recent(limit: int = 20) -> dict:
         return _api_titles_cache
 
 
-def is_duplicate(title: str, platform: str = "instagram", lookback_days: int = 7) -> bool:
+def is_duplicate(title: str, platform: str = "instagram", lookback_days: int = 7,
+                 url: str = "") -> bool:
     """
-    Verifica duplicata em duas camadas:
+    Verifica duplicata em três camadas:
+    0. URL exata — se a mesma URL foi publicada nos últimos 7 dias, é duplicata certa
     1. posts_log.json — overlap de palavras-chave no título (threshold: 2)
     2. Instagram API — overlap com primeiras linhas das últimas 20 captions (threshold: 2)
-
-    Threshold 2 (palavras >3 letras) captura nomes próprios como "Marcia Lucas",
-    "Star Wars", "Toy Story" que antes escapavam com threshold 3 e palavras >4 letras.
     """
+    posts = _load()
+    cutoff = datetime.now(timezone.utc) - timedelta(days=lookback_days)
+
+    def within_cutoff(pub_str: str) -> bool:
+        try:
+            pub = datetime.fromisoformat(pub_str)
+            if pub.tzinfo is None:
+                pub = pub.replace(tzinfo=timezone.utc)
+            return pub >= cutoff
+        except Exception:
+            return True  # se não conseguir parsear, assume recente
+
+    # Camada 0: URL exata (mais confiável — bypassa problema de idioma)
+    if url:
+        for p in posts:
+            if p.get("platform") != platform:
+                continue
+            if not within_cutoff(p.get("published_at", "")):
+                continue
+            if p.get("url", "") == url:
+                logger.info(f"Duplicata (URL): '{title[:60]}'")
+                return True
+
     title_words = _key_words(title)
     if not title_words:
         return False
 
-    THRESHOLD = 2  # 2 palavras-chave em comum = mesmo assunto
+    THRESHOLD = 2
 
     # Camada 1: posts_log.json (título → título)
-    posts = _load()
-    cutoff = datetime.now(timezone.utc) - timedelta(days=lookback_days)
     for p in posts:
         if p.get("platform") != platform:
             continue
-        try:
-            pub = datetime.fromisoformat(p["published_at"])
-            if pub.tzinfo is None:
-                pub = pub.replace(tzinfo=timezone.utc)
-            if pub < cutoff:
-                continue
-        except Exception:
+        if not within_cutoff(p.get("published_at", "")):
             continue
         existing_words = _key_words(p.get("title", ""))
         overlap = title_words & existing_words
