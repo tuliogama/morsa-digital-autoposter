@@ -85,9 +85,13 @@ jobs:
         run: |
           git config user.name "morsa-bot"
           git config user.email "bot@morsadigital.com"
-          git add logs/posts_log.json logs/day_brief.json 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "chore: atualiza posts_log e day_brief [skip ci]"
-          git push origin main 2>/dev/null || true
+          git fetch origin main
+          git stash || true
+          git rebase origin/main || git reset --hard origin/main
+          git stash pop || true
+          git add -f logs/posts_log.json logs/day_brief.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "chore: atualiza posts_log [skip ci]"
+          git push origin main || true
 
       - name: Upload logs de run
         if: always()
