@@ -59,6 +59,7 @@ jobs:
 
       - name: Executar ciclo CMO completo
         env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
@@ -95,11 +96,3 @@ jobs:
           name: run-logs-${{ github.run_id }}
           path: logs/run_*.json
           retention-days: 30
-      - name: Salvar log de posts (anti-duplicata)
-        if: always()
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add logs/posts_log.json || true
-          git diff --cached --quiet || git commit -m "log: atualizar posts_log após run [skip ci]"
-          git push || true
