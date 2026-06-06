@@ -99,26 +99,47 @@ Observar: formatos que geram muito engajamento neles para adaptar (nunca copiar)
 
 ---
 
-## O que funciona (atualizar com dados reais)
+## O que funciona — dados reais (análise jun/2026, 50 posts, 27k seguidores)
+
+### Performance por categoria
+| Categoria | Avg likes | vs média |
+|---|---|---|
+| Marvel/DC/Super-heróis | 17,6 | **+75%** |
+| Filmes blockbuster | 10,8 | +6% |
+| Games grandes (GoW, Zelda, GTA, CoD) | 10,0 | ~média |
+| Séries streaming | 7,0 | -31% |
+| Anime mainstream (OP, JJK, DBS) | bom potencial | — |
+| Anime nichê | 4,1 | **-60%** |
+| Tech/gadgets | 1–2 | **off-brand** |
+
+### Horários que mais engajam (BRT)
+- **08h–10h**: 18–21 likes avg — MELHOR janela
+- 12h–15h: ~10 likes avg
+- 19h–21h: 6–8 likes avg — mais fraco
 
 ### Captions que engajam
-- Hook sem emoji forçado no início — texto direto, opinião ou dado surpreendente
-- Referências culturais que o público reconhece (comparações com outras franquias)
-- CTA variado — nunca repetir o mesmo chamado à ação
-- SEO: mencionar o nome da franquia/game/série no texto, não só nas hashtags
+- Hook: **afirmação direta com o nome da franquia** — o fã precisa ver o personagem/franquia no 1º segundo
+- Opinião ousada supera fato neutro: "isso é preguiça criativa" > "X lançou Y"
+- Sem emoji no início — parece bot e prejudica alcance
+- Hashtags específicas da franquia, nunca genéricas (#Marvel não #Filmes)
+- CTA variado — nunca repetir o mesmo chamado à ação dois posts seguidos
 
 ### Conteúdo que performa bem
-- Notícias de animes populares (Demon Slayer, One Piece, Jujutsu Kaisen)
-- Trailers e lançamentos de jogos esperados
-- Conteúdo brasileiro (Irmão do Jorel, games indie nacionais) — público se identifica
-- Polêmicas da indústria (sindicalização Rockstar, cancelamentos)
+- Marvel/DC com qualquer novidade real (trailer, confirmação, polêmica)
+- Notícias de animes populares **com grande base BR**: One Piece, JJK, Demon Slayer, Dragon Ball, Bleach
+- Games com fandom consolidado: God of War, Zelda, GTA, Elden Ring, Call of Duty
+- Polêmicas da indústria (Rockstar, cancelamentos, brigas de estúdio)
+- Conteúdo brasileiro com novidade real (Irmão do Jorel, games indie nacionais)
 
 ### Evitar
-- Conteúdo de IA genérica / robótica / finanças / política
-- Posts sobre celebridades sem relação com cultura pop
+- **Gizmodo-style tech**: celulares, laptops, gadgets, IA, robôs domésticos, promoções de produto
+- Anime muito nichê sem base no Brasil (verificar se tem > 100k fãs BR antes)
+- Séries antigas sem hype atual (Stargate, Battlestar, Babylon 5)
+- Posts sobre celebridades sem relação com cultura pop nerd/geek
 - Mesmo formato de hook em posts consecutivos
 - Começar legenda com emoji (parece bot)
 - Emojis no início de cada parágrafo
+- Hashtags genéricas (#Filmes, #Games, #Animes, #MundoNerd)
 
 ---
 

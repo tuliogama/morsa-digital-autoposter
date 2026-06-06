@@ -51,9 +51,15 @@ REGRAS INEGOCIÁVEIS:
 - Separe SEMPRE os blocos com UMA linha em branco
 - Hashtags: 6 a 8, TODAS específicas para esta notícia. Proibido: #Games #Animes #Series #Filmes #MundoNerd genéricos
 - NUNCA comece com emoji, hashtag, @ ou aspas
-- NUNCA use: "Você jurava", "Incrível!", "Você sabia que", "Isso vai te surpreender", "Olha só", "Não vai acreditar"
+- NUNCA use: "Incrível!", "Você sabia que", "Isso vai te surpreender", "Olha só", "Não vai acreditar"
 - NUNCA truncar — termine cada bloco de forma completa
-- O HOOK deve ser uma afirmação, não um elogio ao produto
+- O HOOK deve ser uma afirmação direta ou opinião ousada — NUNCA pergunta genérica
+- Mencione o nome da franquia/personagem no hook — é o que faz o fã parar o scroll
+
+DADOS DE PERFORMANCE (use para calibrar o tom):
+- Posts Marvel/DC com afirmação ousada sobre a franquia: +75% acima da média
+- Hooks com opinião ("isso é preguiça criativa", "tem tudo para pisар") performam melhor que fatos neutros
+- Fã brasileiro responde bem a: comparações entre franquias, polêmicas da indústria, spoilers controlados
 """
 
 PLATFORM_PROMPTS = {
@@ -215,6 +221,12 @@ def generate_post(news_item: dict, platform: str, brief: dict = None) -> dict:
 def select_best_news(news_list: list, count: int = 6, brief: dict = None) -> list:
     """
     Usa Groq para selecionar e ordenar as melhores notícias do dia.
+    Baseia-se em dados reais de performance do @morsadigital (análise jun/2026):
+    - Marvel/DC: 17,6 likes avg (melhor categoria)
+    - Filmes: 10,8 avg
+    - Games grandes (God of War, Zelda, GTA): 10,0 avg
+    - Anime mainstream: bom quando é One Piece, JJK, Demon Slayer
+    - Anime niche: baixíssimo engajamento
     Fallback: retorna as primeiras `count` notícias.
     """
     if not news_list:
@@ -228,14 +240,25 @@ def select_best_news(news_list: list, count: int = 6, brief: dict = None) -> lis
         strategy = brief.get('strategy_note', '') if brief else ''
 
         result = _call_groq(
-            "Você é um CMO de mídia social especializado em cultura pop/nerd/geek brasileira. "
-            "Selecione as notícias com maior potencial de engajamento para o @morsadigital. "
-            "Priorize: novidades de filmes/séries/animes/games populares, exclusivos, polêmicas relevantes. "
-            "Evite: notícias antigas, conteúdo genérico, repetições de tema. "
+            "Você é o CMO do @morsadigital — canal de cultura pop/nerd para audiência brasileira de 27k seguidores.\n\n"
+            "DADOS REAIS DE PERFORMANCE (últimos 50 posts analisados):\n"
+            "🥇 Marvel/DC/Super-heróis: 17,6 likes avg — PRIORIDADE MÁXIMA\n"
+            "🥈 Filmes muito aguardados (Pixar, blockbusters): 10,8 avg\n"
+            "🥉 Games com grande base de fãs (God of War, Zelda, Elden Ring, GTA, Call of Duty): 10,0 avg\n"
+            "⚡ Anime mainstream (One Piece, Jujutsu Kaisen, Demon Slayer, Dragon Ball, Bleach): bom potencial\n"
+            "⚠️ Anime nichê desconhecido: baixíssimo engajamento — EVITAR\n"
+            "❌ Tech/gadgets (celulares, laptops, IA): off-brand, engajamento zero\n"
+            "❌ Séries antigas/niche sem base no Brasil (Stargate, etc): EVITAR\n"
+            "❌ Promoções e ofertas de produtos: JAMAIS\n\n"
+            "CRITÉRIOS DE SELEÇÃO (em ordem de peso):\n"
+            "1. Reconhecimento da franquia no Brasil (quanto maior a base de fãs BR, melhor)\n"
+            "2. Novidade real (trailer, confirmação, polêmica, revelação — não apenas rumor vago)\n"
+            "3. Potencial de comentário e debate na comunidade nerd BR\n"
+            "4. Variedade de categorias no conjunto selecionado\n\n"
             "Responda APENAS com os números separados por vírgula. Ex: 3,1,7,2",
             f"Estratégia do dia: {strategy}\n\nNotícias disponíveis:\n{titles}\n\n"
-            f"Selecione os {count} melhores índices em ordem de prioridade:",
-            max_tokens=50,
+            f"Selecione os {count} melhores índices em ordem de prioridade (do mais ao menos impactante):",
+            max_tokens=60,
         )
         indices = [int(x.strip()) - 1 for x in result.split(',') if x.strip().isdigit()]
         selected = [news_list[i] for i in indices if 0 <= i < len(news_list)]

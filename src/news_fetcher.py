@@ -13,30 +13,31 @@ from typing import Optional
 
 logger = logging.getLogger(__name__)
 
-# 13 feeds RSS nerd/geek/pop — sem Omelete (404) e sem Cinema com Rapadura
+# Feeds RSS nerd/geek/pop — curados por performance
+# Removido: Gizmodo (gerava promos de gadgets/tech off-brand), The Verge (basketball, GTA release timing)
 NERD_RSS_FEEDS = [
-    # Brasil
+    # Brasil — prioridade máxima
     ("IGN Brasil",          "https://br.ign.com/feed.xml"),
     ("GameBlast",           "https://www.gameblast.com.br/feeds/posts/default"),
     ("AnimeUnited",         "https://animeunited.com.br/feed/"),
-    # Internacional
+    # Internacional — cultura pop/nerd pura
     ("IGN",                 "https://feeds.feedburner.com/ign/all"),
     ("Kotaku",              "https://kotaku.com/rss"),
     ("ComicBook",           "https://comicbook.com/feed/"),
     ("Den of Geek",         "https://www.denofgeek.com/feed/"),
-    ("The Verge",           "https://www.theverge.com/rss/index.xml"),
     ("Deadline",            "https://deadline.com/feed/"),
     ("Variety",             "https://variety.com/feed/"),
     ("Anime News Network",  "https://www.animenewsnetwork.com/all/rss.xml"),
     ("Eurogamer",           "https://www.eurogamer.net/?format=rss"),
-    ("Gizmodo",             "https://gizmodo.com/rss"),
+    # Anime mainstream — cobrir títulos de alto engajamento
+    ("Crunchyroll News",    "https://www.crunchyroll.com/news/rss"),
 ]
 
 # Fontes 100% nerd — aceitar todos os artigos sem filtro de keyword
 NERD_SOURCES = {
     "IGN Brasil", "GameBlast", "AnimeUnited",
     "IGN", "Kotaku", "ComicBook", "Den of Geek",
-    "Anime News Network", "Eurogamer",
+    "Anime News Network", "Eurogamer", "Crunchyroll News",
 }
 
 HEADERS = {
@@ -55,6 +56,17 @@ BLOCK_KEYWORDS = [
     # Conteúdo proibido
     "política", "eleição", "crypto", "bitcoin", "nft", "invest",
     "fake news", "teoria da conspiração", "hoax",
+    # Tech/gadgets off-brand (Gizmodo-style) — não é cultura pop
+    "galaxy s", "iphone ", "pixel ", "samsung galaxy", "apple watch",
+    "smartwatch", "notebook ", "laptop ", "processador", "chip ",
+    "inteligência artificial", "ia generativa", "chatgpt", "openai",
+    "robô de limpeza", "aspirador robô", "smart home", "casa inteligente",
+    "oferta ", "cupom ", "desconto ", "promoção de", "por menos de r$",
+    "review do", "análise do produto", "melhor celular",
+    # Esportes reais sem relação com cultura pop
+    "copa do mundo de futebol", "nba 2k", " nfl ", "basquete real",
+    # Séries/franquias de baixíssimo engajamento no Brasil
+    "stargate", "battlestar", "babylon 5",
 ]
 
 NERD_KEYWORDS = [
