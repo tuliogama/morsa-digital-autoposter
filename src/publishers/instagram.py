@@ -2,13 +2,29 @@
 Publica posts no Instagram via Meta Graph API (conta Business/Creator).
 Requer: IG_USER_ID, FB_ACCESS_TOKEN
 
-Fluxo por post:
+Formatos suportados:
+  - Feed (imagem única) — publish()
+  - Carrossel editorial  — publish_carousel()
+  - Reel (vídeo 9:16)    — publish_reel()
+
+Fluxo feed:
   1. Gera imagem 4:5 (1080x1350) com logo Morsa Digital
   2. Sobe para Imgur (URL pública)
-  3. Cria container no Instagram → publica no Feed
-  4. Tenta desabilitar contagem de likes (requer instagram_manage_comments)
-  5. Posta a mesma imagem nos Stories
-  6. Compartilha na comunidade "Clã do Morsa" (requer MORSA_BROADCAST_CHANNEL_ID)
+  3. Cria container → publica no Feed
+  4. Posta nos Stories + comunidade Clã do Morsa
+
+Fluxo carrossel:
+  1. Gera slides via carousel_generator.py
+  2. Sobe cada slide para Imgur
+  3. Cria child containers (is_carousel_item=true)
+  4. Cria container pai (media_type=CAROUSEL)
+  5. Publica
+
+Fluxo reel:
+  1. Gera vídeo MP4 via reel_generator.py
+  2. Faz upload do vídeo (resumable) via Meta API
+  3. Cria container (media_type=REELS)
+  4. Publica
 """
 import json
 import logging
@@ -199,3 +215,245 @@ def publish(post: dict) -> dict:
         logger.warning(f"Falha ao registrar no posts_log: {e}")
 
     return {"platform": "instagram", "id": media_id, "image_url": image_url}
+
+
+# ---------------------------------------------------------------------------
+# Publicação de Carrossel Editorial
+# ---------------------------------------------------------------------------
+
+def publish_carousel(carousel_data: dict, caption: str) -> dict:
+    """
+    Publica carrossel de múltiplos slides no Instagram.
+
+    carousel_data: dict no formato de carousel_generator.generate_carousel()
+    caption: legenda completa do carrossel (gerada pelo content_generator)
+
+    Fluxo Meta API:
+      1. Gera slides (PIL)
+      2. Faz upload de cada slide para Imgur
+      3. Cria child containers (is_carousel_item=true)
+      4. Cria container pai CAROUSEL com lista de children
+      5. Publica
+    """
+    import sys, os
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+    ig_user_id = os.environ["IG_USER_ID"]
+    token = os.environ["FB_ACCESS_TOKEN"]
+
+    # 1. Gerar slides
+    from carousel_generator import generate_carousel
+    slides_bytes = generate_carousel(carousel_data)
+
+    if len(slides_bytes) < 2:
+        raise ValueError("Carrossel precisa de ao menos 2 slides")
+
+    # Limitar a 10 slides (limite da API do Instagram)
+    slides_bytes = slides_bytes[:10]
+
+    # 2. Upload de cada slide para Imgur
+    from image_generator import _upload_image
+    slide_urls = []
+    for i, slide_bytes in enumerate(slides_bytes):
+        url = _upload_image(slide_bytes)
+        if not url:
+            logger.warning(f"Falha no upload do slide {i+1} — pulando")
+            continue
+        slide_urls.append(url)
+        logger.info(f"Slide {i+1}/{len(slides_bytes)} enviado: {url}")
+        time.sleep(1)
+
+    if len(slide_urls) < 2:
+        raise NoImageError("Upload de slides falhou — não há slides suficientes")
+
+    # 3. Criar child containers
+    child_ids = []
+    for url in slide_urls:
+        result = _post(f"{GRAPH_URL}/{ig_user_id}/media", {
+            "image_url": url,
+            "is_carousel_item": "true",
+            "access_token": token,
+        })
+        child_ids.append(result["id"])
+        logger.info(f"Child container criado: {result['id']}")
+        time.sleep(2)
+
+    # 4. Criar container pai CAROUSEL
+    carousel_result = _post(f"{GRAPH_URL}/{ig_user_id}/media", {
+        "media_type": "CAROUSEL",
+        "children": ",".join(child_ids),
+        "caption": caption,
+        "like_and_view_counts_disabled": "true",
+        "access_token": token,
+    })
+    carousel_container_id = carousel_result["id"]
+    logger.info(f"Container CAROUSEL criado: {carousel_container_id}")
+
+    # 5. Publicar
+    time.sleep(10)
+    media_id = _publish_container(ig_user_id, token, carousel_container_id)
+    logger.info(f"Carrossel publicado: {media_id}")
+
+    # Stories + comunidade
+    time.sleep(3)
+    _post_to_stories(ig_user_id, token, media_id)
+    time.sleep(2)
+    _post_to_broadcast_channel(token, media_id)
+
+    # Registrar
+    try:
+        from posts_log import record_post
+        record_post(media_id, "instagram_carousel",
+                    {"title": carousel_data.get("title", "Carrossel")},
+                    caption, image_url=slide_urls[0] if slide_urls else "")
+    except Exception as e:
+        logger.warning(f"Falha ao registrar no posts_log: {e}")
+
+    return {
+        "platform": "instagram",
+        "format": "carousel",
+        "id": media_id,
+        "slides": len(slide_urls),
+    }
+
+
+# ---------------------------------------------------------------------------
+# Publicação de Reel (vídeo 9:16)
+# ---------------------------------------------------------------------------
+
+def _upload_video_to_meta(video_path: str, ig_user_id: str, token: str) -> str:
+    """
+    Upload de vídeo para Meta usando upload resumível.
+    Retorna video_url (path no servidor Meta) para criar o container.
+    """
+    file_size = os.path.getsize(video_path)
+
+    # 1. Iniciar sessão de upload
+    init_result = _post(
+        f"https://rupload.facebook.com/video-upload/v19.0/{ig_user_id}/videos",
+        {
+            "upload_phase": "start",
+            "file_size": str(file_size),
+            "access_token": token,
+        }
+    )
+    upload_session_id = init_result.get("upload_session_id") or init_result.get("id")
+    if not upload_session_id:
+        raise ValueError(f"Falha ao iniciar upload: {init_result}")
+
+    # 2. Transferir arquivo
+    with open(video_path, "rb") as f:
+        video_data = f.read()
+
+    upload_url = f"https://rupload.facebook.com/video-upload/v19.0/{upload_session_id}"
+    req = urllib.request.Request(
+        upload_url,
+        data=video_data,
+        method="POST",
+        headers={
+            "Authorization": f"OAuth {token}",
+            "offset": "0",
+            "file_size": str(file_size),
+            "Content-Type": "application/octet-stream",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=120) as r:
+        upload_result = json.loads(r.read())
+
+    logger.info(f"Vídeo enviado: {upload_result}")
+    return upload_session_id
+
+
+def publish_reel(reel_data: dict, caption: str) -> dict:
+    """
+    Gera e publica um Reel no Instagram.
+
+    reel_data = {
+        "slides": [
+            {"image_url": "https://...", "text": "Headline da notícia"},
+            ...
+        ],
+        "title": "Top anúncios da semana"
+    }
+    caption: legenda do reel (gerada pelo content_generator)
+    """
+    import tempfile, sys, os
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+    ig_user_id = os.environ["IG_USER_ID"]
+    token = os.environ["FB_ACCESS_TOKEN"]
+
+    slides = reel_data.get("slides", [])
+    if len(slides) < 3:
+        raise ValueError("Reel precisa de ao menos 3 slides")
+
+    # 1. Gerar vídeo com ffmpeg
+    from reel_generator import generate_reel
+    with tempfile.NamedTemporaryFile(suffix=".mp4", delete=False) as tmp:
+        video_path = tmp.name
+
+    try:
+        success = generate_reel(slides, video_path)
+        if not success or not os.path.exists(video_path):
+            raise ValueError("Falha ao gerar vídeo do reel")
+
+        file_size = os.path.getsize(video_path)
+        logger.info(f"Vídeo gerado: {video_path} ({file_size//1024}KB)")
+
+        # 2. Fazer upload do vídeo para o servidor Meta
+        upload_session_id = _upload_video_to_meta(video_path, ig_user_id, token)
+
+        # 3. Criar container REELS
+        container_result = _post(f"{GRAPH_URL}/{ig_user_id}/media", {
+            "media_type": "REELS",
+            "upload_id": upload_session_id,
+            "caption": caption,
+            "share_to_feed": "true",
+            "like_and_view_counts_disabled": "true",
+            "access_token": token,
+        })
+        container_id = container_result["id"]
+        logger.info(f"Container REELS criado: {container_id}")
+
+        # 4. Aguardar processamento do vídeo (poll status)
+        for attempt in range(12):  # máx 2 minutos
+            time.sleep(10)
+            status_url = (
+                f"{GRAPH_URL}/{container_id}"
+                f"?fields=status_code,status&access_token={token}"
+            )
+            with urllib.request.urlopen(status_url, timeout=15) as r:
+                status = json.loads(r.read())
+            code = status.get("status_code", "")
+            logger.info(f"Status do vídeo ({attempt+1}/12): {code}")
+            if code == "FINISHED":
+                break
+            if code == "ERROR":
+                raise ValueError(f"Erro no processamento do vídeo: {status}")
+
+        # 5. Publicar
+        media_id = _publish_container(ig_user_id, token, container_id)
+        logger.info(f"Reel publicado: {media_id}")
+
+        # Comunidade
+        time.sleep(3)
+        _post_to_broadcast_channel(token, media_id)
+
+        # Registrar
+        try:
+            from posts_log import record_post
+            record_post(media_id, "instagram_reel",
+                        {"title": reel_data.get("title", "Reel")},
+                        caption, image_url="")
+        except Exception as e:
+            logger.warning(f"Falha ao registrar no posts_log: {e}")
+
+        return {
+            "platform": "instagram",
+            "format": "reel",
+            "id": media_id,
+        }
+
+    finally:
+        if os.path.exists(video_path):
+            os.unlink(video_path)
