@@ -19,9 +19,9 @@ from typing import Optional
 
 logger = logging.getLogger(__name__)
 
-# Dimensões (quadrado para carrossel)
+# Dimensões 4:5 — padrão do feed do Instagram (mesmo dos posts normais)
 SLIDE_W = 1080
-SLIDE_H = 1080
+SLIDE_H = 1350
 
 # Cores Morsa Digital
 COLOR_ORANGE = (255, 107, 0)
