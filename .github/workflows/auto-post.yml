@@ -40,6 +40,7 @@ env:
   IMGUR_CLIENT_ID: ${{ secrets.IMGUR_CLIENT_ID }}
   MORSA_BROADCAST_CHANNEL_ID: ${{ secrets.MORSA_BROADCAST_CHANNEL_ID }}
   GITHUB_REPOSITORY: ${{ github.repository }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   # ── Job 1: Posts de feed (notícias automáticas) ──────────────────────────
