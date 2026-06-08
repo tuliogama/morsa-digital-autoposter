@@ -673,6 +673,104 @@ def _upload_image(image_bytes: bytes) -> Optional[str]:
 # Função principal
 # ---------------------------------------------------------------------------
 
+def _fetch_article_images(url: str, count: int = 2) -> list:
+    """
+    Busca até `count` imagens distintas do artigo.
+    Ordem de tentativa:
+      1. og:image  → slide 1
+      2. twitter:image (se diferente) → slide 2
+      3. <img> do corpo do artigo com src >= 400px (heurística de tamanho na URL)
+    Retorna lista de bytes (pode ter 1 ou 2 elementos).
+    """
+    import re
+
+    if not url:
+        return []
+
+    # YouTube: só uma thumbnail disponível
+    if "youtube.com" in url or "youtu.be" in url:
+        data = _youtube_thumbnail(url)
+        return [data] if data else []
+
+    # Reddit: resolver e delegar
+    if "reddit.com" in url:
+        resolved = _reddit_external_url(url)
+        if resolved:
+            return _fetch_article_images(resolved, count)
+        return []
+
+    try:
+        req = urllib.request.Request(url, headers=HEADERS)
+        with urllib.request.urlopen(req, timeout=8) as resp:
+            html = resp.read(200_000).decode("utf-8", errors="replace")
+    except Exception as e:
+        logger.info(f"Falha ao buscar HTML de {url[:60]}: {e}")
+        return []
+
+    found_urls = []
+
+    def _normalize(u):
+        return u.split("?")[0].split("#")[0]
+
+    def _add_candidate(img_url):
+        img_url = img_url.replace("&amp;", "&")
+        if not img_url.startswith("http"):
+            img_url = urllib.parse.urljoin(url, img_url)
+        if _normalize(img_url) not in [_normalize(u) for u in found_urls]:
+            found_urls.append(img_url)
+
+    # 1. Meta tags: og:image e twitter:image
+    meta_patterns = [
+        r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
+        r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)["\']',
+        r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+name=["\']twitter:image["\']',
+    ]
+    for pat in meta_patterns:
+        m = re.search(pat, html, re.IGNORECASE)
+        if m:
+            _add_candidate(m.group(1))
+
+    # 2. Se ainda precisamos de mais: <img> dentro de <article>, <figure> ou <main>
+    if len(found_urls) < count:
+        # Extrair bloco de conteúdo principal
+        content_block = ""
+        for tag in ["<article", "<main", "<figure"]:
+            idx = html.lower().find(tag)
+            if idx != -1:
+                content_block = html[idx:idx + 80_000]
+                break
+        if not content_block:
+            content_block = html
+
+        # Procurar src e data-src (lazy-load)
+        img_srcs = re.findall(
+            r'<img[^>]+(?:src|data-src|data-lazy-src)=["\']([^"\']+)["\']',
+            content_block, re.IGNORECASE
+        )
+        skip = ["logo", "icon", "avatar", "sprite", "pixel", "1x1",
+                "tracking", "gif", "badge", "button", ".svg"]
+        for src in img_srcs:
+            low = src.lower()
+            if any(x in low for x in skip):
+                continue
+            _add_candidate(src)
+            if len(found_urls) >= count + 3:
+                break
+
+    # 3. Baixar e validar (>20KB = imagem real, não ícone)
+    result = []
+    for img_url in found_urls:
+        if len(result) >= count:
+            break
+        data = _fetch_image_bytes(img_url)
+        if data and len(data) > 20_000:
+            result.append(data)
+            logger.info(f"Imagem {len(result)} confirmada ({len(data)//1024}KB): {img_url[:60]}")
+
+    return result
+
+
 def generate_post_image_pair(news_item: dict, headline: str = "") -> tuple:
     """
     Gera par de imagens para o carrossel de feed (2 slides):
@@ -691,21 +789,20 @@ def generate_post_image_pair(news_item: dict, headline: str = "") -> tuple:
     if not article_url:
         return (None, None)
 
-    # 1. Buscar imagem uma vez só
-    img_bytes = _fetch_article_image(article_url)
-    if not img_bytes:
+    # 1. Buscar até 2 imagens distintas do artigo
+    images = _fetch_article_images(article_url, count=2)
+    if not images:
         logger.info(f"Sem imagem real para '{title[:50]}' — post será pulado")
         return (None, None)
 
-    base_img = _load_image_from_bytes(img_bytes)
-    if not base_img:
-        return (None, None)
-
-    logger.info("Imagem do artigo carregada com sucesso")
     display_headline = headline if headline else title
 
-    # 2. Slide 1: gradiente + título + logo
-    slide1 = _resize_crop_center(base_img.copy(), POST_W, POST_H)
+    # 2. Slide 1: primeira imagem + gradiente + título + logo
+    base1 = _load_image_from_bytes(images[0])
+    if not base1:
+        return (None, None)
+
+    slide1 = _resize_crop_center(base1, POST_W, POST_H)
     slide1 = _add_gradient_overlay(slide1)
     slide1 = _add_text_overlay(slide1, display_headline)
     slide1 = _paste_logo(slide1)
@@ -716,16 +813,26 @@ def generate_post_image_pair(news_item: dict, headline: str = "") -> tuple:
     if not slide1_url:
         return (None, None)
 
-    # 3. Slide 2: mesma imagem, só crop + logo (sem texto)
+    # 3. Slide 2: mesma imagem com crop diferente (foco no topo) + logo
+    # Garante relevância total — sem risco de imagem de outro artigo
     slide2_url = None
     try:
-        slide2 = _resize_crop_center(base_img.copy(), POST_W, POST_H)
-        slide2 = _paste_logo(slide2)
-        buf2 = io.BytesIO()
-        slide2.convert("RGB").save(buf2, format="JPEG", quality=92, optimize=True)
-        slide2_url = _upload_image(buf2.getvalue())
-        if slide2_url:
-            logger.info(f"Slide 2 (imagem limpa): {slide2_url[:60]}")
+        base2 = _load_image_from_bytes(images[0])
+        if base2:
+            # Crop focando no terço superior da imagem (diferente do center crop)
+            iw, ih = base2.size
+            scale = max(POST_W / iw, POST_H / ih)
+            nw, nh = int(iw * scale), int(ih * scale)
+            base2 = base2.resize((nw, nh), base2.LANCZOS if hasattr(base2, 'LANCZOS') else 1)
+            x = (nw - POST_W) // 2
+            y = 0  # topo — diferente do center crop do slide 1
+            slide2 = base2.crop((x, y, x + POST_W, y + POST_H))
+            slide2 = _paste_logo(slide2)
+            buf2 = io.BytesIO()
+            slide2.convert("RGB").save(buf2, format="JPEG", quality=92, optimize=True)
+            slide2_url = _upload_image(buf2.getvalue())
+            if slide2_url:
+                logger.info(f"Slide 2 (crop topo): {slide2_url[:60]}")
     except Exception as e:
         logger.warning(f"Falha ao gerar slide 2: {e}")
 
