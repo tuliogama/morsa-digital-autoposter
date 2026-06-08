@@ -176,35 +176,27 @@ def publish(post: dict) -> dict:
     caption = post["content"]
     news_item = post.get("news_item", {})
 
-    # 1. Gerar imagem principal (slide 1)
+    # 1. Gerar par de imagens (slide 1 = feed normal, slide 2 = imagem limpa + logo)
     image_url = None
+    slide2_url = None
     image_headline = post.get("image_headline", news_item.get("title", ""))
     try:
-        from image_generator import generate_post_image
-        image_url = generate_post_image(news_item, headline=image_headline)
+        from image_generator import generate_post_image_pair
+        image_url, slide2_url = generate_post_image_pair(news_item, headline=image_headline)
     except Exception as e:
-        logger.warning(f"Falha ao gerar imagem: {e}")
+        logger.warning(f"Falha ao gerar imagens: {e}")
 
     if not image_url:
         raise NoImageError(f"Sem imagem real para: {news_item.get('title', '')[:60]}")
 
-    logger.info(f"Slide 1 (feed): {image_url}")
+    logger.info(f"Slide 1: {image_url}")
+    if slide2_url:
+        logger.info(f"Slide 2 (imagem limpa): {slide2_url}")
 
-    # 2. Gerar e fazer upload do slide de logo (slide 2)
-    logo_url = None
-    try:
-        from carousel_generator import make_logo_slide_bytes
-        from image_generator import _upload_image
-        logo_bytes = make_logo_slide_bytes()
-        logo_url = _upload_image(logo_bytes)
-        logger.info(f"Slide 2 (logo): {logo_url}")
-    except Exception as e:
-        logger.warning(f"Falha ao gerar slide de logo: {e} — publicando como imagem simples")
-
-    # 3. Publicar como carrossel (2 slides) ou fallback para imagem simples
-    if logo_url:
+    # 2. Publicar como carrossel (2 slides) ou fallback para imagem simples
+    if slide2_url:
         # Criar child containers
-        slide_urls = [image_url, logo_url]
+        slide_urls = [image_url, slide2_url]
         child_ids = []
         for url in slide_urls:
             result = _post(f"{GRAPH_URL}/{ig_user_id}/media", {

@@ -673,6 +673,65 @@ def _upload_image(image_bytes: bytes) -> Optional[str]:
 # Função principal
 # ---------------------------------------------------------------------------
 
+def generate_post_image_pair(news_item: dict, headline: str = "") -> tuple:
+    """
+    Gera par de imagens para o carrossel de feed (2 slides):
+      Slide 1: imagem com gradiente + título + logo (formato padrão)
+      Slide 2: mesma imagem limpa — só o crop 4:5 + logo, sem texto
+
+    Faz apenas uma requisição para buscar a imagem do artigo.
+    Retorna (slide1_url, slide2_url). slide2_url pode ser None se upload falhar.
+    """
+    if not _pil_available():
+        logger.warning("Pillow não instalado — imagens não geradas")
+        return (None, None)
+
+    title = news_item.get("title", "")
+    article_url = news_item.get("url", "")
+    if not article_url:
+        return (None, None)
+
+    # 1. Buscar imagem uma vez só
+    img_bytes = _fetch_article_image(article_url)
+    if not img_bytes:
+        logger.info(f"Sem imagem real para '{title[:50]}' — post será pulado")
+        return (None, None)
+
+    base_img = _load_image_from_bytes(img_bytes)
+    if not base_img:
+        return (None, None)
+
+    logger.info("Imagem do artigo carregada com sucesso")
+    display_headline = headline if headline else title
+
+    # 2. Slide 1: gradiente + título + logo
+    slide1 = _resize_crop_center(base_img.copy(), POST_W, POST_H)
+    slide1 = _add_gradient_overlay(slide1)
+    slide1 = _add_text_overlay(slide1, display_headline)
+    slide1 = _paste_logo(slide1)
+    buf1 = io.BytesIO()
+    slide1.convert("RGB").save(buf1, format="JPEG", quality=92, optimize=True)
+    slide1_url = _upload_image(buf1.getvalue())
+
+    if not slide1_url:
+        return (None, None)
+
+    # 3. Slide 2: mesma imagem, só crop + logo (sem texto)
+    slide2_url = None
+    try:
+        slide2 = _resize_crop_center(base_img.copy(), POST_W, POST_H)
+        slide2 = _paste_logo(slide2)
+        buf2 = io.BytesIO()
+        slide2.convert("RGB").save(buf2, format="JPEG", quality=92, optimize=True)
+        slide2_url = _upload_image(buf2.getvalue())
+        if slide2_url:
+            logger.info(f"Slide 2 (imagem limpa): {slide2_url[:60]}")
+    except Exception as e:
+        logger.warning(f"Falha ao gerar slide 2: {e}")
+
+    return (slide1_url, slide2_url)
+
+
 def generate_post_image(news_item: dict, headline: str = "") -> Optional[str]:
     """
     Gera imagem 4:5 (1080×1350px) com imagem real do artigo + logo Morsa Digital.
