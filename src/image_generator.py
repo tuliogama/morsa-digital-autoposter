@@ -731,32 +731,8 @@ def _fetch_article_images(url: str, count: int = 2) -> list:
         if m:
             _add_candidate(m.group(1))
 
-    # 2. Se ainda precisamos de mais: <img> dentro de <article>, <figure> ou <main>
-    if len(found_urls) < count:
-        # Extrair bloco de conteúdo principal
-        content_block = ""
-        for tag in ["<article", "<main", "<figure"]:
-            idx = html.lower().find(tag)
-            if idx != -1:
-                content_block = html[idx:idx + 80_000]
-                break
-        if not content_block:
-            content_block = html
-
-        # Procurar src e data-src (lazy-load)
-        img_srcs = re.findall(
-            r'<img[^>]+(?:src|data-src|data-lazy-src)=["\']([^"\']+)["\']',
-            content_block, re.IGNORECASE
-        )
-        skip = ["logo", "icon", "avatar", "sprite", "pixel", "1x1",
-                "tracking", "gif", "badge", "button", ".svg"]
-        for src in img_srcs:
-            low = src.lower()
-            if any(x in low for x in skip):
-                continue
-            _add_candidate(src)
-            if len(found_urls) >= count + 3:
-                break
+    # Apenas meta tags — o conteúdo de <article> mistura imagens de artigos
+    # relacionados que são indistinguíveis das imagens do artigo principal
 
     # 3. Baixar e validar (>20KB = imagem real, não ícone)
     result = []
@@ -813,26 +789,24 @@ def generate_post_image_pair(news_item: dict, headline: str = "") -> tuple:
     if not slide1_url:
         return (None, None)
 
-    # 3. Slide 2: mesma imagem com crop diferente (foco no topo) + logo
-    # Garante relevância total — sem risco de imagem de outro artigo
+    # 3. Slide 2: mesma imagem sem texto, crop do topo + logo
     slide2_url = None
     try:
+        from PIL import Image as _Image
         base2 = _load_image_from_bytes(images[0])
         if base2:
-            # Crop focando no terço superior da imagem (diferente do center crop)
             iw, ih = base2.size
             scale = max(POST_W / iw, POST_H / ih)
             nw, nh = int(iw * scale), int(ih * scale)
-            base2 = base2.resize((nw, nh), base2.LANCZOS if hasattr(base2, 'LANCZOS') else 1)
+            base2 = base2.resize((nw, nh), _Image.LANCZOS)
             x = (nw - POST_W) // 2
-            y = 0  # topo — diferente do center crop do slide 1
-            slide2 = base2.crop((x, y, x + POST_W, y + POST_H))
+            slide2 = base2.crop((x, 0, x + POST_W, POST_H))
             slide2 = _paste_logo(slide2)
             buf2 = io.BytesIO()
             slide2.convert("RGB").save(buf2, format="JPEG", quality=92, optimize=True)
             slide2_url = _upload_image(buf2.getvalue())
             if slide2_url:
-                logger.info(f"Slide 2 (crop topo): {slide2_url[:60]}")
+                logger.info(f"Slide 2 (sem texto): {slide2_url[:60]}")
     except Exception as e:
         logger.warning(f"Falha ao gerar slide 2: {e}")
 
