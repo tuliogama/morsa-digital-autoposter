@@ -245,45 +245,93 @@ def generate_reel_data(news_list: list) -> dict:
 
 
 def _fetch_og_images(slides: list) -> list:
-    """Tenta extrair og:image de cada URL de notícia."""
-    import urllib.request
-    import re
+    """
+    Extrai og:image de cada URL de notícia usando a mesma lógica robusta
+    do image_generator (200KB de HTML, 4 padrões, valida download).
+    """
+    from image_generator import _fetch_article_image, _upload_image
 
     result = []
     for slide in slides:
         url = slide.get("news", {}).get("url", "")
-        og_image = None
+        image_url = None
 
         if url:
             try:
-                req = urllib.request.Request(
-                    url,
-                    headers={"User-Agent": "MorsaDigital-Autoposter/1.0"},
-                )
-                with urllib.request.urlopen(req, timeout=8) as r:
-                    html = r.read(50000).decode("utf-8", errors="replace")
+                img_bytes = _fetch_article_image(url)
+                if img_bytes:
+                    # Upload para CDN público (GitHub → Imgur → catbox)
+                    cdn_url = _upload_image(img_bytes)
+                    if cdn_url:
+                        image_url = cdn_url
+                        logger.info(f"Imagem do reel: {cdn_url[:60]}")
+            except Exception as e:
+                logger.warning(f"Falha ao buscar imagem para reel slide ({url[:50]}): {e}")
 
-                # Buscar og:image
-                match = re.search(
-                    r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']',
-                    html, re.IGNORECASE
-                ) or re.search(
-                    r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']',
-                    html, re.IGNORECASE
-                )
-                if match:
-                    og_image = match.group(1)
-            except Exception:
-                pass
-
-        if og_image:
+        if image_url:
             result.append({
-                "image_url": og_image,
+                "image_url": image_url,
                 "text": slide["text"],
             })
         # Se não achou imagem, pula — reel precisa de imagens reais
 
     return result
+
+
+def _fetch_carousel_images(carousel_data: dict, news_list: list) -> dict:
+    """
+    Substitui os image_url do carrossel (vindos do Groq, não confiáveis)
+    por imagens reais buscadas dos artigos.
+
+    Busca og:image via _fetch_article_image (200KB, 4 padrões, valida download)
+    e faz upload para CDN público.
+
+    Modifica carousel_data in-place e também retorna o dict.
+    """
+    from image_generator import _fetch_article_image, _upload_image
+
+    items = carousel_data.get("items", [])
+
+    # Cover image → primeira notícia disponível
+    cover_fetched = False
+    for i, news in enumerate(news_list):
+        url = news.get("url", "")
+        if not url:
+            continue
+        try:
+            img_bytes = _fetch_article_image(url)
+            if img_bytes:
+                cdn_url = _upload_image(img_bytes)
+                if cdn_url:
+                    carousel_data["cover_image_url"] = cdn_url
+                    cover_fetched = True
+                    logger.info(f"Cover image: {cdn_url[:60]}")
+                    break
+        except Exception as e:
+            logger.warning(f"Falha cover image ({url[:50]}): {e}")
+
+    if not cover_fetched:
+        carousel_data["cover_image_url"] = None
+
+    # Imagens de cada slide → notícia correspondente por índice
+    for i, item in enumerate(items):
+        news = news_list[i] if i < len(news_list) else None
+        url = news.get("url", "") if news else ""
+        item["image_url"] = None  # reset — não confiar no Groq
+
+        if not url:
+            continue
+        try:
+            img_bytes = _fetch_article_image(url)
+            if img_bytes:
+                cdn_url = _upload_image(img_bytes)
+                if cdn_url:
+                    item["image_url"] = cdn_url
+                    logger.info(f"Slide {i+1} image: {cdn_url[:60]}")
+        except Exception as e:
+            logger.warning(f"Falha imagem slide {i+1} ({url[:50]}): {e}")
+
+    return carousel_data
 
 
 def generate_reel_caption(news_list: list) -> str:
@@ -309,6 +357,7 @@ def run_carousel(carousel_type: str = "top_n", news_count: int = 5) -> dict:
     Chamado pelo GitHub Actions (editorial job).
     """
     from publishers.instagram import publish_carousel
+    from posts_log import is_duplicate, record_post
 
     logger.info(f"Iniciando carrossel editorial: {carousel_type}")
 
@@ -324,11 +373,33 @@ def run_carousel(carousel_type: str = "top_n", news_count: int = 5) -> dict:
     # 2. Gerar conteúdo editorial
     carousel_data = generate_carousel_content(best, carousel_type)
 
-    # 3. Gerar legenda
+    # 3. Checar duplicata — evitar repetir o mesmo carrossel
+    carousel_title = carousel_data.get("title", "")
+    if is_duplicate(carousel_title, platform="instagram", lookback_days=1):
+        raise ValueError(
+            f"Carrossel duplicado (publicado nas últimas 24h): {carousel_title!r}"
+        )
+
+    # 4. Buscar imagens reais dos artigos (substitui urls do Groq, não confiáveis)
+    logger.info("Buscando imagens dos slides via og:image...")
+    carousel_data = _fetch_carousel_images(carousel_data, best)
+
+    # 5. Gerar legenda
     caption = generate_carousel_caption(carousel_data)
 
-    # 4. Publicar
+    # 6. Publicar
     result = publish_carousel(carousel_data, caption)
+
+    # 7. Registrar no log para evitar duplicatas futuras
+    media_id = result.get("media_id", result.get("id", ""))
+    cover_url = carousel_data.get("cover_image_url", "")
+    record_post(
+        media_id=media_id,
+        platform="instagram",
+        news_item={"title": carousel_title, "source": "editorial", "url": ""},
+        caption=caption,
+        image_url=cover_url or "",
+    )
 
     logger.info(f"✅ Carrossel publicado: {result}")
     return result
