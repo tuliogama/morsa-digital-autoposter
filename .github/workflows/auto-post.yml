@@ -41,6 +41,8 @@ env:
   MORSA_BROADCAST_CHANNEL_ID: ${{ secrets.MORSA_BROADCAST_CHANNEL_ID }}
   GITHUB_REPOSITORY: ${{ github.repository }}
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GOOGLE_CSE_KEY: ${{ secrets.GOOGLE_CSE_KEY }}
+  GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
 
 jobs:
   # ── Job 1: Posts de feed (notícias automáticas) ──────────────────────────

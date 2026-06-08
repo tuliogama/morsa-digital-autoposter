@@ -642,6 +642,70 @@ def _upload_to_catbox(image_bytes: bytes) -> Optional[str]:
     return None
 
 
+def _search_google_image(query: str) -> Optional[bytes]:
+    """
+    Busca uma imagem relevante via Google Custom Search API.
+    Requer GOOGLE_CSE_KEY e GOOGLE_CSE_ID no ambiente.
+    Retorna bytes da primeira imagem válida encontrada, ou None.
+    """
+    api_key = os.environ.get("GOOGLE_CSE_KEY", "")
+    cse_id  = os.environ.get("GOOGLE_CSE_ID", "")
+    if not api_key or not cse_id:
+        logger.debug("GOOGLE_CSE_KEY ou GOOGLE_CSE_ID não configurados")
+        return None
+
+    try:
+        params = urllib.parse.urlencode({
+            "key": api_key,
+            "cx": cse_id,
+            "q": query,
+            "searchType": "image",
+            "num": "5",
+            "imgSize": "large",
+            "imgType": "photo",
+            "safe": "active",
+        })
+        url = f"https://www.googleapis.com/customsearch/v1?{params}"
+        req = urllib.request.Request(url, headers={"User-Agent": "MorsaDigital/1.0"})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read())
+
+        items = data.get("items", [])
+        for item in items:
+            img_url = item.get("link", "")
+            if not img_url:
+                continue
+            img_bytes = _fetch_image_bytes(img_url)
+            if img_bytes and len(img_bytes) > 30_000:
+                logger.info(f"Google CSE imagem: {img_url[:70]}")
+                return img_bytes
+
+    except Exception as e:
+        logger.warning(f"Google CSE falhou: {e}")
+
+    return None
+
+
+def _build_search_query(news_item: dict) -> str:
+    """
+    Monta query de busca de imagem a partir do título da notícia.
+    Extrai o tema central (franquia, jogo, filme) para uma busca mais precisa.
+    """
+    title = news_item.get("title", "")
+    # Remover palavras genéricas de notícia para focar no tema
+    stop = ["trailer", "anuncia", "anunciado", "confirmado", "revela",
+            "lança", "lançamento", "novo", "nova", "vídeo", "video",
+            "screenshots", "imagens", "gameplay", "review", "análise",
+            "é anunciado", "será", "xbox games showcase", "direct",
+            "treehouse", "game fest"]
+    words = title
+    for s in stop:
+        words = words.replace(s, " ").replace(s.capitalize(), " ")
+    # Pegar as primeiras palavras significativas
+    clean = " ".join(w for w in words.split() if len(w) > 2)[:60]
+    return f"{clean} official screenshot promotional art"
+
+
 def _upload_image(image_bytes: bytes) -> Optional[str]:
     """
     Upload em cascata:
@@ -789,28 +853,148 @@ def generate_post_image_pair(news_item: dict, headline: str = "") -> tuple:
     if not slide1_url:
         return (None, None)
 
-    # 3. Slide 2: mesma imagem sem texto, crop do topo + logo
+    # 3. Slide 2: segunda imagem via Google CSE, mesma composição do slide 1 (sem texto)
     slide2_url = None
     try:
-        from PIL import Image as _Image
-        base2 = _load_image_from_bytes(images[0])
-        if base2:
-            iw, ih = base2.size
-            scale = max(POST_W / iw, POST_H / ih)
-            nw, nh = int(iw * scale), int(ih * scale)
-            base2 = base2.resize((nw, nh), _Image.LANCZOS)
-            x = (nw - POST_W) // 2
-            slide2 = base2.crop((x, 0, x + POST_W, POST_H))
-            slide2 = _paste_logo(slide2)
-            buf2 = io.BytesIO()
-            slide2.convert("RGB").save(buf2, format="JPEG", quality=92, optimize=True)
-            slide2_url = _upload_image(buf2.getvalue())
-            if slide2_url:
-                logger.info(f"Slide 2 (sem texto): {slide2_url[:60]}")
+        query = _build_search_query(news_item)
+        logger.info(f"Buscando 2ª imagem: {query[:60]}")
+        img2_bytes = _search_google_image(query)
+
+        if img2_bytes:
+            base2 = _load_image_from_bytes(img2_bytes)
+            if base2:
+                slide2 = _resize_crop_center(base2, POST_W, POST_H)
+                slide2 = _paste_logo(slide2)
+                buf2 = io.BytesIO()
+                slide2.convert("RGB").save(buf2, format="JPEG", quality=92, optimize=True)
+                slide2_url = _upload_image(buf2.getvalue())
+                if slide2_url:
+                    logger.info(f"Slide 2 (Google CSE): {slide2_url[:60]}")
+        else:
+            logger.info("Google CSE sem resultado — slide 2 não gerado")
     except Exception as e:
         logger.warning(f"Falha ao gerar slide 2: {e}")
 
     return (slide1_url, slide2_url)
+
+
+def _make_context_slide(title: str, description: str) -> "Image":
+    """
+    Slide editorial — fundo escuro, texto de contexto da notícia, logo.
+    Usado como segundo slide do carrossel de feed.
+    """
+    from PIL import Image, ImageDraw, ImageFont
+
+    ASSETS = Path(__file__).parent.parent / "assets"
+
+    def _font(size):
+        bebas = ASSETS / "fonts" / "BebasNeue.ttf"
+        if bebas.exists():
+            try:
+                return ImageFont.truetype(str(bebas), size)
+            except Exception:
+                pass
+        for fp in ["/System/Library/Fonts/Helvetica.ttc",
+                   "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+                   "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"]:
+            try:
+                return ImageFont.truetype(fp, size)
+            except Exception:
+                pass
+        return ImageFont.load_default(size=size)
+
+    img  = Image.new("RGB", (POST_W, POST_H), (15, 15, 15))
+    draw = ImageDraw.Draw(img)
+    W, H = POST_W, POST_H
+    MARGIN = 72
+    MAX_W  = W - MARGIN * 2
+    ORANGE = (255, 107, 0)
+    WHITE  = (255, 255, 255)
+    GRAY   = (180, 180, 180)
+
+    # Barra laranja no topo
+    draw.rectangle([0, 0, W, 10], fill=ORANGE)
+
+    # Tag "CONTEXTO" laranja
+    tag_font = _font(28)
+    tag = "  CONTEXTO  "
+    try:
+        tb = draw.textbbox((0, 0), tag, font=tag_font)
+        tw, th = tb[2] - tb[0], tb[3] - tb[1]
+    except Exception:
+        tw, th = 160, 30
+    draw.rectangle([MARGIN, 60, MARGIN + tw, 60 + th + 16], fill=ORANGE)
+    draw.text((MARGIN, 68), tag, font=tag_font, fill=WHITE)
+
+    # Título em Bebas Neue
+    title_font = _font(68)
+    words = title.upper().split()
+    lines, line = [], ""
+    for word in words:
+        test = (line + " " + word).strip()
+        try:
+            if draw.textbbox((0, 0), test, font=title_font)[2] > MAX_W and line:
+                lines.append(line); line = word
+            else:
+                line = test
+        except Exception:
+            line = test
+    if line:
+        lines.append(line)
+    lines = lines[:3]
+
+    y = 130
+    for ln in lines:
+        draw.text((MARGIN, y), ln, font=title_font, fill=WHITE)
+        try:
+            y += draw.textbbox((0, 0), "A", font=title_font)[3] + 6
+        except Exception:
+            y += 76
+
+    # Separador laranja
+    y += 20
+    draw.rectangle([MARGIN, y, W - MARGIN, y + 3], fill=ORANGE)
+    y_after_sep = y + 28
+
+    # Descrição em texto menor — centralizada verticalmente no espaço restante
+    if description:
+        desc_font = _font(36)
+        # Limitar a ~500 chars, cortar só em espaço
+        desc = description[:500].strip()
+        if len(description) > 500:
+            cut = description[:500].rsplit(" ", 1)[0]
+            desc = cut + "…"
+
+        words2 = desc.split()
+        dlines, dline = [], ""
+        for word in words2:
+            test = (dline + " " + word).strip()
+            try:
+                if draw.textbbox((0, 0), test, font=desc_font)[2] > MAX_W and dline:
+                    dlines.append(dline); dline = word
+                else:
+                    dline = test
+            except Exception:
+                dline = test
+        if dline:
+            dlines.append(dline)
+        dlines = dlines[:7]
+
+        LINE_H = 48
+        block_h = len(dlines) * LINE_H
+        area_top = y_after_sep
+        area_bot = H - LOGO_MARGIN - LOGO_SIZE - 60
+        y = area_top + max(0, (area_bot - area_top - block_h) // 2)
+
+        for ln in dlines:
+            draw.text((MARGIN, y), ln, font=desc_font, fill=GRAY)
+            y += LINE_H
+
+    # Barra laranja no rodapé
+    draw.rectangle([0, H - 10, W, H], fill=ORANGE)
+
+    # Logo
+    return _paste_logo(img)
 
 
 def generate_post_image(news_item: dict, headline: str = "") -> Optional[str]:
