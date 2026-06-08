@@ -841,7 +841,10 @@ def generate_post_image_pair(news_item: dict, headline: str = "") -> tuple:
     if not base1:
         return (None, None)
 
-    slide1 = _resize_crop_center(base1, POST_W, POST_H)
+    # Guardar o crop base para reusar no slide 2
+    base1_raw = _resize_crop_center(base1.copy(), POST_W, POST_H)
+
+    slide1 = base1_raw.copy()
     slide1 = _add_gradient_overlay(slide1)
     slide1 = _add_text_overlay(slide1, display_headline)
     slide1 = _paste_logo(slide1)
@@ -852,29 +855,103 @@ def generate_post_image_pair(news_item: dict, headline: str = "") -> tuple:
     if not slide1_url:
         return (None, None)
 
-    # 3. Slide 2: segunda imagem via Google CSE, mesma composição do slide 1 (sem texto)
+    # 3. Slide 2: CTA — mesma imagem com película escura + "Curtiu? Segue o Morsa"
     slide2_url = None
     try:
-        query = _build_search_query(news_item)
-        logger.info(f"Buscando 2ª imagem: {query[:60]}")
-        img2_bytes = _search_bing_image(query)
-
-        if img2_bytes:
-            base2 = _load_image_from_bytes(img2_bytes)
-            if base2:
-                slide2 = _resize_crop_center(base2, POST_W, POST_H)
-                slide2 = _paste_logo(slide2)
-                buf2 = io.BytesIO()
-                slide2.convert("RGB").save(buf2, format="JPEG", quality=92, optimize=True)
-                slide2_url = _upload_image(buf2.getvalue())
-                if slide2_url:
-                    logger.info(f"Slide 2 (Google CSE): {slide2_url[:60]}")
-        else:
-            logger.info("Google CSE sem resultado — slide 2 não gerado")
+        slide2 = _make_cta_overlay_slide(base1_raw)
+        buf2 = io.BytesIO()
+        slide2.convert("RGB").save(buf2, format="JPEG", quality=92, optimize=True)
+        slide2_url = _upload_image(buf2.getvalue())
+        if slide2_url:
+            logger.info(f"Slide 2 (CTA): {slide2_url[:60]}")
     except Exception as e:
         logger.warning(f"Falha ao gerar slide 2: {e}")
 
     return (slide1_url, slide2_url)
+
+
+def _make_cta_overlay_slide(base_img: "Image") -> "Image":
+    """
+    Slide 2 do carrossel de feed.
+    Mesma imagem do slide 1 com película escura por cima (~85% opacidade)
+    + CTA centralizado + logo no canto inferior direito.
+    """
+    from PIL import Image, ImageDraw
+
+    ASSETS = Path(__file__).parent.parent / "assets"
+    ORANGE = (255, 107, 0)
+    WHITE  = (255, 255, 255)
+    W, H   = POST_W, POST_H
+
+    # Imagem de fundo já cropada
+    img = base_img.copy().convert("RGBA")
+
+    # Película escura — 85% opacidade
+    overlay = Image.new("RGBA", (W, H), (0, 0, 0, int(255 * 0.85)))
+    img = Image.alpha_composite(img, overlay)
+
+    draw = ImageDraw.Draw(img)
+
+    def _font(size):
+        bebas = ASSETS / "fonts" / "BebasNeue.ttf"
+        if bebas.exists():
+            try:
+                from PIL import ImageFont
+                return ImageFont.truetype(str(bebas), size)
+            except Exception:
+                pass
+        from PIL import ImageFont
+        for fp in ["/System/Library/Fonts/Helvetica.ttc",
+                   "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"]:
+            try:
+                return ImageFont.truetype(fp, size)
+            except Exception:
+                pass
+        return ImageFont.load_default(size=size)
+
+    # Linha laranja no topo
+    draw.rectangle([0, 0, W, 10], fill=ORANGE)
+
+    # Texto CTA — centralizado verticalmente
+    lines = [
+        ("CURTIU?", 110),
+        ("SEGUE O MORSA", 72),
+        ("E COMPARTILHA", 72),
+        ("COM UM AMIGO!", 72),
+    ]
+
+    # Calcular altura total do bloco
+    total_h = 0
+    line_heights = []
+    for text, size in lines:
+        f = _font(size)
+        try:
+            lh = draw.textbbox((0, 0), text, font=f)[3]
+        except Exception:
+            lh = size
+        line_heights.append((text, f, lh))
+        total_h += lh + 12
+    total_h -= 12
+
+    y = (H - total_h) // 2
+
+    for text, f, lh in line_heights:
+        try:
+            tw = draw.textbbox((0, 0), text, font=f)[2]
+        except Exception:
+            tw = W // 2
+        x = (W - tw) // 2
+        # Sombra
+        draw.text((x + 3, y + 3), text, font=f, fill=(0, 0, 0, 180))
+        # Texto — primeira linha em laranja, resto branco
+        color = ORANGE if text == "CURTIU?" else WHITE
+        draw.text((x, y), text, font=f, fill=color)
+        y += lh + 12
+
+    # Linha laranja no rodapé
+    draw.rectangle([0, H - 10, W, H], fill=ORANGE)
+
+    return _paste_logo(img)
 
 
 def _make_context_slide(title: str, description: str) -> "Image":
