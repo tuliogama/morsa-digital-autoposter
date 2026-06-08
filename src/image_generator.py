@@ -642,46 +642,45 @@ def _upload_to_catbox(image_bytes: bytes) -> Optional[str]:
     return None
 
 
-def _search_google_image(query: str) -> Optional[bytes]:
+def _search_bing_image(query: str) -> Optional[bytes]:
     """
-    Busca uma imagem relevante via Google Custom Search API.
-    Requer GOOGLE_CSE_KEY e GOOGLE_CSE_ID no ambiente.
+    Busca uma imagem relevante via Bing Image Search API v7.
+    Requer BING_SEARCH_KEY no ambiente.
+    Grátis: 1.000 queries/mês via Azure.
     Retorna bytes da primeira imagem válida encontrada, ou None.
     """
-    api_key = os.environ.get("GOOGLE_CSE_KEY", "")
-    cse_id  = os.environ.get("GOOGLE_CSE_ID", "")
-    if not api_key or not cse_id:
-        logger.debug("GOOGLE_CSE_KEY ou GOOGLE_CSE_ID não configurados")
+    api_key = os.environ.get("BING_SEARCH_KEY", "")
+    if not api_key:
+        logger.debug("BING_SEARCH_KEY não configurado")
         return None
 
     try:
         params = urllib.parse.urlencode({
-            "key": api_key,
-            "cx": cse_id,
             "q": query,
-            "searchType": "image",
-            "num": "5",
-            "imgSize": "large",
-            "imgType": "photo",
-            "safe": "active",
+            "count": "5",
+            "imageType": "Photo",
+            "size": "Large",
+            "safeSearch": "Moderate",
         })
-        url = f"https://www.googleapis.com/customsearch/v1?{params}"
-        req = urllib.request.Request(url, headers={"User-Agent": "MorsaDigital/1.0"})
+        url = f"https://api.bing.microsoft.com/v7.0/images/search?{params}"
+        req = urllib.request.Request(url, headers={
+            "Ocp-Apim-Subscription-Key": api_key,
+            "User-Agent": "MorsaDigital/1.0",
+        })
         with urllib.request.urlopen(req, timeout=10) as resp:
             data = json.loads(resp.read())
 
-        items = data.get("items", [])
-        for item in items:
-            img_url = item.get("link", "")
+        for item in data.get("value", []):
+            img_url = item.get("contentUrl", "")
             if not img_url:
                 continue
             img_bytes = _fetch_image_bytes(img_url)
             if img_bytes and len(img_bytes) > 30_000:
-                logger.info(f"Google CSE imagem: {img_url[:70]}")
+                logger.info(f"Bing imagem: {img_url[:70]}")
                 return img_bytes
 
     except Exception as e:
-        logger.warning(f"Google CSE falhou: {e}")
+        logger.warning(f"Bing Image Search falhou: {e}")
 
     return None
 
@@ -858,7 +857,7 @@ def generate_post_image_pair(news_item: dict, headline: str = "") -> tuple:
     try:
         query = _build_search_query(news_item)
         logger.info(f"Buscando 2ª imagem: {query[:60]}")
-        img2_bytes = _search_google_image(query)
+        img2_bytes = _search_bing_image(query)
 
         if img2_bytes:
             base2 = _load_image_from_bytes(img2_bytes)
