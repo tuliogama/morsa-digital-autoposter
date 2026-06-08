@@ -519,6 +519,30 @@ def make_cta_slide(cta_text: str = "Salva pra não esquecer 🔖",
 
 
 # ---------------------------------------------------------------------------
+# Slide de logo (usado nos posts de feed como segundo slide)
+# ---------------------------------------------------------------------------
+
+def make_logo_slide() -> object:
+    """
+    Slide de encerramento para posts de feed.
+    Fundo escuro sólido + logo no canto inferior direito (mesma posição do feed).
+    Sem texto — identidade visual limpa.
+    """
+    from PIL import Image
+    img = Image.new("RGB", (POST_W, POST_H), COLOR_DARK)
+    img = _paste_logo(img)
+    return img.convert("RGB")
+
+
+def make_logo_slide_bytes() -> bytes:
+    """Retorna o slide de logo como bytes JPEG, pronto para upload."""
+    img = make_logo_slide()
+    buf = io.BytesIO()
+    img.save(buf, format="JPEG", quality=92)
+    return buf.getvalue()
+
+
+# ---------------------------------------------------------------------------
 # Geração completa
 # ---------------------------------------------------------------------------
 

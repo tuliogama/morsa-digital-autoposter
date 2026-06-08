@@ -163,14 +163,20 @@ def _get_broadcast_channel_id(ig_user_id: str, token: str) -> Optional[str]:
 
 
 def publish(post: dict) -> dict:
-    """Publica imagem com legenda no Instagram. Lança NoImageError se sem imagem real."""
+    """
+    Publica no Instagram como carrossel de 2 slides:
+      Slide 1: imagem com título, gradiente e logo (formato feed padrão)
+      Slide 2: fundo escuro + logo no canto inferior direito (assinatura)
+
+    Lança NoImageError se não conseguir gerar a imagem principal.
+    """
     ig_user_id = os.environ["IG_USER_ID"]
     token = os.environ["FB_ACCESS_TOKEN"]
 
     caption = post["content"]
     news_item = post.get("news_item", {})
 
-    # 1. Gerar imagem real com headline gerado pelo CMO
+    # 1. Gerar imagem principal (slide 1)
     image_url = None
     image_headline = post.get("image_headline", news_item.get("title", ""))
     try:
@@ -182,32 +188,70 @@ def publish(post: dict) -> dict:
     if not image_url:
         raise NoImageError(f"Sem imagem real para: {news_item.get('title', '')[:60]}")
 
-    logger.info(f"Imagem para Instagram: {image_url}")
+    logger.info(f"Slide 1 (feed): {image_url}")
 
-    # 2. Criar container e publicar no Feed
-    container_id = _create_container(ig_user_id, token, caption, image_url)
-    logger.info(f"Container IG criado: {container_id} — aguardando processamento...")
+    # 2. Gerar e fazer upload do slide de logo (slide 2)
+    logo_url = None
+    try:
+        from carousel_generator import make_logo_slide_bytes
+        from image_generator import _upload_image
+        logo_bytes = make_logo_slide_bytes()
+        logo_url = _upload_image(logo_bytes)
+        logger.info(f"Slide 2 (logo): {logo_url}")
+    except Exception as e:
+        logger.warning(f"Falha ao gerar slide de logo: {e} — publicando como imagem simples")
+
+    # 3. Publicar como carrossel (2 slides) ou fallback para imagem simples
+    if logo_url:
+        # Criar child containers
+        slide_urls = [image_url, logo_url]
+        child_ids = []
+        for url in slide_urls:
+            result = _post(f"{GRAPH_URL}/{ig_user_id}/media", {
+                "image_url": url,
+                "is_carousel_item": "true",
+                "access_token": token,
+            })
+            child_ids.append(result["id"])
+            time.sleep(2)
+
+        logger.info(f"Child containers criados: {child_ids}")
+
+        # Criar container pai CAROUSEL
+        carousel_result = _post(f"{GRAPH_URL}/{ig_user_id}/media", {
+            "media_type": "CAROUSEL",
+            "children": ",".join(child_ids),
+            "caption": caption,
+            "like_and_view_counts_disabled": "true",
+            "access_token": token,
+        })
+        container_id = carousel_result["id"]
+        logger.info(f"Container CAROUSEL criado: {container_id}")
+    else:
+        # Fallback: imagem simples se o slide de logo falhou
+        container_id = _create_container(ig_user_id, token, caption, image_url)
+        logger.info(f"Container IMAGE criado (fallback): {container_id}")
+
     time.sleep(8)
 
+    # 4. Publicar
     media_id = _publish_container(ig_user_id, token, container_id)
     logger.info(f"Instagram feed publicado: {media_id}")
 
-    # 3. Desabilitar contagem de likes (requer instagram_manage_comments)
+    # 5. Desabilitar contagem de likes
     time.sleep(3)
     if _disable_like_count(media_id, token):
-        logger.info("Contagem de likes desabilitada via update pós-publicação")
-    else:
-        logger.info("like_count_disabled enviado na criação (update requer instagram_manage_comments)")
+        logger.info("Contagem de likes desabilitada")
 
-    # 4. Compartilhar o post do feed nos Stories
+    # 6. Compartilhar nos Stories
     time.sleep(3)
     _post_to_stories(ig_user_id, token, media_id)
 
-    # 5. Compartilhar na comunidade Clã do Morsa
+    # 7. Compartilhar na comunidade Clã do Morsa
     time.sleep(2)
     _post_to_broadcast_channel(token, media_id)
 
-    # 6. Registrar no log persistente
+    # 8. Registrar no log persistente
     try:
         from posts_log import record_post
         record_post(media_id, "instagram", news_item, caption, image_url=image_url)
