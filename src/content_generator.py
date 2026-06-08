@@ -30,7 +30,7 @@ FORMATO OBRIGATÓRIO (use exatamente esta estrutura com linhas em branco entre b
 
 [linha em branco]
 
-[CTA — 1 linha. Varie entre: pergunta direta ao fã / "salva pra não esquecer" / "marca quem precisa ver isso". Nunca o mesmo em dois posts seguidos.]
+[CTA — 1 linha. OBRIGATÓRIO variar entre: pergunta que divide opiniões ("Você acha que vai superar o original?") / confronto de escolha ("Time Iron Man ou Team Cap?") / "marca aquele amigo que precisa ver isso" / "salva pra não esquecer". Posts com pergunta polêmica geram 5x mais comentários. Nunca o mesmo em dois posts seguidos.]
 
 [linha em branco]
 
@@ -243,20 +243,26 @@ def select_best_news(news_list: list, count: int = 6, brief: dict = None) -> lis
 
         result = _call_groq(
             "Você é o CMO do @morsadigital — canal de cultura pop/nerd para audiência brasileira de 27k seguidores.\n\n"
-            "DADOS REAIS DE PERFORMANCE (últimos 50 posts analisados):\n"
-            "🥇 Marvel/DC/Super-heróis: 17,6 likes avg — PRIORIDADE MÁXIMA\n"
-            "🥈 Filmes muito aguardados (Pixar, blockbusters): 10,8 avg\n"
-            "🥉 Games com grande base de fãs (God of War, Zelda, Elden Ring, GTA, Call of Duty): 10,0 avg\n"
-            "⚡ Anime mainstream (One Piece, Jujutsu Kaisen, Demon Slayer, Dragon Ball, Bleach): bom potencial\n"
-            "⚠️ Anime nichê desconhecido: baixíssimo engajamento — EVITAR\n"
-            "❌ Tech/gadgets (celulares, laptops, IA): off-brand, engajamento zero\n"
-            "❌ Séries antigas/niche sem base no Brasil (Stargate, etc): EVITAR\n"
-            "❌ Promoções e ofertas de produtos: JAMAIS\n\n"
+            "DADOS REAIS DE PERFORMANCE (análise de 200 posts, jun/2026):\n"
+            "🥇 DC (Batman, Superman, Flash): 144 avg likes — PRIORIDADE MÁXIMA\n"
+            "🥇 Marvel/Avengers/Spider-Man: 46 avg likes — PRIORIDADE MÁXIMA\n"
+            "🥈 Filmes/animações muito aguardados (Pixar, Disney, blockbusters): bom potencial\n"
+            "🥈 Conteúdo que provoca DEBATE e OPINIÃO (versus, rankings, polêmicas): alto comentário\n"
+            "🥉 Star Wars: 26 avg\n"
+            "🥉 Séries com grande base BR (Stranger Things, The Boys): 19 avg\n"
+            "⚠️ Games APENAS os maiores: God of War, Zelda, GTA, Elden Ring, Call of Duty, Final Fantasy\n"
+            "⚠️ Anime APENAS mainstream: One Piece, Jujutsu Kaisen, Demon Slayer, Dragon Ball, Bleach\n"
+            "❌ Games internacionais nichê (Thief, indie, jogos sem fandom BR): 3-4 likes — NUNCA\n"
+            "❌ Tech/gadgets/IA: off-brand, engajamento zero — NUNCA\n"
+            "❌ Anime desconhecido sem base no Brasil: NUNCA\n"
+            "❌ Séries antigas sem hype atual (Stargate, Battlestar): NUNCA\n"
+            "❌ Promoções, ofertas, produtos: JAMAIS\n\n"
             "CRITÉRIOS DE SELEÇÃO (em ordem de peso):\n"
-            "1. Reconhecimento da franquia no Brasil (quanto maior a base de fãs BR, melhor)\n"
-            "2. Novidade real (trailer, confirmação, polêmica, revelação — não apenas rumor vago)\n"
-            "3. Potencial de comentário e debate na comunidade nerd BR\n"
-            "4. Variedade de categorias no conjunto selecionado\n\n"
+            "1. É Marvel ou DC? → seleção quase automática\n"
+            "2. Tem potencial de debate/opinião no fandom BR? (versus, polêmica, surpresa, revelação)\n"
+            "3. A franquia tem base consolidada no Brasil (>500k fãs BR estimados)?\n"
+            "4. É novidade real (trailer, confirmação, data, cancelamento) — não rumor vago?\n"
+            "5. Variedade no conjunto (não 4 posts de games seguidos)\n\n"
             "Responda APENAS com os números separados por vírgula. Ex: 3,1,7,2",
             f"Estratégia do dia: {strategy}\n\nNotícias disponíveis:\n{titles}\n\n"
             f"Selecione os {count} melhores índices em ordem de prioridade (do mais ao menos impactante):",

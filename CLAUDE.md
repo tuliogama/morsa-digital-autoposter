@@ -101,21 +101,30 @@ Observar: formatos que geram muito engajamento neles para adaptar (nunca copiar)
 
 ## O que funciona — dados reais (análise jun/2026, 50 posts, 27k seguidores)
 
-### Performance por categoria
-| Categoria | Avg likes | vs média |
+### Performance por categoria (análise 200 posts, jun/2026)
+| Categoria | Avg likes | Notas |
 |---|---|---|
-| Marvel/DC/Super-heróis | 17,6 | **+75%** |
-| Filmes blockbuster | 10,8 | +6% |
-| Games grandes (GoW, Zelda, GTA, CoD) | 10,0 | ~média |
-| Séries streaming | 7,0 | -31% |
-| Anime mainstream (OP, JJK, DBS) | bom potencial | — |
-| Anime nichê | 4,1 | **-60%** |
-| Tech/gadgets | 1–2 | **off-brand** |
+| DC (Batman, Superman) | 144 | **PRIORIDADE MÁXIMA** |
+| Marvel/Avengers/Spider-Man | 46 | **PRIORIDADE MÁXIMA** |
+| Filmes blockbuster (Pixar, Disney) | 32 | bom potencial |
+| Star Wars | 26 | consistente |
+| Séries (Stranger Things, The Boys) | 19 | só grandes nomes |
+| Games grandes (GoW, Zelda, GTA, CoD, FF) | 14 | só franquias top |
+| Anime mainstream (OP, JJK, DBS) | 13 | só os grandes |
+| Games nichê internacional | 3–4 | **NUNCA postar** |
+| Tech/gadgets/IA | 1–2 | **off-brand, NUNCA** |
 
-### Horários que mais engajam (BRT)
-- **08h–10h**: 18–21 likes avg — MELHOR janela
-- 12h–15h: ~10 likes avg
-- 19h–21h: 6–8 likes avg — mais fraco
+### Horários que mais engajam (BRT) — análise real 200 posts
+- **18h**: 243 avg likes — **MELHOR JANELA**
+- **21h**: 116 avg likes — **2ª MELHOR**
+- 10h: 62 avg likes
+- 09h: 46 avg likes
+- 08h, 12h–15h: abaixo de 20 avg — evitar
+
+### Tipos de post
+- **VIDEO/Reel**: 5.589 avg likes — dominante absoluto
+- CAROUSEL: 36 avg likes — 3x melhor que imagem
+- IMAGE: 13 avg likes — formato mais fraco
 
 ### Captions que engajam
 - Hook: **afirmação direta com o nome da franquia** — o fã precisa ver o personagem/franquia no 1º segundo
