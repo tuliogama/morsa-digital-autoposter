@@ -909,49 +909,59 @@ def _make_cta_overlay_slide(base_img: "Image") -> "Image":
                 pass
         return ImageFont.load_default(size=size)
 
-    # Linha laranja no topo
-    draw.rectangle([0, 0, W, 10], fill=ORANGE)
-
     # Texto CTA — centralizado verticalmente
     lines = [
-        ("CURTIU?", 110),
-        ("SEGUE O MORSA", 72),
-        ("E COMPARTILHA", 72),
-        ("COM UM AMIGO!", 72),
+        ("CURTIU?", 110, ORANGE),
+        ("SEGUE O MORSA", 72, WHITE),
+        ("E COMPARTILHA", 72, WHITE),
+        ("COM UM AMIGO", 72, WHITE),
     ]
 
-    # Calcular altura total do bloco
-    total_h = 0
+    # Calcular altura total do bloco de texto
     line_heights = []
-    for text, size in lines:
+    total_h = 0
+    for text, size, color in lines:
         f = _font(size)
         try:
             lh = draw.textbbox((0, 0), text, font=f)[3]
         except Exception:
             lh = size
-        line_heights.append((text, f, lh))
+        line_heights.append((text, f, lh, color))
         total_h += lh + 12
     total_h -= 12
 
-    y = (H - total_h) // 2
+    # Logo centralizada abaixo do texto
+    logo_gap  = 50
+    logo_size = 180  # tamanho que a logo vai ocupar
+    block_total = total_h + logo_gap + logo_size
+    y = (H - block_total) // 2
 
-    for text, f, lh in line_heights:
+    for text, f, lh, color in line_heights:
         try:
             tw = draw.textbbox((0, 0), text, font=f)[2]
         except Exception:
             tw = W // 2
         x = (W - tw) // 2
-        # Sombra
         draw.text((x + 3, y + 3), text, font=f, fill=(0, 0, 0, 180))
-        # Texto — primeira linha em laranja, resto branco
-        color = ORANGE if text == "CURTIU?" else WHITE
         draw.text((x, y), text, font=f, fill=color)
         y += lh + 12
 
-    # Linha laranja no rodapé
-    draw.rectangle([0, H - 10, W, H], fill=ORANGE)
+    # Cola a logo redondinha centralizada abaixo do texto (com halo igual ao _paste_logo)
+    try:
+        logo_round = _round_logo(logo_size)
+        halo_size = logo_size + 16
+        halo = Image.new("RGBA", (halo_size, halo_size), (0, 0, 0, 0))
+        ImageDraw.Draw(halo).ellipse((0, 0, halo_size - 1, halo_size - 1), fill=(0, 0, 0, 120))
+        lx = (W - logo_size) // 2
+        ly = y + logo_gap
+        halo_x = lx - (halo_size - logo_size) // 2
+        halo_y = ly - (halo_size - logo_size) // 2
+        img.paste(halo, (halo_x, halo_y), halo)
+        img.paste(logo_round, (lx, ly), logo_round)
+    except Exception:
+        pass
 
-    return _paste_logo(img)
+    return img.convert("RGB")
 
 
 def _make_context_slide(title: str, description: str) -> "Image":
