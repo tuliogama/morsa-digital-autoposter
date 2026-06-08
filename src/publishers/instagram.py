@@ -237,9 +237,8 @@ def publish(post: dict) -> dict:
     if _disable_like_count(media_id, token):
         logger.info("Contagem de likes desabilitada")
 
-    # 6. Compartilhar nos Stories (imagem do slide 1)
-    time.sleep(3)
-    _post_to_stories(ig_user_id, token, media_id, image_url=image_url)
+    # 6. Story — desabilitado: Graph API não suporta reshare de post como card
+    # Fazer manualmente no app após cada publicação
 
     # 7. Compartilhar na comunidade Clã do Morsa
     time.sleep(2)
@@ -332,9 +331,7 @@ def publish_carousel(carousel_data: dict, caption: str) -> dict:
     media_id = _publish_container(ig_user_id, token, carousel_container_id)
     logger.info(f"Carrossel publicado: {media_id}")
 
-    # Stories + comunidade (usa primeiro slide como imagem do Story)
-    time.sleep(3)
-    _post_to_stories(ig_user_id, token, media_id, image_url=slide_urls[0] if slide_urls else None)
+    # Story — desabilitado: Graph API não suporta reshare de post como card
     time.sleep(2)
     _post_to_broadcast_channel(token, media_id)
 
