@@ -96,26 +96,28 @@ def _disable_like_count(media_id: str, token: str) -> bool:
         return False
 
 
-def _post_to_stories(ig_user_id: str, token: str, feed_media_id: str) -> Optional[str]:
+def _post_to_stories(ig_user_id: str, token: str, feed_media_id: str, image_url: str = None) -> Optional[str]:
     """
-    Compartilha o post do feed nos Stories (card do feed, não imagem avulsa).
-    Requer instagram_content_publish (já temos).
+    Posta o Story como imagem direta (slide 1 do feed).
+    A Graph API não suporta reshare de feed via source_type=FEED_MEDIA.
     """
+    if not image_url:
+        logger.warning("Story ignorado: sem image_url para o Story")
+        return None
     try:
         container_id = _post(f"{GRAPH_URL}/{ig_user_id}/media", {
             "media_type": "STORIES",
-            "source_type": "FEED_MEDIA",
-            "source_media_id": feed_media_id,
+            "image_url": image_url,
             "access_token": token,
         })["id"]
 
         time.sleep(5)
 
         story_id = _publish_container(ig_user_id, token, container_id)
-        logger.info(f"Story (reshare do feed) publicado: {story_id}")
+        logger.info(f"Story publicado com imagem do feed: {story_id}")
         return story_id
     except Exception as e:
-        logger.warning(f"Falha ao compartilhar feed post no Story: {e}")
+        logger.warning(f"Falha ao publicar Story: {e}")
         return None
 
 
@@ -235,9 +237,9 @@ def publish(post: dict) -> dict:
     if _disable_like_count(media_id, token):
         logger.info("Contagem de likes desabilitada")
 
-    # 6. Compartilhar nos Stories
+    # 6. Compartilhar nos Stories (imagem do slide 1)
     time.sleep(3)
-    _post_to_stories(ig_user_id, token, media_id)
+    _post_to_stories(ig_user_id, token, media_id, image_url=image_url)
 
     # 7. Compartilhar na comunidade Clã do Morsa
     time.sleep(2)
@@ -330,9 +332,9 @@ def publish_carousel(carousel_data: dict, caption: str) -> dict:
     media_id = _publish_container(ig_user_id, token, carousel_container_id)
     logger.info(f"Carrossel publicado: {media_id}")
 
-    # Stories + comunidade
+    # Stories + comunidade (usa primeiro slide como imagem do Story)
     time.sleep(3)
-    _post_to_stories(ig_user_id, token, media_id)
+    _post_to_stories(ig_user_id, token, media_id, image_url=slide_urls[0] if slide_urls else None)
     time.sleep(2)
     _post_to_broadcast_channel(token, media_id)
 
