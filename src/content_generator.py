@@ -55,6 +55,8 @@ REGRAS INEGOCIÁVEIS:
 - NUNCA truncar — termine cada bloco de forma completa
 - O HOOK deve ser uma afirmação direta ou opinião ousada — NUNCA pergunta genérica
 - Mencione o nome da franquia/personagem no hook — é o que faz o fã parar o scroll
+- NUNCA mencione vídeo, trailer ou conteúdo para assistir — o post é apenas imagem, não há vídeo anexado
+- NUNCA use CTAs como "assista", "veja o vídeo", "confira o trailer" — direcione para comentar, salvar ou marcar alguém
 
 DADOS DE PERFORMANCE (use para calibrar o tom):
 - Posts Marvel/DC com afirmação ousada sobre a franquia: +75% acima da média
