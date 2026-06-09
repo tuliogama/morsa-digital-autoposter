@@ -405,9 +405,42 @@ def run_carousel(carousel_type: str = "top_n", news_count: int = 5) -> dict:
     return result
 
 
+def _load_backlog() -> list:
+    """Carrega o backlog de trailers curados."""
+    import json
+    backlog_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "trailer_backlog.json")
+    try:
+        with open(backlog_path, "r", encoding="utf-8") as f:
+            items = json.load(f)
+        return [i for i in items if not i.get("postado", False)]
+    except Exception as e:
+        logger.warning(f"Falha ao carregar backlog: {e}")
+        return []
+
+
+def _mark_backlog_posted(item_id: str):
+    """Marca um item do backlog como postado."""
+    import json
+    backlog_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "trailer_backlog.json")
+    try:
+        with open(backlog_path, "r", encoding="utf-8") as f:
+            items = json.load(f)
+        for item in items:
+            if item.get("id") == item_id:
+                item["postado"] = True
+        with open(backlog_path, "w", encoding="utf-8") as f:
+            json.dump(items, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        logger.warning(f"Falha ao marcar backlog: {e}")
+
+
 def run_reel(news_count: int = 10) -> dict:
     """
-    Pipeline completo: busca notícias com trailer → baixa do YouTube → publica como Reel.
+    Pipeline completo de Reels de trailers.
+
+    Prioridade:
+      1. Backlog curado (data/trailer_backlog.json) — filmes com contexto preciso
+      2. RSS feeds — trailers detectados automaticamente
 
     Lógica de posts:
       - Tem versão vertical nativa  → posta horizontal + vertical (2 Reels)
@@ -420,38 +453,65 @@ def run_reel(news_count: int = 10) -> dict:
 
     logger.info("Iniciando reel de trailer")
 
-    # 1. Buscar notícias e filtrar as que têm trailer
-    news = fetch_all_news(limit=40)
-    if not news:
-        raise ValueError("Sem notícias")
+    # Monta lista de candidatos: backlog primeiro, depois RSS
+    candidates = []
 
-    best = select_best_news(news, count=news_count)
-    trailer_news = [n for n in best if is_trailer_news(n)]
+    # 1. Backlog curado (prioridade 1 primeiro)
+    backlog = sorted(_load_backlog(), key=lambda x: x.get("prioridade", 99))
+    for item in backlog:
+        candidates.append({
+            "title":    item["titulo"],
+            "source":   "backlog",
+            "url":      "",
+            "description": item.get("contexto", ""),
+            # Campos extras para legenda
+            "contexto": item.get("contexto", ""),
+            "elenco":   item.get("elenco", ""),
+            "ano":      item.get("ano", ""),
+            "_backlog_id":    item["id"],
+            "_query_youtube": item.get("query_youtube", item["titulo"] + " trailer dublado"),
+        })
 
-    if not trailer_news:
-        raise ValueError("Nenhuma notícia de trailer encontrada")
+    # 2. RSS — notícias com trailer detectado automaticamente
+    try:
+        news = fetch_all_news(limit=40)
+        best = select_best_news(news, count=news_count)
+        for n in best:
+            if is_trailer_news(n):
+                candidates.append(n)
+    except Exception as e:
+        logger.warning(f"Falha ao buscar RSS: {e}")
 
-    logger.info(f"{len(trailer_news)} notícias com trailer candidatas")
+    if not candidates:
+        raise ValueError("Sem candidatos para Reel")
 
-    # 2. Tentar cada notícia até conseguir baixar o vídeo
-    for news_item in trailer_news:
+    logger.info(f"{len(candidates)} candidatos (backlog + RSS)")
+
+    # 3. Processa candidatos em ordem até publicar 1
+    for news_item in candidates:
         title = news_item.get("title", "")
 
-        if is_duplicate(title, platform="instagram_reel", lookback_days=7):
-            logger.info(f"Trailer já publicado recentemente: {title[:60]}")
+        if is_duplicate(title, platform="instagram_reel", lookback_days=14):
+            logger.info(f"Já postado recentemente: {title[:60]}")
             continue
 
-        logger.info(f"Processando trailer: {title[:60]}")
+        logger.info(f"Processando: {title[:60]}")
+
+        # Usa query customizada do backlog se disponível
+        if news_item.get("_query_youtube"):
+            news_item["_search_query_override"] = news_item["_query_youtube"]
+
         video_paths = download_and_process(news_item)
 
         if not video_paths:
-            logger.warning(f"Não conseguiu baixar trailer para: {title[:60]}")
+            logger.warning(f"Não conseguiu baixar: {title[:60]}")
             continue
 
-        # 3. Gerar legenda
+        # Gera legenda com contexto real
         caption = generate_trailer_caption(news_item)
+        logger.info(f"Legenda gerada ({len(caption)} chars)")
 
-        # 4. Publicar cada versão
+        # Publica cada versão (horizontal + vertical se existir)
         results = []
         for i, video_path in enumerate(video_paths):
             fmt = "vertical" if i > 0 else "horizontal"
@@ -471,9 +531,12 @@ def run_reel(news_count: int = 10) -> dict:
                 logger.error(f"Erro ao publicar Reel {fmt}: {e}")
 
         if results:
+            # Marca no backlog se veio de lá
+            if news_item.get("_backlog_id"):
+                _mark_backlog_posted(news_item["_backlog_id"])
             return results[0]
 
-    raise ValueError("Não foi possível publicar nenhum Reel de trailer")
+    raise ValueError("Não foi possível publicar nenhum Reel")
 
 
 if __name__ == "__main__":

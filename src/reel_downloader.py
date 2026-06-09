@@ -98,9 +98,10 @@ def _is_official(channel: str) -> bool:
 
 
 def _build_query(news_item: dict) -> str:
-    """Monta query de busca priorando PT-BR."""
+    """Monta query de busca priorizando PT-BR. Usa override do backlog se disponível."""
+    if news_item.get("_search_query_override"):
+        return news_item["_search_query_override"]
     title = news_item.get("title", "")
-    # Remove ruídos comuns de títulos RSS
     for noise in [" - IGN", " | IGN", " - Kotaku", " - GameSpot"]:
         title = title.replace(noise, "")
     return f"{title} trailer dublado português brasileiro"

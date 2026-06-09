@@ -257,15 +257,27 @@ def generate_trailer_caption(news_item: dict) -> str:
     """
     Gera legenda específica para Reel de trailer.
     Tom: reação de fã + contexto + pergunta que gera debate.
+    Usa contexto real do filme se disponível no news_item.
     """
     import re
-    title = news_item.get("title", "")
+    title   = news_item.get("title", "")
+    context = news_item.get("contexto", "")
+    elenco  = news_item.get("elenco", "")
+    ano     = news_item.get("ano", "")
+
+    context_block = ""
+    if context:
+        context_block = f"\nContexto real do filme (USE ESSES FATOS, não invente outros):\n{context}"
+    if elenco:
+        context_block += f"\nElenco: {elenco}"
+    if ano:
+        context_block += f"\nAno: {ano}"
 
     user_msg = (
-        f"Escreva a legenda para o Reel do trailer desta notícia.\n\n"
-        f"Notícia: {title}\n\n"
-        f"Lembre: o trailer já está no vídeo do Reel. A legenda deve gerar reação e debate, "
-        f"não descrever o que se vê. Siga a estrutura do sistema."
+        f"Escreva a legenda para o Reel do trailer: {title}\n"
+        f"{context_block}\n\n"
+        f"Lembre: o trailer já está no vídeo. A legenda deve gerar reação e debate, "
+        f"não descrever o que se vê. Use APENAS os fatos fornecidos acima, nunca invente."
     )
 
     for attempt in range(2):
@@ -278,7 +290,6 @@ def generate_trailer_caption(news_item: dict) -> str:
         except Exception as e:
             logger.warning(f"Groq trailer legenda falhou tentativa {attempt+1}: {e}")
 
-    # Fallback simples
     return f"{title}\n\nO trailer chegou e a internet já está dividida.\n\nVocê tá no hype ou ainda na dúvida?\n\n#Trailer #Cinema #CulturaGeek"
 
 
