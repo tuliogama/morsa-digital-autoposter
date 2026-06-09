@@ -64,6 +64,35 @@ DADOS DE PERFORMANCE (use para calibrar o tom):
 - Fã brasileiro responde bem a: comparações entre franquias, polêmicas da indústria, spoilers controlados
 """
 
+REEL_TRAILER_SYSTEM = """Você é o social media sênior da Morsa Digital — canal brasileiro de cultura pop/nerd/geek com 27k seguidores.
+
+Você escreve legendas para Reels de trailers oficiais. O vídeo já está postado, a legenda deve COMPLEMENTAR — não descrever o que se vê.
+
+ESTRUTURA OBRIGATÓRIA:
+
+[REAÇÃO — 1 linha. Como um fã reagiria ao ver esse trailer pela primeira vez. Emoção real, sem spoilers óbvios. Sem emoji no início.]
+
+[linha em branco]
+
+[CONTEXTO — 2 a 3 linhas. O que torna esse filme/série especial. Por que a galera BR tá ansiosa. Dado concreto ou fato que eleva o hype.]
+
+[linha em branco]
+
+[HYPE/DEBATE — 1 linha. Pergunta que DIVIDE opiniões ou gera debate real. Ex: "Vai superar o original ou vai decepcionar?" / "Você tá no hype ou ainda na dúvida?" / "Qual cena te deixou mais ansioso?"]
+
+[linha em branco]
+
+#hashtag1 #hashtag2 #hashtag3 #hashtag4 #hashtag5 #hashtag6
+
+REGRAS:
+- Nunca descreva cenas específicas do trailer (quem não assistiu ainda vai ver no Reel)
+- Mencione o nome da franquia/personagem na primeira linha
+- Hashtags específicas: nome do filme + franquia + atores principais + #Trailer + #Cinema
+- Tom: fã que assistiu e PRECISA falar sobre isso com alguém
+- NUNCA use "assista", "confira o trailer acima" — eles já estão vendo
+- Máximo 2200 caracteres
+"""
+
 PLATFORM_PROMPTS = {
     "instagram": {
         "max_chars": 2200,
@@ -218,6 +247,35 @@ def generate_post(news_item: dict, platform: str, brief: dict = None) -> dict:
         "news_item":      news_item,
         "image_headline": image_headline,
     }
+
+
+def generate_trailer_caption(news_item: dict) -> str:
+    """
+    Gera legenda específica para Reel de trailer.
+    Tom: reação de fã + contexto + pergunta que gera debate.
+    """
+    import re
+    title = news_item.get("title", "")
+
+    user_msg = (
+        f"Escreva a legenda para o Reel do trailer desta notícia.\n\n"
+        f"Notícia: {title}\n\n"
+        f"Lembre: o trailer já está no vídeo do Reel. A legenda deve gerar reação e debate, "
+        f"não descrever o que se vê. Siga a estrutura do sistema."
+    )
+
+    for attempt in range(2):
+        try:
+            raw = _call_groq(REEL_TRAILER_SYSTEM, user_msg, max_tokens=600)
+            raw = re.sub(r'\n[ \t]*\n+', '\n\n', raw).strip()
+            if len(raw) >= 100:
+                logger.info(f"Legenda de trailer gerada ({len(raw)} chars)")
+                return raw
+        except Exception as e:
+            logger.warning(f"Groq trailer legenda falhou tentativa {attempt+1}: {e}")
+
+    # Fallback simples
+    return f"{title}\n\nO trailer chegou e a internet já está dividida.\n\nVocê tá no hype ou ainda na dúvida?\n\n#Trailer #Cinema #CulturaGeek"
 
 
 def select_best_news(news_list: list, count: int = 6, brief: dict = None) -> list:

@@ -405,37 +405,75 @@ def run_carousel(carousel_type: str = "top_n", news_count: int = 5) -> dict:
     return result
 
 
-def run_reel(news_count: int = 4) -> dict:
+def run_reel(news_count: int = 10) -> dict:
     """
-    Pipeline completo: busca notícias → gera reel → publica.
-    Chamado pelo GitHub Actions (reel job).
+    Pipeline completo: busca notícias com trailer → baixa do YouTube → publica como Reel.
+
+    Lógica de posts:
+      - Tem versão vertical nativa  → posta horizontal + vertical (2 Reels)
+      - Só tem horizontal           → posta só horizontal (1 Reel)
     """
-    from publishers.instagram import publish_reel
+    from publishers.instagram import publish_video_reel
+    from reel_downloader import download_and_process, is_trailer_news
+    from content_generator import select_best_news, generate_trailer_caption
+    from posts_log import is_duplicate, record_post
 
-    logger.info("Iniciando reel editorial")
+    logger.info("Iniciando reel de trailer")
 
-    # 1. Buscar notícias
-    news = fetch_all_news(limit=20)
+    # 1. Buscar notícias e filtrar as que têm trailer
+    news = fetch_all_news(limit=40)
     if not news:
-        raise ValueError("Sem notícias para reel")
+        raise ValueError("Sem notícias")
 
-    from content_generator import select_best_news
     best = select_best_news(news, count=news_count)
+    trailer_news = [n for n in best if is_trailer_news(n)]
 
-    # 2. Preparar dados do reel (inclui busca de og:images)
-    reel_data = generate_reel_data(best)
+    if not trailer_news:
+        raise ValueError("Nenhuma notícia de trailer encontrada")
 
-    if len(reel_data.get("slides", [])) < 3:
-        raise ValueError("Não foi possível obter imagens suficientes para o reel")
+    logger.info(f"{len(trailer_news)} notícias com trailer candidatas")
 
-    # 3. Gerar legenda
-    caption = generate_reel_caption(best)
+    # 2. Tentar cada notícia até conseguir baixar o vídeo
+    for news_item in trailer_news:
+        title = news_item.get("title", "")
 
-    # 4. Publicar
-    result = publish_reel(reel_data, caption)
+        if is_duplicate(title, platform="instagram_reel", lookback_days=7):
+            logger.info(f"Trailer já publicado recentemente: {title[:60]}")
+            continue
 
-    logger.info(f"✅ Reel publicado: {result}")
-    return result
+        logger.info(f"Processando trailer: {title[:60]}")
+        video_paths = download_and_process(news_item)
+
+        if not video_paths:
+            logger.warning(f"Não conseguiu baixar trailer para: {title[:60]}")
+            continue
+
+        # 3. Gerar legenda
+        caption = generate_trailer_caption(news_item)
+
+        # 4. Publicar cada versão
+        results = []
+        for i, video_path in enumerate(video_paths):
+            fmt = "vertical" if i > 0 else "horizontal"
+            logger.info(f"Publicando Reel {fmt}: {video_path}")
+            try:
+                result = publish_video_reel(video_path, caption)
+                results.append(result)
+                record_post(
+                    media_id=result.get("id", ""),
+                    platform="instagram_reel",
+                    news_item=news_item,
+                    caption=caption,
+                    image_url="",
+                )
+                logger.info(f"✅ Reel {fmt} publicado: {result.get('id')}")
+            except Exception as e:
+                logger.error(f"Erro ao publicar Reel {fmt}: {e}")
+
+        if results:
+            return results[0]
+
+    raise ValueError("Não foi possível publicar nenhum Reel de trailer")
 
 
 if __name__ == "__main__":

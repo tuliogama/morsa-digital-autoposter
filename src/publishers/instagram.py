@@ -492,3 +492,59 @@ def publish_reel(reel_data: dict, caption: str) -> dict:
     finally:
         if os.path.exists(video_path):
             os.unlink(video_path)
+
+
+def publish_video_reel(video_path: str, caption: str) -> dict:
+    """
+    Publica um arquivo MP4 já processado como Reel no Instagram.
+    Usado pelo fluxo de trailers do reel_downloader.
+    """
+    import os
+
+    ig_user_id = os.environ["IG_USER_ID"]
+    token      = os.environ["FB_ACCESS_TOKEN"]
+
+    if not os.path.exists(video_path):
+        raise FileNotFoundError(f"Vídeo não encontrado: {video_path}")
+
+    file_size = os.path.getsize(video_path)
+    logger.info(f"Publicando Reel: {video_path} ({file_size // 1024}KB)")
+
+    # 1. Upload do vídeo para o servidor Meta
+    upload_session_id = _upload_video_to_meta(video_path, ig_user_id, token)
+
+    # 2. Container REELS
+    container_id = _post(f"{GRAPH_URL}/{ig_user_id}/media", {
+        "media_type": "REELS",
+        "upload_id": upload_session_id,
+        "caption": caption,
+        "share_to_feed": "true",
+        "like_and_view_counts_disabled": "true",
+        "access_token": token,
+    })["id"]
+    logger.info(f"Container REELS criado: {container_id}")
+
+    # 3. Poll até o vídeo estar pronto (máx 2 min)
+    for attempt in range(12):
+        time.sleep(10)
+        status_url = (
+            f"{GRAPH_URL}/{container_id}"
+            f"?fields=status_code,status&access_token={token}"
+        )
+        with urllib.request.urlopen(status_url, timeout=15) as r:
+            status = json.loads(r.read())
+        code = status.get("status_code", "")
+        logger.info(f"Status vídeo ({attempt+1}/12): {code}")
+        if code == "FINISHED":
+            break
+        if code == "ERROR":
+            raise ValueError(f"Erro no processamento: {status}")
+
+    # 4. Publicar
+    media_id = _publish_container(ig_user_id, token, container_id)
+    logger.info(f"Reel de trailer publicado: {media_id}")
+
+    time.sleep(3)
+    _post_to_broadcast_channel(token, media_id)
+
+    return {"platform": "instagram", "format": "reel", "id": media_id}
