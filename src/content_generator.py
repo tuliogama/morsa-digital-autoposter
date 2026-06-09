@@ -57,6 +57,7 @@ REGRAS INEGOCIÁVEIS:
 - Mencione o nome da franquia/personagem no hook — é o que faz o fã parar o scroll
 - NUNCA mencione vídeo, trailer ou conteúdo para assistir — o post é apenas imagem, não há vídeo anexado
 - NUNCA use CTAs como "assista", "veja o vídeo", "confira o trailer" — direcione para comentar, salvar ou marcar alguém
+- NUNCA INVENTE FATOS: não cite número de filmes ("terceiro", "quarto"), datas, bilheteria, elenco, nem qualquer dado que não esteja explícito na notícia fornecida. Se não sabe, não diz.
 
 DADOS DE PERFORMANCE (use para calibrar o tom):
 - Posts Marvel/DC com afirmação ousada sobre a franquia: +75% acima da média
@@ -91,6 +92,9 @@ REGRAS:
 - Tom: fã que assistiu e PRECISA falar sobre isso com alguém
 - NUNCA use "assista", "confira o trailer acima" — eles já estão vendo
 - Máximo 2200 caracteres
+- NUNCA INVENTE FATOS: não cite número de filmes ("terceiro", "quarto"), datas, bilheteria, nem qualquer dado que não esteja explícito na notícia fornecida. Se não sabe, não diz.
+- NUNCA use afirmações como "promete ser o mais épico de todos" — são vazias. Prefira o que o fã SENTE.
+- Hook deve soar como fã brasileiro real, não like robô: "Tô hypado", "Que trailer foi esse?", "Não tô pronto pra isso" — linguagem natural BR
 """
 
 PLATFORM_PROMPTS = {

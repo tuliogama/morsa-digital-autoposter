@@ -494,10 +494,53 @@ def publish_reel(reel_data: dict, caption: str) -> dict:
             os.unlink(video_path)
 
 
+def _upload_video_to_github(video_path: str) -> str:
+    """
+    Faz upload do vídeo como asset de Release no GitHub.
+    Releases suportam arquivos binários grandes (até 2GB) sem base64.
+    Retorna URL pública de download.
+    """
+    import subprocess, os
+
+    repo = os.environ.get("GITHUB_REPOSITORY", "tuliogama/morsa-digital-autoposter")
+    filename = os.path.basename(video_path)
+    tag = "reel-media"
+
+    # Garante que a release "reel-media" existe
+    check = subprocess.run(
+        ["gh", "release", "view", tag, "--repo", repo],
+        capture_output=True, text=True
+    )
+    if check.returncode != 0:
+        subprocess.run(
+            ["gh", "release", "create", tag, "--repo", repo,
+             "--title", "Reel Media Temp", "--notes", "Vídeos temporários para Reels"],
+            capture_output=True, text=True
+        )
+
+    # Remove asset anterior com mesmo nome se existir
+    subprocess.run(
+        ["gh", "release", "delete-asset", tag, filename, "--repo", repo, "--yes"],
+        capture_output=True, text=True
+    )
+
+    # Upload do vídeo
+    result = subprocess.run(
+        ["gh", "release", "upload", tag, video_path, "--repo", repo, "--clobber"],
+        capture_output=True, text=True
+    )
+    if result.returncode != 0:
+        raise RuntimeError(f"Falha no upload GitHub: {result.stderr}")
+
+    url = f"https://github.com/{repo}/releases/download/{tag}/{filename}"
+    logger.info(f"Vídeo hospedado: {url}")
+    return url
+
+
 def publish_video_reel(video_path: str, caption: str) -> dict:
     """
     Publica um arquivo MP4 já processado como Reel no Instagram.
-    Usado pelo fluxo de trailers do reel_downloader.
+    Hospeda o vídeo no GitHub e usa video_url na Graph API.
     """
     import os
 
@@ -510,13 +553,13 @@ def publish_video_reel(video_path: str, caption: str) -> dict:
     file_size = os.path.getsize(video_path)
     logger.info(f"Publicando Reel: {video_path} ({file_size // 1024}KB)")
 
-    # 1. Upload do vídeo para o servidor Meta
-    upload_session_id = _upload_video_to_meta(video_path, ig_user_id, token)
+    # 1. Hospedar vídeo publicamente no GitHub
+    video_url = _upload_video_to_github(video_path)
 
-    # 2. Container REELS
+    # 2. Container REELS com video_url
     container_id = _post(f"{GRAPH_URL}/{ig_user_id}/media", {
         "media_type": "REELS",
-        "upload_id": upload_session_id,
+        "video_url": video_url,
         "caption": caption,
         "share_to_feed": "true",
         "like_and_view_counts_disabled": "true",
@@ -524,8 +567,8 @@ def publish_video_reel(video_path: str, caption: str) -> dict:
     })["id"]
     logger.info(f"Container REELS criado: {container_id}")
 
-    # 3. Poll até o vídeo estar pronto (máx 2 min)
-    for attempt in range(12):
+    # 3. Poll até o vídeo estar pronto (máx 3 min)
+    for attempt in range(18):
         time.sleep(10)
         status_url = (
             f"{GRAPH_URL}/{container_id}"
@@ -534,7 +577,7 @@ def publish_video_reel(video_path: str, caption: str) -> dict:
         with urllib.request.urlopen(status_url, timeout=15) as r:
             status = json.loads(r.read())
         code = status.get("status_code", "")
-        logger.info(f"Status vídeo ({attempt+1}/12): {code}")
+        logger.info(f"Status vídeo ({attempt+1}/18): {code}")
         if code == "FINISHED":
             break
         if code == "ERROR":
