@@ -258,26 +258,55 @@ def generate_trailer_caption(news_item: dict) -> str:
     Gera legenda específica para Reel de trailer.
     Tom: reação de fã + contexto + pergunta que gera debate.
     Usa contexto real do filme se disponível no news_item.
+
+    Passes data_estreia + status_calculado para o modelo saber quando
+    o filme estreia e nunca inventar prazos ou ordinals errados.
     """
     import re
-    title   = news_item.get("title", "")
-    context = news_item.get("contexto", "")
-    elenco  = news_item.get("elenco", "")
-    ano     = news_item.get("ano", "")
+    from datetime import datetime
 
-    context_block = ""
+    title              = news_item.get("title", "")
+    context            = news_item.get("contexto", "")
+    elenco             = news_item.get("elenco", "")
+    ano                = news_item.get("ano", "")
+    data_estreia_str   = news_item.get("data_estreia", "")
+    status_calculado   = news_item.get("_status_calculado", news_item.get("status", ""))
+
+    # Monta bloco de fatos verificados para o modelo
+    fatos = []
     if context:
-        context_block = f"\nContexto real do filme (USE ESSES FATOS, não invente outros):\n{context}"
+        fatos.append(f"Contexto: {context}")
     if elenco:
-        context_block += f"\nElenco: {elenco}"
+        fatos.append(f"Elenco: {elenco}")
     if ano:
-        context_block += f"\nAno: {ano}"
+        fatos.append(f"Ano: {ano}")
+
+    # Traduz a data para PT-BR legível e informa o status real
+    if data_estreia_str:
+        try:
+            dt = datetime.strptime(data_estreia_str, "%Y-%m-%d")
+            meses = ["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"]
+            data_legivel = f"{dt.day} de {meses[dt.month-1]} de {dt.year}"
+            if status_calculado == "pre_estreia":
+                dias_faltam = (dt - datetime.now()).days
+                fatos.append(f"Estreia: {data_legivel} (daqui {dias_faltam} dias — ainda NÃO estreou)")
+            else:
+                fatos.append(f"Estreia: {data_legivel} (já em cartaz)")
+        except Exception:
+            fatos.append(f"Data de estreia: {data_estreia_str}")
+
+    fatos_block = "\n".join(fatos)
 
     user_msg = (
-        f"Escreva a legenda para o Reel do trailer: {title}\n"
-        f"{context_block}\n\n"
-        f"Lembre: o trailer já está no vídeo. A legenda deve gerar reação e debate, "
-        f"não descrever o que se vê. Use APENAS os fatos fornecidos acima, nunca invente."
+        f"Escreva a legenda para o Reel do trailer: {title}\n\n"
+        f"FATOS VERIFICADOS — use APENAS estes, nunca invente outros:\n"
+        f"{fatos_block}\n\n"
+        f"PROIBIDO:\n"
+        f"- Citar ordinal do filme (terceiro, quarto, etc.) a não ser que esteja explícito acima\n"
+        f"- Inventar data de estreia diferente da fornecida\n"
+        f"- Dizer que 'já está em cartaz' se o status indicar pre_estreia\n"
+        f"- Dizer que 'estreia em breve' sem especificar o mês correto fornecido\n\n"
+        f"Lembre: o trailer já está no vídeo. A legenda deve gerar reação e debate."
     )
 
     for attempt in range(2):

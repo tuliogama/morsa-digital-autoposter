@@ -210,6 +210,9 @@ jobs:
       - name: Instalar ffmpeg
         run: sudo apt-get install -y ffmpeg
 
+      - name: Validar backlog antes de publicar
+        run: python3 validate_backlog.py
+
       - name: Publicar reel
         env:
           DRY_RUN: ${{ inputs.dry_run || 'false' }}

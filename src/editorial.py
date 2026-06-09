@@ -408,15 +408,24 @@ def run_carousel(carousel_type: str = "top_n", news_count: int = 5) -> dict:
 def _load_backlog() -> list:
     """
     Carrega o backlog de trailers curados filtrando por recência.
-    Regras:
+
+    IMPORTANTE: o status é SEMPRE calculado a partir de data_estreia — nunca
+    confiamos no campo "status" do JSON (pode estar desatualizado ou errado).
+
+    Regras de validade:
       - Não postado ainda
-      - Filme que estreou há no máximo 90 dias (ainda relevante)
-      - OU ainda não estreou (pre_estreia)
+      - data_estreia no futuro  → pre_estreia, válido
+      - data_estreia ≤ hoje e ≤ 90 dias atrás → em_cartaz, válido
+      - data_estreia > 90 dias atrás  → muito antigo, ignorado
+      - Sem data_estreia  → incluído (não podemos filtrar sem data)
     """
     import json
-    from datetime import datetime, timedelta
+    from datetime import datetime
 
-    backlog_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "trailer_backlog.json")
+    backlog_path = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+        "data", "trailer_backlog.json",
+    )
     try:
         with open(backlog_path, "r", encoding="utf-8") as f:
             items = json.load(f)
@@ -430,27 +439,46 @@ def _load_backlog() -> list:
         if item.get("postado", False):
             continue
 
-        status = item.get("status", "")
         data_str = item.get("data_estreia", "")
+        stored_status = item.get("status", "")
 
-        # Pré-estreia: sempre válido
-        if status == "pre_estreia":
+        if not data_str:
+            # Sem data: não há como filtrar, inclui e loga aviso
+            logger.warning(f"Backlog sem data_estreia: {item['titulo']} — incluindo assim mesmo")
+            item["_status_calculado"] = "desconhecido"
             validos.append(item)
             continue
 
-        # Em cartaz: válido se estreou nos últimos 90 dias
-        if data_str:
-            try:
-                data_estreia = datetime.strptime(data_str, "%Y-%m-%d")
-                dias = (hoje - data_estreia).days
-                if dias <= 90:
-                    validos.append(item)
-                else:
-                    logger.info(f"Backlog ignorado (muito antigo, {dias}d): {item['titulo']}")
-            except Exception:
-                validos.append(item)  # sem data = inclui mesmo assim
+        try:
+            data_estreia = datetime.strptime(data_str, "%Y-%m-%d")
+        except ValueError:
+            logger.error(f"Backlog com data inválida '{data_str}': {item['titulo']} — IGNORADO")
+            continue
+
+        dias_desde_estreia = (hoje - data_estreia).days
+
+        if dias_desde_estreia < 0:
+            # Ainda não estreou
+            status_real = "pre_estreia"
+        elif dias_desde_estreia <= 90:
+            # Estreou há ≤ 90 dias — ainda relevante
+            status_real = "em_cartaz"
         else:
-            validos.append(item)
+            logger.info(
+                f"Backlog ignorado (estreou há {dias_desde_estreia}d, muito antigo): {item['titulo']}"
+            )
+            continue
+
+        # Alerta se o status no arquivo estava errado
+        if stored_status and stored_status != status_real:
+            logger.warning(
+                f"Status corrigido automaticamente: {item['titulo']} "
+                f"(arquivo='{stored_status}' → calculado='{status_real}' "
+                f"com base em data_estreia={data_str})"
+            )
+
+        item["_status_calculado"] = status_real
+        validos.append(item)
 
     logger.info(f"Backlog: {len(validos)} itens válidos de {len(items)} total")
     return validos
@@ -502,12 +530,14 @@ def run_reel(news_count: int = 10) -> dict:
             "source":   "backlog",
             "url":      "",
             "description": item.get("contexto", ""),
-            # Campos extras para legenda
-            "contexto": item.get("contexto", ""),
-            "elenco":   item.get("elenco", ""),
-            "ano":      item.get("ano", ""),
-            "_backlog_id":    item["id"],
-            "_query_youtube": item.get("query_youtube", item["titulo"] + " trailer dublado"),
+            # Campos verificados para geração de legenda — NUNCA inventar estes dados
+            "contexto":          item.get("contexto", ""),
+            "elenco":            item.get("elenco", ""),
+            "ano":               item.get("ano", ""),
+            "data_estreia":      item.get("data_estreia", ""),
+            "_status_calculado": item.get("_status_calculado", ""),
+            "_backlog_id":       item["id"],
+            "_query_youtube":    item.get("query_youtube", item["titulo"] + " trailer dublado"),
         })
 
     # 2. RSS — notícias com trailer detectado automaticamente
