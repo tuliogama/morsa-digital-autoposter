@@ -57,9 +57,13 @@ def _ytdlp(*args) -> subprocess.CompletedProcess:
     return subprocess.run(cmd, capture_output=True, text=True)
 
 
-def _search_youtube(query: str, max_results: int = 5) -> list[dict]:
-    """Busca vídeos no YouTube e retorna lista de metadados."""
+def _search_youtube(query: str, max_results: int = 5, max_age_days: int = 90) -> list[dict]:
+    """
+    Busca vídeos no YouTube filtrando por recência.
+    max_age_days: ignora vídeos mais antigos que isso (padrão 90 dias).
+    """
     import json
+    from datetime import datetime, timedelta
 
     result = _ytdlp(
         f"ytsearch{max_results}:{query}",
@@ -67,10 +71,23 @@ def _search_youtube(query: str, max_results: int = 5) -> list[dict]:
         "--skip-download",
     )
 
+    cutoff = datetime.now() - timedelta(days=max_age_days)
     videos = []
     for line in result.stdout.splitlines():
         try:
             v = json.loads(line)
+            date_str = v.get("upload_date", "")
+
+            # Filtra por data de upload
+            if date_str:
+                try:
+                    upload_date = datetime.strptime(date_str, "%Y%m%d")
+                    if upload_date < cutoff:
+                        logger.info(f"Vídeo ignorado (muito antigo: {date_str}): {v.get('title','')[:50]}")
+                        continue
+                except Exception:
+                    pass
+
             videos.append({
                 "id":       v["id"],
                 "title":    v.get("title", ""),
@@ -78,11 +95,13 @@ def _search_youtube(query: str, max_results: int = 5) -> list[dict]:
                 "duration": int(v.get("duration", 0)),
                 "width":    v.get("width", 0),
                 "height":   v.get("height", 0),
-                "date":     v.get("upload_date", ""),
+                "date":     date_str,
                 "views":    v.get("view_count", 0),
             })
         except Exception:
             pass
+
+    logger.info(f"YouTube: {len(videos)} vídeos recentes encontrados para '{query[:50]}'")
     return videos
 
 

@@ -406,16 +406,54 @@ def run_carousel(carousel_type: str = "top_n", news_count: int = 5) -> dict:
 
 
 def _load_backlog() -> list:
-    """Carrega o backlog de trailers curados."""
+    """
+    Carrega o backlog de trailers curados filtrando por recência.
+    Regras:
+      - Não postado ainda
+      - Filme que estreou há no máximo 90 dias (ainda relevante)
+      - OU ainda não estreou (pre_estreia)
+    """
     import json
+    from datetime import datetime, timedelta
+
     backlog_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "trailer_backlog.json")
     try:
         with open(backlog_path, "r", encoding="utf-8") as f:
             items = json.load(f)
-        return [i for i in items if not i.get("postado", False)]
     except Exception as e:
         logger.warning(f"Falha ao carregar backlog: {e}")
         return []
+
+    hoje = datetime.now()
+    validos = []
+    for item in items:
+        if item.get("postado", False):
+            continue
+
+        status = item.get("status", "")
+        data_str = item.get("data_estreia", "")
+
+        # Pré-estreia: sempre válido
+        if status == "pre_estreia":
+            validos.append(item)
+            continue
+
+        # Em cartaz: válido se estreou nos últimos 90 dias
+        if data_str:
+            try:
+                data_estreia = datetime.strptime(data_str, "%Y-%m-%d")
+                dias = (hoje - data_estreia).days
+                if dias <= 90:
+                    validos.append(item)
+                else:
+                    logger.info(f"Backlog ignorado (muito antigo, {dias}d): {item['titulo']}")
+            except Exception:
+                validos.append(item)  # sem data = inclui mesmo assim
+        else:
+            validos.append(item)
+
+    logger.info(f"Backlog: {len(validos)} itens válidos de {len(items)} total")
+    return validos
 
 
 def _mark_backlog_posted(item_id: str):
