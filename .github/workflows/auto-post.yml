@@ -242,3 +242,85 @@ jobs:
           git add -f logs/posts_log.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "chore: log reel [skip ci]"
           git push origin main || true
+
+  # ── Job 4: Posts de Estreia (ESTREIA HOJE + Trailer do Dia) ─────────────
+  release-posts:
+    name: Estreia Hoje — Feed + Reel
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write
+    concurrency:
+      group: morsa-release
+      cancel-in-progress: false
+    # Roda todos os dias às 09h BRT (12h UTC) — verifica se tem estreia hoje
+    if: >
+      (github.event_name == 'schedule' && github.event.schedule == '0 12 * * *') ||
+      (github.event_name == 'workflow_dispatch' && inputs.mode == 'release')
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - run: pip install -r requirements.txt
+
+      - name: Instalar ffmpeg
+        run: sudo apt-get install -y ffmpeg
+
+      - name: Verificar estreias hoje
+        run: |
+          python3 -c "
+          import sys, json
+          sys.path.insert(0, 'src')
+          from release_posts import get_releases_today
+          releases = get_releases_today()
+          if releases:
+              print(f'ESTREIAS HOJE: {[r[\"titulo\"] for r in releases]}')
+          else:
+              print('Sem estreias hoje.')
+          "
+
+      - name: Publicar posts de estreia
+        env:
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            python3 -c "
+          import sys, logging
+          sys.path.insert(0, 'src')
+          logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(name)s: %(message)s')
+          from release_posts import run_release_posts
+          run_release_posts(dry_run=True)
+          "
+          else
+            python3 -c "
+          import sys, logging
+          sys.path.insert(0, 'src')
+          logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(name)s: %(message)s')
+          from release_posts import run_release_posts
+          results = run_release_posts(dry_run=False)
+          print(f'Publicados: {len(results)}')
+          for r in results:
+              print(f'  {r[\"tipo\"]}: {r[\"titulo\"]}')
+          "
+          fi
+
+      - name: Persistir log e calendário
+        if: ${{ inputs.dry_run != 'true' }}
+        run: |
+          git config user.name "morsa-bot"
+          git config user.email "bot@morsadigital.com"
+          git fetch origin main
+          git stash || true
+          git rebase origin/main || git reset --hard origin/main
+          git stash pop || true
+          git add -f logs/posts_log.json data/release_calendar.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "chore: estreia publicada — atualiza calendário [skip ci]"
+          git push origin main || true
