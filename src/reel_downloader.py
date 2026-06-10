@@ -323,6 +323,48 @@ def download_and_process(news_item: dict, output_dir: str = None) -> list[str]:
     return results
 
 
+def process_adhoc_video(url: str, output_path: str) -> str:
+    """
+    Baixa vídeo de URL externa (Instagram/Twitter) e aplica logo redondinha.
+
+    Sempre usa _make_round_logo() — nunca ffmpeg direto, que gera logo quadrada.
+    Retorna caminho do vídeo processado.
+    """
+    import tempfile
+
+    raw = output_path.replace(".mp4", "_raw.mp4")
+
+    r = subprocess.run(
+        ["yt-dlp", "--cookies-from-browser", "chrome",
+         url, "-o", raw, "--merge-output-format", "mp4"],
+        capture_output=True, text=True,
+    )
+    if r.returncode != 0 or not os.path.exists(raw):
+        raise RuntimeError(f"yt-dlp falhou: {r.stderr[-300:]}")
+
+    logo_path = str(_make_round_logo())
+
+    # Detecta orientação
+    probe = subprocess.run(
+        ["ffprobe", "-v", "quiet", "-select_streams", "v:0",
+         "-show_entries", "stream=width,height", "-of", "csv=p=0", raw],
+        capture_output=True, text=True,
+    )
+    w, h = (int(x) for x in probe.stdout.strip().split(","))
+
+    if h > w:
+        _add_logo_vertical_native(raw, output_path, logo_path)
+    else:
+        _add_logo_horizontal(raw, output_path, logo_path)
+
+    try:
+        os.remove(raw)
+    except Exception:
+        pass
+
+    return output_path
+
+
 def is_trailer_news(news_item: dict) -> bool:
     """Verifica se a notícia é sobre trailer/teaser recém-lançado."""
     keywords = [
