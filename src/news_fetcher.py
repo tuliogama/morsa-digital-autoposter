@@ -166,7 +166,15 @@ def fetch_rss(max_per_feed: int = 6) -> list[dict]:
                 break
 
             title = (_text(entry, "title") or _text(entry, "atom:title", ns) or "").strip()
-            link  = (_text(entry, "link")  or _attr(entry, "atom:link", "href", ns) or "").strip()
+
+            # Atom feeds (ex: Blogger): preferir rel="alternate" — evita URLs de comentários
+            atom_links = entry.findall("atom:link", ns)
+            alternate = next((l.get("href","") for l in atom_links if l.get("rel") == "alternate"), "")
+            link = (alternate or _text(entry, "link") or _attr(entry, "atom:link", "href", ns) or "").strip()
+
+            # Ignorar URLs que são páginas de feed/comentários, não artigos
+            if "/feeds/" in link or link.endswith("/comments"):
+                continue
 
             if not title or not link:
                 continue
