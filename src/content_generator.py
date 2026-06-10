@@ -59,6 +59,13 @@ REGRAS INEGOCIÁVEIS:
 - NUNCA use CTAs como "assista", "veja o vídeo", "confira o trailer" — direcione para comentar, salvar ou marcar alguém
 - NUNCA INVENTE FATOS: não cite número de filmes ("terceiro", "quarto"), datas, bilheteria, elenco, nem qualquer dado que não esteja explícito na notícia fornecida. Se não sabe, não diz.
 
+REGRAS DE ESPECIFICIDADE (falhas reais que já aconteceram — não repita):
+- Se o título menciona "heróis que vencem X" → o corpo OBRIGATORIAMENTE cita os heróis pelo nome. Nunca "vários heróis de outras editoras" sem nomear nenhum. Se a notícia não tem os nomes, muda o título.
+- Se o título diz "quebra uma regra" → o corpo OBRIGATORIAMENTE diz qual regra foi quebrada. Nunca deixar o leitor sem saber o que mudou.
+- Se o título menciona um produto físico (Hot Wheels, LEGO, etc.) → o corpo descreve o produto especificamente. Sem imagem, o texto é tudo — "carrinhos inspirados em filmes" sem dizer quais modelos/personagens é inútil.
+- NUNCA use o CTA para perguntar algo que o próprio post não respondeu. Se o post não disse quem vence, não pergunte "quem você acha que vence?" — a galera vai responder "fala logo!". Responda primeiro, pergunte depois.
+- NUNCA termine um argumento com "poderia até derrota-lo" e em seguida pergunte "você acha que pode derrotar?". É contraditório e parece insegurança. Tome posição.
+
 DADOS DE PERFORMANCE (use para calibrar o tom):
 - Posts Marvel/DC com afirmação ousada sobre a franquia: +75% acima da média
 - Hooks com opinião ("isso é preguiça criativa", "tem tudo para pisар") performam melhor que fatos neutros
@@ -196,14 +203,17 @@ def generate_post(news_item: dict, platform: str, brief: dict = None) -> dict:
     url    = news_item.get("url", "")
     source = news_item.get("source", "")
 
+    description = news_item.get("description", "").strip()
     user_msg = (
         f"Escreva a legenda completa para o {platform.capitalize()} sobre esta notícia.\n\n"
-        f"Título: {title}\n\n"
-        f"IMPORTANTE:\n"
+        f"Título: {title}\n"
+        + (f"Resumo/descrição: {description}\n" if description else "")
+        + f"\nIMPORTANTE:\n"
         f"- Escreva como se a Morsa Digital estivesse reportando a notícia — NUNCA mencione o nome da fonte no texto\n"
         f"- Siga o formato com linha em branco entre cada bloco\n"
         f"- Não truncar — termine todas as frases\n"
-        f"- Hashtags só relacionadas a esta notícia específica, nada genérico"
+        f"- Hashtags só relacionadas a esta notícia específica, nada genérico\n"
+        f"- Se o título promete especificidade (nomes, qual regra, quais modelos), o corpo DEVE entregar essa especificidade. Se a descrição não tiver os dados, adapte o título para não prometer o que não pode cumprir."
     )
 
     content = None
