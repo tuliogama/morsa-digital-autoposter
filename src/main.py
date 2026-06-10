@@ -179,6 +179,11 @@ def main():
     ok = sum(1 for r in results if r.get("status") == "ok")
     logger.info(f"\nConcluído: {ok}/{posts_per_run} posts publicados")
 
+    # Falha visível: run sem nenhum post publicado não pode passar como sucesso
+    if ok == 0:
+        logger.error("Nenhum post publicado neste run — sinalizando falha.")
+        sys.exit(1)
+
 
 if __name__ == "__main__":
     main()

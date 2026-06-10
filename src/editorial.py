@@ -373,12 +373,20 @@ def run_carousel(carousel_type: str = "top_n", news_count: int = 5) -> dict:
     # 2. Gerar conteúdo editorial
     carousel_data = generate_carousel_content(best, carousel_type)
 
-    # 3. Checar duplicata — evitar repetir o mesmo carrossel
+    # 3. Checar duplicata — se repetiu, tenta outro tipo antes de desistir
     carousel_title = carousel_data.get("title", "")
     if is_duplicate(carousel_title, platform="instagram", lookback_days=1):
-        raise ValueError(
-            f"Carrossel duplicado (publicado nas últimas 24h): {carousel_title!r}"
-        )
+        fallback = {"top_n": "deep_dive", "deep_dive": "event_recap"}.get(carousel_type)
+        if fallback:
+            logger.warning(
+                f"Carrossel duplicado ({carousel_title!r}) — tentando tipo {fallback!r}"
+            )
+            carousel_data = generate_carousel_content(best, fallback)
+            carousel_title = carousel_data.get("title", "")
+        if is_duplicate(carousel_title, platform="instagram", lookback_days=1):
+            raise ValueError(
+                f"Carrossel duplicado (publicado nas últimas 24h): {carousel_title!r}"
+            )
 
     # 4. Buscar imagens reais dos artigos (substitui urls do Groq, não confiáveis)
     logger.info("Buscando imagens dos slides via og:image...")

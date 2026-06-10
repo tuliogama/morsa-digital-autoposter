@@ -22,16 +22,14 @@ jobs:
           REPO: ${{ github.repository }}
         run: |
           # ── Horários alvo em minutos desde meia-noite UTC ──────────────
-          # BRT = UTC-3, logo:
-          #  08:00 BRT = 11:00 UTC = 660 min
-          #  10:30 BRT = 13:30 UTC = 810 min
-          #  13:00 BRT = 16:00 UTC = 960 min
-          #  16:00 BRT = 19:00 UTC = 1140 min
-          #  19:00 BRT = 22:00 UTC = 1320 min
-          #  21:30 BRT = 00:30 UTC = 30 min (meia-noite + 30)
-          TARGETS="660 810 960 1140 1320 30"
-          WINDOW=20        # janela de ±20 min em torno de cada horário alvo
-          MIN_INTERVAL=100 # intervalo mínimo entre runs (min) para evitar duplicatas
+          # DEVE espelhar os crons de auto-post.yml. BRT = UTC-3:
+          #  09:00 BRT = 12:00 UTC = 720 min  (feed)
+          #  10:00 BRT = 13:00 UTC = 780 min  (feed)
+          #  18:00 BRT = 21:00 UTC = 1260 min (feed — MELHOR JANELA)
+          #  21:00 BRT = 00:00 UTC = 0 min    (feed)
+          TARGETS="720 780 1260 0"
+          WINDOW=30        # janela de ±30 min em torno de cada horário alvo
+          MIN_INTERVAL=45  # intervalo mínimo entre runs (min) para evitar duplicatas
 
           NOW_H=$(date -u +%H)
           NOW_M=$(date -u +%M)
@@ -58,9 +56,11 @@ jobs:
           fi
 
           # ── Verificar quando foi o último run do pipeline principal ─────
+          # Só conta runs bem-sucedidos — run que falhou (ex: 0 posts) é retentado
           LAST_RUN_AT=$(gh run list \
             --repo "$REPO" \
             --workflow=auto-post.yml \
+            --status success \
             --limit=1 \
             --json createdAt \
             --jq '.[0].createdAt // empty' 2>/dev/null || echo "")
