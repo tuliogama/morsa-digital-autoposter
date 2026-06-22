@@ -40,12 +40,19 @@ EXEMPLO DE FORMATO CORRETO:
 ---
 Toy Story 5 vai ter a cena mais pesada da franquia. Tom Hanks confirmou.
 
-O ator que emprestou a voz ao Woody por quase 30 anos disse em entrevista que o novo filme tem "uma das cenas mais devastadoras" de toda a saga. E olha — esse é o cara que chorou gravando. A Pixar claramente decidiu que não basta fazer os adultos chorarem: quer destruir a infância inteira de uma vez só.
+O ator que emprestou a voz ao Woody por quase 30 anos disse em entrevista que o novo filme tem "uma das cenas mais devastadoras" de toda a saga. E olha só, esse é o cara que chorou gravando. A Pixar decidiu que não basta fazer os adultos chorarem. Quer destruir a infância inteira de uma vez só.
 
 Você vai estar preparado ou vai precisar de um ansiolítico antes de entrar no cinema?
 
 #ToyStory5 #ToyStory #Pixar #Animacao #Cinema #FilmesParaAssistir #TomHanks #CulturaGeek
 ---
+
+SOAR HUMANO, NÃO IA (o público brasileiro rejeita texto que parece robô):
+- PROIBIDO travessão (— ou –). Use vírgula, ponto, dois-pontos ou reescreva a frase. O travessão é o tell nº1 de texto de IA.
+- Evite a fórmula "não é só X, é Y" e variações ("mais que um X, é um Y").
+- Evite listas de três adjetivos/itens em sequência ("rápido, bonito e poderoso").
+- Evite "nesse cenário", "nesse contexto", "vale lembrar", "sem dúvida", "afinal".
+- Escreva como fã brasileiro real fala: direto, com gíria leve quando couber, sem floreio acadêmico.
 
 REGRAS INEGOCIÁVEIS:
 - Separe SEMPRE os blocos com UMA linha em branco
@@ -108,7 +115,8 @@ REGRAS:
 - Máximo 2200 caracteres
 - NUNCA INVENTE FATOS: não cite número de filmes ("terceiro", "quarto"), datas, bilheteria, nem qualquer dado que não esteja explícito na notícia fornecida. Se não sabe, não diz.
 - NUNCA use afirmações como "promete ser o mais épico de todos" — são vazias. Prefira o que o fã SENTE.
-- Hook deve soar como fã brasileiro real, não like robô: "Tô hypado", "Que trailer foi esse?", "Não tô pronto pra isso" — linguagem natural BR
+- Hook deve soar como fã brasileiro real, não like robô: "Tô hypado", "Que trailer foi esse?", "Não tô pronto pra isso". Linguagem natural BR.
+- PROIBIDO travessão (— ou –) no texto da legenda. Use vírgula, ponto ou reescreva. É o tell nº1 de IA e o público rejeita. Evite também "não é só X, é Y" e listas de três adjetivos.
 """
 
 PLATFORM_PROMPTS = {
@@ -254,6 +262,20 @@ def _count_named_items(body: str) -> int:
     # Nomes próprios (sequências capitalizadas), ignorando início de frase
     proper = _re.findall(r"(?<![\.\n]\s)\b[A-ZÀ-Ý][\wÀ-ÿ'-]+(?:\s+[A-ZÀ-Ý][\wÀ-ÿ'-]+)*", body)
     return len({p.strip() for p in proper if len(p) > 2})
+
+
+def _strip_ai_tells(text: str) -> str:
+    """
+    Garante que nenhum travessão (tell nº1 de IA) chegue à legenda, mesmo se o
+    modelo ignorar o prompt. Troca por vírgula e limpa a pontuação resultante.
+    """
+    # " — " vira ", "; travessão colado vira vírgula
+    text = _re.sub(r"\s*[—–]\s*", ", ", text)
+    text = _re.sub(r"\s+,", ",", text)          # " ," -> ","
+    text = _re.sub(r",\s*,", ",", text)          # ", ," -> ","
+    text = _re.sub(r",\s*([.!?])", r"\1", text)  # ", ." -> "."
+    text = _re.sub(r"[ \t]{2,}", " ", text)
+    return text
 
 
 def _cap_hashtags(content: str, max_tags: int = 8) -> str:
@@ -417,7 +439,8 @@ def generate_post(news_item: dict, platform: str, brief: dict = None) -> dict:
             f"Não foi possível gerar legenda de qualidade para: {title[:60]}"
         )
 
-    # Corta excesso de hashtags — regra é 6-8, o modelo às vezes despeja 20
+    # Remove travessão (tell de IA) e corta excesso de hashtags
+    content = _strip_ai_tells(content)
     content = _cap_hashtags(content, max_tags=8)
 
     # Headline para a imagem: gerado pelo Groq — curto, completo, sem reticências
@@ -504,7 +527,7 @@ def generate_trailer_caption(news_item: dict) -> str:
             raw = re.sub(r'\n[ \t]*\n+', '\n\n', raw).strip()
             if len(raw) >= 100:
                 logger.info(f"Legenda de trailer gerada ({len(raw)} chars)")
-                return raw
+                return _strip_ai_tells(raw)
         except Exception as e:
             logger.warning(f"Groq trailer legenda falhou tentativa {attempt+1}: {e}")
 
