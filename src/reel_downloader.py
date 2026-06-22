@@ -127,14 +127,34 @@ def _search_youtube(query: str, max_results: int = 5, max_age_days: int = 90) ->
 
 
 def _is_official(channel: str) -> bool:
-    """Verifica se o canal é oficial do estúdio."""
+    """Verifica se o canal é oficial do estúdio/distribuidora."""
     official_keywords = [
         "warner", "sony", "marvel", "disney", "paramount", "universal",
-        "netflix", "amazon", "hbo", "dc", "pixar", "20th century",
-        "brasil", "brazil", "official", "oficial",
+        "netflix", "amazon", "hbo", "max", "dc", "pixar", "20th century",
+        "lucasfilm", "lionsgate", "a24", "mgm", "dreamworks", "illumination",
+        "focus features", "searchlight", "crunchyroll", "funimation",
+        "star+", "prime video", "apple tv", "official", "oficial",
+        # Distribuidoras BR
+        "telecine", "paris filmes", "diamond films", "imagem filmes",
+        "california filmes", "playarte", "galeria distribuidora",
     ]
     ch = channel.lower()
     return any(k in ch for k in official_keywords)
+
+
+# Marcadores de trailer FALSO (fan-made/concept) — NUNCA postar como oficial
+_FANMADE_MARKERS = [
+    "concept", "fan made", "fan-made", "fanmade", "fan trailer", "fan-trailer",
+    "what if", "dreamcut", "parody", "paródia", "parodia", "mashup", "rework",
+    "edit", "fan edit", "fan-edit", "homemade", "unofficial", "não oficial",
+    "nao oficial", "spoof", "teaser concept", "trailer concept",
+]
+
+
+def _is_fanmade(title: str, channel: str) -> bool:
+    """True se o vídeo parece fan-made/concept (texto no título ou canal)."""
+    blob = f"{title} {channel}".lower()
+    return any(m in blob for m in _FANMADE_MARKERS)
 
 
 def _build_query(news_item: dict) -> str:
@@ -255,19 +275,23 @@ def find_trailer(news_item: dict) -> dict | None:
         logger.warning("Nenhum vídeo encontrado")
         return None
 
-    # Prioriza canais oficiais, depois por views
+    # Descarta fan-made/concept SEMPRE (jamais postar trailer falso como oficial)
+    videos = [v for v in videos if not _is_fanmade(v.get("title", ""), v.get("channel", ""))]
+
+    # SÓ canais oficiais. Sem oficial → pula (melhor não postar que postar falso)
     official = [v for v in videos if _is_official(v["channel"])]
-    candidates = official if official else videos
+    if not official:
+        logger.warning("Nenhum trailer de canal OFICIAL encontrado — pulando (não posta fan-made)")
+        return None
 
-    # Filtra duração razoável (30s a 5min = trailer/teaser)
-    candidates = [v for v in candidates if 25 <= v["duration"] <= 330]
-
+    # Filtra duração razoável (25s a 5min30 = trailer/teaser)
+    candidates = [v for v in official if 25 <= v["duration"] <= 330]
     if not candidates:
-        logger.warning("Nenhum candidato com duração válida")
+        logger.warning("Nenhum candidato oficial com duração válida")
         return None
 
     best = sorted(candidates, key=lambda v: v["views"], reverse=True)[0]
-    logger.info(f"Trailer encontrado: {best['title']} ({best['channel']}, {best['duration']}s)")
+    logger.info(f"Trailer OFICIAL encontrado: {best['title']} ({best['channel']}, {best['duration']}s)")
     return best
 
 

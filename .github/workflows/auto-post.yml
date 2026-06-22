@@ -193,8 +193,11 @@ jobs:
     concurrency:
       group: morsa-reel
       cancel-in-progress: false
+    # Reel NÃO roda no schedule do CI: o YouTube bloqueia o IP de datacenter do
+    # GitHub ("only images available"). Roda LOCAL no Mac via launchd
+    # (com.morsa.dailyreel, 18h), onde cookies + IP residencial funcionam.
+    # Aqui fica só o gatilho manual (workflow_dispatch) para testes.
     if: >
-      (github.event_name == 'schedule' && github.event.schedule == '0 21 * * *') ||
       (github.event_name == 'workflow_dispatch' && inputs.mode == 'reel')
 
     steps:
