@@ -59,6 +59,13 @@ REGRAS INEGOCIÁVEIS:
 - NUNCA use CTAs como "assista", "veja o vídeo", "confira o trailer" — direcione para comentar, salvar ou marcar alguém
 - NUNCA INVENTE FATOS: não cite número de filmes ("terceiro", "quarto"), datas, bilheteria, elenco, nem qualquer dado que não esteja explícito na notícia fornecida. Se não sabe, não diz.
 
+CURADORIA — A LEGENDA PRECISA SE SUSTENTAR SOZINHA (regras absolutas):
+- A Morsa só NOTICIA cultura pop. NUNCA vende, oferece ou anuncia serviço/produto/curso/assinatura próprio. Proibido "nosso serviço", "assine", "contrate", "chama no direct", "link na bio para comprar". Você é jornalista de fã, não vendedor.
+- Se o título é uma LISTA numerada ("7 heróis que...", "5 animes que estreiam..."), o corpo OBRIGATORIAMENTE nomeia os itens, um a um (pode numerar 1, 2, 3...). Se a notícia fornecida não traz os nomes reais, NÃO escreva o post — responda apenas a palavra PULAR.
+- Se o título promete ESTREIA/DATA ("ganha data", "estreia em", "quando chega"), o corpo OBRIGATORIAMENTE traz a data concreta (dia/mês ou mês/ano). Sem a data nos dados fornecidos, responda apenas PULAR.
+- Toda informação que o título promete (nome do anime, qual regra mudou, quais modelos) tem que aparecer no corpo. O leitor não pode terminar a legenda com a mesma dúvida com que começou.
+- Proibido encher lista com "vários", "alguns", "diversos", "entre outros", "e muito mais". Ou nomeia, ou não publica.
+
 REGRAS DE ESPECIFICIDADE (falhas reais que já aconteceram — não repita):
 - Se o título menciona "heróis que vencem X" → o corpo OBRIGATORIAMENTE cita os heróis pelo nome. Nunca "vários heróis de outras editoras" sem nomear nenhum. Se a notícia não tem os nomes, muda o título.
 - Se o título diz "quebra uma regra" → o corpo OBRIGATORIAMENTE diz qual regra foi quebrada. Nunca deixar o leitor sem saber o que mudou.
@@ -166,6 +173,82 @@ class CaptionGenerationError(Exception):
     """Lançada quando não é possível gerar uma legenda de qualidade. Post deve ser pulado."""
 
 
+import re as _re
+
+# Substantivos de lista: "7 HERÓIS QUE...", "5 ANIMES QUE ESTREIAM..."
+_LIST_NOUNS = (
+    r"her[óo]is|vil[õo]es|animes|mang[áa]s|filmes|jogos|games|s[ée]ries|doramas|"
+    r"personagens|momentos|cenas|teorias|curiosidades|motivos|raz[õo]es|vers[õo]es|"
+    r"easter eggs|refer[êe]ncias|atores|diretores|trailers|f[ai]ses|temporadas"
+)
+_LIST_RE = _re.compile(rf"\b(\d{{1,2}})\s+({_LIST_NOUNS})\b", _re.IGNORECASE)
+
+# Promessa de estreia/data/lançamento no título
+_DATE_PROMISE_RE = _re.compile(
+    r"\b(estreia|estr[ée]ia|data de|chega em|lan[çc]a(?:mento)?|anuncia|"
+    r"ganha data|j[áa] tem data|quando estreia)\b", _re.IGNORECASE)
+
+# Tokens que comprovam uma data concreta no corpo
+_MESES = ("janeiro|fevereiro|mar[çc]o|abril|maio|junho|julho|agosto|setembro|"
+          "outubro|novembro|dezembro|jan|fev|mar|abr|mai|jun|jul|ago|set|out|nov|dez")
+_CONCRETE_DATE_RE = _re.compile(
+    rf"\b(\d{{1,2}}\s+de\s+(?:{_MESES})|(?:{_MESES})\s+de\s+\d{{4}}|\d{{1,2}}/\d{{1,2}}|"
+    rf"\b20\d{{2}}\b|primeiro semestre|segundo semestre)\b", _re.IGNORECASE)
+
+# Enchimento genérico que denuncia falta de especificidade
+_FILLER_RE = _re.compile(
+    r"\b(v[áa]rios|alguns|diversos|entre outros|e muito mais|uma s[ée]rie de|"
+    r"v[áa]rias|in[úu]meros|muitos outros|outros tantos|e mais)\b", _re.IGNORECASE)
+
+# Linguagem de venda/serviço em 1ª pessoa — Morsa só noticia
+_SELLING_RE = _re.compile(
+    r"\b(nosso(?:s)? (?:servi[çc]o|plano|produto|curso|pacote)|"
+    r"assine|contrate|garanta o seu|fale com a gente|chama no direct|"
+    r"link na bio para comprar|adquira (?:j[áa]|o seu)|compre agora)\b", _re.IGNORECASE)
+
+
+def _count_named_items(body: str) -> int:
+    """Conta itens nomeados: marcadores de lista OU nomes próprios distintos."""
+    # Marcadores numerados/bullets em linhas separadas
+    markers = _re.findall(r"(?m)^\s*(?:\d{1,2}[\.\)\-—:]|[-•★▪])\s+\S", body)
+    if markers:
+        return len(markers)
+    # Nomes próprios (sequências capitalizadas), ignorando início de frase
+    proper = _re.findall(r"(?<![\.\n]\s)\b[A-ZÀ-Ý][\wÀ-ÿ'-]+(?:\s+[A-ZÀ-Ý][\wÀ-ÿ'-]+)*", body)
+    return len({p.strip() for p in proper if len(p) > 2})
+
+
+def _verify_specificity(caption: str, title: str) -> tuple[bool, str]:
+    """
+    Garante que a legenda ENTREGA o que o título promete.
+    Retorna (ok, motivo). Se ok=False, o post deve ser pulado.
+    """
+    # Corpo = legenda sem as hashtags finais
+    body = _re.sub(r"(?m)^\s*#.*$", "", caption).strip()
+
+    # 1) Nunca vender serviço/produto da Morsa
+    if _SELLING_RE.search(caption):
+        return False, "linguagem de venda/serviço (Morsa só noticia, não vende)"
+
+    # 2) Título é lista numerada → corpo precisa nomear os itens
+    m = _LIST_RE.search(title)
+    if m:
+        n = int(m.group(1))
+        required = min(n, 3)
+        named = _count_named_items(body)
+        if named < required:
+            return False, f"título promete {n} {m.group(2)} mas o corpo nomeia só {named}"
+        if _FILLER_RE.search(body):
+            return False, "lista preenchida com termos genéricos ('vários', 'entre outros')"
+
+    # 3) Título promete data/estreia → corpo precisa de data concreta OU nome específico
+    if _DATE_PROMISE_RE.search(title):
+        if not _CONCRETE_DATE_RE.search(body):
+            return False, "título promete estreia/data mas o corpo não traz data concreta"
+
+    return True, ""
+
+
 def _validate_caption(content: str, source: str) -> bool:
     """
     Rejeita legendas que parecem scraping ou estão vazias.
@@ -204,6 +287,21 @@ def generate_post(news_item: dict, platform: str, brief: dict = None) -> dict:
     source = news_item.get("source", "")
 
     description = news_item.get("description", "").strip()
+
+    # ENRIQUECIMENTO: se a descrição é fina OU o título promete especificidade
+    # (lista numerada, estreia/data), busca o corpo do artigo para dar dados reais
+    # ao modelo. Sem isso o modelo preenche com genérico.
+    promises_specificity = bool(_LIST_RE.search(title) or _DATE_PROMISE_RE.search(title))
+    if url and (len(description) < 220 or promises_specificity):
+        try:
+            from news_fetcher import fetch_article_text
+            article = fetch_article_text(url)
+            if article and len(article) > len(description):
+                description = article
+                logger.info(f"Notícia enriquecida com corpo do artigo ({len(article)} chars)")
+        except Exception as e:
+            logger.warning(f"Falha ao enriquecer notícia: {e}")
+
     user_msg = (
         f"Escreva a legenda completa para o {platform.capitalize()} sobre esta notícia.\n\n"
         f"Título: {title}\n"
@@ -225,12 +323,25 @@ def generate_post(news_item: dict, platform: str, brief: dict = None) -> dict:
             raw = _call_groq(cfg["system"], user_msg, max_tokens=700)
             raw = re.sub(r'\n[ \t]*\n+', '\n\n', raw).strip()
 
-            if _validate_caption(raw, source):
-                content = raw
-                logger.info(f"Legenda gerada via Groq ({len(content)} chars)")
-                break
-            else:
+            # Modelo sinalizou que a notícia não tem dados para um post de qualidade
+            if raw.strip().upper().rstrip(".!") == "PULAR" or len(raw) < 60:
+                logger.info(f"Modelo pediu PULAR para '{title[:50]}' — notícia sem dados suficientes")
+                raise CaptionGenerationError(f"Notícia sem dados para post de qualidade: {title[:60]}")
+
+            if not _validate_caption(raw, source):
                 logger.warning(f"Legenda rejeitada na validação (tentativa {attempt+1})")
+                continue
+
+            ok, motivo = _verify_specificity(raw, title)
+            if not ok:
+                logger.warning(f"Legenda sem especificidade (tentativa {attempt+1}): {motivo}")
+                continue
+
+            content = raw
+            logger.info(f"Legenda gerada via Groq ({len(content)} chars)")
+            break
+        except CaptionGenerationError:
+            raise  # notícia sem dados — pular já, não adianta tentar de novo
         except Exception as e:
             last_error = e
             logger.warning(f"Groq falhou tentativa {attempt+1}: {e}")

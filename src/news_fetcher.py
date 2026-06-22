@@ -63,6 +63,10 @@ BLOCK_KEYWORDS = [
     "robô de limpeza", "aspirador robô", "smart home", "casa inteligente",
     "oferta ", "cupom ", "desconto ", "promoção de", "por menos de r$",
     "review do", "análise do produto", "melhor celular",
+    # Conteúdo promocional / venda de serviço — Morsa só NOTICIA, nunca vende
+    "assine ", "assinatura", "plano premium", "contrate", "garanta o seu",
+    "publieditorial", "publipost", "patrocinado", "em parceria com",
+    "use o cupom", "frete grátis", "black friday", "pré-venda com desconto",
     # Esportes reais sem relação com cultura pop
     "copa do mundo de futebol", "nba 2k", " nfl ", "basquete real",
     # Séries/franquias de baixíssimo engajamento no Brasil
@@ -96,6 +100,42 @@ def _is_blocked(title: str) -> bool:
     """Rejeita podcasts, listas genéricas e conteúdo proibido independente da fonte."""
     title_lower = title.lower()
     return any(kw in title_lower for kw in BLOCK_KEYWORDS)
+
+
+def fetch_article_text(url: str, max_chars: int = 1800) -> str:
+    """
+    Busca o corpo do artigo e extrai texto legível (sem tags).
+    Usado para ENRIQUECER notícias cuja description do RSS é fina demais
+    para o modelo entregar a especificidade que o título promete
+    (nomes de listas, datas de estreia, qual regra mudou, etc.).
+    Retorna "" se não conseguir extrair conteúdo útil.
+    """
+    import re
+    if not url:
+        return ""
+    html = _fetch_url(url, timeout=12)
+    if not html:
+        return ""
+
+    # Remove blocos que nunca contêm o conteúdo do artigo
+    html = re.sub(r"(?is)<(script|style|nav|header|footer|aside|form|figure)[^>]*>.*?</\1>", " ", html)
+
+    # Preferir o conteúdo dentro de <article> quando existir
+    article_match = re.search(r"(?is)<article[^>]*>(.*?)</article>", html)
+    body = article_match.group(1) if article_match else html
+
+    # Extrai parágrafos e itens de lista — onde ficam nomes, datas e enumerações
+    chunks = re.findall(r"(?is)<(?:p|li|h2|h3)[^>]*>(.*?)</(?:p|li|h2|h3)>", body)
+    texts = []
+    for c in chunks:
+        c = re.sub(r"(?is)<[^>]+>", " ", c)           # tira tags internas
+        c = re.sub(r"&[a-z]+;|&#\d+;", " ", c)        # tira entidades HTML
+        c = re.sub(r"\s+", " ", c).strip()
+        if len(c) >= 40:                               # ignora migalhas (botões, captions)
+            texts.append(c)
+
+    full = "\n".join(texts)
+    return full[:max_chars].strip()
 
 
 def _is_nerd_content(title: str, source: str) -> bool:

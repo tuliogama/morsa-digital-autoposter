@@ -152,6 +152,26 @@ Observar: formatos que geram muito engajamento neles para adaptar (nunca copiar)
 
 ---
 
+## Curadoria editorial — garantia de especificidade (jun/2026)
+
+Problema histórico: o título prometia (lista "7 heróis…", "anime ganha data de estreia") e o corpo entregava genérico, porque a `description` do RSS é só um teaser de 300 chars. Posts vendendo "serviço da Morsa" também vazavam.
+
+Correções implementadas (`news_fetcher.py` + `content_generator.py`):
+1. **Enriquecimento de fonte** — `fetch_article_text(url)` busca o corpo real do artigo quando a descrição é fina (<220 chars) ou o título promete lista/data. Dá dados reais ao modelo.
+2. **Gate de verificação** — `_verify_specificity()` roda após gerar e PULA o post se:
+   - título é lista numerada e o corpo não nomeia os itens (mín. 3 nomes), ou usa enchimento ("vários", "entre outros");
+   - título promete estreia/data e o corpo não traz data concreta (dia/mês ou mês/ano);
+   - há linguagem de venda/serviço em 1ª pessoa.
+3. **Bloqueio na fonte** — `BLOCK_KEYWORDS` agora barra conteúdo promocional/publieditorial/assinatura.
+4. **Prompt** — regra absoluta: Morsa só NOTICIA, nunca vende; lista sem nomes ou estreia sem data → modelo responde `PULAR` e o post é descartado.
+
+Resultado: posts de lista/estreia só saem quando entregam os nomes/datas. Posts pulados não contam como falha — `main.py` tenta o próximo candidato (por isso `candidates_count = posts_per_run * 4`).
+
+## Tokens — validade
+
+- **PAT local do `gh`** (`ghp_…`, usado para upload de Reels manuais via GitHub Releases): é **classic PAT com expiração**. Checar com `gh api -i /user | grep -i token-expiration`. Quando expirar: gerar novo em github.com/settings/tokens (escopos `repo` + `workflow`) e `gh auth login`. **Expira 2026-06-28.**
+- **Auto-post diário no GitHub Actions** usa `secrets.GITHUB_TOKEN` (automático, renovado a cada run) — não expira, independente do PAT local.
+
 ## Infraestrutura técnica
 
 ### Arquivos importantes
