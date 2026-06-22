@@ -167,6 +167,12 @@ Correções implementadas (`news_fetcher.py` + `content_generator.py`):
 
 Resultado: posts de lista/estreia só saem quando entregam os nomes/datas. Posts pulados não contam como falha — `main.py` tenta o próximo candidato (por isso `candidates_count = posts_per_run * 4`).
 
+## Hashtags, curadoria e dedup (jun/2026)
+
+- **Hashtags**: `_cap_hashtags()` corta para no máximo 8 (modelo despejava 15-20). Aplicado em `generate_post` antes de retornar.
+- **Curadoria anti-nichê**: `_categorize()` + `_rerank_for_diversity()` em `content_generator.py` rebaixam games nichê (MMORPG indie, sim de fábrica — 3-4 likes) para o fim e impedem 3 posts da mesma categoria em sequência. Franquia grande (GTA, VALORANT, Zelda…) basta para classificar como `game_big`.
+- **Dedup no mesmo run**: `is_duplicate()` só checa o log histórico; duas notícias do mesmo evento de fontes/idiomas diferentes entram juntas (o log ainda não tem nenhuma) → publicavam em dobro (caso Leviatán). `main.py` agora mantém `run_keywords`/`run_urls` e barra o 2º via overlap de palavras-chave (threshold 2). O `select_best_news` também é instruído a nunca escolher a mesma notícia de 2 fontes.
+
 ## Tokens — validade
 
 - **PAT local do `gh`** (`ghp_…`, usado para upload de Reels manuais via GitHub Releases): é **classic PAT com expiração**. Checar com `gh api -i /user | grep -i token-expiration`. Quando expirar: gerar novo em github.com/settings/tokens (escopos `repo` + `workflow`) e `gh auth login`. **Expira 2026-06-28.**
