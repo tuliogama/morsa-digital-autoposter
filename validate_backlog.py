@@ -18,7 +18,9 @@ import os
 from datetime import datetime
 
 BACKLOG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "trailer_backlog.json")
-CAMPOS_OBRIGATORIOS = ["id", "titulo", "data_estreia", "elenco", "contexto", "query_youtube"]
+# data_estreia é OPCIONAL: o runtime (_load_backlog) lida com vazio e a legenda
+# só cita data quando há uma — itens auto-RSS sem data são válidos (sem invenção).
+CAMPOS_OBRIGATORIOS = ["id", "titulo", "contexto", "query_youtube"]
 
 # ---------------------------------------------------------------------------
 # Detecta chaves duplicadas (erro silencioso no Python padrão)

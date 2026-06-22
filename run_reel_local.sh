@@ -24,6 +24,14 @@ set +a
 
 {
   echo "=== Reel local — $TS ==="
+
+  # 1) Abastece o backlog com trailers OFICIAIS novos do RSS (nunca inventa data)
+  echo "--- Abastecendo backlog ---"
+  python3 refresh_backlog.py || echo "refresh_backlog falhou (segue com backlog atual)"
+  python3 validate_backlog.py --fix >/dev/null 2>&1 || true
+
+  # 2) Publica o reel (só trailer de canal oficial; sem material → pula)
+  echo "--- Publicando reel ---"
   python3 -c "
 import sys, logging
 sys.path.insert(0, 'src')
@@ -36,6 +44,18 @@ except Exception as e:
     print('Reel não publicado:', e)
     sys.exit(1)
 "
+  # 3) Persiste backlog + posts_log no git (best-effort, nunca bloqueia o post).
+  #    Mesmo padrão do CI: sincroniza com o remoto antes de commitar.
+  echo "--- Persistindo no git ---"
+  git fetch origin main >/dev/null 2>&1 || true
+  git stash >/dev/null 2>&1 || true
+  git rebase origin/main >/dev/null 2>&1 || git reset --hard origin/main >/dev/null 2>&1 || true
+  git stash pop >/dev/null 2>&1 || true
+  git add -f data/trailer_backlog.json logs/posts_log.json 2>/dev/null || true
+  git diff --staged --quiet 2>/dev/null || {
+    git commit -m "chore: backlog auto-rss + log reel [skip ci]" >/dev/null 2>&1 || true
+    git push origin main >/dev/null 2>&1 || echo "push falhou (PAT expirado?) — segue local"
+  }
 } >> "$LOG" 2>&1
 
 echo "Log: $LOG"
