@@ -63,5 +63,44 @@
     "query_youtube": "Toy Story 5 trailer oficial dublado português 2026",
     "prioridade": 2,
     "postado": false
+  },
+  {
+    "id": "the-batman-part-ii-2027",
+    "titulo": "Batman: Parte II",
+    "titulo_original": "The Batman Part II",
+    "ano": "2027",
+    "data_estreia": "2027-10-01",
+    "status": "pre_estreia",
+    "elenco": "Robert Pattinson, Matt Reeves (direção)",
+    "contexto": "Continuação do Batman de Matt Reeves com Robert Pattinson. Parte do selo Elseworlds da DC, fora do DCU principal de James Gunn. Sequência do filme de 2022.",
+    "query_youtube": "The Batman Part II trailer oficial dublado português",
+    "prioridade": 1,
+    "postado": false
+  },
+  {
+    "id": "star-wars-starfighter-2027",
+    "titulo": "Star Wars: Starfighter",
+    "titulo_original": "Star Wars: Starfighter",
+    "ano": "2027",
+    "data_estreia": "2027-05-28",
+    "status": "pre_estreia",
+    "elenco": "Ryan Gosling, Shawn Levy (direção)",
+    "contexto": "Novo filme standalone de Star Wars dirigido por Shawn Levy, estrelado por Ryan Gosling. Ambientado cerca de cinco anos após A Ascensão Skywalker.",
+    "query_youtube": "Star Wars Starfighter trailer oficial dublado português",
+    "prioridade": 1,
+    "postado": false
+  },
+  {
+    "id": "avengers-secret-wars-2027",
+    "titulo": "Vingadores: Guerras Secretas",
+    "titulo_original": "Avengers: Secret Wars",
+    "ano": "2027",
+    "data_estreia": "2027-12-17",
+    "status": "pre_estreia",
+    "elenco": "Irmãos Russo (direção)",
+    "contexto": "Sexto filme dos Vingadores e desfecho da Saga do Multiverso, dirigido pelos irmãos Russo. Sequência direta de Vingadores: Dia do Juízo Final.",
+    "query_youtube": "Avengers Secret Wars trailer oficial dublado português",
+    "prioridade": 1,
+    "postado": false
   }
 ]

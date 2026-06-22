@@ -51,9 +51,20 @@ def _make_round_logo(size: int = LOGO_SIZE) -> Path:
     return out_path
 
 
+def _cookie_args() -> list:
+    """
+    Cookies do Chrome só existem na máquina local. No GitHub Actions (CI=true)
+    não há navegador — usar o flag quebra o yt-dlp. Trailers do YouTube são
+    públicos e baixam sem cookies, então no CI retornamos lista vazia.
+    """
+    if os.environ.get("CI", "").lower() == "true" or os.environ.get("GITHUB_ACTIONS"):
+        return []
+    return ["--cookies-from-browser", "chrome"]
+
+
 def _ytdlp(*args) -> subprocess.CompletedProcess:
-    """Executa yt-dlp com cookies do Chrome."""
-    cmd = ["yt-dlp", "--cookies-from-browser", "chrome", "--no-playlist"] + list(args)
+    """Executa yt-dlp (com cookies do Chrome quando rodando localmente)."""
+    cmd = ["yt-dlp"] + _cookie_args() + ["--no-playlist"] + list(args)
     return subprocess.run(cmd, capture_output=True, text=True)
 
 
@@ -335,8 +346,8 @@ def process_adhoc_video(url: str, output_path: str) -> str:
     raw = output_path.replace(".mp4", "_raw.mp4")
 
     r = subprocess.run(
-        ["yt-dlp", "--cookies-from-browser", "chrome",
-         url, "-o", raw, "--merge-output-format", "mp4"],
+        ["yt-dlp"] + _cookie_args() +
+        [url, "-o", raw, "--merge-output-format", "mp4"],
         capture_output=True, text=True,
     )
     if r.returncode != 0 or not os.path.exists(raw):

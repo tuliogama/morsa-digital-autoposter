@@ -1,2 +1,5 @@
 # Geração de imagens
 pillow>=10.0.0
+
+# Download de trailers para Reels (usado no job de reel do GitHub Actions)
+yt-dlp>=2024.0.0

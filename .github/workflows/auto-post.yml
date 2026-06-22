@@ -2,11 +2,11 @@ name: Morsa Digital — Auto Post
 
 on:
   schedule:
-    # Feed posts: 4x/dia — baseado em análise real de 200 posts (jun/2026)
-    - cron: "0 12 * * *"    # 09h00 BRT ← 46 avg likes
-    - cron: "0 13 * * *"    # 10h00 BRT ← 62 avg likes
-    - cron: "0 21 * * *"    # 18h00 BRT ← 243 avg likes (MELHOR JANELA)
-    - cron: "0 0 * * *"     # 21h00 BRT ← 116 avg likes (2ª melhor)
+    # Feed posts: 3x/dia (1 por janela) — qualidade > volume p/ recuperar alcance
+    - cron: "0 12 * * *"    # 09h00 BRT → SÓ checagem de estreia (não é feed)
+    - cron: "0 13 * * *"    # 10h00 BRT → feed (manhã)
+    - cron: "0 21 * * *"    # 18h00 BRT → feed + reel (melhor janela)
+    - cron: "0 0 * * *"     # 21h00 BRT → feed (2ª melhor)
     # Carrossel editorial: 2x/dia — 10h30 BRT (eleva a manhã) + 18h30 BRT (pico noturno)
     - cron: "30 13 * * *"   # 10h30 BRT → carrossel (manhã)
     - cron: "30 21 * * *"   # 18h30 BRT → carrossel (noite)
@@ -58,7 +58,6 @@ jobs:
     # Roda nos horários de feed OU quando mode=feed no manual trigger
     if: >
       (github.event_name == 'schedule' && (
-        github.event.schedule == '0 12 * * *' ||
         github.event.schedule == '0 13 * * *' ||
         github.event.schedule == '0 21 * * *' ||
         github.event.schedule == '0 0 * * *'
@@ -82,7 +81,7 @@ jobs:
       - name: Publicar posts de feed
         env:
           DRY_RUN: ${{ inputs.dry_run || 'false' }}
-          POSTS_PER_RUN: "2"
+          POSTS_PER_RUN: "1"
           DELAY_BETWEEN_POSTS: "90"
         run: |
           PLATFORMS="${{ inputs.platforms || 'instagram' }}"
