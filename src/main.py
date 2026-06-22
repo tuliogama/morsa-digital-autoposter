@@ -140,9 +140,32 @@ def main():
     results = []
     published = 0
 
+    # Dedup DENTRO do run: o is_duplicate() checa o log histórico, mas duas
+    # notícias do mesmo evento (fontes/idiomas diferentes) entram juntas e o
+    # log ainda não tem nenhuma. Rastreamos o que já saiu NESTE run.
+    from posts_log import _key_words
+    run_keywords: list[set] = []
+    run_urls: set = set()
+
+    def _is_same_run_dup(item: dict) -> bool:
+        url = item.get("url", "")
+        if url and url in run_urls:
+            return True
+        kw = _key_words(item.get("title", ""))
+        if not kw:
+            return False
+        for prev in run_keywords:
+            if len(kw & prev) >= 2:   # mesmo threshold do is_duplicate
+                return True
+        return False
+
     for n in best_news:
         if published >= posts_per_run:
             break
+
+        if _is_same_run_dup(n):
+            logger.info(f"⏭️  Pulando '{n['title'][:60]}' — mesmo evento já publicado neste run")
+            continue
 
         if published > 0:
             logger.info(f"Aguardando {delay_between}s antes do próximo post...")
@@ -165,6 +188,11 @@ def main():
                 results.append({"status": "ok", **result})
                 logger.info(f"✅ Publicado [{platform}]: {result}")
                 published += 1
+
+                # Registra no dedup do run para barrar o mesmo evento de outra fonte
+                run_keywords.append(_key_words(n.get("title", "")))
+                if n.get("url"):
+                    run_urls.add(n["url"])
 
             except (NoImageError, CaptionGenerationError) as e:
                 logger.info(f"⏭️  Pulando '{n['title'][:60]}' — {e}. Tentando próximo...")

@@ -256,6 +256,23 @@ def _count_named_items(body: str) -> int:
     return len({p.strip() for p in proper if len(p) > 2})
 
 
+def _cap_hashtags(content: str, max_tags: int = 8) -> str:
+    """
+    Mantém no máximo `max_tags` hashtags (as primeiras, mais específicas),
+    removendo o excesso. O modelo às vezes despeja 15-20 — parece bot e
+    prejudica alcance. As hashtags ficam no fim; reescreve só esse bloco.
+    """
+    tags = _re.findall(r"#\w+", content)
+    if len(tags) <= max_tags:
+        return content
+    # Remove todas as hashtags do texto e recoloca só as primeiras no fim
+    kept = tags[:max_tags]
+    body = _re.sub(r"#\w+", "", content)
+    body = _re.sub(r"[ \t]+\n", "\n", body)          # limpa espaços antes de quebra
+    body = _re.sub(r"\n{3,}", "\n\n", body).rstrip()
+    return f"{body}\n\n{' '.join(kept)}"
+
+
 def _verify_specificity(caption: str, title: str) -> tuple[bool, str]:
     """
     Garante que a legenda ENTREGA o que o título promete.
@@ -400,6 +417,9 @@ def generate_post(news_item: dict, platform: str, brief: dict = None) -> dict:
             f"Não foi possível gerar legenda de qualidade para: {title[:60]}"
         )
 
+    # Corta excesso de hashtags — regra é 6-8, o modelo às vezes despeja 20
+    content = _cap_hashtags(content, max_tags=8)
+
     # Headline para a imagem: gerado pelo Groq — curto, completo, sem reticências
     try:
         image_headline = _call_groq(
@@ -491,6 +511,73 @@ def generate_trailer_caption(news_item: dict) -> str:
     return f"{title}\n\nO trailer chegou e a internet já está dividida.\n\nVocê tá no hype ou ainda na dúvida?\n\n#Trailer #Cinema #CulturaGeek"
 
 
+# Franquias de games com fandom BR consolidado — o resto é nichê (3-4 likes, evitar)
+_BIG_GAME_FRANCHISES = (
+    "gta", "grand theft auto", "god of war", "zelda", "elden ring", "dark souls",
+    "call of duty", "final fantasy", "resident evil", "the last of us", "spider-man",
+    "valorant", "league of legends", "counter-strike", "cs2", "fortnite", "minecraft",
+    "pokemon", "pokémon", "mario", "sonic", "hollow knight", "silksong", "witcher",
+    "cyberpunk", "diablo", "overwatch", "ea fc", "ea sports fc", "fifa", "death stranding",
+    "metroid", "metal gear", "kingdom hearts", "tekken", "mortal kombat", "street fighter",
+)
+_GAME_SIGNALS = ("game", "jogo", "gameplay", "dlc", "rpg", "mmorpg", "fps", "console",
+                 "playstation", "xbox", "nintendo", "steam", "ps5", "esport", "patch",
+                 "update", "atualiza", "expansão", "expansion")
+
+
+def _categorize(news_item: dict) -> str:
+    """Classifica a notícia para garantir variedade e rebaixar games nichê."""
+    t = f"{news_item.get('title','')} {news_item.get('description','')}".lower()
+    if any(k in t for k in ("batman", "superman", "flash", "aquaman", "wonder woman",
+                            "james gunn", " dcu", "the batman", "lanterna verde")):
+        return "dc"
+    if any(k in t for k in ("marvel", "avengers", "vingadores", "spider-man", "homem-aranha",
+                            "x-men", "deadpool", "thor", "loki", "mcu", "wandavision")):
+        return "marvel"
+    if "star wars" in t or "mandalorian" in t or "jedi" in t or "skywalker" in t:
+        return "starwars"
+    if any(k in t for k in ("anime", "mangá", "manga", "one piece", "jujutsu", "demon slayer",
+                            "dragon ball", "naruto", "bleach", "chainsaw")):
+        return "anime"
+    # Nome de franquia grande já basta (ex.: "GTA VI ganha data" não tem palavra "game")
+    if any(f in t for f in _BIG_GAME_FRANCHISES):
+        return "game_big"
+    if any(k in t for k in _GAME_SIGNALS):
+        return "game_niche"
+    if any(k in t for k in ("filme", "movie", "trailer", "cinema", "pixar", "disney")):
+        return "movie"
+    if any(k in t for k in ("série", "series", "temporada", "season", "netflix", "hbo")):
+        return "series"
+    return "other"
+
+
+def _rerank_for_diversity(selected: list) -> list:
+    """
+    Reordena para: (1) empurrar games nichê para o fim (baixo engajamento) e
+    (2) nunca deixar 3 posts da mesma categoria em sequência.
+    """
+    if len(selected) <= 2:
+        return selected
+    tagged = [(_categorize(n), n) for n in selected]
+    # Games nichê vão para o fim, preservando a ordem relativa do resto
+    non_niche = [x for x in tagged if x[0] != "game_niche"]
+    niche     = [x for x in tagged if x[0] == "game_niche"]
+    ordered = non_niche + niche
+
+    # Espalha categorias: evita 3 iguais seguidas
+    result, pending = [], list(ordered)
+    while pending:
+        idx = 0
+        if len(result) >= 2 and result[-1][0] == result[-2][0]:
+            # últimas duas são da mesma categoria → busca a próxima diferente
+            for j, (cat, _) in enumerate(pending):
+                if cat != result[-1][0]:
+                    idx = j
+                    break
+        result.append(pending.pop(idx))
+    return [n for _, n in result]
+
+
 def select_best_news(news_list: list, count: int = 6, brief: dict = None) -> list:
     """
     Usa Groq para selecionar e ordenar as melhores notícias do dia.
@@ -533,7 +620,9 @@ def select_best_news(news_list: list, count: int = 6, brief: dict = None) -> lis
             "2. Tem potencial de debate/opinião no fandom BR? (versus, polêmica, surpresa, revelação)\n"
             "3. A franquia tem base consolidada no Brasil (>500k fãs BR estimados)?\n"
             "4. É novidade real (trailer, confirmação, data, cancelamento) — não rumor vago?\n"
-            "5. Variedade no conjunto (não 4 posts de games seguidos)\n\n"
+            "5. Variedade no conjunto — NUNCA 2+ games seguidos, alterne categorias\n"
+            "6. Game nichê (MMORPG indie, sim de fábrica, jogo sem fandom BR massivo) → NÃO selecione, mesmo que seja novidade\n"
+            "7. NUNCA selecione a MESMA notícia/evento de duas fontes diferentes — escolha só uma\n\n"
             "Responda APENAS com os números separados por vírgula. Ex: 3,1,7,2",
             f"Estratégia do dia: {strategy}\n\nNotícias disponíveis:\n{titles}\n\n"
             f"Selecione os {count} melhores índices em ordem de prioridade (do mais ao menos impactante):",
@@ -542,8 +631,8 @@ def select_best_news(news_list: list, count: int = 6, brief: dict = None) -> lis
         indices = [int(x.strip()) - 1 for x in result.split(',') if x.strip().isdigit()]
         selected = [news_list[i] for i in indices if 0 <= i < len(news_list)]
         if selected:
-            return selected[:count]
+            return _rerank_for_diversity(selected[:count])
     except Exception as e:
         logger.warning(f"select_best_news Groq falhou ({e}) — usando ordem original")
 
-    return news_list[:count]
+    return _rerank_for_diversity(news_list[:count])
