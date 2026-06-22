@@ -219,13 +219,28 @@ O page token não expira enquanto a senha não mudar.
 
 ### GitHub Actions — agenda atual (jun/2026, BRT)
 Baseada nos dados reais de performance. Horários em BRT (cron em UTC = +3):
-- **Feed (imagem)**: 09h, 10h, 18h, 21h — `POSTS_PER_RUN=2` → **8 posts/dia**
+- **Feed (imagem)**: 10h, 18h, 21h — `POSTS_PER_RUN=1` → **3 posts/dia** (reduzido de 8 em 22/jun: 8 imagens/dia estavam estrangulando o alcance — análise mostrou 6 avg likes, algoritmo sufocado)
 - **Carrossel**: 10h30 (eleva a manhã) + 18h30 (pico) → **2/dia**
-- **Reel**: 18h **diário** — usa o cron 0 21 * * * do feed (job casa via `if`); fonte = `data/trailer_backlog.json` + fallback RSS de trailers
 - **Estreia Hoje**: 09h — só publica se algum filme/série estreia no dia
 - Plataforma padrão: `instagram`
 - Secret `FB_ACCESS_TOKEN` precisa ser atualizado via `gh secret set FB_ACCESS_TOKEN`
-- **Manutenção**: reabastecer `data/trailer_backlog.json` regularmente — com reel diário, o backlog esvazia e passa a depender do RSS. Backlog vazio + sem trailer no RSS no dia = reel não publica (falha graciosa, nunca inventa).
+
+### Reel — roda LOCAL no Mac, NÃO no CI (decisão 22/jun)
+O YouTube bloqueia o IP de datacenter do GitHub Actions: mesmo com cookies
+(secret `YOUTUBE_COOKIES`, que destrava a busca), ele serve "only images
+available" e recusa os streams de vídeo. Então o reel **não roda no CI** —
+o job só existe via `workflow_dispatch` manual.
+- **Produção**: launchd `~/Library/LaunchAgents/com.morsa.dailyreel.plist` →
+  `run_reel_local.sh` todo dia às 18h. Local tem cookies do Chrome + IP
+  residencial, então o download funciona. Requer o Mac ligado às 18h.
+- `run_reel_local.sh` fixa `PATH=/opt/homebrew/bin` (launchd não herda PATH;
+  precisa do python3.14, não do /usr/bin/python3 3.9 que quebra no `|`).
+- **Anti-fake**: `reel_downloader` só aceita trailer de **canal oficial**
+  (`_is_official`) e rejeita fan-made/concept (`_is_fanmade`). Sem oficial
+  recente (90 dias), pula — nunca posta trailer falso. Lição: NÃO adicionar
+  ao backlog filmes sem trailer oficial lançado (a busca pega fan-made).
+- **Manutenção**: reabastecer `data/trailer_backlog.json` só com filmes cujo
+  trailer OFICIAL já saiu. Sem item válido + sem trailer no RSS = não posta.
 
 ---
 
