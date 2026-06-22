@@ -41,6 +41,13 @@ LOGO_MARGIN = 40
 
 HEADERS = {"User-Agent": "MorsaDigital-Autoposter/1.0"}
 
+FACE_SIZE   = 110
+FACE_MARGIN = 28
+
+# Localiza fotos dos apresentadores (extensão dinâmica)
+FACE_TULIO = next((ASSETS_DIR / "faces" / f"tulio{ext}" for ext in (".jpg", ".jpeg", ".png") if (ASSETS_DIR / "faces" / f"tulio{ext}").exists()), ASSETS_DIR / "faces" / "tulio.jpg")
+FACE_PEDRO = next((ASSETS_DIR / "faces" / f"pedro{ext}" for ext in (".jpg", ".jpeg", ".png") if (ASSETS_DIR / "faces" / f"pedro{ext}").exists()), ASSETS_DIR / "faces" / "pedro.jpg")
+
 
 # ---------------------------------------------------------------------------
 # Funções auxiliares (mesmas do image_generator)
@@ -236,6 +243,55 @@ def _draw_tag(img, tag_text: str, slide_num: int = None, total: int = None):
 
 
 # ---------------------------------------------------------------------------
+# Stickers de apresentadores
+# ---------------------------------------------------------------------------
+
+def _make_face_sticker(path: Path, size: int = FACE_SIZE):
+    """Crop quadrado do topo da foto (onde fica o rosto), recorte circular com borda branca."""
+    from PIL import Image, ImageDraw
+    if not path.exists():
+        return None
+    try:
+        img = Image.open(path).convert("RGBA")
+        w, h = img.size
+        sq   = min(w, h)
+        left = (w - sq) // 2
+        img  = img.crop((left, 0, left + sq, sq))
+        img  = img.resize((size, size), Image.LANCZOS)
+        mask = Image.new("L", (size, size), 0)
+        ImageDraw.Draw(mask).ellipse((0, 0, size - 1, size - 1), fill=255)
+        circle = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+        circle.paste(img, (0, 0), mask)
+        border = 4
+        full   = size + border * 2
+        canvas = Image.new("RGBA", (full, full), (0, 0, 0, 0))
+        ImageDraw.Draw(canvas).ellipse((0, 0, full - 1, full - 1), fill=(255, 255, 255, 255))
+        canvas.paste(circle, (border, border), circle)
+        return canvas
+    except Exception as e:
+        logger.warning(f"Falha ao criar sticker de rosto: {e}")
+        return None
+
+
+def _paste_face_stickers(img):
+    """Cola stickers circulares de Tulio e Pedro no canto superior direito."""
+    from PIL import Image
+    base    = img.convert("RGBA")
+    stick_t = _make_face_sticker(FACE_TULIO, FACE_SIZE)
+    stick_p = _make_face_sticker(FACE_PEDRO, FACE_SIZE)
+    full    = FACE_SIZE + 8
+    W       = base.width
+    y       = FACE_MARGIN
+    x_p     = W - FACE_MARGIN - full
+    x_t     = x_p - (full - 20)
+    if stick_p:
+        base.paste(stick_p, (x_p, y), stick_p)
+    if stick_t:
+        base.paste(stick_t, (x_t, y), stick_t)
+    return base
+
+
+# ---------------------------------------------------------------------------
 # Slides
 # ---------------------------------------------------------------------------
 
@@ -302,9 +358,8 @@ def make_cover_slide(title: str, subtitle: str, category_tag: str,
             draw.text((x, y_cur), ln, fill=COLOR_LIGHT_GRAY, font=sub_font)
             y_cur += 42
 
-    # Logo
+    img = _paste_face_stickers(img)
     img = _paste_logo(img)
-
     return img.convert("RGB")
 
 
@@ -423,99 +478,52 @@ def make_content_slide(number: int, total: int, headline: str,
     return img.convert("RGB")
 
 
-def make_cta_slide(cta_text: str = "Salva pra não esquecer 🔖",
-                   secondary: str = "Qual foi o melhor? Comenta aí") -> object:
+def make_cta_slide(image_url: str = None) -> object:
     """
-    Último slide: fundo escuro sólido + logo grande centralizada + CTA.
+    Último slide: imagem de fundo escurecida + CURTIU? laranja +
+    SEGUE O MORSA E COMPARTILHA COM UM AMIGO + stickers + logo.
     """
-    from PIL import Image, ImageDraw
+    from PIL import Image, ImageDraw, ImageEnhance
 
-    img  = Image.new("RGB", (POST_W, POST_H), COLOR_DARK)
-    draw = ImageDraw.Draw(img)
-    W, H = POST_W, POST_H
+    bg = _fetch_bg(image_url) if image_url else None
+    if bg:
+        img = ImageEnhance.Brightness(bg.convert("RGB")).enhance(0.35)
+    else:
+        img = Image.new("RGB", (POST_W, POST_H), COLOR_DARK)
 
-    # Barra laranja no topo
-    draw.rectangle([0, 0, W, 8], fill=COLOR_ORANGE)
+    draw  = ImageDraw.Draw(img)
+    W, H  = POST_W, POST_H
+    STROKE = 3
 
-    # Logo centralizada grande
-    logo = _round_logo(180)
-    if logo:
-        lx = (W - 180) // 2
-        ly = int(H * 0.22)
-        img.paste(logo, (lx, ly), logo)
-
-    # Handle laranja
-    handle_font = _load_font(48)
-    handle      = "@morsadigital"
+    # "CURTIU?" em laranja
+    curtiu_font = _load_font(120)
+    curtiu_text = "CURTIU?"
     try:
-        hb = draw.textbbox((0, 0), handle, font=handle_font)
-        hx = (W - (hb[2] - hb[0])) // 2
+        tw = draw.textbbox((0, 0), curtiu_text, font=curtiu_font)[2]
     except Exception:
-        hx = W // 4
-    draw.text((hx, int(H * 0.22) + 200), handle, font=handle_font, fill=COLOR_ORANGE)
+        tw = W - 120
+    draw.text(((W - tw) // 2, int(H * 0.28)), curtiu_text, font=curtiu_font, fill=COLOR_ORANGE)
 
-    # CTA principal
-    cta_font = _load_font(66)
-    cta_lines = []
-    words = cta_text.split()
-    line  = ""
-    MAX_W = W - 120
-    for word in words:
-        test = (line + " " + word).strip()
-        try:
-            w = draw.textbbox((0, 0), test, font=cta_font)[2]
-            if w > MAX_W and line:
-                cta_lines.append(line)
-                line = word
-            else:
-                line = test
-        except Exception:
-            line = test
-    if line:
-        cta_lines.append(line)
-
-    y_cur = int(H * 0.55)
-    for ln in cta_lines[:2]:
+    # "SEGUE O MORSA / E COMPARTILHA / COM UM AMIGO" em branco
+    cta_font  = _load_font(72)
+    cta_lines = ["SEGUE O MORSA", "E COMPARTILHA", "COM UM AMIGO"]
+    y_cur = int(H * 0.50)
+    for ln in cta_lines:
         try:
             tw = draw.textbbox((0, 0), ln, font=cta_font)[2]
         except Exception:
-            tw = MAX_W
+            tw = W - 120
         x = (W - tw) // 2
+        for dx in range(-STROKE, STROKE + 1):
+            for dy in range(-STROKE, STROKE + 1):
+                if dx != 0 or dy != 0:
+                    draw.text((x + dx, y_cur + dy), ln, fill=(0, 0, 0, 200), font=cta_font)
         draw.text((x, y_cur), ln, font=cta_font, fill=COLOR_WHITE)
-        y_cur += 76
+        y_cur += 86
 
-    # Secundário
-    sec_font  = _load_font(36)
-    sec_lines = []
-    line = ""
-    for word in secondary.split():
-        test = (line + " " + word).strip()
-        try:
-            w = draw.textbbox((0, 0), test, font=sec_font)[2]
-            if w > MAX_W and line:
-                sec_lines.append(line)
-                line = word
-            else:
-                line = test
-        except Exception:
-            line = test
-    if line:
-        sec_lines.append(line)
-
-    y_cur += 16
-    for ln in sec_lines[:2]:
-        try:
-            tw = draw.textbbox((0, 0), ln, font=sec_font)[2]
-        except Exception:
-            tw = MAX_W
-        x = (W - tw) // 2
-        draw.text((x, y_cur), ln, font=sec_font, fill=COLOR_LIGHT_GRAY)
-        y_cur += 46
-
-    # Barra laranja no rodapé
-    draw.rectangle([0, H - 8, W, H], fill=COLOR_ORANGE)
-
-    return img
+    img = _paste_face_stickers(img)
+    img = _paste_logo(img)
+    return img.convert("RGB")
 
 
 # ---------------------------------------------------------------------------
@@ -589,10 +597,9 @@ def generate_carousel(carousel_data: dict) -> list:
         )
         slides_imgs.append(slide)
 
-    # CTA
+    # CTA — usa imagem da capa escurecida como fundo
     cta = make_cta_slide(
-        cta_text  = carousel_data.get("cta_text", "Salva pra não esquecer 🔖"),
-        secondary = carousel_data.get("cta_secondary", "Qual foi o melhor? Comenta aí"),
+        image_url = carousel_data.get("cover_image_url"),
     )
     slides_imgs.append(cta)
 

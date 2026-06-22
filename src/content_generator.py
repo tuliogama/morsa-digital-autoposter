@@ -175,18 +175,47 @@ class CaptionGenerationError(Exception):
 
 import re as _re
 
-# Substantivos de lista: "7 HERÓIS QUE...", "5 ANIMES QUE ESTREIAM..."
-_LIST_NOUNS = (
-    r"her[óo]is|vil[õo]es|animes|mang[áa]s|filmes|jogos|games|s[ée]ries|doramas|"
-    r"personagens|momentos|cenas|teorias|curiosidades|motivos|raz[õo]es|vers[õo]es|"
-    r"easter eggs|refer[êe]ncias|atores|diretores|trailers|f[ai]ses|temporadas"
-)
-_LIST_RE = _re.compile(rf"\b(\d{{1,2}})\s+({_LIST_NOUNS})\b", _re.IGNORECASE)
+# Os TÍTULOS chegam em inglês OU português → detecção bilíngue.
+# (Os checks do CORPO ficam em PT porque a legenda gerada é sempre PT.)
 
-# Promessa de estreia/data/lançamento no título
+# Substantivos de lista: "7 HERÓIS QUE...", "5 ANIMES...", "7 Heroes Who..."
+_LIST_NOUNS = (
+    r"her[óo]is|heroes|vil[õo]es|villains|animes?|mang[áa]s|mangas?|filmes|movies|"
+    r"jogos|games|s[ée]ries|series|shows|doramas|personagens|characters|"
+    r"momentos|moments|cenas|scenes|teorias|theories|curiosidades|motivos|reasons|"
+    r"raz[õo]es|vers[õo]es|versions|easter eggs|refer[êe]ncias|references|"
+    r"atores|actors|diretores|directors|trailers|f[ai]ses|temporadas|seasons|"
+    r"epis[óo]dios|episodes|reviravoltas|twists|mortes|deaths|things|ways"
+)
+# Permite até 3 palavras entre o número e o substantivo: "7 Comic Book Heroes", "5 Best Anime"
+_LIST_RE = _re.compile(rf"\b(\d{{1,2}})\s+(?:[\w'&-]+\s+){{0,3}}({_LIST_NOUNS})\b", _re.IGNORECASE)
+
+# Promessa de estreia/data/lançamento no título (EN+PT)
 _DATE_PROMISE_RE = _re.compile(
     r"\b(estreia|estr[ée]ia|data de|chega em|lan[çc]a(?:mento)?|anuncia|"
-    r"ganha data|j[áa] tem data|quando estreia)\b", _re.IGNORECASE)
+    r"ganha data|j[áa] tem data|quando estreia|"
+    r"release date|premiere|premieres|debuts?|launches|gets? (?:a )?release|"
+    r"arrives|announces? (?:a )?date|comes out|out date|sets? (?:a )?date)\b",
+    _re.IGNORECASE)
+
+# Promessa de "a coisa específica" (singular): "o arco mais subestimado",
+# "a cena que mudou tudo", "quebra uma regra", "mata um personagem".
+# O título aponta para UMA coisa concreta sem nomeá-la — o corpo TEM que nomear.
+# Substantivo de assunto único (EN+PT) — usado só para detectar a promessa no título
+_SUBJECT_NOUNS = (
+    r"arco|arc|cena|scene|epis[óo]dio|episode|reviravolta|twist|regra|rule|"
+    r"personagem|character|morte|death|vil[ãa]o|villain|her[óo]i|hero|"
+    r"momento|moment|easter egg|refer[êe]ncia|reference|teoria|theory|"
+    r"detalhe|detail|segredo|secret|final|ending|revela[çc][ãa]o|reveal|"
+    r"conex[ãa]o|connection|line|quote"
+)
+_SUBJECT_PROMISE_RE = _re.compile(
+    rf"\b(?:o|a|os|as|um|uma|seu|sua|mais|melhor|pior|maior|"
+    rf"the|a|an|its|most|best|worst|biggest|one)\s+(?:[\w'-]+\s+){{0,2}}"
+    rf"(?:{_SUBJECT_NOUNS})\b|"
+    rf"\b(?:quebra|muda|mata|revela|esconde|conecta|"
+    rf"breaks?|changes?|kills?|reveals?|hides?|connects?)\b",
+    _re.IGNORECASE)
 
 # Tokens que comprovam uma data concreta no corpo
 _MESES = ("janeiro|fevereiro|mar[çc]o|abril|maio|junho|julho|agosto|setembro|"
@@ -199,6 +228,15 @@ _CONCRETE_DATE_RE = _re.compile(
 _FILLER_RE = _re.compile(
     r"\b(v[áa]rios|alguns|diversos|entre outros|e muito mais|uma s[ée]rie de|"
     r"v[áa]rias|in[úu]meros|muitos outros|outros tantos|e mais)\b", _re.IGNORECASE)
+
+# Frase evasiva: o texto se refere ao assunto sem nomeá-lo (sinal de não-entrega).
+# "o arco em questão", "esse personagem", "a cena que mudou", "tal reviravolta".
+_EVASION_RE = _re.compile(
+    rf"\b(?:em quest[ãa]o|em destaque)\b|"
+    rf"\b(?:esse|este|essa|esta|aquele|aquela|tal|determinad[oa]|cert[oa]|um certo)\s+"
+    rf"(?:{_SUBJECT_NOUNS})\b|"
+    rf"\b(?:o|a)\s+(?:{_SUBJECT_NOUNS})\s+que\b",
+    _re.IGNORECASE)
 
 # Linguagem de venda/serviço em 1ª pessoa — Morsa só noticia
 _SELLING_RE = _re.compile(
@@ -246,6 +284,12 @@ def _verify_specificity(caption: str, title: str) -> tuple[bool, str]:
         if not _CONCRETE_DATE_RE.search(body):
             return False, "título promete estreia/data mas o corpo não traz data concreta"
 
+    # 4) Título aponta para UMA coisa específica (o arco, a cena, qual regra) →
+    #    o corpo não pode escapar com frase evasiva sem nomear a coisa
+    if _SUBJECT_PROMISE_RE.search(title):
+        if _EVASION_RE.search(body):
+            return False, "título promete algo específico mas o corpo escapa sem nomear ('em questão', 'esse arco', etc.)"
+
     return True, ""
 
 
@@ -291,8 +335,12 @@ def generate_post(news_item: dict, platform: str, brief: dict = None) -> dict:
     # ENRIQUECIMENTO: se a descrição é fina OU o título promete especificidade
     # (lista numerada, estreia/data), busca o corpo do artigo para dar dados reais
     # ao modelo. Sem isso o modelo preenche com genérico.
-    promises_specificity = bool(_LIST_RE.search(title) or _DATE_PROMISE_RE.search(title))
-    if url and (len(description) < 220 or promises_specificity):
+    promises_specificity = bool(
+        _LIST_RE.search(title)
+        or _DATE_PROMISE_RE.search(title)
+        or _SUBJECT_PROMISE_RE.search(title)
+    )
+    if url and (len(description) < 400 or promises_specificity):
         try:
             from news_fetcher import fetch_article_text
             article = fetch_article_text(url)
