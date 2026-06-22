@@ -30,7 +30,9 @@ set +a
   python3 refresh_backlog.py || echo "refresh_backlog falhou (segue com backlog atual)"
   python3 validate_backlog.py --fix >/dev/null 2>&1 || true
 
-  # 2) Publica o reel (só trailer de canal oficial; sem material → pula)
+  # 2) Publica o reel (só trailer de canal oficial; sem material → pula).
+  #    "sem reel hoje" é normal, NÃO é erro — || true para não abortar o script
+  #    (set -e) e garantir que o passo de persistência abaixo sempre rode.
   echo "--- Publicando reel ---"
   python3 -c "
 import sys, logging
@@ -41,9 +43,8 @@ try:
     result = run_reel()
     print('Reel publicado:', result)
 except Exception as e:
-    print('Reel não publicado:', e)
-    sys.exit(1)
-"
+    print('Sem reel hoje:', e)
+" || true
   # 3) Persiste backlog + posts_log no git (best-effort, nunca bloqueia o post).
   #    Mesmo padrão do CI: sincroniza com o remoto antes de commitar.
   echo "--- Persistindo no git ---"
