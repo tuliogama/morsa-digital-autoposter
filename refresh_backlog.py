@@ -26,6 +26,14 @@ from datetime import datetime
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
 
 from news_fetcher import fetch_all_news
+from content_generator import _categorize
+
+# Reel deve ser nerd/geek (Marvel, DC, anime, games top, Star Wars, cinema/série
+# pop). Categorias fora disso não entram no backlog (evita reel off-brand tipo
+# desenho adulto random). Espelha a prioridade do select_best_news.
+# Só categorias claramente nerd/geek. "movie"/"series" ficam de fora porque
+# casam com "netflix"/"cinema" genéricos (pegavam desenho adulto random).
+_ONBRAND_CATS = {"dc", "marvel", "anime", "starwars", "game_big"}
 
 # Backlog é premium: exige "trailer"/"teaser" NO TÍTULO (is_trailer_news é frouxo
 # — "revealed"/"watch the" pegam artigos que não são trailer).
@@ -169,6 +177,8 @@ def refresh(dry_run: bool = False) -> dict:
 
     added = []
     for n in trailers:
+        if _categorize(n) not in _ONBRAND_CATS:
+            continue  # off-brand (não é nerd/geek) — fora do backlog
         titulo = _clean_title(n.get("title", ""))
         if len(titulo) < 4:
             continue
