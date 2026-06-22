@@ -7,10 +7,11 @@ on:
     - cron: "0 13 * * *"    # 10h00 BRT ← 62 avg likes
     - cron: "0 21 * * *"    # 18h00 BRT ← 243 avg likes (MELHOR JANELA)
     - cron: "0 0 * * *"     # 21h00 BRT ← 116 avg likes (2ª melhor)
-    # Carrossel editorial: 1x/dia às 18h30 BRT (aproveita pico noturno)
-    - cron: "30 21 * * *"   # 18h30 BRT → carrossel
-    # Reel: 4x/semana (seg, qua, sex, sab) às 18h BRT (melhor janela)
-    - cron: "0 21 * * 1,3,5,6"  # 18h00 BRT → reel
+    # Carrossel editorial: 2x/dia — 10h30 BRT (eleva a manhã) + 18h30 BRT (pico noturno)
+    - cron: "30 13 * * *"   # 10h30 BRT → carrossel (manhã)
+    - cron: "30 21 * * *"   # 18h30 BRT → carrossel (noite)
+    # Reel: diário às 18h BRT — usa o mesmo gatilho 0 21 * * * do feed (job reel
+    # casa com esse cron via 'if'); backlog curado + fallback RSS de trailers
 
   workflow_dispatch:
     inputs:
@@ -120,7 +121,10 @@ jobs:
       group: morsa-editorial
       cancel-in-progress: false
     if: >
-      (github.event_name == 'schedule' && github.event.schedule == '30 21 * * *') ||
+      (github.event_name == 'schedule' && (
+        github.event.schedule == '30 13 * * *' ||
+        github.event.schedule == '30 21 * * *'
+      )) ||
       (github.event_name == 'workflow_dispatch' && (
         inputs.mode == 'carousel' ||
         inputs.mode == 'carousel_deep_dive' ||
@@ -191,7 +195,7 @@ jobs:
       group: morsa-reel
       cancel-in-progress: false
     if: >
-      (github.event_name == 'schedule' && github.event.schedule == '0 21 * * 1,3,5,6') ||
+      (github.event_name == 'schedule' && github.event.schedule == '0 21 * * *') ||
       (github.event_name == 'workflow_dispatch' && inputs.mode == 'reel')
 
     steps:

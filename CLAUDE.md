@@ -217,10 +217,15 @@ O page token não expira enquanto a senha não mudar.
   - Usar caso de uso "Manage everything on your Page"
   - Gerar System User token (nunca expira, independe do usuário)
 
-### GitHub Actions
-- Agenda: 6x/dia (08h, 10h30, 13h, 16h, 19h, 21h30 BRT)
+### GitHub Actions — agenda atual (jun/2026, BRT)
+Baseada nos dados reais de performance. Horários em BRT (cron em UTC = +3):
+- **Feed (imagem)**: 09h, 10h, 18h, 21h — `POSTS_PER_RUN=2` → **8 posts/dia**
+- **Carrossel**: 10h30 (eleva a manhã) + 18h30 (pico) → **2/dia**
+- **Reel**: 18h **diário** — usa o cron 0 21 * * * do feed (job casa via `if`); fonte = `data/trailer_backlog.json` + fallback RSS de trailers
+- **Estreia Hoje**: 09h — só publica se algum filme/série estreia no dia
 - Plataforma padrão: `instagram`
 - Secret `FB_ACCESS_TOKEN` precisa ser atualizado via `gh secret set FB_ACCESS_TOKEN`
+- **Manutenção**: reabastecer `data/trailer_backlog.json` regularmente — com reel diário, o backlog esvazia e passa a depender do RSS. Backlog vazio + sem trailer no RSS no dia = reel não publica (falha graciosa, nunca inventa).
 
 ---
 
