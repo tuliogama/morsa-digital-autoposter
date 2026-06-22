@@ -218,6 +218,18 @@ jobs:
       - name: Validar backlog antes de publicar
         run: python3 validate_backlog.py
 
+      - name: Preparar cookies do YouTube (se houver secret)
+        env:
+          YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
+        run: |
+          if [ -n "$YOUTUBE_COOKIES" ]; then
+            printf '%s' "$YOUTUBE_COOKIES" > /tmp/yt_cookies.txt
+            echo "YT_COOKIES_FILE=/tmp/yt_cookies.txt" >> "$GITHUB_ENV"
+            echo "Cookies do YouTube configurados (destrava busca no CI)"
+          else
+            echo "Sem secret YOUTUBE_COOKIES — YouTube pode bloquear a busca no IP do GitHub"
+          fi
+
       - name: Publicar reel
         env:
           DRY_RUN: ${{ inputs.dry_run || 'false' }}

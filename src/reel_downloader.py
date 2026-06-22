@@ -53,11 +53,17 @@ def _make_round_logo(size: int = LOGO_SIZE) -> Path:
 
 def _cookie_args() -> list:
     """
-    Cookies do Chrome só existem na máquina local. No GitHub Actions (CI=true)
-    não há navegador — usar o flag quebra o yt-dlp. Trailers do YouTube são
-    públicos e baixam sem cookies, então no CI retornamos lista vazia.
+    Cookies para o yt-dlp:
+    - Local: lê direto do Chrome.
+    - CI (GitHub Actions): não há navegador. O YouTube bloqueia IPs de
+      datacenter ("confirm you're not a bot"), então sem cookies a busca
+      volta vazia. Se houver um arquivo de cookies (secret YOUTUBE_COOKIES
+      gravado em YT_COOKIES_FILE), usa ele; senão, vai sem (provável falha).
     """
     if os.environ.get("CI", "").lower() == "true" or os.environ.get("GITHUB_ACTIONS"):
+        cookies_file = os.environ.get("YT_COOKIES_FILE", "")
+        if cookies_file and os.path.exists(cookies_file):
+            return ["--cookies", cookies_file]
         return []
     return ["--cookies-from-browser", "chrome"]
 
@@ -111,6 +117,10 @@ def _search_youtube(query: str, max_results: int = 5, max_age_days: int = 90) ->
             })
         except Exception:
             pass
+
+    if not videos and result.stderr.strip():
+        # Expõe o motivo real (ex.: bloqueio de bot do YouTube em IP de CI)
+        logger.warning(f"yt-dlp busca sem resultado — stderr: {result.stderr.strip()[-300:]}")
 
     logger.info(f"YouTube: {len(videos)} vídeos recentes encontrados para '{query[:50]}'")
     return videos
