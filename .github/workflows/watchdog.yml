@@ -22,12 +22,13 @@ jobs:
           REPO: ${{ github.repository }}
         run: |
           # ── Horários alvo em minutos desde meia-noite UTC ──────────────
-          # DEVE espelhar os crons de auto-post.yml. BRT = UTC-3:
-          #  09:00 BRT = 12:00 UTC = 720 min  (feed)
-          #  10:00 BRT = 13:00 UTC = 780 min  (feed)
+          # DEVE espelhar os crons de FEED de auto-post.yml. BRT = UTC-3.
+          # Feed = 3x/dia desde 22/jun (reduzido de 8 p/ recuperar alcance):
+          #  10:00 BRT = 13:00 UTC = 780 min  (feed manhã)
           #  18:00 BRT = 21:00 UTC = 1260 min (feed — MELHOR JANELA)
           #  21:00 BRT = 00:00 UTC = 0 min    (feed)
-          TARGETS="720 780 1260 0"
+          # 09:00 (720) saiu: agora é só checagem de estreia, não feed.
+          TARGETS="780 1260 0"
           WINDOW=30        # janela de ±30 min em torno de cada horário alvo
           MIN_INTERVAL=45  # intervalo mínimo entre runs (min) para evitar duplicatas
 
