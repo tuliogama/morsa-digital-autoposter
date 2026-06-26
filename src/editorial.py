@@ -22,10 +22,32 @@ import os
 import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from content_generator import _call_groq, CaptionGenerationError
+import re as _re
+
+from content_generator import _call_groq, CaptionGenerationError, _strip_ai_tells
 from news_fetcher import fetch_all_news
 
 logger = logging.getLogger(__name__)
+
+
+# Incidente real (22-26/jun/2026): sem identidade explícita no prompt, o modelo
+# interpretou "Morsa Digital" como agência de marketing e publicou texto de
+# venda de serviço por 4 dias seguidos em carrosséis. Este guard bloqueia
+# qualquer recorrência, independente do prompt estar certo ou não.
+_MARKETING_JUNK_RE = _re.compile(
+    r"marketing digital|ag[êe]ncia de marketing|gest[ãa]o de redes|gest[ãa]o de tr[áa]fego|"
+    r"tr[áa]fego pago|consultoria|impulsion[ae]r? (?:seu|o seu)? ?neg[óo]cio|"
+    r"presen[çc]a online|estrat[ée]gia (?:de marketing|digital)|"
+    r"nossa equipe de especialistas|equipe de especialistas|"
+    r"capta[çc][ãa]o de clientes?|seu neg[óo]cio cresc|lev[ae]r? (?:o )?seu neg[óo]cio|"
+    r"solu[çc][õo]es inovadoras para|resultados concretos|^descubra\b",
+    _re.IGNORECASE,
+)
+
+
+def _is_marketing_junk(text: str) -> bool:
+    """True se o texto soa como agência/marketing em vez de notícia nerd/pop."""
+    return bool(_MARKETING_JUNK_RE.search(text or ""))
 
 
 # ---------------------------------------------------------------------------
@@ -33,6 +55,9 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 
 CAROUSEL_SYSTEM = """Você é o diretor editorial da Morsa Digital — canal nerd/pop para 27k seguidores brasileiros.
+
+IDENTIDADE DA MORSA DIGITAL (não confundir, isso já causou erro grave):
+A Morsa Digital é um CANAL DE NOTÍCIAS de cultura pop/nerd/geek (filmes, séries, animes, games, quadrinhos). Ela NÃO é agência de marketing, NÃO é consultoria, NÃO presta serviço de gestão de redes sociais ou tráfego pago, e NUNCA vende nada. O nome "Digital" é só o nome do canal, não significa "agência digital". Todo conteúdo é sobre FILMES/SÉRIES/GAMES/ANIMES reais, nunca sobre marketing.
 
 Você cria carrosseis editoriais de alta performance para o Instagram.
 
@@ -43,11 +68,12 @@ DADOS DE PERFORMANCE REAIS:
 - Carrosseis editoriais: 4x mais engajamento que posts automáticos
 
 REGRAS DO CARROSSEL:
-- Título da capa: impactante, direto, referencia a franquia/tema
+- Título da capa: impactante, direto, NOMEIA a franquia/tema específico das notícias fornecidas. PROIBIDO título vago como "Descubra as últimas notícias", "Confira os destaques" — o título tem que dizer DO QUE se trata (ex: "TOP 5 ANÚNCIOS DE GTA 6 E MARVEL").
 - Cada slide: headline curto (máx 8 palavras) + corpo de 2-3 frases com contexto real
 - Última slide = CTA variado (nunca "curta e siga" genérico)
 - Tom: fã apaixonado que também sabe do que fala. Não robótico.
 - NUNCA inventar informações — use apenas o que está nas notícias fornecidas
+- PROIBIDO qualquer menção a "marketing", "agência", "seu negócio", "presença online", "estratégia digital", "impulsionar resultados" — isso é conteúdo de NOTÍCIAS, não venda de serviço
 
 Responda APENAS com JSON válido, sem markdown, sem explicações."""
 
@@ -114,43 +140,65 @@ Formato JSON (mesmo schema acima)."""
 Identifique o evento principal e crie slides com os destaques.
 Formato JSON (mesmo schema acima)."""
 
-    try:
-        raw = _call_groq(CAROUSEL_SYSTEM, user_msg, max_tokens=1200)
+    last_error = None
+    for attempt in range(2):
+        try:
+            raw = _call_groq(CAROUSEL_SYSTEM, user_msg, max_tokens=1200)
 
-        # Limpar markdown se vier
-        raw = raw.strip()
-        if raw.startswith("```"):
-            raw = raw.split("```")[1]
-            if raw.startswith("json"):
-                raw = raw[4:]
-        raw = raw.strip().rstrip("```").strip()
+            # Limpar markdown se vier
+            raw = raw.strip()
+            if raw.startswith("```"):
+                raw = raw.split("```")[1]
+                if raw.startswith("json"):
+                    raw = raw[4:]
+            raw = raw.strip().rstrip("```").strip()
 
-        data = json.loads(raw)
+            data = json.loads(raw)
+            title = data.get("title", "")
 
-        # Preencher image_urls ausentes com as das notícias
-        for i, item in enumerate(data.get("items", [])):
-            if not item.get("image_url") and i < len(news_list):
-                # Tentar pegar imagem da notícia correspondente
-                item["image_url"] = None  # será preenchido pelo carousel_generator
+            # Guard: título vago ("Descubra...") ou conteúdo de marketing/agência.
+            # É o que causou 4 dias de posts de venda de serviço no feed real.
+            blob = title + " " + " ".join(
+                (it.get("headline", "") + " " + it.get("body", "")) for it in data.get("items", [])
+            )
+            if _is_marketing_junk(blob):
+                logger.warning(f"Carrossel rejeitado (título vago/marketing): {title!r} — tentativa {attempt+1}")
+                last_error = CaptionGenerationError(f"Carrossel com título vago/marketing: {title!r}")
+                continue
 
-        # Cover image da primeira notícia se não especificado
-        if not data.get("cover_image_url") and news_list:
-            data["cover_image_url"] = None
+            # Preencher image_urls ausentes com as das notícias
+            for i, item in enumerate(data.get("items", [])):
+                if not item.get("image_url") and i < len(news_list):
+                    # Tentar pegar imagem da notícia correspondente
+                    item["image_url"] = None  # será preenchido pelo carousel_generator
 
-        logger.info(f"Conteúdo de carrossel gerado: {data.get('title','?')}")
-        return data
+            # Cover image da primeira notícia se não especificado
+            if not data.get("cover_image_url") and news_list:
+                data["cover_image_url"] = None
 
-    except json.JSONDecodeError as e:
-        logger.error(f"JSON inválido do Groq: {e}\nRaw: {raw[:200]}")
-        raise CaptionGenerationError(f"Groq retornou JSON inválido para carrossel")
-    except Exception as e:
-        raise CaptionGenerationError(f"Falha ao gerar carrossel: {e}")
+            logger.info(f"Conteúdo de carrossel gerado: {title!r}")
+            return data
+
+        except json.JSONDecodeError as e:
+            logger.error(f"JSON inválido do Groq: {e}\nRaw: {raw[:200]}")
+            last_error = CaptionGenerationError("Groq retornou JSON inválido para carrossel")
+        except CaptionGenerationError as e:
+            last_error = e
+        except Exception as e:
+            last_error = CaptionGenerationError(f"Falha ao gerar carrossel: {e}")
+
+    raise last_error or CaptionGenerationError("Falha ao gerar carrossel")
 
 
 def generate_carousel_caption(carousel_data: dict) -> str:
     """
     Gera legenda do Instagram para o carrossel (aparece no feed).
     Tom editorial, resume o carrossel e convida para navegar.
+
+    Valida contra conteúdo de marketing/agência antes de retornar — incidente
+    real (22-26/jun/2026): sem essa identidade explícita, o modelo interpretou
+    "Morsa Digital" como nome de agência de marketing e publicou texto de venda
+    de serviço por 4 dias seguidos. Nunca mais publicar sem essa checagem.
     """
     title = carousel_data.get("title", "")
     items = carousel_data.get("items", [])
@@ -158,41 +206,54 @@ def generate_carousel_caption(carousel_data: dict) -> str:
         item.get("headline", "")[:30] for item in items[:3]
     )
 
-    system = """Você é o copywriter da Morsa Digital.
-Escreva a legenda para um carrossel do Instagram.
+    system = """Você é o copywriter da Morsa Digital — canal de NOTÍCIAS de cultura pop/nerd/geek (filmes, séries, animes, games, quadrinhos) para 27k seguidores brasileiros.
+
+ATENÇÃO: a Morsa Digital NÃO é agência de marketing, NÃO é consultoria, NÃO vende serviço de gestão de redes ou tráfego pago. É um canal de fã que noticia cultura pop. O nome "Digital" é só o nome do canal.
+
+Escreva a legenda para um carrossel do Instagram SOBRE O TEMA NERD/POP fornecido abaixo.
 FORMATO:
-- Linha 1: hook direto (sem emoji no início)
+- Linha 1: hook direto sobre a franquia/notícia (sem emoji no início)
 - Linha em branco
 - 2-3 linhas resumindo o que está no carrossel
 - Linha em branco
 - CTA para arrastar os slides
 - Linha em branco
-- 5-7 hashtags específicas
-NÃO truncar. NÃO começar com emoji."""
+- 5-7 hashtags específicas do tema (filme/série/game/anime), nunca genéricas
+NÃO truncar. NÃO começar com emoji.
+PROIBIDO ABSOLUTO: qualquer menção a "marketing", "agência", "seu negócio", "presença online", "estratégia digital", "resultados", "consultoria", "nossa equipe de especialistas" ou qualquer linguagem de venda de serviço. Isso é sobre cultura pop, não sobre o próprio canal."""
 
     user_msg = (
         f"Carrossel: {title}\n"
         f"Destaques: {items_preview}\n\n"
-        "Escreva a legenda completa do Instagram."
+        "Escreva a legenda completa do Instagram sobre esses temas de cultura pop."
     )
 
-    try:
-        return _call_groq(system, user_msg, max_tokens=500)
-    except Exception as e:
-        # Fallback simples
-        return (
-            f"{title}\n\n"
-            f"Arrasta para ver tudo 👉\n\n"
-            f"#MorsaDigital #CulturaPop #Nerd #Geek"
-        )
+    fallback = (
+        f"{title}\n\n"
+        f"Arrasta para ver tudo 👉\n\n"
+        f"#MorsaDigital #CulturaPop #Nerd #Geek"
+    )
+
+    for _ in range(2):
+        try:
+            raw = _call_groq(system, user_msg, max_tokens=500)
+            if _is_marketing_junk(raw) or _is_marketing_junk(title):
+                logger.warning(f"Legenda de carrossel rejeitada (parece marketing): {raw[:80]!r}")
+                continue
+            return _strip_ai_tells(raw)
+        except Exception as e:
+            logger.warning(f"Groq falhou ao gerar legenda de carrossel: {e}")
+
+    logger.error("Não foi possível gerar legenda de carrossel válida — usando fallback seguro")
+    return fallback
 
 
 # ---------------------------------------------------------------------------
 # Geração de conteúdo para reel
 # ---------------------------------------------------------------------------
 
-REEL_CAPTION_SYSTEM = """Você é o copywriter da Morsa Digital para Reels.
-Reels têm legenda curta e impactante — foco em chamar para assistir o vídeo.
+REEL_CAPTION_SYSTEM = """Você é o copywriter da Morsa Digital para Reels — canal de NOTÍCIAS de cultura pop/nerd/geek (filmes, séries, animes, games). NÃO é agência de marketing nem presta serviço, NUNCA escreva sobre isso.
+Reels têm legenda curta e impactante — foco em chamar para assistir o vídeo sobre a notícia nerd/pop.
 FORMATO:
 - Hook: 1 linha direta (sem emoji no início)
 - Linha em branco
@@ -201,7 +262,8 @@ FORMATO:
 - CTA: "Assiste até o final 👇" ou similar
 - Linha em branco
 - 5-6 hashtags específicas + #MorsaDigital
-NÃO usar mais de 200 palavras."""
+NÃO usar mais de 200 palavras.
+PROIBIDO: qualquer menção a marketing, agência, "seu negócio", "presença online", "estratégia digital" ou venda de serviço."""
 
 
 def generate_reel_data(news_list: list) -> dict:
@@ -337,14 +399,21 @@ def _fetch_carousel_images(carousel_data: dict, news_list: list) -> dict:
 def generate_reel_caption(news_list: list) -> str:
     """Gera legenda curta e impactante para o Reel."""
     titles = " | ".join(n.get("title", "")[:40] for n in news_list[:3])
-    try:
-        return _call_groq(
-            REEL_CAPTION_SYSTEM,
-            f"Noticias do reel: {titles}\nEscreva a legenda completa.",
-            max_tokens=300,
-        )
-    except Exception:
-        return "Os maiores anúncios da semana em 30 segundos 🎬\n\n#MorsaDigital #Nerd #CulturaPop"
+    fallback = "Os maiores anúncios da semana em 30 segundos 🎬\n\n#MorsaDigital #Nerd #CulturaPop"
+    for _ in range(2):
+        try:
+            raw = _call_groq(
+                REEL_CAPTION_SYSTEM,
+                f"Noticias do reel: {titles}\nEscreva a legenda completa.",
+                max_tokens=300,
+            )
+            if _is_marketing_junk(raw):
+                logger.warning(f"Legenda de reel rejeitada (parece marketing): {raw[:80]!r}")
+                continue
+            return _strip_ai_tells(raw)
+        except Exception as e:
+            logger.warning(f"Groq falhou ao gerar legenda de reel: {e}")
+    return fallback
 
 
 # ---------------------------------------------------------------------------
