@@ -567,9 +567,15 @@ def _categorize(news_item: dict) -> str:
         return "game_big"
     if any(k in t for k in _GAME_SIGNALS):
         return "game_niche"
+    # Disney/Pixar corporativo (demissões, receita) — baixo engajamento, tratar como nichê
+    if any(k in t for k in ("demissõ", "layoff", "bilhõe", "receita", "bilhões de dólares",
+                            "box office", "bilheteria")) and any(k in t for k in ("disney", "pixar")):
+        return "game_niche"  # penaliza como game_niche (vai para o fim da fila)
     if any(k in t for k in ("filme", "movie", "trailer", "cinema", "pixar", "disney")):
         return "movie"
-    if any(k in t for k in ("série", "series", "temporada", "season", "netflix", "hbo")):
+    # Séries sem franquia forte — avg 3,5 likes, pior tema
+    if any(k in t for k in ("série", "series", "temporada", "season", "netflix", "hbo",
+                            "streaming", "prime video", "apple tv")):
         return "series"
     return "other"
 
@@ -582,9 +588,10 @@ def _rerank_for_diversity(selected: list) -> list:
     if len(selected) <= 2:
         return selected
     tagged = [(_categorize(n), n) for n in selected]
-    # Games nichê vão para o fim, preservando a ordem relativa do resto
-    non_niche = [x for x in tagged if x[0] != "game_niche"]
-    niche     = [x for x in tagged if x[0] == "game_niche"]
+    # Games nichê e séries genéricas vão para o fim (baixo engajamento comprovado)
+    low_perf = {"game_niche", "series"}
+    non_niche = [x for x in tagged if x[0] not in low_perf]
+    niche     = [x for x in tagged if x[0] in low_perf]
     ordered = non_niche + niche
 
     # Espalha categorias: evita 3 iguais seguidas
@@ -624,28 +631,27 @@ def select_best_news(news_list: list, count: int = 6, brief: dict = None) -> lis
 
         result = _call_groq(
             "Você é o CMO do @morsadigital — canal de cultura pop/nerd para audiência brasileira de 27k seguidores.\n\n"
-            "DADOS REAIS DE PERFORMANCE (análise de 200 posts, jun/2026):\n"
-            "🥇 DC (Batman, Superman, Flash): 144 avg likes — PRIORIDADE MÁXIMA\n"
-            "🥇 Marvel/Avengers/Spider-Man: 46 avg likes — PRIORIDADE MÁXIMA\n"
-            "🥈 Filmes/animações muito aguardados (Pixar, Disney, blockbusters): bom potencial\n"
-            "🥈 Conteúdo que provoca DEBATE e OPINIÃO (versus, rankings, polêmicas): alto comentário\n"
-            "🥉 Star Wars: 26 avg\n"
-            "🥉 Séries com grande base BR (Stranger Things, The Boys): 19 avg\n"
-            "⚠️ Games APENAS os maiores: God of War, Zelda, GTA, Elden Ring, Call of Duty, Final Fantasy\n"
-            "⚠️ Anime APENAS mainstream: One Piece, Jujutsu Kaisen, Demon Slayer, Dragon Ball, Bleach\n"
-            "❌ Games internacionais nichê (Thief, indie, jogos sem fandom BR): 3-4 likes — NUNCA\n"
-            "❌ Tech/gadgets/IA: off-brand, engajamento zero — NUNCA\n"
-            "❌ Anime desconhecido sem base no Brasil: NUNCA\n"
-            "❌ Séries antigas sem hype atual (Stargate, Battlestar): NUNCA\n"
-            "❌ Promoções, ofertas, produtos: JAMAIS\n\n"
+            "DADOS REAIS DE PERFORMANCE (análise de 224 posts, jun-jul/2026):\n"
+            "🥇 DC (Batman, Superman, Lobo, Aquaman): avg 11,9 likes — PRIORIDADE MÁXIMA\n"
+            "🥇 GTA 6: avg 7,5 likes — PRIORIDADE MÁXIMA, qualquer novidade vale\n"
+            "🥇 Star Wars: avg 10,0 likes — sempre selecionar\n"
+            "🥈 Anime mainstream (One Piece, JJK, Demon Slayer, Dragon Ball, Edgerunners): avg 6,2\n"
+            "🥈 Marvel/Avengers: avg 5,8 — só com novidade real (trailer, confirmação, polêmica)\n"
+            "🥈 Games grandes (God of War, Zelda, Elden Ring, Call of Duty, Witcher, Cyberpunk): avg 5,0\n"
+            "❌ Disney/Pixar corporativo (demissões, receita, decisões de negócio): avg 4,7 — NUNCA\n"
+            "❌ Séries genéricas sem franquia forte (streaming, notícias de plataforma): avg 3,5 — NUNCA\n"
+            "❌ Games nichê (indie desconhecido, sim, MMORPG sem base BR): 1-2 likes — NUNCA\n"
+            "❌ Tech/gadgets/IA/promoções: off-brand — NUNCA\n"
+            "❌ Anime sem base consolidada no Brasil: NUNCA\n\n"
             "CRITÉRIOS DE SELEÇÃO (em ordem de peso):\n"
-            "1. É Marvel ou DC? → seleção quase automática\n"
-            "2. Tem potencial de debate/opinião no fandom BR? (versus, polêmica, surpresa, revelação)\n"
-            "3. A franquia tem base consolidada no Brasil (>500k fãs BR estimados)?\n"
-            "4. É novidade real (trailer, confirmação, data, cancelamento) — não rumor vago?\n"
-            "5. Variedade no conjunto — NUNCA 2+ games seguidos, alterne categorias\n"
-            "6. Game nichê (MMORPG indie, sim de fábrica, jogo sem fandom BR massivo) → NÃO selecione, mesmo que seja novidade\n"
-            "7. NUNCA selecione a MESMA notícia/evento de duas fontes diferentes — escolha só uma\n\n"
+            "1. É DC ou GTA 6? → seleção automática\n"
+            "2. É Star Wars ou anime mainstream (OP, JJK, DBS, Demon Slayer)? → selecionar\n"
+            "3. É Marvel com novidade real (trailer, confirmação, polêmica)? → selecionar\n"
+            "4. Tem potencial de debate/opinião no fandom BR? (versus, ranking, polêmica, revelação)\n"
+            "5. A franquia tem base consolidada no Brasil (>500k fãs BR)?\n"
+            "6. Variedade — nunca 2+ games seguidos, alternar categorias\n"
+            "7. NUNCA selecionar notícia corporativa (demissões, receita, fusão de estúdio)\n"
+            "8. NUNCA selecionar a mesma notícia de duas fontes diferentes\n\n"
             "Responda APENAS com os números separados por vírgula. Ex: 3,1,7,2",
             f"Estratégia do dia: {strategy}\n\nNotícias disponíveis:\n{titles}\n\n"
             f"Selecione os {count} melhores índices em ordem de prioridade (do mais ao menos impactante):",
