@@ -7,9 +7,6 @@ on:
     - cron: "0 13 * * *"    # 10h00 BRT → feed (manhã)
     - cron: "0 21 * * *"    # 18h00 BRT → feed + reel (melhor janela)
     - cron: "0 0 * * *"     # 21h00 BRT → feed (2ª melhor)
-    # Carrossel editorial: 2x/dia — 10h30 BRT (eleva a manhã) + 18h30 BRT (pico noturno)
-    - cron: "30 13 * * *"   # 10h30 BRT → carrossel (manhã)
-    - cron: "30 21 * * *"   # 18h30 BRT → carrossel (noite)
     # Reel: diário às 18h BRT — usa o mesmo gatilho 0 21 * * * do feed (job reel
     # casa com esse cron via 'if'); backlog curado + fallback RSS de trailers
 
@@ -20,7 +17,7 @@ on:
         required: false
         default: "feed"
         type: choice
-        options: ["feed", "carousel", "reel", "carousel_deep_dive", "carousel_event"]
+        options: ["feed", "reel"]
       dry_run:
         description: "Dry run (não publica)"
         required: false
@@ -109,81 +106,7 @@ jobs:
           path: logs/run_*.json
           retention-days: 14
 
-  # ── Job 2: Carrossel Editorial ───────────────────────────────────────────
-  carousel:
-    name: Editorial — Carrossel
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    permissions:
-      contents: write
-    concurrency:
-      group: morsa-editorial
-      cancel-in-progress: false
-    if: >
-      (github.event_name == 'schedule' && (
-        github.event.schedule == '30 13 * * *' ||
-        github.event.schedule == '30 21 * * *'
-      )) ||
-      (github.event_name == 'workflow_dispatch' && (
-        inputs.mode == 'carousel' ||
-        inputs.mode == 'carousel_deep_dive' ||
-        inputs.mode == 'carousel_event'
-      ))
-
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: "pip"
-
-      - run: pip install -r requirements.txt
-
-      - name: Publicar carrossel editorial
-        env:
-          DRY_RUN: ${{ inputs.dry_run || 'false' }}
-        run: |
-          # Determinar tipo de carrossel
-          MODE="${{ inputs.mode || 'carousel' }}"
-          if [ "$MODE" = "carousel_deep_dive" ]; then
-            CTYPE="deep_dive"
-          elif [ "$MODE" = "carousel_event" ]; then
-            CTYPE="event_recap"
-          else
-            CTYPE="top_n"
-          fi
-
-          if [ "${{ inputs.dry_run }}" = "true" ]; then
-            echo "DRY RUN — carrossel tipo: $CTYPE (sem publicação)"
-          else
-            python -c "
-          import sys, logging
-          sys.path.insert(0, 'src')
-          logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(name)s: %(message)s')
-          from editorial import run_carousel
-          result = run_carousel(carousel_type='$CTYPE')
-          print('Carrossel publicado:', result)
-          "
-          fi
-
-      - name: Persistir log
-        if: ${{ inputs.dry_run != 'true' }}
-        run: |
-          git config user.name "morsa-bot"
-          git config user.email "bot@morsadigital.com"
-          git fetch origin main
-          git stash || true
-          git rebase origin/main || git reset --hard origin/main
-          git stash pop || true
-          git add -f logs/posts_log.json 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "chore: log carrossel [skip ci]"
-          git push origin main || true
-
-  # ── Job 3: Reel ─────────────────────────────────────────────────────────
+  # ── Job 2: Reel ─────────────────────────────────────────────────────────
   reel:
     name: Editorial — Reel
     runs-on: ubuntu-latest
