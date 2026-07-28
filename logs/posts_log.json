@@ -3674,6 +3674,7 @@
     "metrics": {}
   },
   {
+<<<<<<< Updated upstream
     "media_id": "18095230253376725",
     "platform": "instagram",
     "title": "\"A adaptação é criação deles, não minha\": William Gibson diz que Neuromancer do AppleTV \"não será o livro\" e deixa fãs com medo",
@@ -3737,6 +3738,49 @@
     "image_url": "https://raw.githubusercontent.com/tuliogama/morsa-digital-autoposter/main/images/post_1785269650.jpg",
     "caption_preview": "Kingdom Hearts IV é um dos jogos mais aguardados do momento e, apesar de ter sido anunciado em 2022, ainda sabemos muito pouco sobre ele. A Square Enix nos brindou com dois trailers, algumas screensho",
     "published_at": "2026-07-28T20:14:48.293168+00:00",
+=======
+    "media_id": "18175448254424825",
+    "platform": "instagram",
+    "title": "Marvel SDCC 2026",
+    "source": "",
+    "url": "https://screenrant.com/marvel-studios-2026-sdcc-panel-announcement-reveals/",
+    "image_url": "https://i.imgur.com/j6eVG9E.jpeg",
+    "caption_preview": "A Marvel explodiu o Hall H da SDCC 2026.\n\nRyan Gosling confirmado como Ghost Rider no MCU, com estreia em 2028 e Shawn Levy na direção.\n\nBlack Panther 3 também confirmado: Ryan Coogler volta a dirigir",
+    "published_at": "2026-07-28T02:52:23.937034+00:00",
+    "metrics": {}
+  },
+  {
+    "media_id": "",
+    "platform": "instagram",
+    "title": "Marvel SDCC 2026",
+    "source": "SDCC2026",
+    "url": "https://screenrant.com/marvel-studios-2026-sdcc-panel-announcement-reveals/",
+    "image_url": "https://i.imgur.com/GOThTOO.jpeg",
+    "caption_preview": "A Marvel explodiu o Hall H da SDCC 2026.\n\nRyan Gosling confirmado como Ghost Rider no MCU, com estreia em 2028 e Shawn Levy na direção.\n\nBlack Panther 3 também confirmado: Ryan Coogler volta a dirigir",
+    "published_at": "2026-07-28T02:52:23.944555+00:00",
+    "metrics": {}
+  },
+  {
+    "media_id": "18109390093815799",
+    "platform": "instagram",
+    "title": "Avengers Doomsday SDCC 2026",
+    "source": "SDCC2026",
+    "url": "",
+    "image_url": "https://i.imgur.com/PqJ9Zbu.jpeg",
+    "caption_preview": "Os Russo estão de volta e o Doom de Downey vai ser diferente de tudo.\n\nJoe e Anthony Russo confirmados para dirigir tanto Avengers: Doomsday quanto Secret Wars.\n\nNo Hall H foi exibido footage exclusiv",
+    "published_at": "2026-07-28T02:54:50.710038+00:00",
+    "metrics": {}
+  },
+  {
+    "media_id": "18119589253856498",
+    "platform": "instagram",
+    "title": "DC e Star Wars SDCC 2026",
+    "source": "SDCC2026",
+    "url": "",
+    "image_url": "https://i.imgur.com/NV0n6pk.jpeg",
+    "caption_preview": "A SDCC 2026 foi um dos melhores anos em muito tempo e a DC e Star Wars também apareceram com força.\n\nA DC/Warner trouxe trailers de Clayface e Lanterns para o Hall H. Batman: Knightfall, evento animad",
+    "published_at": "2026-07-28T02:55:22.779844+00:00",
+>>>>>>> Stashed changes
     "metrics": {}
   },
   {
