@@ -18,7 +18,7 @@
     "titulo_original": "Spider-Man: Brand New Day",
     "ano": "2026",
     "data_estreia": "2026-07-31",
-    "status": "pre_estreia",
+    "status": "em_cartaz",
     "elenco": "Tom Holland, Zendaya, Jacob Batalon",
     "contexto": "Quarto filme solo do Homem-Aranha com Tom Holland pela Sony/Marvel. Filmado em Londres. Trailer recente gerou enorme hype.",
     "query_youtube": "Homem-Aranha Um Novo Dia trailer oficial dublado português 2026",
@@ -333,6 +333,19 @@
     "elenco": "",
     "contexto": "Image Courtesy of DC Studios<img width=\"1056\" height=\"594\" src=\"https://comicbook.com/wp-content/uploads/sites/4/2026/05/Hal-Jordan-in-Green-Lantern-costume-in-Lanterns.jpg?w=1056\" class=\"attachment-1056x1056 size-1056x1",
     "query_youtube": "Lanterns Trailer May Have Actually Revealed 5 of the DCU’s Green Lanterns, Including One You Absolutely Missed trailer oficial dublado português",
+    "prioridade": 3,
+    "postado": false,
+    "_origem": "auto-rss"
+  },
+  {
+    "id": "marvel-tokon-fighting-souls-recebe-trailer-de-lancamento-foc",
+    "titulo": "MARVEL Tokon: Fighting Souls recebe trailer de lançamento focado em combates quatro contra quatro",
+    "ano": "",
+    "data_estreia": "",
+    "status": "",
+    "elenco": "",
+    "contexto": "MARVEL Tokon: Fighting Souls recebe trailer de lançamento focado em combates quatro contra quatro",
+    "query_youtube": "MARVEL Tokon: Fighting Souls recebe trailer de lançamento focado em combates quatro contra quatro trailer oficial dublado português",
     "prioridade": 3,
     "postado": false,
     "_origem": "auto-rss"
