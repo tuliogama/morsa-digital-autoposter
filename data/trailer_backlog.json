@@ -401,5 +401,31 @@
     "prioridade": 3,
     "postado": false,
     "_origem": "auto-rss"
+  },
+  {
+    "id": "o-cerco-no-castelo-do-destino",
+    "titulo": "O Cerco no Castelo do Destino",
+    "ano": "",
+    "data_estreia": "",
+    "status": "",
+    "elenco": "",
+    "contexto": "O Cerco no Castelo do Destino",
+    "query_youtube": "O Cerco no Castelo do Destino trailer oficial dublado português",
+    "prioridade": 3,
+    "postado": false,
+    "_origem": "auto-rss"
+  },
+  {
+    "id": "raku-raku-hanten-novo-anime-curto-ganha-trailer-e-elenco",
+    "titulo": "Raku Raku Hanten: Novo anime curto ganha trailer e elenco",
+    "ano": "2026",
+    "data_estreia": "2026-09-01",
+    "status": "pre_estreia",
+    "elenco": "",
+    "contexto": "A Plott anunciou a produção de uma nova série de anime curto intitulada Raku Raku Hanten, com estreia agendada para o final de setembro de 2026. A obra será transmitida através do canal oficial do YouTube. Para celebrar o anúncio, um teaser trailer foi revelado, apresentando não apenas o estilo d",
+    "query_youtube": "Raku Raku Hanten: Novo anime curto ganha trailer e elenco trailer oficial dublado português",
+    "prioridade": 3,
+    "postado": false,
+    "_origem": "auto-rss"
   }
 ]
