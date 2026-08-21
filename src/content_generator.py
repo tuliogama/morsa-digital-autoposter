@@ -1,5 +1,5 @@
 """
-Gera posts adaptados por plataforma usando Groq API (Llama 3.3 70B — gratuito).
+Gera posts adaptados por plataforma usando Groq API (Qwen 3.6 27B).
 Fallback: templates sem IA se a API falhar.
 """
 import json
@@ -12,7 +12,7 @@ from datetime import datetime
 logger = logging.getLogger(__name__)
 
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
-MODEL = "llama-3.3-70b-versatile"
+MODEL = "qwen/qwen3.6-27b"
 
 INSTAGRAM_SYSTEM = """Você é três vozes em uma só para a Morsa Digital, canal brasileiro de cultura pop/nerd/geek:
 
@@ -160,6 +160,7 @@ def _call_groq(system: str, user_msg: str, max_tokens: int = 600) -> str:
             {"role": "user",   "content": user_msg},
         ],
         "temperature": 0.7,
+        "reasoning_effort": "none",
     }).encode()
 
     req = urllib.request.Request(
@@ -268,7 +269,10 @@ def _strip_ai_tells(text: str) -> str:
     """
     Garante que nenhum travessão (tell nº1 de IA) chegue à legenda, mesmo se o
     modelo ignorar o prompt. Troca por vírgula e limpa a pontuação resultante.
+    Também remove blocos <think>...</think> de modelos de raciocínio.
     """
+    # Remove blocos <think>...</think> (Qwen/reasoning models)
+    text = _re.sub(r"<think>.*?</think>", "", text, flags=_re.DOTALL).strip()
     # " — " vira ", "; travessão colado vira vírgula
     text = _re.sub(r"\s*[—–]\s*", ", ", text)
     text = _re.sub(r"\s+,", ",", text)          # " ," -> ","
