@@ -649,6 +649,7 @@
     "metrics": {}
   },
   {
+<<<<<<< Updated upstream
     "media_id": "18123670660811730",
     "platform": "instagram",
     "title": "Medidor de moralidade de GTA 6 pode supostamente \"quebrar\" e tornar o jogador irredimível em caso de muita destruição",
@@ -657,6 +658,16 @@
     "image_url": "https://raw.githubusercontent.com/tuliogama/morsa-digital-autoposter/main/images/post_1788384246.jpg",
     "caption_preview": "GTA 6 tem um limite invisível que pode transformar seu personagem em um caso perdido para sempre.\n\nO sistema de Perfil Criminal vai além do básico e conta com quatro níveis definidos: Profissional, Ag",
     "published_at": "2026-09-02T21:24:43.222970+00:00",
+=======
+    "media_id": "17905349511492348",
+    "platform": "instagram",
+    "title": "Even More GTA 6 Screenshots from Rockstar Games",
+    "source": "IGN Brasil",
+    "url": "https://br.ign.com/grand-theft-auto-vi/155867/even-more-gta-6-screenshots-from-rockstar-games",
+    "image_url": "https://raw.githubusercontent.com/tuliogama/morsa-digital-autoposter/main/images/post_1788384349.jpg",
+    "caption_preview": "A Rockstar soltou mais 12 prints do GTA 6 e o nível de detalhe é absurdo.\n\nCada ângulo mostra o quão realista o Vice City vai ser, desde a iluminação dos prédios até a textura da água. Não é apenas um",
+    "published_at": "2026-09-02T21:26:24.281306+00:00",
+>>>>>>> Stashed changes
     "metrics": {}
   }
 ]
