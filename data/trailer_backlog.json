@@ -5,7 +5,7 @@
     "titulo_original": "Masters of the Universe",
     "ano": "2026",
     "data_estreia": "2026-06-05",
-    "status": "em_cartaz",
+    "status": "EXPIRADO",
     "elenco": "Nicholas Galitzine, Camila Mendes, Jared Leto, Alison Brie, Idris Elba",
     "contexto": "Filme live-action do He-Man estreou em junho de 2026. Nicholas Galitzine vive He-Man/Príncipe Adam. Idris Elba é Skeletor. Jared Leto também no elenco. Baseado nos bonecos icônicos dos anos 80.",
     "query_youtube": "Mestres do Universo trailer oficial dublado português 2026",
@@ -476,6 +476,19 @@
     "elenco": "",
     "contexto": "The Witcher 3: Wild Hunt - Songs of the Past tem primeiro teaser revelado durante a gamescom",
     "query_youtube": "The Witcher 3: Wild Hunt - Songs of the Past tem primeiro teaser revelado durante a gamescom trailer oficial dublado português",
+    "prioridade": 3,
+    "postado": false,
+    "_origem": "auto-rss"
+  },
+  {
+    "id": "rockstar-censors-gta-6-extended-look-trailer-for-china",
+    "titulo": "Rockstar Censors GTA 6 Extended Look Trailer for China",
+    "ano": "",
+    "data_estreia": "",
+    "status": "",
+    "elenco": "",
+    "contexto": "Rockstar Games has published a heavily censored version of the Grand Theft Auto 6 extended look reveal for China.",
+    "query_youtube": "Rockstar Censors GTA 6 Extended Look Trailer for China trailer oficial dublado português",
     "prioridade": 3,
     "postado": false,
     "_origem": "auto-rss"
