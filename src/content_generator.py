@@ -1,6 +1,6 @@
 """
-Gera posts adaptados por plataforma usando Groq API (Qwen 3.6 27B).
-Fallback: templates sem IA se a API falhar.
+Gera posts adaptados por plataforma usando Claude Haiku (Anthropic).
+Fallback: Groq se ANTHROPIC_API_KEY não estiver disponível.
 """
 import json
 import logging
@@ -12,7 +12,10 @@ from datetime import datetime
 logger = logging.getLogger(__name__)
 
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
-MODEL = "qwen/qwen3.6-27b"
+GROQ_MODEL = "llama-3.3-70b-versatile"
+
+ANTHROPIC_API_URL = "https://api.anthropic.com/v1/messages"
+ANTHROPIC_MODEL = "claude-haiku-4-5-20251001"
 
 INSTAGRAM_SYSTEM = """Você é três vozes em uma só para a Morsa Digital, canal brasileiro de cultura pop/nerd/geek:
 
@@ -147,20 +150,45 @@ PLATFORM_PROMPTS = {
 }
 
 
-def _call_groq(system: str, user_msg: str, max_tokens: int = 600) -> str:
+def _call_anthropic(system: str, user_msg: str, max_tokens: int = 600) -> str:
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
+    if not api_key:
+        raise ValueError("ANTHROPIC_API_KEY não configurada")
+
+    payload = json.dumps({
+        "model": ANTHROPIC_MODEL,
+        "max_tokens": max_tokens,
+        "system": system,
+        "messages": [{"role": "user", "content": user_msg}],
+    }).encode()
+
+    req = urllib.request.Request(
+        ANTHROPIC_API_URL,
+        data=payload,
+        headers={
+            "x-api-key": api_key,
+            "anthropic-version": "2023-06-01",
+            "Content-Type": "application/json",
+        },
+        method="POST",
+    )
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.loads(r.read())["content"][0]["text"].strip()
+
+
+def _call_groq_fallback(system: str, user_msg: str, max_tokens: int = 600) -> str:
     api_key = os.environ.get("GROQ_API_KEY", "")
     if not api_key:
         raise ValueError("GROQ_API_KEY não configurada")
 
     payload = json.dumps({
-        "model": MODEL,
+        "model": GROQ_MODEL,
         "max_tokens": max_tokens,
         "messages": [
             {"role": "system", "content": system},
             {"role": "user",   "content": user_msg},
         ],
         "temperature": 0.7,
-        "reasoning_effort": "none",
     }).encode()
 
     req = urllib.request.Request(
@@ -169,13 +197,20 @@ def _call_groq(system: str, user_msg: str, max_tokens: int = 600) -> str:
         headers={
             "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json",
-            "User-Agent": "curl/7.88.1",
-            "Accept": "*/*",
         },
         method="POST",
     )
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.loads(r.read())["choices"][0]["message"]["content"].strip()
+
+
+def _call_groq(system: str, user_msg: str, max_tokens: int = 600) -> str:
+    """Chama Claude Haiku (primário) com fallback para Groq."""
+    try:
+        return _call_anthropic(system, user_msg, max_tokens)
+    except Exception as e:
+        logger.warning(f"Anthropic falhou ({e}), tentando Groq...")
+        return _call_groq_fallback(system, user_msg, max_tokens)
 
 
 class CaptionGenerationError(Exception):
