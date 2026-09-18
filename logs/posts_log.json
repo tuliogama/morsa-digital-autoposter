@@ -449,5 +449,16 @@
     "caption_preview": "PULAR\n\n---\n\n**Motivo:** O título promete uma informação específica (\"CEO da Twitch afirma\") mas a descrição fornecida apenas diz \"o CEO indica ter conhecimento\" sem nomear quem é, sem datar quando foi",
     "published_at": "2026-09-18T17:37:03.591817+00:00",
     "metrics": {}
+  },
+  {
+    "media_id": "18088712261680584",
+    "platform": "instagram",
+    "title": "This Swamp Thing by Alan Moore Hardcover Might Be DC's Most Exciting Release of 2027",
+    "source": "IGN",
+    "url": "https://www.ign.com/articles/swamp-thing-by-alan-moore-omnibus-dc-comics",
+    "image_url": "https://raw.githubusercontent.com/tuliogama/morsa-digital-autoposter/main/images/post_1789766097.jpg",
+    "caption_preview": "Alan Moore salvou Swamp Thing uma segunda vez. Agora com as cores certas.\n\nDC anunciou para 2027 a versão definitiva da saga clássica do Pântano: um omnibus em dois volumes com estojo especial que vai",
+    "published_at": "2026-09-18T21:15:33.704312+00:00",
+    "metrics": {}
   }
 ]
