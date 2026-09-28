@@ -12,7 +12,7 @@ from datetime import datetime
 logger = logging.getLogger(__name__)
 
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
-GROQ_MODEL = "llama-3.3-70b-versatile"
+GROQ_MODEL = "qwen/qwen3.8-27b"
 
 ANTHROPIC_API_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_MODEL = "claude-haiku-4-5-20251001"
@@ -189,6 +189,7 @@ def _call_groq_fallback(system: str, user_msg: str, max_tokens: int = 600) -> st
             {"role": "user",   "content": user_msg},
         ],
         "temperature": 0.7,
+        "reasoning_effort": "none",
     }).encode()
 
     req = urllib.request.Request(
@@ -205,12 +206,12 @@ def _call_groq_fallback(system: str, user_msg: str, max_tokens: int = 600) -> st
 
 
 def _call_groq(system: str, user_msg: str, max_tokens: int = 600) -> str:
-    """Chama Claude Haiku (primário) com fallback para Groq."""
+    """Chama Groq (primário) com fallback para Anthropic."""
     try:
-        return _call_anthropic(system, user_msg, max_tokens)
-    except Exception as e:
-        logger.warning(f"Anthropic falhou ({e}), tentando Groq...")
         return _call_groq_fallback(system, user_msg, max_tokens)
+    except Exception as e:
+        logger.warning(f"Groq falhou ({e}), tentando Anthropic...")
+        return _call_anthropic(system, user_msg, max_tokens)
 
 
 class CaptionGenerationError(Exception):
