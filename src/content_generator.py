@@ -198,6 +198,7 @@ def _call_groq_fallback(system: str, user_msg: str, max_tokens: int = 600) -> st
         headers={
             "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json",
+            "User-Agent": "Mozilla/5.0",
         },
         method="POST",
     )
