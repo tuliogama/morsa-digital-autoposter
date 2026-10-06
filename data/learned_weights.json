@@ -8,9 +8,9 @@
       "adjust": 0
     },
     "dc": {
-      "n": 4,
-      "median": 8.5,
-      "adjust": 0
+      "n": 5,
+      "median": 10,
+      "adjust": -1
     },
     "game_big": {
       "n": 8,
@@ -38,8 +38,8 @@
       "adjust": 0
     },
     "other": {
-      "n": 6,
-      "median": 9.0,
+      "n": 5,
+      "median": 5,
       "adjust": 0
     },
     "series": {
@@ -48,5 +48,5 @@
       "adjust": 0
     }
   },
-  "generated_at": "2026-10-06T18:07:44.326890-03:00"
+  "generated_at": "2026-10-06T18:09:40.502405-03:00"
 }
