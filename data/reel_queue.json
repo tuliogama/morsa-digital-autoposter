@@ -10,7 +10,10 @@
     "youtube_url": "https://www.youtube.com/watch?v=1waRGZxSb58",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/1waRGZxSb58.mp4",
     "added_at": "2026-10-06T18:35:20.055248-03:00",
-    "posted": false
+    "posted": false,
+    "kind": "fresh",
+    "scheduled_for": "2026-10-12",
+    "theme": ""
   },
   {
     "video_id": "4GYtota67go",
@@ -23,7 +26,8 @@
     "youtube_url": "https://www.youtube.com/watch?v=4GYtota67go",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/4GYtota67go.mp4",
     "added_at": "2026-10-06T18:37:28.132671-03:00",
-    "posted": false
+    "posted": false,
+    "kind": "fresh"
   },
   {
     "video_id": "RPBUMysAsro",
@@ -36,7 +40,8 @@
     "youtube_url": "https://www.youtube.com/watch?v=RPBUMysAsro",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/RPBUMysAsro.mp4",
     "added_at": "2026-10-06T18:39:29.126445-03:00",
-    "posted": false
+    "posted": false,
+    "kind": "fresh"
   },
   {
     "video_id": "jouBFFKteGY",
@@ -49,20 +54,10 @@
     "youtube_url": "https://www.youtube.com/watch?v=jouBFFKteGY",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/jouBFFKteGY.mp4",
     "added_at": "2026-10-06T18:40:52.677203-03:00",
-    "posted": false
-  },
-  {
-    "video_id": "fAdDeRnmYgA",
-    "title": "Dom de Iludir | Trailer oficial | Netflix",
-    "channel": "Netflix Brasil",
-    "channel_id": "UCc1l5mTmAv2GC_PXrBpqyKQ",
-    "category": "movie",
-    "description": "Em meio a mentiras bem contadas e segredos bem guardados, Lúcia (Marieta Severo) e Maíra (Alice Wegmann) vivem em pé de guerra. Tudo sai de controle quando Irina (Nanda Costta) entra em cena, trazendo à tona uma teia de mistérios, intrigas e reviravoltas. Com direção geral de Mauro Mendonça Filho, a nova série de melodrama estreia no dia 28 de outubro só na Netflix.\r\n\r\nAssista na Netflix: https://www.netflix.com/title/81930492\r\n\r\nInscreva-se: https://bit.ly/31ynwtw\r\n\r\nSobre a Netflix:\r\nA Netflix é um dos principais serviços de entretenimento do mundo com um vasto catálogo de séries, filmes, jogos e eventos ao vivo disponíveis em diversos idiomas. Nossos assinantes podem assistir, pausar e vo",
-    "published": "2026-09-30T13:00:00+00:00",
-    "youtube_url": "https://www.youtube.com/watch?v=fAdDeRnmYgA",
-    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/fAdDeRnmYgA.mp4",
-    "added_at": "2026-10-06T18:42:22.010306-03:00",
-    "posted": false
+    "posted": false,
+    "kind": "fresh",
+    "scheduled_for": "2026-12-23",
+    "theme": "natal"
   },
   {
     "video_id": "0fmcmV3SQWU",
@@ -75,6 +70,77 @@
     "youtube_url": "https://www.youtube.com/watch?v=0fmcmV3SQWU",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/0fmcmV3SQWU.mp4",
     "added_at": "2026-10-06T18:43:20.900418-03:00",
-    "posted": false
+    "posted": false,
+    "kind": "fresh",
+    "scheduled_for": "2026-10-24",
+    "theme": "halloween"
+  },
+  {
+    "video_id": "0VxoWT0MyLE",
+    "title": "Grand Theft Auto III: 10 Year Anniversary Edition - Official Launch Trailer",
+    "channel": "Rockstar Games",
+    "channel_id": "UC6VcWc1rAoWdBCM0JxrRQ3A",
+    "category": "gta",
+    "description": "Grand Theft Auto III: 10 Year Anniversary Edition is the complete console experience of the award-winning open world original, enhanced and optimized for touch screen mobile devices with new features including an intuitive, fully scalable and customizable user interface; upgraded textures; greater resolution and draw distance; and new mission replay and autosave features for an all-new experience on mobile devices.\r\n\r\nNow available for select new generation iOS and Android devices on the App Store and Android Marketplace for $4.99.",
+    "published": "2011-12-15",
+    "youtube_url": "https://www.youtube.com/watch?v=0VxoWT0MyLE",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/0VxoWT0MyLE.mp4",
+    "added_at": "2026-10-06T18:51:30.391174-03:00",
+    "posted": false,
+    "kind": "acervo",
+    "plan_order": 0,
+    "scheduled_for": "2026-10-09",
+    "theme": "gta"
+  },
+  {
+    "video_id": "f_VBXRZuHTc",
+    "title": "Grand Theft Auto: Vice City - Anniversary Trailer",
+    "channel": "Rockstar Games",
+    "channel_id": "UC6VcWc1rAoWdBCM0JxrRQ3A",
+    "category": "gta",
+    "description": "To commemorate the anniversary of Vice City and its mobile release on December 6th for select iOS and Android devices, please enjoy this new nostalgia-filled Anniversary Video celebrating a decade since the original game's launch.\n\nwww.rockstargames.com/vicecity\n\nESRB Rating: MATURE with Blood and Gore, Violence, Strong Language, Strong Sexual Content, Violence",
+    "published": "2012-11-29",
+    "youtube_url": "https://www.youtube.com/watch?v=f_VBXRZuHTc",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/f_VBXRZuHTc.mp4",
+    "added_at": "2026-10-06T18:52:36.975823-03:00",
+    "posted": false,
+    "kind": "acervo",
+    "plan_order": 1,
+    "scheduled_for": "2026-10-13",
+    "theme": "gta"
+  },
+  {
+    "video_id": "M80K51DosFo",
+    "title": "Grand Theft Auto IV Trailer 1 \"Things Will Be Different\"",
+    "channel": "Rockstar Games",
+    "channel_id": "UC6VcWc1rAoWdBCM0JxrRQ3A",
+    "category": "gta",
+    "description": "Coming for PlayStation 3 and Xbox 360.",
+    "published": "2007-03-29",
+    "youtube_url": "https://www.youtube.com/watch?v=M80K51DosFo",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/M80K51DosFo.mp4",
+    "added_at": "2026-10-06T18:55:07.967662-03:00",
+    "posted": false,
+    "kind": "acervo",
+    "plan_order": 2,
+    "scheduled_for": "2026-10-16",
+    "theme": "gta"
+  },
+  {
+    "video_id": "K8BgHgL_pr8",
+    "title": "IT: Bem-Vindos a Derry | Red Band Trailer Dublado | HBO Max",
+    "channel": "HBO Max Brasil",
+    "channel_id": "UCR7ZwQz60rW9dK59Dirdc8w",
+    "category": "movie",
+    "description": "Corra. \n\n#ITBemVindosADerry chega na HBO e na HBO Max em 26 de outubro.\n\nA #HBOMax é a casa dos seus filmes e séries favoritos da Warner Bros., DC, Cartoon Network, TNT, Adult Swim, Discovery, HBO e Max Originals – além de TODOS os jogos da Champions League ao vivo! Tudo no mesmo lugar para você assistir quando e onde quiser. Nos vemos na hbomax.com   \n\nInscreva-se no canal: https://bit.ly/YouTubeStreamMaxBR\n\nMe segue nas redes! \nTwitter: https://twitter.com/StreamMaxBR\nInstagram: https://www.instagram.com/hbomaxbrasil/ \nFacebook: https://www.facebook.com/hbomaxbrasil\nTikTok: https://www.tiktok.com/@hbomaxbr",
+    "published": "2025-10-14",
+    "youtube_url": "https://www.youtube.com/watch?v=K8BgHgL_pr8",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/K8BgHgL_pr8.mp4",
+    "added_at": "2026-10-06T18:57:21.682263-03:00",
+    "posted": false,
+    "kind": "acervo",
+    "plan_order": 3,
+    "scheduled_for": "2026-10-18",
+    "theme": "halloween"
   }
 ]

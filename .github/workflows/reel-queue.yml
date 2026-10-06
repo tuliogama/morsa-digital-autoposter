@@ -9,8 +9,16 @@ on:
     - cron: "0 21 * * *"    # 18h BRT
     - cron: "0 23 * * *"    # 20h BRT (reserva)
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Publicar agora, mesmo fora do horário ou já tendo saído reel hoje"
+        required: false
+        default: "false"
+        type: choice
+        options: ["false", "true"]
 
 env:
+  REEL_FORCE: ${{ inputs.force || 'false' }}
   GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
   ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
   FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}

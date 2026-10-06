@@ -9,7 +9,13 @@ O CI publica um por dia a partir das 18h BRT (`publish`).
 Fonte: SÓ uploads recentes dos canais oficiais abaixo (ID conferido à mão).
 Legenda sempre nossa + crédito do canal.
 
-Uso:  python src/reel_queue.py fill | publish | due | status
+Três tipos de item na fila:
+  - fixo   (`scheduled_for`): sai naquele dia (Halloween, Natal, lançamentos).
+  - fresh  (`kind: fresh`): lançamento novo achado pelo `fill`; fura a fila do acervo.
+  - acervo (`kind: acervo`): trailers e cenas clássicas pré-mapeados em
+    data/reel_plan.json (`premap`), na ordem do plano, para os dias sem os outros.
+
+Uso:  python src/reel_queue.py fill | premap | publish | due | status
 """
 import json
 import logging
@@ -34,7 +40,9 @@ RELEASE_TAG = "reel-queue"
 REPO = os.environ.get("GITHUB_REPOSITORY", "tuliogama/morsa-digital-autoposter")
 
 REEL_SLOT_BRT = int(os.environ.get("REEL_SLOT_BRT", "18"))
-QUEUE_TARGET = int(os.environ.get("REEL_QUEUE_TARGET", "7"))
+PLAN_PATH = ROOT / "data" / "reel_plan.json"
+FRESH_TARGET = int(os.environ.get("REEL_FRESH_TARGET", "3"))   # lançamentos novos em espera
+PIN_GRACE_DAYS = 2           # fixo que perdeu o dia ainda sai até 2 dias depois
 MAX_PER_CHANNEL = 2          # variedade: no máximo 2 pendentes do mesmo canal
 MAX_AGE_DAYS = 30            # vídeo mais velho que isso não é mais novidade
 MIN_SECONDS, MAX_SECONDS = 20, 210
@@ -175,13 +183,36 @@ def _prepare_video(video_id: str, workdir: str) -> str:
     return out
 
 
+def _is_fresh(q: dict) -> bool:
+    return q.get("kind", "fresh") == "fresh" and not q.get("scheduled_for")
+
+
+def _add_item(queue: list[dict], video_id: str, meta: dict, **extra) -> dict:
+    """Baixa, converte, sobe e registra um vídeo na fila (salva a cada item)."""
+    with tempfile.TemporaryDirectory(prefix="morsa_queue_") as tmp:
+        asset_url = _upload_asset(_prepare_video(video_id, tmp))
+    item = {
+        "video_id": video_id, "title": meta["title"], "channel": meta["channel"],
+        "channel_id": meta["channel_id"], "category": meta["category"],
+        "description": meta["description"], "published": meta["published"],
+        "youtube_url": f"https://www.youtube.com/watch?v={video_id}",
+        "asset_url": asset_url, "added_at": datetime.now(BRT).isoformat(),
+        "posted": False, **extra,
+    }
+    queue.append(item)
+    save_queue(queue)
+    return item
+
+
 def fill() -> int:
+    """Lançamentos novos dos canais oficiais (mantém FRESH_TARGET em espera)."""
     queue = load_queue()
+    fresh = [q for q in pending(queue) if _is_fresh(q)]
     per_channel = {}
-    for q in pending(queue):
+    for q in fresh:
         per_channel[q["channel_id"]] = per_channel.get(q["channel_id"], 0) + 1
-    missing = QUEUE_TARGET - len(pending(queue))
-    logger.info(f"Fila: {len(pending(queue))} pendentes, alvo {QUEUE_TARGET}")
+    missing = FRESH_TARGET - len(fresh)
+    logger.info(f"Fila: {len(pending(queue))} pendentes ({len(fresh)} lançamentos, alvo {FRESH_TARGET})")
     if missing <= 0:
         return 0
 
@@ -196,24 +227,58 @@ def fill() -> int:
             logger.info(f"Fora da duração ({seconds}s): {c['title'][:60]}")
             continue
         try:
-            with tempfile.TemporaryDirectory(prefix="morsa_queue_") as tmp:
-                asset_url = _upload_asset(_prepare_video(c["video_id"], tmp))
+            _add_item(queue, c["video_id"], c, kind="fresh")
         except Exception as e:
             logger.warning(f"Pulando {c['title'][:60]}: {e}")
             continue
-        queue.append({
-            "video_id": c["video_id"], "title": c["title"], "channel": c["channel"],
-            "channel_id": c["channel_id"], "category": c["category"],
-            "description": c["description"], "published": c["published"],
-            "youtube_url": f"https://www.youtube.com/watch?v={c['video_id']}",
-            "asset_url": asset_url, "added_at": datetime.now(BRT).isoformat(),
-            "posted": False,
-        })
-        save_queue(queue)   # salva a cada item: queda no meio não perde o que subiu
         per_channel[c["channel_id"]] = per_channel.get(c["channel_id"], 0) + 1
         added += 1
         logger.info(f"+ [{c['category']}] {c['channel']}: {c['title'][:70]}")
     logger.info(f"Adicionados: {added} | pendentes agora: {len(pending(queue))}")
+    return added
+
+
+def _video_meta(video_id: str) -> dict:
+    """Metadados reais do vídeo; recusa qualquer canal fora da lista oficial."""
+    from reel_downloader import _ytdlp
+    from content_generator import _categorize
+    r = _ytdlp(f"https://www.youtube.com/watch?v={video_id}", "--skip-download", "--dump-json",
+               "--extractor-args", "youtube:lang=pt")
+    v = json.loads(r.stdout)
+    if v.get("channel_id") not in OFFICIAL_CHANNELS:
+        raise ValueError(f"canal fora da lista oficial: {v.get('channel')}")
+    channel = OFFICIAL_CHANNELS[v["channel_id"]]
+    up = v.get("upload_date", "")
+    return {
+        "title": v["title"], "channel": channel, "channel_id": v["channel_id"],
+        "category": _categorize({"title": f"{v['title']} {channel}"}),
+        "description": (v.get("description") or "")[:700],
+        "published": f"{up[:4]}-{up[4:6]}-{up[6:8]}" if len(up) == 8 else "",
+        "duration": int(v.get("duration") or 0),
+    }
+
+
+def premap() -> int:
+    """Baixa e enfileira tudo de data/reel_plan.json que ainda não está na fila."""
+    plan = json.loads(PLAN_PATH.read_text(encoding="utf-8"))
+    queue = load_queue()
+    known = {q["video_id"] for q in queue}
+    todo = [p for p in plan if p["video_id"] not in known]
+    logger.info(f"Plano: {len(plan)} itens, {len(todo)} a baixar")
+    added = 0
+    for n, p in enumerate(todo, 1):
+        try:
+            meta = _video_meta(p["video_id"])
+            extra = {"kind": "acervo", "plan_order": plan.index(p)}
+            if p.get("scheduled_for"):
+                extra.update(scheduled_for=p["scheduled_for"], theme=p.get("theme", ""))
+            _add_item(queue, p["video_id"], meta, **extra)
+            added += 1
+            logger.info(f"[{n}/{len(todo)}] + {p.get('scheduled_for', 'acervo')} | "
+                        f"{meta['channel']}: {meta['title'][:60]}")
+        except Exception as e:
+            logger.warning(f"[{n}/{len(todo)}] FALHOU {p['video_id']}: {str(e)[:150]}")
+    logger.info(f"Pré-mapeados: {added}/{len(todo)}")
     return added
 
 
@@ -234,8 +299,10 @@ def _reel_posted_today() -> bool:
 def is_due() -> tuple[bool, str]:
     now = datetime.now(BRT)
     n = len(pending(load_queue()))
-    if n == 0:
-        return False, "fila vazia (o Mac precisa abastecer)"
+    if _pick_next(load_queue()) is None:
+        return False, "fila sem item para hoje (o Mac precisa abastecer)"
+    if os.environ.get("REEL_FORCE") == "true":
+        return True, f"forçado manualmente ({n} na fila)"
     if now.hour < REEL_SLOT_BRT:
         return False, f"{now:%H:%M} BRT, antes das {REEL_SLOT_BRT}h"
     try:
@@ -246,12 +313,50 @@ def is_due() -> tuple[bool, str]:
     return True, f"reel devido ({n} na fila)"
 
 
-def _pick_next(queue: list[dict]) -> dict:
-    """Mais antigo da fila, evitando repetir a categoria do último publicado."""
-    posted = sorted((q for q in queue if q.get("posted")), key=lambda q: q.get("posted_at", ""))
-    last_cat = posted[-1]["category"] if posted else None
+def _pick_next(queue: list[dict], today=None) -> dict | None:
+    """Fixo do dia → lançamento novo → acervo na ordem do plano."""
+    today = today or datetime.now(BRT).date()
     todo = pending(queue)
-    return next((q for q in todo if q["category"] != last_cat), todo[0])
+
+    def days_late(q):
+        return (today - datetime.strptime(q["scheduled_for"], "%Y-%m-%d").date()).days
+
+    pinned = [q for q in todo if q.get("scheduled_for") and 0 <= days_late(q) <= PIN_GRACE_DAYS]
+    if pinned:
+        return min(pinned, key=days_late)
+    fresh = [q for q in todo if _is_fresh(q)]
+    if fresh:
+        posted = sorted((q for q in queue if q.get("posted")), key=lambda q: q.get("posted_at", ""))
+        last_cat = posted[-1]["category"] if posted else None
+        return next((q for q in fresh if q["category"] != last_cat), fresh[0])
+    acervo = sorted((q for q in todo if not q.get("scheduled_for")),
+                    key=lambda q: q.get("plan_order", 0))
+    return acervo[0] if acervo else None
+
+
+_THEME_NOTES = {
+    "halloween": "Este Reel faz parte do especial de Halloween da Morsa.",
+    "natal": "Este Reel faz parte do especial de Natal da Morsa.",
+    "ano_novo": "Este Reel é da virada de ano da Morsa.",
+    "vingadores": "Este Reel faz parte do aquecimento da Morsa para o novo filme dos Vingadores.",
+    "gta": "Este Reel faz parte da contagem da Morsa para GTA VI.",
+}
+
+
+def _age_note(item: dict) -> str:
+    """Vídeo antigo é relembrança, nunca notícia."""
+    try:
+        published = datetime.fromisoformat(item["published"][:10]).date()
+    except ValueError:
+        return ""
+    days = (datetime.now(BRT).date() - published).days
+    if days <= 60:
+        return ""
+    return (f"ATENÇÃO: o vídeo foi publicado pelo canal em {published:%m/%Y}. NÃO é novidade: "
+            "escreva como relembrança (\"relembre\", \"vale rever\"), nunca como lançamento, "
+            "e não diga que algo \"chegou\", \"saiu\" ou \"estreia em breve\". A obra já foi "
+            "lançada: não especule sobre o que \"vai\" acontecer nela; pergunte ao fã o que "
+            "achou ou qual a lembrança dele.\n")
 
 
 def _caption(item: dict) -> str:
@@ -259,13 +364,15 @@ def _caption(item: dict) -> str:
     from editorial import _with_credit
     user_msg = (
         f"Escreva a legenda para o Reel: {item['title']}\n\n"
+        f"{_age_note(item)}{_THEME_NOTES.get(item.get('theme', ''), '')}\n"
         f"FATOS VERIFICADOS (descrição oficial do canal {item['channel']}) — use APENAS estes, "
         f"nunca invente elenco, data ou enredo:\n{item['description']}\n\n"
         "Não copie frases da descrição oficial: escreva com a voz da Morsa.\n"
         "PROIBIDO afirmar qualquer coisa que não esteja nos fatos acima: data de estreia, "
         "elenco, enredo, se é final de série, se terá continuação, opinião sobre a obra "
         "completa (ninguém assistiu ainda). Na dúvida, fale do que o título promete e "
-        "faça a pergunta ao fã. Termine com 5 a 6 hashtags específicas da franquia."
+        "faça a pergunta ao fã. Termine com 5 a 6 hashtags específicas da franquia "
+        "(nada genérico como #Cinema, #Trailer ou #Filmes)."
     )
     text = ""
     for _ in range(2):
@@ -311,6 +418,8 @@ def main():
     cmd = sys.argv[1] if len(sys.argv) > 1 else "status"
     if cmd == "fill":
         fill()
+    elif cmd == "premap":
+        premap()
     elif cmd == "publish":
         return publish()
     elif cmd == "due":
@@ -320,9 +429,15 @@ def main():
             with open(os.environ["GITHUB_OUTPUT"], "a") as f:
                 f.write(f"reel_due={'true' if due else 'false'}\n")
     else:
-        for q in pending(load_queue()):
-            print(f"[{q['category']}] {q['channel']}: {q['title']}")
-        print(f"{len(pending(load_queue()))} pendentes")
+        todo = pending(load_queue())
+        for q in sorted((q for q in todo if q.get("scheduled_for")), key=lambda q: q["scheduled_for"]):
+            print(f"{q['scheduled_for']} [{q.get('theme', '')}] {q['channel']}: {q['title'][:70]}")
+        for q in todo:
+            if _is_fresh(q):
+                print(f"lançamento  [{q['category']}] {q['channel']}: {q['title'][:70]}")
+        acervo = [q for q in todo if not q.get("scheduled_for") and not _is_fresh(q)]
+        print(f"{len(todo)} pendentes: {sum(1 for q in todo if q.get('scheduled_for'))} fixos, "
+              f"{sum(1 for q in todo if _is_fresh(q))} lançamentos, {len(acervo)} de acervo")
     return 0
 
 
