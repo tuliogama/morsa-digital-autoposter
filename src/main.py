@@ -8,12 +8,12 @@ import logging
 import os
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-from news_fetcher import fetch_all_news
+from news_fetcher import fetch_all_news, fetch_gta_news
 from publishers import twitter, instagram, facebook
 
 logging.basicConfig(
@@ -43,6 +43,31 @@ def save_run_log(posts: list[dict], results: list[dict], dry_run: bool):
         "posts": [{k: v for k, v in p.items() if k != "news_item"} for p in posts],
     }, indent=2, ensure_ascii=False))
     logger.info(f"Log salvo em {log_file}")
+
+
+BRT = timezone(timedelta(hours=-3))
+
+
+def categories_posted_today() -> list[str]:
+    """
+    Categorias já publicadas hoje (dia em BRT). Lê o Instagram direto, que é a
+    fonte da verdade; o posts_log entra só se a API não responder.
+    """
+    from posts_log import captions_posted_on, get_recent_posts
+    from content_generator import _categorize
+    today = datetime.now(BRT).date()
+    titles = captions_posted_on(today, BRT)
+    if not titles:
+        for p in get_recent_posts(platform="instagram", limit=20):
+            try:
+                pub = datetime.fromisoformat(p.get("published_at", ""))
+            except ValueError:
+                continue
+            if pub.tzinfo is None:
+                pub = pub.replace(tzinfo=timezone.utc)
+            if pub.astimezone(BRT).date() == today:
+                titles.append(p.get("title", ""))
+    return [_categorize({"title": t}) for t in titles]
 
 
 def main():
@@ -97,39 +122,57 @@ def main():
     # ------------------------------------------------------------------ #
     # ETAPA 3 — Deduplicação contra log persistente                       #
     # ------------------------------------------------------------------ #
+    from posts_log import is_duplicate
+
+    def _dedup(items: list) -> list:
+        return [n for n in items
+                if not is_duplicate(n["title"], platform="instagram", url=n.get("url", ""))]
+
     try:
-        from posts_log import is_duplicate
         before = len(news)
-        news = [n for n in news if not is_duplicate(n["title"], platform="instagram", url=n.get("url",""))]
+        news = _dedup(news)
         logger.info(f"Dedup: {len(news)}/{before} notícias únicas")
     except Exception as e:
         logger.warning(f"Dedup falhou: {e}")
 
-    if not news:
-        logger.info("Todas as notícias já foram publicadas. Nada a fazer.")
-        return
-
     # ------------------------------------------------------------------ #
-    # ETAPA 4 — Curadoria orientada pelo Day Brief                        #
+    # ETAPA 4 — Curadoria: cota diária de GTA + prioridade por categoria   #
     # ------------------------------------------------------------------ #
-    from content_generator import select_best_news, generate_post, CaptionGenerationError
+    from content_generator import (select_best_news, generate_post,
+                                   CaptionGenerationError, _categorize)
     from publishers.instagram import NoImageError
+
+    today_cats = categories_posted_today()
+    logger.info(f"Categorias já publicadas hoje: {today_cats or 'nenhuma'}")
+
+    # Pelo menos 1 post de GTA por dia: enquanto a cota não fechou, GTA vai na frente
+    gta_first = []
+    if "gta" not in today_cats:
+        try:
+            gta_first = _dedup(fetch_gta_news())[:4]
+        except Exception as e:
+            logger.warning(f"Busca de GTA falhou: {e}")
+        if gta_first:
+            logger.info(f"Cota de GTA em aberto — {len(gta_first)} candidatos na frente da fila")
+        else:
+            logger.warning("Cota de GTA em aberto, mas sem notícia nova de GTA — segue pauta normal")
 
     # Selecionar 4× candidatos para cobrir possíveis falhas de imagem
     candidates_count = posts_per_run * 4
     logger.info(f"Selecionando até {candidates_count} candidatos de {len(news)} notícias...")
     if brief:
         logger.info(f"Estratégia do dia: {brief.get('strategy_note', '')}")
-    best_news = select_best_news(news, count=candidates_count, brief=brief)
+    best_news = select_best_news(news, count=candidates_count, brief=brief,
+                                 today_cats=today_cats + (["gta"] if gta_first else []))
 
-    if not best_news:
-        logger.error("Claude não selecionou nenhuma notícia. Abortando.")
+    if not best_news and not gta_first:
+        logger.error("Nenhuma notícia selecionada. Abortando.")
         sys.exit(1)
 
     if dry_run:
         # Em dry run, apenas mostrar os candidatos
-        for n in best_news[:posts_per_run]:
-            logger.info(f"\n{'='*60}\nFONTE: {n['title'][:80]}\nURL: {n.get('url','')}\n{'='*60}")
+        for n in (gta_first[:1] + best_news)[:max(posts_per_run, 4)]:
+            logger.info(f"\n{'='*60}\n[{_categorize(n)}] {n['title'][:80]}\nURL: {n.get('url','')}\n{'='*60}")
         save_run_log([], [], dry_run=True)
         logger.info("Dry run concluído.")
         return
@@ -159,9 +202,14 @@ def main():
                 return True
         return False
 
-    for n in best_news:
+    gta_done = False
+    for n in gta_first + best_news:
         if published >= posts_per_run:
             break
+
+        if _categorize(n) == "gta":
+            if gta_done:
+                continue
 
         if _is_same_run_dup(n):
             logger.info(f"⏭️  Pulando '{n['title'][:60]}' — mesmo evento já publicado neste run")
@@ -188,6 +236,7 @@ def main():
                 results.append({"status": "ok", **result})
                 logger.info(f"✅ Publicado [{platform}]: {result}")
                 published += 1
+                gta_done = gta_done or _categorize(n) == "gta"
 
                 # Registra no dedup do run para barrar o mesmo evento de outra fonte
                 run_keywords.append(_key_words(n.get("title", "")))

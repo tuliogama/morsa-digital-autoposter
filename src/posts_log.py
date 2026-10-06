@@ -56,12 +56,21 @@ def record_post(media_id: str, platform: str, news_item: dict, caption: str, ima
     logger.info(f"Post registrado no log: {entry['title'][:60]}")
 
 
+# Palavras que toda notícia de uma franquia diária repete: sozinhas não indicam
+# o mesmo evento (sem isto, o post de GTA de ontem barraria o de hoje).
+_GENERIC_WORDS = {"rockstar", "grand", "theft", "auto", "games", "game", "jogo",
+                  "jogos", "fans", "says", "sobre", "para", "with", "from", "that",
+                  "novo", "nova", "está", "disponível", "ganha", "trailer", "anuncia",
+                  "janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho",
+                  "agosto", "setembro", "outubro", "novembro", "dezembro"}
+
+
 def _key_words(text: str) -> set:
     """
     Extrai palavras-chave de um texto para comparação de duplicatas.
     Inclui palavras com >3 letras (pega nomes como 'lucas', 'wars', 'jedi').
     """
-    return {w.lower() for w in text.split() if len(w) > 3 and w.isalpha()}
+    return {w.lower() for w in text.split() if len(w) > 3 and w.isalpha()} - _GENERIC_WORDS
 
 
 # Cache: {media_id: first_line_of_caption}
@@ -110,6 +119,31 @@ def _fetch_api_recent(limit: int = 20) -> dict:
         logger.warning(f"Dedup API falhou: {e}")
         _api_titles_cache = {}
         return _api_titles_cache
+
+
+def captions_posted_on(day, tz) -> list[str]:
+    """Primeira linha das legendas publicadas no Instagram no dia `day` (fuso `tz`)."""
+    token = os.environ.get("FB_ACCESS_TOKEN", "")
+    ig_user_id = os.environ.get("IG_USER_ID", "")
+    if not token or not ig_user_id:
+        return []
+    try:
+        url = (f"https://graph.facebook.com/v19.0/{ig_user_id}/media"
+               f"?fields=caption,timestamp&limit=15&access_token={token}")
+        with urllib.request.urlopen(url, timeout=10) as r:
+            data = json.loads(r.read())
+    except Exception as e:
+        logger.warning(f"Consulta de posts do dia falhou: {e}")
+        return []
+    lines = []
+    for post in data.get("data", []):
+        try:
+            ts = datetime.strptime(post["timestamp"], "%Y-%m-%dT%H:%M:%S%z")
+        except (KeyError, ValueError):
+            continue
+        if ts.astimezone(tz).date() == day:
+            lines.append((post.get("caption") or "").split("\n")[0])
+    return lines
 
 
 def is_duplicate(title: str, platform: str = "instagram", lookback_days: int = 7,

@@ -589,24 +589,36 @@ _GAME_SIGNALS = ("game", "jogo", "gameplay", "dlc", "rpg", "mmorpg", "fps", "con
                  "update", "atualiza", "expansão", "expansion")
 
 
+_GAME_ONLY_SOURCES = {"GameBlast", "Eurogamer", "Kotaku"}
+
+# Regras em ordem de precedência; \b evita falso positivo ("author" não é Thor)
+_CAT_RULES = [
+    ("gta", r"\bgta\b|grand theft auto|vice city|rockstar games"),
+    ("dc", r"\b(batman|superman|supergirl|coringa|joker|aquaman|the flash|wonder woman|"
+           r"mulher-maravilha|lanterna verde|green lantern|lanterns|peacemaker|pacificador|"
+           r"james gunn|dcu|dc studios|dc comics|gotham|arlequina|harley quinn|pinguim)\b"),
+    ("marvel", r"\b(marvel|avengers|vingadores|spider-man|homem-aranha|x-men|deadpool|"
+               r"wolverine|thor|loki|mcu|thanos|doutor destino|doctor doom|demolidor|"
+               r"daredevil|quarteto fantástico|fantastic four)\b"),
+    ("starwars", r"\b(star wars|mandalorian|jedi|skywalker|ahsoka|darth vader|sith)\b"),
+    ("anime_big", r"\b(one piece|jujutsu|demon slayer|kimetsu|dragon ball|naruto|boruto|"
+                  r"bleach|chainsaw man|evangelion|attack on titan|hunter x hunter|"
+                  r"my hero academia|solo leveling)\b"),
+    ("anime", r"\b(anime|animes|mangá|manga|shonen)\b"),
+]
+_CAT_RULES = [(c, _re.compile(rx, _re.IGNORECASE)) for c, rx in _CAT_RULES]
+
+
 def _categorize(news_item: dict) -> str:
-    """Classifica a notícia para garantir variedade e rebaixar games nichê."""
+    """Classifica a notícia para priorizar o público engajado e rebaixar nichê."""
     t = f"{news_item.get('title','')} {news_item.get('description','')}".lower()
-    if any(k in t for k in ("batman", "superman", "flash", "aquaman", "wonder woman",
-                            "james gunn", " dcu", "the batman", "lanterna verde")):
-        return "dc"
-    if any(k in t for k in ("marvel", "avengers", "vingadores", "spider-man", "homem-aranha",
-                            "x-men", "deadpool", "thor", "loki", "mcu", "wandavision")):
-        return "marvel"
-    if "star wars" in t or "mandalorian" in t or "jedi" in t or "skywalker" in t:
-        return "starwars"
-    if any(k in t for k in ("anime", "mangá", "manga", "one piece", "jujutsu", "demon slayer",
-                            "dragon ball", "naruto", "bleach", "chainsaw")):
-        return "anime"
-    # Nome de franquia grande já basta (ex.: "GTA VI ganha data" não tem palavra "game")
+    for cat, rx in _CAT_RULES:
+        if rx.search(t):
+            return cat
+    # Nome de franquia grande já basta (ex.: "Zelda ganha data" não tem palavra "game")
     if any(f in t for f in _BIG_GAME_FRANCHISES):
         return "game_big"
-    if any(k in t for k in _GAME_SIGNALS):
+    if any(k in t for k in _GAME_SIGNALS) or news_item.get("source") in _GAME_ONLY_SOURCES:
         return "game_niche"
     # Disney/Pixar corporativo (demissões, receita) — baixo engajamento, tratar como nichê
     if any(k in t for k in ("demissõ", "layoff", "bilhõe", "receita", "bilhões de dólares",
@@ -614,11 +626,32 @@ def _categorize(news_item: dict) -> str:
         return "game_niche"  # penaliza como game_niche (vai para o fim da fila)
     if any(k in t for k in ("filme", "movie", "trailer", "cinema", "pixar", "disney")):
         return "movie"
-    # Séries sem franquia forte — avg 3,5 likes, pior tema
+    # Séries sem franquia forte — pior tema
     if any(k in t for k in ("série", "series", "temporada", "season", "netflix", "hbo",
                             "streaming", "prime video", "apple tv")):
         return "series"
     return "other"
+
+
+# Prioridade por categoria (menor = primeiro), pela mediana de likes de 200 posts
+# (ago-out/2026): DC 11 · Marvel 8 · anime 8 · GTA 6 · games 5 · outros 4.
+# Games eram 47% dos posts com o pior retorno; game_niche só entra se faltar pauta.
+_CATEGORY_TIER = {
+    "dc": 0, "marvel": 1, "anime_big": 1, "starwars": 1,
+    "movie": 2, "gta": 2, "anime": 3, "game_big": 3,
+    "other": 4, "series": 4, "game_niche": 9,
+}
+_GAME_CATS = {"gta", "game_big", "game_niche"}
+
+
+def _tier(news_item: dict, today_cats: list) -> int:
+    """Tier do dia: repetir categoria (ou somar mais um game) custa prioridade."""
+    cat = _categorize(news_item)
+    tier = _CATEGORY_TIER.get(cat, 4)
+    tier += 2 * today_cats.count(cat)
+    if cat in _GAME_CATS and any(c in _GAME_CATS for c in today_cats):
+        tier += 2
+    return tier
 
 
 def _rerank_for_diversity(selected: list) -> list:
@@ -630,7 +663,7 @@ def _rerank_for_diversity(selected: list) -> list:
         return selected
     tagged = [(_categorize(n), n) for n in selected]
     # Games nichê e séries genéricas vão para o fim (baixo engajamento comprovado)
-    low_perf = {"game_niche", "series"}
+    low_perf = {"game_niche", "series"}  # ordem de entrada já vem por tier
     non_niche = [x for x in tagged if x[0] not in low_perf]
     niche     = [x for x in tagged if x[0] in low_perf]
     ordered = non_niche + niche
@@ -649,60 +682,50 @@ def _rerank_for_diversity(selected: list) -> list:
     return [n for _, n in result]
 
 
-def select_best_news(news_list: list, count: int = 6, brief: dict = None) -> list:
+def select_best_news(news_list: list, count: int = 6, brief: dict = None,
+                     today_cats: list = None) -> list:
     """
-    Usa Groq para selecionar e ordenar as melhores notícias do dia.
-    Baseia-se em dados reais de performance do @morsadigital (análise jun/2026):
-    - Marvel/DC: 17,6 likes avg (melhor categoria)
-    - Filmes: 10,8 avg
-    - Games grandes (God of War, Zelda, GTA): 10,0 avg
-    - Anime mainstream: bom quando é One Piece, JJK, Demon Slayer
-    - Anime niche: baixíssimo engajamento
-    Fallback: retorna as primeiras `count` notícias.
+    Seleciona as melhores notícias: a categoria define a prioridade (tier, ver
+    _CATEGORY_TIER) e o Groq ordena por impacto dentro de cada tier.
+    `today_cats`: categorias já publicadas hoje, para não repetir tema no dia.
     """
     if not news_list:
         return []
+    today_cats = today_cats or []
+
+    pool = [n for n in news_list if _categorize(n) != "game_niche"] or list(news_list)
+    pool.sort(key=lambda n: _tier(n, today_cats))   # estável: preserva ordem BR-primeiro
+    pool = pool[:20]
 
     try:
         titles = "\n".join(
-            f"{i+1}. [{n['source']}] {n['title']}"
-            for i, n in enumerate(news_list[:20])
+            f"{i+1}. [{n['source']}] {n['title']}" for i, n in enumerate(pool)
         )
         strategy = brief.get('strategy_note', '') if brief else ''
 
         result = _call_groq(
-            "Você é o CMO do @morsadigital — canal de cultura pop/nerd para audiência brasileira de 27k seguidores.\n\n"
-            "DADOS REAIS DE PERFORMANCE (análise de 224 posts, jun-jul/2026):\n"
-            "🥇 DC (Batman, Superman, Lobo, Aquaman): avg 11,9 likes — PRIORIDADE MÁXIMA\n"
-            "🥇 GTA 6: avg 7,5 likes — PRIORIDADE MÁXIMA, qualquer novidade vale\n"
-            "🥇 Star Wars: avg 10,0 likes — sempre selecionar\n"
-            "🥈 Anime mainstream (One Piece, JJK, Demon Slayer, Dragon Ball, Edgerunners): avg 6,2\n"
-            "🥈 Marvel/Avengers: avg 5,8 — só com novidade real (trailer, confirmação, polêmica)\n"
-            "🥈 Games grandes (God of War, Zelda, Elden Ring, Call of Duty, Witcher, Cyberpunk): avg 5,0\n"
-            "❌ Disney/Pixar corporativo (demissões, receita, decisões de negócio): avg 4,7 — NUNCA\n"
-            "❌ Séries genéricas sem franquia forte (streaming, notícias de plataforma): avg 3,5 — NUNCA\n"
-            "❌ Games nichê (indie desconhecido, sim, MMORPG sem base BR): 1-2 likes — NUNCA\n"
-            "❌ Tech/gadgets/IA/promoções: off-brand — NUNCA\n"
-            "❌ Anime sem base consolidada no Brasil: NUNCA\n\n"
-            "CRITÉRIOS DE SELEÇÃO (em ordem de peso):\n"
-            "1. É DC ou GTA 6? → seleção automática\n"
-            "2. É Star Wars ou anime mainstream (OP, JJK, DBS, Demon Slayer)? → selecionar\n"
-            "3. É Marvel com novidade real (trailer, confirmação, polêmica)? → selecionar\n"
-            "4. Tem potencial de debate/opinião no fandom BR? (versus, ranking, polêmica, revelação)\n"
-            "5. A franquia tem base consolidada no Brasil (>500k fãs BR)?\n"
-            "6. Variedade — nunca 2+ games seguidos, alternar categorias\n"
-            "7. NUNCA selecionar notícia corporativa (demissões, receita, fusão de estúdio)\n"
-            "8. NUNCA selecionar a mesma notícia de duas fontes diferentes\n\n"
+            "Você é o CMO do @morsadigital — canal de cultura pop/nerd para audiência brasileira de 26k seguidores.\n\n"
+            "DADOS REAIS (mediana de likes, 200 posts, ago-out/2026):\n"
+            "DC (Batman, Superman, Lanterna Verde): 11 — o público mais engajado\n"
+            "Marvel e anime mainstream (One Piece, JJK, Dragon Ball): 8\n"
+            "GTA 6: 6 · Star Wars: 5 · outros games: 5 · resto: 4\n\n"
+            "CRITÉRIOS (em ordem de peso):\n"
+            "1. Novidade real e concreta (trailer, elenco confirmado, data, revelação) vence rumor\n"
+            "2. Potencial de debate/opinião no fandom BR (polêmica, versus, revelação)\n"
+            "3. Franquia com base consolidada no Brasil\n"
+            "4. NUNCA notícia corporativa (demissões, receita, fusão), tech/gadgets ou promoção\n"
+            "5. NUNCA a mesma notícia de duas fontes diferentes\n\n"
             "Responda APENAS com os números separados por vírgula. Ex: 3,1,7,2",
             f"Estratégia do dia: {strategy}\n\nNotícias disponíveis:\n{titles}\n\n"
             f"Selecione os {count} melhores índices em ordem de prioridade (do mais ao menos impactante):",
             max_tokens=60,
         )
         indices = [int(x.strip()) - 1 for x in result.split(',') if x.strip().isdigit()]
-        selected = [news_list[i] for i in indices if 0 <= i < len(news_list)]
+        selected = [pool[i] for i in dict.fromkeys(indices) if 0 <= i < len(pool)]
         if selected:
+            selected.sort(key=lambda n: _tier(n, today_cats))
             return _rerank_for_diversity(selected[:count])
     except Exception as e:
-        logger.warning(f"select_best_news Groq falhou ({e}) — usando ordem original")
+        logger.warning(f"select_best_news Groq falhou ({e}) — usando ordem por tier")
 
-    return _rerank_for_diversity(news_list[:count])
+    return _rerank_for_diversity(pool[:count])

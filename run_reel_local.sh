@@ -25,6 +25,9 @@ set +a
 {
   echo "=== Reel local — $TS ==="
 
+  # 0) yt-dlp velho quebra em silêncio quando o YouTube muda (403 no download)
+  brew upgrade yt-dlp >/dev/null 2>&1 || true
+
   # 1) Abastece o backlog com trailers OFICIAIS novos do RSS (nunca inventa data)
   echo "--- Abastecendo backlog ---"
   python3 refresh_backlog.py || echo "refresh_backlog falhou (segue com backlog atual)"

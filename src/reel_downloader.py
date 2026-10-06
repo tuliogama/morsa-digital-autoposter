@@ -53,19 +53,17 @@ def _make_round_logo(size: int = LOGO_SIZE) -> Path:
 
 def _cookie_args() -> list:
     """
-    Cookies para o yt-dlp:
-    - Local: lê direto do Chrome.
-    - CI (GitHub Actions): não há navegador. O YouTube bloqueia IPs de
-      datacenter ("confirm you're not a bot"), então sem cookies a busca
-      volta vazia. Se houver um arquivo de cookies (secret YOUTUBE_COOKIES
-      gravado em YT_COOKIES_FILE), usa ele; senão, vai sem (provável falha).
+    Cookies para o yt-dlp. Padrão: nenhum. Com IP residencial o YouTube entrega
+    busca e vídeo sem login, e passar os cookies do Chrome faz ele servir
+    "only images available" (foi o que zerou os reels de ago-out/2026).
+    - CI: usa o arquivo do secret YOUTUBE_COOKIES (YT_COOKIES_FILE), se houver.
+    - Local: YT_COOKIES_BROWSER=chrome religa a leitura do navegador se precisar.
     """
-    if os.environ.get("CI", "").lower() == "true" or os.environ.get("GITHUB_ACTIONS"):
-        cookies_file = os.environ.get("YT_COOKIES_FILE", "")
-        if cookies_file and os.path.exists(cookies_file):
-            return ["--cookies", cookies_file]
-        return []
-    return ["--cookies-from-browser", "chrome"]
+    cookies_file = os.environ.get("YT_COOKIES_FILE", "")
+    if cookies_file and os.path.exists(cookies_file):
+        return ["--cookies", cookies_file]
+    browser = os.environ.get("YT_COOKIES_BROWSER", "")
+    return ["--cookies-from-browser", browser] if browser else []
 
 
 def _ytdlp(*args) -> subprocess.CompletedProcess:
@@ -190,7 +188,7 @@ def _download_video(video_id: str, output_path: str) -> bool:
     """Baixa o vídeo em melhor qualidade disponível."""
     result = _ytdlp(
         f"https://www.youtube.com/watch?v={video_id}",
-        "-f", "bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio/best",
+        "-f", "bestvideo[ext=mp4][height<=1080]+bestaudio[ext=m4a]/bestvideo[height<=1080]+bestaudio/best",
         "--merge-output-format", "mp4",
         "-o", output_path,
     )

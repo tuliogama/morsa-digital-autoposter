@@ -3,6 +3,7 @@ Busca notícias nerd/geek/pop/games de fontes brasileiras e internacionais.
 Reddit é usado APENAS como sinal de tendência no CMO Brain — nunca como fonte de posts.
 """
 import json
+import re
 import time
 import logging
 import urllib.request
@@ -32,6 +33,18 @@ NERD_RSS_FEEDS = [
     # Anime mainstream — cobrir títulos de alto engajamento
     ("Crunchyroll News",    "https://www.crunchyroll.com/news/rss"),
 ]
+
+# Feeds dedicados a GTA — alimentam a cota diária de GTA (ver fetch_gta_news)
+GTA_RSS_FEEDS = [
+    ("RockstarIntel",   "https://rockstarintel.com/feed/"),
+    ("GamesRadar GTA",  "https://www.gamesradar.com/feeds/tag/grand-theft-auto/"),
+    ("Dexerto GTA",     "https://www.dexerto.com/gta/feed/"),
+]
+GTA_TITLE_RE = re.compile(r"\bgta\b|grand theft auto", re.IGNORECASE)
+# Guia de compra/promoção não é notícia
+_GTA_BLOCK_RE = re.compile(
+    r"\bdeals?\b|discount|pre-?order|onde comprar|com desconto|pré-venda|age rating",
+    re.IGNORECASE)
 
 # Fontes 100% nerd — aceitar todos os artigos sem filtro de keyword
 NERD_SOURCES = {
@@ -183,12 +196,16 @@ def _parse_date(raw: str) -> Optional[datetime]:
     return None
 
 
-def fetch_rss(max_per_feed: int = 6) -> list[dict]:
-    """Busca artigos de todos os feeds RSS nerd/geek/pop."""
+def fetch_rss(max_per_feed: int = 6, feeds: list = None, max_age_hours: int = 72,
+              title_re=None) -> list[dict]:
+    """
+    Busca artigos dos feeds RSS nerd/geek/pop.
+    Com `title_re`, só entram títulos que casam com o padrão (de qualquer fonte).
+    """
     items = []
-    cutoff = datetime.now(timezone.utc) - timedelta(hours=72)
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=max_age_hours)
 
-    for feed_name, feed_url in NERD_RSS_FEEDS:
+    for feed_name, feed_url in (feeds or NERD_RSS_FEEDS):
         raw = _fetch_url(feed_url)
         if not raw:
             continue
@@ -218,7 +235,10 @@ def fetch_rss(max_per_feed: int = 6) -> list[dict]:
 
             if not title or not link:
                 continue
-            if not _is_nerd_content(title, feed_name):
+            if title_re is not None:
+                if not title_re.search(title) or _is_blocked(title):
+                    continue
+            elif not _is_nerd_content(title, feed_name):
                 continue
 
             pub_raw = (
@@ -246,6 +266,28 @@ def fetch_rss(max_per_feed: int = 6) -> list[dict]:
         time.sleep(0.2)
 
     return items
+
+
+def fetch_gta_news(max_age_days: int = 5) -> list[dict]:
+    """
+    Notícias de GTA para a cota diária: varre os feeds gerais sem o teto por
+    feed (GTA costuma estar além do 6º item) mais os feeds dedicados.
+    Ordem: fontes BR primeiro, depois mais recentes.
+    """
+    items = fetch_rss(max_per_feed=50, feeds=NERD_RSS_FEEDS + GTA_RSS_FEEDS,
+                      max_age_hours=max_age_days * 24, title_re=GTA_TITLE_RE)
+    seen, unique = set(), []
+    for item in items:
+        key = item["title"].lower()[:60]
+        if key in seen or _GTA_BLOCK_RE.search(item["title"]):
+            continue
+        seen.add(key)
+        unique.append(item)
+    br_sources = {"IGN Brasil", "GameBlast"}
+    unique.sort(key=lambda i: i["published_at"], reverse=True)
+    unique.sort(key=lambda i: i["source"] not in br_sources)
+    logger.info(f"GTA: {len(unique)} notícias nos últimos {max_age_days} dias")
+    return unique
 
 
 def fetch_all_news(limit: int = 40) -> list[dict]:

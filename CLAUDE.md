@@ -167,6 +167,19 @@ Correções implementadas (`news_fetcher.py` + `content_generator.py`):
 
 Resultado: posts de lista/estreia só saem quando entregam os nomes/datas. Posts pulados não contam como falha — `main.py` tenta o próximo candidato (por isso `candidates_count = posts_per_run * 4`).
 
+## Prioridade por categoria e cota de GTA (out/2026)
+
+Análise de 200 posts (ago-out/2026), mediana de likes: DC 11 · Marvel 8 · anime 8 ·
+GTA 6 · Star Wars 5 · outros games 5. Média engana (um post de 302 likes distorce);
+usar mediana. Os "picos" de horário 05h/07h eram outliers, não mexer na agenda por eles.
+- `_CATEGORY_TIER` em `content_generator.py` ordena os candidatos; o Groq só ordena
+  dentro do tier. Repetir categoria no dia custa prioridade; `game_niche` só entra
+  se faltar pauta. Antes, o Groq via só os 20 primeiros itens (feeds BR de games) e
+  games viraram 47% dos posts.
+- **Cota de GTA**: `main.py` checa no Instagram o que já saiu hoje (BRT); sem GTA no
+  dia, `fetch_gta_news()` (feeds gerais sem teto + `GTA_RSS_FEEDS`) vai na frente da
+  fila. Máximo 1 GTA por run.
+
 ## Hashtags, curadoria e dedup (jun/2026)
 
 - **Hashtags**: `_cap_hashtags()` corta para no máximo 8 (modelo despejava 15-20). Aplicado em `generate_post` antes de retornar.
@@ -231,8 +244,11 @@ O YouTube bloqueia o IP de datacenter do GitHub Actions: mesmo com cookies
 available" e recusa os streams de vídeo. Então o reel **não roda no CI** —
 o job só existe via `workflow_dispatch` manual.
 - **Produção**: launchd `~/Library/LaunchAgents/com.morsa.dailyreel.plist` →
-  `run_reel_local.sh` todo dia às 18h. Local tem cookies do Chrome + IP
-  residencial, então o download funciona. Requer o Mac ligado às 18h.
+  `run_reel_local.sh` todo dia às 18h. Requer o Mac ligado às 18h.
+- **Sem cookies (out/2026)**: com IP residencial o yt-dlp funciona sem login.
+  Passar `--cookies-from-browser chrome` faz o YouTube servir "only images" e
+  zerou os reels de ago a out/2026 (109 runs, 0 publicados). Manter o yt-dlp
+  atualizado (`brew upgrade yt-dlp`, já no script): versão velha dá 403.
 - `run_reel_local.sh` fixa `PATH=/opt/homebrew/bin` (launchd não herda PATH;
   precisa do python3.14, não do /usr/bin/python3 3.9 que quebra no `|`).
 - **Anti-fake**: `reel_downloader` só aceita trailer de **canal oficial**
