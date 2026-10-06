@@ -1,0 +1,18 @@
+name: Diagnóstico — YouTube no runner
+
+# Testa se o runner do GitHub consegue buscar e baixar do YouTube (sem publicar nada).
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - run: pip install -q -U yt-dlp && yt-dlp --version
+      - name: Busca
+        run: yt-dlp "ytsearch3:Vingadores Doutor Destino trailer oficial dublado" --skip-download --print "%(id)s | %(channel)s | %(title).60s"
+      - name: Download 720p
+        run: |
+          yt-dlp --no-playlist -f "bestvideo[ext=mp4][height<=720]+bestaudio[ext=m4a]/best[height<=720]" --merge-output-format mp4 -o t.mp4 "https://www.youtube.com/watch?v=TcBtFtkQFiU"
+          ls -la t.mp4
