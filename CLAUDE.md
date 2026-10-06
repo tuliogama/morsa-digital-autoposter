@@ -190,8 +190,9 @@ usar mediana. Os "picos" de horário 05h/07h eram outliers, não mexer na agenda
 - **Revisão noturna** (`src/daily_review.py`, workflow `daily-review.yml`, 22h BRT):
   grava `data/learned_weights.json` (categoria sobe/desce um degrau, n≥5, mediana
   ≥1,4× ou ≤0,6× a geral), `logs/day_brief.json` (orientação de amanhã) e o
-  relatório em `data/daily_review/`. Só curtidas+comentários: o token não tem
-  `instagram_manage_insights`. O `cmo_brain.run_daily_analysis` antigo não roda mais.
+  relatório em `data/daily_review/`. Desde 06/10/2026 o token tem
+  `instagram_manage_insights`: nota = curtidas+comentários+salvos+compartilhamentos,
+  e o relatório traz alcance (mediana de 179 contas por post de feed, <1% dos 26k). O `cmo_brain.run_daily_analysis` antigo não roda mais.
 - **Reels**: só canal oficial (`_is_official`: ID conferido ou selo + nome de
   estúdio), crédito do canal sempre na legenda (`_with_credit`), legenda sempre
   nossa, nunca a descrição do YouTube.

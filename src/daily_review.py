@@ -7,8 +7,9 @@ Gera três arquivos:
   logs/day_brief.json         — orientação editorial de amanhã (lida pelo main.py)
   data/daily_review/AAAA-MM-DD.md — relatório legível
 
-O token atual não tem instagram_manage_insights, então a métrica é
-curtidas + comentários (alcance e salvamentos não estão disponíveis).
+Nota de cada post = curtidas + comentários + salvamentos + compartilhamentos.
+Alcance entra no relatório. Sem instagram_manage_insights no token, cai para
+curtidas + comentários.
 """
 import json
 import logging
@@ -52,6 +53,19 @@ def fetch_media(max_posts: int = 150) -> list[dict]:
     return posts
 
 
+def fetch_insights(media_id: str) -> dict:
+    """Alcance, salvamentos e compartilhamentos de um post ({} se indisponível)."""
+    token = os.environ["FB_ACCESS_TOKEN"]
+    url = (f"https://graph.facebook.com/v19.0/{media_id}/insights"
+           f"?metric=reach,saved,shares&access_token={token}")
+    try:
+        with urllib.request.urlopen(url, timeout=15) as r:
+            data = json.loads(r.read()).get("data", [])
+    except Exception:
+        return {}
+    return {m["name"]: m["values"][0]["value"] for m in data if m.get("values")}
+
+
 def _normalize(posts: list[dict], now: datetime) -> list[dict]:
     from content_generator import _categorize
     rows = []
@@ -59,6 +73,9 @@ def _normalize(posts: list[dict], now: datetime) -> list[dict]:
         ts = datetime.strptime(p["timestamp"], "%Y-%m-%dT%H:%M:%S%z").astimezone(BRT)
         first_line = (p.get("caption") or "").split("\n")[0]
         likes, comments = p.get("like_count", 0), p.get("comments_count", 0)
+        age_h = (now - ts).total_seconds() / 3600
+        ins = fetch_insights(p["id"]) if age_h <= WINDOW_DAYS * 24 else {}
+        saved, shares = ins.get("saved", 0), ins.get("shares", 0)
         rows.append({
             "ts": ts,
             "age_h": (now - ts).total_seconds() / 3600,
@@ -67,7 +84,10 @@ def _normalize(posts: list[dict], now: datetime) -> list[dict]:
             "title": first_line[:90],
             "likes": likes,
             "comments": comments,
-            "score": likes + comments,
+            "reach": ins.get("reach"),
+            "saved": saved,
+            "shares": shares,
+            "score": likes + comments + saved + shares,
         })
     return rows
 
@@ -153,23 +173,28 @@ def write_report(rows: list[dict], weights: dict, brief: dict, now: datetime) ->
     lines = [f"# Revisão diária @morsadigital — {now:%d/%m/%Y %H:%M} BRT", ""]
 
     lines += ["## Hoje (números ainda subindo)", "",
-              "| Hora | Tipo | Categoria | Curtidas | Coment. | Post |", "|---|---|---|---|---|---|"]
+              "| Hora | Tipo | Categoria | Alcance | Curtidas | Coment. | Salvos | Compart. | Post |",
+              "|---|---|---|---|---|---|---|---|---|"]
     for r in sorted(today, key=lambda r: r["ts"]):
         kind = "reel" if r["is_video"] else "feed"
-        lines.append(f"| {r['ts']:%H:%M} | {kind} | {r['cat']} | {r['likes']} | {r['comments']} | {r['title']} |")
+        lines.append(f"| {r['ts']:%H:%M} | {kind} | {r['cat']} | {r['reach'] if r['reach'] is not None else '-'} | "
+                     f"{r['likes']} | {r['comments']} | {r['saved']} | {r['shares']} | {r['title']} |")
     if not today:
-        lines.append("| - | - | - | - | - | nenhum post hoje |")
+        lines.append("| - | - | - | - | - | - | - | - | nenhum post hoje |")
 
     feed7 = [r for r in last7 if not r["is_video"]]
     reels7 = [r for r in last7 if r["is_video"]]
     lines += ["", "## Últimos 7 dias", "",
               f"- Posts de feed: {len(feed7)} | mediana {statistics.median([r['score'] for r in feed7]) if feed7 else 0}",
               f"- Reels: {len(reels7)} | mediana {statistics.median([r['score'] for r in reels7]) if reels7 else 0}",
-              f"- Comentários no total: {sum(r['comments'] for r in last7)}", ""]
+              f"- Alcance mediano por post de feed: {statistics.median([r['reach'] for r in feed7 if r['reach'] is not None] or [0])}",
+              f"- Alcance mediano por reel: {statistics.median([r['reach'] for r in reels7 if r['reach'] is not None] or [0])}",
+              f"- Comentários: {sum(r['comments'] for r in last7)} | salvamentos: {sum(r['saved'] for r in last7)}"
+              f" | compartilhamentos: {sum(r['shares'] for r in last7)}", ""]
     for label, sel in (("Melhores", sorted(last7, key=lambda r: -r["score"])[:5]),
                        ("Piores", sorted(feed7, key=lambda r: r["score"])[:5])):
         lines.append(f"**{label}:**")
-        lines += [f"- {r['score']} · {r['cat']} · {r['title']}" for r in sel]
+        lines += [f"- {r['score']} (alcance {r['reach']}) · {r['cat']} · {r['title']}" for r in sel]
         lines.append("")
 
     lines += [f"## Aprendizado por categoria ({WINDOW_DAYS} dias, feed, posts com +{MATURE_HOURS}h)", "",
