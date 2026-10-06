@@ -10,6 +10,7 @@ Lógica:
 """
 import logging
 import os
+import re
 import subprocess
 import tempfile
 from pathlib import Path
@@ -112,6 +113,8 @@ def _search_youtube(query: str, max_results: int = 5, max_age_days: int = 90) ->
                 "height":   v.get("height", 0),
                 "date":     date_str,
                 "views":    v.get("view_count", 0),
+                "verified": bool(v.get("channel_is_verified")),
+                "channel_id": v.get("channel_id", ""),
             })
         except Exception:
             pass
@@ -124,20 +127,33 @@ def _search_youtube(query: str, max_results: int = 5, max_age_days: int = 90) ->
     return videos
 
 
-def _is_official(channel: str) -> bool:
-    """Verifica se o canal é oficial do estúdio/distribuidora."""
-    official_keywords = [
-        "warner", "sony", "marvel", "disney", "paramount", "universal",
-        "netflix", "amazon", "hbo", "max", "dc", "pixar", "20th century",
-        "lucasfilm", "lionsgate", "a24", "mgm", "dreamworks", "illumination",
-        "focus features", "searchlight", "crunchyroll", "funimation",
-        "star+", "prime video", "apple tv", "official", "oficial",
-        # Distribuidoras BR
-        "telecine", "paris filmes", "diamond films", "imagem filmes",
-        "california filmes", "playarte", "galeria distribuidora",
-    ]
-    ch = channel.lower()
-    return any(k in ch for k in official_keywords)
+_OFFICIAL_CHANNEL_RE = re.compile(
+    r"\b(warner|sony|marvel|disney|paramount|universal|netflix|amazon|prime video|hbo|"
+    r"max|dc|pixar|20th century|lucasfilm|star wars|lionsgate|a24|mgm|dreamworks|"
+    r"illumination|focus features|searchlight|crunchyroll|apple tv|toho|toei|aniplex|"
+    r"rockstar|playstation|xbox|nintendo|capcom|bandai namco|square enix|ubisoft|"
+    r"telecine|paris filmes|diamond films|imagem filmes|california filmes|playarte|"
+    r"galeria distribuidora)\b", re.IGNORECASE)
+
+
+# Canais já conferidos à mão. O selo de verificado some dos metadados de alguns
+# vídeos (o trailer da Marvel Brasil veio sem selo e com "147 inscritos"), então
+# o ID do canal é a prova mais confiável.
+_KNOWN_OFFICIAL_CHANNEL_IDS = {
+    "UCItRs-h8YU1wRRfP637614w",  # Marvel Brasil
+    "UCWOA1ZGywLbqmigxE4Qlvuw",  # Netflix
+    "UC6VcWc1rAoWdBCM0JxrRQ3A",  # Rockstar Games
+}
+
+
+def _is_official(video: dict) -> bool:
+    """
+    Canal oficial = ID conferido, ou selo de verificado do YouTube + nome de
+    estúdio/distribuidora. "Official" no nome não prova nada: canal de fã usa.
+    """
+    if video.get("channel_id") in _KNOWN_OFFICIAL_CHANNEL_IDS:
+        return True
+    return bool(video.get("verified")) and bool(_OFFICIAL_CHANNEL_RE.search(video.get("channel", "")))
 
 
 # Marcadores de trailer FALSO (fan-made/concept) — NUNCA postar como oficial
@@ -277,7 +293,7 @@ def find_trailer(news_item: dict) -> dict | None:
     videos = [v for v in videos if not _is_fanmade(v.get("title", ""), v.get("channel", ""))]
 
     # SÓ canais oficiais. Sem oficial → pula (melhor não postar que postar falso)
-    official = [v for v in videos if _is_official(v["channel"])]
+    official = [v for v in videos if _is_official(v)]
     if not official:
         logger.warning("Nenhum trailer de canal OFICIAL encontrado — pulando (não posta fan-made)")
         return None
@@ -306,6 +322,8 @@ def download_and_process(news_item: dict, output_dir: str = None) -> list[str]:
     trailer = find_trailer(news_item)
     if not trailer:
         return []
+    # Crédito obrigatório na legenda (ver editorial.run_reel)
+    news_item["_video_credit"] = trailer["channel"]
 
     tmp = output_dir or tempfile.mkdtemp(prefix="morsa_reel_")
     raw_path = os.path.join(tmp, f"raw_{trailer['id']}.mp4")

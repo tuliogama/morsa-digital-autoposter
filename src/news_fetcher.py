@@ -80,6 +80,7 @@ BLOCK_KEYWORDS = [
     "assine ", "assinatura", "plano premium", "contrate", "garanta o seu",
     "publieditorial", "publipost", "patrocinado", "em parceria com",
     "use o cupom", "frete grátis", "black friday", "pré-venda com desconto",
+    " deal", "on sale", "discount", "% off", "prime day", "price drop", "lowest price",
     # Esportes reais sem relação com cultura pop
     "copa do mundo de futebol", "nba 2k", " nfl ", "basquete real",
     # Séries/franquias de baixíssimo engajamento no Brasil

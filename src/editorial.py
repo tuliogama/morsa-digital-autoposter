@@ -577,6 +577,15 @@ def _mark_backlog_posted(item_id: str):
         logger.warning(f"Falha ao marcar backlog: {e}")
 
 
+def _with_credit(caption: str, channel: str) -> str:
+    """Insere o crédito do canal oficial antes do bloco de hashtags."""
+    credit = f"Vídeo: {channel} (canal oficial no YouTube)"
+    parts = caption.rstrip().split("\n\n")
+    if parts[-1].lstrip().startswith("#"):
+        return "\n\n".join(parts[:-1] + [credit, parts[-1]])
+    return "\n\n".join(parts + [credit])
+
+
 def run_reel(news_count: int = 10) -> dict:
     """
     Pipeline completo de Reels de trailers.
@@ -653,7 +662,8 @@ def run_reel(news_count: int = 10) -> dict:
             continue
 
         # Gera legenda com contexto real
-        caption = generate_trailer_caption(news_item)
+        caption = _with_credit(generate_trailer_caption(news_item),
+                               news_item["_video_credit"])
         logger.info(f"Legenda gerada ({len(caption)} chars)")
 
         # Publica cada versão (horizontal + vertical se existir)

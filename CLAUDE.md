@@ -180,6 +180,22 @@ usar mediana. Os "picos" de horário 05h/07h eram outliers, não mexer na agenda
   dia, `fetch_gta_news()` (feeds gerais sem teto + `GTA_RSS_FEEDS`) vai na frente da
   fila. Máximo 1 GTA por run.
 
+## Agenda real, portão de slots e revisão noturna (out/2026)
+
+- **Cron do GitHub atrasa ~5h** e o watchdog antigo tinha bug (hora "08"/"09" virava
+  octal e disparava post extra). Resultado: 5 posts/dia, vários às 03h-05h BRT.
+- **`src/slot_gate.py`** é a regra única: publica se slots vencidos hoje (11h, 16h,
+  21h BRT, env `FEED_SLOTS_BRT`) > posts de feed de hoje, com 90 min de intervalo.
+  Crons e watchdog são só gatilhos. Disparo manual publica na hora (`gate=false`).
+- **Revisão noturna** (`src/daily_review.py`, workflow `daily-review.yml`, 22h BRT):
+  grava `data/learned_weights.json` (categoria sobe/desce um degrau, n≥5, mediana
+  ≥1,4× ou ≤0,6× a geral), `logs/day_brief.json` (orientação de amanhã) e o
+  relatório em `data/daily_review/`. Só curtidas+comentários: o token não tem
+  `instagram_manage_insights`. O `cmo_brain.run_daily_analysis` antigo não roda mais.
+- **Reels**: só canal oficial (`_is_official`: ID conferido ou selo + nome de
+  estúdio), crédito do canal sempre na legenda (`_with_credit`), legenda sempre
+  nossa, nunca a descrição do YouTube.
+
 ## Hashtags, curadoria e dedup (jun/2026)
 
 - **Hashtags**: `_cap_hashtags()` corta para no máximo 8 (modelo despejava 15-20). Aplicado em `generate_post` antes de retornar.

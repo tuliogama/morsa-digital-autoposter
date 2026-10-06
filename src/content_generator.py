@@ -595,7 +595,7 @@ _GAME_ONLY_SOURCES = {"GameBlast", "Eurogamer", "Kotaku"}
 _CAT_RULES = [
     ("gta", r"\bgta\b|grand theft auto|vice city|rockstar games"),
     ("dc", r"\b(batman|superman|supergirl|coringa|joker|aquaman|the flash|wonder woman|"
-           r"mulher-maravilha|lanterna verde|green lantern|lanterns|peacemaker|pacificador|"
+           r"mulher-maravilha|lanterna verde|green lantern|lanterns|hal jordan|peacemaker|pacificador|"
            r"james gunn|dcu|dc studios|dc comics|gotham|arlequina|harley quinn|pinguim)\b"),
     ("marvel", r"\b(marvel|avengers|vingadores|spider-man|homem-aranha|x-men|deadpool|"
                r"wolverine|thor|loki|mcu|thanos|doutor destino|doctor doom|demolidor|"
@@ -644,10 +644,27 @@ _CATEGORY_TIER = {
 _GAME_CATS = {"gta", "game_big", "game_niche"}
 
 
+def _learned_adjust() -> dict:
+    """Ajuste por categoria (-1 sobe, +1 desce) aprendido pela revisão noturna."""
+    path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                        "data", "learned_weights.json")
+    try:
+        with open(path, encoding="utf-8") as f:
+            cats = json.load(f).get("categories", {})
+        return {c: max(-1, min(1, int(v.get("adjust", 0)))) for c, v in cats.items()}
+    except (OSError, ValueError):
+        return {}
+
+
+_LEARNED = _learned_adjust()
+
+
 def _tier(news_item: dict, today_cats: list) -> int:
     """Tier do dia: repetir categoria (ou somar mais um game) custa prioridade."""
     cat = _categorize(news_item)
     tier = _CATEGORY_TIER.get(cat, 4)
+    if cat != "game_niche":
+        tier = max(0, tier + _LEARNED.get(cat, 0))
     tier += 2 * today_cats.count(cat)
     if cat in _GAME_CATS and any(c in _GAME_CATS for c in today_cats):
         tier += 2

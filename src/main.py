@@ -74,8 +74,6 @@ def main():
     parser = argparse.ArgumentParser(description="Morsa Digital Autoposter")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--platforms", default="instagram")
-    parser.add_argument("--skip-brief", action="store_true",
-                        help="Pula análise do CMO e usa brief do dia se disponível")
     args = parser.parse_args()
 
     platforms = [p.strip() for p in args.platforms.split(",") if p.strip()]
@@ -89,24 +87,17 @@ def main():
     logger.info(f"Morsa Digital Autoposter | plataformas: {platforms} | {posts_per_run} posts/run")
 
     # ------------------------------------------------------------------ #
-    # ETAPA 1 — CMO Brain: análise diária                                 #
+    # ETAPA 1 — Orientação do dia                                         #
     # ------------------------------------------------------------------ #
+    # A orientação do dia é escrita pela revisão noturna (src/daily_review.py)
     brief = None
     try:
-        from cmo_brain import run_daily_analysis, load_todays_brief
-
-        if args.skip_brief:
-            brief = load_todays_brief()
-            if brief:
-                logger.info(f"Brief do dia carregado (gerado às {brief.get('generated_at','?')[:16]})")
-            else:
-                logger.info("Sem brief do dia — rodando análise completa...")
-                brief = run_daily_analysis()
-        else:
-            brief = run_daily_analysis()
-
+        from cmo_brain import load_todays_brief
+        brief = load_todays_brief()
+        logger.info(f"Orientação do dia: {brief['strategy_note']}" if brief
+                    else "Sem orientação da revisão noturna para hoje — critérios padrão")
     except Exception as e:
-        logger.warning(f"CMO Brain falhou — continuando sem brief: {e}")
+        logger.warning(f"Falha ao carregar a orientação do dia: {e}")
 
     # ------------------------------------------------------------------ #
     # ETAPA 2 — Busca de notícias                                         #

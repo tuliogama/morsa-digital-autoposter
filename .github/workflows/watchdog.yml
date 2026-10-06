@@ -1,86 +1,40 @@
 name: Watchdog — Garantir posts nos horários
 
-# Roda a cada 15 minutos e verifica se o pipeline principal deveria ter rodado.
-# Se o horário chegou e o último run foi há mais de 100 minutos, dispara.
-# Solução para o cron nativo do GitHub Actions ser instável (pode atrasar 1h+).
+# O cron nativo do GitHub Actions atrasa horas. Este watchdog roda com frequência
+# e, a cada execução, pergunta ao src/slot_gate.py se há post de feed devido
+# (slots vencidos hoje > posts de feed já publicados hoje). Se houver, dispara
+# o pipeline principal com gate=true, que confere de novo antes de publicar.
 
 on:
   schedule:
-    - cron: "*/15 * * * *"   # a cada 15 minutos, 24h/dia
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
 
 jobs:
   watchdog:
     name: Verificar e disparar se necessário
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     permissions:
       actions: write
+      contents: read
 
     steps:
-      - name: Checar horário e disparar pipeline se necessário
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: src/slot_gate.py
+          sparse-checkout-cone-mode: false
+
+      - name: Há post de feed devido?
+        id: gate
+        env:
+          FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: python3 src/slot_gate.py
+
+      - name: Disparar pipeline principal
+        if: steps.gate.outputs.due == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: ${{ github.repository }}
-        run: |
-          # ── Horários alvo em minutos desde meia-noite UTC ──────────────
-          # DEVE espelhar os crons de FEED de auto-post.yml. BRT = UTC-3.
-          # Feed = 3x/dia desde 22/jun (reduzido de 8 p/ recuperar alcance):
-          #  10:00 BRT = 13:00 UTC = 780 min  (feed manhã)
-          #  18:00 BRT = 21:00 UTC = 1260 min (feed — MELHOR JANELA)
-          #  21:00 BRT = 00:00 UTC = 0 min    (feed)
-          # 09:00 (720) saiu: agora é só checagem de estreia, não feed.
-          TARGETS="780 1260 0"
-          WINDOW=30        # janela de ±30 min em torno de cada horário alvo
-          MIN_INTERVAL=45  # intervalo mínimo entre runs (min) para evitar duplicatas
-
-          NOW_H=$(date -u +%H)
-          NOW_M=$(date -u +%M)
-          NOW_MINS=$(( NOW_H * 60 + NOW_M ))
-          echo "Hora atual UTC: ${NOW_H}:${NOW_M} (${NOW_MINS} min)"
-
-          # ── Verificar se estamos na janela de algum horário alvo ────────
-          IN_WINDOW=false
-          for T in $TARGETS; do
-            DIFF=$(( NOW_MINS - T ))
-            [ $DIFF -lt 0 ] && DIFF=$(( -DIFF ))
-            # Tratamento de wrap-around na meia-noite (ex: alvo=30, agora=1435)
-            [ $DIFF -gt 720 ] && DIFF=$(( 1440 - DIFF ))
-            if [ $DIFF -le $WINDOW ]; then
-              IN_WINDOW=true
-              echo "✅ Dentro da janela do alvo ${T} min UTC (diff=${DIFF} min)"
-              break
-            fi
-          done
-
-          if [ "$IN_WINDOW" = "false" ]; then
-            echo "⏸  Fora de qualquer janela de execução. Nada a fazer."
-            exit 0
-          fi
-
-          # ── Verificar quando foi o último run do pipeline principal ─────
-          # Só conta runs bem-sucedidos — run que falhou (ex: 0 posts) é retentado
-          LAST_RUN_AT=$(gh run list \
-            --repo "$REPO" \
-            --workflow=auto-post.yml \
-            --status success \
-            --limit=1 \
-            --json createdAt \
-            --jq '.[0].createdAt // empty' 2>/dev/null || echo "")
-
-          if [ -z "$LAST_RUN_AT" ]; then
-            echo "Nenhum run anterior encontrado — disparando."
-          else
-            LAST_EPOCH=$(date -d "$LAST_RUN_AT" +%s 2>/dev/null || echo 0)
-            NOW_EPOCH=$(date +%s)
-            DIFF_MIN=$(( (NOW_EPOCH - LAST_EPOCH) / 60 ))
-            echo "Último run: $LAST_RUN_AT (há ${DIFF_MIN} min)"
-
-            if [ $DIFF_MIN -lt $MIN_INTERVAL ]; then
-              echo "✋ Último run foi há ${DIFF_MIN} min — abaixo do intervalo mínimo de ${MIN_INTERVAL} min. Pulando."
-              exit 0
-            fi
-          fi
-
-          # ── Disparar o pipeline principal ──────────────────────────────
-          echo "🚀 Disparando auto-post.yml..."
-          gh workflow run auto-post.yml --repo "$REPO"
-          echo "✅ Workflow disparado com sucesso."
+        run: gh workflow run auto-post.yml --repo "${{ github.repository }}" -f mode=feed -f gate=true

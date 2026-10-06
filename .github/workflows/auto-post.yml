@@ -2,11 +2,13 @@ name: Morsa Digital — Auto Post
 
 on:
   schedule:
-    # Feed posts: 3x/dia — horários otimizados pela análise real de jul/2026
+    # Feed: 3 slots/dia (11h, 16h, 21h BRT). O cron do GitHub atrasa horas, então
+    # estes crons são só gatilhos: quem decide se publica é src/slot_gate.py
+    # (slots vencidos hoje > posts de feed hoje). O watchdog também dispara.
     - cron: "0 12 * * *"    # 09h00 BRT → SÓ checagem de estreia (não é feed)
-    - cron: "0 14 * * *"    # 11h00 BRT → feed (manhã, avg 12,7 likes)
-    - cron: "0 19 * * *"    # 16h00 BRT → feed (tarde, avg 17,0 likes)
-    - cron: "0 1 * * *"     # 22h00 BRT → feed (noite, avg 8,6 likes)
+    - cron: "0 14 * * *"    # 11h00 BRT → gatilho de feed
+    - cron: "0 19 * * *"    # 16h00 BRT → gatilho de feed
+    - cron: "0 0 * * *"     # 21h00 BRT → gatilho de feed
     # Reel: diário às 18h BRT — usa o mesmo gatilho 0 21 * * * do feed (job reel
     # casa com esse cron via 'if'); backlog curado + fallback RSS de trailers
 
@@ -28,6 +30,12 @@ on:
         description: "Plataformas (apenas para feed)"
         required: false
         default: "instagram"
+      gate:
+        description: "Respeitar os slots do dia (o watchdog usa true; manual publica na hora)"
+        required: false
+        default: "false"
+        type: choice
+        options: ["false", "true"]
 
 env:
   GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
@@ -57,7 +65,7 @@ jobs:
       (github.event_name == 'schedule' && (
         github.event.schedule == '0 14 * * *' ||
         github.event.schedule == '0 19 * * *' ||
-        github.event.schedule == '0 1 * * *'
+        github.event.schedule == '0 0 * * *'
       )) ||
       (github.event_name == 'workflow_dispatch' && inputs.mode == 'feed') ||
       (github.event_name == 'workflow_dispatch' && inputs.mode == '')
@@ -68,14 +76,22 @@ jobs:
           fetch-depth: 1
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Há post de feed devido?
+        id: gate
+        if: github.event_name == 'schedule' || inputs.gate == 'true'
+        run: python3 src/slot_gate.py
+
       - uses: actions/setup-python@v5
+        if: steps.gate.outputs.due != 'false'
         with:
           python-version: "3.12"
           cache: "pip"
 
-      - run: pip install -r requirements.txt
+      - if: steps.gate.outputs.due != 'false'
+        run: pip install -r requirements.txt
 
       - name: Publicar posts de feed
+        if: steps.gate.outputs.due != 'false'
         env:
           DRY_RUN: ${{ inputs.dry_run || 'false' }}
           POSTS_PER_RUN: "1"
@@ -87,7 +103,7 @@ jobs:
           $CMD
 
       - name: Persistir log
-        if: ${{ inputs.dry_run != 'true' }}
+        if: ${{ inputs.dry_run != 'true' && steps.gate.outputs.due != 'false' }}
         run: |
           git config user.name "morsa-bot"
           git config user.email "bot@morsadigital.com"
@@ -95,12 +111,12 @@ jobs:
           git stash || true
           git rebase origin/main || git reset --hard origin/main
           git stash pop || true
-          git add -f logs/posts_log.json logs/day_brief.json 2>/dev/null || true
+          git add -f logs/posts_log.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "chore: atualiza posts_log [skip ci]"
           git push origin main || true
 
       - uses: actions/upload-artifact@v4
-        if: always()
+        if: always() && steps.gate.outputs.due != 'false'
         with:
           name: feed-logs-${{ github.run_id }}
           path: logs/run_*.json

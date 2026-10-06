@@ -1,0 +1,48 @@
+name: Revisão noturna — engajamento e ajuste do dia seguinte
+
+# Lê curtidas/comentários reais, recalcula a prioridade por categoria
+# (data/learned_weights.json) e escreve a orientação de pauta de amanhã
+# (logs/day_brief.json). Relatório em data/daily_review/.
+
+on:
+  schedule:
+    - cron: "0 1 * * *"     # 22h00 BRT
+  workflow_dispatch:
+
+jobs:
+  review:
+    name: Revisão diária
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    concurrency:
+      group: morsa-post
+      cancel-in-progress: false
+    env:
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rodar revisão
+        run: python src/daily_review.py >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Persistir aprendizado
+        run: |
+          git config user.name "morsa-bot"
+          git config user.email "bot@morsadigital.com"
+          git add data/learned_weights.json data/daily_review
+          git add -f logs/day_brief.json
+          git diff --staged --quiet || git commit -m "chore: revisão noturna [skip ci]"
+          git pull --rebase origin main
+          git push origin main
