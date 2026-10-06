@@ -16,7 +16,7 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 
 BRT = timezone(timedelta(hours=-3))
-SLOTS_BRT = [int(h) for h in os.environ.get("FEED_SLOTS_BRT", "11,16,21").split(",")]
+SLOTS_BRT = [int(h) for h in os.environ.get("FEED_SLOTS_BRT", "9,16,21").split(",")]
 MIN_GAP_MIN = int(os.environ.get("FEED_MIN_GAP_MIN", "90"))
 
 

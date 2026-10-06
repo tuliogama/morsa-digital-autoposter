@@ -27,6 +27,7 @@ jobs:
             src/slot_gate.py
             src/reel_queue.py
             data/reel_queue.json
+            data/reel_queue_cenas.json
           sparse-checkout-cone-mode: false
 
       - name: Há post de feed devido?

@@ -268,10 +268,19 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   cheia o Mac pode ficar dias desligado. yt-dlp SEM cookies (com cookies do Chrome
   o YouTube serve "only images"; foi o que zerou os reels de ago a out/2026) e
   sempre atualizado (`brew upgrade yt-dlp` no script: versão velha dá 403).
-- **CI** (`reel-queue.yml` + watchdog): `publish` solta 1 por dia a partir das 11h
-  BRT (melhor faixa histórica de alcance: 11h-13h), na ordem fixo do dia →
-  lançamento novo → acervo (`data/reel_plan.json`, comando `premap`), com legenda nossa (fatos = descrição oficial) e
-  crédito do canal. Fila vazia = não publica (ver `python3 src/reel_queue.py status`).
+- **Dois fluxos, 1 reel/dia cada** (`STREAMS` em `reel_queue.py`):
+  - `cenas`, 11h: cenas, clipes e bastidores de canais oficiais com legenda de
+    pergunta ao fã (`HOOK_SYSTEM`). É o formato dos maiores reels da conta: os 8
+    maiores (436 mil a 1,2 mi de alcance, 2025) eram cena/nostalgia/opinião, nenhum
+    trailer. Plano em `data/reel_plan_cenas.json`, fila em `reel_queue_cenas.json`.
+  - `main`, 13h: trailers. Ordem: fixo do dia (`scheduled_for`: Halloween, Natal,
+    contagem GTA VI) → lançamento novo (`fill`) → acervo (`data/reel_plan.json`).
+  - Horário: em 184 reels de nov/24 a out/25, 11h-13h deu 1,2x a mediana do mês;
+    17h-19h, 0,6x. Feed estático foi para 9h/16h/21h para não colidir.
+- **CI** (`reel-queue.yml` + watchdog): `publish` olha os dois fluxos, 90 min de
+  intervalo entre reels, legenda nossa (fatos = descrição oficial; vídeo com +60
+  dias é relembrança) e crédito do canal. `premap` baixa o que faltar dos planos.
+  Para acrescentar reels: pôr o ID no plano e rodar `premap` no Mac.
 - `editorial.run_reel` e `data/trailer_backlog.json` são o fluxo antigo, sem uso.
 
 ---

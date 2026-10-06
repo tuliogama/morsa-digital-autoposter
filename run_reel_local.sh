@@ -23,8 +23,9 @@ set +a
   git pull -q --rebase --autostash origin main || echo "pull falhou — segue com a fila local"
 
   python3 src/reel_queue.py fill
+  python3 src/reel_queue.py premap   # baixa o que faltar dos planos (acervo e cenas)
 
-  git add data/reel_queue.json
+  git add data/reel_queue.json data/reel_queue_cenas.json
   git diff --staged --quiet || {
     git commit -q -m "chore: fila de reels abastecida [skip ci]"
     git pull -q --rebase --autostash origin main

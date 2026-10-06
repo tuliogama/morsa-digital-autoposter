@@ -35,14 +35,34 @@ logger = logging.getLogger("morsa.reel_queue")
 
 BRT = timezone(timedelta(hours=-3))
 ROOT = Path(__file__).parent.parent
-QUEUE_PATH = ROOT / "data" / "reel_queue.json"
 RELEASE_TAG = "reel-queue"
 REPO = os.environ.get("GITHUB_REPOSITORY", "tuliogama/morsa-digital-autoposter")
 
-# 11h: em 184 reels de nov/24 a out/25, os publicados das 11h às 13h tiveram alcance
-# 1,2x a mediana do mês (e 27 dos 35 acima de 10 mil); os das 17h às 19h, 0,6x.
-REEL_SLOT_BRT = int(os.environ.get("REEL_SLOT_BRT", "11"))
-PLAN_PATH = ROOT / "data" / "reel_plan.json"
+# Dois fluxos, um reel por dia de cada:
+#   cenas — cenas, clipes e bastidores com legenda de pergunta ao fã. É o formato
+#           dos maiores reels da conta (436 mil a 1,2 milhão de alcance em 2025).
+#   main  — trailers: fixos por data, lançamentos e acervo.
+# Horários: em 184 reels de nov/24 a out/25, os das 11h às 13h tiveram alcance
+# 1,2x a mediana do mês (27 dos 35 acima de 10 mil); os das 17h às 19h, 0,6x.
+STREAMS = {
+    "cenas": {"queue": "reel_queue_cenas.json", "plan": "reel_plan_cenas.json", "slot": 11},
+    "main":  {"queue": "reel_queue.json",       "plan": "reel_plan.json",       "slot": 13},
+}
+MIN_GAP_MIN = 90             # intervalo mínimo entre dois reels
+
+
+def use_stream(name: str):
+    """Aponta o módulo para a fila, o plano e o horário de um fluxo."""
+    global STREAM, QUEUE_PATH, PLAN_PATH, REEL_SLOT_BRT
+    cfg = STREAMS[name]
+    STREAM = name
+    QUEUE_PATH = ROOT / "data" / cfg["queue"]
+    PLAN_PATH = ROOT / "data" / cfg["plan"]
+    REEL_SLOT_BRT = cfg["slot"]
+
+
+use_stream(os.environ.get("REEL_STREAM") or "main")
+
 FRESH_TARGET = int(os.environ.get("REEL_FRESH_TARGET", "3"))   # lançamentos novos em espera
 PIN_GRACE_DAYS = 2           # fixo que perdeu o dia ainda sai até 2 dias depois
 MAX_PER_CHANNEL = 2          # variedade: no máximo 2 pendentes do mesmo canal
@@ -65,6 +85,24 @@ OFFICIAL_CHANNELS = {
     "UC6i4mzH3OPrZV0p64zoz-Ww": "PlayStation Brasil",
     "UC6VcWc1rAoWdBCM0JxrRQ3A": "Rockstar Games",
 }
+
+# Canais oficiais usados só no fluxo de cenas (conferidos em 06/10/2026: selo de
+# verificado e de 1,1 a 23,8 milhões de inscritos). Ficam fora do `fill` porque
+# publicam trailers em inglês. Falsos descartados: @DisneyChannelBR (2,5 mil),
+# @AdultSwimBrasil (5), @SonyPicturesAnimation (11).
+SCENE_CHANNELS = {
+    "UCvC4D8onUfXzvjTOM-dBfEA": "Marvel Entertainment",
+    "UCZGYJFUizSax-yElQaFDp5Q": "Star Wars",
+    "UC_IRYSp4auq7hKLvziWVH6w": "Pixar",
+    "UCq7OHvWO6Z3u-LztFdrcU-g": "Illumination",
+    "UCgKkNPU2Ib7_TcyAl8M2S-w": "Warner Bros. Entertainment",
+    "UC9YHyj7QSkkSg2pjQ7M8Khg": "Paramount Movies",
+    "UCz97F7dMxBNOfGYu3rx8aCw": "Sony Pictures Entertainment",
+    "UC2-BeLxzUBSs0uSrmzWhJuQ": "20th Century Studios",
+    "UCX2M7xn-jMmq4KfX25TCTCA": "HBO Brasil",
+    "UCP6nJ-Elnfnpjv6HQRsv1Cw": "Walt Disney Studios BR",
+}
+ALL_OFFICIAL = {**OFFICIAL_CHANNELS, **SCENE_CHANNELS}
 
 _WANTED_RE = re.compile(r"trailer|teaser|clipe|cena|sneak peek|primeiro olhar|first look",
                         re.IGNORECASE)
@@ -247,9 +285,9 @@ def _video_meta(video_id: str) -> dict:
     r = _ytdlp(f"https://www.youtube.com/watch?v={video_id}", "--skip-download", "--dump-json",
                "--extractor-args", "youtube:lang=pt")
     v = json.loads(r.stdout)
-    if v.get("channel_id") not in OFFICIAL_CHANNELS:
+    if v.get("channel_id") not in ALL_OFFICIAL:
         raise ValueError(f"canal fora da lista oficial: {v.get('channel')}")
-    channel = OFFICIAL_CHANNELS[v["channel_id"]]
+    channel = ALL_OFFICIAL[v["channel_id"]]
     up = v.get("upload_date", "")
     return {
         "title": v["title"], "channel": channel, "channel_id": v["channel_id"],
@@ -271,7 +309,7 @@ def premap() -> int:
     for n, p in enumerate(todo, 1):
         try:
             meta = _video_meta(p["video_id"])
-            extra = {"kind": "acervo", "plan_order": plan.index(p)}
+            extra = {"kind": "cena" if STREAM == "cenas" else "acervo", "plan_order": plan.index(p)}
             if p.get("scheduled_for"):
                 extra.update(scheduled_for=p["scheduled_for"], theme=p.get("theme", ""))
             _add_item(queue, p["video_id"], meta, **extra)
@@ -286,33 +324,40 @@ def premap() -> int:
 
 # ── CI: publicar ────────────────────────────────────────────────────────────
 
-def _reel_posted_today() -> bool:
+def _minutes_since_last_reel() -> float:
     token, ig = os.environ["FB_ACCESS_TOKEN"], os.environ["IG_USER_ID"]
     url = (f"https://graph.facebook.com/v19.0/{ig}/media"
            f"?fields=timestamp,media_type&limit=15&access_token={token}")
     with urllib.request.urlopen(url, timeout=15) as r:
         media = json.loads(r.read()).get("data", [])
-    today = datetime.now(BRT).date()
-    return any(m.get("media_type") == "VIDEO" and
-               datetime.strptime(m["timestamp"], "%Y-%m-%dT%H:%M:%S%z").astimezone(BRT).date() == today
-               for m in media)
+    times = [datetime.strptime(m["timestamp"], "%Y-%m-%dT%H:%M:%S%z")
+             for m in media if m.get("media_type") == "VIDEO"]
+    if not times:
+        return 1e9
+    return (datetime.now(timezone.utc) - max(times)).total_seconds() / 60
 
 
 def is_due() -> tuple[bool, str]:
+    """Um reel por dia por fluxo, a partir do horário do fluxo."""
     now = datetime.now(BRT)
-    n = len(pending(load_queue()))
-    if _pick_next(load_queue()) is None:
-        return False, "fila sem item para hoje (o Mac precisa abastecer)"
+    queue = load_queue()
+    n = len(pending(queue))
+    tag = f"[{STREAM}]"
+    if _pick_next(queue) is None:
+        return False, f"{tag} fila sem item para hoje (o Mac precisa abastecer)"
     if os.environ.get("REEL_FORCE") == "true":
-        return True, f"forçado manualmente ({n} na fila)"
+        return True, f"{tag} forçado manualmente ({n} na fila)"
     if now.hour < REEL_SLOT_BRT:
-        return False, f"{now:%H:%M} BRT, antes das {REEL_SLOT_BRT}h"
+        return False, f"{tag} {now:%H:%M} BRT, antes das {REEL_SLOT_BRT}h"
+    if any(q.get("posted_at", "")[:10] == now.date().isoformat() for q in queue):
+        return False, f"{tag} já saiu hoje"
     try:
-        if _reel_posted_today():
-            return False, "já saiu reel hoje"
+        gap = _minutes_since_last_reel()
     except Exception as e:
-        return False, f"falha ao consultar o Instagram ({e})"
-    return True, f"reel devido ({n} na fila)"
+        return False, f"{tag} falha ao consultar o Instagram ({e})"
+    if gap < MIN_GAP_MIN:
+        return False, f"{tag} último reel há {gap:.0f} min (mínimo {MIN_GAP_MIN})"
+    return True, f"{tag} reel devido ({n} na fila)"
 
 
 def _pick_next(queue: list[dict], today=None) -> dict | None:
@@ -361,9 +406,40 @@ def _age_note(item: dict) -> str:
             "achou ou qual a lembrança dele.\n")
 
 
+# Molde tirado dos maiores reels da conta: pergunta ao fã na 1ª linha, contexto
+# curto em voz de fã, chamada para comentar.
+HOOK_SYSTEM = """Você é o social media da Morsa Digital, canal brasileiro de cultura pop/nerd.
+Escreve legendas para Reels de CENAS, clipes e bastidores de filmes, séries e animações.
+O objetivo é fazer o fã comentar.
+
+ESTRUTURA OBRIGATÓRIA:
+
+[LINHA 1: uma pergunta direta ao fã, até 90 caracteres, com o nome da obra ou do personagem. Sem emoji no início. Exemplos do tom: "Você lembrava dessa cena ou tá descobrindo agora?", "Concorda? Ou vai defender outro Aranha?", "Tem como isso perder a graça?"]
+
+[linha em branco]
+
+[2 ou 3 linhas de contexto em voz de fã: por que essa cena marcou, o que ela tem de especial.]
+
+[linha em branco]
+
+[1 linha chamando para comentar. Varie: "Comenta aí...", "Qual é a sua...", "Marca aquele amigo que..."]
+
+[linha em branco]
+
+#hashtags (5 a 7, específicas da obra e dos personagens, terminando em #MorsaDigital)
+
+REGRAS:
+- Português do Brasil, informal, como um fã escreve. Nada de tom de release.
+- Use só o que está nos fatos fornecidos e no título. Não invente elenco, datas, bilheteria, bastidores ou curiosidades.
+- Não descreva o que acontece no vídeo passo a passo: quem assiste já vê.
+- Nunca use travessão.
+- Sem hashtag genérica (#Cinema, #Filmes, #Trailer)."""
+
+
 def _caption(item: dict) -> str:
     from content_generator import REEL_TRAILER_SYSTEM, _call_groq, _strip_ai_tells, _cap_hashtags
     from editorial import _with_credit
+    system = HOOK_SYSTEM if STREAM == "cenas" else REEL_TRAILER_SYSTEM
     user_msg = (
         f"Escreva a legenda para o Reel: {item['title']}\n\n"
         f"{_age_note(item)}{_THEME_NOTES.get(item.get('theme', ''), '')}\n"
@@ -379,7 +455,7 @@ def _caption(item: dict) -> str:
     text = ""
     for _ in range(2):
         try:
-            text = re.sub(r"\n[ \t]*\n+", "\n\n", _call_groq(REEL_TRAILER_SYSTEM, user_msg, 600)).strip()
+            text = re.sub(r"\n[ \t]*\n+", "\n\n", _call_groq(system, user_msg, 600)).strip()
             if len(text) >= 100:
                 break
         except Exception as e:
@@ -418,28 +494,43 @@ def publish() -> int:
 def main():
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
     cmd = sys.argv[1] if len(sys.argv) > 1 else "status"
+    # publish/due/status olham os dois fluxos, a não ser que REEL_STREAM escolha um
+    streams = [os.environ["REEL_STREAM"]] if os.environ.get("REEL_STREAM") else list(STREAMS)
     if cmd == "fill":
+        use_stream("main")
         fill()
     elif cmd == "premap":
-        premap()
+        for name in streams:
+            use_stream(name)
+            if PLAN_PATH.exists():
+                premap()
     elif cmd == "publish":
-        return publish()
+        for name in streams:
+            use_stream(name)
+            publish()
     elif cmd == "due":
-        due, reason = is_due()
-        print(reason)
+        any_due = False
+        for name in streams:
+            use_stream(name)
+            due, reason = is_due()
+            any_due = any_due or due
+            print(reason)
         if os.environ.get("GITHUB_OUTPUT"):
             with open(os.environ["GITHUB_OUTPUT"], "a") as f:
-                f.write(f"reel_due={'true' if due else 'false'}\n")
+                f.write(f"reel_due={'true' if any_due else 'false'}\n")
     else:
-        todo = pending(load_queue())
-        for q in sorted((q for q in todo if q.get("scheduled_for")), key=lambda q: q["scheduled_for"]):
-            print(f"{q['scheduled_for']} [{q.get('theme', '')}] {q['channel']}: {q['title'][:70]}")
-        for q in todo:
-            if _is_fresh(q):
-                print(f"lançamento  [{q['category']}] {q['channel']}: {q['title'][:70]}")
-        acervo = [q for q in todo if not q.get("scheduled_for") and not _is_fresh(q)]
-        print(f"{len(todo)} pendentes: {sum(1 for q in todo if q.get('scheduled_for'))} fixos, "
-              f"{sum(1 for q in todo if _is_fresh(q))} lançamentos, {len(acervo)} de acervo")
+        for name in streams:
+            use_stream(name)
+            todo = pending(load_queue())
+            print(f"== {name} (a partir das {REEL_SLOT_BRT}h) ==")
+            for q in sorted((q for q in todo if q.get("scheduled_for")), key=lambda q: q["scheduled_for"]):
+                print(f"{q['scheduled_for']} [{q.get('theme', '')}] {q['channel']}: {q['title'][:70]}")
+            for q in todo:
+                if _is_fresh(q):
+                    print(f"lançamento  [{q['category']}] {q['channel']}: {q['title'][:70]}")
+            rest = [q for q in todo if not q.get("scheduled_for") and not _is_fresh(q)]
+            print(f"{len(todo)} pendentes: {sum(1 for q in todo if q.get('scheduled_for'))} fixos, "
+                  f"{sum(1 for q in todo if _is_fresh(q))} lançamentos, {len(rest)} em sequência")
     return 0
 
 

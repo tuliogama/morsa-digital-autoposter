@@ -1,15 +1,17 @@
-name: Reel diário — publica da fila
+name: Reels diários — publica das filas
 
-# O Mac abastece data/reel_queue.json (vídeos de canais oficiais já convertidos e
-# hospedados na Release "reel-queue"). Aqui só se publica: 1 reel por dia a
-# partir das 11h BRT. Crons são gatilhos; src/reel_queue.py decide se é devido.
+# O Mac abastece as filas (vídeos de canais oficiais já convertidos e hospedados
+# na Release "reel-queue"). Aqui só se publica, 1 reel por dia de cada fluxo:
+#   cenas (data/reel_queue_cenas.json) a partir das 11h BRT
+#   main  (data/reel_queue.json)       a partir das 13h BRT
+# Crons são gatilhos; src/reel_queue.py decide o que é devido.
 
 on:
   schedule:
     # Alvo: 11h BRT (14h UTC). O cron do GitHub atrasa, e mais ainda na hora cheia,
     # então há vários gatilhos fora da hora cheia; o primeiro que chegar depois
     # das 11h publica e os outros saem sem fazer nada.
-    - cron: "7,27,47 14-17 * * *"
+    - cron: "7,27,47 14-18 * * *"
     - cron: "17 19,21,23 * * *"
   workflow_dispatch:
     inputs:
@@ -31,7 +33,7 @@ env:
 
 jobs:
   publish:
-    name: Publicar próximo reel da fila
+    name: Publicar reels devidos
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
@@ -67,7 +69,7 @@ jobs:
         run: |
           git config user.name "morsa-bot"
           git config user.email "bot@morsadigital.com"
-          git add data/reel_queue.json
+          git add data/reel_queue.json data/reel_queue_cenas.json
           git add -f logs/posts_log.json
           git diff --staged --quiet || git commit -m "chore: reel publicado da fila [skip ci]"
           git pull --rebase origin main
