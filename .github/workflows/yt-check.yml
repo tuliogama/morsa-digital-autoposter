@@ -9,10 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - run: pip install -q -U yt-dlp && yt-dlp --version
-      - name: Busca
-        run: yt-dlp "ytsearch3:Vingadores Doutor Destino trailer oficial dublado" --skip-download --print "%(id)s | %(channel)s | %(title).60s"
-      - name: Download 720p
-        run: |
-          yt-dlp --no-playlist -f "bestvideo[ext=mp4][height<=720]+bestaudio[ext=m4a]/best[height<=720]" --merge-output-format mp4 -o t.mp4 "https://www.youtube.com/watch?v=TcBtFtkQFiU"
-          ls -la t.mp4
+      - uses: denoland/setup-deno@v2
+      - run: pip install -q -U "yt-dlp[default]" && yt-dlp --version
+      - name: Cookies
+        env:
+          YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
+        run: printf '%s' "$YOUTUBE_COOKIES" > /tmp/c.txt && wc -l /tmp/c.txt
+      - name: Sem cookies, com deno
+        continue-on-error: true
+        run: yt-dlp --no-playlist -f "bestvideo[ext=mp4][height<=720]+bestaudio[ext=m4a]/best[height<=720]" --merge-output-format mp4 -o a.mp4 "https://www.youtube.com/watch?v=TcBtFtkQFiU" 2>&1 | grep -v "^\[download\] *[0-9]" ; ls -la a.mp4
+      - name: Com cookies e deno
+        continue-on-error: true
+        run: yt-dlp --cookies /tmp/c.txt --no-playlist -f "bestvideo[ext=mp4][height<=720]+bestaudio[ext=m4a]/best[height<=720]" --merge-output-format mp4 -o b.mp4 "https://www.youtube.com/watch?v=TcBtFtkQFiU" 2>&1 | grep -v "^\[download\] *[0-9]" ; ls -la b.mp4
