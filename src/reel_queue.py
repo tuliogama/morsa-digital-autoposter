@@ -4,7 +4,7 @@ Fila de Reels: o Mac abastece, o GitHub publica.
 O YouTube bloqueia o IP do GitHub, então o download só funciona em casa. Para o
 Mac não precisar estar ligado todo dia, ele baixa vários vídeos de uma vez
 (`fill`), sobe para uma Release do GitHub e registra em data/reel_queue.json.
-O CI publica um por dia a partir das 18h BRT (`publish`).
+O CI publica um por dia a partir das 11h BRT (`publish`).
 
 Fonte: SÓ uploads recentes dos canais oficiais abaixo (ID conferido à mão).
 Legenda sempre nossa + crédito do canal.
@@ -39,7 +39,9 @@ QUEUE_PATH = ROOT / "data" / "reel_queue.json"
 RELEASE_TAG = "reel-queue"
 REPO = os.environ.get("GITHUB_REPOSITORY", "tuliogama/morsa-digital-autoposter")
 
-REEL_SLOT_BRT = int(os.environ.get("REEL_SLOT_BRT", "18"))
+# 11h: em 184 reels de nov/24 a out/25, os publicados das 11h às 13h tiveram alcance
+# 1,2x a mediana do mês (e 27 dos 35 acima de 10 mil); os das 17h às 19h, 0,6x.
+REEL_SLOT_BRT = int(os.environ.get("REEL_SLOT_BRT", "11"))
 PLAN_PATH = ROOT / "data" / "reel_plan.json"
 FRESH_TARGET = int(os.environ.get("REEL_FRESH_TARGET", "3"))   # lançamentos novos em espera
 PIN_GRACE_DAYS = 2           # fixo que perdeu o dia ainda sai até 2 dias depois

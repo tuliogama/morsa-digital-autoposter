@@ -2,12 +2,15 @@ name: Reel diário — publica da fila
 
 # O Mac abastece data/reel_queue.json (vídeos de canais oficiais já convertidos e
 # hospedados na Release "reel-queue"). Aqui só se publica: 1 reel por dia a
-# partir das 18h BRT. Crons são gatilhos; src/reel_queue.py decide se é devido.
+# partir das 11h BRT. Crons são gatilhos; src/reel_queue.py decide se é devido.
 
 on:
   schedule:
-    - cron: "0 21 * * *"    # 18h BRT
-    - cron: "0 23 * * *"    # 20h BRT (reserva)
+    # Alvo: 11h BRT (14h UTC). O cron do GitHub atrasa, e mais ainda na hora cheia,
+    # então há vários gatilhos fora da hora cheia; o primeiro que chegar depois
+    # das 11h publica e os outros saem sem fazer nada.
+    - cron: "7,27,47 14-17 * * *"
+    - cron: "17 19,21,23 * * *"
   workflow_dispatch:
     inputs:
       force:

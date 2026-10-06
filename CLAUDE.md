@@ -268,8 +268,9 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   cheia o Mac pode ficar dias desligado. yt-dlp SEM cookies (com cookies do Chrome
   o YouTube serve "only images"; foi o que zerou os reels de ago a out/2026) e
   sempre atualizado (`brew upgrade yt-dlp` no script: versão velha dá 403).
-- **CI** (`reel-queue.yml` + watchdog): `publish` solta 1 por dia a partir das 18h
-  BRT, alternando categoria, com legenda nossa (fatos = descrição oficial) e
+- **CI** (`reel-queue.yml` + watchdog): `publish` solta 1 por dia a partir das 11h
+  BRT (melhor faixa histórica de alcance: 11h-13h), na ordem fixo do dia →
+  lançamento novo → acervo (`data/reel_plan.json`, comando `premap`), com legenda nossa (fatos = descrição oficial) e
   crédito do canal. Fila vazia = não publica (ver `python3 src/reel_queue.py status`).
 - `editorial.run_reel` e `data/trailer_backlog.json` são o fluxo antigo, sem uso.
 
