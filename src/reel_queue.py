@@ -431,9 +431,12 @@ ESTRUTURA OBRIGATÓRIA:
 REGRAS:
 - Português do Brasil, informal, como um fã escreve. Nada de tom de release.
 - Use só o que está nos fatos fornecidos e no título. Não invente elenco, datas, bilheteria, bastidores ou curiosidades.
-- Não descreva o que acontece no vídeo passo a passo: quem assiste já vê.
+- Você NÃO assistiu ao vídeo. Não afirme o que acontece na cena: quem enfrenta quem, quem vence, quem aparece além dos nomes que estão no título, falas ou golpes. Fale da obra e dos personagens citados no título, e deixe a cena para quem assiste.
 - Nunca use travessão.
-- Sem hashtag genérica (#Cinema, #Filmes, #Trailer)."""
+- Sem hashtag genérica (#Cinema, #Filmes, #Trailer).
+- Nomes de filmes e personagens como o público brasileiro conhece (Homem de Ferro, Doutor Estranho, Homem-Aranha: Através do Aranhaverso), mesmo que o título do vídeo esteja em inglês.
+- A pergunta da linha 1 tem que dividir opiniões ou puxar memória: melhor ou pior, quem ganha, lembra ou não lembra, concorda ou não. Pergunta morna ("quem mais gostou?") não serve.
+- Nada de frase de enchimento como "vale dar o play", "vale a pena rever", "arrepia qualquer fã"."""
 
 
 def _caption(item: dict) -> str:
