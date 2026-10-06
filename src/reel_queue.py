@@ -24,6 +24,7 @@ import re
 import subprocess
 import sys
 import tempfile
+import time
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
@@ -69,6 +70,8 @@ MAX_PER_CHANNEL = 2          # variedade: no máximo 2 pendentes do mesmo canal
 MAX_AGE_DAYS = 30            # vídeo mais velho que isso não é mais novidade
 MIN_SECONDS, MAX_SECONDS = 20, 210
 TRIM_SECONDS = 90            # Reels até 90s entram na recomendação
+PREMAP_MAX_PER_RUN = int(os.environ.get("PREMAP_MAX_PER_RUN", "8"))   # por fluxo, por execução
+PREMAP_PAUSE_SECONDS = int(os.environ.get("PREMAP_PAUSE_SECONDS", "75"))
 
 # Canais oficiais conferidos em 06/10/2026 (ID + inscritos + selo). Handles
 # parecidos podem ser falsos: @dcbrasil tinha 3 inscritos. Só adicionar por ID.
@@ -263,6 +266,9 @@ def fill() -> int:
         if per_channel.get(c["channel_id"], 0) >= MAX_PER_CHANNEL:
             continue
         seconds = _duration(c["video_id"])
+        if seconds == 0:
+            logger.warning("Sem duração (YouTube pode ter bloqueado o IP) — parando o fill")
+            break
         if not MIN_SECONDS <= seconds <= MAX_SECONDS:
             logger.info(f"Fora da duração ({seconds}s): {c['title'][:60]}")
             continue
@@ -278,12 +284,20 @@ def fill() -> int:
     return added
 
 
+class YouTubeBlocked(RuntimeError):
+    """O YouTube pediu "confirme que você não é um robô": parar e tentar outro dia."""
+
+
 def _video_meta(video_id: str) -> dict:
     """Metadados reais do vídeo; recusa qualquer canal fora da lista oficial."""
     from reel_downloader import _ytdlp
     from content_generator import _categorize
     r = _ytdlp(f"https://www.youtube.com/watch?v={video_id}", "--skip-download", "--dump-json",
                "--extractor-args", "youtube:lang=pt")
+    if "not a bot" in r.stderr or "confirm you" in r.stderr:
+        raise YouTubeBlocked(r.stderr.strip()[-160:])
+    if not r.stdout.strip():
+        raise ValueError(f"sem metadados: {r.stderr.strip()[-120:]}")
     v = json.loads(r.stdout)
     if v.get("channel_id") not in ALL_OFFICIAL:
         raise ValueError(f"canal fora da lista oficial: {v.get('channel')}")
@@ -299,14 +313,21 @@ def _video_meta(video_id: str) -> dict:
 
 
 def premap() -> int:
-    """Baixa e enfileira tudo de data/reel_plan.json que ainda não está na fila."""
+    """
+    Baixa e enfileira o que falta de PLAN_PATH, no máximo PREMAP_MAX_PER_RUN por
+    execução e com pausa entre vídeos. Em 06/10/2026, ~35 downloads seguidos
+    fizeram o YouTube bloquear o IP de casa; ao primeiro sinal de bloqueio, para.
+    """
     plan = json.loads(PLAN_PATH.read_text(encoding="utf-8"))
     queue = load_queue()
     known = {q["video_id"] for q in queue}
     todo = [p for p in plan if p["video_id"] not in known]
-    logger.info(f"Plano: {len(plan)} itens, {len(todo)} a baixar")
+    batch = todo[:PREMAP_MAX_PER_RUN]
+    logger.info(f"[{STREAM}] plano: {len(plan)} itens, {len(todo)} faltando, {len(batch)} nesta execução")
     added = 0
-    for n, p in enumerate(todo, 1):
+    for n, p in enumerate(batch, 1):
+        if n > 1:
+            time.sleep(PREMAP_PAUSE_SECONDS)
         try:
             meta = _video_meta(p["video_id"])
             extra = {"kind": "cena" if STREAM == "cenas" else "acervo", "plan_order": plan.index(p)}
@@ -314,11 +335,14 @@ def premap() -> int:
                 extra.update(scheduled_for=p["scheduled_for"], theme=p.get("theme", ""))
             _add_item(queue, p["video_id"], meta, **extra)
             added += 1
-            logger.info(f"[{n}/{len(todo)}] + {p.get('scheduled_for', 'acervo')} | "
+            logger.info(f"[{n}/{len(batch)}] + {p.get('scheduled_for', 'sequência')} | "
                         f"{meta['channel']}: {meta['title'][:60]}")
+        except YouTubeBlocked as e:
+            logger.warning(f"YouTube bloqueou o IP — parando por hoje ({e})")
+            break
         except Exception as e:
-            logger.warning(f"[{n}/{len(todo)}] FALHOU {p['video_id']}: {str(e)[:150]}")
-    logger.info(f"Pré-mapeados: {added}/{len(todo)}")
+            logger.warning(f"[{n}/{len(batch)}] FALHOU {p['video_id']}: {str(e)[:150]}")
+    logger.info(f"[{STREAM}] pré-mapeados: {added} | ainda faltam {len(todo) - added}")
     return added
 
 

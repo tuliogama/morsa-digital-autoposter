@@ -100,86 +100,6 @@
   "theme": "gta"
  },
  {
-  "video_id": "oCZgVGFwKo0",
-  "scheduled_for": "2026-11-13",
-  "theme": "gta"
- },
- {
-  "video_id": "88KNf0MtU14",
-  "scheduled_for": "2026-11-16",
-  "theme": "gta"
- },
- {
-  "video_id": "QdBZY2fkU-0",
-  "scheduled_for": "2026-11-17",
-  "theme": "gta"
- },
- {
-  "video_id": "VQRLujxTm3c",
-  "scheduled_for": "2026-11-19",
-  "theme": "gta"
- },
- {
-  "video_id": "xwaY3Epk4RE",
-  "scheduled_for": "2026-12-12",
-  "theme": "vingadores"
- },
- {
-  "video_id": "3p1d_6_ocEE",
-  "scheduled_for": "2026-12-13",
-  "theme": "vingadores"
- },
- {
-  "video_id": "3BXq73F2_z4",
-  "scheduled_for": "2026-12-14",
-  "theme": "vingadores"
- },
- {
-  "video_id": "spJoZReeIeQ",
-  "scheduled_for": "2026-12-15",
-  "theme": "vingadores"
- },
- {
-  "video_id": "GMtQhGC38yI",
-  "scheduled_for": "2026-12-16",
-  "theme": "vingadores"
- },
- {
-  "video_id": "JE1fRhgrO3k",
-  "scheduled_for": "2026-12-20",
-  "theme": "natal"
- },
- {
-  "video_id": "FNBKG2ku9N4",
-  "scheduled_for": "2026-12-21",
-  "theme": "natal"
- },
- {
-  "video_id": "rsXfe4nX6tw",
-  "scheduled_for": "2026-12-22",
-  "theme": "natal"
- },
- {
-  "video_id": "C-Wi9qu--0k",
-  "scheduled_for": "2026-12-24",
-  "theme": "natal"
- },
- {
-  "video_id": "tRuG0f3bPEQ",
-  "scheduled_for": "2026-12-25",
-  "theme": "natal"
- },
- {
-  "video_id": "6HsfXtgcAE4",
-  "scheduled_for": "2026-12-31",
-  "theme": "ano_novo"
- },
- {
-  "video_id": "bwt2-nyEP0A",
-  "scheduled_for": "2027-01-01",
-  "theme": "ano_novo"
- },
- {
   "video_id": "rsQEor4y2hg"
  },
  {
@@ -361,5 +281,85 @@
  },
  {
   "video_id": "1dd0ecrO89o"
+ },
+ {
+  "video_id": "oCZgVGFwKo0",
+  "scheduled_for": "2026-11-13",
+  "theme": "gta"
+ },
+ {
+  "video_id": "88KNf0MtU14",
+  "scheduled_for": "2026-11-16",
+  "theme": "gta"
+ },
+ {
+  "video_id": "QdBZY2fkU-0",
+  "scheduled_for": "2026-11-17",
+  "theme": "gta"
+ },
+ {
+  "video_id": "VQRLujxTm3c",
+  "scheduled_for": "2026-11-19",
+  "theme": "gta"
+ },
+ {
+  "video_id": "xwaY3Epk4RE",
+  "scheduled_for": "2026-12-12",
+  "theme": "vingadores"
+ },
+ {
+  "video_id": "3p1d_6_ocEE",
+  "scheduled_for": "2026-12-13",
+  "theme": "vingadores"
+ },
+ {
+  "video_id": "3BXq73F2_z4",
+  "scheduled_for": "2026-12-14",
+  "theme": "vingadores"
+ },
+ {
+  "video_id": "spJoZReeIeQ",
+  "scheduled_for": "2026-12-15",
+  "theme": "vingadores"
+ },
+ {
+  "video_id": "GMtQhGC38yI",
+  "scheduled_for": "2026-12-16",
+  "theme": "vingadores"
+ },
+ {
+  "video_id": "JE1fRhgrO3k",
+  "scheduled_for": "2026-12-20",
+  "theme": "natal"
+ },
+ {
+  "video_id": "FNBKG2ku9N4",
+  "scheduled_for": "2026-12-21",
+  "theme": "natal"
+ },
+ {
+  "video_id": "rsXfe4nX6tw",
+  "scheduled_for": "2026-12-22",
+  "theme": "natal"
+ },
+ {
+  "video_id": "C-Wi9qu--0k",
+  "scheduled_for": "2026-12-24",
+  "theme": "natal"
+ },
+ {
+  "video_id": "tRuG0f3bPEQ",
+  "scheduled_for": "2026-12-25",
+  "theme": "natal"
+ },
+ {
+  "video_id": "6HsfXtgcAE4",
+  "scheduled_for": "2026-12-31",
+  "theme": "ano_novo"
+ },
+ {
+  "video_id": "bwt2-nyEP0A",
+  "scheduled_for": "2027-01-01",
+  "theme": "ano_novo"
  }
 ]
