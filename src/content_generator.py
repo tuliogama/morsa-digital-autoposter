@@ -595,10 +595,10 @@ _GAME_ONLY_SOURCES = {"GameBlast", "Eurogamer", "Kotaku"}
 _CAT_RULES = [
     ("gta", r"\bgta\b|grand theft auto|vice city|rockstar games"),
     ("dc", r"\b(batman|superman|supergirl|coringa|joker|aquaman|the flash|wonder woman|"
-           r"mulher-maravilha|lanterna verde|green lantern|lanterns|hal jordan|peacemaker|pacificador|"
+           r"mulher-maravilha|lanterna verde|green lantern|lanterns|lanternas|hal jordan|peacemaker|pacificador|"
            r"james gunn|dcu|dc studios|dc comics|gotham|arlequina|harley quinn|pinguim)\b"),
     ("marvel", r"\b(marvel|avengers|vingadores|spider-man|homem-aranha|x-men|deadpool|"
-               r"wolverine|thor|loki|mcu|thanos|doutor destino|doctor doom|demolidor|"
+               r"wolverine|thor|loki|mcu|thanos|visionquest|vision quest|capitão américa|doutor destino|doctor doom|demolidor|"
                r"daredevil|quarteto fantástico|fantastic four)\b"),
     ("starwars", r"\b(star wars|mandalorian|jedi|skywalker|ahsoka|darth vader|sith)\b"),
     ("anime_big", r"\b(one piece|jujutsu|demon slayer|kimetsu|dragon ball|naruto|boruto|"

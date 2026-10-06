@@ -1,0 +1,63 @@
+name: Reel diário — publica da fila
+
+# O Mac abastece data/reel_queue.json (vídeos de canais oficiais já convertidos e
+# hospedados na Release "reel-queue"). Aqui só se publica: 1 reel por dia a
+# partir das 18h BRT. Crons são gatilhos; src/reel_queue.py decide se é devido.
+
+on:
+  schedule:
+    - cron: "0 21 * * *"    # 18h BRT
+    - cron: "0 23 * * *"    # 20h BRT (reserva)
+  workflow_dispatch:
+
+env:
+  GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+  ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+  FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
+  IG_USER_ID: ${{ secrets.IG_USER_ID }}
+  MORSA_BROADCAST_CHANNEL_ID: ${{ secrets.MORSA_BROADCAST_CHANNEL_ID }}
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  publish:
+    name: Publicar próximo reel da fila
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    concurrency:
+      group: morsa-reel
+      cancel-in-progress: false
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Há reel devido?
+        id: gate
+        run: python3 src/reel_queue.py due
+
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.reel_due == 'true'
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - if: steps.gate.outputs.reel_due == 'true'
+        run: pip install -r requirements.txt
+
+      - name: Publicar
+        if: steps.gate.outputs.reel_due == 'true'
+        run: python src/reel_queue.py publish
+
+      - name: Persistir fila e log
+        if: steps.gate.outputs.reel_due == 'true'
+        run: |
+          git config user.name "morsa-bot"
+          git config user.email "bot@morsadigital.com"
+          git add data/reel_queue.json
+          git add -f logs/posts_log.json
+          git diff --staged --quiet || git commit -m "chore: reel publicado da fila [skip ci]"
+          git pull --rebase origin main
+          git push origin main

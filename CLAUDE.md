@@ -255,25 +255,23 @@ Baseada nos dados reais de performance. Horários em BRT (cron em UTC = +3):
 - Plataforma padrão: `instagram`
 - Secret `FB_ACCESS_TOKEN` precisa ser atualizado via `gh secret set FB_ACCESS_TOKEN`
 
-### Reel — roda LOCAL no Mac, NÃO no CI (decisão 22/jun)
-O YouTube bloqueia o IP de datacenter do GitHub Actions: mesmo com cookies
-(secret `YOUTUBE_COOKIES`, que destrava a busca), ele serve "only images
-available" e recusa os streams de vídeo. Então o reel **não roda no CI** —
-o job só existe via `workflow_dispatch` manual.
-- **Produção**: launchd `~/Library/LaunchAgents/com.morsa.dailyreel.plist` →
-  `run_reel_local.sh` todo dia às 18h. Requer o Mac ligado às 18h.
-- **Sem cookies (out/2026)**: com IP residencial o yt-dlp funciona sem login.
-  Passar `--cookies-from-browser chrome` faz o YouTube servir "only images" e
-  zerou os reels de ago a out/2026 (109 runs, 0 publicados). Manter o yt-dlp
-  atualizado (`brew upgrade yt-dlp`, já no script): versão velha dá 403.
-- `run_reel_local.sh` fixa `PATH=/opt/homebrew/bin` (launchd não herda PATH;
-  precisa do python3.14, não do /usr/bin/python3 3.9 que quebra no `|`).
-- **Anti-fake**: `reel_downloader` só aceita trailer de **canal oficial**
-  (`_is_official`) e rejeita fan-made/concept (`_is_fanmade`). Sem oficial
-  recente (90 dias), pula — nunca posta trailer falso. Lição: NÃO adicionar
-  ao backlog filmes sem trailer oficial lançado (a busca pega fan-made).
-- **Manutenção**: reabastecer `data/trailer_backlog.json` só com filmes cujo
-  trailer OFICIAL já saiu. Sem item válido + sem trailer no RSS = não posta.
+### Reel — fila: Mac abastece, GitHub publica (out/2026)
+O YouTube bloqueia o IP do GitHub ("confirme que não é um robô"; testado em
+06/10/2026 com yt-dlp atual, com e sem cookies — cookies expiram em semanas).
+Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py`.
+- **Fonte**: só uploads recentes (RSS do YouTube) dos canais em `OFFICIAL_CHANNELS`,
+  conferidos por ID + inscritos. Só adicionar canal por ID: `@dcbrasil` (3 inscritos)
+  e `@UniversalPicturesBr` são falsos. Nada de busca livre, nada de corte de cena.
+- **Mac** (`run_reel_local.sh`, launchd `com.morsa.dailyreel`, 18h): `fill` baixa,
+  converte para 9:16 (fundo desfocado + logo, máx. 90s), sobe na Release
+  `reel-queue` e grava `data/reel_queue.json` até ter 7 pendentes. Com a fila
+  cheia o Mac pode ficar dias desligado. yt-dlp SEM cookies (com cookies do Chrome
+  o YouTube serve "only images"; foi o que zerou os reels de ago a out/2026) e
+  sempre atualizado (`brew upgrade yt-dlp` no script: versão velha dá 403).
+- **CI** (`reel-queue.yml` + watchdog): `publish` solta 1 por dia a partir das 18h
+  BRT, alternando categoria, com legenda nossa (fatos = descrição oficial) e
+  crédito do canal. Fila vazia = não publica (ver `python3 src/reel_queue.py status`).
+- `editorial.run_reel` e `data/trailer_backlog.json` são o fluxo antigo, sem uso.
 
 ---
 

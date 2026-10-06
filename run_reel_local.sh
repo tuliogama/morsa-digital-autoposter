@@ -1,65 +1,36 @@
 #!/bin/bash
-# Reel diário rodando LOCALMENTE no Mac (caminho B).
-# O YouTube bloqueia o IP de datacenter do GitHub Actions ("only images
-# available"), então o reel não roda no CI. Localmente, com os cookies do
-# Chrome e IP residencial, o download funciona normalmente.
-# Agendado via launchd: ~/Library/LaunchAgents/com.morsa.dailyreel.plist
+# Abastece a fila de Reels (roda no Mac, via launchd com.morsa.dailyreel, 18h).
+# O YouTube bloqueia o IP do GitHub, então o DOWNLOAD só funciona em casa. A
+# PUBLICAÇÃO é do GitHub (workflow reel-queue.yml): com a fila cheia, o Mac
+# pode ficar dias desligado.
 
-set -e
 cd /Users/tuliogama/morsa-digital-autoposter
 
-# launchd não herda o PATH do shell — fixa o Homebrew para achar o python3
-# correto (3.14, não o /usr/bin/python3 3.9 que quebra), yt-dlp e ffmpeg.
+# launchd não herda o PATH do shell — fixa o Homebrew (python3.14, yt-dlp, ffmpeg, gh)
 export PATH="/opt/homebrew/bin:/usr/bin:/bin:$PATH"
 
-LOG_DIR="logs"
-mkdir -p "$LOG_DIR"
-TS=$(date +%Y%m%d_%H%M%S)
-LOG="$LOG_DIR/reel_local_$TS.log"
+mkdir -p logs
+LOG="logs/reel_local_$(date +%Y%m%d_%H%M%S).log"
 
-# Carrega segredos (nunca commitados)
 set -a
 source .env.secrets
 set +a
 
 {
-  echo "=== Reel local — $TS ==="
-
-  # 0) yt-dlp velho quebra em silêncio quando o YouTube muda (403 no download)
+  # yt-dlp velho quebra em silêncio quando o YouTube muda (403 no download)
   brew upgrade yt-dlp >/dev/null 2>&1 || true
 
-  # 1) Abastece o backlog com trailers OFICIAIS novos do RSS (nunca inventa data)
-  echo "--- Abastecendo backlog ---"
-  python3 refresh_backlog.py || echo "refresh_backlog falhou (segue com backlog atual)"
-  python3 validate_backlog.py --fix >/dev/null 2>&1 || true
+  git pull -q --rebase --autostash origin main || echo "pull falhou — segue com a fila local"
 
-  # 2) Publica o reel (só trailer de canal oficial; sem material → pula).
-  #    "sem reel hoje" é normal, NÃO é erro — || true para não abortar o script
-  #    (set -e) e garantir que o passo de persistência abaixo sempre rode.
-  echo "--- Publicando reel ---"
-  python3 -c "
-import sys, logging
-sys.path.insert(0, 'src')
-logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(name)s: %(message)s')
-from editorial import run_reel
-try:
-    result = run_reel()
-    print('Reel publicado:', result)
-except Exception as e:
-    print('Sem reel hoje:', e)
-" || true
-  # 3) Persiste backlog + posts_log no git (best-effort, nunca bloqueia o post).
-  #    Mesmo padrão do CI: sincroniza com o remoto antes de commitar.
-  echo "--- Persistindo no git ---"
-  git fetch origin main >/dev/null 2>&1 || true
-  git stash >/dev/null 2>&1 || true
-  git rebase origin/main >/dev/null 2>&1 || git reset --hard origin/main >/dev/null 2>&1 || true
-  git stash pop >/dev/null 2>&1 || true
-  git add -f data/trailer_backlog.json logs/posts_log.json 2>/dev/null || true
-  git diff --staged --quiet 2>/dev/null || {
-    git commit -m "chore: backlog auto-rss + log reel [skip ci]" >/dev/null 2>&1 || true
-    git push origin main >/dev/null 2>&1 || echo "push falhou (PAT expirado?) — segue local"
+  python3 src/reel_queue.py fill
+
+  git add data/reel_queue.json
+  git diff --staged --quiet || {
+    git commit -q -m "chore: fila de reels abastecida [skip ci]"
+    git pull -q --rebase --autostash origin main
+    git push -q origin main || echo "push falhou (token do gh expirado?)"
   }
+  python3 src/reel_queue.py status
 } >> "$LOG" 2>&1
 
 echo "Log: $LOG"

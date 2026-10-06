@@ -553,8 +553,13 @@ def publish_video_reel(video_path: str, caption: str) -> dict:
     file_size = os.path.getsize(video_path)
     logger.info(f"Publicando Reel: {video_path} ({file_size // 1024}KB)")
 
-    # 1. Hospedar vídeo publicamente no GitHub
-    video_url = _upload_video_to_github(video_path)
+    return publish_reel_from_url(_upload_video_to_github(video_path), caption)
+
+
+def publish_reel_from_url(video_url: str, caption: str) -> dict:
+    """Publica como Reel um MP4 já hospedado em URL pública."""
+    ig_user_id = os.environ["IG_USER_ID"]
+    token      = os.environ["FB_ACCESS_TOKEN"]
 
     # 2. Container REELS com video_url
     container_id = _post(f"{GRAPH_URL}/{ig_user_id}/media", {
