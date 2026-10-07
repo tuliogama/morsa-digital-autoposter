@@ -1,8 +1,8 @@
-# Fila de reels @morsadigital — 07/10/2026 02:29 BRT
+# Fila de reels @morsadigital — 07/10/2026 04:06 BRT
 
 ## cenas — a partir das 11h
 
-41 na fila | legendas ok: 32 | a revisar: 9 | dias sem reel no calendário: 0
+50 na fila | legendas ok: 36 | a revisar: 14 | dias sem reel no calendário: 0
 
 ### 07/10 — CHAVES MARCOU TODA UMA GERAÇÃO
 Netflix Brasil · vertical · pt · legenda: ok
@@ -132,19 +132,19 @@ Vídeo: Paramount Brasil (canal oficial no YouTube)
 ```
 
 ### 15/10 — Hola b*tches! #Venom: A Última Rodada, hoje, exclusivamente nos cinemas.
-Sony Pictures Brasil · vertical · pt · legenda: revisar (detalhe sem base: Toque de "b*tches" do Venom é aquele clássico?)
+Sony Pictures Brasil · vertical · pt · legenda: revisar (detalhe sem base: Venom e Carnificina juntos)
 
 ```
-Toque de "b*tches" do Venom é aquele clássico?
+Venom e Carnificina juntos: você curtiu a química ou achou demais?
 
-Aquele jeito sarcástico e bagunçado do simbionte sempre faz a gente sorrir.
-É o tipo de cena que resume a energia caótica e divertida do personagem.
+Aquela energia caótica dos dois dividindo a tela sempre rende.
+É o tipo de cena que mostra o quanto esses vilões se divertem causando bagunça.
 
-Qual é a sua parte favorita dessa fase do Venom?
+Comenta aqui: qual foi a melhor cena dessa dupla pra você?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#Venom #AUltimaRodada #SonyPictures #CulturaPop #Nerd #MorsaDigital
+#Venom #Carnificina #SonyPictures #CineNerd #MorsaDigital
 ```
 
 ### 16/10 — Memória coletiva: a primeira aparição do Shrek
@@ -455,58 +455,82 @@ Vídeo: Prime Video Brasil (canal oficial no YouTube)
 ```
 
 ### 04/11 — O DRACARYS MAIS TRISTE DO UNIVERSO DE GOT! ❤️‍🔥
-HBO Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 112; 1ª linha não é pergunta)
+HBO Brasil · vertical · pt · legenda: ok
 
 ```
-O DRACARYS MAIS TRISTE DO UNIVERSO DE GOT! ❤️‍🔥
+Qual Dracarys mais te deixou com o coração apertado?
 
-O que você achou?
+Essa cena de A Casa do Dragão pega diferente. Não é só o fogo que impressiona, é o peso da perda que fica na memória de quem acompanha a saga dos Targaryens.
+
+Conta pra gente qual foi o momento que mais te emociona.
 
 Vídeo: HBO Brasil (canal oficial no YouTube)
+
+#ACasaDoDragao #HouseOfTheDragon #Targaryen #Dracarys #HBO #MorsaDigital
 ```
 
 ### 05/11 — Wendel e Ursula dublando juntos em Naruto?
-Netflix Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 111)
+Netflix Brasil · vertical · pt · legenda: revisar (detalhe sem base: Ursula juntos em Naruto? Quem lembra dessa dublagem?)
 
 ```
-Wendel e Ursula dublando juntos em Naruto?
+Wendel e Ursula juntos em Naruto? Quem lembra dessa dublagem?
 
-O que você achou?
+É tipo descobrir que tem parentesco no meio da história da obra.
+Aquele misto de choque e carinho ao saber que eles compartilham esse universo.
+Fica aquela vontade de rever as cenas pra prestar atenção nas vozes.
+
+Marca aquele amigo que ficou surpreso com essa informação.
 
 Vídeo: Netflix Brasil (canal oficial no YouTube)
+
+#Naruto #Wendel #Ursula #DublagemNaruto #NetflixBrasil #MorsaDigital
 ```
 
 ### 06/11 — Qual personagem de Toy Story merecia seu momento de protagonismo?
-Walt Disney Studios BR · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 142)
+Walt Disney Studios BR · vertical · pt · legenda: ok
 
 ```
-Qual personagem de Toy Story merecia seu momento de protagonismo?
+Woody, Buzz ou Jessie: quem você acha que merecia mais destaque?
 
-O que você achou?
+A franquia é cheia de personagens marcantes, mas sempre sobra aquela vontade de ver mais da história de alguém específico. É o tipo de pergunta que gera debate entre os fãs desde o primeiro filme.
+
+Comenta aí qual seria o seu escolhido e o porquê.
 
 Vídeo: Walt Disney Studios BR (canal oficial no YouTube)
+
+#ToyStory #Woody #BuzzLightyear #Jessie #Disney #MorsaDigital
 ```
 
 ### 07/11 — Gaveta: Quarteto Fantástico tem uma estética linda!
-Marvel Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 119; 1ª linha não é pergunta)
+Marvel Brasil · vertical · pt · legenda: ok
 
 ```
-Gaveta: Quarteto Fantástico tem uma estética linda!
+A estética de Quarteto Fantástico te cativou ou você acha que é exagero?
 
-O que você achou?
+O Gaveta vai fundo nessa discussão no Disney Talks Express.
+É aquele tipo de análise que faz você querer rever o filme só pela direção de arte.
+
+Qual foi a cena ou o visual que mais te marcou?
 
 Vídeo: Marvel Brasil (canal oficial no YouTube)
+
+#Gaveta #QuartetoFantástico #Marvel #LucianoAmaral #DisneyTalks #MorsaDigital
 ```
 
 ### 08/11 — GOLAÇO! ⚽ | BLUE LOCK
-Crunchyroll Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 94; 1ª linha não é pergunta)
+Crunchyroll Brasil · vertical · pt · legenda: ok
 
 ```
-GOLAÇO! ⚽ | BLUE LOCK
+Quem foi o dono da bola mais bonita até agora na Blue Lock?
 
-O que você achou?
+Esse tipo de lance é o que faz a gente girar o volume e prender a atenção.
+É pura intensidade de quem vive pra fazer o gol perfeito.
+
+Comenta aí quem você quer ver com a taça de gol mais bonito.
 
 Vídeo: Crunchyroll Brasil (canal oficial no YouTube)
+
+#BlueLock #Anime #CrunchyrollBrasil #Futebol #Golaço #MorsaDigital
 ```
 
 ### 09/11 — JOFFREY APANHANDO EM GAME OF THRONES E BATMAN! 😉
@@ -559,7 +583,106 @@ O que você achou?
 Vídeo: Prime Video Brasil (canal oficial no YouTube)
 ```
 
-### 13/11 — Homem-Formiga -  Clipe: Teste de Fogo
+### 13/11 — APENAS PESSOAS VIVENDO O CASAMENTO VERMELHO EM #GOT 😍
+HBO Brasil · vertical · pt · legenda: revisar (1 hashtags (esperado 4 a 8); tamanho 118; 1ª linha não é pergunta)
+
+```
+APENAS PESSOAS VIVENDO O CASAMENTO VERMELHO EM #GOT 😍
+
+O que você achou?
+
+Vídeo: HBO Brasil (canal oficial no YouTube)
+```
+
+### 14/11 — FOI O NARUTO QUE DEU A FORÇA QUE ELA PRECISAVA
+Netflix Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 115; 1ª linha não é pergunta)
+
+```
+FOI O NARUTO QUE DEU A FORÇA QUE ELA PRECISAVA
+
+O que você achou?
+
+Vídeo: Netflix Brasil (canal oficial no YouTube)
+```
+
+### 15/11 — Segura a emoção! Qual foi o momento mais marcante de toda a franquia Toy Story?
+Walt Disney Studios BR · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8))
+
+```
+Segura a emoção! Qual foi o momento mais marcante de toda a franquia Toy Story?
+
+O que você achou?
+
+Vídeo: Walt Disney Studios BR (canal oficial no YouTube)
+```
+
+### 16/11 — Os vilões da Marvel precisam destruir tudo? Gaveta responde!
+Marvel Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 128)
+
+```
+Os vilões da Marvel precisam destruir tudo? Gaveta responde!
+
+O que você achou?
+
+Vídeo: Marvel Brasil (canal oficial no YouTube)
+```
+
+### 17/11 — Rimuru devora outro dragão 🐉 I That Time I Got Reincarnated as a Slime 4ª Tempor
+Crunchyroll Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); 1ª linha não é pergunta)
+
+```
+Rimuru devora outro dragão 🐉 I That Time I Got Reincarnated as a Slime 4ª Temporada
+
+O que você achou?
+
+Vídeo: Crunchyroll Brasil (canal oficial no YouTube)
+```
+
+### 18/11 — Como esquecer do início de The Last Of Us? 🔥
+HBO Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 109)
+
+```
+Como esquecer do início de The Last Of Us? 🔥
+
+O que você achou?
+
+Vídeo: HBO Brasil (canal oficial no YouTube)
+```
+
+### 19/11 — Ashley entrevista The Deep | The Boys | Prime Video
+Prime Video Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 124; 1ª linha não é pergunta)
+
+```
+Ashley entrevista The Deep | The Boys | Prime Video
+
+O que você achou?
+
+Vídeo: Prime Video Brasil (canal oficial no YouTube)
+```
+
+### 20/11 — Mãe e filha dublaram Toph em Avatar
+Netflix Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 104; 1ª linha não é pergunta)
+
+```
+Mãe e filha dublaram Toph em Avatar
+
+O que você achou?
+
+Vídeo: Netflix Brasil (canal oficial no YouTube)
+```
+
+### 21/11 — NÓS. SOMOS. VENOM 😀 NÓS. ESTAMOS. NA. M*RD* 🙃
+Sony Pictures Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 120; 1ª linha não é pergunta)
+
+```
+NÓS. SOMOS. VENOM 😀 NÓS. ESTAMOS. NA. M*RD* 🙃
+
+O que você achou?
+
+Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
+```
+
+### 22/11 — Homem-Formiga -  Clipe: Teste de Fogo
 Marvel Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -575,7 +698,7 @@ Vídeo: Marvel Brasil (canal oficial no YouTube)
 #HomemFormiga #AntMan #Marvel #ScottLang #PaulRudd #MorsaDigital
 ```
 
-### 14/11 — Game Of Thrones | Ygritte dispara em Jon Snow | #MomentoHBO
+### 23/11 — Game Of Thrones | Ygritte dispara em Jon Snow | #MomentoHBO
 HBO Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -591,7 +714,7 @@ Vídeo: HBO Brasil (canal oficial no YouTube)
 #GameOfThrones #JonSnow #Ygritte #HBO #MomentoHBO #MorsaDigital
 ```
 
-### 15/11 — Sonic 3: O Filme | Bastidores: O Doutor Está De Volta | Paramount Pictures Brasi
+### 24/11 — Sonic 3: O Filme | Bastidores: O Doutor Está De Volta | Paramount Pictures Brasi
 Paramount Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -607,7 +730,7 @@ Vídeo: Paramount Brasil (canal oficial no YouTube)
 #Sonic3 #JimCarrey #DoutorEggman #SonicTheHedgehog #ParamountBrazil #MorsaDigital
 ```
 
-### 16/11 — THE FLASH | CENA EXCLUSIVA
+### 25/11 — THE FLASH | CENA EXCLUSIVA
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -625,7 +748,7 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
 ## main — a partir das 13h
 
-49 na fila | legendas ok: 3 | a revisar: 40 | dias sem reel no calendário: 0
+59 na fila | legendas ok: 3 | a revisar: 40 | dias sem reel no calendário: 19
 
 ### 07/10 — Capitão América - Cena Transformação de Steve Rogers
 Marvel Brasil · ? · ? · legenda: ok
@@ -1141,4 +1264,123 @@ Prime Video Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
+```
+
+### 24/11 — STEEL BALL RUN JoJo’s Bizarre Adventure | Trailer oficial | Netflix
+Netflix Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 25/11 — Demolidor: Renascido | Trailer Oficial Dublado | Disney+
+Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 26/11 — Aquaman 2: O Reino Perdido | Trailer
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 27/11 — Street Fighter | Novo Trailer | DUB | Paramount Pictures Brasil
+Paramount Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 28/11 — Dragon Ball Daima | Trailer Oficial | Max
+HBO Max Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 29/11 — Guardiões da Galáxia: Volume 3 | Marvel Studios | Trailer Oficial 2 Dublado
+Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 30/11 — Godzilla e Kong: O Novo Império | Trailer Oficial 2
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 01/12 — Frieren e a Jornada para o Além 2ª Temporada | TRAILER OFICIAL
+Crunchyroll Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 02/12 — Doutor Estranho no Multiverso da Loucura | Marvel Studios | Trailer Oficial Dubl
+Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 03/12 — Besouro Azul | Trailer Final Oficial
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 04/12 — sem reel (fila ainda não cobre este dia)
+
+### 05/12 — sem reel (fila ainda não cobre este dia)
+
+### 06/12 — sem reel (fila ainda não cobre este dia)
+
+### 07/12 — sem reel (fila ainda não cobre este dia)
+
+### 08/12 — sem reel (fila ainda não cobre este dia)
+
+### 09/12 — sem reel (fila ainda não cobre este dia)
+
+### 10/12 — sem reel (fila ainda não cobre este dia)
+
+### 11/12 — sem reel (fila ainda não cobre este dia)
+
+### 12/12 — sem reel (fila ainda não cobre este dia)
+
+### 13/12 — sem reel (fila ainda não cobre este dia)
+
+### 14/12 — sem reel (fila ainda não cobre este dia)
+
+### 15/12 — sem reel (fila ainda não cobre este dia)
+
+### 16/12 — sem reel (fila ainda não cobre este dia)
+
+### 17/12 — sem reel (fila ainda não cobre este dia)
+
+### 18/12 — sem reel (fila ainda não cobre este dia)
+
+### 19/12 — sem reel (fila ainda não cobre este dia)
+
+### 20/12 — sem reel (fila ainda não cobre este dia)
+
+### 21/12 — sem reel (fila ainda não cobre este dia)
+
+### 22/12 — sem reel (fila ainda não cobre este dia)
+
+### 23/12 — Ebenezer e os Fantasmas do Natal | Trailer Oficial 2 | DUB | Paramount Pictures 
+Paramount Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8))
+
+```
+Ebenezer e os Fantasmas do Natal | Trailer Oficial 2 | DUB | Paramount Pictures Brasil
+
+O que você achou?
+
+Vídeo: Paramount Brasil (canal oficial no YouTube)
 ```
