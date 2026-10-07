@@ -25,7 +25,10 @@ set +a
   python3 src/reel_queue.py fill
   python3 src/reel_queue.py premap   # baixa o que faltar dos planos (acervo e cenas)
 
-  git add data/reel_queue.json data/reel_queue_cenas.json
+  # legendas prontas e checadas, arquivos conferidos, relatório em data/reel_report.md
+  python3 src/reel_queue.py audit
+
+  git add data/reel_queue.json data/reel_queue_cenas.json data/reel_report.md
   git diff --staged --quiet || {
     git commit -q -m "chore: fila de reels abastecida [skip ci]"
     git pull -q --rebase --autostash origin main
