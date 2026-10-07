@@ -15,7 +15,7 @@ Três tipos de item na fila:
   - acervo (`kind: acervo`): trailers e cenas clássicas pré-mapeados em
     data/reel_plan.json (`premap`), na ordem do plano, para os dias sem os outros.
 
-Uso:  python src/reel_queue.py fill | premap | publish | due | status
+Uso:  python src/reel_queue.py fill | premap | audit | publish | due | status
 """
 import json
 import logging
@@ -104,6 +104,7 @@ SCENE_CHANNELS = {
     "UC2-BeLxzUBSs0uSrmzWhJuQ": "20th Century Studios",
     "UCX2M7xn-jMmq4KfX25TCTCA": "HBO Brasil",
     "UCP6nJ-Elnfnpjv6HQRsv1Cw": "Walt Disney Studios BR",
+    "UCAnCxJ1Weh2pUAKJW0bro0Q": "Paramount+ Brasil",
 }
 ALL_OFFICIAL = {**OFFICIAL_CHANNELS, **SCENE_CHANNELS}
 
@@ -610,6 +611,157 @@ def _caption(item: dict) -> str:
     return _with_credit(_cap_hashtags(_strip_ai_tells(text)), item["channel"])
 
 
+# ── Auditoria: legendas prontas e arquivos conferidos antes do dia ───────────
+
+_NEWS_WORDS_RE = re.compile(r"\b(chegou|acabou de sair|acaba de sair|estreia em breve|em breve|"
+                            r"novo trailer|saiu o trailer)\b", re.IGNORECASE)
+
+
+def lint_caption(item: dict, caption: str) -> list[str]:
+    """Regras fixas que toda legenda tem que cumprir."""
+    problems = []
+    lines = [l for l in caption.splitlines() if l.strip()]
+    tags = re.findall(r"#\w+", caption)
+    if f"Vídeo: {item['channel']}" not in caption:
+        problems.append("sem crédito do canal")
+    if "—" in caption or "–" in caption:
+        problems.append("tem travessão")
+    if not 4 <= len(tags) <= 8:
+        problems.append(f"{len(tags)} hashtags (esperado 4 a 8)")
+    if any(t.lower() in ("#cinema", "#filmes", "#trailer", "#série", "#series") for t in tags):
+        problems.append("hashtag genérica")
+    if len(caption) < 150 or len(caption) > 1200:
+        problems.append(f"tamanho {len(caption)}")
+    if lines and not lines[0][0].isalnum() and lines[0][0] not in '"“¿':
+        problems.append("começa com emoji ou símbolo")
+    if STREAM == "cenas" and lines and "?" not in lines[0]:
+        problems.append("1ª linha não é pergunta")
+    if _age_note(item) and _NEWS_WORDS_RE.search(caption):
+        problems.append("trata vídeo antigo como novidade")
+    return problems
+
+
+JUDGE_MODEL = "openai/gpt-oss-120b"   # modelo maior que o redator, só para checar
+
+
+def _groq_json(model: str, system: str, user: str, max_tokens: int = 700) -> dict:
+    payload = json.dumps({"model": model, "max_tokens": max_tokens, "temperature": 0,
+                          "response_format": {"type": "json_object"},
+                          "messages": [{"role": "system", "content": system},
+                                       {"role": "user", "content": user}]}).encode()
+    req = urllib.request.Request(
+        "https://api.groq.com/openai/v1/chat/completions", data=payload,
+        headers={"Authorization": f"Bearer {os.environ['GROQ_API_KEY']}",
+                 "Content-Type": "application/json", "User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=40) as r:
+        return json.loads(json.loads(r.read())["choices"][0]["message"]["content"])
+
+
+def judge_caption(item: dict, caption: str) -> list[str]:
+    """Um modelo maior confere se a legenda inventou algum detalhe."""
+    body = caption.split("\n\nVídeo:")[0]
+    try:
+        found = _groq_json(
+            JUDGE_MODEL,
+            "Você é checador de fatos de um perfil de cultura pop. Recebe TÍTULO e DESCRIÇÃO "
+            "OFICIAL de um vídeo e a LEGENDA escrita para ele. Aponte os trechos da legenda que "
+            "são detalhe factual ERRADO ou INVENTADO sobre a obra: lugar, objeto, número, data, "
+            "acontecimento, fala, elenco ou enredo que não está no título/descrição e que você "
+            "não tem certeza de ser verdadeiro. NÃO aponte: opinião, pergunta, sentimento, nome "
+            "da obra, nem personagens que realmente pertencem à obra. Na dúvida sobre um detalhe "
+            'específico, aponte. Responda JSON: {"inventado": ["trecho", ...]} (lista vazia se ok).',
+            f"TÍTULO: {item['title']}\nCANAL: {item['channel']}\nDESCRIÇÃO OFICIAL: "
+            f"{item['description']}\n\nLEGENDA:\n{body}").get("inventado", [])
+        return [f"detalhe sem base: {x}" for x in found if isinstance(x, str)][:4]
+    except Exception as e:
+        return [f"checagem indisponível ({str(e)[:60]})"]
+
+
+def prepare_captions(limit: int = 40) -> dict:
+    """Gera, audita e guarda a legenda dos próximos itens (até 3 tentativas cada)."""
+    queue = load_queue()
+    todo = [q for q in pending(queue) if q.get("caption_check") != "ok"][:limit]
+    stats = {"ok": 0, "revisar": 0}
+    for item in todo:
+        best, best_problems = None, None
+        for _ in range(3):
+            caption = _caption(item)
+            problems = lint_caption(item, caption)
+            if not problems:
+                problems = judge_caption(item, caption)
+            if best is None or len(problems) < len(best_problems):
+                best, best_problems = caption, problems
+            if not problems:
+                break
+            time.sleep(2)
+        item["caption"] = best
+        item["caption_check"] = "ok" if not best_problems else "revisar"
+        item["caption_problems"] = best_problems
+        stats[item["caption_check"]] += 1
+        save_queue(queue)
+        logger.info(f"[{STREAM}] legenda {item['caption_check']}: {item['title'][:50]} {best_problems or ''}")
+        time.sleep(2)
+    return stats
+
+
+def verify_assets() -> list[str]:
+    """Confere se o arquivo de cada item pendente está no ar e com tamanho plausível."""
+    bad = []
+    for q in pending(load_queue()):
+        try:
+            req = urllib.request.Request(q["asset_url"], method="HEAD")
+            with urllib.request.urlopen(req, timeout=20) as r:
+                size = int(r.headers.get("Content-Length", 0))
+            if size < 300_000:
+                bad.append(f"{q['video_id']} arquivo pequeno demais ({size} bytes): {q['title'][:50]}")
+        except Exception as e:
+            bad.append(f"{q['video_id']} inacessível ({str(e)[:50]}): {q['title'][:50]}")
+    return bad
+
+
+def write_report():
+    """Relatório legível dos dois fluxos: calendário, formato, idioma e legenda de cada reel."""
+    out = [f"# Fila de reels @morsadigital — {datetime.now(BRT):%d/%m/%Y %H:%M} BRT", ""]
+    for name in STREAMS:
+        use_stream(name)
+        queue = load_queue()
+        sim = json.loads(json.dumps(queue))
+        day = datetime.now(BRT).date()
+        if any(q.get("posted_at", "")[:10] == day.isoformat() for q in queue):
+            day += timedelta(days=1)
+        rows, empty = [], 0
+        while pending(sim) and empty < 20 and len(rows) < 120:
+            it = _pick_next(sim, day)
+            if it is None:
+                empty += 1
+                rows.append((day, None))
+            else:
+                empty = 0
+                it["posted"] = True
+                it["posted_at"] = day.isoformat()
+                rows.append((day, it))
+            day += timedelta(days=1)
+        while rows and rows[-1][1] is None:
+            rows.pop()
+        todo = pending(queue)
+        out += [f"## {name} — a partir das {REEL_SLOT_BRT}h", "",
+                f"{len(todo)} na fila | legendas ok: {sum(1 for q in todo if q.get('caption_check') == 'ok')} | "
+                f"a revisar: {sum(1 for q in todo if q.get('caption_check') == 'revisar')} | "
+                f"dias sem reel no calendário: {sum(1 for _, it in rows if it is None)}", ""]
+        for d, it in rows:
+            if it is None:
+                out += [f"### {d:%d/%m} — sem reel (fila ainda não cobre este dia)", ""]
+                continue
+            out += [f"### {d:%d/%m} — {it['title'][:80]}",
+                    f"{it['channel']} · {it.get('layout', '?')} · {it.get('lang', '?')} · "
+                    f"legenda: {it.get('caption_check', 'ainda não gerada')}"
+                    + (f" ({'; '.join(it.get('caption_problems') or [])})" if it.get("caption_problems") else ""),
+                    "", "```", it.get("caption", "(gerada na hora da publicação)"), "```", ""]
+    path = ROOT / "data" / "reel_report.md"
+    path.write_text("\n".join(out), encoding="utf-8")
+    return path
+
+
 def publish() -> int:
     due, reason = is_due()
     logger.info(reason)
@@ -620,7 +772,7 @@ def publish() -> int:
 
     queue = load_queue()
     item = _pick_next(queue)
-    caption = _caption(item)
+    caption = item.get("caption") or _caption(item)
     logger.info(f"Publicando [{item['category']}] {item['title']}\n{caption}")
     result = publish_reel_from_url(item["asset_url"], caption)
 
@@ -653,6 +805,15 @@ def main():
         for name in streams:
             use_stream(name)
             publish()
+    elif cmd == "audit":
+        problems = []
+        for name in streams:
+            use_stream(name)
+            problems += verify_assets()
+            logger.info(f"[{name}] legendas: {prepare_captions()}")
+        for line in problems:
+            logger.warning(f"ARQUIVO: {line}")
+        logger.info(f"Relatório: {write_report()}")
     elif cmd == "due":
         any_due = False
         for name in streams:
