@@ -1,8 +1,8 @@
-# Fila de reels @morsadigital — 07/10/2026 05:47 BRT
+# Fila de reels @morsadigital — 07/10/2026 06:18 BRT
 
 ## cenas — a partir das 11h
 
-59 na fila | legendas ok: 41 | a revisar: 18 | dias sem reel no calendário: 0
+59 na fila | legendas ok: 41 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 07/10 — CHAVES MARCOU TODA UMA GERAÇÃO
 Netflix Brasil · vertical · pt · legenda: ok
@@ -616,194 +616,122 @@ Vídeo: HBO Brasil (canal oficial no YouTube)
 ```
 
 ### 14/11 — FOI O NARUTO QUE DEU A FORÇA QUE ELA PRECISAVA
-Netflix Brasil · vertical · pt · legenda: revisar (checagem indisponível (HTTP Error 400: Bad Request))
+Netflix Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
-Quem mais chorou quando descobriu que a voz do Naruto é de uma mulher?
-
-Relembre a trajetória de Úrsula Bezerra, que não só deu vida ao personagem icônico, como ainda gravou cenas ao lado do próprio irmão. É uma história real por trás das câmeras que mostra a força que o anime deu para ela seguir em frente.
-
-Comenta aí qual foi a sua maior surpresa ao conhecer essa história.
-
-Vídeo: Netflix Brasil (canal oficial no YouTube)
-
-#Naruto #ÚrsulaBezerra #Dublagem #Anime #Netflix #MorsaDigital
+(gerada na hora da publicação)
 ```
 
 ### 15/11 — Segura a emoção! Qual foi o momento mais marcante de toda a franquia Toy Story?
-Walt Disney Studios BR · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8))
+Walt Disney Studios BR · vertical · pt · legenda: ainda não gerada
 
 ```
-Segura a emoção! Qual foi o momento mais marcante de toda a franquia Toy Story?
-
-O que você achou?
-
-Vídeo: Walt Disney Studios BR (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 16/11 — Os vilões da Marvel precisam destruir tudo? Gaveta responde!
-Marvel Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 128)
+Marvel Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
-Os vilões da Marvel precisam destruir tudo? Gaveta responde!
-
-O que você achou?
-
-Vídeo: Marvel Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 17/11 — Rimuru devora outro dragão 🐉 I That Time I Got Reincarnated as a Slime 4ª Tempor
-Crunchyroll Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); 1ª linha não é pergunta)
+Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
-Rimuru devora outro dragão 🐉 I That Time I Got Reincarnated as a Slime 4ª Temporada
-
-O que você achou?
-
-Vídeo: Crunchyroll Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 18/11 — Como esquecer do início de The Last Of Us? 🔥
-HBO Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 109)
+HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
-Como esquecer do início de The Last Of Us? 🔥
-
-O que você achou?
-
-Vídeo: HBO Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 19/11 — Ashley entrevista The Deep | The Boys | Prime Video
-Prime Video Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 124; 1ª linha não é pergunta)
+Prime Video Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
-Ashley entrevista The Deep | The Boys | Prime Video
-
-O que você achou?
-
-Vídeo: Prime Video Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 20/11 — Mãe e filha dublaram Toph em Avatar
-Netflix Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 104; 1ª linha não é pergunta)
+Netflix Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
-Mãe e filha dublaram Toph em Avatar
-
-O que você achou?
-
-Vídeo: Netflix Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 21/11 — NÓS. SOMOS. VENOM 😀 NÓS. ESTAMOS. NA. M*RD* 🙃
-Sony Pictures Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 120; 1ª linha não é pergunta)
+Sony Pictures Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
-NÓS. SOMOS. VENOM 😀 NÓS. ESTAMOS. NA. M*RD* 🙃
-
-O que você achou?
-
-Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 22/11 — Posso ver Shrek pela 7286x mas sempre vou rir como se fosse a 1° toda vez que o 
-Prime Video Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); 1ª linha não é pergunta)
+Prime Video Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
-Posso ver Shrek pela 7286x mas sempre vou rir como se fosse a 1° toda vez que o Burro fala algo 🗣️
-
-O que você achou?
-
-Vídeo: Prime Video Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 23/11 — O MUNDO FICOU EM FESTA DEPOIS DESSA CENA DO JOFFREY EM #GOT! 😉
-HBO Brasil · vertical · pt · legenda: revisar (1 hashtags (esperado 4 a 8); tamanho 127; 1ª linha não é pergunta)
+HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
-O MUNDO FICOU EM FESTA DEPOIS DESSA CENA DO JOFFREY EM #GOT! 😉
-
-O que você achou?
-
-Vídeo: HBO Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 24/11 — Dublagens do filme de MINECRAFT: QUAL FICOU MELHOR?
-Netflix Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 120)
+Netflix Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
-Dublagens do filme de MINECRAFT: QUAL FICOU MELHOR?
-
-O que você achou?
-
-Vídeo: Netflix Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 25/11 — Toy Story 5 | Dubladores
-Walt Disney Studios BR · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 101; 1ª linha não é pergunta)
+Walt Disney Studios BR · vertical · pt · legenda: ainda não gerada
 
 ```
-Toy Story 5 | Dubladores
-
-O que você achou?
-
-Vídeo: Walt Disney Studios BR (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 26/11 — Thor: Ragnarok: Hoje nos Cinemas - "Deusa da Morte"
-Marvel Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 119; 1ª linha não é pergunta)
+Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
-Thor: Ragnarok: Hoje nos Cinemas - "Deusa da Morte"
-
-O que você achou?
-
-Vídeo: Marvel Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 27/11 — Não tente correr, as sombras sempre surgirão para te encontrar 🔥 #SoloLeveling
-Crunchyroll Brasil · vertical · pt · legenda: revisar (1 hashtags (esperado 4 a 8); 1ª linha não é pergunta)
+Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
-Não tente correr, as sombras sempre surgirão para te encontrar 🔥 #SoloLeveling
-
-O que você achou?
-
-Vídeo: Crunchyroll Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 28/11 — HÁ 3 ANOS, JOEL CHAMOU ELLIE DE "MEU AMOR" 💚 | THE LAST OF US
-HBO Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 126; 1ª linha não é pergunta)
+HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
-HÁ 3 ANOS, JOEL CHAMOU ELLIE DE "MEU AMOR" 💚 | THE LAST OF US
-
-O que você achou?
-
-Vídeo: HBO Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 29/11 — Vazou o Homem-Aranha passando perrengue desde o dia 1 🗣️ #OEspetacularHomemAranh
-Prime Video Brasil · vertical · pt · legenda: revisar (1 hashtags (esperado 4 a 8); 1ª linha não é pergunta)
+Prime Video Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
-Vazou o Homem-Aranha passando perrengue desde o dia 1 🗣️ #OEspetacularHomemAranha
-
-O que você achou?
-
-Vídeo: Prime Video Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 30/11 — Monstros vs. Alienígenas core.
-Netflix Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 99; 1ª linha não é pergunta)
+Netflix Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
-Monstros vs. Alienígenas core.
-
-O que você achou?
-
-Vídeo: Netflix Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 01/12 — Homem-Formiga -  Clipe: Teste de Fogo
@@ -872,7 +800,7 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
 ## main — a partir das 13h
 
-69 na fila | legendas ok: 3 | a revisar: 40 | dias sem reel no calendário: 9
+67 na fila | legendas ok: 3 | a revisar: 1 | dias sem reel no calendário: 11
 
 ### 07/10 — Capitão América - Cena Transformação de Steve Rogers
 Marvel Brasil · ? · ? · legenda: ok
@@ -889,15 +817,11 @@ Vídeo: Marvel Brasil (canal oficial no YouTube)
 #CapitaoAmerica #SteveRogers #Marvel #MCU #TheFirstAvenger #CenasIcônicas
 ```
 
-### 08/10 — Diablo IV - Trailer de Gameplay da Temporada do Legado Infernal | PS5
-PlayStation Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 142)
+### 08/10 — The Batman - Trailer Principal
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
-Diablo IV - Trailer de Gameplay da Temporada do Legado Infernal | PS5
-
-O que você achou?
-
-Vídeo: PlayStation Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 09/10 — Grand Theft Auto III: 10 Year Anniversary Edition - Official Launch Trailer
@@ -915,26 +839,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 #GTA3 #GrandTheftAutoIII #RockstarGames #LibertyCity #GTA6 #Nostalgia
 ```
 
-### 10/10 — Fortnite: Pesadelos 2026 | Trailer Cinematográfico | PS5 & PS4
-PlayStation Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 135)
+### 10/10 — Homem-Aranha: Um Novo Dia - Novo Trailer (Dublado)
+Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
-Fortnite: Pesadelos 2026 | Trailer Cinematográfico | PS5 & PS4
-
-O que você achou?
-
-Vídeo: PlayStation Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
-### 11/10 — The Batman - Trailer Principal
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 113)
+### 11/10 — ONE PIECE: A Série - Temporada 2 | Trailer final | Netflix
+Netflix Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
-The Batman - Trailer Principal
-
-O que você achou?
-
-Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 12/10 — VisionQuest | Trailer Oficial Dublado | Disney+
@@ -953,391 +869,237 @@ Vídeo: Disney+ Brasil (canal oficial no YouTube)
 ```
 
 ### 13/10 — Grand Theft Auto: Vice City - Anniversary Trailer
-Rockstar Games · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 118)
+Rockstar Games · ? · ? · legenda: ainda não gerada
 
 ```
-Grand Theft Auto: Vice City - Anniversary Trailer
-
-O que você achou?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
-### 14/10 — Homem-Aranha: Um Novo Dia - Novo Trailer (Dublado)
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 125; trata vídeo antigo como novidade)
+### 14/10 — Sonic 3: O Filme | Trailer Oficial | DUB | Paramount Pictures Brasil
+Paramount Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
-Homem-Aranha: Um Novo Dia - Novo Trailer (Dublado)
-
-O que você achou?
-
-Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
-### 15/10 — ONE PIECE: A Série - Temporada 2 | Trailer final | Netflix
-Netflix Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 127)
+### 15/10 — Deadpool & Wolverine | Trailer 2 Oficial Dublado
+Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
-ONE PIECE: A Série - Temporada 2 | Trailer final | Netflix
-
-O que você achou?
-
-Vídeo: Netflix Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 16/10 — Grand Theft Auto IV Trailer 1 "Things Will Be Different"
-Rockstar Games · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 125)
+Rockstar Games · ? · ? · legenda: ainda não gerada
 
 ```
-Grand Theft Auto IV Trailer 1 "Things Will Be Different"
-
-O que você achou?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
-### 17/10 — Sonic 3: O Filme | Trailer Oficial | DUB | Paramount Pictures Brasil
-Paramount Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 139)
+### 17/10 — Superman l Trailer Teaser Oficial Dublado
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
-Sonic 3: O Filme | Trailer Oficial | DUB | Paramount Pictures Brasil
-
-O que você achou?
-
-Vídeo: Paramount Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 18/10 — IT: Bem-Vindos a Derry | Red Band Trailer Dublado | HBO Max
-HBO Max Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 128)
+HBO Max Brasil · ? · ? · legenda: ainda não gerada
 
 ```
-IT: Bem-Vindos a Derry | Red Band Trailer Dublado | HBO Max
-
-O que você achou?
-
-Vídeo: HBO Max Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 19/10 — Until Dawn: Noite de Terror | Trailer Oficial Dublado
-Sony Pictures Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 128)
+Sony Pictures Brasil · ? · ? · legenda: ainda não gerada
 
 ```
-Until Dawn: Noite de Terror | Trailer Oficial Dublado
-
-O que você achou?
-
-Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 20/10 — Grand Theft Auto: The Trilogy – The Definitive Edition Trailer
-Rockstar Games · horizontal · en · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 130)
+Rockstar Games · horizontal · en · legenda: ainda não gerada
 
 ```
-Grand Theft Auto: The Trilogy, The Definitive Edition Trailer
-
-O que você achou?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 21/10 — Sorria 2 | Teaser Trailer Oficial | DUB | Paramount Pictures Brasil
-Paramount Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 138)
+Paramount Brasil · ? · ? · legenda: ainda não gerada
 
 ```
-Sorria 2 | Teaser Trailer Oficial | DUB | Paramount Pictures Brasil
-
-O que você achou?
-
-Vídeo: Paramount Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 22/10 — Alien: Earth | Trailer Oficial Dublado | Disney+
-Disney+ Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 117)
+Disney+ Brasil · ? · ? · legenda: ainda não gerada
 
 ```
-Alien: Earth | Trailer Oficial Dublado | Disney+
-
-O que você achou?
-
-Vídeo: Disney+ Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 23/10 — Grand Theft Auto V Trailer
-Rockstar Games · horizontal · en · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 95)
+Rockstar Games · horizontal · en · legenda: ainda não gerada
 
 ```
-Grand Theft Auto V Trailer
-
-O que você achou?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 24/10 — Fortnite: Pesadelos 2026 - Trailer Cinematográfico | PS5 & PS4
-PlayStation Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 135)
+PlayStation Brasil · ? · ? · legenda: ainda não gerada
 
 ```
-Fortnite: Pesadelos 2026 - Trailer Cinematográfico | PS5 & PS4
-
-O que você achou?
-
-Vídeo: PlayStation Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 25/10 — Premonição 6: Laços de Sangue l Trailer Oficial
-Warner Bros. Pictures Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 130)
+Warner Bros. Pictures Brasil · ? · ? · legenda: ainda não gerada
 
 ```
-Premonição 6: Laços de Sangue l Trailer Oficial
-
-O que você achou?
-
-Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 26/10 — A FREIRA 2 | TRAILER OFICIAL
-Warner Bros. Pictures Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 111)
+Warner Bros. Pictures Brasil · ? · ? · legenda: ainda não gerada
 
 ```
-A FREIRA 2 | TRAILER OFICIAL
-
-O que você achou?
-
-Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 27/10 — Red Dead Redemption 2: Official Trailer #3
-Rockstar Games · horizontal · en · legenda: revisar (1 hashtags (esperado 4 a 8); tamanho 111)
+Rockstar Games · horizontal · en · legenda: ainda não gerada
 
 ```
-Red Dead Redemption 2: Official Trailer #3
-
-O que você achou?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 28/10 — OS FANTASMAS AINDA SE DIVERTEM: BEETLEJUICE BEETLEJUICE l Trailer Oficial #2
-Warner Bros. Pictures Brasil · ? · ? · legenda: revisar (1 hashtags (esperado 4 a 8))
+Warner Bros. Pictures Brasil · ? · ? · legenda: ainda não gerada
 
 ```
-OS FANTASMAS AINDA SE DIVERTEM: BEETLEJUICE BEETLEJUICE l Trailer Oficial #2
-
-O que você achou?
-
-Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 29/10 — Stranger Things 5 | Trailer - Volume 2 | Netflix
-Netflix Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 117)
+Netflix Brasil · ? · ? · legenda: ainda não gerada
 
 ```
-Stranger Things 5 | Trailer - Volume 2 | Netflix
-
-O que você achou?
-
-Vídeo: Netflix Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 30/10 — Grand Theft Auto Online – Heists Trailer
-Rockstar Games · horizontal · en · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 108)
+Rockstar Games · horizontal · en · legenda: ainda não gerada
 
 ```
-Grand Theft Auto Online, Heists Trailer
-
-O que você achou?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 31/10 — Invocação do Mal: O Último Ritual l Trailer Oficial Dublado
-Warner Bros. Pictures Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 142)
+Warner Bros. Pictures Brasil · ? · ? · legenda: ainda não gerada
 
 ```
-Invocação do Mal: O Último Ritual l Trailer Oficial Dublado
-
-O que você achou?
-
-Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 01/11 — Resident Evil | Trailer Oficial | Dublado
-Sony Pictures Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 116)
+Sony Pictures Brasil · ? · ? · legenda: ainda não gerada
 
 ```
-Resident Evil | Trailer Oficial | Dublado
-
-O que você achou?
-
-Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
-### 02/11 — Deadpool & Wolverine | Trailer 2 Oficial Dublado
-Marvel Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 116)
+### 02/11 — Demon Slayer: Kimetsu no Yaiba Castelo Infinito | Trailer | Em breve nos cinemas
+Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
-Deadpool & Wolverine | Trailer 2 Oficial Dublado
-
-O que você achou?
-
-Vídeo: Marvel Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 03/11 — Grand Theft Auto V: The Official Trailer
-Rockstar Games · horizontal · en · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 109)
+Rockstar Games · horizontal · en · legenda: ainda não gerada
 
 ```
-Grand Theft Auto V: The Official Trailer
-
-O que você achou?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
-### 04/11 — Superman l Trailer Teaser Oficial Dublado
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 124)
+### 04/11 — Remake da trilogia God of War - Teaser de anúncio | PS5
+PlayStation Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
-Superman l Trailer Teaser Oficial Dublado
-
-O que você achou?
-
-Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
-### 05/11 — Demon Slayer: Kimetsu no Yaiba Castelo Infinito | Trailer | Em breve nos cinemas
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); trata vídeo antigo como novidade)
+### 05/11 — Homem-Aranha: Através do AranhaVerso | Trailer Oficial Dublado
+Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
-Demon Slayer: Kimetsu no Yaiba Castelo Infinito | Trailer | Em breve nos cinemas
-
-O que você achou?
-
-Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 06/11 — Red Dead Redemption 2 Trailer
-Rockstar Games · horizontal · en · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 98)
+Rockstar Games · horizontal · en · legenda: ainda não gerada
 
 ```
-Red Dead Redemption 2 Trailer
-
-O que você achou?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
-### 07/11 — Remake da trilogia God of War - Teaser de anúncio | PS5
-PlayStation Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 128)
+### 07/11 — Supergirl l Teaser Trailer Oficial
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
-Remake da trilogia God of War - Teaser de anúncio | PS5
-
-O que você achou?
-
-Vídeo: PlayStation Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
-### 08/11 — Homem-Aranha: Através do AranhaVerso | Trailer Oficial Dublado
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 137)
+### 08/11 — CHAINSAW MAN: O FILME - ARCO DA REZE - NOVO TRAILER (Dublado)
+Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
-Homem-Aranha: Através do AranhaVerso | Trailer Oficial Dublado
-
-O que você achou?
-
-Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
-### 09/11 — Supergirl l Teaser Trailer Oficial
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 117)
+### 09/11 — Mortal Kombat 2 l Trailer Oficial Dublado #2
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
-Supergirl l Teaser Trailer Oficial
-
-O que você achou?
-
-Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
 ### 10/11 — Grand Theft Auto V: PlayStation 4, Xbox One & PC Announcement Trailer
-Rockstar Games · horizontal · en · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 138)
+Rockstar Games · horizontal · en · legenda: ainda não gerada
 
 ```
-Grand Theft Auto V: PlayStation 4, Xbox One & PC Announcement Trailer
-
-O que você achou?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
-### 11/11 — CHAINSAW MAN: O FILME - ARCO DA REZE - NOVO TRAILER (Dublado)
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 136; trata vídeo antigo como novidade)
+### 11/11 — Thor: Ragnarok - Trailer Oficial | HD
+Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
-CHAINSAW MAN: O FILME - ARCO DA REZE - NOVO TRAILER (Dublado)
-
-O que você achou?
-
-Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
-### 12/11 — Mortal Kombat 2 l Trailer Oficial Dublado #2
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: revisar (1 hashtags (esperado 4 a 8); tamanho 127)
+### 12/11 — The Batman - O Morcego e a Gata - Trailer
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
-Mortal Kombat 2 l Trailer Oficial Dublado #2
-
-O que você achou?
-
-Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
-### 13/11 — Thor: Ragnarok - Trailer Oficial | HD
-Marvel Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 105)
+### 13/11 — THE ONE PIECE | Teaser oficial | Netflix
+Netflix Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
-Thor: Ragnarok - Trailer Oficial | HD
-
-O que você achou?
-
-Vídeo: Marvel Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
-### 14/11 — The Batman - O Morcego e a Gata - Trailer
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 124)
+### 14/11 — Resident Evil Requiem - 4º Trailer | PS5
+PlayStation Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
-The Batman - O Morcego e a Gata - Trailer
-
-O que você achou?
-
-Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```
 
-### 15/11 — THE ONE PIECE | Teaser oficial | Netflix
-Netflix Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 109)
-
-```
-THE ONE PIECE | Teaser oficial | Netflix
-
-O que você achou?
-
-Vídeo: Netflix Brasil (canal oficial no YouTube)
-```
-
-### 16/11 — Resident Evil Requiem - 4º Trailer | PS5
-PlayStation Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 113)
-
-```
-Resident Evil Requiem - 4º Trailer | PS5
-
-O que você achou?
-
-Vídeo: PlayStation Brasil (canal oficial no YouTube)
-```
-
-### 17/11 — Quarteto Fantástico: Primeiros Passos | Trailer Oficial 2 Dublado
+### 15/11 — Quarteto Fantástico: Primeiros Passos | Trailer Oficial 2 Dublado
 Marvel Brasil · horizontal · pt · legenda: revisar (trata vídeo antigo como novidade)
 
 ```
@@ -1352,187 +1114,191 @@ Vídeo: Marvel Brasil (canal oficial no YouTube)
 #QuartetoFantástico #PrimeirosPassos #MarvelStudios #Dublado #Relembre #NerdBR
 ```
 
-### 18/11 — The Mandalorian | Trailer Oficial Dublado | Temporada 2 | Disney+
+### 16/11 — The Mandalorian | Trailer Oficial Dublado | Temporada 2 | Disney+
 Disney+ Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 19/11 — Jujutsu Kaisen 0 | Trailer oficial dublado | 28 de abril exclusivamente nos cine
+### 17/11 — Jujutsu Kaisen 0 | Trailer oficial dublado | 28 de abril exclusivamente nos cine
 Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 20/11 — Um Filme Minecraft l Trailer Final
+### 18/11 — Um Filme Minecraft l Trailer Final
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 21/11 — Homem-Aranha: Sem Volta Para Casa | Trailer Oficial Dublado | 16 de dezembro nos
+### 19/11 — Homem-Aranha: Sem Volta Para Casa | Trailer Oficial Dublado | 16 de dezembro nos
 Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 22/11 — The Flash – Trailer Oficial
+### 20/11 — The Flash – Trailer Oficial
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 23/11 — The Boys – Temporada Final Trailer | Prime Video
+### 21/11 — The Boys – Temporada Final Trailer | Prime Video
 Prime Video Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 24/11 — STEEL BALL RUN JoJo’s Bizarre Adventure | Trailer oficial | Netflix
+### 22/11 — STEEL BALL RUN JoJo’s Bizarre Adventure | Trailer oficial | Netflix
 Netflix Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 25/11 — Demolidor: Renascido | Trailer Oficial Dublado | Disney+
+### 23/11 — Demolidor: Renascido | Trailer Oficial Dublado | Disney+
 Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 26/11 — Aquaman 2: O Reino Perdido | Trailer
+### 24/11 — Aquaman 2: O Reino Perdido | Trailer
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 27/11 — Street Fighter | Novo Trailer | DUB | Paramount Pictures Brasil
+### 25/11 — Street Fighter | Novo Trailer | DUB | Paramount Pictures Brasil
 Paramount Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 28/11 — Dragon Ball Daima | Trailer Oficial | Max
+### 26/11 — Dragon Ball Daima | Trailer Oficial | Max
 HBO Max Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 29/11 — Guardiões da Galáxia: Volume 3 | Marvel Studios | Trailer Oficial 2 Dublado
+### 27/11 — Guardiões da Galáxia: Volume 3 | Marvel Studios | Trailer Oficial 2 Dublado
 Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 30/11 — Godzilla e Kong: O Novo Império | Trailer Oficial 2
+### 28/11 — Godzilla e Kong: O Novo Império | Trailer Oficial 2
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 01/12 — Frieren e a Jornada para o Além 2ª Temporada | TRAILER OFICIAL
+### 29/11 — Frieren e a Jornada para o Além 2ª Temporada | TRAILER OFICIAL
 Crunchyroll Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 02/12 — Doutor Estranho no Multiverso da Loucura | Marvel Studios | Trailer Oficial Dubl
+### 30/11 — Doutor Estranho no Multiverso da Loucura | Marvel Studios | Trailer Oficial Dubl
 Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 03/12 — Besouro Azul | Trailer Final Oficial
+### 01/12 — Besouro Azul | Trailer Final Oficial
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 04/12 — The Last of Us Complete - Trailer de Lançamento
+### 02/12 — The Last of Us Complete - Trailer de Lançamento
 PlayStation Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 05/12 — Cavaleiro da Lua | Marvel Studios | Trailer Oficial Dublado | Disney+
+### 03/12 — Cavaleiro da Lua | Marvel Studios | Trailer Oficial Dublado | Disney+
 Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 06/12 — Invencível - Temporada 4 | Teaser Oficial | Prime Video
+### 04/12 — Invencível - Temporada 4 | Teaser Oficial | Prime Video
 Prime Video Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 07/12 — Cena da 2ª temporada: o Bando do Chapéu de Palha vai a Loguetown | ONE PIECE: A 
+### 05/12 — Cena da 2ª temporada: o Bando do Chapéu de Palha vai a Loguetown | ONE PIECE: A 
 Netflix Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 08/12 — Pantera Negra: Wakanda para Sempre | Marvel Studios | Trailer Oficial Dublado
+### 06/12 — Pantera Negra: Wakanda para Sempre | Marvel Studios | Trailer Oficial Dublado
 Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 09/12 — Adão Negro - Trailer Oficial 1
+### 07/12 — Adão Negro - Trailer Oficial 1
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 10/12 — Sonic: O Filme | Trailer Oficial | DUB | Paramount Pictures Brasil
+### 08/12 — Sonic: O Filme | Trailer Oficial | DUB | Paramount Pictures Brasil
 Paramount Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 11/12 — Capitão América: Admirável Mundo Novo | Trailer Oficial Dublado
+### 09/12 — Capitão América: Admirável Mundo Novo | Trailer Oficial Dublado
 Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 12/12 — JUJUTSU KAISEN: Hidden Inventory / Premature Death – The Movie | TRAILER
+### 10/12 — JUJUTSU KAISEN: Hidden Inventory / Premature Death – The Movie | TRAILER
 Crunchyroll Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 13/12 — Guardiões da Galáxia Vol. 2 - TRAILER
+### 11/12 — Guardiões da Galáxia Vol. 2 - TRAILER
 Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
+
+### 12/12 — sem reel (fila ainda não cobre este dia)
+
+### 13/12 — sem reel (fila ainda não cobre este dia)
 
 ### 14/12 — sem reel (fila ainda não cobre este dia)
 
@@ -1553,12 +1319,8 @@ Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 ### 22/12 — sem reel (fila ainda não cobre este dia)
 
 ### 23/12 — Ebenezer e os Fantasmas do Natal | Trailer Oficial 2 | DUB | Paramount Pictures 
-Paramount Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8))
+Paramount Brasil · ? · ? · legenda: ainda não gerada
 
 ```
-Ebenezer e os Fantasmas do Natal | Trailer Oficial 2 | DUB | Paramount Pictures Brasil
-
-O que você achou?
-
-Vídeo: Paramount Brasil (canal oficial no YouTube)
+(gerada na hora da publicação)
 ```

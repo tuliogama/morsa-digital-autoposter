@@ -284,6 +284,16 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   Canal estrangeiro só entra com legenda OFICIAL em PT, queimada no vídeo com
   Pillow (o ffmpeg do Homebrew não tem drawtext/libass). Exceção: Rockstar, que
   não tem versão PT. Horizontal vira 9:16 com fundo desfocado só como último caso.
+- **Auditoria** (`reel_queue.py audit`, roda no fim de `run_reel_local.sh`): confere
+  os arquivos, gera a legenda dos próximos 6 dias e passa por `lint_caption` (regras
+  fixas) e `judge_caption` (gpt-oss-120b aponta detalhe inventado). Legenda aprovada
+  fica no item (`caption`) e é a que o CI publica. Calendário e legendas em
+  `data/reel_report.md`.
+- **Cota da Groq**: 200 mil tokens/dia POR MODELO. Em 07/10/2026 a auditoria da
+  madrugada gastou tudo do qwen (1.186 chamadas falhas) e quase derrubou o feed do
+  dia. Hoje: auditoria limitada a 4 legendas por fluxo por execução, e
+  `_call_groq_fallback` cai para gpt-oss-120b/20b no 429. Nunca rodar geração em
+  massa de legenda.
 - **CI** (`reel-queue.yml` + watchdog): `publish` olha os dois fluxos, 90 min de
   intervalo entre reels, legenda nossa (fatos = descrição oficial; vídeo com +60
   dias é relembrança) e crédito do canal. `premap` baixa o que faltar dos planos.

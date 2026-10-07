@@ -176,7 +176,8 @@ def find_candidates(queue: list[dict]) -> list[dict]:
             if datetime.fromisoformat(v["published"]) < cutoff:
                 continue
             cat = _categorize({"title": f"{v['title']} {channel}"})
-            if cat == "game_niche" or (cat not in _STRONG_CATS and v["views"] < MIN_VIEWS_GENERIC):
+            # games são a categoria de menor retorno da conta: só GTA entra como lançamento
+            if cat in ("game_niche", "game_big") or (cat not in _STRONG_CATS and v["views"] < MIN_VIEWS_GENERIC):
                 continue
             key = re.sub(r"\W+", "", v["title"].lower().split("|")[0])
             if key in seen_titles:
@@ -582,6 +583,10 @@ REGRAS:
 - Nada de frase de enchimento como "vale dar o play", "vale a pena rever", "arrepia qualquer fã"."""
 
 
+class CaptionUnavailable(RuntimeError):
+    """O modelo não respondeu (limite da Groq: 1.000 chamadas/dia, 8 mil tokens/min)."""
+
+
 def _caption(item: dict) -> str:
     from content_generator import REEL_TRAILER_SYSTEM, _call_groq, _strip_ai_tells, _cap_hashtags
     from editorial import _with_credit
@@ -598,16 +603,18 @@ def _caption(item: dict) -> str:
         "faça a pergunta ao fã. Termine com 5 a 6 hashtags específicas da franquia "
         "(nada genérico como #Cinema, #Trailer ou #Filmes)."
     )
-    text = ""
-    for _ in range(2):
+    text, last_error = "", None
+    for attempt in range(3):
         try:
             text = re.sub(r"\n[ \t]*\n+", "\n\n", _call_groq(system, user_msg, 600)).strip()
             if len(text) >= 100:
                 break
         except Exception as e:
+            last_error = e
             logger.warning(f"Groq falhou na legenda: {e}")
+            time.sleep(20 * (attempt + 1))     # limite da conta: 8 mil tokens por minuto
     if len(text) < 100:
-        text = f"{item['title']}\n\nO que você achou?"
+        raise CaptionUnavailable(f"sem legenda para {item['video_id']}: {last_error}")
     return _with_credit(_cap_hashtags(_strip_ai_tells(text)), item["channel"])
 
 
@@ -677,30 +684,55 @@ def judge_caption(item: dict, caption: str) -> list[str]:
         return [f"checagem indisponível ({str(e)[:60]})"]
 
 
-def prepare_captions(limit: int = 40) -> dict:
-    """Gera, audita e guarda a legenda dos próximos itens (até 3 tentativas cada)."""
+def _upcoming(queue: list[dict], days: int) -> list[dict]:
+    """Itens que o calendário vai publicar nos próximos `days` dias, em ordem."""
+    sim = json.loads(json.dumps(queue))
+    by_id = {q["video_id"]: q for q in queue}
+    day, out = datetime.now(BRT).date(), []
+    for _ in range(days):
+        it = _pick_next(sim, day)
+        if it is not None:
+            it["posted"] = True
+            it["posted_at"] = day.isoformat()
+            out.append(by_id[it["video_id"]])
+        day += timedelta(days=1)
+    return out
+
+
+def prepare_captions(days: int = 6, limit: int = 4) -> dict:
+    """
+    Gera, audita e guarda a legenda dos próximos dias (até 3 tentativas cada).
+    Econômico de propósito: cada modelo da Groq tem 200 mil tokens por dia, e o
+    redator é o mesmo dos posts de feed. Na madrugada de 07/10/2026 a auditoria estourou o
+    limite e gravou legendas vazias; por isso para no primeiro erro e nunca
+    guarda legenda que o modelo não escreveu.
+    """
     queue = load_queue()
-    todo = [q for q in pending(queue) if q.get("caption_check") != "ok"][:limit]
+    todo = [q for q in _upcoming(queue, days) if q.get("caption_check") != "ok"][:limit]
     stats = {"ok": 0, "revisar": 0}
     for item in todo:
         best, best_problems = None, None
-        for _ in range(3):
-            caption = _caption(item)
-            problems = lint_caption(item, caption)
-            if not problems:
-                problems = judge_caption(item, caption)
-            if best is None or len(problems) < len(best_problems):
-                best, best_problems = caption, problems
-            if not problems:
-                break
-            time.sleep(2)
+        try:
+            for _ in range(3):
+                caption = _caption(item)
+                problems = lint_caption(item, caption)
+                if not problems:
+                    problems = judge_caption(item, caption)
+                if best is None or len(problems) < len(best_problems):
+                    best, best_problems = caption, problems
+                if not problems:
+                    break
+                time.sleep(8)
+        except CaptionUnavailable as e:
+            logger.warning(f"[{STREAM}] parando a auditoria: {e}")
+            break
         item["caption"] = best
         item["caption_check"] = "ok" if not best_problems else "revisar"
         item["caption_problems"] = best_problems
         stats[item["caption_check"]] += 1
         save_queue(queue)
         logger.info(f"[{STREAM}] legenda {item['caption_check']}: {item['title'][:50]} {best_problems or ''}")
-        time.sleep(2)
+        time.sleep(8)
     return stats
 
 
@@ -772,7 +804,11 @@ def publish() -> int:
 
     queue = load_queue()
     item = _pick_next(queue)
-    caption = item.get("caption") or _caption(item)
+    try:
+        caption = item.get("caption") or _caption(item)
+    except CaptionUnavailable as e:
+        logger.error(f"Sem legenda, não publica agora (o próximo gatilho tenta de novo): {e}")
+        return 1
     logger.info(f"Publicando [{item['category']}] {item['title']}\n{caption}")
     result = publish_reel_from_url(item["asset_url"], caption)
 

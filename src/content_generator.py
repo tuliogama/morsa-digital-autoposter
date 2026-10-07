@@ -176,34 +176,56 @@ def _call_anthropic(system: str, user_msg: str, max_tokens: int = 600) -> str:
         return json.loads(r.read())["content"][0]["text"].strip()
 
 
-def _call_groq_fallback(system: str, user_msg: str, max_tokens: int = 600) -> str:
-    api_key = os.environ.get("GROQ_API_KEY", "")
-    if not api_key:
-        raise ValueError("GROQ_API_KEY não configurada")
+# Cada modelo da Groq tem cota própria (200 mil tokens/dia no plano gratuito).
+# Quando o principal estoura (429), os reservas assumem em vez de derrubar o post.
+GROQ_RESERVE_MODELS = ["openai/gpt-oss-120b", "openai/gpt-oss-20b"]
 
-    payload = json.dumps({
-        "model": GROQ_MODEL,
-        "max_tokens": max_tokens,
+
+def _groq_request(model: str, system: str, user_msg: str, max_tokens: int) -> str:
+    body = {
+        "model": model,
         "messages": [
             {"role": "system", "content": system},
             {"role": "user",   "content": user_msg},
         ],
         "temperature": 0.7,
-        "reasoning_effort": "none",
-    }).encode()
-
+    }
+    if model.startswith("openai/gpt-oss"):
+        # raciocina antes de responder: precisa de folga para não devolver vazio
+        body.update(max_tokens=max_tokens + 700, reasoning_effort="low")
+    else:
+        body.update(max_tokens=max_tokens, reasoning_effort="none")
     req = urllib.request.Request(
         GROQ_API_URL,
-        data=payload,
+        data=json.dumps(body).encode(),
         headers={
-            "Authorization": f"Bearer {api_key}",
+            "Authorization": f"Bearer {os.environ['GROQ_API_KEY']}",
             "Content-Type": "application/json",
             "User-Agent": "Mozilla/5.0",
         },
         method="POST",
     )
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return json.loads(r.read())["choices"][0]["message"]["content"].strip()
+    with urllib.request.urlopen(req, timeout=45) as r:
+        return (json.loads(r.read())["choices"][0]["message"].get("content") or "").strip()
+
+
+def _call_groq_fallback(system: str, user_msg: str, max_tokens: int = 600) -> str:
+    if not os.environ.get("GROQ_API_KEY"):
+        raise ValueError("GROQ_API_KEY não configurada")
+    last_error = None
+    for model in [GROQ_MODEL] + GROQ_RESERVE_MODELS:
+        try:
+            text = _groq_request(model, system, user_msg, max_tokens)
+            if text:
+                if model != GROQ_MODEL:
+                    logger.info(f"Groq: {GROQ_MODEL} sem cota, respondeu {model}")
+                return text
+            last_error = ValueError(f"{model} devolveu resposta vazia")
+        except urllib.error.HTTPError as e:
+            last_error = e
+            if e.code != 429:
+                raise
+    raise last_error
 
 
 def _call_groq(system: str, user_msg: str, max_tokens: int = 600) -> str:
