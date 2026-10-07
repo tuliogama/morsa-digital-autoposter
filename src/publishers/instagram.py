@@ -46,6 +46,16 @@ class NoImageError(Exception):
     """Lançada quando não há imagem real disponível para o post."""
 
 
+
+def _clean_caption(caption: str) -> str:
+    """Última barreira antes do Instagram: legenda com resto de prompt não sai."""
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    from content_generator import has_template_echo
+    if has_template_echo(caption or ""):
+        raise ValueError("legenda contém o molde do prompt — publicação cancelada")
+    return caption
+
+
 def _post(url: str, params: dict) -> dict:
     body = urllib.parse.urlencode(params).encode("utf-8")
     req = urllib.request.Request(
@@ -59,7 +69,7 @@ def _post(url: str, params: dict) -> dict:
 def _create_container(ig_user_id: str, token: str, caption: str, image_url: str) -> str:
     params = {
         "image_url": image_url,
-        "caption": caption,
+        "caption": _clean_caption(caption),
         "like_and_view_counts_disabled": "true",
         "access_token": token,
     }
@@ -215,7 +225,7 @@ def publish(post: dict) -> dict:
         carousel_result = _post(f"{GRAPH_URL}/{ig_user_id}/media", {
             "media_type": "CAROUSEL",
             "children": ",".join(child_ids),
-            "caption": caption,
+            "caption": _clean_caption(caption),
             "like_and_view_counts_disabled": "true",
             "access_token": token,
         })
@@ -319,7 +329,7 @@ def publish_carousel(carousel_data: dict, caption: str) -> dict:
     carousel_result = _post(f"{GRAPH_URL}/{ig_user_id}/media", {
         "media_type": "CAROUSEL",
         "children": ",".join(child_ids),
-        "caption": caption,
+        "caption": _clean_caption(caption),
         "like_and_view_counts_disabled": "true",
         "access_token": token,
     })
@@ -442,7 +452,7 @@ def publish_reel(reel_data: dict, caption: str) -> dict:
         container_result = _post(f"{GRAPH_URL}/{ig_user_id}/media", {
             "media_type": "REELS",
             "upload_id": upload_session_id,
-            "caption": caption,
+            "caption": _clean_caption(caption),
             "share_to_feed": "true",
             "like_and_view_counts_disabled": "true",
             "access_token": token,
@@ -565,7 +575,7 @@ def publish_reel_from_url(video_url: str, caption: str) -> dict:
     container_id = _post(f"{GRAPH_URL}/{ig_user_id}/media", {
         "media_type": "REELS",
         "video_url": video_url,
-        "caption": caption,
+        "caption": _clean_caption(caption),
         "share_to_feed": "true",
         "like_and_view_counts_disabled": "true",
         "access_token": token,

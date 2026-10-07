@@ -289,6 +289,13 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   fixas) e `judge_caption` (gpt-oss-120b aponta detalhe inventado). Legenda aprovada
   fica no item (`caption`) e é a que o CI publica. Calendário e legendas em
   `data/reel_report.md`.
+- **Molde do prompt na legenda** (07/10/2026, post das 9h10 foi ao ar com
+  "[HOOK, 1 a 2 linhas...]" e "[linha em branco]"): o modelo reserva copiou as
+  instruções entre colchetes. Três barreiras em `content_generator.py` e
+  `publishers/instagram.py`: `_strip_template_echo` limpa, `has_template_echo`
+  descarta a resposta e tenta o próximo modelo, e `_clean_caption` cancela a
+  publicação em qualquer caminho (feed, reel, estreia). Ao trocar de modelo,
+  SEMPRE gerar e ler legendas reais antes de pôr em produção.
 - **Cota da Groq**: 200 mil tokens/dia POR MODELO. Em 07/10/2026 a auditoria da
   madrugada gastou tudo do qwen (1.186 chamadas falhas) e quase derrubou o feed do
   dia. Hoje: auditoria limitada a 4 legendas por fluxo por execução, e

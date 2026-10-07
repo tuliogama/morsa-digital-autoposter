@@ -181,6 +181,30 @@ def _call_anthropic(system: str, user_msg: str, max_tokens: int = 600) -> str:
 GROQ_RESERVE_MODELS = ["openai/gpt-oss-120b", "openai/gpt-oss-20b"]
 
 
+import re as _tre
+
+# Os prompts descrevem o formato com instruções entre colchetes ("[HOOK, 1 a 2
+# linhas...]", "[linha em branco]"). Em 07/10/2026 o modelo reserva copiou essas
+# instruções para a legenda e o post foi ao ar assim.
+_TEMPLATE_LINE_RE = _tre.compile(r"^[ \t]*\[[^\[\]\n]{2,}\][ \t]*$", _tre.MULTILINE)
+_TEMPLATE_MARK_RE = _tre.compile(
+    r"^[ \t]*\[|\[(?:HOOK|CORPO|CTA|REAÇÃO|CONTEXTO|HYPE|LINHA)\b|linha em branco|OBRIGATÓRIO",
+    _tre.IGNORECASE | _tre.MULTILINE)
+_NO_ECHO_NOTE = ("\n\nIMPORTANTE: os trechos entre colchetes acima são instruções de formato. "
+                 "NUNCA os copie na resposta. Escreva somente o texto final, pronto para publicar.")
+
+
+def _strip_template_echo(text: str) -> str:
+    """Remove linhas que são só uma instrução entre colchetes."""
+    text = _TEMPLATE_LINE_RE.sub("", text)
+    return _tre.sub(r"\n{3,}", "\n\n", text).strip()
+
+
+def has_template_echo(text: str) -> bool:
+    """True se sobrou qualquer pedaço do molde do prompt no texto."""
+    return bool(_TEMPLATE_MARK_RE.search(text))
+
+
 def _groq_request(model: str, system: str, user_msg: str, max_tokens: int) -> str:
     body = {
         "model": model,
@@ -193,6 +217,7 @@ def _groq_request(model: str, system: str, user_msg: str, max_tokens: int) -> st
     if model.startswith("openai/gpt-oss"):
         # raciocina antes de responder: precisa de folga para não devolver vazio
         body.update(max_tokens=max_tokens + 700, reasoning_effort="low")
+        body["messages"][0]["content"] = system + _NO_ECHO_NOTE
     else:
         body.update(max_tokens=max_tokens, reasoning_effort="none")
     req = urllib.request.Request(
@@ -215,7 +240,11 @@ def _call_groq_fallback(system: str, user_msg: str, max_tokens: int = 600) -> st
     last_error = None
     for model in [GROQ_MODEL] + GROQ_RESERVE_MODELS:
         try:
-            text = _groq_request(model, system, user_msg, max_tokens)
+            text = _strip_template_echo(_groq_request(model, system, user_msg, max_tokens))
+            if has_template_echo(text):
+                logger.warning(f"Groq: {model} devolveu o molde do prompt no texto — descartado")
+                last_error = ValueError(f"{model} copiou o molde do prompt")
+                continue
             if text:
                 if model != GROQ_MODEL:
                     logger.info(f"Groq: {GROQ_MODEL} sem cota, respondeu {model}")
@@ -401,6 +430,8 @@ def _validate_caption(content: str, source: str) -> bool:
     Retorna False se a legenda não serve para publicar.
     """
     if not content or len(content) < 120:
+        return False
+    if has_template_echo(content):
         return False
     # Indicadores de fallback ou scraping
     bad_patterns = [

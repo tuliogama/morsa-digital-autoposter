@@ -629,6 +629,9 @@ def lint_caption(item: dict, caption: str) -> list[str]:
     problems = []
     lines = [l for l in caption.splitlines() if l.strip()]
     tags = re.findall(r"#\w+", caption)
+    from content_generator import has_template_echo
+    if has_template_echo(caption):
+        problems.append("contém o molde do prompt")
     if f"Vídeo: {item['channel']}" not in caption:
         problems.append("sem crédito do canal")
     if "—" in caption or "–" in caption:
@@ -808,6 +811,13 @@ def publish() -> int:
         caption = item.get("caption") or _caption(item)
     except CaptionUnavailable as e:
         logger.error(f"Sem legenda, não publica agora (o próximo gatilho tenta de novo): {e}")
+        return 1
+    problems = lint_caption(item, caption)
+    if any(p.startswith(("contém o molde", "sem crédito", "tamanho")) for p in problems):
+        logger.error(f"Legenda reprovada na última checagem, não publica: {problems}")
+        item.pop("caption", None)
+        item.pop("caption_check", None)
+        save_queue(queue)
         return 1
     logger.info(f"Publicando [{item['category']}] {item['title']}\n{caption}")
     result = publish_reel_from_url(item["asset_url"], caption)
