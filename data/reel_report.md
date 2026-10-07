@@ -1,8 +1,8 @@
-# Fila de reels @morsadigital — 07/10/2026 04:06 BRT
+# Fila de reels @morsadigital — 07/10/2026 05:47 BRT
 
 ## cenas — a partir das 11h
 
-50 na fila | legendas ok: 36 | a revisar: 14 | dias sem reel no calendário: 0
+59 na fila | legendas ok: 41 | a revisar: 18 | dias sem reel no calendário: 0
 
 ### 07/10 — CHAVES MARCOU TODA UMA GERAÇÃO
 Netflix Brasil · vertical · pt · legenda: ok
@@ -132,19 +132,20 @@ Vídeo: Paramount Brasil (canal oficial no YouTube)
 ```
 
 ### 15/10 — Hola b*tches! #Venom: A Última Rodada, hoje, exclusivamente nos cinemas.
-Sony Pictures Brasil · vertical · pt · legenda: revisar (detalhe sem base: Venom e Carnificina juntos)
+Sony Pictures Brasil · vertical · pt · legenda: ok
 
 ```
-Venom e Carnificina juntos: você curtiu a química ou achou demais?
+Essa cena do Venom já te fez rir ou ainda tá no seu radar?
 
-Aquela energia caótica dos dois dividindo a tela sempre rende.
-É o tipo de cena que mostra o quanto esses vilões se divertem causando bagunça.
+Aquele "Hola b*tches" é puro caos e energia do simbionte.
+É o tipo de momento que define o tom caótico da franquia.
+Tem gente que ama essa atitude, tem quem prefira o lado sério.
 
-Comenta aqui: qual foi a melhor cena dessa dupla pra você?
+Marca aquele amigo que precisa ver essa energia.
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#Venom #Carnificina #SonyPictures #CineNerd #MorsaDigital
+#Venom #VenomUltimaRodada #SonyPictures #CineNerd #MorsaDigital
 ```
 
 ### 16/10 — Memória coletiva: a primeira aparição do Shrek
@@ -470,20 +471,18 @@ Vídeo: HBO Brasil (canal oficial no YouTube)
 ```
 
 ### 05/11 — Wendel e Ursula dublando juntos em Naruto?
-Netflix Brasil · vertical · pt · legenda: revisar (detalhe sem base: Ursula juntos em Naruto? Quem lembra dessa dublagem?)
+Netflix Brasil · vertical · pt · legenda: ok
 
 ```
-Wendel e Ursula juntos em Naruto? Quem lembra dessa dublagem?
+Wendel e Ursula juntos na dublagem de Naruto, você lembrava dessa coincidência?
 
-É tipo descobrir que tem parentesco no meio da história da obra.
-Aquele misto de choque e carinho ao saber que eles compartilham esse universo.
-Fica aquela vontade de rever as cenas pra prestar atenção nas vozes.
+É o tipo de detalhe que só quem acompanha de perto a dublagem brasileira nota. A ligação de família no meio da obra chama a atenção de qualquer fã.
 
-Marca aquele amigo que ficou surpreso com essa informação.
+Conta pra gente: qual foi a primeira vez que você percebeu isso?
 
 Vídeo: Netflix Brasil (canal oficial no YouTube)
 
-#Naruto #Wendel #Ursula #DublagemNaruto #NetflixBrasil #MorsaDigital
+#Naruto #Wendel #Ursula #Dublagem #Animes #MorsaDigital
 ```
 
 ### 06/11 — Qual personagem de Toy Story merecia seu momento de protagonismo?
@@ -534,14 +533,19 @@ Vídeo: Crunchyroll Brasil (canal oficial no YouTube)
 ```
 
 ### 09/11 — JOFFREY APANHANDO EM GAME OF THRONES E BATMAN! 😉
-HBO Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 113; 1ª linha não é pergunta)
+HBO Brasil · vertical · pt · legenda: revisar (detalhe sem base: Ver Joffrey apanhando é daquelas cenas que ficam gravadas na memória.)
 
 ```
-JOFFREY APANHANDO EM GAME OF THRONES E BATMAN! 😉
+Você lembra dessa cena ou tá descobrindo agora?
 
-O que você achou?
+Ver Joffrey apanhando é daquelas cenas que ficam gravadas na memória.
+É o tipo de momento que muda completamente a percepção do personagem.
+
+Comenta aí qual foi sua reação quando viu:
 
 Vídeo: HBO Brasil (canal oficial no YouTube)
+
+#GameOfThrones #JoffreyBaratheon #HBO #FantasiaSombria #CenasMemoraveis #MorsaDigital
 ```
 
 ### 10/11 — Tirem suas próprias conclusões 😰 #BatmanCruzadoEncapuzado
@@ -562,47 +566,68 @@ Vídeo: Prime Video Brasil (canal oficial no YouTube)
 ```
 
 ### 11/11 — Homem-Aranha: Um Novo Dia | Core | Hoje nos cinemas
-Sony Pictures Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 126; 1ª linha não é pergunta)
+Sony Pictures Brasil · vertical · pt · legenda: ok
 
 ```
-Homem-Aranha: Um Novo Dia | Core | Hoje nos cinemas
+Que tal relembrar o Core de Homem-Aranha: Um Novo Dia?
 
-O que você achou?
+Revisitar a essência do Aranha sempre traz aquela nostalgia de herói clássico.
+A vibe desse personagem é o que mantém a franquia viva na memória.
+
+Qual cena do filme ficou gravada na sua cabeça?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
+
+#HomemAranha #SpiderMan #UmNovoDia #Core #SonyPictures #MorsaDigital
 ```
 
 ### 12/11 — só quem sabe completa: ela é minha... 🗣️🗣️🗣️ #Shrek #Fiona #Burro #Humor #Comédi
-Prime Video Brasil · vertical · pt · legenda: revisar (1ª linha não é pergunta)
+Prime Video Brasil · vertical · pt · legenda: ok
 
 ```
-só quem sabe completa: ela é minha... 🗣️🗣️🗣️ #Shrek #Fiona #Burro #Humor #Comédia
+Qual frase da Fiona você mais usa na vida?
 
-O que você achou?
+Essa cena de Shrek e Fiona sempre vai gerar discussão.
+É o tipo de momento que grava na memória de qualquer fã da série.
+A química entre os dois faz o resto da história funcionar.
+
+Comenta aí qual parte dessa fala é a tua favorita.
 
 Vídeo: Prime Video Brasil (canal oficial no YouTube)
+
+#Shrek #Fiona #Burro #ShrekEm3D #MorsaDigital
 ```
 
 ### 13/11 — APENAS PESSOAS VIVENDO O CASAMENTO VERMELHO EM #GOT 😍
-HBO Brasil · vertical · pt · legenda: revisar (1 hashtags (esperado 4 a 8); tamanho 118; 1ª linha não é pergunta)
+HBO Brasil · vertical · pt · legenda: ok
 
 ```
-APENAS PESSOAS VIVENDO O CASAMENTO VERMELHO EM #GOT 😍
+Você lembra desse momento do Casamento Vermelho?
 
-O que você achou?
+Foi uma das cenas mais tensas e chocantes da série.
+A tensão era insuportável e as consequências mudaram tudo.
+Nunca mais olhamos para Winterfell da mesma forma.
+
+Qual é a sua opinião sobre esse episódio até hoje?
 
 Vídeo: HBO Brasil (canal oficial no YouTube)
+
+#GameOfThrones #GoT #CasamentoVermelho #Winterfell #HBO #MorsaDigital
 ```
 
 ### 14/11 — FOI O NARUTO QUE DEU A FORÇA QUE ELA PRECISAVA
-Netflix Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 115; 1ª linha não é pergunta)
+Netflix Brasil · vertical · pt · legenda: revisar (checagem indisponível (HTTP Error 400: Bad Request))
 
 ```
-FOI O NARUTO QUE DEU A FORÇA QUE ELA PRECISAVA
+Quem mais chorou quando descobriu que a voz do Naruto é de uma mulher?
 
-O que você achou?
+Relembre a trajetória de Úrsula Bezerra, que não só deu vida ao personagem icônico, como ainda gravou cenas ao lado do próprio irmão. É uma história real por trás das câmeras que mostra a força que o anime deu para ela seguir em frente.
+
+Comenta aí qual foi a sua maior surpresa ao conhecer essa história.
 
 Vídeo: Netflix Brasil (canal oficial no YouTube)
+
+#Naruto #ÚrsulaBezerra #Dublagem #Anime #Netflix #MorsaDigital
 ```
 
 ### 15/11 — Segura a emoção! Qual foi o momento mais marcante de toda a franquia Toy Story?
@@ -682,7 +707,106 @@ O que você achou?
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 ```
 
-### 22/11 — Homem-Formiga -  Clipe: Teste de Fogo
+### 22/11 — Posso ver Shrek pela 7286x mas sempre vou rir como se fosse a 1° toda vez que o 
+Prime Video Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); 1ª linha não é pergunta)
+
+```
+Posso ver Shrek pela 7286x mas sempre vou rir como se fosse a 1° toda vez que o Burro fala algo 🗣️
+
+O que você achou?
+
+Vídeo: Prime Video Brasil (canal oficial no YouTube)
+```
+
+### 23/11 — O MUNDO FICOU EM FESTA DEPOIS DESSA CENA DO JOFFREY EM #GOT! 😉
+HBO Brasil · vertical · pt · legenda: revisar (1 hashtags (esperado 4 a 8); tamanho 127; 1ª linha não é pergunta)
+
+```
+O MUNDO FICOU EM FESTA DEPOIS DESSA CENA DO JOFFREY EM #GOT! 😉
+
+O que você achou?
+
+Vídeo: HBO Brasil (canal oficial no YouTube)
+```
+
+### 24/11 — Dublagens do filme de MINECRAFT: QUAL FICOU MELHOR?
+Netflix Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 120)
+
+```
+Dublagens do filme de MINECRAFT: QUAL FICOU MELHOR?
+
+O que você achou?
+
+Vídeo: Netflix Brasil (canal oficial no YouTube)
+```
+
+### 25/11 — Toy Story 5 | Dubladores
+Walt Disney Studios BR · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 101; 1ª linha não é pergunta)
+
+```
+Toy Story 5 | Dubladores
+
+O que você achou?
+
+Vídeo: Walt Disney Studios BR (canal oficial no YouTube)
+```
+
+### 26/11 — Thor: Ragnarok: Hoje nos Cinemas - "Deusa da Morte"
+Marvel Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 119; 1ª linha não é pergunta)
+
+```
+Thor: Ragnarok: Hoje nos Cinemas - "Deusa da Morte"
+
+O que você achou?
+
+Vídeo: Marvel Brasil (canal oficial no YouTube)
+```
+
+### 27/11 — Não tente correr, as sombras sempre surgirão para te encontrar 🔥 #SoloLeveling
+Crunchyroll Brasil · vertical · pt · legenda: revisar (1 hashtags (esperado 4 a 8); 1ª linha não é pergunta)
+
+```
+Não tente correr, as sombras sempre surgirão para te encontrar 🔥 #SoloLeveling
+
+O que você achou?
+
+Vídeo: Crunchyroll Brasil (canal oficial no YouTube)
+```
+
+### 28/11 — HÁ 3 ANOS, JOEL CHAMOU ELLIE DE "MEU AMOR" 💚 | THE LAST OF US
+HBO Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 126; 1ª linha não é pergunta)
+
+```
+HÁ 3 ANOS, JOEL CHAMOU ELLIE DE "MEU AMOR" 💚 | THE LAST OF US
+
+O que você achou?
+
+Vídeo: HBO Brasil (canal oficial no YouTube)
+```
+
+### 29/11 — Vazou o Homem-Aranha passando perrengue desde o dia 1 🗣️ #OEspetacularHomemAranh
+Prime Video Brasil · vertical · pt · legenda: revisar (1 hashtags (esperado 4 a 8); 1ª linha não é pergunta)
+
+```
+Vazou o Homem-Aranha passando perrengue desde o dia 1 🗣️ #OEspetacularHomemAranha
+
+O que você achou?
+
+Vídeo: Prime Video Brasil (canal oficial no YouTube)
+```
+
+### 30/11 — Monstros vs. Alienígenas core.
+Netflix Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 99; 1ª linha não é pergunta)
+
+```
+Monstros vs. Alienígenas core.
+
+O que você achou?
+
+Vídeo: Netflix Brasil (canal oficial no YouTube)
+```
+
+### 01/12 — Homem-Formiga -  Clipe: Teste de Fogo
 Marvel Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -698,7 +822,7 @@ Vídeo: Marvel Brasil (canal oficial no YouTube)
 #HomemFormiga #AntMan #Marvel #ScottLang #PaulRudd #MorsaDigital
 ```
 
-### 23/11 — Game Of Thrones | Ygritte dispara em Jon Snow | #MomentoHBO
+### 02/12 — Game Of Thrones | Ygritte dispara em Jon Snow | #MomentoHBO
 HBO Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -714,7 +838,7 @@ Vídeo: HBO Brasil (canal oficial no YouTube)
 #GameOfThrones #JonSnow #Ygritte #HBO #MomentoHBO #MorsaDigital
 ```
 
-### 24/11 — Sonic 3: O Filme | Bastidores: O Doutor Está De Volta | Paramount Pictures Brasi
+### 03/12 — Sonic 3: O Filme | Bastidores: O Doutor Está De Volta | Paramount Pictures Brasi
 Paramount Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -730,7 +854,7 @@ Vídeo: Paramount Brasil (canal oficial no YouTube)
 #Sonic3 #JimCarrey #DoutorEggman #SonicTheHedgehog #ParamountBrazil #MorsaDigital
 ```
 
-### 25/11 — THE FLASH | CENA EXCLUSIVA
+### 04/12 — THE FLASH | CENA EXCLUSIVA
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -748,7 +872,7 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
 ## main — a partir das 13h
 
-59 na fila | legendas ok: 3 | a revisar: 40 | dias sem reel no calendário: 19
+69 na fila | legendas ok: 3 | a revisar: 40 | dias sem reel no calendário: 9
 
 ### 07/10 — Capitão América - Cena Transformação de Steve Rogers
 Marvel Brasil · ? · ? · legenda: ok
@@ -1214,14 +1338,18 @@ Vídeo: PlayStation Brasil (canal oficial no YouTube)
 ```
 
 ### 17/11 — Quarteto Fantástico: Primeiros Passos | Trailer Oficial 2 Dublado
-Marvel Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 133)
+Marvel Brasil · horizontal · pt · legenda: revisar (trata vídeo antigo como novidade)
 
 ```
-Quarteto Fantástico: Primeiros Passos | Trailer Oficial 2 Dublado
+Quarteto Fantástico: Primeiros Passos chegou e a gente tá aqui pra relembrar aquele hype que tomou conta da comunidade nerd.
 
-O que você achou?
+A proposta de focar na dinâmica de família e na conexão com algo maior que a si mesmo pegou muito bem, já que essa é a essência do grupo desde o início da Marvel nos cinemas. Ver o trailer dublado agora, meses depois da estreia em 24 de julho, é uma ótima chance de reviver a expectativa e o debate sobre como a nova versão abordou essa história clássica.
+
+Vocês já assistiram e qual foi a primeira emoção que sentiram ao ver a família reunida?
 
 Vídeo: Marvel Brasil (canal oficial no YouTube)
+
+#QuartetoFantástico #PrimeirosPassos #MarvelStudios #Dublado #Relembre #NerdBR
 ```
 
 ### 18/11 — The Mandalorian | Trailer Oficial Dublado | Temporada 2 | Disney+
@@ -1336,25 +1464,75 @@ Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
-### 04/12 — sem reel (fila ainda não cobre este dia)
+### 04/12 — The Last of Us Complete - Trailer de Lançamento
+PlayStation Brasil · horizontal · pt · legenda: ainda não gerada
 
-### 05/12 — sem reel (fila ainda não cobre este dia)
+```
+(gerada na hora da publicação)
+```
 
-### 06/12 — sem reel (fila ainda não cobre este dia)
+### 05/12 — Cavaleiro da Lua | Marvel Studios | Trailer Oficial Dublado | Disney+
+Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
-### 07/12 — sem reel (fila ainda não cobre este dia)
+```
+(gerada na hora da publicação)
+```
 
-### 08/12 — sem reel (fila ainda não cobre este dia)
+### 06/12 — Invencível - Temporada 4 | Teaser Oficial | Prime Video
+Prime Video Brasil · horizontal · pt · legenda: ainda não gerada
 
-### 09/12 — sem reel (fila ainda não cobre este dia)
+```
+(gerada na hora da publicação)
+```
 
-### 10/12 — sem reel (fila ainda não cobre este dia)
+### 07/12 — Cena da 2ª temporada: o Bando do Chapéu de Palha vai a Loguetown | ONE PIECE: A 
+Netflix Brasil · horizontal · pt · legenda: ainda não gerada
 
-### 11/12 — sem reel (fila ainda não cobre este dia)
+```
+(gerada na hora da publicação)
+```
 
-### 12/12 — sem reel (fila ainda não cobre este dia)
+### 08/12 — Pantera Negra: Wakanda para Sempre | Marvel Studios | Trailer Oficial Dublado
+Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
-### 13/12 — sem reel (fila ainda não cobre este dia)
+```
+(gerada na hora da publicação)
+```
+
+### 09/12 — Adão Negro - Trailer Oficial 1
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 10/12 — Sonic: O Filme | Trailer Oficial | DUB | Paramount Pictures Brasil
+Paramount Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 11/12 — Capitão América: Admirável Mundo Novo | Trailer Oficial Dublado
+Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 12/12 — JUJUTSU KAISEN: Hidden Inventory / Premature Death – The Movie | TRAILER
+Crunchyroll Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 13/12 — Guardiões da Galáxia Vol. 2 - TRAILER
+Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
 
 ### 14/12 — sem reel (fila ainda não cobre este dia)
 
