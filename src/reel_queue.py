@@ -570,6 +570,7 @@ ESTRUTURA OBRIGATÓRIA:
 REGRAS:
 - Português do Brasil, informal, como um fã escreve. Nada de tom de release.
 - Use só o que está nos fatos fornecidos e no título. Não invente elenco, datas, bilheteria, bastidores ou curiosidades.
+- No contexto, fale de sentimento e memória do fã, não de fatos da obra: nada de lugares, episódios, números, anos, objetos ou acontecimentos que não estejam escritos nos fatos fornecidos. Detalhe "de cabeça" sai errado.
 - Você NÃO assistiu ao vídeo. Não afirme o que acontece na cena: quem enfrenta quem, quem vence, quem aparece além dos nomes que estão no título, falas ou golpes. Fale da obra e dos personagens citados no título, e deixe a cena para quem assiste.
 - Nunca use travessão.
 - Sem hashtag genérica (#Cinema, #Filmes, #Trailer).
