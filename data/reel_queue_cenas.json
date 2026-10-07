@@ -107,14 +107,16 @@
     "youtube_url": "https://www.youtube.com/watch?v=5Ef6nSOCeJ4",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/5Ef6nSOCeJ4.mp4",
     "added_at": "2026-10-06T22:16:29.025146-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 1,
     "layout": "vertical",
     "lang": "pt",
     "caption": "Chaves marcou toda uma geração, ou você acha que é exagero?\n\nNada como ver esse universo ganhar vida na Netflix e sentir aquele carinho de quem cresceu com ele.\nÉ a prova de que certos clássicos atravessam décadas e continuam com tudo.\n\nComenta aí: qual é a sua memória mais forte com o Chaves?\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#Chaves #Netflix #Clássicos #Infância #Nostalgia #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-07T11:41:32.809702-03:00",
+    "media_id": "17909154594519988"
   },
   {
     "video_id": "XqlghJoHds0",
