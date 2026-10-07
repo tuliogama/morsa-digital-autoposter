@@ -212,18 +212,117 @@ def _upload_asset(path: str) -> str:
     return f"https://github.com/{REPO}/releases/download/{RELEASE_TAG}/{os.path.basename(path)}"
 
 
-def _prepare_video(video_id: str, workdir: str) -> str:
-    """Baixa e converte para 9:16 (fundo desfocado + logo), no máximo TRIM_SECONDS."""
-    from reel_downloader import _download_video, _make_round_logo, _make_vertical_blur
+def _is_br_channel(channel: str) -> bool:
+    return "Brasil" in channel or channel.endswith(" BR")
+
+
+def _download(video_id: str, out_path: str) -> bool:
+    """Até 1080 de LARGURA: pega o vertical 1080x1920 inteiro e o horizontal em 1080x608."""
+    from reel_downloader import _ytdlp
+    for attempt in range(3):          # o YouTube devolve 403 esporádico; retomar resolve
+        r = _ytdlp(f"https://www.youtube.com/watch?v={video_id}",
+                   "-f", "bv*[ext=mp4][width<=1080]+ba[ext=m4a]/b[ext=mp4][width<=1080]/b",
+                   "--merge-output-format", "mp4", "-o", out_path)
+        if "not a bot" in r.stderr:
+            raise YouTubeBlocked(r.stderr.strip()[-160:])
+        if r.returncode == 0 and os.path.exists(out_path):
+            return True
+        time.sleep(10)
+    return False
+
+
+def _pt_subtitles(video_id: str, workdir: str) -> str | None:
+    """Legenda OFICIAL em português (nunca a automática), em .srt."""
+    from reel_downloader import _ytdlp
+    _ytdlp(f"https://www.youtube.com/watch?v={video_id}", "--skip-download", "--write-subs",
+           "--sub-langs", "pt-BR,pt", "--convert-subs", "srt",
+           "-o", os.path.join(workdir, "sub.%(ext)s"))
+    found = sorted(Path(workdir).glob("sub*.srt"))
+    return str(found[0]) if found else None
+
+
+def _render_cues(srt_path: str, workdir: str) -> list[tuple[str, float, float]]:
+    """Desenha cada fala num PNG (o ffmpeg do Homebrew não tem filtro de legenda)."""
+    from PIL import Image, ImageDraw, ImageFont
+    font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial Bold.ttf", 46)
+
+    def secs(t: str) -> float:
+        h, m, rest = t.strip().split(":")
+        return int(h) * 3600 + int(m) * 60 + float(rest.replace(",", "."))
+
+    cues = []
+    for block in re.split(r"\n\s*\n", Path(srt_path).read_text(encoding="utf-8", errors="replace")):
+        lines = [l for l in block.strip().splitlines() if l.strip()]
+        timing = next((l for l in lines if "-->" in l), None)
+        if not timing:
+            continue
+        start, end = (secs(x.split()[0]) for x in timing.split("-->"))
+        text = re.sub(r"<[^>]+>", "", " ".join(lines[lines.index(timing) + 1:])).strip()
+        if not text or start >= TRIM_SECONDS:
+            continue
+        words, rows, row = text.split(), [], ""
+        for w in words:                                  # quebra em linhas de até 940px
+            if font.getlength(f"{row} {w}".strip()) > 940 and row:
+                rows.append(row)
+                row = w
+            else:
+                row = f"{row} {w}".strip()
+        rows.append(row)
+        img = Image.new("RGBA", (1080, 62 * len(rows) + 24), (0, 0, 0, 0))
+        draw = ImageDraw.Draw(img)
+        for i, r in enumerate(rows):
+            x = (1080 - font.getlength(r)) / 2
+            draw.text((x, 10 + 62 * i), r, font=font, fill="white", stroke_width=4, stroke_fill="black")
+        png = os.path.join(workdir, f"cue_{len(cues):03d}.png")
+        img.save(png)
+        cues.append((png, start, min(end, TRIM_SECONDS)))
+    return cues
+
+
+def _prepare_video(video_id: str, workdir: str, burn_subs: bool = False) -> tuple[str, str]:
+    """
+    Baixa e deixa em 1080x1920 com logo, no máximo TRIM_SECONDS.
+    Vertical nativo (Shorts) fica em tela cheia; horizontal vai no meio com fundo
+    desfocado. Devolve (arquivo, "vertical" | "horizontal").
+    """
+    from reel_downloader import _make_round_logo, LOGO_TOP
     raw = os.path.join(workdir, f"raw_{video_id}.mp4")
-    if not _download_video(video_id, raw):
+    if not _download(video_id, raw):
         raise RuntimeError("download falhou")
-    trimmed = os.path.join(workdir, f"trim_{video_id}.mp4")
-    subprocess.run(["ffmpeg", "-y", "-i", raw, "-t", str(TRIM_SECONDS), "-c", "copy", trimmed],
-                   capture_output=True, check=True)
+    probe = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
+                            "stream=width,height", "-of", "csv=p=0", raw], capture_output=True, text=True)
+    width, height = (int(x) for x in probe.stdout.strip().split(",")[:2])
+    vertical = height > width
+
+    cues = []
+    if burn_subs:
+        srt = _pt_subtitles(video_id, workdir)
+        if not srt:
+            raise ValueError("legenda oficial em português não baixou")
+        cues = _render_cues(srt, workdir)
+
+    if vertical:
+        graph = ("[0:v]scale=1080:1920:force_original_aspect_ratio=decrease,"
+                 "pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,setsar=1[base];")
+        cue_y = "H-h-520"            # acima da legenda e dos botões do Instagram
+    else:
+        graph = ("[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,"
+                 "boxblur=40:6[bg];[0:v]scale=1080:-2[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2,setsar=1[base];")
+        cue_y = "1300"               # na faixa desfocada, logo abaixo do vídeo
+    graph += f"[base][1:v]overlay=W-w-20:{LOGO_TOP}[v0]"
+    inputs = ["-i", raw, "-i", str(_make_round_logo())]
+    for i, (png, start, end) in enumerate(cues):
+        inputs += ["-i", png]
+        graph += (f";[v{i}][{i + 2}:v]overlay=0:{cue_y}:enable='between(t,{start:.2f},{end:.2f})'[v{i + 1}]")
     out = os.path.join(workdir, f"{video_id}.mp4")
-    _make_vertical_blur(trimmed, out, str(_make_round_logo()))
-    return out
+    r = subprocess.run(["ffmpeg", "-y", *inputs, "-filter_complex", graph,
+                        "-map", f"[v{len(cues)}]", "-map", "0:a?", "-t", str(TRIM_SECONDS),
+                        "-c:v", "libx264", "-preset", "fast", "-crf", "20", "-pix_fmt", "yuv420p",
+                        "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out],
+                       capture_output=True, text=True)
+    if r.returncode != 0:
+        raise RuntimeError(f"ffmpeg falhou: {r.stderr[-300:]}")
+    return out, "vertical" if vertical else "horizontal"
 
 
 def _is_fresh(q: dict) -> bool:
@@ -232,8 +331,20 @@ def _is_fresh(q: dict) -> bool:
 
 def _add_item(queue: list[dict], video_id: str, meta: dict, **extra) -> dict:
     """Baixa, converte, sobe e registra um vídeo na fila (salva a cada item)."""
+    # Português primeiro: canal brasileiro (dublado ou legendado na origem) ou
+    # legenda oficial em PT queimada no vídeo. Sem nenhum dos dois, não entra.
+    # Exceção: Rockstar, cujos trailers não têm versão em português.
+    burn = False
+    if not _is_br_channel(meta["channel"]):
+        if meta.get("pt_subs"):
+            burn = True
+        elif meta["channel"] != "Rockstar Games":
+            raise ValueError("sem versão em português (canal estrangeiro, sem legenda oficial PT)")
     with tempfile.TemporaryDirectory(prefix="morsa_queue_") as tmp:
-        asset_url = _upload_asset(_prepare_video(video_id, tmp))
+        path, layout = _prepare_video(video_id, tmp, burn_subs=burn)
+        asset_url = _upload_asset(path)
+    extra.setdefault("layout", layout)
+    extra.setdefault("lang", "pt" if _is_br_channel(meta["channel"]) else ("pt-legenda" if burn else "en"))
     item = {
         "video_id": video_id, "title": meta["title"], "channel": meta["channel"],
         "channel_id": meta["channel_id"], "category": meta["category"],
@@ -292,8 +403,11 @@ def _video_meta(video_id: str) -> dict:
     """Metadados reais do vídeo; recusa qualquer canal fora da lista oficial."""
     from reel_downloader import _ytdlp
     from content_generator import _categorize
-    r = _ytdlp(f"https://www.youtube.com/watch?v={video_id}", "--skip-download", "--dump-json",
-               "--extractor-args", "youtube:lang=pt")
+    url = f"https://www.youtube.com/watch?v={video_id}"
+    r = _ytdlp(url, "--skip-download", "--dump-json", "--extractor-args", "youtube:lang=pt")
+    if not r.stdout.strip() and "not a bot" not in r.stderr:
+        # com lang=pt o yt-dlp às vezes devolve "vídeo não está disponível" à toa
+        r = _ytdlp(url, "--skip-download", "--dump-json")
     if "not a bot" in r.stderr or "confirm you" in r.stderr:
         raise YouTubeBlocked(r.stderr.strip()[-160:])
     if not r.stdout.strip():
@@ -309,6 +423,7 @@ def _video_meta(video_id: str) -> dict:
         "description": (v.get("description") or "")[:700],
         "published": f"{up[:4]}-{up[4:6]}-{up[6:8]}" if len(up) == 8 else "",
         "duration": int(v.get("duration") or 0),
+        "pt_subs": any(k.lower().startswith("pt") for k in (v.get("subtitles") or {})),
     }
 
 

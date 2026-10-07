@@ -277,6 +277,12 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
     contagem GTA VI) → lançamento novo (`fill`) → acervo (`data/reel_plan.json`).
   - Horário: em 184 reels de nov/24 a out/25, 11h-13h deu 1,2x a mediana do mês;
     17h-19h, 0,6x. Feed estático foi para 9h/16h/21h para não colidir.
+- **Português e vertical primeiro** (pedido do Tulio, 06/10/2026: reel em inglês
+  com faixas desfocadas não serve). Fonte preferida: Shorts dos canais oficiais
+  BRASILEIROS (aba /shorts; vertical nativo, dublado ou legendado na origem).
+  Canal estrangeiro só entra com legenda OFICIAL em PT, queimada no vídeo com
+  Pillow (o ffmpeg do Homebrew não tem drawtext/libass). Exceção: Rockstar, que
+  não tem versão PT. Horizontal vira 9:16 com fundo desfocado só como último caso.
 - **CI** (`reel-queue.yml` + watchdog): `publish` olha os dois fluxos, 90 min de
   intervalo entre reels, legenda nossa (fatos = descrição oficial; vídeo com +60
   dias é relembrança) e crédito do canal. `premap` baixa o que faltar dos planos.
