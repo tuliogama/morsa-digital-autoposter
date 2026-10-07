@@ -10,9 +10,11 @@
     "youtube_url": "https://www.youtube.com/watch?v=CCWEkf24Mew",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/CCWEkf24Mew.mp4",
     "added_at": "2026-10-06T19:15:55.800265-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
-    "plan_order": 1
+    "plan_order": 1,
+    "posted_at": "2026-10-06T21:07:33.913025-03:00",
+    "media_id": "18154226914523483"
   },
   {
     "video_id": "GPitD0-mkYA",
