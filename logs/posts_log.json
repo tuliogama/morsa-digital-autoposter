@@ -374,6 +374,7 @@
     "metrics": {}
   },
   {
+<<<<<<< Updated upstream
     "media_id": "18574540276073100",
     "platform": "instagram_reel",
     "title": "Capitão América - Cena Transformação de Steve Rogers",
@@ -382,6 +383,16 @@
     "image_url": "",
     "caption_preview": "Steve Rogers virando o Capitão América é o tipo de momento que trava a respiração de qualquer fã do MCU.\n\nEssa cena de Capitão America: O Primeiro Vingador marca o exato instante em que o recruta frág",
     "published_at": "2026-10-07T18:55:27.265854+00:00",
+=======
+    "media_id": "18074423915489889",
+    "platform": "instagram",
+    "title": "Xbox nega relato sobre exclusividade de streaming de GTA 6",
+    "source": "IGN Brasil",
+    "url": "https://br.ign.com/grand-theft-auto-vi/156688/xbox-nega-relato-sobre-exclusividade-de-streaming-de-gta-6",
+    "image_url": "https://raw.githubusercontent.com/tuliogama/morsa-digital-autoposter/main/images/post_1791399655.jpg",
+    "caption_preview": "Xbox nega que terá exclusividade de streaming de GTA 6 no lançamento.\n\nA rumorologia insistia que a Microsoft garantiria os direitos exclusivos para rodar o jogo na nuvem, o que facilitaria o acesso v",
+    "published_at": "2026-10-07T19:01:37.673103+00:00",
+>>>>>>> Stashed changes
     "metrics": {}
   }
 ]
