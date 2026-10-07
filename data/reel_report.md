@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 07/10/2026 06:18 BRT
+# Fila de reels @morsadigital — 07/10/2026 08:33 BRT
 
 ## cenas — a partir das 11h
 
@@ -800,7 +800,7 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
 ## main — a partir das 13h
 
-67 na fila | legendas ok: 3 | a revisar: 1 | dias sem reel no calendário: 11
+67 na fila | legendas ok: 5 | a revisar: 2 | dias sem reel no calendário: 11
 
 ### 07/10 — Capitão América - Cena Transformação de Steve Rogers
 Marvel Brasil · ? · ? · legenda: ok
@@ -818,10 +818,18 @@ Vídeo: Marvel Brasil (canal oficial no YouTube)
 ```
 
 ### 08/10 — The Batman - Trailer Principal
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: revisar (trata vídeo antigo como novidade)
 
 ```
-(gerada na hora da publicação)
+Robert Pattinson como Batman já era o suficiente pra deixar qualquer fã inquieto, mas esse trailer oficial chegou pra provar que a ideia de Matt Reeves não é só estética, é tensão pura.
+
+A proposta de um Bruce Wayne mais recluso e detetive, ao lado de um Gordon vivido por Jeffrey Wright e um Enigma interpretado por Paul Dano, mudou completamente a forma como a gente olha pro herói. É uma Gotham mais sombria e realista, onde cada passo do vigilante pesa e a investigação é o verdadeiro motor da história.
+
+Qual personagem dessa versão te deixou mais ansioso na época: o Batman, o Enigma ou a Selina Kyle de Zoë Kravitz?
+
+Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
+
+#TheBatman #RobertPattinson #Batman #MattReeves #GothamCity #MorsaDigital
 ```
 
 ### 09/10 — Grand Theft Auto III: 10 Year Anniversary Edition - Official Launch Trailer
@@ -840,17 +848,33 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 10/10 — Homem-Aranha: Um Novo Dia - Novo Trailer (Dublado)
-Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+Sony Pictures Brasil · horizontal · pt · legenda: ok
 
 ```
-(gerada na hora da publicação)
+Homem-Aranha: Um Novo Dia e o fato de Peter Parker estar sozinho num mundo que apagou sua memória é o que mais me pega emocionalmente nesse trailer.
+
+É aquela sensação de solidão que a franquia nunca explorou tão a fundo, com Tom Holland carregando o peso de ser o único que se lembra de quem ele foi. A dinâmica com Zendaya e o resto do time ganha um peso muito maior quando você sabe que eles não reconhecem mais o amigo de sempre.
+
+Como você se sentiu ao ver a reação do Peter nesse momento de transformação? Você acha que ele vai conseguir lidar com essa nova realidade ou vai se afogar nela?
+
+Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
+
+#HomemAranha #SpiderMan #TomHolland #Zendaya #SonyPictures #MorsaDigital
 ```
 
 ### 11/10 — ONE PIECE: A Série - Temporada 2 | Trailer final | Netflix
-Netflix Brasil · horizontal · pt · legenda: ainda não gerada
+Netflix Brasil · horizontal · pt · legenda: ok
 
 ```
-(gerada na hora da publicação)
+One Piece T2 dropou e o hype bateu de novo, tá?
+
+A Netflix finalmente liberou o trailer final da temporada 2, confirmando que o grupo dos Chapéus de Palha está de vez rumo à Grand Line. Ao contrário das águas calmas do East Blue, essa nova etapa promete ilhas estranhas e inimigos muito mais perigosos no caminho da busca pelo maior tesouro do mundo. É o momento em que a história do mangá de Eiichiro Oda realmente começa a esquentar.
+
+Agora que você viu tudo, qual foi a cena que mais te deixou com frio na barraca: a chegada a um novo lugar ou a ameaça dos novos vilões?
+
+Vídeo: Netflix Brasil (canal oficial no YouTube)
+
+#OnePiece #OnePieceNetflix #Luffy #ChapeusDePalha #GrandLine #Manga
 ```
 
 ### 12/10 — VisionQuest | Trailer Oficial Dublado | Disney+

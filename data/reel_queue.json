@@ -455,7 +455,12 @@
     "kind": "acervo",
     "plan_order": 20,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Robert Pattinson como Batman já era o suficiente pra deixar qualquer fã inquieto, mas esse trailer oficial chegou pra provar que a ideia de Matt Reeves não é só estética, é tensão pura.\n\nA proposta de um Bruce Wayne mais recluso e detetive, ao lado de um Gordon vivido por Jeffrey Wright e um Enigma interpretado por Paul Dano, mudou completamente a forma como a gente olha pro herói. É uma Gotham mais sombria e realista, onde cada passo do vigilante pesa e a investigação é o verdadeiro motor da história.\n\nQual personagem dessa versão te deixou mais ansioso na época: o Batman, o Enigma ou a Selina Kyle de Zoë Kravitz?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#TheBatman #RobertPattinson #Batman #MattReeves #GothamCity #MorsaDigital",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "trata vídeo antigo como novidade"
+    ]
   },
   {
     "video_id": "ZHMY6nvZAqs",
@@ -472,7 +477,10 @@
     "kind": "acervo",
     "plan_order": 21,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Homem-Aranha: Um Novo Dia e o fato de Peter Parker estar sozinho num mundo que apagou sua memória é o que mais me pega emocionalmente nesse trailer.\n\nÉ aquela sensação de solidão que a franquia nunca explorou tão a fundo, com Tom Holland carregando o peso de ser o único que se lembra de quem ele foi. A dinâmica com Zendaya e o resto do time ganha um peso muito maior quando você sabe que eles não reconhecem mais o amigo de sempre.\n\nComo você se sentiu ao ver a reação do Peter nesse momento de transformação? Você acha que ele vai conseguir lidar com essa nova realidade ou vai se afogar nela?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#HomemAranha #SpiderMan #TomHolland #Zendaya #SonyPictures #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "JsfSvTvydEY",
@@ -489,7 +497,10 @@
     "kind": "acervo",
     "plan_order": 22,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "One Piece T2 dropou e o hype bateu de novo, tá?\n\nA Netflix finalmente liberou o trailer final da temporada 2, confirmando que o grupo dos Chapéus de Palha está de vez rumo à Grand Line. Ao contrário das águas calmas do East Blue, essa nova etapa promete ilhas estranhas e inimigos muito mais perigosos no caminho da busca pelo maior tesouro do mundo. É o momento em que a história do mangá de Eiichiro Oda realmente começa a esquentar.\n\nAgora que você viu tudo, qual foi a cena que mais te deixou com frio na barraca: a chegada a um novo lugar ou a ameaça dos novos vilões?\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#OnePiece #OnePieceNetflix #Luffy #ChapeusDePalha #GrandLine #Manga",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "xjbxG5VEo4M",
