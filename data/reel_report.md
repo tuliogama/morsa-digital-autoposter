@@ -1,8 +1,8 @@
-# Fila de reels @morsadigital — 07/10/2026 01:05 BRT
+# Fila de reels @morsadigital — 07/10/2026 02:29 BRT
 
 ## cenas — a partir das 11h
 
-32 na fila | legendas ok: 26 | a revisar: 6 | dias sem reel no calendário: 0
+41 na fila | legendas ok: 32 | a revisar: 9 | dias sem reel no calendário: 0
 
 ### 07/10 — CHAVES MARCOU TODA UMA GERAÇÃO
 Netflix Brasil · vertical · pt · legenda: ok
@@ -37,19 +37,19 @@ Vídeo: HBO Brasil (canal oficial no YouTube)
 ```
 
 ### 09/10 — Naruto sofre por Sasuke!
-Netflix Brasil · vertical · pt · legenda: revisar (detalhe sem base: Naruto no chão sofrendo por Sasuke; detalhe sem base: Ver o Naruto carregando esse peso emocional sozinha)
+Netflix Brasil · vertical · pt · legenda: ok
 
 ```
-Naruto no chão sofrendo por Sasuke: você se identifica ou acha drama demais?
+Naruto ainda é o rei do sofrimento ou você tá cansado?
 
-Isso é o tipo de cena que fica na memória por anos a fio.
-Ver o Naruto carregando esse peso emocional sozinha é algo que todo fã da franquia sente na pele.
+Essa dor de Sasuke que não acaba nunca é o que mantém a gente preso na tela.
+Aquele amor que não tem volta e faz o olho lacrimejar de novo, mesmo depois de tanto tempo.
 
-Comenta aí qual foi a primeira vez que você chorou por causa de um dos dois.
+Comenta aí: qual foi a cena que mais te martelou?
 
 Vídeo: Netflix Brasil (canal oficial no YouTube)
 
-#Naruto #Sasuke #NarutoShippuden #Animes #CulturaPop #MorsaDigital
+#Naruto #Sasuke #NarutoShippuden #Anime #Manga #MorsaDigital
 ```
 
 ### 10/10 — Phineas e Ferb Através da 2ª Dimensão | Agente P? | Disney+
@@ -116,36 +116,35 @@ Vídeo: Crunchyroll Brasil (canal oficial no YouTube)
 ```
 
 ### 14/10 — Eu consigo ouvir os gritos de “É A AMY ROSE!” só de rever essa cena! 🗣️🩷#Sonic3O
-Paramount Brasil · vertical · pt · legenda: revisar (detalhe sem base: namorada do Sonic)
+Paramount Brasil · vertical · pt · legenda: ok
 
 ```
-Amy Rose merecia mais tempo em tela ou só a gente que tá com saudades?
+Amy Rose é a única personagem que faz você gritar assim?
 
-A energia dela é contagiante e a gente sente falta de ver a namorada do Sonic brilhando mais.
-É impossível não gritar quando ela aparece, né?
+É impossível não sentir aquele eco de "É A AMY ROSE!" na cabeça.
+Essa cena tem uma energia que trava o coração de todo fã.
 
-Comenta aí se você concorda ou se acha que ela tá perfeita assim.
+Qual foi a reação mais louca que você teve com ela?
 
 Vídeo: Paramount Brasil (canal oficial no YouTube)
 
-#Sonic3 #SonicTheMovie #AmyRose #Sonic #Sonic3OFilme #MorsaDigital
+#Sonic #Sonic3 #AmyRose #SonicHedgehog #Paramount #MorsaDigital
 ```
 
 ### 15/10 — Hola b*tches! #Venom: A Última Rodada, hoje, exclusivamente nos cinemas.
-Sony Pictures Brasil · vertical · pt · legenda: revisar (detalhe sem base: Venom 4: você curtiu o final ou sentiu falta do Carnificina?)
+Sony Pictures Brasil · vertical · pt · legenda: revisar (detalhe sem base: Toque de "b*tches" do Venom é aquele clássico?)
 
 ```
-Venom 4: você curtiu o final ou sentiu falta do Carnificina?
+Toque de "b*tches" do Venom é aquele clássico?
 
-Aquele "Hola b*tches" do Venom é a cara dele.
-A última rodada prometeu ser o encerramento da saga.
-Fala a verdade: foi o desfecho que você queria?
+Aquele jeito sarcástico e bagunçado do simbionte sempre faz a gente sorrir.
+É o tipo de cena que resume a energia caótica e divertida do personagem.
 
-Comenta aí o que achou dessa despedida.
+Qual é a sua parte favorita dessa fase do Venom?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#Venom #VenomLastRide #EddieBrock #SonyPictures #MorsaDigital
+#Venom #AUltimaRodada #SonyPictures #CulturaPop #Nerd #MorsaDigital
 ```
 
 ### 16/10 — Memória coletiva: a primeira aparição do Shrek
@@ -181,35 +180,35 @@ Vídeo: Prime Video Brasil (canal oficial no YouTube)
 ```
 
 ### 18/10 — SATORU GOJO 🤝 QUICO DO CHAVES
-Netflix Brasil · vertical · pt · legenda: revisar (detalhe sem base: aura de mimado da vila)
+Netflix Brasil · vertical · pt · legenda: ok
 
 ```
-Gojo com aura de mimado da vila te pegou de surpresa ou já esperava?
+Gojo é o Quico de peruca branca ou tá sendo injusto?
 
-Essa comparação com o Quico do Chaves é brutal.
-Parece que o branco da peruca só veio para reforçar o lado "exagerado" do personagem.
+A energia de mimado da vila combinando com o cara mais poderoso de Jujutsu Kaisen faz todo sentido.
+Não tem como não sentir o peso dessa comparação tão pesada.
 
-Comenta aí quem mais viu esse lado dele.
+Comenta aí se você concorda ou se vai defender o Gojo.
 
 Vídeo: Netflix Brasil (canal oficial no YouTube)
 
-#JujutsuKaisen #SatoruGojo #QuicoDoChaves #Anime #NetflixBrasil #MorsaDigital
+#JujutsuKaisen #SatoruGojo #QuicoDoChaves #NetflixBrasil #Anime #MorsaDigital
 ```
 
 ### 19/10 — COMO ESQUECER O JULGAMENTO DO TYRION? | GOT
-HBO Brasil · vertical · pt · legenda: revisar (detalhe sem base: Tyrion ou Cersei, quem você acha que ganha esse embate?; detalhe sem base: Essa cena é um dos momentos mais tensos da série, onde a inteligência de um colide com a crueldade da outra.)
+HBO Brasil · vertical · pt · legenda: ok
 
 ```
-Tyrion ou Cersei, quem você acha que ganha esse embate?
+TyrionLannister seria justo julgado por seus crimes ou por quem ele é?
 
-Essa cena é um dos momentos mais tensos da série, onde a inteligência de um colide com a crueldade da outra.
-É o tipo de confronto que prende a atenção do início ao fim, sem espaço para distrações.
+Muita gente ainda discute se o veredicto foi a virada mais inteligente da história do personagem.
+É uma das cenas que divide opiniões até hoje entre os fãs da série.
 
-Qual é a sua opinião: a defesa dele foi perfeita ou ele ainda tinha mais a perder?
+Comenta aí: você concorda com o julgamento ou acha que ele merecia mais?
 
 Vídeo: HBO Brasil (canal oficial no YouTube)
 
-#GameOfThrones #TyrionLannister #CerseiLannister #HBO #DramaFantasia #MorsaDigital
+#GameOfThrones #TyrionLannister #HBO #GOT #MelhoresCenas #MorsaDigital
 ```
 
 ### 20/10 — Nem sempre Naruto será seu primeiro anime... qual é o de vocês? 👀
@@ -408,19 +407,19 @@ Vídeo: HBO Brasil (canal oficial no YouTube)
 ```
 
 ### 01/11 — Isso quebrou o coração do Mark 😓💔 #Invencível
-Prime Video Brasil · vertical · pt · legenda: revisar (1ª linha não é pergunta)
+Prime Video Brasil · vertical · pt · legenda: ok
 
 ```
-Mark aguentou tanto, mas isso aqui quebrou o coração dele.
+Mark foi longe demais no Invencível?
 
-Todo mundo sabia que o peso da responsabilidade era pesado, mas ver ele reagindo assim é insuportável.
-É o tipo de momento que fica gravado na memória e tira o chão de qualquer fã da série.
+Aquela cena pesou demais pra quem acompanha a jornada dele.
+É o tipo de momento que deixa qualquer fã em choque.
 
-Comenta aí: você chorou junto ou ficou com raiva?
+Comenta aí: você chorou junto ou ficou indiferente?
 
 Vídeo: Prime Video Brasil (canal oficial no YouTube)
 
-#Invencível #MarkGrayson #Omni-Man #PrimeVideo #Animação #MorsaDigital
+#Invencível #MarkGrayson #PrimeVideo #SérieDeAção #UniversoInvencível #MorsaDigital
 ```
 
 ### 02/11 — Avatar: O Último Mestre do Ar recria a abertura clássica
@@ -455,7 +454,112 @@ Vídeo: Prime Video Brasil (canal oficial no YouTube)
 #Shrek #Shrek2 #Ogro #FilmesDeAnimação #Nostalgia #MorsaDigital
 ```
 
-### 04/11 — Homem-Formiga -  Clipe: Teste de Fogo
+### 04/11 — O DRACARYS MAIS TRISTE DO UNIVERSO DE GOT! ❤️‍🔥
+HBO Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 112; 1ª linha não é pergunta)
+
+```
+O DRACARYS MAIS TRISTE DO UNIVERSO DE GOT! ❤️‍🔥
+
+O que você achou?
+
+Vídeo: HBO Brasil (canal oficial no YouTube)
+```
+
+### 05/11 — Wendel e Ursula dublando juntos em Naruto?
+Netflix Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 111)
+
+```
+Wendel e Ursula dublando juntos em Naruto?
+
+O que você achou?
+
+Vídeo: Netflix Brasil (canal oficial no YouTube)
+```
+
+### 06/11 — Qual personagem de Toy Story merecia seu momento de protagonismo?
+Walt Disney Studios BR · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 142)
+
+```
+Qual personagem de Toy Story merecia seu momento de protagonismo?
+
+O que você achou?
+
+Vídeo: Walt Disney Studios BR (canal oficial no YouTube)
+```
+
+### 07/11 — Gaveta: Quarteto Fantástico tem uma estética linda!
+Marvel Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 119; 1ª linha não é pergunta)
+
+```
+Gaveta: Quarteto Fantástico tem uma estética linda!
+
+O que você achou?
+
+Vídeo: Marvel Brasil (canal oficial no YouTube)
+```
+
+### 08/11 — GOLAÇO! ⚽ | BLUE LOCK
+Crunchyroll Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 94; 1ª linha não é pergunta)
+
+```
+GOLAÇO! ⚽ | BLUE LOCK
+
+O que você achou?
+
+Vídeo: Crunchyroll Brasil (canal oficial no YouTube)
+```
+
+### 09/11 — JOFFREY APANHANDO EM GAME OF THRONES E BATMAN! 😉
+HBO Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 113; 1ª linha não é pergunta)
+
+```
+JOFFREY APANHANDO EM GAME OF THRONES E BATMAN! 😉
+
+O que você achou?
+
+Vídeo: HBO Brasil (canal oficial no YouTube)
+```
+
+### 10/11 — Tirem suas próprias conclusões 😰 #BatmanCruzadoEncapuzado
+Prime Video Brasil · vertical · pt · legenda: ok
+
+```
+Qual teorista já viu o Batman Cruzado Encapuzado?
+
+A tensão desse título já faz o coração acelerar.
+É aquele mistério que a gente não quer resolver tão cedo.
+A dúvida fica maior quando a gente não sabe o que esperar.
+
+Conta pra gente qual sua teoria é...
+
+Vídeo: Prime Video Brasil (canal oficial no YouTube)
+
+#Batman #CruzadoEncapuzado #DC #PrimeVideoBrasil #MorsaDigital
+```
+
+### 11/11 — Homem-Aranha: Um Novo Dia | Core | Hoje nos cinemas
+Sony Pictures Brasil · vertical · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 126; 1ª linha não é pergunta)
+
+```
+Homem-Aranha: Um Novo Dia | Core | Hoje nos cinemas
+
+O que você achou?
+
+Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
+```
+
+### 12/11 — só quem sabe completa: ela é minha... 🗣️🗣️🗣️ #Shrek #Fiona #Burro #Humor #Comédi
+Prime Video Brasil · vertical · pt · legenda: revisar (1ª linha não é pergunta)
+
+```
+só quem sabe completa: ela é minha... 🗣️🗣️🗣️ #Shrek #Fiona #Burro #Humor #Comédia
+
+O que você achou?
+
+Vídeo: Prime Video Brasil (canal oficial no YouTube)
+```
+
+### 13/11 — Homem-Formiga -  Clipe: Teste de Fogo
 Marvel Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -471,7 +575,7 @@ Vídeo: Marvel Brasil (canal oficial no YouTube)
 #HomemFormiga #AntMan #Marvel #ScottLang #PaulRudd #MorsaDigital
 ```
 
-### 05/11 — Game Of Thrones | Ygritte dispara em Jon Snow | #MomentoHBO
+### 14/11 — Game Of Thrones | Ygritte dispara em Jon Snow | #MomentoHBO
 HBO Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -487,7 +591,7 @@ Vídeo: HBO Brasil (canal oficial no YouTube)
 #GameOfThrones #JonSnow #Ygritte #HBO #MomentoHBO #MorsaDigital
 ```
 
-### 06/11 — Sonic 3: O Filme | Bastidores: O Doutor Está De Volta | Paramount Pictures Brasi
+### 15/11 — Sonic 3: O Filme | Bastidores: O Doutor Está De Volta | Paramount Pictures Brasi
 Paramount Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -503,7 +607,7 @@ Vídeo: Paramount Brasil (canal oficial no YouTube)
 #Sonic3 #JimCarrey #DoutorEggman #SonicTheHedgehog #ParamountBrazil #MorsaDigital
 ```
 
-### 07/11 — THE FLASH | CENA EXCLUSIVA
+### 16/11 — THE FLASH | CENA EXCLUSIVA
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -521,7 +625,7 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
 ## main — a partir das 13h
 
-39 na fila | legendas ok: 3 | a revisar: 36 | dias sem reel no calendário: 0
+49 na fila | legendas ok: 3 | a revisar: 40 | dias sem reel no calendário: 0
 
 ### 07/10 — Capitão América - Cena Transformação de Steve Rogers
 Marvel Brasil · ? · ? · legenda: ok
@@ -602,14 +706,12 @@ Vídeo: Disney+ Brasil (canal oficial no YouTube)
 ```
 
 ### 13/10 — Grand Theft Auto: Vice City - Anniversary Trailer
-Rockstar Games · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8))
+Rockstar Games · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 118)
 
 ```
-Vice City. Sim, aquele Vice City.
+Grand Theft Auto: Vice City - Anniversary Trailer
 
-Vale a pena rever esse vídeo de aniversário que celebra a década do clássico e o lançamento da versão mobile. É uma homenagem pura àqueles anos 80 retrô que marcaram a história dos games.
-
-Como a Morsa tá de contagem regressiva pro GTA VI, relembra: qual foi a primeira vez que você colocou a mão nesse jogo?
+O que você achou?
 
 Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
@@ -637,18 +739,14 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 16/10 — Grand Theft Auto IV Trailer 1 "Things Will Be Different"
-Rockstar Games · ? · ? · legenda: revisar (detalhe sem base: Em 2007, a Rockstar apresentou o jogo)
+Rockstar Games · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 125)
 
 ```
-GTA IV, aquele trailer que mudou pra sempre como a gente via o mundo de Liberty City.
+Grand Theft Auto IV Trailer 1 "Things Will Be Different"
 
-Em 2007, a Rockstar apresentou o jogo que consagrou o PS3 e o Xbox 360, trazendo uma narrativa densa e um protagonista que fugia do estereótipo de herói clássico. Foi a base sólida que construiu a expectativa gigante que temos até hoje.
-
-Nessa contagem regressiva pra GTA VI, qual foi a primeira coisa que você lembrou ao rever esse vídeo?
+O que você achou?
 
 Vídeo: Rockstar Games (canal oficial no YouTube)
-
-#GTAVI #GTA4 #GrandTheftAuto #RockstarGames #LibertyCity #GTACommunity
 ```
 
 ### 17/10 — Sonic 3: O Filme | Trailer Oficial | DUB | Paramount Pictures Brasil
@@ -663,14 +761,12 @@ Vídeo: Paramount Brasil (canal oficial no YouTube)
 ```
 
 ### 18/10 — IT: Bem-Vindos a Derry | Red Band Trailer Dublado | HBO Max
-HBO Max Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8))
+HBO Max Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 128)
 
 ```
-IT: Bem-Vindos a Derry não é só mais um filme, é uma volta ao pesadelo que a gente jurava que tinha superado.
+IT: Bem-Vindos a Derry | Red Band Trailer Dublado | HBO Max
 
-A série volta para o horror de Derry com uma intensidade que só a HBO Max entrega nesse especial de Halloween. O clima de tensão e a promessa de correr pela vida deixam qualquer fã da franquia com a adrenalina lá em cima.
-
-Qual cena do trailer te deu mais arrepios?
+O que você achou?
 
 Vídeo: HBO Max Brasil (canal oficial no YouTube)
 ```
@@ -698,18 +794,14 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 21/10 — Sorria 2 | Teaser Trailer Oficial | DUB | Paramount Pictures Brasil
-Paramount Brasil · ? · ? · legenda: revisar (detalhe sem base: já passamos do lançamento nos cinemas)
+Paramount Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 138)
 
 ```
-Sorria 2, a maldição do sorriso voltou e com força total.
+Sorria 2 | Teaser Trailer Oficial | DUB | Paramount Pictures Brasil
 
-O hype é real, especialmente agora que já passamos do lançamento nos cinemas. É o tipo de terror psicológico que gruda na cabeça e faz você olhar torto para o sorriso das pessoas.
-
-Qual cena específica do filme te assustou mais ou qual parte você acha que todo mundo tá exagerando?
+O que você achou?
 
 Vídeo: Paramount Brasil (canal oficial no YouTube)
-
-#Sorria2 #Smile2 #Terror #Halloween #MorsaDigital #ParamountBrasil
 ```
 
 ### 22/10 — Alien: Earth | Trailer Oficial Dublado | Disney+
@@ -735,14 +827,12 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 24/10 — Fortnite: Pesadelos 2026 - Trailer Cinematográfico | PS5 & PS4
-PlayStation Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8))
+PlayStation Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 135)
 
 ```
-Fortnite: Pesadelos 2026 e eu não tô pronto pra esse nível de tensão.
+Fortnite: Pesadelos 2026 - Trailer Cinematográfico | PS5 & PS4
 
-O special de Halloween da Morsa tava chegando, mas ver esse trailer cinematográfico foi outro choque. São apenas 2 dias para o Fortnitemares invadir o Battle Royale oficialmente no dia 1º de outubro. A atmosfera que o PlayStation Brasil montou pra essa data é de dar arrepios mesmo.
-
-Vai conseguir sobreviver aos próximos dois dias sem pular do mapa de medo?
+O que você achou?
 
 Vídeo: PlayStation Brasil (canal oficial no YouTube)
 ```
@@ -965,4 +1055,90 @@ Thor: Ragnarok - Trailer Oficial | HD
 O que você achou?
 
 Vídeo: Marvel Brasil (canal oficial no YouTube)
+```
+
+### 14/11 — The Batman - O Morcego e a Gata - Trailer
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 124)
+
+```
+The Batman - O Morcego e a Gata - Trailer
+
+O que você achou?
+
+Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
+```
+
+### 15/11 — THE ONE PIECE | Teaser oficial | Netflix
+Netflix Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 109)
+
+```
+THE ONE PIECE | Teaser oficial | Netflix
+
+O que você achou?
+
+Vídeo: Netflix Brasil (canal oficial no YouTube)
+```
+
+### 16/11 — Resident Evil Requiem - 4º Trailer | PS5
+PlayStation Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 113)
+
+```
+Resident Evil Requiem - 4º Trailer | PS5
+
+O que você achou?
+
+Vídeo: PlayStation Brasil (canal oficial no YouTube)
+```
+
+### 17/11 — Quarteto Fantástico: Primeiros Passos | Trailer Oficial 2 Dublado
+Marvel Brasil · horizontal · pt · legenda: revisar (0 hashtags (esperado 4 a 8); tamanho 133)
+
+```
+Quarteto Fantástico: Primeiros Passos | Trailer Oficial 2 Dublado
+
+O que você achou?
+
+Vídeo: Marvel Brasil (canal oficial no YouTube)
+```
+
+### 18/11 — The Mandalorian | Trailer Oficial Dublado | Temporada 2 | Disney+
+Disney+ Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 19/11 — Jujutsu Kaisen 0 | Trailer oficial dublado | 28 de abril exclusivamente nos cine
+Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 20/11 — Um Filme Minecraft l Trailer Final
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 21/11 — Homem-Aranha: Sem Volta Para Casa | Trailer Oficial Dublado | 16 de dezembro nos
+Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 22/11 — The Flash – Trailer Oficial
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 23/11 — The Boys – Temporada Final Trailer | Prime Video
+Prime Video Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
 ```
