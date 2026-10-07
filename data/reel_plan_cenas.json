@@ -1,5 +1,50 @@
 [
  {
+  "video_id": "IJIdDdB8MLA",
+  "scheduled_for": "2026-10-12",
+  "theme": "criancas"
+ },
+ {
+  "video_id": "2Bto3Mlbn0o",
+  "scheduled_for": "2026-10-24",
+  "theme": "halloween"
+ },
+ {
+  "video_id": "0MLmL4uOg0k",
+  "scheduled_for": "2026-10-25",
+  "theme": "halloween"
+ },
+ {
+  "video_id": "gbTPu89fEXg",
+  "scheduled_for": "2026-10-26",
+  "theme": "halloween"
+ },
+ {
+  "video_id": "ToyHbBkiuRk",
+  "scheduled_for": "2026-10-27",
+  "theme": "halloween"
+ },
+ {
+  "video_id": "tESt0sLknEU",
+  "scheduled_for": "2026-10-28",
+  "theme": "animacao"
+ },
+ {
+  "video_id": "N5xoBTnuW1w",
+  "scheduled_for": "2026-10-29",
+  "theme": "halloween"
+ },
+ {
+  "video_id": "pZBO3kq7Zng",
+  "scheduled_for": "2026-10-30",
+  "theme": "halloween"
+ },
+ {
+  "video_id": "24VK5kL6vIA",
+  "scheduled_for": "2026-10-31",
+  "theme": "halloween"
+ },
+ {
   "video_id": "eJfkIG6edTc"
  },
  {
@@ -10,9 +55,6 @@
  },
  {
   "video_id": "9JX-0es-AXc"
- },
- {
-  "video_id": "IJIdDdB8MLA"
  },
  {
   "video_id": "Ay_2-oJxiwg"
@@ -40,9 +82,6 @@
  },
  {
   "video_id": "zJE319Ui_pM"
- },
- {
-  "video_id": "tESt0sLknEU"
  },
  {
   "video_id": "7XdML3Rd_xA"
@@ -159,9 +198,6 @@
   "video_id": "0mFMfBFcjCo"
  },
  {
-  "video_id": "CXETio-OLV0"
- },
- {
   "video_id": "uvLtkthCE5A"
  },
  {
@@ -219,18 +255,150 @@
   "video_id": "z9DLpcXYCNI"
  },
  {
-  "video_id": "N5xoBTnuW1w",
-  "scheduled_for": "2026-10-29",
-  "theme": "halloween"
+  "video_id": "k9Vs64O9Chg"
  },
  {
-  "video_id": "pZBO3kq7Zng",
-  "scheduled_for": "2026-10-30",
-  "theme": "halloween"
+  "video_id": "3L9qLtsgZUw"
  },
  {
-  "video_id": "24VK5kL6vIA",
-  "scheduled_for": "2026-10-31",
-  "theme": "halloween"
+  "video_id": "6Ux5m4opRU8"
+ },
+ {
+  "video_id": "65buIZxDmB0"
+ },
+ {
+  "video_id": "N6qUVHNse-s"
+ },
+ {
+  "video_id": "v0UxcKjTa-I"
+ },
+ {
+  "video_id": "5Dq2hMjilTY"
+ },
+ {
+  "video_id": "7L_oA-HA34w"
+ },
+ {
+  "video_id": "FKmieiU4Lx8"
+ },
+ {
+  "video_id": "MC4-S_r0I9U"
+ },
+ {
+  "video_id": "GEA2OoLOvwA"
+ },
+ {
+  "video_id": "XsHr196IwJ0"
+ },
+ {
+  "video_id": "guFn7JymKS0"
+ },
+ {
+  "video_id": "gkTIpjuj_rg"
+ },
+ {
+  "video_id": "c17VR20Hi3o"
+ },
+ {
+  "video_id": "ffCG56KpR74"
+ },
+ {
+  "video_id": "EKwFhSbDHh4"
+ },
+ {
+  "video_id": "d5yZCskyRxY"
+ },
+ {
+  "video_id": "ooTOHoXfjsI"
+ },
+ {
+  "video_id": "XcN5Or7FCrg"
+ },
+ {
+  "video_id": "6CkAbzGwano"
+ },
+ {
+  "video_id": "mfsBBM7ELQA"
+ },
+ {
+  "video_id": "yMr9NrRJgsE"
+ },
+ {
+  "video_id": "7Zf3QkpoCDA"
+ },
+ {
+  "video_id": "yxxfSSK5WNc"
+ },
+ {
+  "video_id": "BDtsaq3u400"
+ },
+ {
+  "video_id": "Apf7d_UlOQw"
+ },
+ {
+  "video_id": "7VWCn6uIptE"
+ },
+ {
+  "video_id": "gn9jlyd2cqA"
+ },
+ {
+  "video_id": "a-4_Km_NaP8"
+ },
+ {
+  "video_id": "vY5RHKqcLr4"
+ },
+ {
+  "video_id": "_C37K4kyyQk"
+ },
+ {
+  "video_id": "Ng_Iaa5Bemc"
+ },
+ {
+  "video_id": "s_AVVbRIdhM"
+ },
+ {
+  "video_id": "CXETio-OLV0",
+  "scheduled_for": "2026-12-13",
+  "theme": "vingadores"
+ },
+ {
+  "video_id": "D6gDgZDCbqM",
+  "scheduled_for": "2026-12-14",
+  "theme": "vingadores"
+ },
+ {
+  "video_id": "hGw2YINX5OM",
+  "scheduled_for": "2026-12-15",
+  "theme": "vingadores"
+ },
+ {
+  "video_id": "32x-UJLflZk",
+  "scheduled_for": "2026-12-16",
+  "theme": "vingadores"
+ },
+ {
+  "video_id": "Wi8QsZB4pUE",
+  "scheduled_for": "2026-12-17",
+  "theme": "vingadores"
+ },
+ {
+  "video_id": "2QhFGJGg7Ac",
+  "scheduled_for": "2026-12-23",
+  "theme": "natal"
+ },
+ {
+  "video_id": "Wvu5SPPfGkk",
+  "scheduled_for": "2026-12-24",
+  "theme": "natal"
+ },
+ {
+  "video_id": "ZAZuv3mUNfQ",
+  "scheduled_for": "2026-12-25",
+  "theme": "natal"
+ },
+ {
+  "video_id": "S3TfYc8SNtE",
+  "scheduled_for": "2027-01-01",
+  "theme": "ano_novo"
  }
 ]

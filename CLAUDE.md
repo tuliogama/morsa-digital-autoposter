@@ -262,7 +262,8 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
 - **Fonte**: só uploads recentes (RSS do YouTube) dos canais em `OFFICIAL_CHANNELS`,
   conferidos por ID + inscritos. Só adicionar canal por ID: `@dcbrasil` (3 inscritos)
   e `@UniversalPicturesBr` são falsos. Nada de busca livre, nada de corte de cena.
-- **Mac** (`run_reel_local.sh`, launchd `com.morsa.dailyreel`, 18h): `fill` baixa,
+- **Mac** (`run_reel_local.sh`, launchd `com.morsa.dailyreel`, 8h30, 13h30 e 18h;
+  até 10 vídeos por fluxo por execução, 70s de pausa, para o YouTube não bloquear): `fill` baixa,
   converte para 9:16 (fundo desfocado + logo, máx. 90s), sobe na Release
   `reel-queue` e grava `data/reel_queue.json` até ter 7 pendentes. Com a fila
   cheia o Mac pode ficar dias desligado. yt-dlp SEM cookies (com cookies do Chrome

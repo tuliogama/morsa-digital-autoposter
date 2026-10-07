@@ -150,7 +150,9 @@
     "kind": "cena",
     "plan_order": 4,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "scheduled_for": "2026-10-12",
+    "theme": "criancas"
   },
   {
     "video_id": "Ay_2-oJxiwg",

@@ -70,8 +70,8 @@ MAX_PER_CHANNEL = 2          # variedade: no máximo 2 pendentes do mesmo canal
 MAX_AGE_DAYS = 30            # vídeo mais velho que isso não é mais novidade
 MIN_SECONDS, MAX_SECONDS = 20, 210
 TRIM_SECONDS = 90            # Reels até 90s entram na recomendação
-PREMAP_MAX_PER_RUN = int(os.environ.get("PREMAP_MAX_PER_RUN", "8"))   # por fluxo, por execução
-PREMAP_PAUSE_SECONDS = int(os.environ.get("PREMAP_PAUSE_SECONDS", "75"))
+PREMAP_MAX_PER_RUN = int(os.environ.get("PREMAP_MAX_PER_RUN", "10"))   # por fluxo, por execução
+PREMAP_PAUSE_SECONDS = int(os.environ.get("PREMAP_PAUSE_SECONDS", "70"))
 
 # Canais oficiais conferidos em 06/10/2026 (ID + inscritos + selo). Handles
 # parecidos podem ser falsos: @dcbrasil tinha 3 inscritos. Só adicionar por ID.
@@ -526,6 +526,8 @@ _THEME_NOTES = {
     "ano_novo": "Este Reel é da virada de ano da Morsa.",
     "vingadores": "Este Reel faz parte do aquecimento da Morsa para o novo filme dos Vingadores.",
     "gta": "Este Reel faz parte da contagem da Morsa para GTA VI.",
+    "criancas": "Este Reel é do especial de Dia das Crianças da Morsa (12 de outubro).",
+    "animacao": "Este Reel é do Dia Internacional da Animação (28 de outubro).",
 }
 
 
