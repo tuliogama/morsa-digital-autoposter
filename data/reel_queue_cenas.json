@@ -31,7 +31,10 @@
     "kind": "cena",
     "plan_order": 901,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Scott Lang aguentou o tranco nesse Teste de Fogo?\n\nÉ impossível não lembrar da tensão que esse clipe passava.\nA expectativa era altíssima para ver o herói em ação.\n\nQual foi a sua primeira impressão quando assistiu?\n\nVídeo: Marvel Brasil (canal oficial no YouTube)\n\n#HomemFormiga #AntMan #Marvel #ScottLang #PaulRudd #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "ZY5LaJclBWc",
@@ -48,7 +51,10 @@
     "kind": "cena",
     "plan_order": 902,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Ygritte atirando no Jon Snow ainda te dói?\n\nEssa tensão entre o amor dela e a missão dele é o que faz essa cena pesar tanto na memória.\nÉ difícil não se colocar no lugar de quem fica pra trás quando a história exige sacrifício.\n\nComenta aí qual foi a sua primeira reação ao ver isso.\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#GameOfThrones #JonSnow #Ygritte #HBO #MomentoHBO #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "mtj15i0pWsg",
@@ -65,7 +71,10 @@
     "kind": "cena",
     "plan_order": 903,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Jim Carrey raspando a cabeça ao vivo: você achou ousado ou exagero?\n\nRelembre os bastidores de Sonic 3: O Filme e veja o empenho do ator para viver o Doutor Eggman Robotnik.\nAquele comprometimento com o personagem realmente marcou a memória de muita gente.\n\nComenta aí qual foi a sua reação quando viu isso.\n\nVídeo: Paramount Brasil (canal oficial no YouTube)\n\n#Sonic3 #JimCarrey #DoutorEggman #SonicTheHedgehog #ParamountBrazil #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "qhoHBNoC-c0",
@@ -82,7 +91,10 @@
     "kind": "cena",
     "plan_order": 904,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Essa cena exclusiva de The Flash te pegou de surpresa?\n\nRelembre o momento em que Barry Allen viaja no tempo e acaba preso numa realidade onde o General Zod ameaça o mundo sem super-heróis por perto.\nÉ a chance de rever como o Batman aposentado reage a ser chamado de volta para salvar a situação.\n\nComenta aí o que você achou dessa versão do Batman.\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#TheFlash #DC #BarryAllen #Batman #GeneralZod #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "5Ef6nSOCeJ4",
@@ -99,7 +111,10 @@
     "kind": "cena",
     "plan_order": 1,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Chaves marcou toda uma geração, ou você acha que é exagero?\n\nNada como ver esse universo ganhar vida na Netflix e sentir aquele carinho de quem cresceu com ele.\nÉ a prova de que certos clássicos atravessam décadas e continuam com tudo.\n\nComenta aí: qual é a sua memória mais forte com o Chaves?\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#Chaves #Netflix #Clássicos #Infância #Nostalgia #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "XqlghJoHds0",
@@ -116,7 +131,10 @@
     "kind": "cena",
     "plan_order": 2,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "A Batalha dos Bastardos ainda te dá arrepios ou já ficou só na memória?\n\nFalar dessa cena sem sentir um frio na barriga é impossível.\nÉ o tipo de confronto que define a saga e fica gravado na cabeça pra sempre.\n\nComenta aí: qual foi o momento que mais te pegou?\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#GameOfThrones #BatalhaDosBastardos #JonSnow #SansaStark #HBO #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "9JX-0es-AXc",
@@ -133,7 +151,13 @@
     "kind": "cena",
     "plan_order": 3,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Naruto no chão sofrendo por Sasuke: você se identifica ou acha drama demais?\n\nIsso é o tipo de cena que fica na memória por anos a fio.\nVer o Naruto carregando esse peso emocional sozinha é algo que todo fã da franquia sente na pele.\n\nComenta aí qual foi a primeira vez que você chorou por causa de um dos dois.\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#Naruto #Sasuke #NarutoShippuden #Animes #CulturaPop #MorsaDigital",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "detalhe sem base: Naruto no chão sofrendo por Sasuke",
+      "detalhe sem base: Ver o Naruto carregando esse peso emocional sozinha"
+    ]
   },
   {
     "video_id": "IJIdDdB8MLA",
@@ -152,7 +176,10 @@
     "layout": "vertical",
     "lang": "pt",
     "scheduled_for": "2026-10-12",
-    "theme": "criancas"
+    "theme": "criancas",
+    "caption": "Você já sabia dessas 3 curiosidades de Toy Story?\n\nÉ impossível não sentir aquele carinho de infância ao ver esses brinquedos ganhando vida.\nLuciano separou fatos rápidos que mostram o quanto essa franquia é especial para a gente.\n\nQual delas te pegou de surpresa? Comenta aí.\n\nVídeo: Walt Disney Studios BR (canal oficial no YouTube)\n\n#ToyStory #ToyStory30Anos #DisneyTalks #LucianoAmaral #DiaDasCrianças #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "Ay_2-oJxiwg",
@@ -169,7 +196,10 @@
     "kind": "cena",
     "plan_order": 5,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Qual é a sua teoria sobre o Agente P?\n\nAquela tensão de ver o Perry em ação sempre rendeu.\nEssa cena específica pegou muita gente de surpresa.\n\nConta pra gente o que você achou.\n\nVídeo: Disney+ Brasil (canal oficial no YouTube)\n\n#PhineasEFerb #Perry #AgenteP #DisneyPlus #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "hlX7oKKBfP0",
@@ -186,7 +216,10 @@
     "kind": "cena",
     "plan_order": 6,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Ciclope, Jean Grey ou Wolverine: quem te marcou mais?\n\nA volta da série que definiu uma época, agora com seus conflitos ainda mais intensos.\nÉ impossível não sentir aquele frio na barriga de quando éramos crianças vendo os mutantes.\n\nQual foi a sua primeira reação ao saber que a temporada 2 tinha chegado?\n\nVídeo: Marvel Brasil (canal oficial no YouTube)\n\n#XMen97 #XMen #Wolverine #Magneto #Ciclope #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "JiWTkbu9HvU",
@@ -203,7 +236,10 @@
     "kind": "cena",
     "plan_order": 7,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Rock Lee ou Gaara, quem você acha que leva a melhor nessa?\n\nTodo mundo sabe que o Lee é o cara que nunca desiste, mas aquele olhar do Gaara...\n\nComenta aí qual dos dois te dá mais medo de enfrentar.\n\nVídeo: Crunchyroll Brasil (canal oficial no YouTube)\n\n#Naruto #RockLee #Gaara #NarutoShippuden #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "_xGeGUYAwBo",
@@ -220,7 +256,12 @@
     "kind": "cena",
     "plan_order": 8,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Amy Rose merecia mais tempo em tela ou só a gente que tá com saudades?\n\nA energia dela é contagiante e a gente sente falta de ver a namorada do Sonic brilhando mais.\nÉ impossível não gritar quando ela aparece, né?\n\nComenta aí se você concorda ou se acha que ela tá perfeita assim.\n\nVídeo: Paramount Brasil (canal oficial no YouTube)\n\n#Sonic3 #SonicTheMovie #AmyRose #Sonic #Sonic3OFilme #MorsaDigital",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "detalhe sem base: namorada do Sonic"
+    ]
   },
   {
     "video_id": "FeUYvqcec0w",
@@ -237,7 +278,12 @@
     "kind": "cena",
     "plan_order": 9,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Venom 4: você curtiu o final ou sentiu falta do Carnificina?\n\nAquele \"Hola b*tches\" do Venom é a cara dele.\nA última rodada prometeu ser o encerramento da saga.\nFala a verdade: foi o desfecho que você queria?\n\nComenta aí o que achou dessa despedida.\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#Venom #VenomLastRide #EddieBrock #SonyPictures #MorsaDigital",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "detalhe sem base: Venom 4: você curtiu o final ou sentiu falta do Carnificina?"
+    ]
   },
   {
     "video_id": "2Bto3Mlbn0o",
@@ -256,7 +302,10 @@
     "scheduled_for": "2026-10-24",
     "theme": "halloween",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "A Última Casa te deixou em alerta máximo ou só no sufoco?\n\nA ideia de estar trancado na própria casa com Wagner Moura e Greta Lee, lidando com a escassez e uma força desconhecida, é o tipo de tensão que gruda.\n\nQual foi o momento que mais te deixou com o coração na boca?\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#AultimaCasa #WagnerMoura #GretaLee #Suspense #Netflix #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "0MLmL4uOg0k",
@@ -275,7 +324,10 @@
     "scheduled_for": "2026-10-25",
     "theme": "halloween",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Qual cena de Halloween te deu mais medo: a original ou essa?\n\nA mudança de personalidade automática é o tipo de detalhe que faz o sangue gelar.\nÉ o momento em que você percebe que não existe mais ninguém ali, só o monstro.\nEsse é o poder do clássico revisitado para a nova geração.\n\nComenta aí qual foi a primeira vez que você sentiu esse arrepio.\n\nVídeo: HBO Max Brasil (canal oficial no YouTube)\n\n#Halloween #HalloweenHBO #MichaelMyers #SérieDeTerror #EspecialDeHalloween #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "gbTPu89fEXg",
@@ -294,7 +346,10 @@
     "scheduled_for": "2026-10-26",
     "theme": "halloween",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Sidney Prescott voltou, e você acha que ela aguenta mais um Ghostface?\n\nVer Neve Campbell de volta no papel é o tipo de notícia que dá um frio na espinha, né?\nÉ a certeza de que a franquia Pânico continua viva e pronta para aterrorizar.\n\nComenta aqui: você vai ao cinema conferir ou fica de fora?\n\nVídeo: Paramount Brasil (canal oficial no YouTube)\n\n#Panico #Scream #NeveCampbell #SidneyPrescott #Ghostface #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "tESt0sLknEU",
@@ -313,7 +368,10 @@
     "scheduled_for": "2026-10-28",
     "theme": "animacao",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Você lembra do Buzz prateado? Ou nunca ouviu falar?\n\nÉ um detalhe que muita gente esquece, mas que faz todo sentido pra quem cresceu com os brinquedos da Pixar.\nVer esse lembrete dos 30 anos de Toy Story traz aquela nostalgia boa de tempos atrás.\n\nConta pra gente: você tinha esse Buzz diferente ou o seu era sempre o azul clássico?\n\nVídeo: Walt Disney Studios BR (canal oficial no YouTube)\n\n#ToyStory #BuzzLightyear #Pixar #DisneyTalks #LucianoAmaral #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "N5xoBTnuW1w",
@@ -332,7 +390,10 @@
     "scheduled_for": "2026-10-29",
     "theme": "halloween",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Pennywise assustou você tanto quanto a gente?\n\nAquele trauma de infância que a gente carrega até hoje.\nDerry tá de volta e o medo voltou junto.\n\nQual foi o momento de IT que mais te marcou?\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#IT #Pennywise #StephenKing #HBO #Derry #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "pZBO3kq7Zng",
@@ -351,7 +412,10 @@
     "scheduled_for": "2026-10-30",
     "theme": "halloween",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Qual dublagem de Pennywise assustava mais você?\n\nTer que escolher entre as vozes que deram vida ao palhaço mais temido da franquia é uma dor de cabeça boa pra quem ama IT. Cada interpretação traz um medo diferente, e a gente nunca sabe qual vai tirar o sono primeiro.\n\nComenta aí qual foi a sua favorita.\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#IT #Pennywise #ITBemVindosADerry #HBO #CulturaPop #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "24VK5kL6vIA",
@@ -370,7 +434,10 @@
     "scheduled_for": "2026-10-31",
     "theme": "halloween",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Pennywise gritando \"bip bip\" pra Marge e Richie divide opiniões?\n\nEssa cena é o tipo de coisa que gruda na cabeça e não sai mais.\nAquele som de pato saindo da boca do Palhaço é puro pesadelo.\nQuem já assistiu sabe o quão desconcertante isso foi.\n\nMarca aquele amigo que tava com você nesse momento.\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#It #Pennywise #MorsaDigital #HBO #SérieDeTerror #Palhaço #ItBemVindosADerry",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "eJfkIG6edTc",
@@ -387,7 +454,10 @@
     "kind": "cena",
     "plan_order": 9,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Shrek: você lembra exatamente onde estava quando viu o ogro pela primeira vez?\n\nEssa cena é pura memória coletiva. Não importa o ano, todo mundo tem um lugar e uma época gravados na cabeça pra quando aquele ogro verde apareceu na tela. É o tipo de momento que define uma geração inteira de fãs de animação.\n\nConta aqui nos comentários: em que situação você assistiu a essa estreia?\n\nVídeo: Prime Video Brasil (canal oficial no YouTube)\n\n#Shrek #PrincesaFiona #Animação #ClássicosDaInfância #PrimeVideo #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "3yujJ-nRO_c",
@@ -404,6 +474,218 @@
     "kind": "cena",
     "plan_order": 18,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Qual dublagem você defende: a brasileira ou a original?\n\nShrek é uma das poucas animações em que a versão em português brilha tanto quanto a original.\nÉ impossível não se lembrar de como a dublagem brasileira pegou no osso e criou memórias únicas para o fã.\nEssa escolha de vozes fez o ogro verde virar um clássico absoluto no Brasil.\n\nComenta aí qual foi a primeira frase do Shrek que você nunca mais esqueceu.\n\nVídeo: Prime Video Brasil (canal oficial no YouTube)\n\n#Shrek #DublagemBrasileira #FilmesAnimados #PrimeVideo #MemóriasDeInfância #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
+  },
+  {
+    "video_id": "ToyHbBkiuRk",
+    "title": "A próxima cena é sempre a mais absurda! | Todo Mundo em Pânico | Paramount+ Brasil",
+    "channel": "Paramount+ Brasil",
+    "channel_id": "UCAnCxJ1Weh2pUAKJW0bro0Q",
+    "category": "other",
+    "description": "A cena mais absurda de Todo Mundo em Pânico é sempre a próxima. 💀\n\nE eles estão de volta! #TodoMundoEmPânico6 chega dia 22 de outubro aqui no meu streaming!\n\n#ParamountPlus\n \n\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n*Gostou do vídeo? Assista mais no Paramount Plus!*\nAssine agora em https://www.paramountplus.com ou baixe o app para iOS e Android: 👉 https://smart.link/z36qrfjaimzim\n\n*Siga-nos nas redes sociais para ficar por dentro das novidades:*\nYouTube: Inscreva-se\nhttps://www.youtube.com/@ParamountPlusBR?sub_confirmation=1\nFacebook: Curta nossa página\nhttps://www.facebook.com/ParamountPlusbr\nTwitter: Siga-nos\nhttps://twitter.com/ParamountPlusbr\nInstagram: Acompanhe-nos\nh",
+    "published": "2026-10-02",
+    "youtube_url": "https://www.youtube.com/watch?v=ToyHbBkiuRk",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/ToyHbBkiuRk.mp4",
+    "added_at": "2026-10-07T00:04:32.659003-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 4,
+    "scheduled_for": "2026-10-27",
+    "theme": "halloween",
+    "layout": "vertical",
+    "lang": "pt",
+    "caption": "Todo Mundo em Pânico 6 chega dia 22 de outubro e você tá pronto?\n\nA regra é clara: a próxima cena é sempre a mais absurda.\nÉ o tipo de caos que a gente ama, não dá pra prever o que vem.\nSó tem uma certeza: nada é sério nessa franquia.\n\nComenta aí se você tá ansioso ou se vai rir de nervoso.\n\nVídeo: Paramount+ Brasil (canal oficial no YouTube)\n\n#TodoMundoEmPânico #TodoMundoEmPânico6 #ParamountPlus #Comédia #Halloween #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
+  },
+  {
+    "video_id": "I6CLLfzjZXM",
+    "title": "SATORU GOJO 🤝 QUICO DO CHAVES",
+    "channel": "Netflix Brasil",
+    "channel_id": "UCc1l5mTmAv2GC_PXrBpqyKQ",
+    "category": "series",
+    "description": "Então o Gojo é puramente o Quico de peruca branca exalando a aura de mimado da vila e ninguém me contou!!11!!1111\n\nQuem diria que a Expansão de Domínio: Bola Quadrada era real? 💀\n\nAssista na Netflix: https://www.netflix.com/title/82656757\n\nInscreva-se: https://bit.ly/31ynwtw\n\nSobre a Netflix:\nA Netflix é um dos principais serviços de entretenimento do mundo com um vasto catálogo de séries, filmes, jogos e eventos ao vivo disponíveis em diversos idiomas. Nossos assinantes podem assistir, pausar e voltar a um título quantas vezes quiserem, onde quer que estejam, e alterar o plano a qualquer momento.\n\nSATORU GOJO 🤝 QUICO DO CHAVES\nhttps://www.youtube.com/@NetflixBrasil\n\nApós o incidente em Shib",
+    "published": "2026-08-23",
+    "youtube_url": "https://www.youtube.com/watch?v=I6CLLfzjZXM",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/I6CLLfzjZXM.mp4",
+    "added_at": "2026-10-07T00:07:37.546098-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 19,
+    "layout": "vertical",
+    "lang": "pt",
+    "caption": "Gojo com aura de mimado da vila te pegou de surpresa ou já esperava?\n\nEssa comparação com o Quico do Chaves é brutal.\nParece que o branco da peruca só veio para reforçar o lado \"exagerado\" do personagem.\n\nComenta aí quem mais viu esse lado dele.\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#JujutsuKaisen #SatoruGojo #QuicoDoChaves #Anime #NetflixBrasil #MorsaDigital",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "detalhe sem base: aura de mimado da vila"
+    ]
+  },
+  {
+    "video_id": "2tMXpY_topE",
+    "title": "COMO ESQUECER O JULGAMENTO DO TYRION? | GOT",
+    "channel": "HBO Brasil",
+    "channel_id": "UCX2M7xn-jMmq4KfX25TCTCA",
+    "category": "game_niche",
+    "description": "#GameOfThrones está disponível na HBO Max.",
+    "published": "2026-01-21",
+    "youtube_url": "https://www.youtube.com/watch?v=2tMXpY_topE",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/2tMXpY_topE.mp4",
+    "added_at": "2026-10-07T00:09:09.168219-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 20,
+    "layout": "vertical",
+    "lang": "pt",
+    "caption": "Tyrion ou Cersei, quem você acha que ganha esse embate?\n\nEssa cena é um dos momentos mais tensos da série, onde a inteligência de um colide com a crueldade da outra.\nÉ o tipo de confronto que prende a atenção do início ao fim, sem espaço para distrações.\n\nQual é a sua opinião: a defesa dele foi perfeita ou ele ainda tinha mais a perder?\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#GameOfThrones #TyrionLannister #CerseiLannister #HBO #DramaFantasia #MorsaDigital",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "detalhe sem base: Tyrion ou Cersei, quem você acha que ganha esse embate?",
+      "detalhe sem base: Essa cena é um dos momentos mais tensos da série, onde a inteligência de um colide com a crueldade da outra."
+    ]
+  },
+  {
+    "video_id": "zJE319Ui_pM",
+    "title": "Nem sempre Naruto será seu primeiro anime... qual é o de vocês? 👀",
+    "channel": "Netflix Brasil",
+    "channel_id": "UCc1l5mTmAv2GC_PXrBpqyKQ",
+    "category": "anime_big",
+    "description": "Essa abertura de Sailor Moon 🥹❤️\r\n\r\nAssista na Netflix: https://www.netflix.com\r\n\r\nInscreva-se: https://bit.ly/31ynwtw\r\n\r\nSobre a Netflix:\r\nA Netflix é um dos principais serviços de entretenimento do mundo com um vasto catálogo de séries, filmes, jogos e eventos ao vivo disponíveis em diversos idiomas. Nossos assinantes podem assistir, pausar e voltar a um título quantas vezes quiserem, onde quer que estejam, e alterar o plano a qualquer momento.\r\n\r\nNem sempre Naruto será seu primeiro anime... qual é o de vocês? 👀\r\nhttps://www.youtube.com/@NetflixBrasil",
+    "published": "2026-09-20",
+    "youtube_url": "https://www.youtube.com/watch?v=zJE319Ui_pM",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/zJE319Ui_pM.mp4",
+    "added_at": "2026-10-07T00:11:08.744974-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 21,
+    "layout": "horizontal",
+    "lang": "pt",
+    "caption": "Sailor Moon foi seu primeiro anime ou você já tinha outro favorito?\n\nEssa abertura tem um peso emocional que desmonta qualquer defesa de Naruto.\nÉ impossível não sentir aquele aperto no peito ao ver a Sailor Moon em ação.\n\nComenta aí qual foi o anime que te apresentou ao mundo nerd.\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#SailorMoon #Anime #NetfilxBrazil #CulturaNerd #Animes #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
+  },
+  {
+    "video_id": "7XdML3Rd_xA",
+    "title": "Momentos que deixaram os Illuminati mais humildes 🤪#Shorts",
+    "channel": "Marvel Brasil",
+    "channel_id": "UCItRs-h8YU1wRRfP637614w",
+    "category": "marvel",
+    "description": "#DoutorEstranho no Multiverso da Loucura. Assista no #DisneyPlusBR",
+    "published": "2023-08-03",
+    "youtube_url": "https://www.youtube.com/watch?v=7XdML3Rd_xA",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/7XdML3Rd_xA.mp4",
+    "added_at": "2026-10-07T00:12:40.784209-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 22,
+    "layout": "vertical",
+    "lang": "pt",
+    "caption": "Quem você acha que saiu mais humilde nessa história?\n\nÉ impossível não rir quando o time mais poderoso do MCU encontra limites.\nEsses momentos de vulnerabilidade mostram que nem todo poderoso é intocável.\n\nMarca aquele amigo que sempre acha que os Illuminati vão ganhar de tudo.\n\nVídeo: Marvel Brasil (canal oficial no YouTube)\n\n#DoutorEstranho #MultiversoDaLoucura #Illuminati #Marvel #DisneyPlus #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
+  },
+  {
+    "video_id": "6aak98shoCg",
+    "title": "Sung Jinwoo vs. Baruka | Solo Leveling",
+    "channel": "Crunchyroll Brasil",
+    "channel_id": "UCVc-JLY3Db6-O48y7TS4N7Q",
+    "category": "anime_big",
+    "description": "99% de mim estava do lado de Jinwoo nessa batalha, mas aquele 1% queria ter visto mais do Baruka 🤭\n\nAnime: Solo Leveling 2ª Temporada -Ergam-se das Sombras-\n\nTESTE CRUNCHYROLL DE GRAÇA POR 7 DIAS: https://got.cr/7DayFreeTrialPT\n\n🔸FACEBOOK: https://www.facebook.com/Crunchyroll.pt/\n🔸TWITTER: https://twitter.com/Crunchyroll_pt\n🔸INSTAGRAM: https://www.instagram.com/crunchyroll_PT",
+    "published": "2025-02-18",
+    "youtube_url": "https://www.youtube.com/watch?v=6aak98shoCg",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/6aak98shoCg.mp4",
+    "added_at": "2026-10-07T00:14:10.181663-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 23,
+    "layout": "vertical",
+    "lang": "pt",
+    "caption": "Jinwoo ou Baruka, qual dos dois você joga mais nessa luta?\n\nAquele 1% que torce pelo vilão sempre existe, né?\nGanhar é ótimo, mas ver o Baruka brilhar na batalha\ndeve ter deixado muita gente dividida aqui.\n\nComenta aí: você sentiu falta de mais ação do Baruka?\n\nVídeo: Crunchyroll Brasil (canal oficial no YouTube)\n\n#SoloLeveling #SungJinwoo #Baruka #Anime #Crunchyroll #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
+  },
+  {
+    "video_id": "lSr9dwh4DxM",
+    "title": "POR TRÁS DOS EFEITOS DE THE LAST OF US 🍄",
+    "channel": "HBO Brasil",
+    "channel_id": "UCX2M7xn-jMmq4KfX25TCTCA",
+    "category": "game_big",
+    "description": "São esses detalhes que tornam #TheLastOfUs um verdadeiro espetáculo! 🍄",
+    "published": "2026-04-21",
+    "youtube_url": "https://www.youtube.com/watch?v=lSr9dwh4DxM",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/lSr9dwh4DxM.mp4",
+    "added_at": "2026-10-07T00:15:44.902135-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 24,
+    "layout": "vertical",
+    "lang": "pt",
+    "caption": "The Last of Us: você percebeu esse detalhe nos bastidores?\n\nÉ impressionante ver o nível de cuidado que vai por trás de cada cena.\nEsses detalhes são o que fazem a série ser um verdadeiro espetáculo.\nA produção caprichou demais nos efeitos, né?\n\nComenta aí qual cena te deixou mais impressionado.\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#TheLastOfUs #TLOU #HBO #JoaquinPhoenix #BellaRamsey #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
+  },
+  {
+    "video_id": "_n9gDRR6hKY",
+    "title": "Isso quebrou o coração do Mark 😓💔 #Invencível",
+    "channel": "Prime Video Brasil",
+    "channel_id": "UCuNjvqjTzw9LcD9PVpTVWRA",
+    "category": "series",
+    "description": "",
+    "published": "2026-09-11",
+    "youtube_url": "https://www.youtube.com/watch?v=_n9gDRR6hKY",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/_n9gDRR6hKY.mp4",
+    "added_at": "2026-10-07T00:17:45.704137-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 25,
+    "layout": "vertical",
+    "lang": "pt",
+    "caption": "Mark aguentou tanto, mas isso aqui quebrou o coração dele.\n\nTodo mundo sabia que o peso da responsabilidade era pesado, mas ver ele reagindo assim é insuportável.\nÉ o tipo de momento que fica gravado na memória e tira o chão de qualquer fã da série.\n\nComenta aí: você chorou junto ou ficou com raiva?\n\nVídeo: Prime Video Brasil (canal oficial no YouTube)\n\n#Invencível #MarkGrayson #Omni-Man #PrimeVideo #Animação #MorsaDigital",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "1ª linha não é pergunta"
+    ]
+  },
+  {
+    "video_id": "uvzE7vLnxHo",
+    "title": "Avatar: O Último Mestre do Ar recria a abertura clássica",
+    "channel": "Netflix Brasil",
+    "channel_id": "UCc1l5mTmAv2GC_PXrBpqyKQ",
+    "category": "series",
+    "description": "Sim, eu peguei a referência. A 2ª temporada de Avatar: O Último Mestre do Ar está disponível.\n\nAssista na Netflix: https://www.netflix.com/title/81023596\n\nInscreva-se: https://bit.ly/31ynwtw\n\nSobre a Netflix:\nA Netflix é um dos principais serviços de entretenimento do mundo com um vasto catálogo de séries, filmes, jogos e eventos ao vivo disponíveis em diversos idiomas. Nossos assinantes podem assistir, pausar e voltar a um título quantas vezes quiserem, onde quer que estejam, e alterar o plano a qualquer momento.\n\nAvatar: O Último Mestre do Ar recria a abertura clássica\nhttps://www.youtube.com/@NetflixBrasil\n\nPara acabar com a guerra, Aang precisa dominar a dobra de terra. Mas, no Reino da ",
+    "published": "2026-06-25",
+    "youtube_url": "https://www.youtube.com/watch?v=uvzE7vLnxHo",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/uvzE7vLnxHo.mp4",
+    "added_at": "2026-10-07T00:20:06.127886-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 26,
+    "layout": "vertical",
+    "lang": "pt",
+    "caption": "Aang dominando a dobra de terra te fez relembrar a abertura clássica?\n\nVer o universo de Avatar: O Último Mestre do Ar ganhar vida nessa recriação traz aquela nostalgia pura de quem cresceu com a animação. É impossível não conectar a energia dos personagens com os traços que marcaram nossa infância.\n\nComenta aí qual cena da série mais te pegou pela nostalgia.\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#AvatarOUltimoMestreDoAr #Aang #NetflixBrasil #CulturaNerd #Nostalgia #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
+  },
+  {
+    "video_id": "5ULbTJ2LnB4",
+    "title": "Ativando sua nostalgia em 3, 2, 1... 🥹 #Shrek2",
+    "channel": "Prime Video Brasil",
+    "channel_id": "UCuNjvqjTzw9LcD9PVpTVWRA",
+    "category": "series",
+    "description": "Inscreva-se no canal do YouTube: https://bit.ly/35FaAo8\n\nSobre o #PrimeVideo: Assine Prime Video para assistir a filmes e séries populares, incluindo Amazon Originals premiados. Além de um catálogo cheio de títulos, membros Prime têm acesso a benefícios, como frete GRÁTIS e rápido em milhares de produtos na Amazon.com.br, músicas sem anúncios na Amazon Music, Prime Gaming na Twitch e e-books e revistas no Prime Reading. Tudo na mesma assinatura, por apenas R$ 14,90/mês. Teste Grátis por 30 dias.\n\nSiga nossas redes sociais:\n\nInstagram: https://www.instagram.com/primevideobr/\n\nFacebook: https://www.facebook.com/PrimeVideoBR/\n\nTwitter: https://twitter.com/PrimeVideoBR\n\nTikTok: https://www.tikto",
+    "published": "2026-07-31",
+    "youtube_url": "https://www.youtube.com/watch?v=5ULbTJ2LnB4",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/5ULbTJ2LnB4.mp4",
+    "added_at": "2026-10-07T00:22:18.027733-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 27,
+    "layout": "vertical",
+    "lang": "pt",
+    "caption": "Shrek 2: essa cena te tira do sério ou é pura nostalgia?\n\nQuem cresceu com o ogro mais amado dos cinemas sabe que esse filme foi um divisor de águas.\nTem algo no jeito dele de brigar com o mundo (e de se render ao amor) que nunca envelhece.\nÉ aquele tipo de momento que a gente guarda no coração pra sempre.\n\nComenta aí: qual a sua cena favorita da trilogia?\n\nVídeo: Prime Video Brasil (canal oficial no YouTube)\n\n#Shrek #Shrek2 #Ogro #FilmesDeAnimação #Nostalgia #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   }
 ]

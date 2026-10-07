@@ -13,7 +13,10 @@
     "posted": false,
     "kind": "fresh",
     "scheduled_for": "2026-10-12",
-    "theme": ""
+    "theme": "",
+    "caption": "VisionQuest chegou e a tensão do final dessa trilogia tá no ar\n\nA Disney+ liberou o trailer dublado e a promessa é de um desfecho intenso para essa família. É o encerramento de uma jornada épica que vem construindo hype desde o início.\n\nVocê já decidiu se vai maratonar tudo ou assistir apenas o último episódio?\n\nVídeo: Disney+ Brasil (canal oficial no YouTube)\n\n#VisionQuest #DisneyPlus #TrailerOficial #Dublado #Marvel #FinalDeSérie",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "4GYtota67go",
@@ -43,7 +46,10 @@
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/RPBUMysAsro.mp4",
     "added_at": "2026-10-06T18:39:29.126445-03:00",
     "posted": false,
-    "kind": "fresh"
+    "kind": "fresh",
+    "caption": "Steve Rogers virando o Capitão América é o tipo de momento que trava a respiração de qualquer fã do MCU.\n\nEssa cena de Capitão America: O Primeiro Vingador marca o exato instante em que o recruta frágil ganha força e vira o símbolo que conhecemos hoje. É o nascimento de um dos heróis mais queridos da Marvel, aquele que carrega o escudo e a responsabilidade de ser o primeiro Vingador.\n\nVocê acha que essa transformação ainda tem o mesmo peso emocional que tinha quando o filme saiu, ou já virou só nostalgia?\n\nVídeo: Marvel Brasil (canal oficial no YouTube)\n\n#CapitaoAmerica #SteveRogers #Marvel #MCU #TheFirstAvenger #CenasIcônicas",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "jouBFFKteGY",
@@ -59,7 +65,12 @@
     "posted": false,
     "kind": "fresh",
     "scheduled_for": "2026-12-23",
-    "theme": "natal"
+    "theme": "natal",
+    "caption": "Ebenezer Scrooge ganhou vida nas mãos do Johnny Depp e eu tô sem palavras.\n\nA Paramount confirmou que o clássico dos três espíritos natalinos chega aos cinemas brasileiros no dia 12 de novembro. Ver aquele elenco icônico interpretando essa história é o tipo de hype que só quem ama cinema entende.\n\nVai ser uma adaptação fiel ou uma surpresa total?\n\nVídeo: Paramount Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)"
+    ]
   },
   {
     "video_id": "0fmcmV3SQWU",
@@ -75,7 +86,12 @@
     "posted": false,
     "kind": "fresh",
     "scheduled_for": "2026-10-24",
-    "theme": "halloween"
+    "theme": "halloween",
+    "caption": "Fortnite: Pesadelos 2026 e eu não tô pronto pra esse nível de tensão.\n\nO special de Halloween da Morsa tava chegando, mas ver esse trailer cinematográfico foi outro choque. São apenas 2 dias para o Fortnitemares invadir o Battle Royale oficialmente no dia 1º de outubro. A atmosfera que o PlayStation Brasil montou pra essa data é de dar arrepios mesmo.\n\nVai conseguir sobreviver aos próximos dois dias sem pular do mapa de medo?\n\nVídeo: PlayStation Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)"
+    ]
   },
   {
     "video_id": "0VxoWT0MyLE",
@@ -92,7 +108,10 @@
     "kind": "acervo",
     "plan_order": 0,
     "scheduled_for": "2026-10-09",
-    "theme": "gta"
+    "theme": "gta",
+    "caption": "GTA III é aquele clássico que mudou o jogo e, ver esse trailer de 10 anos depois, bate até uma nostalgia boa.\n\nA Rockstar adaptou o mundo aberto original para telas de toque, melhorando texturas e adicionando recursos como replay de missões e autosave. É a versão definitiva para quem quer jogar o início da era moderna da franquia no celular.\n\nEsse título é a ponte perfeita pra entender por que a gente tava tão ansioso pelo próximo capítulo. Qual foi a sua primeira missão favorita em Liberty City?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#GTA3 #GrandTheftAutoIII #RockstarGames #LibertyCity #GTA6 #Nostalgia",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "f_VBXRZuHTc",
@@ -109,7 +128,12 @@
     "kind": "acervo",
     "plan_order": 1,
     "scheduled_for": "2026-10-13",
-    "theme": "gta"
+    "theme": "gta",
+    "caption": "Vice City. Sim, aquele Vice City.\n\nVale a pena rever esse vídeo de aniversário que celebra a década do clássico e o lançamento da versão mobile. É uma homenagem pura àqueles anos 80 retrô que marcaram a história dos games.\n\nComo a Morsa tá de contagem regressiva pro GTA VI, relembra: qual foi a primeira vez que você colocou a mão nesse jogo?\n\nVídeo: Rockstar Games (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)"
+    ]
   },
   {
     "video_id": "M80K51DosFo",
@@ -126,7 +150,12 @@
     "kind": "acervo",
     "plan_order": 2,
     "scheduled_for": "2026-10-16",
-    "theme": "gta"
+    "theme": "gta",
+    "caption": "GTA IV, aquele trailer que mudou pra sempre como a gente via o mundo de Liberty City.\n\nEm 2007, a Rockstar apresentou o jogo que consagrou o PS3 e o Xbox 360, trazendo uma narrativa densa e um protagonista que fugia do estereótipo de herói clássico. Foi a base sólida que construiu a expectativa gigante que temos até hoje.\n\nNessa contagem regressiva pra GTA VI, qual foi a primeira coisa que você lembrou ao rever esse vídeo?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#GTAVI #GTA4 #GrandTheftAuto #RockstarGames #LibertyCity #GTACommunity",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "detalhe sem base: Em 2007, a Rockstar apresentou o jogo"
+    ]
   },
   {
     "video_id": "K8BgHgL_pr8",
@@ -143,7 +172,12 @@
     "kind": "acervo",
     "plan_order": 3,
     "scheduled_for": "2026-10-18",
-    "theme": "halloween"
+    "theme": "halloween",
+    "caption": "IT: Bem-Vindos a Derry não é só mais um filme, é uma volta ao pesadelo que a gente jurava que tinha superado.\n\nA série volta para o horror de Derry com uma intensidade que só a HBO Max entrega nesse especial de Halloween. O clima de tensão e a promessa de correr pela vida deixam qualquer fã da franquia com a adrenalina lá em cima.\n\nQual cena do trailer te deu mais arrepios?\n\nVídeo: HBO Max Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)"
+    ]
   },
   {
     "video_id": "W--kUNMg1-E",
@@ -160,7 +194,13 @@
     "kind": "acervo",
     "plan_order": 4,
     "scheduled_for": "2026-10-19",
-    "theme": "halloween"
+    "theme": "halloween",
+    "caption": "Until Dawn: Noite de Terror | Trailer Oficial Dublado\n\nO que você achou?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 128"
+    ]
   },
   {
     "video_id": "nC8b6tgMfMU",
@@ -177,7 +217,12 @@
     "kind": "acervo",
     "plan_order": 6,
     "scheduled_for": "2026-10-21",
-    "theme": "halloween"
+    "theme": "halloween",
+    "caption": "Sorria 2, a maldição do sorriso voltou e com força total.\n\nO hype é real, especialmente agora que já passamos do lançamento nos cinemas. É o tipo de terror psicológico que gruda na cabeça e faz você olhar torto para o sorriso das pessoas.\n\nQual cena específica do filme te assustou mais ou qual parte você acha que todo mundo tá exagerando?\n\nVídeo: Paramount Brasil (canal oficial no YouTube)\n\n#Sorria2 #Smile2 #Terror #Halloween #MorsaDigital #ParamountBrasil",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "detalhe sem base: já passamos do lançamento nos cinemas"
+    ]
   },
   {
     "video_id": "IxTYXVyNOfk",
@@ -194,7 +239,13 @@
     "kind": "acervo",
     "plan_order": 7,
     "scheduled_for": "2026-10-22",
-    "theme": "halloween"
+    "theme": "halloween",
+    "caption": "Alien: Earth | Trailer Oficial Dublado | Disney+\n\nO que você achou?\n\nVídeo: Disney+ Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 117"
+    ]
   },
   {
     "video_id": "TTwbsctteuw",
@@ -211,7 +262,13 @@
     "kind": "acervo",
     "plan_order": 9,
     "scheduled_for": "2026-10-25",
-    "theme": "halloween"
+    "theme": "halloween",
+    "caption": "Premonição 6: Laços de Sangue l Trailer Oficial\n\nO que você achou?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 130"
+    ]
   },
   {
     "video_id": "0JZ8WGVSrwM",
@@ -228,7 +285,13 @@
     "kind": "acervo",
     "plan_order": 10,
     "scheduled_for": "2026-10-26",
-    "theme": "halloween"
+    "theme": "halloween",
+    "caption": "A FREIRA 2 | TRAILER OFICIAL\n\nO que você achou?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 111"
+    ]
   },
   {
     "video_id": "jqVGSIIwLi0",
@@ -245,7 +308,12 @@
     "kind": "acervo",
     "plan_order": 12,
     "scheduled_for": "2026-10-28",
-    "theme": "halloween"
+    "theme": "halloween",
+    "caption": "OS FANTASMAS AINDA SE DIVERTEM: BEETLEJUICE BEETLEJUICE l Trailer Oficial #2\n\nO que você achou?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "1 hashtags (esperado 4 a 8)"
+    ]
   },
   {
     "video_id": "GqR2FG3G810",
@@ -262,7 +330,13 @@
     "kind": "acervo",
     "plan_order": 13,
     "scheduled_for": "2026-10-29",
-    "theme": "halloween"
+    "theme": "halloween",
+    "caption": "Stranger Things 5 | Trailer - Volume 2 | Netflix\n\nO que você achou?\n\nVídeo: Netflix Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 117"
+    ]
   },
   {
     "video_id": "n0sq-r0mBXQ",
@@ -279,7 +353,13 @@
     "kind": "acervo",
     "plan_order": 15,
     "scheduled_for": "2026-10-31",
-    "theme": "halloween"
+    "theme": "halloween",
+    "caption": "Invocação do Mal: O Último Ritual l Trailer Oficial Dublado\n\nO que você achou?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 142"
+    ]
   },
   {
     "video_id": "M-WFfF2ETgk",
@@ -296,7 +376,13 @@
     "kind": "acervo",
     "plan_order": 16,
     "scheduled_for": "2026-11-01",
-    "theme": "halloween"
+    "theme": "halloween",
+    "caption": "Resident Evil | Trailer Oficial | Dublado\n\nO que você achou?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 116"
+    ]
   },
   {
     "video_id": "15DaYsflKEo",
@@ -312,7 +398,13 @@
     "posted": false,
     "kind": "fresh",
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Diablo IV - Trailer de Gameplay da Temporada do Legado Infernal | PS5\n\nO que você achou?\n\nVídeo: PlayStation Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 142"
+    ]
   },
   {
     "video_id": "8uCOd6x5bIE",
@@ -328,7 +420,13 @@
     "posted": false,
     "kind": "fresh",
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Fortnite: Pesadelos 2026 | Trailer Cinematográfico | PS5 & PS4\n\nO que você achou?\n\nVídeo: PlayStation Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 135"
+    ]
   },
   {
     "video_id": "D71cBUeAL58",
@@ -347,7 +445,13 @@
     "scheduled_for": "2026-10-20",
     "theme": "gta",
     "layout": "horizontal",
-    "lang": "en"
+    "lang": "en",
+    "caption": "Grand Theft Auto: The Trilogy, The Definitive Edition Trailer\n\nO que você achou?\n\nVídeo: Rockstar Games (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 130"
+    ]
   },
   {
     "video_id": "QkkoHAzjnUs",
@@ -366,7 +470,13 @@
     "scheduled_for": "2026-10-23",
     "theme": "gta",
     "layout": "horizontal",
-    "lang": "en"
+    "lang": "en",
+    "caption": "Grand Theft Auto V Trailer\n\nO que você achou?\n\nVídeo: Rockstar Games (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 95"
+    ]
   },
   {
     "video_id": "eaW0tYpxyp0",
@@ -385,7 +495,13 @@
     "scheduled_for": "2026-10-27",
     "theme": "gta",
     "layout": "horizontal",
-    "lang": "en"
+    "lang": "en",
+    "caption": "Red Dead Redemption 2: Official Trailer #3\n\nO que você achou?\n\nVídeo: Rockstar Games (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "1 hashtags (esperado 4 a 8)",
+      "tamanho 111"
+    ]
   },
   {
     "video_id": "UDd3pTE8UsQ",
@@ -404,7 +520,13 @@
     "scheduled_for": "2026-10-30",
     "theme": "gta",
     "layout": "horizontal",
-    "lang": "en"
+    "lang": "en",
+    "caption": "Grand Theft Auto Online, Heists Trailer\n\nO que você achou?\n\nVídeo: Rockstar Games (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 108"
+    ]
   },
   {
     "video_id": "hvoD7ehZPcM",
@@ -423,7 +545,13 @@
     "scheduled_for": "2026-11-03",
     "theme": "gta",
     "layout": "horizontal",
-    "lang": "en"
+    "lang": "en",
+    "caption": "Grand Theft Auto V: The Official Trailer\n\nO que você achou?\n\nVídeo: Rockstar Games (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 109"
+    ]
   },
   {
     "video_id": "gmA6MrX81z4",
@@ -442,7 +570,13 @@
     "scheduled_for": "2026-11-06",
     "theme": "gta",
     "layout": "horizontal",
-    "lang": "en"
+    "lang": "en",
+    "caption": "Red Dead Redemption 2 Trailer\n\nO que você achou?\n\nVídeo: Rockstar Games (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 98"
+    ]
   },
   {
     "video_id": "3DBrG2YjqQA",
@@ -461,7 +595,13 @@
     "scheduled_for": "2026-11-10",
     "theme": "gta",
     "layout": "horizontal",
-    "lang": "en"
+    "lang": "en",
+    "caption": "Grand Theft Auto V: PlayStation 4, Xbox One & PC Announcement Trailer\n\nO que você achou?\n\nVídeo: Rockstar Games (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 138"
+    ]
   },
   {
     "video_id": "rsQEor4y2hg",
@@ -478,7 +618,13 @@
     "kind": "acervo",
     "plan_order": 20,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "The Batman - Trailer Principal\n\nO que você achou?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 113"
+    ]
   },
   {
     "video_id": "ZHMY6nvZAqs",
@@ -495,7 +641,14 @@
     "kind": "acervo",
     "plan_order": 21,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Homem-Aranha: Um Novo Dia - Novo Trailer (Dublado)\n\nO que você achou?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 125",
+      "trata vídeo antigo como novidade"
+    ]
   },
   {
     "video_id": "JsfSvTvydEY",
@@ -512,6 +665,243 @@
     "kind": "acervo",
     "plan_order": 22,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "ONE PIECE: A Série - Temporada 2 | Trailer final | Netflix\n\nO que você achou?\n\nVídeo: Netflix Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 127"
+    ]
+  },
+  {
+    "video_id": "xjbxG5VEo4M",
+    "title": "Sonic 3: O Filme | Trailer Oficial | DUB | Paramount Pictures Brasil",
+    "channel": "Paramount Brasil",
+    "channel_id": "UCgqD3GdUEfupsdY1kmFLIrw",
+    "category": "game_big",
+    "description": "Preparados? HORA DO SHOW! 👟💨 \nConfira o novo trailer de #Sonic3OFilme! Exclusivamente nos cinemas em 25 de dezembro.🎄🎬\n\nInscreva-se: http://bit.ly/Paramount_Inscreva\r\n\r\nConecte-se com a Paramount Pictures Brasil online:\r\nWEBSITE: http://bit.ly/siteparamount\r\nFACEBOOK: http://bit.ly/faceparamount\r\nTWITTER: http://bit.ly/twitterparamount\r\n\r\nA Paramount Pictures há mais de 100 anos leva entretenimento para o público de todo o mundo através da Paramount Pictures Internacional (PPI). Mercados PPI distribuem os filmes globalmente, possibilitando que espectadores dos quatro cantos do planeta se encantem com sucessos das telonas como: O Poderoso Chefão, Star Trek, Missão Impossível, Atividade Parano",
+    "published": "2024-11-25",
+    "youtube_url": "https://www.youtube.com/watch?v=xjbxG5VEo4M",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/xjbxG5VEo4M.mp4",
+    "added_at": "2026-10-07T00:24:24.555611-03:00",
+    "posted": false,
+    "kind": "acervo",
+    "plan_order": 23,
+    "layout": "horizontal",
+    "lang": "pt",
+    "caption": "Sonic 3: O Filme | Trailer Oficial | DUB | Paramount Pictures Brasil\n\nO que você achou?\n\nVídeo: Paramount Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 139"
+    ]
+  },
+  {
+    "video_id": "dEbe0rS4Z2A",
+    "title": "Deadpool & Wolverine | Trailer 2 Oficial Dublado",
+    "channel": "Marvel Brasil",
+    "channel_id": "UCItRs-h8YU1wRRfP637614w",
+    "category": "marvel",
+    "description": "A dupla destinada a nos salvar, agora em bom português. \n\n#DeadpoolEWolverine, em 25 de julho nos cinemas.",
+    "published": "2024-05-20",
+    "youtube_url": "https://www.youtube.com/watch?v=dEbe0rS4Z2A",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/dEbe0rS4Z2A.mp4",
+    "added_at": "2026-10-07T00:27:23.347466-03:00",
+    "posted": false,
+    "kind": "acervo",
+    "plan_order": 24,
+    "layout": "horizontal",
+    "lang": "pt",
+    "caption": "Deadpool & Wolverine | Trailer 2 Oficial Dublado\n\nO que você achou?\n\nVídeo: Marvel Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 116"
+    ]
+  },
+  {
+    "video_id": "14qzQDMcTqM",
+    "title": "Superman l Trailer Teaser Oficial Dublado",
+    "channel": "Warner Bros. Pictures Brasil",
+    "channel_id": "UCEOVI4AmQE01FDKNFunkV2w",
+    "category": "dc",
+    "description": "Em 10 de julho, começa.\nSuperman - Somente nos Cinemas em 2025. Assista ao trailer teaser oficial dublado. #SupermanFilme #FilmadoParaIMAX\n\nInscreva-se para receber atualizações exclusivas para fãs sobre tudo da DC Studios em DCStudios.com\nSuperman, o primeiro longa-metragem da DC Studios a chegar às telonas, deve estrear nos cinemas de todo o mundo neste verão, distribuído pela Warner Bros. Pictures. Em seu estilo característico, James Gunn assume a nova história do super-herói original, no recém-imaginado universo DC, com uma combinação singular de ação épica, humor e coração, um Superman movido pela compaixão e por uma crença inerente na bondade da humanidade.  \n\nOs CEOs da DC Studios, Pe",
+    "published": "2024-12-23",
+    "youtube_url": "https://www.youtube.com/watch?v=14qzQDMcTqM",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/14qzQDMcTqM.mp4",
+    "added_at": "2026-10-07T00:30:36.024262-03:00",
+    "posted": false,
+    "kind": "acervo",
+    "plan_order": 25,
+    "layout": "horizontal",
+    "lang": "pt",
+    "caption": "Superman l Trailer Teaser Oficial Dublado\n\nO que você achou?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 124"
+    ]
+  },
+  {
+    "video_id": "KN921po7cEE",
+    "title": "Demon Slayer: Kimetsu no Yaiba Castelo Infinito | Trailer | Em breve nos cinemas",
+    "channel": "Sony Pictures Brasil",
+    "channel_id": "UC9NXpIA01HVRhYgcEbs80Nw",
+    "category": "anime_big",
+    "description": "O fim está próximo. A Crunchyroll está animada por trazer Demon Slayer: Kimetsu no Yaiba Castelo Infinito para os cinemas em uma trilogia épica! ⚔️\n\nCurta a Sony Pictures Brasil no Facebook: \r\nhttp://www.facebook.com/SonyPicturesBrasil \r\n\r\nSiga a Sony Pictures Brasil no Twitter:\r\nhttp://twitter.com/sonypicturesbr\r\n\r\nSiga a Sony Pictures Brasil no Instagram:\r\nhttp://instagram.com/sonypicturesbr",
+    "published": "2024-07-17",
+    "youtube_url": "https://www.youtube.com/watch?v=KN921po7cEE",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/KN921po7cEE.mp4",
+    "added_at": "2026-10-07T00:33:40.373383-03:00",
+    "posted": false,
+    "kind": "acervo",
+    "plan_order": 26,
+    "layout": "horizontal",
+    "lang": "pt",
+    "caption": "Demon Slayer: Kimetsu no Yaiba Castelo Infinito | Trailer | Em breve nos cinemas\n\nO que você achou?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "trata vídeo antigo como novidade"
+    ]
+  },
+  {
+    "video_id": "6z3MisfGttY",
+    "title": "Remake da trilogia God of War - Teaser de anúncio | PS5",
+    "channel": "PlayStation Brasil",
+    "channel_id": "UC6i4mzH3OPrZV0p64zoz-Ww",
+    "category": "game_big",
+    "description": "Remake da trilogia God of War em desenvolvimento.\n\n#ps5 #ps5games #stateofplay #GodofWar #GodofWargreektrilogy #Godofwarremake #GoWremake",
+    "published": "2026-02-13",
+    "youtube_url": "https://www.youtube.com/watch?v=6z3MisfGttY",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/6z3MisfGttY.mp4",
+    "added_at": "2026-10-07T00:37:13.730273-03:00",
+    "posted": false,
+    "kind": "acervo",
+    "plan_order": 27,
+    "layout": "horizontal",
+    "lang": "pt",
+    "caption": "Remake da trilogia God of War - Teaser de anúncio | PS5\n\nO que você achou?\n\nVídeo: PlayStation Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 128"
+    ]
+  },
+  {
+    "video_id": "LZBlXkDvhh4",
+    "title": "Homem-Aranha: Através do AranhaVerso | Trailer Oficial Dublado",
+    "channel": "Sony Pictures Brasil",
+    "channel_id": "UC9NXpIA01HVRhYgcEbs80Nw",
+    "category": "marvel",
+    "description": "Curta a Sony Pictures Brasil no Facebook: \nhttps://www.facebook.com/SonyPicturesBrasil\n\nSiga a Sony Pictures Brasil no Twitter:\nhttps://twitter.com/sonypicturesbr\n\nSiga a Sony Pictures Brasil no Instagram:\nhttps://instagram.com/sonypicturesbr\n\nA guerra dos aranhas está chegando. Homem-Aranha: Através do #AranhaVerso estreia em 01 de junho exclusivamente nos cinemas. Assista ao novo trailer agora.",
+    "published": "2023-04-04",
+    "youtube_url": "https://www.youtube.com/watch?v=LZBlXkDvhh4",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/LZBlXkDvhh4.mp4",
+    "added_at": "2026-10-07T00:40:25.016576-03:00",
+    "posted": false,
+    "kind": "acervo",
+    "plan_order": 28,
+    "layout": "horizontal",
+    "lang": "pt",
+    "caption": "Homem-Aranha: Através do AranhaVerso | Trailer Oficial Dublado\n\nO que você achou?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 137"
+    ]
+  },
+  {
+    "video_id": "CyYffSLpWqM",
+    "title": "Supergirl l Teaser Trailer Oficial",
+    "channel": "Warner Bros. Pictures Brasil",
+    "channel_id": "UCEOVI4AmQE01FDKNFunkV2w",
+    "category": "dc",
+    "description": "Olhe Lá. #SupergirlFilme - 25 de junho, somente nos cinemas. #FilmadoParaIMAX\n\nSupergirl, o novo longa-metragem da DC Studios a chegar às telonas com distribuição da Warner Bros. Pictures, vai estar em exibição nos cinemas do mundo todo nas férias de junho e julho, estrelado por Milly Alcock no duplo papel de Supergirl e Kara Zor-El. Craig Gillespie dirige o filme a partir do roteiro de Ana Nogueira.\n\nQuando um adversário tão inesperado quanto implacável parece muito próximo de ganhar uma perigosa batalha, Kara Zor-El, também conhecida como Supergirl, não sem muita relutância, faz uma parceria improvável em uma épica jornada interestelar de vingança e justiça.\n\nAo lado de Milly Alcock, coest",
+    "published": "2025-12-11",
+    "youtube_url": "https://www.youtube.com/watch?v=CyYffSLpWqM",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/CyYffSLpWqM.mp4",
+    "added_at": "2026-10-07T00:43:31.176716-03:00",
+    "posted": false,
+    "kind": "acervo",
+    "plan_order": 29,
+    "layout": "horizontal",
+    "lang": "pt",
+    "caption": "Supergirl l Teaser Trailer Oficial\n\nO que você achou?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 117"
+    ]
+  },
+  {
+    "video_id": "Ue2I5RZQRn0",
+    "title": "CHAINSAW MAN: O FILME - ARCO DA REZE - NOVO TRAILER (Dublado)",
+    "channel": "Sony Pictures Brasil",
+    "channel_id": "UC9NXpIA01HVRhYgcEbs80Nw",
+    "category": "anime_big",
+    "description": "Todos querem o coração dele.\n\nPela primeira vez, assista Chainsaw Man – O Filme: Arco da Reze exclusivamente nos cinemas em 23 de outubro. Assista ao trailer agora. \n\n#ChainsawManFilme 🔥",
+    "published": "2025-09-10",
+    "youtube_url": "https://www.youtube.com/watch?v=Ue2I5RZQRn0",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/Ue2I5RZQRn0.mp4",
+    "added_at": "2026-10-07T00:46:04.363455-03:00",
+    "posted": false,
+    "kind": "acervo",
+    "plan_order": 30,
+    "layout": "horizontal",
+    "lang": "pt",
+    "caption": "CHAINSAW MAN: O FILME - ARCO DA REZE - NOVO TRAILER (Dublado)\n\nO que você achou?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 136",
+      "trata vídeo antigo como novidade"
+    ]
+  },
+  {
+    "video_id": "KKwTC5RHU74",
+    "title": "Mortal Kombat 2 l Trailer Oficial Dublado #2",
+    "channel": "Warner Bros. Pictures Brasil",
+    "channel_id": "UCEOVI4AmQE01FDKNFunkV2w",
+    "category": "game_big",
+    "description": "A espera está quase acabando! Assista agora ao trailer dublado de #MortalKombat2Filme - 7 de maio, somente nos cinemas. #FilmadoParaIMAX\n\nA New Line Cinema apresenta a mais nova e aguardada produção da franquia blockbuster de videogame, Mortal Kombat 2, em toda a sua gloriosa brutalidade. Desta vez, os campões favoritos dos fãs – agora acompanhados pelo próprio Johnny Cage – são colocados uns contra os outros numa sangrenta e derradeira batalha, sem regras ou limites, para derrotar o sombrio governo de Shao Kahn que ameaça a própria existência do Plano Terreno e seus defensores. \n\nKarl Urban estrela Mortal Kombat II como Johnny Cage, ao lado de Adeline Rudolph, Jessica McNamee, Josh Lawson, ",
+    "published": "2026-02-25",
+    "youtube_url": "https://www.youtube.com/watch?v=KKwTC5RHU74",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/KKwTC5RHU74.mp4",
+    "added_at": "2026-10-07T00:49:07.774002-03:00",
+    "posted": false,
+    "kind": "acervo",
+    "plan_order": 31,
+    "layout": "horizontal",
+    "lang": "pt",
+    "caption": "Mortal Kombat 2 l Trailer Oficial Dublado #2\n\nO que você achou?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "1 hashtags (esperado 4 a 8)",
+      "tamanho 127"
+    ]
+  },
+  {
+    "video_id": "UvNnqWLruXA",
+    "title": "Thor: Ragnarok - Trailer Oficial | HD",
+    "channel": "Marvel Brasil",
+    "channel_id": "UCItRs-h8YU1wRRfP637614w",
+    "category": "marvel",
+    "description": "Vê o novo trailer OFICIAL de “Thor: Ragnarok”. Thor é aprisionado no outro lado do universo sem o seu poderoso martelo e encontra-se numa corrida contra o tempo para regressar a Asgard e travar o Ragnarok – a destruição do seu planeta natal e o fim da civilização Asgardiana – às mãos de uma nova e todo-poderosa ameaça, a implacável Hela. Mas, primeiro, terá de sobreviver a um mortal confronto de gladiadores que irá opô-lo a um antigo aliado e Vingador – o Incrível Hulk! \n\nSegue-nos também no Facebook em https://www.facebook.com/MarvelPT",
+    "published": "2017-07-23",
+    "youtube_url": "https://www.youtube.com/watch?v=UvNnqWLruXA",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/UvNnqWLruXA.mp4",
+    "added_at": "2026-10-07T00:52:18.138524-03:00",
+    "posted": false,
+    "kind": "acervo",
+    "plan_order": 32,
+    "layout": "horizontal",
+    "lang": "pt",
+    "caption": "Thor: Ragnarok - Trailer Oficial | HD\n\nO que você achou?\n\nVídeo: Marvel Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 4 a 8)",
+      "tamanho 105"
+    ]
   }
 ]
