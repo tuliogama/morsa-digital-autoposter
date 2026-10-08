@@ -22,6 +22,7 @@
     "metrics": {}
   },
   {
+<<<<<<< Updated upstream
     "media_id": "18070229846498277",
     "platform": "instagram_reel",
     "title": "O ANO ERA 2016 E VOCÊ ASSISTIA A BATALHA DOS BASTARDOS! | GOT",
@@ -30,6 +31,16 @@
     "image_url": "",
     "caption_preview": "A Batalha dos Bastardos ainda te dá arrepios ou já ficou só na memória?\n\nFalar dessa cena sem sentir um frio na barriga é impossível.\nÉ o tipo de confronto que define a saga e fica gravado na cabeça p",
     "published_at": "2026-10-08T16:59:50.394557+00:00",
+=======
+    "media_id": "18408754930094737",
+    "platform": "instagram",
+    "title": "GTA 6 Screenshots (October 8, 2026)",
+    "source": "IGN Brasil",
+    "url": "https://br.ign.com/grand-theft-auto-vi/156722/gta-6-screenshots-october-8-2026",
+    "image_url": "https://raw.githubusercontent.com/tuliogama/morsa-digital-autoposter/main/images/post_1791478853.jpg",
+    "caption_preview": "GTA 6 chegou com a primeira leva de screenshots e a cidade parece ainda mais viva que nunca.\n\nOs frames revelam um skyline noturno cheio de neon, ruas molhadas que refletem o caos urbano e veículos qu",
+    "published_at": "2026-10-08T17:01:29.312255+00:00",
+>>>>>>> Stashed changes
     "metrics": {}
   }
 ]
