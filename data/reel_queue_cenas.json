@@ -129,14 +129,16 @@
     "youtube_url": "https://www.youtube.com/watch?v=XqlghJoHds0",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/XqlghJoHds0.mp4",
     "added_at": "2026-10-06T22:17:30.410679-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 2,
     "layout": "vertical",
     "lang": "pt",
     "caption": "A Batalha dos Bastardos ainda te dá arrepios ou já ficou só na memória?\n\nFalar dessa cena sem sentir um frio na barriga é impossível.\nÉ o tipo de confronto que define a saga e fica gravado na cabeça pra sempre.\n\nComenta aí: qual foi o momento que mais te pegou?\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#GameOfThrones #BatalhaDosBastardos #JonSnow #SansaStark #HBO #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-08T13:59:50.392585-03:00",
+    "media_id": "18070229846498277"
   },
   {
     "video_id": "9JX-0es-AXc",
