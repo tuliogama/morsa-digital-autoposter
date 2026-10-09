@@ -830,7 +830,7 @@ def publish() -> int:
     # Mesmo vídeo e legenda no TikTok (só se a conta estiver ligada via Zernio).
     # Falha aqui nunca derruba o que já saiu no Instagram.
     from publishers import tiktok
-    if tiktok.enabled():
+    if tiktok.enabled() and not item.get("tiktok_id"):
         try:
             tk = tiktok.post_video(item["asset_url"], caption)
             item.update(tiktok_id=tk["id"], tiktok_status=tk["status"], tiktok_url=tk["url"])
