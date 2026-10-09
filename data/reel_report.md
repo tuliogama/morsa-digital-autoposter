@@ -1,24 +1,8 @@
-# Fila de reels @morsadigital — 09/10/2026 10:26 BRT
+# Fila de reels @morsadigital — 09/10/2026 19:31 BRT
 
 ## cenas — a partir das 11h
 
-98 na fila | legendas ok: 39 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 09/10 — Naruto sofre por Sasuke!
-Netflix Brasil · vertical · pt · legenda: ok
-
-```
-Naruto ainda é o rei do sofrimento ou você tá cansado?
-
-Essa dor de Sasuke que não acaba nunca é o que mantém a gente preso na tela.
-Aquele amor que não tem volta e faz o olho lacrimejar de novo, mesmo depois de tanto tempo.
-
-Comenta aí: qual foi a cena que mais te martelou?
-
-Vídeo: Netflix Brasil (canal oficial no YouTube)
-
-#Naruto #Sasuke #NarutoShippuden #Anime #Manga #MorsaDigital
-```
+106 na fila | legendas ok: 38 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 10/10 — Phineas e Ferb Através da 2ª Dimensão | Agente P? | Disney+
 Disney+ Brasil · vertical · pt · legenda: ok
@@ -905,91 +889,154 @@ HBO Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
-### 30/12 — Magnum, a série que vai mudar as histórias de heróis da Marvel?
+### 30/12 — Me algema, Sr. Policial | BLUE LOCK
+Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 31/12 — Magnum, a série que vai mudar as histórias de heróis da Marvel?
 Marvel Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 31/12 — TODAS AS VEZES QUE O JACK BLACK FALA COISAS DE MINECRAFT NO FILME!
+### 01/01 — TODAS AS VEZES QUE O JACK BLACK FALA COISAS DE MINECRAFT NO FILME!
 Netflix Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 01/01 — O Dean chegou bem na hora certa... 😮‍💨 #Sobrenatural #Supernatural
+### 02/01 — O Dean chegou bem na hora certa... 😮‍💨 #Sobrenatural #Supernatural
 Prime Video Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 02/01 — NARUTO VERSÃO SÓ SOM FILÉ
+### 03/01 — NARUTO VERSÃO SÓ SOM FILÉ
 Netflix Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 03/01 — JAIME E BRAIN SE REENCONTRAM EM #GOT! ❤️‍🔥
+### 04/01 — JAIME E BRAIN SE REENCONTRAM EM #GOT! ❤️‍🔥
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 04/01 — Já pensou um BLUE LOCK no país do futebol? ⚽️
+### 05/01 — Já pensou um BLUE LOCK no país do futebol? ⚽️
 Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 05/01 — Quem salva nosso bairro? Os heróis urbanos da Marvel, claro!
+### 06/01 — Quem salva nosso bairro? Os heróis urbanos da Marvel, claro!
 Marvel Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 06/01 — Como eu vou ser normal se eu assistia ISSO quando era criança?? 👀#CoragemOCaoCov
+### 07/01 — ESTOU VICIADA EM VER O STEVE CANTANDO EM UM FILME MINECRAFT.
+Netflix Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 08/01 — Como eu vou ser normal se eu assistia ISSO quando era criança?? 👀#CoragemOCaoCov
 HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 07/01 — JUJUTSU KAISEN ESCONDEU ESSES EASTER EGGS?
+### 09/01 — JUJUTSU KAISEN ESCONDEU ESSES EASTER EGGS?
 Netflix Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 08/01 — JOFFREY CITA SOR DUNCAN EM GAME OF THRONES! 💪
+### 10/01 — JOFFREY CITA SOR DUNCAN EM GAME OF THRONES! 💪
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 09/01 — Não estava esperando essa surra... I That Time I Got Reincarnated as a Slime 4ª 
+### 11/01 — Não estava esperando essa surra... I That Time I Got Reincarnated as a Slime 4ª 
 Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 10/01 — Loki | Loki invadiu o Brasil | Disney+
+### 12/01 — Loki | Loki invadiu o Brasil | Disney+
 Marvel Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 11/01 — Homem-Formiga -  Clipe: Teste de Fogo
+### 13/01 — Marvel’s Wolverine – Trailer de Gameplay Estendido | PS5
+PlayStation Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 14/01 — Velma representou todas as fãs do Sam Winchester aqui. ☝️🤓 #Supernatural #Scooby
+HBO Max Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 15/01 — NUNCA APERTEI "PRÓXIMO EPISÓDIO" EM JUJUTSU KAISEN
+Netflix Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 16/01 — JAIME LANNISTER RELEMBRA PRIMEIRO EPISÓDIO DE GOT! 🥹
+HBO Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 17/01 — O quão fã de My Hero Academia você é??
+Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 18/01 — Gostamos do trailer de Homem-Aranha: Um Novo Dia?
+Marvel Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 19/01 — Liu Kang Vs Kung Lao em Mortal Kombat II. 🔥😮‍💨  #MortalKombat
+HBO Max Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 20/01 — Homem-Formiga -  Clipe: Teste de Fogo
 Marvel Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -1005,7 +1052,7 @@ Vídeo: Marvel Brasil (canal oficial no YouTube)
 #HomemFormiga #AntMan #Marvel #ScottLang #PaulRudd #MorsaDigital
 ```
 
-### 12/01 — Game Of Thrones | Ygritte dispara em Jon Snow | #MomentoHBO
+### 21/01 — Game Of Thrones | Ygritte dispara em Jon Snow | #MomentoHBO
 HBO Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -1021,7 +1068,7 @@ Vídeo: HBO Brasil (canal oficial no YouTube)
 #GameOfThrones #JonSnow #Ygritte #HBO #MomentoHBO #MorsaDigital
 ```
 
-### 13/01 — Sonic 3: O Filme | Bastidores: O Doutor Está De Volta | Paramount Pictures Brasi
+### 22/01 — Sonic 3: O Filme | Bastidores: O Doutor Está De Volta | Paramount Pictures Brasi
 Paramount Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -1037,7 +1084,7 @@ Vídeo: Paramount Brasil (canal oficial no YouTube)
 #Sonic3 #JimCarrey #DoutorEggman #SonicTheHedgehog #ParamountBrazil #MorsaDigital
 ```
 
-### 14/01 — THE FLASH | CENA EXCLUSIVA
+### 23/01 — THE FLASH | CENA EXCLUSIVA
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -1055,22 +1102,7 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
 ## main — a partir das 13h
 
-101 na fila | legendas ok: 7 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 09/10 — Grand Theft Auto III: 10 Year Anniversary Edition - Official Launch Trailer
-Rockstar Games · ? · ? · legenda: ok
-
-```
-GTA III é aquele clássico que mudou o jogo e, ver esse trailer de 10 anos depois, bate até uma nostalgia boa.
-
-A Rockstar adaptou o mundo aberto original para telas de toque, melhorando texturas e adicionando recursos como replay de missões e autosave. É a versão definitiva para quem quer jogar o início da era moderna da franquia no celular.
-
-Esse título é a ponte perfeita pra entender por que a gente tava tão ansioso pelo próximo capítulo. Qual foi a sua primeira missão favorita em Liberty City?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
-
-#GTA3 #GrandTheftAutoIII #RockstarGames #LibertyCity #GTA6 #Nostalgia
-```
+100 na fila | legendas ok: 6 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 10/10 — Dragon Ball Super: Beerus | Trailer oficial | Netflix
 Netflix Brasil · horizontal · pt · legenda: ok
