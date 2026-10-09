@@ -14,6 +14,17 @@ mkdir -p logs
 # Roda de madrugada (23h30, 1h30, 3h30, 5h30) para não pesar no Mac durante o dia.
 # Mantém o Mac acordado só enquanto este script estiver rodando.
 caffeinate -i -w $$ &
+
+# Uma rodada por vez: duas ao mesmo tempo sobrescrevem a fila uma da outra.
+LOCK=/tmp/morsa_reel.lock
+if ! mkdir "$LOCK" 2>/dev/null; then
+  if [ -n "$(find "$LOCK" -maxdepth 0 -mmin +300 2>/dev/null)" ]; then
+    rmdir "$LOCK" 2>/dev/null; mkdir "$LOCK" || exit 0    # trava esquecida há mais de 5h
+  else
+    echo "outra rodada em andamento — saindo"; exit 0
+  fi
+fi
+trap 'rmdir "$LOCK" 2>/dev/null' EXIT
 LOG="logs/reel_local_$(date +%Y%m%d_%H%M%S).log"
 
 set -a
@@ -27,7 +38,11 @@ set +a
   git pull -q --rebase --autostash origin main || echo "pull falhou — segue com a fila local"
 
   python3 src/reel_queue.py fill
-  python3 src/reel_queue.py premap   # baixa o que faltar dos planos (acervo e cenas)
+  # TIKTOK_BOOST=N: lote extra só do TikTok antes do normal (usado pelo night_boost.sh)
+  if [ -n "$TIKTOK_BOOST" ]; then
+    REEL_STREAM=tiktok PREMAP_MAX_PER_RUN="$TIKTOK_BOOST" PREMAP_PAUSE_SECONDS=45 python3 src/reel_queue.py premap
+  fi
+  python3 src/reel_queue.py premap   # baixa o que faltar dos planos (acervo, cenas e TikTok)
 
   # legendas prontas e checadas, arquivos conferidos, relatório em data/reel_report.md
   python3 src/reel_queue.py audit
