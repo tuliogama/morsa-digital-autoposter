@@ -96,14 +96,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=0VxoWT0MyLE",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/0VxoWT0MyLE.mp4",
     "added_at": "2026-10-06T18:51:30.391174-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 0,
     "scheduled_for": "2026-10-09",
     "theme": "gta",
     "caption": "GTA III é aquele clássico que mudou o jogo e, ver esse trailer de 10 anos depois, bate até uma nostalgia boa.\n\nA Rockstar adaptou o mundo aberto original para telas de toque, melhorando texturas e adicionando recursos como replay de missões e autosave. É a versão definitiva para quem quer jogar o início da era moderna da franquia no celular.\n\nEsse título é a ponte perfeita pra entender por que a gente tava tão ansioso pelo próximo capítulo. Qual foi a sua primeira missão favorita em Liberty City?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#GTA3 #GrandTheftAutoIII #RockstarGames #LibertyCity #GTA6 #Nostalgia",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-09T16:31:36.497995-03:00",
+    "media_id": "17882898873625146",
+    "tiktok_id": "6ac941193600cb979480dd00",
+    "tiktok_status": "published",
+    "tiktok_url": null
   },
   {
     "video_id": "f_VBXRZuHTc",
