@@ -151,14 +151,16 @@
     "youtube_url": "https://www.youtube.com/watch?v=9JX-0es-AXc",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/9JX-0es-AXc.mp4",
     "added_at": "2026-10-06T22:18:51.161567-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 3,
     "layout": "vertical",
     "lang": "pt",
     "caption": "Naruto ainda é o rei do sofrimento ou você tá cansado?\n\nEssa dor de Sasuke que não acaba nunca é o que mantém a gente preso na tela.\nAquele amor que não tem volta e faz o olho lacrimejar de novo, mesmo depois de tanto tempo.\n\nComenta aí: qual foi a cena que mais te martelou?\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#Naruto #Sasuke #NarutoShippuden #Anime #Manga #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-09T11:39:55.849204-03:00",
+    "media_id": "17964248286196194"
   },
   {
     "video_id": "IJIdDdB8MLA",
