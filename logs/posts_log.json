@@ -33,6 +33,7 @@
     "metrics": {}
   },
   {
+<<<<<<< Updated upstream
     "media_id": "17964248286196194",
     "platform": "instagram_reel",
     "title": "Naruto sofre por Sasuke!",
@@ -41,6 +42,16 @@
     "image_url": "",
     "caption_preview": "Naruto ainda é o rei do sofrimento ou você tá cansado?\n\nEssa dor de Sasuke que não acaba nunca é o que mantém a gente preso na tela.\nAquele amor que não tem volta e faz o olho lacrimejar de novo, mesm",
     "published_at": "2026-10-09T14:39:55.851440+00:00",
+=======
+    "media_id": "18394753582165191",
+    "platform": "instagram",
+    "title": "GTA 6 Screenshots (October 8, 2026)",
+    "source": "IGN Brasil",
+    "url": "https://br.ign.com/grand-theft-auto-vi/156722/gta-6-screenshots-october-8-2026",
+    "image_url": "https://raw.githubusercontent.com/tuliogama/morsa-digital-autoposter/main/images/post_1791556773.jpg",
+    "caption_preview": "GTA 6 chegou com imagens que deixam a cidade ainda mais viva. \n\nOs novos prints mostram uma Vice City reinventada, com neon que parece pulsar e veículos que dão um salto de qualidade nos detalhes. A i",
+    "published_at": "2026-10-09T14:40:08.807810+00:00",
+>>>>>>> Stashed changes
     "metrics": {}
   }
 ]
