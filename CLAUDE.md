@@ -262,7 +262,8 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
 - **Fonte**: só uploads recentes (RSS do YouTube) dos canais em `OFFICIAL_CHANNELS`,
   conferidos por ID + inscritos. Só adicionar canal por ID: `@dcbrasil` (3 inscritos)
   e `@UniversalPicturesBr` são falsos. Nada de busca livre, nada de corte de cena.
-- **Mac** (`run_reel_local.sh`, launchd `com.morsa.dailyreel`, 8h30, 13h30 e 18h;
+- **Mac** (`run_reel_local.sh`, launchd `com.morsa.dailyreel`, de madrugada: 23h30, 1h30, 3h30 e 5h30,
+  em baixa prioridade, a pedido do Tulio para não travar o Mac de dia;
   até 10 vídeos por fluxo por execução, 70s de pausa, para o YouTube não bloquear): `fill` baixa,
   converte para 9:16 (fundo desfocado + logo, máx. 90s), sobe na Release
   `reel-queue` e grava `data/reel_queue.json` até ter 7 pendentes. Com a fila
@@ -289,6 +290,11 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   chave em `ZERNIO_API_KEY`). A API oficial não serve: app não auditado só posta
   privado e a auditoria recusa ferramenta de uso interno. Cada reel que sai no
   Instagram vai junto para o TikTok; sem a chave, é no-op.
+- **Fila só do TikTok** (`STREAMS["tiktok"]`, plano `data/reel_plan_tiktok.json`, 300
+  Shorts oficiais BR): `reel_queue.py tiktok` agenda na Zernio os horários livres
+  de 16h, 19h e 21h30 (hora exata, sem cron do GitHub) e confere os que já saíram.
+  Total no TikTok: 5/dia (2 do Instagram + 3 próprios). O arquivo na Release só é
+  apagado depois de publicado, porque a Zernio busca o vídeo na hora de postar.
 - **Auditoria** (`reel_queue.py audit`, roda no fim de `run_reel_local.sh`): confere
   os arquivos, gera a legenda dos próximos 6 dias e passa por `lint_caption` (regras
   fixas) e `judge_caption` (gpt-oss-120b aponta detalhe inventado). Legenda aprovada

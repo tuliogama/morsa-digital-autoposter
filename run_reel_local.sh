@@ -1,5 +1,5 @@
 #!/bin/bash
-# Abastece a fila de Reels (roda no Mac, via launchd com.morsa.dailyreel, 18h).
+# Abastece as filas de Reels e do TikTok (roda no Mac, via launchd com.morsa.dailyreel).
 # O YouTube bloqueia o IP do GitHub, então o DOWNLOAD só funciona em casa. A
 # PUBLICAÇÃO é do GitHub (workflow reel-queue.yml): com a fila cheia, o Mac
 # pode ficar dias desligado.
@@ -10,6 +10,10 @@ cd /Users/tuliogama/morsa-digital-autoposter
 export PATH="/opt/homebrew/bin:/usr/bin:/bin:$PATH"
 
 mkdir -p logs
+
+# Roda de madrugada (23h30, 1h30, 3h30, 5h30) para não pesar no Mac durante o dia.
+# Mantém o Mac acordado só enquanto este script estiver rodando.
+caffeinate -i -w $$ &
 LOG="logs/reel_local_$(date +%Y%m%d_%H%M%S).log"
 
 set -a
@@ -28,7 +32,10 @@ set +a
   # legendas prontas e checadas, arquivos conferidos, relatório em data/reel_report.md
   python3 src/reel_queue.py audit
 
-  git add data/reel_queue.json data/reel_queue_cenas.json data/reel_report.md
+  # TikTok: confere os que já saíram e agenda os próximos horários (Zernio)
+  python3 src/reel_queue.py tiktok
+
+  git add data/reel_queue.json data/reel_queue_cenas.json data/reel_queue_tiktok.json data/reel_report.md
   git diff --staged --quiet || {
     git commit -q -m "chore: fila de reels abastecida [skip ci]"
     git pull -q --rebase --autostash origin main

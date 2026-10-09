@@ -48,7 +48,14 @@ REPO = os.environ.get("GITHUB_REPOSITORY", "tuliogama/morsa-digital-autoposter")
 STREAMS = {
     "cenas": {"queue": "reel_queue_cenas.json", "plan": "reel_plan_cenas.json", "slot": 11},
     "main":  {"queue": "reel_queue.json",       "plan": "reel_plan.json",       "slot": 13},
+    # Só TikTok: não passa pelo Instagram. Agendado na Zernio por horário exato
+    # (`schedule_tiktok`), então não depende dos crons atrasados do GitHub.
+    "tiktok": {"queue": "reel_queue_tiktok.json", "plan": "reel_plan_tiktok.json", "slot": None},
 }
+IG_STREAMS = [name for name, cfg in STREAMS.items() if cfg["slot"] is not None]
+# TikTok recebe os 2 reels do Instagram (11h e 13h) + estes horários próprios
+TIKTOK_SLOTS_BRT = ["16:00", "19:00", "21:30"]
+TIKTOK_THEME_WINDOWS = {"halloween": ("10-24", "10-31"), "natal": ("12-20", "12-25")}
 MIN_GAP_MIN = 90             # intervalo mínimo entre dois reels
 
 
@@ -447,7 +454,9 @@ def premap() -> int:
             time.sleep(PREMAP_PAUSE_SECONDS)
         try:
             meta = _video_meta(p["video_id"])
-            extra = {"kind": "cena" if STREAM == "cenas" else "acervo", "plan_order": plan.index(p)}
+            extra = {"kind": "acervo" if STREAM == "main" else "cena", "plan_order": plan.index(p)}
+            if p.get("theme") and not p.get("scheduled_for"):
+                extra["theme"] = p["theme"]
             if p.get("scheduled_for"):
                 extra.update(scheduled_for=p["scheduled_for"], theme=p.get("theme", ""))
             _add_item(queue, p["video_id"], meta, **extra)
@@ -590,7 +599,7 @@ class CaptionUnavailable(RuntimeError):
 def _caption(item: dict) -> str:
     from content_generator import REEL_TRAILER_SYSTEM, _call_groq, _strip_ai_tells, _cap_hashtags
     from editorial import _with_credit
-    system = HOOK_SYSTEM if STREAM == "cenas" else REEL_TRAILER_SYSTEM
+    system = REEL_TRAILER_SYSTEM if STREAM == "main" else HOOK_SYSTEM
     user_msg = (
         f"Escreva a legenda para o Reel: {item['title']}\n\n"
         f"{_age_note(item)}{_THEME_NOTES.get(item.get('theme', ''), '')}\n"
@@ -644,7 +653,7 @@ def lint_caption(item: dict, caption: str) -> list[str]:
         problems.append(f"tamanho {len(caption)}")
     if lines and not lines[0][0].isalnum() and lines[0][0] not in '"“¿':
         problems.append("começa com emoji ou símbolo")
-    if STREAM == "cenas" and lines and "?" not in lines[0]:
+    if STREAM != "main" and lines and "?" not in lines[0]:
         problems.append("1ª linha não é pergunta")
     if _age_note(item) and _NEWS_WORDS_RE.search(caption):
         problems.append("trata vídeo antigo como novidade")
@@ -757,7 +766,7 @@ def verify_assets() -> list[str]:
 def write_report():
     """Relatório legível dos dois fluxos: calendário, formato, idioma e legenda de cada reel."""
     out = [f"# Fila de reels @morsadigital — {datetime.now(BRT):%d/%m/%Y %H:%M} BRT", ""]
-    for name in STREAMS:
+    for name in IG_STREAMS:
         use_stream(name)
         queue = load_queue()
         sim = json.loads(json.dumps(queue))
@@ -847,16 +856,132 @@ def publish() -> int:
     return 0
 
 
+# ── TikTok: fila própria, agendada por horário exato ────────────────────────
+
+def _checked_caption(item: dict) -> str | None:
+    """Legenda que passou no lint e no checador (2 tentativas); None se não passou."""
+    for _ in range(2):
+        caption = _caption(item)
+        problems = lint_caption(item, caption) or judge_caption(item, caption)
+        if not problems:
+            return caption
+        item["caption_problems"] = problems
+        time.sleep(8)
+    return None
+
+
+def schedule_tiktok(days_ahead: int = 3, max_new: int = 5) -> int:
+    """
+    Preenche os horários livres do TikTok nos próximos dias com itens da fila
+    própria. Poucos por execução: cada legenda gasta cota do modelo.
+    """
+    from publishers import tiktok
+    if not tiktok.enabled():
+        logger.info("[tiktok] sem ZERNIO_API_KEY — nada a agendar")
+        return 0
+    use_stream("tiktok")
+    queue = load_queue()
+    taken = {q.get("tiktok_scheduled_for") for q in queue}
+    now = datetime.now(BRT)
+    created = 0
+    for offset in range(days_ahead + 1):
+        day = (now + timedelta(days=offset)).date()
+        for hhmm in TIKTOK_SLOTS_BRT:
+            when = datetime.strptime(f"{day} {hhmm}", "%Y-%m-%d %H:%M").replace(tzinfo=BRT)
+            stamp = when.strftime("%Y-%m-%dT%H:%M:00")
+            if stamp in taken or when < now + timedelta(minutes=20) or created >= max_new:
+                continue
+
+            def fits(q):
+                window = TIKTOK_THEME_WINDOWS.get(q.get("theme", ""))
+                if not window:
+                    return 1                                 # sem tema: serve em qualquer dia
+                md = f"{day:%m-%d}"
+                if window[0] <= md <= window[1]:
+                    return 0                                 # tema na semana dele: prioridade
+                return 1 if md > window[1] else None         # depois da data vira normal; antes, espera
+            pool = sorted((q for q in pending(queue) if fits(q) is not None and q.get("caption_check") != "revisar"),
+                          key=lambda q: (fits(q), q.get("plan_order", 0)))
+            for item in pool[:3]:                            # até 3 candidatos por horário
+                try:
+                    caption = _checked_caption(item)
+                except CaptionUnavailable as e:
+                    logger.warning(f"[tiktok] sem cota para legenda, paro por aqui: {e}")
+                    save_queue(queue)
+                    return created
+                if caption is None:
+                    item["caption_check"] = "revisar"
+                    save_queue(queue)
+                    continue
+                try:
+                    tk = tiktok.post_video(item["asset_url"], caption, scheduled_for=stamp)
+                except Exception as e:
+                    logger.error(f"[tiktok] agendamento falhou: {e}")
+                    save_queue(queue)
+                    return created
+                item.update(caption=caption, caption_check="ok", caption_problems=[],
+                            tiktok_id=tk["id"], tiktok_status="scheduled", tiktok_scheduled_for=stamp,
+                            posted=True, posted_at=stamp)
+                taken.add(stamp)
+                save_queue(queue)
+                created += 1
+                logger.info(f"[tiktok] agendado {stamp}: {item['title'][:60]}")
+                break
+    return created
+
+
+def sync_tiktok() -> dict:
+    """Atualiza o status dos agendados que já passaram e apaga o arquivo dos publicados."""
+    from publishers import tiktok
+    stats = {"publicados": 0, "falhas": 0}
+    if not tiktok.enabled():
+        return stats
+    use_stream("tiktok")
+    queue = load_queue()
+    cutoff = (datetime.now(BRT) - timedelta(minutes=30)).strftime("%Y-%m-%dT%H:%M:00")
+    for item in queue:
+        if item.get("tiktok_status") != "scheduled" or item.get("tiktok_scheduled_for", "9") > cutoff:
+            continue
+        try:
+            post = tiktok._api("GET", f"/posts/{item['tiktok_id']}").get("post", {})
+        except Exception as e:
+            logger.warning(f"[tiktok] não consegui consultar {item['tiktok_id']}: {e}")
+            continue
+        status = post.get("status")
+        if status == "published":
+            item["tiktok_status"] = "published"
+            stats["publicados"] += 1
+            subprocess.run(["gh", "release", "delete-asset", RELEASE_TAG, f"{item['video_id']}.mp4",
+                            "--repo", REPO, "--yes"], capture_output=True)
+        elif status in ("failed", "partial"):
+            entry = next((p for p in post.get("platforms", []) if p.get("platform") == "tiktok"), {})
+            item["tiktok_status"] = f"erro: {json.dumps(entry.get('error') or entry.get('errorMessage') or status)[:200]}"
+            stats["falhas"] += 1
+            logger.error(f"[tiktok] post falhou: {item['title'][:50]} | {item['tiktok_status']}")
+    save_queue(queue)
+    return stats
+
+
 def main():
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
     cmd = sys.argv[1] if len(sys.argv) > 1 else "status"
     # publish/due/status olham os dois fluxos, a não ser que REEL_STREAM escolha um
-    streams = [os.environ["REEL_STREAM"]] if os.environ.get("REEL_STREAM") else list(STREAMS)
+    chosen = os.environ.get("REEL_STREAM")
+    streams = [chosen] if chosen else list(IG_STREAMS)          # publish/due/status/audit
+    all_streams = [chosen] if chosen else list(STREAMS)         # premap baixa para todos
     if cmd == "fill":
         use_stream("main")
         fill()
+    elif cmd == "tiktok":
+        logger.info(f"[tiktok] sincronizado: {sync_tiktok()}")
+        logger.info(f"[tiktok] novos agendamentos: {schedule_tiktok()}")
+        todo = sorted((q for q in load_queue() if q.get("tiktok_status") == "scheduled"),
+                      key=lambda q: q["tiktok_scheduled_for"])
+        for q in todo:
+            print(f"{q['tiktok_scheduled_for'][5:16].replace('T', ' ')} | {q['channel']}: {q['title'][:70]}")
+        print(f"{len(todo)} agendados | {len(pending(load_queue()))} na fila do TikTok")
     elif cmd == "premap":
-        for name in streams:
+        for name in all_streams:
             use_stream(name)
             if PLAN_PATH.exists():
                 premap()
