@@ -827,7 +827,20 @@ def publish() -> int:
     record_post(media_id=result["id"], platform="instagram_reel",
                 news_item={"title": item["title"], "source": item["channel"],
                            "url": item["youtube_url"]}, caption=caption)
-    # O Instagram já copiou o vídeo; o arquivo na Release não é mais necessário
+    # Mesmo vídeo e legenda no TikTok (só se a conta estiver ligada via Zernio).
+    # Falha aqui nunca derruba o que já saiu no Instagram.
+    from publishers import tiktok
+    if tiktok.enabled():
+        try:
+            tk = tiktok.post_video(item["asset_url"], caption)
+            item.update(tiktok_id=tk["id"], tiktok_status=tk["status"], tiktok_url=tk["url"])
+            logger.info(f"TikTok: {tk['status']} {tk['url'] or ''}")
+        except Exception as e:
+            item["tiktok_status"] = f"erro: {str(e)[:200]}"
+            logger.error(f"TikTok falhou: {e}")
+        save_queue(queue)
+
+    # Instagram e TikTok já copiaram o vídeo; o arquivo na Release não é mais necessário
     subprocess.run(["gh", "release", "delete-asset", RELEASE_TAG, f"{item['video_id']}.mp4",
                     "--repo", REPO, "--yes"], capture_output=True)
     logger.info(f"Reel publicado: {result['id']} | restam {len(pending(queue))} na fila")

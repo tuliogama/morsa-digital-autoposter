@@ -30,6 +30,7 @@ env:
   IG_USER_ID: ${{ secrets.IG_USER_ID }}
   MORSA_BROADCAST_CHANNEL_ID: ${{ secrets.MORSA_BROADCAST_CHANNEL_ID }}
   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
 
 jobs:
   publish:

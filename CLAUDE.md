@@ -284,6 +284,11 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   Canal estrangeiro só entra com legenda OFICIAL em PT, queimada no vídeo com
   Pillow (o ffmpeg do Homebrew não tem drawtext/libass). Exceção: Rockstar, que
   não tem versão PT. Horizontal vira 9:16 com fundo desfocado só como último caso.
+- **TikTok** (@morsadigital, 103 seguidores em 09/10/2026): `publishers/tiktok.py`
+  publica via Zernio (ex-Late; app já auditado pelo TikTok, grátis até 2 contas,
+  chave em `ZERNIO_API_KEY`). A API oficial não serve: app não auditado só posta
+  privado e a auditoria recusa ferramenta de uso interno. Cada reel que sai no
+  Instagram vai junto para o TikTok; sem a chave, é no-op.
 - **Auditoria** (`reel_queue.py audit`, roda no fim de `run_reel_local.sh`): confere
   os arquivos, gera a legenda dos próximos 6 dias e passa por `lint_caption` (regras
   fixas) e `judge_caption` (gpt-oss-120b aponta detalhe inventado). Legenda aprovada
