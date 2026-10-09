@@ -1,14 +1,16 @@
 #!/bin/bash
 # Noite de carga para o TikTok: repete a rotina local com lote grande de Shorts
 # até de manhã. Uso: nohup bash night_boost.sh > logs/night_boost.log 2>&1 &
-# Espera até 23h30 se for chamado antes; para às 7h30 ou quando o plano acabar.
+# Para às 7h30 da manhã seguinte ou quando o plano acabar.
 cd /Users/tuliogama/morsa-digital-autoposter
 export PATH="/opt/homebrew/bin:/usr/bin:/bin:$PATH"
 
-while [ "$(date +%H%M)" -lt 2330 ] && [ "$(date +%H)" -ge 8 ]; do sleep 120; done
+# Começa na hora em que for chamado e vai até as 7h30 da manhã seguinte.
+if [ "$(date +%H%M)" -lt 0730 ]; then DAY=$(date +%Y-%m-%d); else DAY=$(date -v+1d +%Y-%m-%d); fi
+END=$(date -j -f "%Y-%m-%d %H:%M" "$DAY 07:30" +%s)
 
 N=0
-while [ "$(date +%H)" -ge 23 ] || [ "$(date +%H%M)" -lt 0730 ]; do
+while [ "$(date +%s)" -lt "$END" ]; do
   N=$((N+1)); echo "=== ciclo $N $(date '+%d/%m %H:%M') ==="
   TIKTOK_BOOST=30 bash run_reel_local.sh
   L=$(ls -t logs/reel_local_* | head -1)
