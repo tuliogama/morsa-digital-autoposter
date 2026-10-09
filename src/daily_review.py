@@ -167,7 +167,73 @@ def build_brief(rows: list[dict], weights: dict, for_date) -> dict:
     }
 
 
-def write_report(rows: list[dict], weights: dict, brief: dict, now: datetime) -> Path:
+def fetch_reach_split(days: int = 7) -> dict:
+    """Alcance da conta por seguidor / não seguidor. Não seguidor perto de zero é o
+    sinal de que o Instagram tirou a conta das recomendações."""
+    token, ig = os.environ["FB_ACCESS_TOKEN"], os.environ["IG_USER_ID"]
+    now = int(datetime.now(timezone.utc).timestamp())
+    url = (f"https://graph.facebook.com/v21.0/{ig}/insights?metric=reach&period=day"
+           f"&metric_type=total_value&breakdown=follow_type&since={now - days * 86400}&until={now}"
+           f"&access_token={token}")
+    try:
+        with urllib.request.urlopen(url, timeout=20) as r:
+            results = json.loads(r.read())["data"][0]["total_value"]["breakdowns"][0]["results"]
+        return {x["dimension_values"][0]: x["value"] for x in results}
+    except Exception as e:
+        logger.warning(f"Alcance por tipo de seguidor indisponível: {e}")
+        return {}
+
+
+def fetch_tiktok(days: int = 7) -> list[dict]:
+    """Posts do TikTok com números, via Zernio (inclui os postados à mão no app)."""
+    if not os.environ.get("ZERNIO_API_KEY"):
+        return []
+    since = (datetime.now(BRT) - timedelta(days=days)).date().isoformat()
+    req = urllib.request.Request(
+        f"https://zernio.com/api/v1/analytics?platform=tiktok&source=all&fromDate={since}&limit=100&sortBy=date",
+        headers={"Authorization": f"Bearer {os.environ['ZERNIO_API_KEY']}", "User-Agent": "Mozilla/5.0"})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            posts = json.loads(r.read()).get("posts", [])
+    except Exception as e:
+        logger.warning(f"Números do TikTok indisponíveis: {e}")
+        return []
+    rows = []
+    for p in posts:
+        a = p.get("analytics") or {}
+        try:
+            ts = datetime.fromisoformat(p["publishedAt"].replace("Z", "+00:00")).astimezone(BRT)
+        except (KeyError, ValueError):
+            continue
+        rows.append({"ts": ts, "title": (p.get("content") or "").split("\n")[0][:80],
+                     "views": a.get("views", 0), "likes": a.get("likes", 0),
+                     "comments": a.get("comments", 0), "shares": a.get("shares", 0),
+                     "ours": bool(p.get("latePostId") or not p.get("isExternal", False))})
+    return sorted(rows, key=lambda r: r["ts"])
+
+
+def _tiktok_section(tk: list[dict]) -> list[str]:
+    if not tk:
+        return ["", "## TikTok", "", "Sem dados (conta não ligada ou sem posts no período)."]
+    views = [r["views"] for r in tk]
+    lines = ["", "## TikTok — últimos 7 dias", "",
+             f"- Vídeos: {len(tk)} | views no total: {sum(views)} | mediana por vídeo: {statistics.median(views)}",
+             f"- Curtidas: {sum(r['likes'] for r in tk)} | comentários: {sum(r['comments'] for r in tk)}"
+             f" | compartilhamentos: {sum(r['shares'] for r in tk)}", "",
+             "| Quando | Views | Curtidas | Coment. | Compart. | Vídeo |", "|---|---|---|---|---|---|"]
+    for r in sorted(tk, key=lambda r: -r["views"])[:15]:
+        lines.append(f"| {r['ts']:%d/%m %H:%M} | {r['views']} | {r['likes']} | {r['comments']} | {r['shares']} | {r['title']} |")
+    by_hour = defaultdict(list)
+    for r in tk:
+        by_hour[r["ts"].hour].append(r["views"])
+    if len(tk) >= 8:
+        lines += ["", "Mediana de views por horário: " +
+                  " · ".join(f"{h}h: {statistics.median(v):.0f} ({len(v)})" for h, v in sorted(by_hour.items()))]
+    return lines
+
+
+def write_report(rows: list[dict], weights: dict, brief: dict, now: datetime,
+                 tiktok: list[dict] = None, split: dict = None) -> Path:
     today = [r for r in rows if r["ts"].date() == now.date()]
     last7 = [r for r in rows if r["age_h"] <= 7 * 24]
     lines = [f"# Revisão diária @morsadigital — {now:%d/%m/%Y %H:%M} BRT", ""]
@@ -204,6 +270,15 @@ def write_report(rows: list[dict], weights: dict, brief: dict, now: datetime) ->
     for cat, v in sorted(weights.get("categories", {}).items(), key=lambda kv: -kv[1]["median"]):
         lines.append(f"| {cat} | {v['n']} | {v['median']} | {label[v['adjust']]} |")
 
+    if split:
+        total = sum(split.values()) or 1
+        non = split.get("NON_FOLLOWER", 0)
+        lines += ["", "## De onde vem o alcance (7 dias)", "",
+                  f"- Seguidores alcançados: {split.get('FOLLOWER', 0)}",
+                  f"- Não seguidores alcançados: {non} ({100 * non / total:.0f}% do alcance)",
+                  "- Não seguidor perto de zero por vários dias = conta fora das recomendações "
+                  "(conferir em Configurações > Status da conta)."]
+    lines += _tiktok_section(tiktok or [])
     lines += ["", f"## Orientação para {brief['date']}", "", brief["strategy_note"], ""]
 
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
@@ -227,7 +302,7 @@ def main():
     BRIEF_PATH.parent.mkdir(exist_ok=True)
     BRIEF_PATH.write_text(json.dumps(brief, indent=2, ensure_ascii=False), encoding="utf-8")
 
-    report = write_report(rows, weights, brief, now)
+    report = write_report(rows, weights, brief, now, tiktok=fetch_tiktok(), split=fetch_reach_split())
     logger.info(f"Relatório: {report}")
     logger.info(f"Ajustes: { {c: v['adjust'] for c, v in weights['categories'].items() if v['adjust']} }")
     logger.info(f"Orientação {brief['date']}: {brief['strategy_note']}")

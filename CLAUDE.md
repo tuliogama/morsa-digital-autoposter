@@ -295,6 +295,15 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   de 16h, 19h e 21h30 (hora exata, sem cron do GitHub) e confere os que já saíram.
   Total no TikTok: 5/dia (2 do Instagram + 3 próprios). O arquivo na Release só é
   apagado depois de publicado, porque a Zernio busca o vídeo na hora de postar.
+- **Alcance baixo: o que se sabe (estudo de 09/10/2026)**. Não há evidência de que a
+  Meta penalize post via API ou legenda escrita por IA (Mosseri: agendar não muda
+  alcance; rótulo de IA só vale para perfil de pessoa gerada por IA). O que existe é
+  a regra de conteúdo original: conta que reposta sem transformar ("agregador")
+  sai das recomendações; em abr/2026 passou a valer também para foto e carrossel.
+  Recupera após 30 dias sem repost. Vale para trailer/Short repostado cru e para
+  carrossel com foto de portal. A revisão noturna mostra o alcance de não
+  seguidores (`fetch_reach_split`); o veredito está no app, em Configurações >
+  Status da conta. Em 2025 os reels grandes eram cena + comentário próprio.
 - **Auditoria** (`reel_queue.py audit`, roda no fim de `run_reel_local.sh`): confere
   os arquivos, gera a legenda dos próximos 6 dias e passa por `lint_caption` (regras
   fixas) e `judge_caption` (gpt-oss-120b aponta detalhe inventado). Legenda aprovada
