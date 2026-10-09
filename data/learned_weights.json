@@ -1,21 +1,21 @@
 {
-  "baseline_median": 7.0,
-  "sample": 52,
+  "baseline_median": 6,
+  "sample": 51,
   "categories": {
     "anime_big": {
-      "n": 6,
-      "median": 9.5,
+      "n": 4,
+      "median": 7.5,
       "adjust": 0
     },
     "dc": {
-      "n": 6,
+      "n": 8,
       "median": 11.0,
       "adjust": -1
     },
     "game_big": {
       "n": 8,
       "median": 8.5,
-      "adjust": 0
+      "adjust": -1
     },
     "game_niche": {
       "n": 4,
@@ -23,13 +23,13 @@
       "adjust": 0
     },
     "gta": {
-      "n": 10,
-      "median": 5.0,
+      "n": 11,
+      "median": 5,
       "adjust": 0
     },
     "marvel": {
-      "n": 8,
-      "median": 11.5,
+      "n": 7,
+      "median": 12,
       "adjust": -1
     },
     "movie": {
@@ -38,8 +38,8 @@
       "adjust": 0
     },
     "other": {
-      "n": 6,
-      "median": 5.5,
+      "n": 5,
+      "median": 6,
       "adjust": 0
     },
     "series": {
@@ -48,5 +48,5 @@
       "adjust": 0
     }
   },
-  "generated_at": "2026-10-08T04:02:30.552259-03:00"
+  "generated_at": "2026-10-09T04:10:23.961943-03:00"
 }
