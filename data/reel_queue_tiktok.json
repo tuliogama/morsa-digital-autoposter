@@ -37,7 +37,7 @@
     "caption": "Alastor ainda é o rei das falas? Ou tem outro que rouba a cena?\n\nAquele tom de rádio quebrado e a elegância sombria dele são insubstituíveis.\nCada frase dele pesa e fica ecoando na cabeça muito depois da cena acabar.\nÉ o tipo de vilão que a gente odeia, mas não consegue parar de ouvir.\n\nQual é a sua fala favorita do Radialista?\n\nVídeo: Prime Video Brasil (canal oficial no YouTube)\n\n#HazbinHotel #Alastor #Radialista #PrimeVideo #CulturaNerd #MorsaDigital",
     "caption_check": "ok",
     "tiktok_id": "6ac91824db04294021821d04",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-09T16:00:00",
     "posted_at": "2026-10-09T16:00:00"
   },
@@ -106,11 +106,11 @@
     "layout": "vertical",
     "lang": "pt",
     "caption": "Demon Slayer no cinema: você sentiu o peso dessa história lá dentro?\n\nAquele filme que a gente esperou demais e que virou febre nas salas.\nNada bate a emoção de ver o Tanjiro e a equipe lutando na tela grande.\n\nQual foi a cena que mais te pegou?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#DemonSlayer #KimetsuNoYaiba #CasteloInfinito #Tanjiro #Zenitsu #Inosuke #MorsaDigital",
-    "caption_check": "ok",
+    "caption_check": "revisar",
     "caption_problems": [],
     "tiktok_id": "6ac91836de4226f24b0a170b",
-    "tiktok_status": "scheduled",
-    "tiktok_scheduled_for": "2026-10-10T16:00:00",
+    "tiktok_status": "cancelado: chamada de bilheteria",
+    "tiktok_scheduled_for": null,
     "posted_at": "2026-10-10T16:00:00"
   },
   {
@@ -172,11 +172,18 @@
     "youtube_url": "https://www.youtube.com/watch?v=kyT29QRDmmQ",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/kyT29QRDmmQ.mp4",
     "added_at": "2026-10-09T13:28:47.290917-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 7,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Percy Jackson e os Olimpianos: esse elenco em SP te pegou de surpresa?\n\nVer o time reunido assim, com essa energia de semideuses, faz qualquer fã da série se derreter.\nÉ o tipo de momento que só quem curte a história entende o peso.\n\nMarca aquele amigo que precisa ver esse grupo junto.\n\nVídeo: Disney+ Brasil (canal oficial no YouTube)\n\n#PercyJackson #PercyJacksonEOlimpianos #DisneyPlus #SeresMiticos #Fandom #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ac94c6b11657658e8361c13",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-09T18:00:00",
+    "posted_at": "2026-10-09T18:00:00"
   },
   {
     "video_id": "P3rIuehcGdk",
@@ -189,11 +196,18 @@
     "youtube_url": "https://www.youtube.com/watch?v=P3rIuehcGdk",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/P3rIuehcGdk.mp4",
     "added_at": "2026-10-09T13:30:22.928871-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 8,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Avatar: O Último Mestre do Ar virou pião na sua cabeça?\n\nAang tentando dominar a dobra de terra enquanto lida com política e segredos no Reino da Terra.\nÉ o tipo de enredo que a gente lembra com carinho, né?\n\nConta aqui: qual foi a sua primeira impressão da série?\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#AvatarOUltimoMestreDoAr #Aang #ReinoDaTerra #DobraDeTerra #NetflixBrasil #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ac94c6f11657658e8361c1e",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-09T19:30:00",
+    "posted_at": "2026-10-09T19:30:00"
   },
   {
     "video_id": "SvORiJA5-Cg",
@@ -206,11 +220,18 @@
     "youtube_url": "https://www.youtube.com/watch?v=SvORiJA5-Cg",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/SvORiJA5-Cg.mp4",
     "added_at": "2026-10-09T13:32:46.361625-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 9,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Você curtiu essa fase do Demolidor ou preferia o clássico?\n\nRelembre os episódios 202 e 203 de Demolidor: Renascido.\nÉ a chance perfeita de reviver a jornada de Matt Murdock.\nVale rever para entender o peso dessa nova etapa.\n\nComenta aí o que achou dessa fase dele.\n\nVídeo: Marvel Brasil (canal oficial no YouTube)\n\n#DemolidorRenascido #MattMurdock #Marvel #DisneyPlus #SerieNerd #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ac94c7292525b603568a8b2",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-09T21:00:00",
+    "posted_at": "2026-10-09T21:00:00"
   },
   {
     "video_id": "2XNAg5pSwwM",
@@ -223,11 +244,18 @@
     "youtube_url": "https://www.youtube.com/watch?v=2XNAg5pSwwM",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/2XNAg5pSwwM.mp4",
     "added_at": "2026-10-09T13:35:37.095107-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 10,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Rochelle sempre foi a dona da casa, né? Você concorda?\n\nTodo mundo sabe que o Chris tenta fugir das consequências, mas quando o assunto é a segurança da família, ela bota o pé no freio. É aquela lição de vida que a gente leva pra fora da tela.\n\nComenta aí qual foi a vez que você achou que o Chris ia levar a pior.\n\nVídeo: Paramount+ Brasil (canal oficial no YouTube)\n\n#TodoMundoOdeiaOChris #Rochelle #ChrisRock #TichinaArnold #Comédia #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ac94c75b323513afd2b5ebf",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-09T22:30:00",
+    "posted_at": "2026-10-09T22:30:00"
   },
   {
     "video_id": "q4pJbDrVDsk",
@@ -240,10 +268,17 @@
     "youtube_url": "https://www.youtube.com/watch?v=q4pJbDrVDsk",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/q4pJbDrVDsk.mp4",
     "added_at": "2026-10-09T13:36:33.275722-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 11,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Qual foi a sua reação quando viu essa cena do filme?\n\nA ideia de duas visões diferentes da mesma sede de justiça pegou todo mundo de surpresa.\nÉ o tipo de momento que a gente fica pensando se concorda com a abordagem ou não.\n\nComenta aí qual lado você torceu e por quê.\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#Supergirl #SupergirlFilme #DC #MulherMaravilha #LigaDaJustica #MorsaDigital",
+    "caption_check": "revisar",
+    "caption_problems": [],
+    "tiktok_id": "6ac94c7811657658e8361c36",
+    "tiktok_status": "cancelado: chamada de bilheteria",
+    "tiktok_scheduled_for": null,
+    "posted_at": "2026-10-10T08:00:00"
   }
 ]

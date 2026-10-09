@@ -53,8 +53,10 @@ STREAMS = {
     "tiktok": {"queue": "reel_queue_tiktok.json", "plan": "reel_plan_tiktok.json", "slot": None},
 }
 IG_STREAMS = [name for name, cfg in STREAMS.items() if cfg["slot"] is not None]
-# TikTok recebe os 2 reels do Instagram (11h e 13h) + estes horários próprios
-TIKTOK_SLOTS_BRT = ["16:00", "19:00", "21:30"]
+# Meta do Tulio (09/10/2026): 10 vídeos por dia no TikTok por um mês, para puxar
+# view e seguidor do nicho. São os 2 reels do Instagram (11h e 13h) + estes 8.
+# O TikTok aceita ~15 posts/dia por conta via API.
+TIKTOK_SLOTS_BRT = ["08:00", "09:30", "15:00", "16:30", "18:00", "19:30", "21:00", "22:30"]
 TIKTOK_THEME_WINDOWS = {"halloween": ("10-24", "10-31"), "natal": ("12-20", "12-25")}
 MIN_GAP_MIN = 90             # intervalo mínimo entre dois reels
 
@@ -334,12 +336,20 @@ def _prepare_video(video_id: str, workdir: str, burn_subs: bool = False) -> tupl
     return out, "vertical" if vertical else "horizontal"
 
 
+_PROMO_TITLE_RE = re.compile(r"nos cinemas|em cartaz|ingresso|pré-venda|pré-estreia|"
+                             r"já disponível|assista agora|estreia (dia|em|hoje)", re.IGNORECASE)
+
+
 def _is_fresh(q: dict) -> bool:
     return q.get("kind", "fresh") == "fresh" and not q.get("scheduled_for")
 
 
 def _add_item(queue: list[dict], video_id: str, meta: dict, **extra) -> dict:
     """Baixa, converte, sobe e registra um vídeo na fila (salva a cada item)."""
+    # Chamada de bilheteria ("25 de junho, somente nos cinemas") envelhece mal e não
+    # é cena: fora dos fluxos de cenas e do TikTok.
+    if STREAM != "main" and _PROMO_TITLE_RE.search(meta["title"]):
+        raise ValueError("chamada de bilheteria/estreia, não é cena")
     # Português primeiro: canal brasileiro (dublado ou legendado na origem) ou
     # legenda oficial em PT queimada no vídeo. Sem nenhum dos dois, não entra.
     # Exceção: Rockstar, cujos trailers não têm versão em português.
@@ -870,7 +880,7 @@ def _checked_caption(item: dict) -> str | None:
     return None
 
 
-def schedule_tiktok(days_ahead: int = 3, max_new: int = 5) -> int:
+def schedule_tiktok(days_ahead: int = 2, max_new: int = 8) -> int:
     """
     Preenche os horários livres do TikTok nos próximos dias com itens da fila
     própria. Poucos por execução: cada legenda gasta cota do modelo.

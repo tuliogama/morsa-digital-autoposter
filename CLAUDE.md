@@ -292,8 +292,9 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   Instagram vai junto para o TikTok; sem a chave, é no-op.
 - **Fila só do TikTok** (`STREAMS["tiktok"]`, plano `data/reel_plan_tiktok.json`, 300
   Shorts oficiais BR): `reel_queue.py tiktok` agenda na Zernio os horários livres
-  de 16h, 19h e 21h30 (hora exata, sem cron do GitHub) e confere os que já saíram.
-  Total no TikTok: 5/dia (2 do Instagram + 3 próprios). O arquivo na Release só é
+  em 8 horários por dia (`TIKTOK_SLOTS_BRT`, hora exata, sem cron do GitHub) e
+  confere os que já saíram. Total no TikTok: 10/dia (2 do Instagram + 8 próprios),
+  meta do Tulio por um mês a partir de 09/10/2026; depois ele entra com vídeos próprios. O arquivo na Release só é
   apagado depois de publicado, porque a Zernio busca o vídeo na hora de postar.
 - **Alcance baixo: o que se sabe (estudo de 09/10/2026)**. Não há evidência de que a
   Meta penalize post via API ou legenda escrita por IA (Mosseri: agendar não muda
