@@ -2274,5 +2274,40 @@
     "plan_order": 141,
     "layout": "vertical",
     "lang": "pt"
+  },
+  {
+    "video_id": "S5_DoY6dG0w",
+    "title": "Ô Denise, sai desse universo, filha. Papaizão??? 🫣",
+    "channel": "HBO Max Brasil",
+    "channel_id": "UCR7ZwQz60rW9dK59Dirdc8w",
+    "category": "series",
+    "description": "Toda quinta-feira, Stuart Não Consegue Salvar o Universo, na HBO Max\n\n#Stuart #SFTSTU #TheBigBangTheory #TBBT #StuartBloom",
+    "published": "2026-08-18",
+    "youtube_url": "https://www.youtube.com/watch?v=S5_DoY6dG0w",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/S5_DoY6dG0w.mp4",
+    "added_at": "2026-10-10T03:13:11.003483-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 142,
+    "theme": "halloween",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "dzJ4Bkn0UAo",
+    "title": "Motivos pra assistir a temporada 2 de Percy Jackson? TEMOS!",
+    "channel": "Disney+ Brasil",
+    "channel_id": "UCApaSzvP6jM9rfs8UbcqD1g",
+    "category": "movie",
+    "description": "Disney Talks Express no ar!\n\nE vamos falar de #PercyJackson e os Olimpianos, mais precisamente da temporada 2. Hoje o vídeo é para quem ainda não embarcou na nova temporada.\n\nQuem não assistir esse video corre o risco de ser amaldiçoado pelas Parcas. Não vai perder, né Cabeça de Alga?",
+    "published": "2026-02-06",
+    "youtube_url": "https://www.youtube.com/watch?v=dzJ4Bkn0UAo",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/dzJ4Bkn0UAo.mp4",
+    "added_at": "2026-10-10T03:14:45.354430-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 143,
+    "layout": "vertical",
+    "lang": "pt"
   }
 ]
