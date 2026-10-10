@@ -2240,5 +2240,39 @@
     "plan_order": 138,
     "layout": "vertical",
     "lang": "pt"
+  },
+  {
+    "video_id": "QAKSiaUXbno",
+    "title": "Zootopia 2 | Festival Rock The Mountain",
+    "channel": "Walt Disney Studios BR",
+    "channel_id": "UCP6nJ-Elnfnpjv6HQRsv1Cw",
+    "category": "movie",
+    "description": "Reunimos Saruê Rosa 🦨, Feliniker 🐆 e Camaleão Gomes 🦎 no Rock The Mountain. E quem passa pelo espaço pode soltar a voz no nosso karaokê! 🎤\n\n#Zootopia2 estreia em 27 de novembro nos cinemas.",
+    "published": "2025-11-07",
+    "youtube_url": "https://www.youtube.com/watch?v=QAKSiaUXbno",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/QAKSiaUXbno.mp4",
+    "added_at": "2026-10-10T02:31:04.521902-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 139,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "FBDjgJrtgkw",
+    "title": "EMILIA CLARKE (DAENERYS) ENTREGANDO ATUAÇÃO EM GOT! 🔥",
+    "channel": "HBO Brasil",
+    "channel_id": "UCX2M7xn-jMmq4KfX25TCTCA",
+    "category": "series",
+    "description": "#GameOfThrones está disponível na HBO Max.",
+    "published": "2026-01-09",
+    "youtube_url": "https://www.youtube.com/watch?v=FBDjgJrtgkw",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/FBDjgJrtgkw.mp4",
+    "added_at": "2026-10-10T02:32:54.284481-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 141,
+    "layout": "vertical",
+    "lang": "pt"
   }
 ]
