@@ -1,8 +1,8 @@
-# Fila de reels @morsadigital — 09/10/2026 20:36 BRT
+# Fila de reels @morsadigital — 09/10/2026 21:36 BRT
 
 ## cenas — a partir das 11h
 
-114 na fila | legendas ok: 38 | a revisar: 1 | dias sem reel no calendário: 0
+121 na fila | legendas ok: 38 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 10/10 — Phineas e Ferb Através da 2ª Dimensão | Agente P? | Disney+
 Disney+ Brasil · vertical · pt · legenda: ok
@@ -784,315 +784,364 @@ Marvel Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
-### 15/12 — Demolidor: Renascido | Jessica Jones | Disney+
+### 15/12 — Teorias para Vingadores Doutor Destino (Parte 1)
 Marvel Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 16/12 — Peter Dinklage nasceu para fazer história em Game Of Thrones, e eu posso provar!
+### 16/12 — Teorias de Vingadores: Doutor Destino, temos!
+Marvel Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 17/12 — Análise Teaser Capitão América em Vingadores: Doutor Destino
+Marvel Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 18/12 — Demolidor: Renascido | Jessica Jones | Disney+
+Marvel Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 19/12 — Peter Dinklage nasceu para fazer história em Game Of Thrones, e eu posso provar!
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 17/12 — O Brabo tem nome: #BatmanCruzadoEncapuzado 🦇💥
+### 20/12 — O Brabo tem nome: #BatmanCruzadoEncapuzado 🦇💥
 Prime Video Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 18/12 — A PRIMEIRA MESA DE LEITURA DE GAME OF THRONES! ⚔️
+### 21/12 — A PRIMEIRA MESA DE LEITURA DE GAME OF THRONES! ⚔️
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 19/12 — Quem é igual ao Donatello e queria ver o BTS ao vivo? ✨💜#AsTartarugasNinja: Caos
+### 22/12 — Quem é igual ao Donatello e queria ver o BTS ao vivo? ✨💜#AsTartarugasNinja: Caos
 Paramount Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 20/12 — Uma caçada brutal vai começar! 💥💥#Kraven: O Caçador, 12 de dezembro, nos cinemas
-Sony Pictures Brasil · vertical · pt · legenda: ainda não gerada
+### 23/12 — O Natal chegou mais cedo e o Johnny Depp já está preparado! 🎩❄️
+Paramount Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 21/12 — Quem é o maior deus de todo o universo de Percy Jackson?
-Disney+ Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 22/12 — Já se passaram 2 décadas e a gente ainda não viu uma transição mais CINEMA que e
-HBO Max Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 23/12 — Quando o ator esquece que está atuando. 🥵😮‍💨 #Batman #OCavaleiroDasTrevas
-HBO Max Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 24/12 — Marvel’s Wolverine - Chega em 2026 | PS5
-PlayStation Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 25/12 — Demolidor: Renascido | Recap Episódico | Disney+
-Marvel Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 26/12 — Toy Story de volta para os cinemas? Sim!
-Walt Disney Studios BR · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 27/12 — Scooby-Doo é revelado #netflix
-Netflix Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 28/12 — CHAVES: O MAIOR FÃ DO PELÉ
-Netflix Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 29/12 — ONE PIECE OU NARUTO NO DATE?
-Netflix Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 30/12 — A DAENERYS SOU EU IRRITADO: DRACARYS! 🔥
-HBO Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 31/12 — Me algema, Sr. Policial | BLUE LOCK
-Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 01/01 — Magnum, a série que vai mudar as histórias de heróis da Marvel?
-Marvel Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 02/01 — TODAS AS VEZES QUE O JACK BLACK FALA COISAS DE MINECRAFT NO FILME!
-Netflix Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 03/01 — O Dean chegou bem na hora certa... 😮‍💨 #Sobrenatural #Supernatural
+### 24/12 — Chris ganhou o pior presente de natal? #TodoMundoOdeiaOChris
 Prime Video Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 04/01 — NARUTO VERSÃO SÓ SOM FILÉ
-Netflix Brasil · vertical · pt · legenda: ainda não gerada
+### 25/12 — Bob Esponja deseja um FELIZ NATAL a todos os marujos online! 🎄💛
+Paramount Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 05/01 — JAIME E BRAIN SE REENCONTRAM EM #GOT! ❤️‍🔥
-HBO Brasil · vertical · pt · legenda: ainda não gerada
+### 26/12 — Uma caçada brutal vai começar! 💥💥#Kraven: O Caçador, 12 de dezembro, nos cinemas
+Sony Pictures Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 06/01 — Já pensou um BLUE LOCK no país do futebol? ⚽️
-Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
+### 27/12 — Quem é o maior deus de todo o universo de Percy Jackson?
+Disney+ Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 07/01 — Quem salva nosso bairro? Os heróis urbanos da Marvel, claro!
-Marvel Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 08/01 — ESTOU VICIADA EM VER O STEVE CANTANDO EM UM FILME MINECRAFT.
-Netflix Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 09/01 — Como eu vou ser normal se eu assistia ISSO quando era criança?? 👀#CoragemOCaoCov
+### 28/12 — Já se passaram 2 décadas e a gente ainda não viu uma transição mais CINEMA que e
 HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 10/01 — JUJUTSU KAISEN ESCONDEU ESSES EASTER EGGS?
-Netflix Brasil · vertical · pt · legenda: ainda não gerada
+### 29/12 — Quando o ator esquece que está atuando. 🥵😮‍💨 #Batman #OCavaleiroDasTrevas
+HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 11/01 — JOFFREY CITA SOR DUNCAN EM GAME OF THRONES! 💪
-HBO Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 12/01 — Não estava esperando essa surra... I That Time I Got Reincarnated as a Slime 4ª 
-Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 13/01 — Loki | Loki invadiu o Brasil | Disney+
-Marvel Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 14/01 — Marvel’s Wolverine – Trailer de Gameplay Estendido | PS5
+### 30/12 — Marvel’s Wolverine - Chega em 2026 | PS5
 PlayStation Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 15/01 — Velma representou todas as fãs do Sam Winchester aqui. ☝️🤓 #Supernatural #Scooby
-HBO Max Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 16/01 — NUNCA APERTEI "PRÓXIMO EPISÓDIO" EM JUJUTSU KAISEN
-Netflix Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 17/01 — JAIME LANNISTER RELEMBRA PRIMEIRO EPISÓDIO DE GOT! 🥹
-HBO Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 18/01 — O quão fã de My Hero Academia você é??
-Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 19/01 — Gostamos do trailer de Homem-Aranha: Um Novo Dia?
+### 31/12 — Demolidor: Renascido | Recap Episódico | Disney+
 Marvel Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 20/01 — Liu Kang Vs Kung Lao em Mortal Kombat II. 🔥😮‍💨  #MortalKombat
+### 01/01 — Feliz ano novo!! 🎉
+Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 02/01 — Toy Story de volta para os cinemas? Sim!
+Walt Disney Studios BR · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 03/01 — Scooby-Doo é revelado #netflix
+Netflix Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 04/01 — CHAVES: O MAIOR FÃ DO PELÉ
+Netflix Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 05/01 — ONE PIECE OU NARUTO NO DATE?
+Netflix Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 06/01 — A DAENERYS SOU EU IRRITADO: DRACARYS! 🔥
+HBO Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 07/01 — Me algema, Sr. Policial | BLUE LOCK
+Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 08/01 — Magnum, a série que vai mudar as histórias de heróis da Marvel?
+Marvel Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 09/01 — TODAS AS VEZES QUE O JACK BLACK FALA COISAS DE MINECRAFT NO FILME!
+Netflix Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 10/01 — O Dean chegou bem na hora certa... 😮‍💨 #Sobrenatural #Supernatural
+Prime Video Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 11/01 — NARUTO VERSÃO SÓ SOM FILÉ
+Netflix Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 12/01 — JAIME E BRAIN SE REENCONTRAM EM #GOT! ❤️‍🔥
+HBO Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 13/01 — Já pensou um BLUE LOCK no país do futebol? ⚽️
+Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 14/01 — Quem salva nosso bairro? Os heróis urbanos da Marvel, claro!
+Marvel Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 15/01 — ESTOU VICIADA EM VER O STEVE CANTANDO EM UM FILME MINECRAFT.
+Netflix Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 16/01 — Como eu vou ser normal se eu assistia ISSO quando era criança?? 👀#CoragemOCaoCov
 HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 21/01 — Essa família é muito unida 🎶  #Superman #Supergirl
+### 17/01 — JUJUTSU KAISEN ESCONDEU ESSES EASTER EGGS?
+Netflix Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 18/01 — JOFFREY CITA SOR DUNCAN EM GAME OF THRONES! 💪
+HBO Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 19/01 — Não estava esperando essa surra... I That Time I Got Reincarnated as a Slime 4ª 
+Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 20/01 — Loki | Loki invadiu o Brasil | Disney+
+Marvel Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 21/01 — Marvel’s Wolverine – Trailer de Gameplay Estendido | PS5
+PlayStation Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 22/01 — Velma representou todas as fãs do Sam Winchester aqui. ☝️🤓 #Supernatural #Scooby
 HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 22/01 — SE VOCÊ PRECISA DIZER QUE É REI, VOCÊ NÃO É UM REI DE VERDADE | GOT
+### 23/01 — NUNCA APERTEI "PRÓXIMO EPISÓDIO" EM JUJUTSU KAISEN
+Netflix Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 24/01 — JAIME LANNISTER RELEMBRA PRIMEIRO EPISÓDIO DE GOT! 🥹
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 23/01 — A CORAGEM DE JON SNOW
-HBO Brasil · vertical · pt · legenda: ainda não gerada
+### 25/01 — O quão fã de My Hero Academia você é??
+Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 24/01 — ELENCO DE GOT CANTANDO PARABÉNS PARA EMILIA CLARKE! 👑
-HBO Brasil · vertical · pt · legenda: ainda não gerada
+### 26/01 — Gostamos do trailer de Homem-Aranha: Um Novo Dia?
+Marvel Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 25/01 — A CASA DO DRAGÃO É DE TIRAR O FÔLEGO
-HBO Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 26/01 — Chego, FAÇO HISTÓRIA com o Dracarys mais bonito da temporada, vou embora. 🔥  #AC
+### 27/01 — Liu Kang Vs Kung Lao em Mortal Kombat II. 🔥😮‍💨  #MortalKombat
 HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 27/01 — O AMOR FLORESCENDO EM THE LAST OF US
+### 28/01 — Essa família é muito unida 🎶  #Superman #Supergirl
+HBO Max Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 29/01 — SE VOCÊ PRECISA DIZER QUE É REI, VOCÊ NÃO É UM REI DE VERDADE | GOT
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 28/01 — Homem-Formiga -  Clipe: Teste de Fogo
+### 30/01 — A CORAGEM DE JON SNOW
+HBO Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 31/01 — ELENCO DE GOT CANTANDO PARABÉNS PARA EMILIA CLARKE! 👑
+HBO Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 01/02 — A CASA DO DRAGÃO É DE TIRAR O FÔLEGO
+HBO Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 02/02 — Chego, FAÇO HISTÓRIA com o Dracarys mais bonito da temporada, vou embora. 🔥  #AC
+HBO Max Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 03/02 — O AMOR FLORESCENDO EM THE LAST OF US
+HBO Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 04/02 — Homem-Formiga -  Clipe: Teste de Fogo
 Marvel Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -1108,7 +1157,7 @@ Vídeo: Marvel Brasil (canal oficial no YouTube)
 #HomemFormiga #AntMan #Marvel #ScottLang #PaulRudd #MorsaDigital
 ```
 
-### 29/01 — Game Of Thrones | Ygritte dispara em Jon Snow | #MomentoHBO
+### 05/02 — Game Of Thrones | Ygritte dispara em Jon Snow | #MomentoHBO
 HBO Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -1124,7 +1173,7 @@ Vídeo: HBO Brasil (canal oficial no YouTube)
 #GameOfThrones #JonSnow #Ygritte #HBO #MomentoHBO #MorsaDigital
 ```
 
-### 30/01 — Sonic 3: O Filme | Bastidores: O Doutor Está De Volta | Paramount Pictures Brasi
+### 06/02 — Sonic 3: O Filme | Bastidores: O Doutor Está De Volta | Paramount Pictures Brasi
 Paramount Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -1138,22 +1187,6 @@ Comenta aí qual foi a sua reação quando viu isso.
 Vídeo: Paramount Brasil (canal oficial no YouTube)
 
 #Sonic3 #JimCarrey #DoutorEggman #SonicTheHedgehog #ParamountBrazil #MorsaDigital
-```
-
-### 31/01 — THE FLASH | CENA EXCLUSIVA
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: ok
-
-```
-Essa cena exclusiva de The Flash te pegou de surpresa?
-
-Relembre o momento em que Barry Allen viaja no tempo e acaba preso numa realidade onde o General Zod ameaça o mundo sem super-heróis por perto.
-É a chance de rever como o Batman aposentado reage a ser chamado de volta para salvar a situação.
-
-Comenta aí o que você achou dessa versão do Batman.
-
-Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
-
-#TheFlash #DC #BarryAllen #Batman #GeneralZod #MorsaDigital
 ```
 
 ## main — a partir das 13h
