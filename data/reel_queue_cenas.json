@@ -195,7 +195,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=Ay_2-oJxiwg",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/Ay_2-oJxiwg.mp4",
     "added_at": "2026-10-06T22:21:59.575944-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 5,
     "layout": "vertical",
@@ -205,7 +205,9 @@
     "caption_problems": [],
     "tiktok_id": "6ac9130b3fe71a3e483a21de",
     "tiktok_status": "published",
-    "tiktok_url": "https://www.tiktok.com/@morsadigital/video/7694701435065224469"
+    "tiktok_url": "https://www.tiktok.com/@morsadigital/video/7694701435065224469",
+    "posted_at": "2026-10-10T12:00:08.047131-03:00",
+    "media_id": "17885832762624560"
   },
   {
     "video_id": "hlX7oKKBfP0",
