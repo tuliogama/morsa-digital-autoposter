@@ -50,7 +50,7 @@ set +a
   # TikTok: confere os que já saíram e agenda os próximos horários (Zernio)
   python3 src/reel_queue.py tiktok
 
-  git add data/reel_queue.json data/reel_queue_cenas.json data/reel_queue_tiktok.json data/reel_report.md
+  git add data/reel_queue.json data/reel_queue_cenas.json data/reel_queue_tiktok.json data/reel_report.md data/reel_rejected.json 2>/dev/null
   git diff --staged --quiet || {
     git commit -q -m "chore: fila de reels abastecida [skip ci]"
     git pull -q --rebase --autostash origin main

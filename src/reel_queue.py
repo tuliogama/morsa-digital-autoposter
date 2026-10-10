@@ -337,7 +337,8 @@ def _prepare_video(video_id: str, workdir: str, burn_subs: bool = False) -> tupl
 
 
 _PROMO_TITLE_RE = re.compile(r"nos cinemas|em cartaz|ingresso|pré-venda|pré-estreia|"
-                             r"já disponível|assista agora|estreia (dia|em|hoje)", re.IGNORECASE)
+                             r"já disponível|assista agora|estreia (dia|em|hoje)|"
+                             r"in theaters|in cinemas|now playing|get tickets|only in", re.IGNORECASE)
 
 
 def _is_fresh(q: dict) -> bool:
@@ -455,7 +456,15 @@ def premap() -> int:
     plan = json.loads(PLAN_PATH.read_text(encoding="utf-8"))
     queue = load_queue()
     known = {q["video_id"] for q in queue}
-    todo = [p for p in plan if p["video_id"] not in known]
+    # Recusados em definitivo (bilheteria, canal fora da lista, sem português) ficam
+    # anotados: sem isso cada rodada reconsultava o YouTube por centenas de vídeos
+    # que nunca vão entrar.
+    rejected_path = ROOT / "data" / "reel_rejected.json"
+    try:
+        rejected = json.loads(rejected_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        rejected = {}
+    todo = [p for p in plan if p["video_id"] not in known and p["video_id"] not in rejected]
     batch = todo[:PREMAP_MAX_PER_RUN]
     logger.info(f"[{STREAM}] plano: {len(plan)} itens, {len(todo)} faltando, {len(batch)} nesta execução")
     added = 0
@@ -476,6 +485,11 @@ def premap() -> int:
         except YouTubeBlocked as e:
             logger.warning(f"YouTube bloqueou o IP — parando por hoje ({e})")
             break
+        except ValueError as e:
+            if any(k in str(e) for k in ("bilheteria", "fora da lista oficial", "sem versão em português")):
+                rejected[p["video_id"]] = str(e)[:80]
+                rejected_path.write_text(json.dumps(rejected, indent=1, ensure_ascii=False), encoding="utf-8")
+            logger.warning(f"[{n}/{len(batch)}] FALHOU {p['video_id']}: {str(e)[:150]}")
         except Exception as e:
             logger.warning(f"[{n}/{len(batch)}] FALHOU {p['video_id']}: {str(e)[:150]}")
     logger.info(f"[{STREAM}] pré-mapeados: {added} | ainda faltam {len(todo) - added}")
