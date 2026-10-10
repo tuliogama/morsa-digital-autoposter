@@ -33,6 +33,7 @@
     "metrics": {}
   },
   {
+<<<<<<< Updated upstream
     "media_id": "17885832762624560",
     "platform": "instagram_reel",
     "title": "Phineas e Ferb Através da 2ª Dimensão | Agente P? | Disney+",
@@ -41,6 +42,16 @@
     "image_url": "",
     "caption_preview": "Qual é a sua teoria sobre o Agente P?\n\nAquela tensão de ver o Perry em ação sempre rendeu.\nEssa cena específica pegou muita gente de surpresa.\n\nConta pra gente o que você achou.\n\nVídeo: Disney+ Brasil",
     "published_at": "2026-10-10T15:00:08.049675+00:00",
+=======
+    "media_id": "18122968772479555",
+    "platform": "instagram",
+    "title": "GTA 6 no Switch 2? “Isso é assunto para a Take-Two e a Rockstar”, afirma a Nintendo",
+    "source": "IGN Brasil",
+    "url": "https://br.ign.com/grand-theft-auto-vi/156753/gta-6-no-switch-2-isso-e-assunto-para-a-take-two-e-a-rockstar-afirma-a-nintendo",
+    "image_url": "https://raw.githubusercontent.com/tuliogama/morsa-digital-autoposter/main/images/post_1791644383.jpg",
+    "caption_preview": "GTA 6 no Switch 2? A Nintendo se esquivou.\n\nDevon Pritchard, presidente da Nintendo of America, disse que a decisão é exclusiva da Take-Two e da Rockstar. O argumento técnico existe: o novo console ro",
+    "published_at": "2026-10-10T15:00:20.911504+00:00",
+>>>>>>> Stashed changes
     "metrics": {}
   }
 ]
