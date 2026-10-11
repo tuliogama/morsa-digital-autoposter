@@ -1,0 +1,51 @@
+name: Stories — chamada para os posts novos
+
+# Cada post ou reel novo ganha um story com a arte da marca (src/stories.py).
+# No máximo 3 por dia, 2h30 entre um e outro, nunca de madrugada. Os crons são
+# só gatilhos: quem decide se sai story é o script.
+
+on:
+  schedule:
+    - cron: "23 11-23/2 * * *"   # 8h23 às 20h23 BRT, de 2 em 2 horas
+    - cron: "53 0 * * *"         # 21h53 BRT
+  workflow_dispatch:
+
+jobs:
+  story:
+    name: Publicar story se houver post novo
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    concurrency:
+      group: stories
+      cancel-in-progress: false
+    env:
+      FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      IMGUR_CLIENT_ID: ${{ secrets.IMGUR_CLIENT_ID }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -q "pillow>=10.0.0"
+
+      - name: Publicar story
+        run: python src/stories.py
+
+      - name: Persistir registro
+        run: |
+          git config user.name "morsa-bot"
+          git config user.email "bot@morsadigital.com"
+          git add data/stories_log.json 2>/dev/null || exit 0
+          git diff --staged --quiet || git commit -m "chore: story publicado [skip ci]"
+          git pull --rebase origin main
+          git push origin main

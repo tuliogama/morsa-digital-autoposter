@@ -310,6 +310,11 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   ganha uma pergunta nossa fixa no alto do vídeo (`_hook_text` via gpt-oss-120b,
   `_render_hook` com Pillow; campo `hook_text` no item). A revisão noturna compara
   em `_hook_ab`. Se o texto ganhar, estender às cenas do Instagram.
+- **Stories automáticos** (`src/stories.py`, workflow `stories.yml`, desde 11/10/2026;
+  o mesmo arquivo roda no ordem-sith-autoposter): cada post ou reel novo ganha um
+  story com arte da marca (imagem do post, gancho da legenda, "veja no perfil").
+  Máx. 3/dia, 2h30 de intervalo, das 8h às 23h. A API não tem enquete, caixinha,
+  link nem "compartilhar post": story interativo só à mão, pelo app.
 - **Auditoria** (`reel_queue.py audit`, roda no fim de `run_reel_local.sh`): confere
   os arquivos, gera a legenda dos próximos 6 dias e passa por `lint_caption` (regras
   fixas) e `judge_caption` (gpt-oss-120b aponta detalhe inventado). Legenda aprovada
