@@ -290,7 +290,63 @@ def _render_cues(srt_path: str, workdir: str) -> list[tuple[str, float, float]]:
     return cues
 
 
-def _prepare_video(video_id: str, workdir: str, burn_subs: bool = False) -> tuple[str, str]:
+def _render_hook(text: str, workdir: str) -> str:
+    """Faixa com a pergunta ao fã (branco sobre tarja preta translúcida), 1080 de largura."""
+    from PIL import Image, ImageDraw, ImageFont
+    font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial Bold.ttf", 62)
+    rows, row = [], ""
+    for w in text.split():
+        if font.getlength(f"{row} {w}".strip()) > 900 and row:
+            rows.append(row)
+            row = w
+        else:
+            row = f"{row} {w}".strip()
+    rows.append(row)
+    height = 84 * len(rows) + 44
+    img = Image.new("RGBA", (1080, height), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(img)
+    width = max(font.getlength(r) for r in rows) + 80
+    draw.rounded_rectangle([(1080 - width) / 2, 0, (1080 + width) / 2, height], radius=28, fill=(0, 0, 0, 170))
+    for i, r in enumerate(rows):
+        draw.text(((1080 - font.getlength(r)) / 2, 18 + 84 * i), r, font=font, fill="white")
+    path = os.path.join(workdir, "hook.png")
+    img.save(path)
+    return path
+
+
+def _hook_text(meta: dict) -> str | None:
+    """
+    Pergunta curta para pôr na tela. O modelo devolve a obra/personagem copiado do
+    título e a pergunta; só vale se esse nome estiver mesmo no título (o modelo
+    menor escrevia "Cersi" e inventava contexto). None se não sair algo utilizável.
+    """
+    from content_generator import has_template_echo
+    try:
+        out = _groq_json(
+            JUDGE_MODEL,
+            "Você escreve o texto que aparece NA TELA de um vídeo curto de cultura pop de um "
+            "perfil brasileiro. Devolva JSON {\"nome\": ..., \"pergunta\": ...}.\n"
+            "\"nome\": só o nome próprio da obra ou do personagem que está no título, de 1 a 3 "
+            "palavras, sem emoji nem hashtag (ex.: título \"CERSEI VENDO UM DRAGÃO PELA PRIMEIRA "
+            "VEZ EM #GOT\" → nome \"Cersei\"; título \"🍌 ESSES MINIONS APRONTAM 🍌\" → nome "
+            "\"Minions\").\n"
+            "\"pergunta\": pergunta ao fã em português do Brasil, no máximo 42 caracteres, que "
+            "contenha o nome e divida opiniões ou puxe memória (ex.: \"Cersei mereceu esse "
+            "susto?\", \"Minions ou Gru: quem é melhor?\", \"Rock Lee ou Gaara, quem ganha?\"). "
+            "Sem emoji, aspas, hashtag ou travessão. Não acrescente detalhes que não estão no título.",
+            f"Título do vídeo: {meta['title']}\nCanal: {meta['channel']}", max_tokens=300)
+    except Exception as e:
+        logger.warning(f"Sem texto de tela: {str(e)[:120]}")
+        return None
+    name, text = str(out.get("nome", "")).strip(), str(out.get("pergunta", "")).strip().strip('"“”')
+    ok = (3 <= len(name) <= 30 and name.lower() in meta["title"].lower() and name.lower() in text.lower()
+          and 8 <= len(text) <= 48 and text.endswith("?") and "#" not in text
+          and not has_template_echo(text))
+    return text if ok else None
+
+
+def _prepare_video(video_id: str, workdir: str, burn_subs: bool = False,
+                   hook_text: str = None) -> tuple[str, str]:
     """
     Baixa e deixa em 1080x1920 com logo, no máximo TRIM_SECONDS.
     Vertical nativo (Shorts) fica em tela cheia; horizontal vai no meio com fundo
@@ -322,9 +378,14 @@ def _prepare_video(video_id: str, workdir: str, burn_subs: bool = False) -> tupl
         cue_y = "1300"               # na faixa desfocada, logo abaixo do vídeo
     graph += f"[base][1:v]overlay=W-w-20:{LOGO_TOP}[v0]"
     inputs = ["-i", raw, "-i", str(_make_round_logo())]
-    for i, (png, start, end) in enumerate(cues):
+    layers = [(png, start, end, cue_y) for png, start, end in cues]
+    if hook_text:
+        # pergunta nossa fixa no alto do vídeo: é o que faz o repost virar conteúdo da Morsa
+        layers.append((_render_hook(hook_text, workdir), 0, TRIM_SECONDS, "250"))
+    for i, (png, start, end, y) in enumerate(layers):
         inputs += ["-i", png]
-        graph += (f";[v{i}][{i + 2}:v]overlay=0:{cue_y}:enable='between(t,{start:.2f},{end:.2f})'[v{i + 1}]")
+        graph += (f";[v{i}][{i + 2}:v]overlay=0:{y}:enable='between(t,{start:.2f},{end:.2f})'[v{i + 1}]")
+    cues = layers
     out = os.path.join(workdir, f"{video_id}.mp4")
     r = subprocess.run(["ffmpeg", "-y", *inputs, "-filter_complex", graph,
                         "-map", f"[v{len(cues)}]", "-map", "0:a?", "-t", str(TRIM_SECONDS),
@@ -360,8 +421,14 @@ def _add_item(queue: list[dict], video_id: str, meta: dict, **extra) -> dict:
             burn = True
         elif meta["channel"] != "Rockstar Games":
             raise ValueError("sem versão em português (canal estrangeiro, sem legenda oficial PT)")
+    # Teste A/B no TikTok (desde 11/10/2026): metade dos vídeos novos leva uma
+    # pergunta nossa na tela, metade vai como veio. A revisão noturna compara.
+    hook = None
+    if STREAM == "tiktok" and len(queue) % 2 == 0:
+        hook = _hook_text(meta)
+    extra["hook_text"] = hook
     with tempfile.TemporaryDirectory(prefix="morsa_queue_") as tmp:
-        path, layout = _prepare_video(video_id, tmp, burn_subs=burn)
+        path, layout = _prepare_video(video_id, tmp, burn_subs=burn, hook_text=hook)
         asset_url = _upload_asset(path)
     extra.setdefault("layout", layout)
     extra.setdefault("lang", "pt" if _is_br_channel(meta["channel"]) else ("pt-legenda" if burn else "en"))
@@ -688,7 +755,8 @@ JUDGE_MODEL = "openai/gpt-oss-120b"   # modelo maior que o redator, só para che
 
 
 def _groq_json(model: str, system: str, user: str, max_tokens: int = 700) -> dict:
-    payload = json.dumps({"model": model, "max_tokens": max_tokens, "temperature": 0,
+    payload = json.dumps({"model": model, "max_tokens": max_tokens + 600, "temperature": 0,
+                          "reasoning_effort": "low",     # sem isso o raciocínio come os tokens e a Groq devolve 400
                           "response_format": {"type": "json_object"},
                           "messages": [{"role": "system", "content": system},
                                        {"role": "user", "content": user}]}).encode()

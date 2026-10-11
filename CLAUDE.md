@@ -305,6 +305,11 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   carrossel com foto de portal. A revisão noturna mostra o alcance de não
   seguidores (`fetch_reach_split`); o veredito está no app, em Configurações >
   Status da conta. Em 2025 os reels grandes eram cena + comentário próprio.
+- **Teste A/B do texto na tela** (TikTok, desde 11/10/2026): em 10/10 as views do
+  TikTok caíram de mediana 146 para 4 com reposts crus. Metade dos Shorts novos
+  ganha uma pergunta nossa fixa no alto do vídeo (`_hook_text` via gpt-oss-120b,
+  `_render_hook` com Pillow; campo `hook_text` no item). A revisão noturna compara
+  em `_hook_ab`. Se o texto ganhar, estender às cenas do Instagram.
 - **Auditoria** (`reel_queue.py audit`, roda no fim de `run_reel_local.sh`): confere
   os arquivos, gera a legenda dos próximos 6 dias e passa por `lint_caption` (regras
   fixas) e `judge_caption` (gpt-oss-120b aponta detalhe inventado). Legenda aprovada

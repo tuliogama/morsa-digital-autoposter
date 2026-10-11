@@ -208,8 +208,29 @@ def fetch_tiktok(days: int = 7) -> list[dict]:
         rows.append({"ts": ts, "title": (p.get("content") or "").split("\n")[0][:80],
                      "views": a.get("views", 0), "likes": a.get("likes", 0),
                      "comments": a.get("comments", 0), "shares": a.get("shares", 0),
-                     "ours": bool(p.get("latePostId") or not p.get("isExternal", False))})
+                     "ours": bool(p.get("latePostId") or not p.get("isExternal", False)),
+                     "ids": {str(p.get(k)) for k in ("_id", "latePostId", "postId") if p.get(k)}})
     return sorted(rows, key=lambda r: r["ts"])
+
+
+def _hook_ab(tk: list[dict]) -> list[str]:
+    """Teste A/B do texto na tela: vídeos com pergunta nossa contra vídeos como vieram."""
+    try:
+        queue = json.loads((ROOT / "data" / "reel_queue_tiktok.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return []
+    hook_by_id = {q["tiktok_id"]: q["hook_text"] for q in queue if q.get("tiktok_id") and "hook_text" in q}
+    cutoff = datetime.now(BRT) - timedelta(hours=12)
+    groups = {"com texto": [], "sem texto": []}
+    for r in tk:
+        match = next((i for i in r.get("ids", ()) if i in hook_by_id), None)
+        if match and r["ts"] < cutoff:
+            groups["com texto" if hook_by_id[match] else "sem texto"].append(r["views"])
+    if not any(groups.values()):
+        return []
+    return ["", "Teste do texto na tela (vídeos com +12h): " + " · ".join(
+        f"{name}: mediana {statistics.median(v):.0f} em {len(v)} vídeos" if v else f"{name}: sem vídeos ainda"
+        for name, v in groups.items())]
 
 
 def _tiktok_section(tk: list[dict]) -> list[str]:
@@ -226,6 +247,7 @@ def _tiktok_section(tk: list[dict]) -> list[str]:
     by_hour = defaultdict(list)
     for r in tk:
         by_hour[r["ts"].hour].append(r["views"])
+    lines += _hook_ab(tk)
     if len(tk) >= 8:
         lines += ["", "Mediana de views por horário: " +
                   " · ".join(f"{h}h: {statistics.median(v):.0f} ({len(v)})" for h, v in sorted(by_hour.items()))]
