@@ -157,7 +157,7 @@
     "caption": "Sheldon Cooper aprova esse universo de Stuart? 💀\n\nSe Sheldon assistisse a esse episódio, o silêncio dele já diria tudo.\nAquele olhar de reprovação é a certeza de que a lógica foi por água abaixo.\nSó um fã de The Big Bang Theory entende o peso dessa crítica silenciosa.\n\nComenta aí: qual foi a primeira cena que te fez rir?\n\nVídeo: HBO Max Brasil (canal oficial no YouTube)\n\n#StuartNaoConsegueSalvarOUnto #TheBigBangTheory #SheldonCooper #HBO #Bastidores #MorsaDigital",
     "caption_check": "ok",
     "tiktok_id": "6ac918574d4a6e982ef50435",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-10T19:00:00",
     "posted_at": "2026-10-10T19:00:00"
   },
@@ -301,7 +301,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ac96b3727bced9e42ca9768",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-10T08:00:00",
     "posted_at": "2026-10-10T08:00:00"
   },
@@ -366,7 +366,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ac96b4ea53992817d2f6b81",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-10T09:30:00",
     "posted_at": "2026-10-10T09:30:00"
   },
@@ -390,7 +390,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ac96b5039272f5300b7248b",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-10T15:00:00",
     "posted_at": "2026-10-10T15:00:00"
   },
@@ -515,7 +515,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ac96b90a53992817d2f6c2c",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-10T18:00:00",
     "posted_at": "2026-10-10T18:00:00"
   },
@@ -539,7 +539,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ac96b92a53992817d2f6c38",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-10T19:30:00",
     "posted_at": "2026-10-10T19:30:00"
   },
@@ -607,7 +607,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ac96bbda53992817d2f6cf5",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-10T21:00:00",
     "posted_at": "2026-10-10T21:00:00"
   },
@@ -631,7 +631,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ac96bbffe1787579a997a58",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-10T22:30:00",
     "posted_at": "2026-10-10T22:30:00"
   },
@@ -679,7 +679,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ac96bd627bced9e42ca9a0b",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-11T08:00:00",
     "posted_at": "2026-10-11T08:00:00"
   },
@@ -703,7 +703,7 @@
     "caption": "Esses Minions do Curtas dos Minions 2 te dão vontade de rir ou de bater neles?\n\nÉ impossível não se identificar com aquela caótica energia de banana que eles espalham por onde passam.\nA pureza do caos desses amarelinhos continua intacta e pronta para te fazer esquecer dos problemas.\n\nComenta aí qual é a sua reação ao ver eles aprontando.\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#Minions #CurtasDosMinions2 #DespicableMe #Illumination #Banana #MorsaDigital",
     "caption_check": "ok",
     "tiktok_id": "6ac97a7c902b53ed66f60e01",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-10T16:30:00",
     "posted_at": "2026-10-10T16:30:00"
   },
@@ -1343,7 +1343,13 @@
     "kind": "cena",
     "plan_order": 70,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: Stuart como Jon Snow em The Big Bang Theory",
+      "detalhe sem base: Essa mistura de humor e fantasia sempre rendeu as melhores memórias da série",
+      "detalhe sem base: Veja como ele se preparou para o papel"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "DDSk6n2XR8c",
@@ -1356,11 +1362,18 @@
     "youtube_url": "https://www.youtube.com/watch?v=DDSk6n2XR8c",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/DDSk6n2XR8c.mp4",
     "added_at": "2026-10-09T20:51:25.292100-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 71,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [],
+    "caption": "A passagem do elenco de Percy Jackson e os Olimpianos pelo Brasil te marcou?\n\nVer os atores da série em terras brasileiras foi uma experiência épica para quem acompanha a franquia.\nÉ o tipo de momento que fica gravado na memória de qualquer fã que torce por Percy e companhia.\n\nConta pra gente como foi essa vibe de ver o time de perto.\n\nVídeo: Disney+ Brasil (canal oficial no YouTube)\n\n#PercyJackson #PercyJacksonEOlimpianos #DisneyPlus #SériesDisney #MundoMitologico #MorsaDigital",
+    "caption_check": "ok",
+    "tiktok_id": "6acb86f981c5dff9e57131de",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-13T08:00:00",
+    "posted_at": "2026-10-13T08:00:00"
   },
   {
     "video_id": "9qhlR85SGic",
@@ -1377,7 +1390,13 @@
     "kind": "cena",
     "plan_order": 72,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: A 2ª temporada de Stranger Things: Histórias de 85 já confirmou a sua existência?",
+      "detalhe sem base: A confirmação veio e agora é só esperar o ano terminar para ver mais dessa época.",
+      "detalhe sem base: Mas o mais importante é que a primeira parte já está aí pra você rever quando quiser."
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "9YqKGhQZDOw",
@@ -1390,11 +1409,18 @@
     "youtube_url": "https://www.youtube.com/watch?v=9YqKGhQZDOw",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/9YqKGhQZDOw.mp4",
     "added_at": "2026-10-09T20:53:31.021166-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 73,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Você achou que o Dia 4 da CCXP23 ia ser calmo?\n\nQuem tava presencialmente sabe que o clima da Marvel Brasil não deixa ninguém parado.\nAquele papo entre os fãs e os convidados é sempre o momento mais autêntico do evento.\nNada bate a energia de ver o universo Marvel sendo celebrado de perto.\n\nConta aqui: qual foi o momento que mais te prendeu nesse dia?\n\nVídeo: Marvel Brasil (canal oficial no YouTube)\n\n#CCXP23 #MarvelBrasil #CCXP #FãsMarvel #EventosNerd #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6acb871081c5dff9e5713238",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-13T09:30:00",
+    "posted_at": "2026-10-13T09:30:00"
   },
   {
     "video_id": "pJHd0MUefvo",
@@ -1447,7 +1473,12 @@
     "kind": "cena",
     "plan_order": 77,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: Você lembra de quando Charlie aguentou Adão?",
+      "detalhe sem base: momento mais insuportável com o Adão"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "n3OZnbCxpl0",
@@ -1460,11 +1491,18 @@
     "youtube_url": "https://www.youtube.com/watch?v=n3OZnbCxpl0",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/n3OZnbCxpl0.mp4",
     "added_at": "2026-10-09T21:00:56.005554-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 81,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Mindinho seria condenado ou absolvido nessa situação?\n\nA tensão do julgamento sempre prendeu a atenção.\nVer o destino de Tyrion Lannister em jogo é um momento marcante.\n\nQuem você defende nessa discussão?\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#GameOfThrones #TyrionLannister #HBO #Max #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6acb87259e944ea571b1af8b",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-13T15:00:00",
+    "posted_at": "2026-10-13T15:00:00"
   },
   {
     "video_id": "UwlV3Baw9Cg",
@@ -1495,11 +1533,18 @@
     "youtube_url": "https://www.youtube.com/watch?v=rMy4UG49n8I",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/rMy4UG49n8I.mp4",
     "added_at": "2026-10-09T21:03:38.084809-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 83,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [],
+    "caption": "A saga de Percy Jackson no Disney+ já te conquistou ou ainda tá em dúvida?\n\nVer o Acampamento Meio-Sangue ganhar vida na tela e depois ver a energia dessa comunidade offline no Ibirapuera é demais.\nÉ o tipo de conteúdo que faz a gente querer voltar a ser meio-sangue por um dia só.\n\nConta aí: qual foi a primeira cena da série que te arrepiou?\n\nVídeo: Disney+ Brasil (canal oficial no YouTube)\n\n#PercyJackson #AcampamentoMeioSangue #DisneyPlus #SeresMitológicos #CulturaNerd #MorsaDigital",
+    "caption_check": "ok",
+    "tiktok_id": "6acb873136f9c5ed81e70dd1",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-13T16:30:00",
+    "posted_at": "2026-10-13T16:30:00"
   },
   {
     "video_id": "RtyOES7CH24",
@@ -1512,11 +1557,18 @@
     "youtube_url": "https://www.youtube.com/watch?v=RtyOES7CH24",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/RtyOES7CH24.mp4",
     "added_at": "2026-10-09T21:04:56.135686-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 84,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [],
+    "caption": "Luffy e a tripulação: você tá ansioso ou já tá decepcionado?\n\nO trailer de The One Piece prometeu muita coisa e a expectativa dos fãs tá lá no alto.\nAgora é só esperar 2027 pra ver se a adaptação da Netflix vai honrar a obra.\n\nComenta aí o que achou do teaser e se vai maratonar no lançamento.\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#OnePiece #Luffy #Netflix #Anime #Mangá #MorsaDigital",
+    "caption_check": "ok",
+    "tiktok_id": "6acb873dcd106b9ae7406cf0",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-13T18:00:00",
+    "posted_at": "2026-10-13T18:00:00"
   },
   {
     "video_id": "dTtbO_u9ycA",
@@ -1533,7 +1585,14 @@
     "kind": "cena",
     "plan_order": 85,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: Vingadores: Ultimato Encore",
+      "detalhe sem base: 24 de setembro nos cinemas",
+      "detalhe sem base: encerramento extra",
+      "detalhe sem base: vai te fazer chorar de novo"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "PZmg_LE12kQ",
@@ -1564,11 +1623,18 @@
     "youtube_url": "https://www.youtube.com/watch?v=NfNDM9PYCoU",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/NfNDM9PYCoU.mp4",
     "added_at": "2026-10-09T21:09:54.483467-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 89,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Spider-Noir esmagado? Você acha justo ou foi exagero?\n\nA tensão de ver o Aranha nessa dimensão sombria prende a atenção de qualquer fã.\nÉ aquele tipo de momento que fica marcado na memória pela intensidade visual.\n\nComenta aí qual foi sua reação ao ver isso.\n\nVídeo: Prime Video Brasil (canal oficial no YouTube)\n\n#SpiderNoir #SpiderVerse #Nicolascage #PrimeVideo #Acao #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6acb875281c5dff9e57132a0",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-13T19:30:00",
+    "posted_at": "2026-10-13T19:30:00"
   },
   {
     "video_id": "f_UVDCfa1ZA",
@@ -1581,11 +1647,18 @@
     "youtube_url": "https://www.youtube.com/watch?v=f_UVDCfa1ZA",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/f_UVDCfa1ZA.mp4",
     "added_at": "2026-10-09T21:54:26.459698-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 90,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [],
+    "caption": "Frieren explicando o que é um date pra Fern... você riu ou achou fofo?\n\nA velha elfa mais caótica do anime se soltando com a Fern sempre rende as cenas mais imprevisíveis.\nÉ aquele tipo de momento que faz a jornada lembrar que a Frieren não é só poderosa, é uma verdadeira caçadora de situações.\n\nConta aqui: qual foi a primeira vez que a Frieren te pegou de surpresa?\n\nVídeo: Crunchyroll Brasil (canal oficial no YouTube)\n\n#Frieren #FrierenEaJornadaParaOAlém #Fern #Anime #Crunchyroll #MorsaDigital",
+    "caption_check": "ok",
+    "tiktok_id": "6acb875ecf7b050227ba0a20",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-13T21:00:00",
+    "posted_at": "2026-10-13T21:00:00"
   },
   {
     "video_id": "jsSInxAYh60",
@@ -1602,7 +1675,14 @@
     "kind": "cena",
     "plan_order": 91,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: Laurinha do Camarão",
+      "detalhe sem base: a Laurinha do Camarão é a melhor coisa do filme?",
+      "detalhe sem base: Relembre essa figura icônica dos oceanos do Pacífico",
+      "detalhe sem base: É impossível não rir (e chorar um pouco) com a energia dela"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "uAEshfdqRCE",
@@ -1615,11 +1695,18 @@
     "youtube_url": "https://www.youtube.com/watch?v=uAEshfdqRCE",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/uAEshfdqRCE.mp4",
     "added_at": "2026-10-09T21:57:41.132997-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 93,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Qual vergonha do Joffrey te marcou mais?\n\nReunir as piores atitudes do rei é uma terapia para quem ainda sente a raiva dele.\nVer o lado mais cruel do personagem reunido em um só lugar só aumenta o ódio.\n\nMarca aquele amigo que ainda não esqueceu a maldade do Joffrey.\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#GameOfThrones #JoffreyBaratheon #GOT #HBO #TronoDeEspos #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6acb8774cf7b050227ba0a66",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-13T22:30:00",
+    "posted_at": "2026-10-13T22:30:00"
   },
   {
     "video_id": "B3QqZZKndS8",
@@ -2461,6 +2548,159 @@
     "posted": false,
     "kind": "cena",
     "plan_order": 153,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "tn-BTeCCA98",
+    "title": "PACIFICADOR DESCOBRINDO QUE É FAMOSO EM OUTRA DIMENSÃO - Temporada 2",
+    "channel": "HBO Max Brasil",
+    "channel_id": "UCR7ZwQz60rW9dK59Dirdc8w",
+    "category": "dc",
+    "description": "Alguém tem que pagar o preço por ser o herói mais estiloso de todos. 😎 O episódio 3 de #Pacificador já está disponível na HBO Max 🛵",
+    "published": "2025-09-08",
+    "youtube_url": "https://www.youtube.com/watch?v=tn-BTeCCA98",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/tn-BTeCCA98.mp4",
+    "added_at": "2026-10-11T09:16:43.846684-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 125,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "FpBdNs-_vc4",
+    "title": "As cenas mais engraçadas de #HazbinHotel",
+    "channel": "Prime Video Brasil",
+    "channel_id": "UCuNjvqjTzw9LcD9PVpTVWRA",
+    "category": "series",
+    "description": "Eu racho o bico toda vez 😅  \n\n Assista #HazbinHotel no Prime Video \n\nInscreva-se no canal do YouTube: https://bit.ly/35FaAo8 \n\nSobre o #PrimeVideo: Assine Prime Video para assistir a filmes e séries populares, incluindo Amazon Originals premiados. Além de um catálogo cheio de títulos, membros Prime têm acesso a benefícios, como frete GRÁTIS e rápido em milhares de produtos na Amazon.com.br, músicas sem anúncios na Amazon Music, Prime Gaming na Twitch e e-books e revistas no Prime Reading. Tudo na mesma assinatura, por apenas R$ 14,90/mês. Teste Grátis por 30 dias. \n\nSiga nossas redes sociais: \n\nInstagram: https://www.instagram.com/primevideobr/ \n\nFacebook: https://www.facebook.com/PrimeVideo",
+    "published": "2026-04-11",
+    "youtube_url": "https://www.youtube.com/watch?v=FpBdNs-_vc4",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/FpBdNs-_vc4.mp4",
+    "added_at": "2026-10-11T09:21:10.024729-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 126,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "Ug2e_BBXSOw",
+    "title": "A voz brasileira do Kageyama em HAIKYU!!",
+    "channel": "Crunchyroll Brasil",
+    "channel_id": "UCVc-JLY3Db6-O48y7TS4N7Q",
+    "category": "other",
+    "description": "TESTE CRUNCHYROLL DE GRAÇA POR 14 DIAS: https://got.cr/14DayFreeTrialPT\n\n🔸FACEBOOK: https://www.facebook.com/Crunchyroll.pt/\n🔸TWITTER: https://twitter.com/Crunchyroll_pt\n🔸INSTAGRAM: https://www.instagram.com/crunchyroll_PT",
+    "published": "2022-09-01",
+    "youtube_url": "https://www.youtube.com/watch?v=Ug2e_BBXSOw",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/Ug2e_BBXSOw.mp4",
+    "added_at": "2026-10-11T09:26:51.061071-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 127,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "PSO9D5jbcxo",
+    "title": "Com a Rochelle não se BRINCA | Todo Mundo Odeia o Chris | Paramount Plus",
+    "channel": "Paramount+ Brasil",
+    "channel_id": "UCAnCxJ1Weh2pUAKJW0bro0Q",
+    "category": "other",
+    "description": "Por um momento, achei que o sutiã era meu! #TodoMundoOdeiaOChris\n\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++\nCurtiu? Assista o Paramount+ em https://www.paramountplus.com ou baixe o app, disponível para telefones e tablets, IOS e Android:\nhttps://smart.link/z36qrfjaimzim\nInscreva-se no canal do YouTube: https://www.youtube.com/channel/UCW8l...\nSiga a nossa página no Facebook: https://www.facebook.com/ParamountPlusbr\nSiga o nosso Twitter: https://twitter.com/ParamountPlusbr\nSiga o nosso Instagram: https://www.instagram.com/paramountplusbr\nSiga o nosso TikTok: https://www.tiktok.com/@paramountplusbr\n\n\n\nParamount+ possui milhares de episódios de: Comedy Central, MTV, Nickelodeon,",
+    "published": "2023-11-07",
+    "youtube_url": "https://www.youtube.com/watch?v=PSO9D5jbcxo",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/PSO9D5jbcxo.mp4",
+    "added_at": "2026-10-11T09:33:21.011487-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 129,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "owyYDRq6zAk",
+    "title": "BELLA RAMSEY IMITANDO UM CLICKER DE THE LAST OF US 🧟",
+    "channel": "HBO Brasil",
+    "channel_id": "UCX2M7xn-jMmq4KfX25TCTCA",
+    "category": "game_big",
+    "description": "#TheLastOfUs chega dia 13/04 na Max e no meu canal.",
+    "published": "2025-04-11",
+    "youtube_url": "https://www.youtube.com/watch?v=owyYDRq6zAk",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/owyYDRq6zAk.mp4",
+    "added_at": "2026-10-11T09:35:18.092256-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 130,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "UL1fqVkI3pM",
+    "title": "O filho do Gru é a cara dele!",
+    "channel": "Netflix Brasil",
+    "channel_id": "UCc1l5mTmAv2GC_PXrBpqyKQ",
+    "category": "series",
+    "description": "Nasceu emburrado igual ao papai. O filme Meu Malvado Favorito 4 está disponível.\n\nAssista na Netflix: https://www.netflix.com/title/81776693\n\nInscreva-se: https://bit.ly/31ynwtw\n\nSobre a Netflix:\nA Netflix é um dos principais serviços de entretenimento do mundo com um vasto catálogo de séries, filmes, jogos e eventos ao vivo disponíveis em diversos idiomas. Nossos assinantes podem assistir, pausar e voltar a um título quantas vezes quiserem, onde quer que estejam, e alterar o plano a qualquer momento.\n\nO filho do Gru é a cara dele!\nhttps://www.youtube.com/@NetflixBrasil\n\nGru estava feliz com a chegada do bebê, mas um velho inimigo voltou para se vingar. Agora, ele precisa largar tudo e parti",
+    "published": "2026-04-04",
+    "youtube_url": "https://www.youtube.com/watch?v=UL1fqVkI3pM",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/UL1fqVkI3pM.mp4",
+    "added_at": "2026-10-11T09:38:54.235612-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 131,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "xp4eIffOOY8",
+    "title": "Superman | Lanterna verde",
+    "channel": "Warner Bros. Pictures Brasil",
+    "channel_id": "UCEOVI4AmQE01FDKNFunkV2w",
+    "category": "dc",
+    "description": "Guy Gardner passando só pra deixar um recado pra quem ainda não foi assistir Superman nos cinemas ❇️ #SupermanFilme, HOJE NOS CINEMAS! Garanta seu ingresso no link da bio.",
+    "published": "2025-08-03",
+    "youtube_url": "https://www.youtube.com/watch?v=xp4eIffOOY8",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/xp4eIffOOY8.mp4",
+    "added_at": "2026-10-11T09:41:08.729476-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 132,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "kf5WLhtI4qI",
+    "title": "Por que todo mundo AMA o Stitch?",
+    "channel": "Walt Disney Studios BR",
+    "channel_id": "UCP6nJ-Elnfnpjv6HQRsv1Cw",
+    "category": "movie",
+    "description": "Yasmin Yassine conta neste trechinho do episódio em que ela participou do #DisneyTalks porque todo mundo AMA o Stitch!\n\nVeja o episódio completo aqui: https://youtu.be/Q2xWo5QlRbY\n\n#DisneyTalks #YasminYassin #Stitch #LucianoAmaral",
+    "published": "2025-05-29",
+    "youtube_url": "https://www.youtube.com/watch?v=kf5WLhtI4qI",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/kf5WLhtI4qI.mp4",
+    "added_at": "2026-10-11T09:47:56.635708-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 133,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "Jx28FF5HgAw",
+    "title": "⚔️ Overlord O Reino Sagrado chegará aos cinemas em 7 de novembro.",
+    "channel": "Sony Pictures Brasil",
+    "channel_id": "UC9NXpIA01HVRhYgcEbs80Nw",
+    "category": "movie",
+    "description": "",
+    "published": "2024-10-28",
+    "youtube_url": "https://www.youtube.com/watch?v=Jx28FF5HgAw",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/Jx28FF5HgAw.mp4",
+    "added_at": "2026-10-11T09:51:01.987601-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 134,
     "layout": "vertical",
     "lang": "pt"
   }

@@ -1,24 +1,8 @@
-# Fila de reels @morsadigital — 10/10/2026 07:53 BRT
+# Fila de reels @morsadigital — 11/10/2026 09:53 BRT
 
 ## cenas — a partir das 11h
 
-121 na fila | legendas ok: 38 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 10/10 — Phineas e Ferb Através da 2ª Dimensão | Agente P? | Disney+
-Disney+ Brasil · vertical · pt · legenda: ok
-
-```
-Qual é a sua teoria sobre o Agente P?
-
-Aquela tensão de ver o Perry em ação sempre rendeu.
-Essa cena específica pegou muita gente de surpresa.
-
-Conta pra gente o que você achou.
-
-Vídeo: Disney+ Brasil (canal oficial no YouTube)
-
-#PhineasEFerb #Perry #AgenteP #DisneyPlus #MorsaDigital
-```
+120 na fila | legendas ok: 37 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 11/10 — A segunda temporada de X-Men 97
 Marvel Brasil · vertical · pt · legenda: ok
@@ -1189,24 +1173,25 @@ Vídeo: Paramount Brasil (canal oficial no YouTube)
 #Sonic3 #JimCarrey #DoutorEggman #SonicTheHedgehog #ParamountBrazil #MorsaDigital
 ```
 
+### 07/02 — THE FLASH | CENA EXCLUSIVA
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ok
+
+```
+Essa cena exclusiva de The Flash te pegou de surpresa?
+
+Relembre o momento em que Barry Allen viaja no tempo e acaba preso numa realidade onde o General Zod ameaça o mundo sem super-heróis por perto.
+É a chance de rever como o Batman aposentado reage a ser chamado de volta para salvar a situação.
+
+Comenta aí o que você achou dessa versão do Batman.
+
+Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
+
+#TheFlash #DC #BarryAllen #Batman #GeneralZod #MorsaDigital
+```
+
 ## main — a partir das 13h
 
-100 na fila | legendas ok: 6 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 10/10 — Dragon Ball Super: Beerus | Trailer oficial | Netflix
-Netflix Brasil · horizontal · pt · legenda: ok
-
-```
-O Beerus finalmente chegou e o universo da Dragon Ball ganhou um novo peso.
-
-Ver o Deus da Destruição despertar de novo é o tipo de hype que acorda até quem tava dormindo na franquia. A Netflix confirmou que estreiamos em outubro, e ter esse nível de poder em tela cheia no streaming é o que a galera esperava faz tempo.
-
-Você acha que o Goku vai conseguir manter a calma dessa vez ou vai ser puro caos?
-
-Vídeo: Netflix Brasil (canal oficial no YouTube)
-
-#DragonBallSuper #Beerus #Netflix #Anime #Japão #MorsaDigital
-```
+99 na fila | legendas ok: 6 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 11/10 — The Batman - Trailer Principal
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ok
@@ -1284,10 +1269,18 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 16/10 — Grand Theft Auto IV Trailer 1 "Things Will Be Different"
-Rockstar Games · ? · ? · legenda: ainda não gerada
+Rockstar Games · ? · ? · legenda: ok
 
 ```
-(gerada na hora da publicação)
+Grand Theft Auto IV e a frase "Things Will Be Different" ecoam na cabeça de qualquer fã que cresceu com a série.
+
+Esse trailer foi o divisor de águas entre a era PS2/Xbox e a chegada do HD no PS3 e Xbox 360. A Rockstar prometeu um salto gráfico e uma narrativa mais sombria, mudando completamente o tom da franquia.
+
+Qual foi a primeira coisa que você jogou em 2008? Foi GTA IV ou esperou a continuação?
+
+Vídeo: Rockstar Games (canal oficial no YouTube)
+
+#GTAIV #GrandTheftAuto #RockstarGames #GTACommunity #NostalgiaGamer #GTA6
 ```
 
 ### 17/10 — Sonic 3: O Filme | Trailer Oficial | DUB | Paramount Pictures Brasil
