@@ -315,8 +315,13 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   story: reel → teaser de 15s do próprio vídeo com selo discreto; post → a arte do
   post sobre preto. (A 1ª versão, um print do vídeo com texto por cima, o Tulio
   reprovou como "grotesca"; manter o desenho limpo e sem texto duplicado.)
-  Máx. 3/dia, 2h30 de intervalo, das 8h às 23h. A API não tem enquete, caixinha,
-  link nem "compartilhar post": story interativo só à mão, pelo app.
+  Máx. 3/dia, **um por período** (manhã 8h–12h, tarde 12h–18h, noite 18h–23h;
+  `PERIODS`/`_period`, pedido e aprovado pelo Tulio em 11/10/2026), 2h30 de
+  intervalo. Reel tem prioridade sobre estático. O vídeo do teaser sobe por upload
+  direto à Meta (`_publish_video_story`), nunca por URL de release: o repo da Ordem
+  Sith é privado e a Meta não alcança o link (erro 2207076). O workflow tem portão
+  `--due` e só instala ffmpeg quando o story é de reel. A API não tem enquete,
+  caixinha, link nem "compartilhar post": story interativo só à mão, pelo app.
 - **Auditoria** (`reel_queue.py audit`, roda no fim de `run_reel_local.sh`): confere
   os arquivos, gera a legenda dos próximos 6 dias e passa por `lint_caption` (regras
   fixas) e `judge_caption` (gpt-oss-120b aponta detalhe inventado). Legenda aprovada
