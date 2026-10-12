@@ -7,7 +7,7 @@ caixinha nem link, e não faz o "compartilhar post no story" do app. Então:
   - reel novo  → teaser de 15s do próprio vídeo, com selo e chamada discretos;
   - post novo  → a arte do post inteira sobre preto, com dois rótulos pequenos.
 
-Regras: no máximo MAX_PER_DAY por dia, MIN_GAP_MIN entre um e outro, só posts das
+Regras: no máximo MAX_PER_DAY por dia, um por período (manhã, tarde, noite), MIN_GAP_MIN entre um e outro, só posts das
 últimas 24h, um story por post. Estado em data/stories_log.json.
 
 O mesmo arquivo roda no morsa-digital-autoposter e no ordem-sith-autoposter: a
@@ -81,6 +81,13 @@ def recent_posts(hours: int = 24) -> list[dict]:
     return out
 
 
+PERIODS = (("manhã", 12), ("tarde", 18), ("noite", 24))   # nome, hora em que termina
+
+
+def _period(hour: int) -> str:
+    return next(name for name, end in PERIODS if hour < end)
+
+
 def pick(posts: list[dict], log: list[dict], now: datetime) -> tuple[dict | None, str]:
     """Qual post vira story agora (ou None e o motivo)."""
     if not QUIET_BEFORE <= now.hour < QUIET_AFTER:
@@ -88,6 +95,10 @@ def pick(posts: list[dict], log: list[dict], now: datetime) -> tuple[dict | None
     today = [e for e in log if e["at"][:10] == now.date().isoformat()]
     if len(today) >= MAX_PER_DAY:
         return None, f"já saíram {len(today)} stories hoje"
+    # um por período (manhã, tarde, noite), para a conta aparecer o dia inteiro
+    name = _period(now.hour)
+    if any(_period(datetime.fromisoformat(e["at"]).hour) == name for e in today):
+        return None, f"já saiu o story da {name}"
     if log:
         gap = (now - datetime.fromisoformat(max(e["at"] for e in log))).total_seconds() / 60
         if gap < MIN_GAP_MIN:
