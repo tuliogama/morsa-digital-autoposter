@@ -43,7 +43,7 @@ GTA_RSS_FEEDS = [
 GTA_TITLE_RE = re.compile(r"\bgta\b|grand theft auto", re.IGNORECASE)
 # Guia de compra/promoção não é notícia
 _GTA_BLOCK_RE = re.compile(
-    r"\bdeals?\b|discount|pre-?order|onde comprar|com desconto|pré-venda|age rating|naked|nude|\\bnua?\\b|pelad",
+    r"\bdeals?\b|discount|pre-?order|onde comprar|com desconto|pré-venda|age rating",
     re.IGNORECASE)
 
 # Fontes 100% nerd — aceitar todos os artigos sem filtro de keyword
@@ -110,10 +110,22 @@ def _fetch_url(url: str, timeout: int = 10) -> Optional[str]:
         return None
 
 
+# Nudez e sexo ficam fora da página, venha de onde vier (pedido do Tulio em 12/10/2026,
+# depois de sair um post sobre vazamento com a Lucia nua). Vale para título, resumo e legenda.
+ADULT_RE = re.compile(
+    r"\bnuas?\b|\bnus?\b(?! metal)|\bpelad[oa]s?\b|nudez|\bnudes?\b|\bnudity\b|naked|topless|"
+    r"sem roupa|semi-?nu|\bsexo\b|\bsex\b|sexual|sexy|er[oó]tic|porn|nsfw|onlyfans|hentai|"
+    r"striptease|stripper|\b18\+", re.IGNORECASE)
+
+
+def is_adult(*texts: str) -> bool:
+    return any(ADULT_RE.search(t or "") for t in texts)
+
+
 def _is_blocked(title: str) -> bool:
     """Rejeita podcasts, listas genéricas e conteúdo proibido independente da fonte."""
     title_lower = title.lower()
-    return any(kw in title_lower for kw in BLOCK_KEYWORDS)
+    return is_adult(title) or any(kw in title_lower for kw in BLOCK_KEYWORDS)
 
 
 def fetch_article_text(url: str, max_chars: int = 1800) -> str:
