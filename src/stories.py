@@ -195,32 +195,30 @@ def render_teaser(post: dict, workdir: str) -> str:
     return out
 
 
-def _host_video(path: str) -> str:
-    """Hospeda o teaser numa Release do próprio repositório (URL pública para a Meta buscar)."""
-    repo = os.environ.get("GITHUB_REPOSITORY") or subprocess.run(
-        ["gh", "repo", "view", "--json", "nameWithOwner", "-q", ".nameWithOwner"],
-        capture_output=True, text=True).stdout.strip()
-    tag = "stories-media"
-    if subprocess.run(["gh", "release", "view", tag, "--repo", repo], capture_output=True).returncode != 0:
-        subprocess.run(["gh", "release", "create", tag, "--repo", repo, "--title", "Stories",
-                        "--notes", "Vídeos temporários dos stories."], capture_output=True, check=True)
-    r = subprocess.run(["gh", "release", "upload", tag, path, "--repo", repo, "--clobber"],
-                       capture_output=True, text=True)
-    if r.returncode != 0:
-        raise RuntimeError(f"upload falhou: {r.stderr[-200:]}")
-    return f"https://github.com/{repo}/releases/download/{tag}/{os.path.basename(path)}"
-
-
-def _publish_video_story(video_url: str) -> str:
+def _publish_video_story(path: str) -> str:
+    """
+    Envia o arquivo direto para a Meta (upload resumable) e publica como story.
+    Sem link público no meio: o repositório da Ordem Sith é privado e a Meta não
+    conseguia buscar o vídeo numa Release dele (erro 2207076).
+    """
     from publishers.instagram import _post, _publish_container
     token, ig = os.environ["FB_ACCESS_TOKEN"], os.environ["IG_USER_ID"]
     container = _post(f"{GRAPH_URL}/{ig}/media",
-                      {"media_type": "STORIES", "video_url": video_url, "access_token": token})["id"]
+                      {"media_type": "STORIES", "upload_type": "resumable", "access_token": token})
+    data = Path(path).read_bytes()
+    req = urllib.request.Request(
+        container.get("uri") or f"https://rupload.facebook.com/ig-api-upload/v21.0/{container['id']}",
+        data=data, method="POST",
+        headers={"Authorization": f"OAuth {token}", "offset": "0", "file_size": str(len(data)),
+                 "Content-Type": "application/octet-stream"})
+    with urllib.request.urlopen(req, timeout=300) as r:
+        if not json.loads(r.read()).get("success"):
+            raise RuntimeError("a Meta não confirmou o recebimento do vídeo")
     for _ in range(24):                                       # até 4 minutos de processamento
         time.sleep(10)
-        status = _get(f"{GRAPH_URL}/{container}?fields=status_code,status&access_token={token}")
+        status = _get(f"{GRAPH_URL}/{container['id']}?fields=status_code,status&access_token={token}")
         if status.get("status_code") == "FINISHED":
-            return _publish_container(ig, token, container)
+            return _publish_container(ig, token, container["id"])
         if status.get("status_code") == "ERROR":
             raise RuntimeError(f"a Meta recusou o vídeo: {status}")
     raise RuntimeError("vídeo do story não ficou pronto a tempo")
@@ -232,6 +230,12 @@ def main() -> int:
     now = datetime.now(BRT)
     log = _load_log()
     post, reason = pick(recent_posts(), log, now)
+    if "--due" in sys.argv:                 # usado pelo workflow para não instalar ffmpeg à toa
+        logger.info(reason if post is None else f"há story a publicar ({'reel' if post['is_reel'] else 'post'})")
+        if os.environ.get("GITHUB_OUTPUT"):
+            with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+                f.write(f"due={'true' if post else 'false'}\nreel={'true' if post and post['is_reel'] else 'false'}\n")
+        return 0
     if post is None:
         logger.info(f"Sem story agora: {reason}")
         return 0
@@ -245,7 +249,7 @@ def main() -> int:
                 shutil.copy(teaser, preview / "story_preview.mp4")
                 logger.info(f"Dry run: teaser salvo em {preview / 'story_preview.mp4'}")
                 return 0
-            story_id = _publish_video_story(_host_video(teaser))
+            story_id = _publish_video_story(teaser)
     else:
         image = render_feed(post)
         if dry:
