@@ -23,37 +23,37 @@
   "story_id": "17974406784151016",
   "at": "2026-10-11T21:01:24-03:00",
   "insights": {
-   "reach": 29,
-   "views": 33,
+   "reach": 30,
+   "views": 37,
    "replies": 1,
    "shares": 0,
    "total_interactions": 2,
    "follows": 0,
    "profile_visits": 0,
-   "swipe_forward": 3,
-   "tap_forward": 26,
-   "tap_exit": 3
+   "tap_exit": 3,
+   "tap_forward": 29,
+   "swipe_forward": 3
   },
-  "insights_at": "2026-10-12T15:18:14-03:00"
+  "insights_at": "2026-10-12T17:20:51-03:00"
  },
  {
   "media_id": "18078783065722164",
   "story_id": "18034045028847746",
   "at": "2026-10-11T21:02:33-03:00",
   "insights": {
-   "reach": 28,
-   "views": 31,
+   "reach": 29,
+   "views": 35,
    "replies": 1,
    "shares": 0,
    "total_interactions": 2,
    "follows": 0,
    "profile_visits": 0,
-   "tap_back": 2,
+   "tap_back": 3,
    "tap_exit": 1,
-   "tap_forward": 25,
-   "swipe_forward": 2
+   "tap_forward": 27,
+   "swipe_forward": 3
   },
-  "insights_at": "2026-10-12T15:18:14-03:00"
+  "insights_at": "2026-10-12T17:20:51-03:00"
  },
  {
   "media_id": "17884152141623845",
@@ -61,17 +61,18 @@
   "at": "2026-10-11T21:03:06-03:00",
   "insights": {
    "reach": 27,
-   "views": 29,
+   "views": 32,
    "replies": 1,
    "shares": 0,
    "total_interactions": 2,
    "follows": 0,
    "profile_visits": 0,
-   "swipe_forward": 1,
+   "tap_back": 1,
+   "tap_forward": 27,
    "tap_exit": 2,
-   "tap_forward": 25
+   "swipe_forward": 1
   },
-  "insights_at": "2026-10-12T15:18:14-03:00"
+  "insights_at": "2026-10-12T17:20:51-03:00"
  },
  {
   "media_id": "18177318985450190",
@@ -79,21 +80,35 @@
   "at": "2026-10-11T21:04:11-03:00",
   "insights": {
    "reach": 26,
-   "views": 27,
+   "views": 30,
    "replies": 1,
    "shares": 0,
    "total_interactions": 2,
    "follows": 0,
    "profile_visits": 1,
-   "tap_forward": 18,
+   "tap_back": 1,
+   "swipe_forward": 3,
    "tap_exit": 6,
-   "swipe_forward": 3
+   "tap_forward": 20
   },
-  "insights_at": "2026-10-12T15:18:14-03:00"
+  "insights_at": "2026-10-12T17:20:51-03:00"
  },
  {
   "media_id": "17885701443622697",
   "story_id": "17932343460409455",
-  "at": "2026-10-12T15:17:20-03:00"
+  "at": "2026-10-12T15:17:20-03:00",
+  "insights": {
+   "reach": 8,
+   "views": 9,
+   "replies": 1,
+   "shares": 0,
+   "total_interactions": 1,
+   "follows": 0,
+   "profile_visits": 0,
+   "tap_exit": 3,
+   "tap_forward": 5,
+   "swipe_forward": 1
+  },
+  "insights_at": "2026-10-12T17:20:51-03:00"
  }
 ]
