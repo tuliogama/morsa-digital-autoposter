@@ -1,24 +1,8 @@
-# Fila de reels @morsadigital — 11/10/2026 09:53 BRT
+# Fila de reels @morsadigital — 12/10/2026 00:09 BRT
 
 ## cenas — a partir das 11h
 
-120 na fila | legendas ok: 37 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 11/10 — A segunda temporada de X-Men 97
-Marvel Brasil · vertical · pt · legenda: ok
-
-```
-Ciclope, Jean Grey ou Wolverine: quem te marcou mais?
-
-A volta da série que definiu uma época, agora com seus conflitos ainda mais intensos.
-É impossível não sentir aquele frio na barriga de quando éramos crianças vendo os mutantes.
-
-Qual foi a sua primeira reação ao saber que a temporada 2 tinha chegado?
-
-Vídeo: Marvel Brasil (canal oficial no YouTube)
-
-#XMen97 #XMen #Wolverine #Magneto #Ciclope #MorsaDigital
-```
+119 na fila | legendas ok: 36 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 12/10 — 30 anos de Toy Story | 3 curiosidades da franquia!
 Walt Disney Studios BR · vertical · pt · legenda: ok
@@ -1191,22 +1175,7 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
 ## main — a partir das 13h
 
-99 na fila | legendas ok: 6 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 11/10 — The Batman - Trailer Principal
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: ok
-
-```
-Robert Pattinson como Batman, e o trailer que definiu o tom sombrio e noir da DC nos cinemas.
-
-Matt Reeves trouxe uma Gotham City imersa na chuva e no crime organizado, longe do herói superpoderoso. A atuação de Pattinson, dividida entre o detetive e o bilionário recluso Bruce Wayne, rendeu elogios pela intensidade. Zoë Kravitz como Selina Kyle e Paul Dano no papel do vilão principal completaram um elenco que apostou em um thriller policial denso.
-
-Qual foi a sua primeira reação ao ver esse trailer em 2021, você já estava convencido ou ainda tinha dúvida sobre esse Batman mais humano?
-
-Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
-
-#TheBatman #RobertPattinson #DCComics #MattReeves #GothamCity #MorsaDigital
-```
+98 na fila | legendas ok: 6 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 12/10 — VisionQuest | Trailer Oficial Dublado | Disney+
 Disney+ Brasil · ? · ? · legenda: ok
@@ -1284,10 +1253,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 17/10 — Sonic 3: O Filme | Trailer Oficial | DUB | Paramount Pictures Brasil
-Paramount Brasil · horizontal · pt · legenda: ainda não gerada
+Paramount Brasil · horizontal · pt · legenda: ok
 
 ```
-(gerada na hora da publicação)
+Sonic 3 e aquela energia pura de quem não consegue parar em nenhum lugar.
+
+A Paramount Brasil já tinha avisado que a hora do show estava chegando com tudo, e esse trailer oficial dublado capturou exatamente esse hype final antes da estreia nos cinemas. É o tipo de material que a gente guarda pra rever sempre que bate aquela saudade da trilha sonora e das corridas aceleradas do ouriço azul.
+
+Qual foi a cena que mais te deixou com o coração na mão enquanto assistia ao trailer?
+
+Vídeo: Paramount Brasil (canal oficial no YouTube)
+
+#Sonic3 #SonicTheHedgehog #SonicMovie #ParamountBrasil #DublagemBR #GeekBR
 ```
 
 ### 18/10 — IT: Bem-Vindos a Derry | Red Band Trailer Dublado | HBO Max

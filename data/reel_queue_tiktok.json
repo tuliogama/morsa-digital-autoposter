@@ -323,7 +323,8 @@
     "plan_order": 13,
     "theme": "halloween",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "hook_text": null
   },
   {
     "video_id": "hAhvwBXnY9I",
@@ -346,7 +347,8 @@
       "detalhe sem base: É difícil não se prender nesse caos que só Hazbin Hotel sabe criar.",
       "detalhe sem base: Marca aquele amigo que precisa rever essa cena agora."
     ],
-    "caption_check": "revisar"
+    "caption_check": "revisar",
+    "hook_text": null
   },
   {
     "video_id": "N3iOQVkcK5s",
@@ -416,7 +418,8 @@
       "detalhe sem base: primeira vez que ela viu um dragão",
       "detalhe sem base: Essa cena da Cersei em Game of Thrones"
     ],
-    "caption_check": "revisar"
+    "caption_check": "revisar",
+    "hook_text": "Cersei ficou surpresa com o dragão?"
   },
   {
     "video_id": "Z0336eXroZU",
@@ -434,7 +437,8 @@
     "plan_order": 19,
     "theme": "halloween",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "hook_text": null
   },
   {
     "video_id": "xrcLfSLlUHk",
@@ -455,7 +459,8 @@
     "caption_problems": [
       "detalhe sem base: conexão com o mar é essencial para o universo de Percy Jackson e os Olimpianos"
     ],
-    "caption_check": "revisar"
+    "caption_check": "revisar",
+    "hook_text": "Percy Jackson: qual seu mito favorito?"
   },
   {
     "video_id": "5469Ntt_bQE",
@@ -477,7 +482,8 @@
       "detalhe sem base: colônias amaldiçoadas",
       "detalhe sem base: Yuji lida com as colônias amaldiçoadas"
     ],
-    "caption_check": "revisar"
+    "caption_check": "revisar",
+    "hook_text": null
   },
   {
     "video_id": "Go57RDsfxIU",
@@ -495,7 +501,8 @@
     "plan_order": 23,
     "theme": "halloween",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "hook_text": "Todo Mundo Em Pânico: já assistiu?"
   },
   {
     "video_id": "pO_R4ZTIWWk",
@@ -566,7 +573,8 @@
       "detalhe sem base: Aquele momento em que o inferno fica pequeno pra tanta raiva.",
       "detalhe sem base: É o tipo de cena que você fica querendo rever só pra sentir a energia de novo."
     ],
-    "caption_check": "revisar"
+    "caption_check": "revisar",
+    "hook_text": null
   },
   {
     "video_id": "RaF1L7Wc2Pg",
@@ -587,7 +595,8 @@
     "caption_problems": [
       "detalhe sem base: acompanha os Tanjiro e o grupo"
     ],
-    "caption_check": "revisar"
+    "caption_check": "revisar",
+    "hook_text": "Demon Slayer, viu o treino dos Hashiras?"
   },
   {
     "video_id": "j29FHpY2BIU",
@@ -659,7 +668,8 @@
       "detalhe sem base: É a cena que todo fã de The Big Bang Theory guardou na memória.",
       "detalhe sem base: Ninguém mais nunca mais conseguiu olhar para eles do mesmo jeito."
     ],
-    "caption_check": "revisar"
+    "caption_check": "revisar",
+    "hook_text": null
   },
   {
     "video_id": "G9nmGNLsb-I",
@@ -729,7 +739,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ac97a7fc72f8e4495897038",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-11T09:30:00",
     "posted_at": "2026-10-11T09:30:00"
   },
@@ -749,7 +759,8 @@
     "plan_order": 36,
     "theme": "halloween",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "hook_text": "Ghostface: qual seu filme favorito?"
   },
   {
     "video_id": "2Lp6x5vakns",
@@ -771,7 +782,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ac97a811f86950eb535449a",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-11T15:00:00",
     "posted_at": "2026-10-11T15:00:00"
   },
@@ -791,7 +802,8 @@
     "plan_order": 39,
     "theme": "halloween",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "hook_text": null
   },
   {
     "video_id": "ZjQL_CMytMU",
@@ -813,7 +825,7 @@
     "caption": "Lúcifer sendo a figura paterna perfeita? Concorda ou acha exagero?\n\nÉ impossível não sentir aquele afeto quando ele aparece.\nA dinâmica entre ele e a Charlie tem um peso emocional que gruda na gente.\nRelembra esse momento e vê como a conexão entre os dois é forte.\n\nComenta aí: você também sente que ele é o melhor pai da galáxia?\n\nVídeo: Prime Video Brasil (canal oficial no YouTube)\n\n#HazbinHotel #Lucifer #Charlie #HazbinHotelAnimation #PrimeVideo #MorsaDigital",
     "caption_check": "ok",
     "tiktok_id": "6ac97a8fc72f8e4495897060",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-11T16:30:00",
     "posted_at": "2026-10-11T16:30:00"
   },
@@ -837,7 +849,7 @@
     "caption": "Solo Leveling é digno de Anime do Ano pra você?\n\nA votação pro Anime Awards ainda tá aberta, e a galera tá mobilizada pra garantir o troféu pro nosso caçador favorito. É aquele tipo de obra que fez a comunidade engajar de um jeito que a gente não via há tempo.\n\nMe conta nos comentários: você tá votando todo dia ou acha que já ganhou de lavada?\n\nVídeo: Crunchyroll Brasil (canal oficial no YouTube)\n\n#SoloLeveling #AnimeAwards #Crunchyroll #AnimeDoAno #Caçador #MorsaDigital",
     "caption_check": "ok",
     "tiktok_id": "6ac97a9dc72f8e4495897382",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-11T18:00:00",
     "posted_at": "2026-10-11T18:00:00"
   },
@@ -861,7 +873,7 @@
     "caption": "Você lembrava dessa cena do Nick e da Judy ou tá descobrindo agora?\n\nÉ sempre bom ver a dupla de volta e juntos como nunca.\nRodrigo Lombardi e Monica Iozzi ainda nos contaram um pouquinho mais sobre o processo.\n\nComenta aí o que achou dessa interação dos dois!\n\nVídeo: Walt Disney Studios BR (canal oficial no YouTube)\n\n#Zootopia2 #NickWilde #JudyHopps #RodrigoLombardi #MonicaIozzi #MorsaDigital",
     "caption_check": "ok",
     "tiktok_id": "6ac97aaacb39fae8b29d33f0",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-11T19:30:00",
     "posted_at": "2026-10-11T19:30:00"
   },
@@ -886,7 +898,8 @@
       "detalhe sem base: Ver a Rainha de Essos em A Casa do Dragão",
       "detalhe sem base: ver a Targaryen de novo, mesmo que seja só uma aparição"
     ],
-    "caption_check": "revisar"
+    "caption_check": "revisar",
+    "hook_text": "Daenerys ficou bem na Casa do Dragão?"
   },
   {
     "video_id": "VBCQYLOYWH4",
@@ -904,7 +917,8 @@
     "plan_order": 45,
     "theme": "halloween",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "hook_text": null
   },
   {
     "video_id": "d6OXH35F-1s",
@@ -925,7 +939,8 @@
     "caption_problems": [
       "detalhe sem base: Qual chalice você defenderia se alguém falasse mal?"
     ],
-    "caption_check": "revisar"
+    "caption_check": "revisar",
+    "hook_text": "Percy Jackson: qual seu momento favorito?"
   },
   {
     "video_id": "qrJDo64EZjQ",
@@ -947,7 +962,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ac97ad4d2414cb46dae949f",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-11T21:00:00",
     "posted_at": "2026-10-11T21:00:00"
   },
@@ -971,7 +986,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ac97ad7d2414cb46dae94ae",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-11T22:30:00",
     "posted_at": "2026-10-11T22:30:00"
   },
@@ -991,7 +1006,8 @@
     "plan_order": 49,
     "theme": "halloween",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "hook_text": null
   },
   {
     "video_id": "ylY19Yqzeu4",
@@ -1039,7 +1055,8 @@
       "detalhe sem base: É o tipo de personagem que fica na cabeça só de ver ele aparecendo.",
       "detalhe sem base: Sente o peso daquela presença na tela."
     ],
-    "caption_check": "revisar"
+    "caption_check": "revisar",
+    "hook_text": "Adão sentiu o solo do Inferno?"
   },
   {
     "video_id": "tF3fKNvr21c",
@@ -1132,7 +1149,8 @@
     "caption_problems": [
       "detalhe sem base: bastidores do TBBT com Kyle Chandler e Aaron Pierre"
     ],
-    "caption_check": "revisar"
+    "caption_check": "revisar",
+    "hook_text": null
   },
   {
     "video_id": "CMbDjJvVAhU",
@@ -1153,7 +1171,8 @@
     "caption_problems": [
       "detalhe sem base: Annabeth"
     ],
-    "caption_check": "revisar"
+    "caption_check": "revisar",
+    "hook_text": "Percy Jackson: qual seu mito favorito?"
   },
   {
     "video_id": "Yz2gp70k3eU",
@@ -1199,7 +1218,8 @@
       "detalhe sem base: Ver o time se reunindo num palco cheio de fãs brasileiro",
       "detalhe sem base: É aquele momento em que a teoria da web encontra o concreto da CCXP"
     ],
-    "caption_check": "revisar"
+    "caption_check": "revisar",
+    "hook_text": null
   },
   {
     "video_id": "NgNuZ9hIsF0",
@@ -1217,7 +1237,8 @@
     "plan_order": 62,
     "theme": "halloween",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "hook_text": "Todo Mundo Em Pânico, já viu?"
   },
   {
     "video_id": "3dDIBDpgD9I",
@@ -1235,7 +1256,8 @@
     "plan_order": 64,
     "theme": "halloween",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "hook_text": null
   },
   {
     "video_id": "16h-yqRB0Zk",
@@ -1256,7 +1278,8 @@
     "caption_problems": [
       "1ª linha não é pergunta"
     ],
-    "caption_check": "revisar"
+    "caption_check": "revisar",
+    "hook_text": null
   },
   {
     "video_id": "AomLSVgJMQo",
@@ -1351,7 +1374,8 @@
       "detalhe sem base: Essa mistura de humor e fantasia sempre rendeu as melhores memórias da série",
       "detalhe sem base: Veja como ele se preparou para o papel"
     ],
-    "caption_check": "revisar"
+    "caption_check": "revisar",
+    "hook_text": null
   },
   {
     "video_id": "DDSk6n2XR8c",
@@ -1743,7 +1767,13 @@
     "kind": "cena",
     "plan_order": 95,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: julgamento de Luke Castellan",
+      "detalhe sem base: sentença",
+      "detalhe sem base: destino dele parece ser decidido na frente de todos"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "_W_SQaUwzUI",
@@ -1760,7 +1790,13 @@
     "kind": "cena",
     "plan_order": 96,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: A 2ª temporada de Avatar: O Último Mestre Do Ar já está disponível.",
+      "detalhe sem base: Gus Machado fez uma montanha-russa inspirada em Omashu no quintal da casa dele",
+      "detalhe sem base: O Gus Machado construiu uma montanha-russa de Avatar no quintal?"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "iZMXJLmFKjQ",
@@ -1777,7 +1813,13 @@
     "kind": "cena",
     "plan_order": 97,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: Minotauro e Malvino Salvador",
+      "detalhe sem base: A nova temporada já tá rodando no Disney+",
+      "detalhe sem base: nova temporada"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "bOtCFVmkdh8",
@@ -1826,11 +1868,18 @@
     "youtube_url": "https://www.youtube.com/watch?v=JcNIJxx4UpQ",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/JcNIJxx4UpQ.mp4",
     "added_at": "2026-10-09T22:07:30.620021-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 101,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Vaggie e Charlie: seu maior ship ou exagero da comunidade?\n\nVer esse compilado de momentos entre as duas relembrar o quão forte é a conexão delas.\nÉ impossível não sentir aquele carinho toda vez que vê as duas juntas.\n\nComenta aí qual foi o beijo que mais te pegou de surpresa.\n\nVídeo: Prime Video Brasil (canal oficial no YouTube)\n\n#HazbinHotel #CharlieVaggie #Vaggie #Charlie #HazbinHotelBrasil #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6acc573c948b38d205da2481",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-14T09:30:00",
+    "posted_at": "2026-10-14T09:30:00"
   },
   {
     "video_id": "5E1HSnw6720",
@@ -1843,11 +1892,18 @@
     "youtube_url": "https://www.youtube.com/watch?v=5E1HSnw6720",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/5E1HSnw6720.mp4",
     "added_at": "2026-10-09T22:08:46.603183-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 102,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [],
+    "caption": "Fern e Stark são só carinho ou tem algo mais?\n\nQuem acompanhou a temporada não esquece dessa interação.\nÉ aquele momento que prende a atenção do fã.\nA dinâmica entre os dois sempre chama atenção.\n\nComenta aí: você acha que é só amizade ou tem mais?\n\nVídeo: Crunchyroll Brasil (canal oficial no YouTube)\n\n#Frieren #Fern #Stark #FrierenAEjercicioParaOAlam #AnimeCrunchyroll #MorsaDigital",
+    "caption_check": "ok",
+    "tiktok_id": "6acc5748f23c293fcb4814d9",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-14T15:00:00",
+    "posted_at": "2026-10-14T15:00:00"
   },
   {
     "video_id": "z2hMHz2pRHw",
@@ -1864,7 +1920,12 @@
     "kind": "cena",
     "plan_order": 103,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: os dubladores do Nick e Judy, os protagonistas do filme interpretados por Rodrigo Lombardi e Monica Iozzi",
+      "detalhe sem base: #Zootopia2 chega aos cinemas em 27 de novembro"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "eglI0G7He_8",
@@ -1877,11 +1938,18 @@
     "youtube_url": "https://www.youtube.com/watch?v=eglI0G7He_8",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/eglI0G7He_8.mp4",
     "added_at": "2026-10-09T22:44:38.045520-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 105,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Qual personagem de A Casa Do Dragão a Millie Alcock escolheu?\n\nRelembre as escolhas da atriz que dá vida a Rhaenyra Targaryen na série.\nÉ sempre interessante ver como quem está por trás da câmera enxerga o universo que criaram.\n\nComenta aí quem é o seu favorito!\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#ACasaDoDragao #HouseOfTheDragon #MillyAlcock #RhaenyraTargaryen #HBO #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6acc575d948b38d205da24ad",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-14T16:30:00",
+    "posted_at": "2026-10-14T16:30:00"
   },
   {
     "video_id": "CszN9y5wHeA",
@@ -1912,11 +1980,18 @@
     "youtube_url": "https://www.youtube.com/watch?v=RPonZ351x44",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/RPonZ351x44.mp4",
     "added_at": "2026-10-09T22:47:32.638574-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 107,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Qual deus ou deusa do Olimpo te dá mais vontade de gritar?\n\nVoltamos ao Acampamento Meio-Sangue pra perguntar o óbvio: quem é o seu favorito no universo de Percy Jackson?\nÉ aquele clássico de escolher entre forças da natureza e divindades que viram a gente de lado.\n\nComenta aí qual é a sua escolha e diz se concorda com a galera ou se tá sozinho nessa.\n\nVídeo: Disney+ Brasil (canal oficial no YouTube)\n\n#PercyJackson #AcampamentoMeioSangue #DisneyPlus #SemiDeuses #Olimpo #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6acc5760948b38d205da24b5",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-14T18:00:00",
+    "posted_at": "2026-10-14T18:00:00"
   },
   {
     "video_id": "K4DyKINal2M",
@@ -1929,11 +2004,18 @@
     "youtube_url": "https://www.youtube.com/watch?v=K4DyKINal2M",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/K4DyKINal2M.mp4",
     "added_at": "2026-10-09T22:48:38.179749-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 108,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Você já tem sua teoria final pro confronto com Muzan?\n\nA tensão da batalha final tá no ar e os preparativos se intensificando.\nÉ difícil segurar a ansiedade pra ver como isso vai desfechar.\n\nComenta aí qual é a sua previsão pro clímax.\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#DemonSlayer #KimetsuNoYaiba #CasteloInfinito #MuzanKibutsu #Anime #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6acc5763f23c293fcb482313",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-14T19:30:00",
+    "posted_at": "2026-10-14T19:30:00"
   },
   {
     "video_id": "XhqofnybNrc",
@@ -1946,11 +2028,18 @@
     "youtube_url": "https://www.youtube.com/watch?v=XhqofnybNrc",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/XhqofnybNrc.mp4",
     "added_at": "2026-10-09T22:50:37.704271-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 109,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Sua teoria sobre o Doutor Destino bate com a da maioria?\n\nTodo mundo já teve aquela teoria maluca que ninguém acreditava.\nÉ o que faz a espera pelo filme valer a pena, né?\nQuem mais tava com a cabeça cheia de palpite?\n\nComenta aí qual era a sua teoria mais ousada.\n\nVídeo: Marvel Brasil (canal oficial no YouTube)\n\n#VingadoresDoutorDestino #DoutorDestino #MCU #AvengersEndgame #MarvelBrasil #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6acc5765948b38d205da24d3",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-14T21:00:00",
+    "posted_at": "2026-10-14T21:00:00"
   },
   {
     "video_id": "kTDNrm6YZpE",
@@ -1985,7 +2074,11 @@
     "kind": "cena",
     "plan_order": 113,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: Angela Dust"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "kHY7BJz5pXk",
@@ -2002,7 +2095,12 @@
     "kind": "cena",
     "plan_order": 114,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: A animação desse filme prometeu muito e a expectativa tá lá em cima.",
+      "detalhe sem base: Só a ideia de ver Jujutsu Kaisen no grande telão já dá aquele frio na barriga."
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "zdOvNlBH_xw",
@@ -2019,7 +2117,11 @@
     "kind": "cena",
     "plan_order": 115,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "1ª linha não é pergunta"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "S8s3yrdrIP8",
@@ -2703,6 +2805,186 @@
     "posted": false,
     "kind": "cena",
     "plan_order": 134,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "4JNni0Qagh8",
+    "title": "Quer saber algumas curiosidades de Zootopia 2?",
+    "channel": "Disney+ Brasil",
+    "channel_id": "UCApaSzvP6jM9rfs8UbcqD1g",
+    "category": "movie",
+    "description": "Disney Talks Express no ar para falar de Zootopia 2 que agora está disponível no Disney+.\n\nSim, a maior animação da história já está disponível para maratonar no Disney+ e queremos saber se você já assistiu e se já sabia dessas curiosidades sobre o filme mais animal do universo Disney.",
+    "published": "2026-04-20",
+    "youtube_url": "https://www.youtube.com/watch?v=4JNni0Qagh8",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/4JNni0Qagh8.mp4",
+    "added_at": "2026-10-11T23:34:10.211003-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 135,
+    "hook_text": "Zootopia 2 tem curiosidades incríveis?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "e7U_Lbr2icU",
+    "title": "40 anos do maior acidente nuclear da história: #Chernobyl.",
+    "channel": "HBO Max Brasil",
+    "channel_id": "UCR7ZwQz60rW9dK59Dirdc8w",
+    "category": "series",
+    "description": "",
+    "published": "2026-06-05",
+    "youtube_url": "https://www.youtube.com/watch?v=e7U_Lbr2icU",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/e7U_Lbr2icU.mp4",
+    "added_at": "2026-10-11T23:37:16.013495-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 136,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "xsP5Ssy1dUc",
+    "title": "Jooj Natu descobrindo Invencível",
+    "channel": "Prime Video Brasil",
+    "channel_id": "UCuNjvqjTzw9LcD9PVpTVWRA",
+    "category": "series",
+    "description": "Aquele amigo que não sabe se expressar direito 😅 \n\nAs 3 temporadas de #Invencível estão disponíveis no meu streaming! \n\n Inscreva-se no canal do YouTube: https://bit.ly/35FaAo8 \n\nSobre o #PrimeVideo: Assine Prime Video para assistir a filmes e séries populares, incluindo Amazon Originals premiados. Além de um catálogo cheio de títulos, membros Prime têm acesso a benefícios, como frete GRÁTIS e rápido em milhares de produtos na Amazon.com.br, músicas sem anúncios na Amazon Music, Prime Gaming na Twitch e e-books e revistas no Prime Reading. Tudo na mesma assinatura, por apenas R$ 14,90/mês. Teste Grátis por 30 dias. \n\nSiga nossas redes sociais: \n\nInstagram: https://www.instagram.com/primevide",
+    "published": "2026-02-26",
+    "youtube_url": "https://www.youtube.com/watch?v=xsP5Ssy1dUc",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/xsP5Ssy1dUc.mp4",
+    "added_at": "2026-10-11T23:41:25.626556-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 137,
+    "hook_text": "Jooj Natu ficou impressionado?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "S1JrPdiwW9U",
+    "title": "Bom dia, linda! 😏 | KONOSUBA: Legend of Crimson (Dublado) #shorts",
+    "channel": "Crunchyroll Brasil",
+    "channel_id": "UCVc-JLY3Db6-O48y7TS4N7Q",
+    "category": "other",
+    "description": "Mande esse vídeo para um amigo que adoraria receber um bom dia desses 😂\n\nAssista Konosuba aqui na Crunchyroll - disponível nas opções dublado em português brasileiro e também com áudio original japonês e legendas em português: https://got.cr/konosuba-ybpt\n\nSinopse oficial: \"Satou Kazuma quase morreu ao ser atropelado por um caminhão, mas um acaso do destino o faz reencarnar em outro mundo, acompanhado da deusa trapalhona Aqua, da feiticeira maluca Megumin e da cavaleira delirante Darkness. Esse grupo de indivíduos problemáticos passam por maus bocados, acumulando dívidas, sendo enviados pra prisão e até morrendo (de novo).\nCerto dia, o grupo descobre que a Vila do Demônio Escarlate, de onde ",
+    "published": "2023-05-07",
+    "youtube_url": "https://www.youtube.com/watch?v=S1JrPdiwW9U",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/S1JrPdiwW9U.mp4",
+    "added_at": "2026-10-11T23:43:04.032171-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 138,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "XPb8nVJEFPk",
+    "title": "Bob Esponja e Patrick viajam pelo mundo - Brasil (Short) | Paramount Pictures Brasil",
+    "channel": "Paramount Brasil",
+    "channel_id": "UCgqD3GdUEfupsdY1kmFLIrw",
+    "category": "other",
+    "description": "Bob Esponja e Patrick visitaram o Brasil!\n\nDepois do roubo da fórmula secreta do hamburger de siri , Bob Esponja, Patrick, Lula Molusco e seus amigos vão invadir nosso mundo para defender a Fenda do Biquini.  \n\nBob Esponja Calça Quadrada, o invertebrado mais amado do fundo do mar, sai da água e invade o nosso mundo para virar um super-herói numa grande aventura.   \n\nInscreva-se: http://bit.ly/17Yo6DD \n\nConecte-se com Bob Esponja: Um Herói Fora d'Água online: \n\nSITE: www.bobesponjaofilme.com.br Facebook: www.facebook.com/BobEsponjaFilme.BR Twitter: www.twitter.com/paramountbrasil \n\nParamount Pictures Internacional A Paramount Pictures há mais de 100 anos leva entretenimento para o\npúblico de ",
+    "published": "2015-02-04",
+    "youtube_url": "https://www.youtube.com/watch?v=XPb8nVJEFPk",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/XPb8nVJEFPk.mp4",
+    "added_at": "2026-10-11T23:48:05.503176-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 139,
+    "hook_text": "Bob Esponja já visitou todos os continentes?",
+    "layout": "horizontal",
+    "lang": "pt"
+  },
+  {
+    "video_id": "4Koznz3VP9A",
+    "title": "Aulas com #Rochelle | Todo Mundo Odeia o Chris | Paramount Plus",
+    "channel": "Paramount+ Brasil",
+    "channel_id": "UCAnCxJ1Weh2pUAKJW0bro0Q",
+    "category": "other",
+    "description": "Produtos Ivone fazendo sucesso desde que o brasileiro descobriu que ama #todomundoodeiaochris +++++++++++++++++++++++++++++++++++++++++++++++++++++++++\nCurtiu? Assista o Paramount+ em https://www.paramountplus.com ou baixe o app, disponível para telefones e tablets, IOS e Android:\nhttps://smart.link/z36qrfjaimzim\nInscreva-se no canal do YouTube: https://www.youtube.com/channel/UCW8l...\nSiga a nossa página no Facebook: https://www.facebook.com/ParamountPlusbr\nSiga o nosso Twitter: https://twitter.com/ParamountPlusbr\nSiga o nosso Instagram: https://www.instagram.com/paramountplusbr\nSiga o nosso TikTok: https://www.tiktok.com/@paramountplusbr\n\n\n\nParamount+ possui milhares de episódios de: Comed",
+    "published": "2023-10-18",
+    "youtube_url": "https://www.youtube.com/watch?v=4Koznz3VP9A",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/4Koznz3VP9A.mp4",
+    "added_at": "2026-10-11T23:53:46.175624-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 140,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "stimOGdOxwQ",
+    "title": "O inesquecível final de Família Soprano! 👌✨",
+    "channel": "HBO Brasil",
+    "channel_id": "UCX2M7xn-jMmq4KfX25TCTCA",
+    "category": "series",
+    "description": "Quem também ama esse desfecho?? 👌✨\n\nEste título está disponível na Max.",
+    "published": "2024-11-15",
+    "youtube_url": "https://www.youtube.com/watch?v=stimOGdOxwQ",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/stimOGdOxwQ.mp4",
+    "added_at": "2026-10-11T23:56:22.009659-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 141,
+    "hook_text": "Família Soprano: o final foi perfeito?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "tzqzYFWp4v8",
+    "title": "Naruto se divertindo: 😀😆😅 / lembrando do Sasuke: 😔🙁😪",
+    "channel": "Netflix Brasil",
+    "channel_id": "UCc1l5mTmAv2GC_PXrBpqyKQ",
+    "category": "anime_big",
+    "description": "- Eu vejo o Sasuke em todos os lugares\n- Com que frequência?\n- O tempo todo.\n\nAnime: Naruto Shippuden\n\nAssista na Netflix: https://www.netflix.com\n\nInscreva-se: https://bit.ly/31ynwtw\n\nSobre a Netflix:\nA Netflix é um dos principais serviços de entretenimento do mundo com um vasto catálogo de séries, filmes, jogos e eventos ao vivo disponíveis em diversos idiomas. Nossos assinantes podem assistir, pausar e voltar a um título quantas vezes quiserem, onde quer que estejam, e alterar o plano a qualquer momento.\n\nNaruto se divertindo: 😀😆😅 / lembrando do Sasuke: 😔🙁😪\nhttps://www.youtube.com/@NetflixBrasil",
+    "published": "2026-02-14",
+    "youtube_url": "https://www.youtube.com/watch?v=tzqzYFWp4v8",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/tzqzYFWp4v8.mp4",
+    "added_at": "2026-10-11T23:58:18.968745-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 142,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "hsoF2nzJZ6c",
+    "title": "Superman | Gangue da justiça",
+    "channel": "Warner Bros. Pictures Brasil",
+    "channel_id": "UCEOVI4AmQE01FDKNFunkV2w",
+    "category": "dc",
+    "description": "Queria saber como faz pra ser parte dessa gangue 😎 #SupermanFilme, HOJE NOS CINEMAS! Garanta seu ingresso no link: https://www.supermanfilme.com.br/",
+    "published": "2025-08-02",
+    "youtube_url": "https://www.youtube.com/watch?v=hsoF2nzJZ6c",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/hsoF2nzJZ6c.mp4",
+    "added_at": "2026-10-12T00:00:37.379671-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 143,
+    "hook_text": "Superman faria parte da Gangue da Justiça?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "DZJqMFs766s",
+    "title": "Vamos falar do live-action de Moana aqui no Disney Talks?",
+    "channel": "Walt Disney Studios BR",
+    "channel_id": "UCP6nJ-Elnfnpjv6HQRsv1Cw",
+    "category": "movie",
+    "description": "Vamos falar do live-action de Moana aqui no Disney Talks?\n\nDisney Talks no ar! \n\nUma das estreias mais esperadas do ano está chegando: o live-action de Moana! Aproveitando que Dwayne Johnson passou aqui pelo Brasil, lá no Rio de Janeiro. Preparamos esse vídeo rápido pra contar a expectativa do filme, curiosidades da produção e muito mais! \n\nO live-action de Moana estreia nos cinemas em 10 de julho! \n\nAliás, todos os produtos em cena, você pode encontrar aqui: https://ddnf.adj.st/generic_landing/?url=https%3A%2F%2Flista.mercadolivre.com.br%2F_Container_moana-disney&adj_t=21192151&adj_redirect=https%3A%2F%2Flista.mercadolivre.com.br%2F_Container_moana-disney",
+    "published": "2026-07-03",
+    "youtube_url": "https://www.youtube.com/watch?v=DZJqMFs766s",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/DZJqMFs766s.mp4",
+    "added_at": "2026-10-12T00:06:31.242244-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 144,
+    "hook_text": null,
     "layout": "vertical",
     "lang": "pt"
   }
