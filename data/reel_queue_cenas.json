@@ -173,7 +173,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=IJIdDdB8MLA",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/IJIdDdB8MLA.mp4",
     "added_at": "2026-10-06T22:21:01.937858-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 4,
     "layout": "vertical",
@@ -182,7 +182,12 @@
     "theme": "criancas",
     "caption": "Você já sabia dessas 3 curiosidades de Toy Story?\n\nÉ impossível não sentir aquele carinho de infância ao ver esses brinquedos ganhando vida.\nLuciano separou fatos rápidos que mostram o quanto essa franquia é especial para a gente.\n\nQual delas te pegou de surpresa? Comenta aí.\n\nVídeo: Walt Disney Studios BR (canal oficial no YouTube)\n\n#ToyStory #ToyStory30Anos #DisneyTalks #LucianoAmaral #DiaDasCrianças #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-12T14:01:09.182850-03:00",
+    "media_id": "17885701443622697",
+    "tiktok_id": "6acd1257876d3e60ab967095",
+    "tiktok_status": "published",
+    "tiktok_url": null
   },
   {
     "video_id": "Ay_2-oJxiwg",
