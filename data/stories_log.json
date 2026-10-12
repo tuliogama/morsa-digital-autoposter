@@ -23,26 +23,26 @@
   "story_id": "17974406784151016",
   "at": "2026-10-11T21:01:24-03:00",
   "insights": {
-   "reach": 19,
-   "views": 23,
+   "reach": 29,
+   "views": 33,
    "replies": 1,
    "shares": 0,
    "total_interactions": 2,
    "follows": 0,
    "profile_visits": 0,
-   "swipe_forward": 2,
-   "tap_forward": 18,
-   "tap_exit": 1
+   "swipe_forward": 3,
+   "tap_forward": 26,
+   "tap_exit": 3
   },
-  "insights_at": "2026-10-12T04:01:22-03:00"
+  "insights_at": "2026-10-12T15:18:14-03:00"
  },
  {
   "media_id": "18078783065722164",
   "story_id": "18034045028847746",
   "at": "2026-10-11T21:02:33-03:00",
   "insights": {
-   "reach": 17,
-   "views": 20,
+   "reach": 28,
+   "views": 31,
    "replies": 1,
    "shares": 0,
    "total_interactions": 2,
@@ -50,43 +50,50 @@
    "profile_visits": 0,
    "tap_back": 2,
    "tap_exit": 1,
-   "tap_forward": 15
+   "tap_forward": 25,
+   "swipe_forward": 2
   },
-  "insights_at": "2026-10-12T04:01:22-03:00"
+  "insights_at": "2026-10-12T15:18:14-03:00"
  },
  {
   "media_id": "17884152141623845",
   "story_id": "17873795994650335",
   "at": "2026-10-11T21:03:06-03:00",
   "insights": {
-   "reach": 16,
-   "views": 17,
+   "reach": 27,
+   "views": 29,
    "replies": 1,
    "shares": 0,
    "total_interactions": 2,
    "follows": 0,
    "profile_visits": 0,
+   "swipe_forward": 1,
    "tap_exit": 2,
-   "tap_forward": 14
+   "tap_forward": 25
   },
-  "insights_at": "2026-10-12T04:01:22-03:00"
+  "insights_at": "2026-10-12T15:18:14-03:00"
  },
  {
   "media_id": "18177318985450190",
   "story_id": "18130557352837956",
   "at": "2026-10-11T21:04:11-03:00",
   "insights": {
-   "reach": 15,
-   "views": 16,
+   "reach": 26,
+   "views": 27,
    "replies": 1,
    "shares": 0,
    "total_interactions": 2,
    "follows": 0,
    "profile_visits": 1,
-   "swipe_forward": 1,
-   "tap_exit": 3,
-   "tap_forward": 11
+   "tap_forward": 18,
+   "tap_exit": 6,
+   "swipe_forward": 3
   },
-  "insights_at": "2026-10-12T04:01:22-03:00"
+  "insights_at": "2026-10-12T15:18:14-03:00"
+ },
+ {
+  "media_id": "17885701443622697",
+  "story_id": "17932343460409455",
+  "at": "2026-10-12T15:17:20-03:00"
  }
 ]
