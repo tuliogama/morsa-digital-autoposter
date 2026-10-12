@@ -646,7 +646,7 @@ _GAME_ONLY_SOURCES = {"GameBlast", "Eurogamer", "Kotaku"}
 
 # Regras em ordem de precedência; \b evita falso positivo ("author" não é Thor)
 _CAT_RULES = [
-    ("gta", r"\bgta\b|grand theft auto|vice city|rockstar games"),
+    ("gta", r"\bgta\b|grand theft auto|vice city|rockstar|leonida"),
     ("dc", r"\b(batman|superman|supergirl|coringa|joker|aquaman|the flash|wonder woman|"
            r"mulher-maravilha|lanterna verde|green lantern|lanterns|lanternas|hal jordan|peacemaker|pacificador|"
            r"james gunn|dcu|dc studios|dc comics|gotham|arlequina|harley quinn|pinguim)\b"),

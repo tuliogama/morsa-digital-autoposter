@@ -130,11 +130,18 @@ def _fallback_note(weights: dict) -> str:
     return " ".join(parts) or "Sem desvio claro por categoria: seguir a prioridade padrão."
 
 
+def _review_day(now: datetime):
+    """O dia revisado. O cron das 22h às vezes só roda de madrugada: aí vale o dia anterior."""
+    return now.date() if now.hour >= 9 else now.date() - timedelta(days=1)
+
+
 def build_brief(rows: list[dict], weights: dict, for_date) -> dict:
     """Orientação de amanhã. O Groq redige; os números vêm prontos, ele não calcula."""
-    yesterday = [r for r in rows if 0 < r["age_h"] <= 48 and not r["is_video"]]
-    best = sorted(yesterday, key=lambda r: -r["score"])[:3]
-    worst = sorted(yesterday, key=lambda r: r["score"])[:3]
+    # 7 dias e só post maduro: com 48h a orientação virava de lado a cada noite
+    # (poucos posts, e o mais novo sempre parecia o pior porque ainda estava subindo)
+    week = [r for r in rows if MATURE_HOURS <= r["age_h"] <= 7 * 24 and not r["is_video"]]
+    best = sorted(week, key=lambda r: -r["score"])[:3]
+    worst = sorted(week, key=lambda r: r["score"])[:3]
     note = _fallback_note(weights)
     try:
         from content_generator import _call_groq
@@ -143,9 +150,9 @@ def build_brief(rows: list[dict], weights: dict, for_date) -> dict:
             "Por categoria (n, mediana): "
             + "; ".join(f"{c} n={v['n']} med={v['median']}"
                         for c, v in weights.get("categories", {}).items()) + "\n"
-            "Melhores das últimas 48h: "
+            f"Melhores dos últimos 7 dias ({len(week)} posts): "
             + " | ".join(f"{r['title']} ({r['score']})" for r in best) + "\n"
-            "Piores das últimas 48h: "
+            "Piores dos últimos 7 dias: "
             + " | ".join(f"{r['title']} ({r['score']})" for r in worst)
         )
         text = _call_groq(
@@ -153,7 +160,9 @@ def build_brief(rows: list[dict], weights: dict, for_date) -> dict:
             "Com base SÓ nos números fornecidos, escreva a orientação de pauta de amanhã "
             "em 2 frases diretas: o que priorizar e o que evitar. GTA tem cota fixa de "
             "1 post por dia por decisão editorial: nunca recomende cortar GTA; se for o "
-            "caso, diga qual ângulo de GTA rendeu mais. Não invente dados, "
+            "caso, diga qual ângulo de GTA rendeu mais. Só recomende priorizar ou evitar um tema se o padrão "
+            f"aparecer em mais de um post ou numa categoria com n de {MIN_SAMPLE} ou mais; "
+            "um post isolado não é tendência. Não invente dados, "
             "não cite números que não estejam no texto. Sem travessão.",
             facts, max_tokens=160,
         ).strip()
@@ -299,11 +308,12 @@ def _stories_section(rows: list[dict], now: datetime) -> list[str]:
 
 def write_report(rows: list[dict], weights: dict, brief: dict, now: datetime,
                  tiktok: list[dict] = None, split: dict = None) -> Path:
-    today = [r for r in rows if r["ts"].date() == now.date()]
+    day = _review_day(now)
+    today = [r for r in rows if r["ts"].date() == day]
     last7 = [r for r in rows if r["age_h"] <= 7 * 24]
     lines = [f"# Revisão diária @morsadigital — {now:%d/%m/%Y %H:%M} BRT", ""]
 
-    lines += ["## Hoje (números ainda subindo)", "",
+    lines += [f"## Dia {day:%d/%m} (números ainda subindo)", "",
               "| Hora | Tipo | Categoria | Alcance | Curtidas | Coment. | Salvos | Compart. | Post |",
               "|---|---|---|---|---|---|---|---|---|"]
     for r in sorted(today, key=lambda r: r["ts"]):
@@ -311,7 +321,7 @@ def write_report(rows: list[dict], weights: dict, brief: dict, now: datetime,
         lines.append(f"| {r['ts']:%H:%M} | {kind} | {r['cat']} | {r['reach'] if r['reach'] is not None else '-'} | "
                      f"{r['likes']} | {r['comments']} | {r['saved']} | {r['shares']} | {r['title']} |")
     if not today:
-        lines.append("| - | - | - | - | - | - | - | - | nenhum post hoje |")
+        lines.append("| - | - | - | - | - | - | - | - | nenhum post no dia |")
 
     feed7 = [r for r in last7 if not r["is_video"]]
     reels7 = [r for r in last7 if r["is_video"]]
@@ -348,7 +358,7 @@ def write_report(rows: list[dict], weights: dict, brief: dict, now: datetime,
     lines += ["", f"## Orientação para {brief['date']}", "", brief["strategy_note"], ""]
 
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
-    path = REPORT_DIR / f"{now:%Y-%m-%d}.md"
+    path = REPORT_DIR / f"{day:%Y-%m-%d}.md"
     path.write_text("\n".join(lines), encoding="utf-8")
     return path
 
