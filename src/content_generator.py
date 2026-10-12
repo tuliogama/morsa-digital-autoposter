@@ -494,6 +494,14 @@ def generate_post(news_item: dict, platform: str, brief: dict = None) -> dict:
         f"- Hashtags só relacionadas a esta notícia específica, nada genérico\n"
         f"- Se o título promete especificidade (nomes, qual regra, quais modelos), o corpo DEVE entregar essa especificidade. Se a descrição não tiver os dados, adapte o título para não prometer o que não pode cumprir."
     )
+    if _categorize(news_item) == "gta":
+        # Revisão de 11/10/2026: GTA com ângulo corporativo ficou entre os piores da
+        # semana; o que o fã comenta é o que muda no jogo dele.
+        user_msg += (
+            "\n- GTA: abra pelo que isso muda na hora de JOGAR e feche com uma pergunta de "
+            "opinião ao fã (ex.: \"isso muda como você joga?\"). Só afirme o que está no "
+            "resumo; nada de bastidor de empresa, ações ou vendas no gancho."
+        )
 
     content = None
     last_error = None

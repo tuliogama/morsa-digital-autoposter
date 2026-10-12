@@ -43,7 +43,7 @@ GTA_RSS_FEEDS = [
 GTA_TITLE_RE = re.compile(r"\bgta\b|grand theft auto", re.IGNORECASE)
 # Guia de compra/promoção não é notícia
 _GTA_BLOCK_RE = re.compile(
-    r"\bdeals?\b|discount|pre-?order|onde comprar|com desconto|pré-venda|age rating",
+    r"\bdeals?\b|discount|pre-?order|onde comprar|com desconto|pré-venda|age rating|naked|nude|\\bnua?\\b|pelad",
     re.IGNORECASE)
 
 # Fontes 100% nerd — aceitar todos os artigos sem filtro de keyword
@@ -269,6 +269,16 @@ def fetch_rss(max_per_feed: int = 6, feeds: list = None, max_age_hours: int = 72
     return items
 
 
+_GTA_GAMEPLAY_RE = re.compile(
+    r"gameplay|jogabilidade|mec[aâ]nic|mapa|\bmap\b|miss[aãõ]|mission|f[ií]sica|physics|npc|ve[ií]culo|"
+    r"vehicle|carro|\bcars?\b|r[aá]dio|feature|recurso|detalhe|detail|trailer|lucia|jason|online|"
+    r"armas?|weapon|pol[ií]cia|police|cidade|vice city|leonida|easter egg|anima[cç]", re.IGNORECASE)
+_GTA_CORPORATE_RE = re.compile(
+    r"switch|xbox|nintendo|take-?two|zelnick|\bceo\b|a[cç][oõ]es|shares|stock|investor|earnings|"
+    r"receita|revenue|vendas|sales|pre[cç]o|price|processo|lawsuit|sindicato|union|demiss|layoff|"
+    r"pol[ií]tic|analista|analyst", re.IGNORECASE)
+
+
 def fetch_gta_news(max_age_days: int = 5) -> list[dict]:
     """
     Notícias de GTA para a cota diária: varre os feeds gerais sem o teto por
@@ -287,6 +297,9 @@ def fetch_gta_news(max_age_days: int = 5) -> list[dict]:
     br_sources = {"IGN Brasil", "GameBlast"}
     unique.sort(key=lambda i: i["published_at"], reverse=True)
     unique.sort(key=lambda i: i["source"] not in br_sources)
+    # Jogabilidade na frente, assunto de empresa no fim (sorts estáveis: o último manda)
+    unique.sort(key=lambda i: (bool(_GTA_CORPORATE_RE.search(i["title"])),
+                               not _GTA_GAMEPLAY_RE.search(i["title"])))
     logger.info(f"GTA: {len(unique)} notícias nos últimos {max_age_days} dias")
     return unique
 

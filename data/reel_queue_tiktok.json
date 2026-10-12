@@ -15,7 +15,8 @@
     "plan_order": 0,
     "theme": "halloween",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "hook_text": "Pânico7 voltou mais afiado, curtiu?"
   },
   {
     "video_id": "idr7PFzpLYU",
@@ -135,7 +136,8 @@
       "detalhe sem base: Cavaleiro do Oeste",
       "detalhe sem base: quando os dois estão frente a frente"
     ],
-    "caption_check": "revisar"
+    "caption_check": "revisar",
+    "hook_text": null
   },
   {
     "video_id": "KfJibokGDA4",

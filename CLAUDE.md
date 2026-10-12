@@ -322,6 +322,21 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   Sith é privado e a Meta não alcança o link (erro 2207076). O workflow tem portão
   `--due` e só instala ffmpeg quando o story é de reel. A API não tem enquete,
   caixinha, link nem "compartilhar post": story interativo só à mão, pelo app.
+- **Ajustes de 11/10/2026, vindos da rotina diária de análise (aprovados pelo Tulio):**
+  GTA: `fetch_gta_news` põe jogabilidade na frente e assunto de empresa no fim
+  (`_GTA_GAMEPLAY_RE`/`_GTA_CORPORATE_RE`), bloqueia vazamento com nudez, e a legenda
+  de GTA abre pelo que muda no jogo e fecha com pergunta de opinião. "Rockstar" conta
+  como GTA na cota (um post de GTA sem a sigla na 1ª linha gerava 2 no dia).
+  Trailers (`_caption`, fluxo main): metade com linha 1 em primeira pessoa
+  (`caption_style` "eu"/"padrao"); a revisão compara em `_trailer_ab`.
+  TikTok: `reel_queue.py rehook` (na rotina noturna) aplica a pergunta na tela em metade
+  dos vídeos já baixados, sem rebaixar do YouTube; a outra metade é controle.
+  Revisão: quando o cron atrasa para a madrugada, revisa o dia anterior
+  (`_review_day`); a orientação usa 7 dias e só posts com +20h (com 48h ela virava
+  de lado toda noite).
+- **Crons do GitHub disparam bem menos que o configurado** (medido em 11/10/2026: o
+  watchdog de 15 min rodou 4 a 5 vezes por dia; 9h saiu 11h–12h). Solução proposta
+  e ainda não instalada: o Mac confere a cada 10 min e dispara o workflow devido.
 - **Stories na revisão noturna** (desde 11/10/2026): `stories.py --insights` roda em toda
   conferência do workflow e guarda alcance, views, respostas, saídas e visitas ao perfil
   em `data/stories_log.json` (a Meta só responde com o story no ar e com 5+ espectadores).

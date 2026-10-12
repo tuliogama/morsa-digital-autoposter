@@ -703,6 +703,14 @@ def _caption(item: dict) -> str:
         "faça a pergunta ao fã. Termine com 5 a 6 hashtags específicas da franquia "
         "(nada genérico como #Cinema, #Trailer ou #Filmes)."
     )
+    # Teste (desde 11/10/2026): metade dos trailers abre com reação em primeira pessoa,
+    # como os reels de cena que lideraram a semana. A revisão noturna compara os grupos.
+    if STREAM == "main":
+        item["caption_style"] = "eu" if sum(map(ord, item["video_id"])) % 2 == 0 else "padrao"
+        if item["caption_style"] == "eu":
+            user_msg += ("\nNESTA legenda a linha 1 é em primeira pessoa (\"eu\"): a sua reação de fã "
+                         "em uma frase, terminando numa pergunta direta para quem lê. Reação é "
+                         "expectativa ou memória da franquia, nunca opinião sobre a obra completa.")
     text, last_error = "", None
     for attempt in range(3):
         try:
@@ -1054,6 +1062,49 @@ def sync_tiktok() -> dict:
     return stats
 
 
+def rehook(limit: int = 12) -> int:
+    """
+    Estende o teste A/B do texto na tela aos vídeos JÁ baixados do TikTok (pedido
+    do Tulio em 11/10/2026: no ritmo dos downloads novos o teste só mediria no fim
+    do mês). Metade ganha a pergunta por cima do arquivo pronto, metade fica como
+    está e vira o grupo de controle. Não rebaixa nada do YouTube.
+    """
+    use_stream("tiktok")
+    queue = load_queue()
+    todo = [q for q in queue if "hook_text" not in q and not q.get("tiktok_id") and not q.get("posted")]
+    done = 0
+    for n, item in enumerate(todo):
+        if n % 2:                                  # controle: vai como veio
+            item["hook_text"] = None
+            continue
+        if done >= limit:
+            break
+        hook = _hook_text(item)
+        if hook:
+            try:
+                with tempfile.TemporaryDirectory(prefix="morsa_hook_") as tmp:
+                    src, out = os.path.join(tmp, "src.mp4"), os.path.join(tmp, f"{item['video_id']}.mp4")
+                    subprocess.run(["curl", "-sfL", "-o", src, item["asset_url"]], check=True, timeout=300)
+                    r = subprocess.run(
+                        ["ffmpeg", "-y", "-i", src, "-i", _render_hook(hook, tmp), "-filter_complex",
+                         "[0:v][1:v]overlay=0:250[v]", "-map", "[v]", "-map", "0:a?",
+                         "-c:v", "libx264", "-preset", "fast", "-crf", "20", "-pix_fmt", "yuv420p",
+                         "-c:a", "copy", "-movflags", "+faststart", out], capture_output=True, text=True)
+                    if r.returncode != 0:
+                        raise RuntimeError(r.stderr[-200:])
+                    item["asset_url"] = _upload_asset(out)
+            except Exception as e:
+                logger.warning(f"[tiktok] texto na tela falhou em {item['video_id']}: {str(e)[:150]}")
+                continue                           # sem marca: tenta de novo na próxima rodada
+        item["hook_text"] = hook                   # None se o modelo não deu pergunta boa
+        done += 1
+        save_queue(queue)
+        logger.info(f"[tiktok] {item['video_id']}: {hook or 'sem pergunta utilizável (fica como controle)'}")
+        time.sleep(8)                              # limite de tokens por minuto da Groq
+    save_queue(queue)
+    return done
+
+
 def main():
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
     cmd = sys.argv[1] if len(sys.argv) > 1 else "status"
@@ -1072,6 +1123,8 @@ def main():
         for q in todo:
             print(f"{q['tiktok_scheduled_for'][5:16].replace('T', ' ')} | {q['channel']}: {q['title'][:70]}")
         print(f"{len(todo)} agendados | {len(pending(load_queue()))} na fila do TikTok")
+    elif cmd == "rehook":
+        logger.info(f"[tiktok] texto na tela aplicado em {rehook()} vídeos já baixados")
     elif cmd == "premap":
         for name in all_streams:
             use_stream(name)

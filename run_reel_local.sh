@@ -47,6 +47,9 @@ set +a
   # legendas prontas e checadas, arquivos conferidos, relatório em data/reel_report.md
   python3 src/reel_queue.py audit
 
+  # teste do texto na tela: aplica a pergunta em metade dos vídeos já baixados
+  python3 src/reel_queue.py rehook
+
   # TikTok: confere os que já saíram e agenda os próximos horários (Zernio)
   python3 src/reel_queue.py tiktok
 

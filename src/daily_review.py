@@ -264,6 +264,24 @@ def _tiktok_section(tk: list[dict]) -> list[str]:
     return lines
 
 
+def _trailer_ab(rows: list[dict]) -> list[str]:
+    """Teste da legenda de trailer: linha 1 em primeira pessoa contra o padrão."""
+    try:
+        queue = json.loads((ROOT / "data" / "reel_queue.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return []
+    style = {q["media_id"]: q["caption_style"] for q in queue if q.get("media_id") and q.get("caption_style")}
+    groups = {"primeira pessoa": [], "padrão": []}
+    for r in rows:
+        if r["id"] in style and r["age_h"] >= MATURE_HOURS and r["reach"] is not None:
+            groups["primeira pessoa" if style[r["id"]] == "eu" else "padrão"].append(r["reach"])
+    if not any(groups.values()):
+        return []
+    return ["", "Teste da legenda dos trailers (alcance mediano, reels com +20h): " + " · ".join(
+        f"{name}: {statistics.median(v):.0f} em {len(v)} reels" if v else f"{name}: sem reels ainda"
+        for name, v in groups.items())]
+
+
 def _stories_section(rows: list[dict], now: datetime) -> list[str]:
     """Stories das últimas 24h e dos 7 dias, a partir do registro do stories.py."""
     import stories
@@ -354,6 +372,7 @@ def write_report(rows: list[dict], weights: dict, brief: dict, now: datetime,
                   "- Não seguidor perto de zero por vários dias = conta fora das recomendações "
                   "(conferir em Configurações > Status da conta)."]
     lines += _tiktok_section(tiktok or [])
+    lines += _trailer_ab(rows)
     lines += _stories_section(rows, now)
     lines += ["", f"## Orientação para {brief['date']}", "", brief["strategy_note"], ""]
 
