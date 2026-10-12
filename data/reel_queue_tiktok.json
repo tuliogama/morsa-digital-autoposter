@@ -1029,7 +1029,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ac9b2bbb73ea0a61a538ad3",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-12T08:00:00",
     "posted_at": "2026-10-12T08:00:00"
   },
@@ -1078,7 +1078,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ac9b2d1b73ea0a61a538c9b",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-12T09:30:00",
     "posted_at": "2026-10-12T09:30:00"
   },
@@ -1102,7 +1102,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ac9b2d4ae4360580e1b7aaf",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-12T15:00:00",
     "posted_at": "2026-10-12T15:00:00"
   },
@@ -2708,7 +2708,8 @@
     "kind": "cena",
     "plan_order": 152,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "hook_text": "Emilia Clarke lembra seu 1º dia?"
   },
   {
     "video_id": "_ZEjJynYZ3I",
@@ -2725,7 +2726,8 @@
     "kind": "cena",
     "plan_order": 153,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "hook_text": null
   },
   {
     "video_id": "tn-BTeCCA98",
@@ -2742,7 +2744,8 @@
     "kind": "cena",
     "plan_order": 125,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "hook_text": "Pacificador já era famoso?"
   },
   {
     "video_id": "FpBdNs-_vc4",
@@ -2759,7 +2762,8 @@
     "kind": "cena",
     "plan_order": 126,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "hook_text": null
   },
   {
     "video_id": "Ug2e_BBXSOw",
@@ -2776,7 +2780,8 @@
     "kind": "cena",
     "plan_order": 127,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "hook_text": "Kageyama tem a melhor voz?"
   },
   {
     "video_id": "PSO9D5jbcxo",
@@ -2793,7 +2798,8 @@
     "kind": "cena",
     "plan_order": 129,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "hook_text": null
   },
   {
     "video_id": "owyYDRq6zAk",
@@ -2810,7 +2816,8 @@
     "kind": "cena",
     "plan_order": 130,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "hook_text": "Bella Ramsey arrasou como Clicker?"
   },
   {
     "video_id": "UL1fqVkI3pM",
@@ -2827,7 +2834,8 @@
     "kind": "cena",
     "plan_order": 131,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "hook_text": null
   },
   {
     "video_id": "xp4eIffOOY8",
@@ -2844,7 +2852,8 @@
     "kind": "cena",
     "plan_order": 132,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "hook_text": "Superman vs Lanterna verde, quem ganha?"
   },
   {
     "video_id": "kf5WLhtI4qI",
@@ -2861,7 +2870,8 @@
     "kind": "cena",
     "plan_order": 133,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "hook_text": null
   },
   {
     "video_id": "Jx28FF5HgAw",
@@ -2878,7 +2888,8 @@
     "kind": "cena",
     "plan_order": 134,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "hook_text": "Overlord chega ao cinema, vai curtir?"
   },
   {
     "video_id": "4JNni0Qagh8",
@@ -3416,6 +3427,186 @@
     "posted": false,
     "kind": "cena",
     "plan_order": 164,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "vm57IR2CCTY",
+    "title": "\"Você prefere\" com os dubladores de My Hero Academia (a última é polêmica! 👀) #shorts",
+    "channel": "Crunchyroll Brasil",
+    "channel_id": "UCVc-JLY3Db6-O48y7TS4N7Q",
+    "category": "anime_big",
+    "description": "TESTE CRUNCHYROLL DE GRAÇA POR 14 DIAS: https://got.cr/14DayFreeTrialPT\n\n🔸FACEBOOK: https://www.facebook.com/Crunchyroll.pt/\n🔸TWITTER: https://twitter.com/Crunchyroll_pt\n🔸INSTAGRAM: https://www.instagram.com/crunchyroll_PT\n\n#animedublado #myheroacademia #crunchyroll",
+    "published": "2022-12-30",
+    "youtube_url": "https://www.youtube.com/watch?v=vm57IR2CCTY",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/vm57IR2CCTY.mp4",
+    "added_at": "2026-10-12T05:43:06.558943-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 165,
+    "hook_text": "My Hero Academia: qual dublador prefere?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "nzmQ2u1AoVg",
+    "title": "Bob Esponja e Patrick viajam pelo mundo - Alemanha (Short) | Paramount Pictures Brasil",
+    "channel": "Paramount Brasil",
+    "channel_id": "UCgqD3GdUEfupsdY1kmFLIrw",
+    "category": "other",
+    "description": "Bob Esponja e Patrick visitaram a Alemanha!\n\nDepois do roubo da fórmula secreta do hamburger de siri , Bob Esponja, Patrick, Lula Molusco e seus amigos vão invadir nosso mundo para defender a Fenda do Biquini.  \n\nBob Esponja Calça Quadrada, o invertebrado mais amado do fundo do mar, sai da água e invade o nosso mundo para virar um super-herói numa grande aventura.   \n\nInscreva-se: http://bit.ly/17Yo6DD \n\nConecte-se com Bob Esponja: Um Herói Fora d'Água online: \n\nSITE: www.bobesponjaofilme.com.br Facebook: www.facebook.com/BobEsponjaFilme.BR Twitter: www.twitter.com/paramountbrasil \n\nParamount Pictures Internacional A Paramount Pictures há mais de 100 anos leva entretenimento para o\npúblico d",
+    "published": "2015-02-12",
+    "youtube_url": "https://www.youtube.com/watch?v=nzmQ2u1AoVg",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/nzmQ2u1AoVg.mp4",
+    "added_at": "2026-10-12T05:47:30.316638-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 166,
+    "hook_text": null,
+    "layout": "horizontal",
+    "lang": "pt"
+  },
+  {
+    "video_id": "WoXJpPeWd7c",
+    "title": "Isso é ser pai | Todo Mundo Odeia o Chris | Paramount Plus",
+    "channel": "Paramount+ Brasil",
+    "channel_id": "UCAnCxJ1Weh2pUAKJW0bro0Q",
+    "category": "other",
+    "description": "Não importa o lugar o #Julius estará lá! #TodoMundoOdeiaOChris +++++++++++++++++++++++++++++++++++++++++++++++++++++++++\nCurtiu? Assista o Paramount+ em https://www.paramountplus.com ou baixe o app, disponível para telefones e tablets, IOS e Android:\nhttps://smart.link/z36qrfjaimzim\nInscreva-se no canal do YouTube: https://www.youtube.com/channel/UCW8l...\nSiga a nossa página no Facebook: https://www.facebook.com/ParamountPlusbr\nSiga o nosso Twitter: https://twitter.com/ParamountPlusbr\nSiga o nosso Instagram: https://www.instagram.com/paramountplusbr\nSiga o nosso TikTok: https://www.tiktok.com/@paramountplusbr\n\n\n\nParamount+ possui milhares de episódios de: Comedy Central, MTV, Nickelodeon, Pa",
+    "published": "2023-12-12",
+    "youtube_url": "https://www.youtube.com/watch?v=WoXJpPeWd7c",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/WoXJpPeWd7c.mp4",
+    "added_at": "2026-10-12T05:51:17.046798-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 167,
+    "hook_text": "Todo Mundo Odeia o Chris: já viu?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "TP60FBINsn4",
+    "title": "Essa cena de Família Soprano é um clássico natalino! 🎅🏻",
+    "channel": "HBO Brasil",
+    "channel_id": "UCX2M7xn-jMmq4KfX25TCTCA",
+    "category": "series",
+    "description": "Este título está disponível na Max.",
+    "published": "2024-12-25",
+    "youtube_url": "https://www.youtube.com/watch?v=TP60FBINsn4",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/TP60FBINsn4.mp4",
+    "added_at": "2026-10-12T05:54:15.719331-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 168,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "SmzB2DI7xac",
+    "title": "A TEORIA MAIS CABULOSA DE DEATH NOTE",
+    "channel": "Netflix Brasil",
+    "channel_id": "UCc1l5mTmAv2GC_PXrBpqyKQ",
+    "category": "series",
+    "description": "Tem teoria que eu ignoro, mas essa aqui alugou um triplex na minha cabeça.\nSe o Light realmente virou um Shinigami... o Ryuk tava escondendo o jogo esse tempo todo? 💀\n\nAssista na Netflix: https://www.netflix.com/title/81605990\n\nInscreva-se: https://bit.ly/31ynwtw\n\nSobre a Netflix:\nA Netflix é um dos principais serviços de entretenimento do mundo com um vasto catálogo de séries, filmes, jogos e eventos ao vivo disponíveis em diversos idiomas. Nossos assinantes podem assistir, pausar e voltar a um título quantas vezes quiserem, onde quer que estejam, e alterar o plano a qualquer momento.\n\nA TEORIA MAIS CABULOSA DE DEATH NOTE\nhttps://www.youtube.com/@NetflixBrasil",
+    "published": "2026-07-31",
+    "youtube_url": "https://www.youtube.com/watch?v=SmzB2DI7xac",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/SmzB2DI7xac.mp4",
+    "added_at": "2026-10-12T05:58:13.702842-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 169,
+    "hook_text": "Qual a teoria mais cabulosa de Death Note?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "jJUAJOF_5IA",
+    "title": "#WarnerNaCCXP + #SupergirlFilme",
+    "channel": "Warner Bros. Pictures Brasil",
+    "channel_id": "UCEOVI4AmQE01FDKNFunkV2w",
+    "category": "movie",
+    "description": "Eu vou botar uma música para relembrar este momento com a nossa SUPER Agente Secreta 🦈💫\n#SupergirlFilme - 25 de junho, somente nos cinemas.",
+    "published": "2025-12-14",
+    "youtube_url": "https://www.youtube.com/watch?v=jJUAJOF_5IA",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/jJUAJOF_5IA.mp4",
+    "added_at": "2026-10-12T06:00:36.383806-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 170,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "7PLPKYLD2h4",
+    "title": "Relançamento Carros | Aniversário de 20 anos",
+    "channel": "Walt Disney Studios BR",
+    "channel_id": "UCP6nJ-Elnfnpjv6HQRsv1Cw",
+    "category": "movie",
+    "description": "O brabo tem nome. ⚡\n\nEm comemoração aos 20 anos, #Carros retorna aos cinemas em 8 de outubro.",
+    "published": "2026-10-07",
+    "youtube_url": "https://www.youtube.com/watch?v=7PLPKYLD2h4",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/7PLPKYLD2h4.mp4",
+    "added_at": "2026-10-12T06:04:48.951613-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 171,
+    "hook_text": "Carros faz 20 anos, ainda curte?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "N-IYK1WNKno",
+    "title": "Eu sabia que tinha dedo do Gumball nesse rebranding do rebranding. #HBOMaxVoltou",
+    "channel": "HBO Max Brasil",
+    "channel_id": "UCR7ZwQz60rW9dK59Dirdc8w",
+    "category": "series",
+    "description": "",
+    "published": "2025-07-09",
+    "youtube_url": "https://www.youtube.com/watch?v=N-IYK1WNKno",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/N-IYK1WNKno.mp4",
+    "added_at": "2026-10-12T06:06:56.344037-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 172,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "mYrik9ZepSw",
+    "title": "Toc toc, Rosie, minha querida! 😂 #HazbinHotel",
+    "channel": "Prime Video Brasil",
+    "channel_id": "UCuNjvqjTzw9LcD9PVpTVWRA",
+    "category": "series",
+    "description": "Assista #HazbinHotel no Prime Video \n\nInscreva-se no canal do YouTube: https://bit.ly/35FaAo8 \n\nSobre o #PrimeVideo: Assine Prime Video para assistir a filmes e séries populares, incluindo Amazon Originals premiados. Além de um catálogo cheio de títulos, membros Prime têm acesso a benefícios, como frete GRÁTIS e rápido em milhares de produtos na Amazon.com.br, músicas sem anúncios na Amazon Music, Prime Gaming na Twitch e e-books e revistas no Prime Reading. Tudo na mesma assinatura, por apenas R$ 14,90/mês. Teste Grátis por 30 dias. \n\nSiga nossas redes sociais: \n\nInstagram: https://www.instagram.com/primevideobr/ \n\nFacebook: https://www.facebook.com/PrimeVideoBR/ \n\nTwitter: https://twitter.",
+    "published": "2026-03-14",
+    "youtube_url": "https://www.youtube.com/watch?v=mYrik9ZepSw",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/mYrik9ZepSw.mp4",
+    "added_at": "2026-10-12T15:15:37.439140-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 173,
+    "hook_text": "Rosie merece mais atenção?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "EKeegh1SREo",
+    "title": "O que ninguém te conta sobre dublar Attack on Titan! 💀",
+    "channel": "Crunchyroll Brasil",
+    "channel_id": "UCVc-JLY3Db6-O48y7TS4N7Q",
+    "category": "anime_big",
+    "description": "TESTE CRUNCHYROLL DE GRAÇA POR 14 DIAS: https://got.cr/14DayFreeTrialPT\n\n🔸FACEBOOK: https://www.facebook.com/Crunchyroll.pt/\n🔸TWITTER: https://twitter.com/Crunchyroll_pt\n🔸INSTAGRAM: https://www.instagram.com/crunchyroll_PT\n\n#attackontitan #crunchyroll #shorts",
+    "published": "2022-08-20",
+    "youtube_url": "https://www.youtube.com/watch?v=EKeegh1SREo",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/EKeegh1SREo.mp4",
+    "added_at": "2026-10-12T15:18:25.914621-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 174,
     "hook_text": null,
     "layout": "vertical",
     "lang": "pt"
