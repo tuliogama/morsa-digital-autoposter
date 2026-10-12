@@ -322,6 +322,10 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   Sith é privado e a Meta não alcança o link (erro 2207076). O workflow tem portão
   `--due` e só instala ffmpeg quando o story é de reel. A API não tem enquete,
   caixinha, link nem "compartilhar post": story interativo só à mão, pelo app.
+- **Stories na revisão noturna** (desde 11/10/2026): `stories.py --insights` roda em toda
+  conferência do workflow e guarda alcance, views, respostas, saídas e visitas ao perfil
+  em `data/stories_log.json` (a Meta só responde com o story no ar e com 5+ espectadores).
+  `daily_review._stories_section` monta a tabela das 24h e a mediana por período.
 - **Auditoria** (`reel_queue.py audit`, roda no fim de `run_reel_local.sh`): confere
   os arquivos, gera a legenda dos próximos 6 dias e passa por `lint_caption` (regras
   fixas) e `judge_caption` (gpt-oss-120b aponta detalhe inventado). Legenda aprovada

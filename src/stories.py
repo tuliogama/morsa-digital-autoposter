@@ -235,11 +235,48 @@ def _publish_video_story(path: str) -> str:
     raise RuntimeError("vídeo do story não ficou pronto a tempo")
 
 
+STORY_METRICS = "reach,views,replies,shares,total_interactions,follows,profile_visits"
+
+
+def refresh_insights(log: list[dict], now: datetime) -> int:
+    """
+    Guarda no registro os números de cada story ainda no ar (a Meta só responde
+    enquanto o story vive e depois de 5 espectadores). Fica o último retrato lido.
+    """
+    token = os.environ["FB_ACCESS_TOKEN"]
+    updated = 0
+    for e in log:
+        if (now - datetime.fromisoformat(e["at"])).total_seconds() > 24 * 3600:
+            continue
+        base = f"https://graph.facebook.com/v21.0/{e['story_id']}/insights?access_token={token}&metric="
+        try:
+            ins = {m["name"]: m["values"][0]["value"] for m in _get(base + STORY_METRICS)["data"] if m.get("values")}
+            nav = _get(base + "navigation&breakdown=story_navigation_action_type")["data"]
+            for b in nav[0].get("total_value", {}).get("breakdowns", []) if nav else []:
+                for r in b.get("results", []):
+                    ins[r["dimension_values"][0]] = r["value"]
+        except Exception as exc:               # poucos espectadores ou story expirado
+            logger.debug(f"Sem números para o story {e['story_id']}: {exc}")
+            continue
+        e["insights"] = ins
+        e["insights_at"] = now.isoformat(timespec="seconds")
+        updated += 1
+    return updated
+
+
+def _save_log(log: list[dict]) -> None:
+    LOG_PATH.write_text(json.dumps(log[-200:], indent=1, ensure_ascii=False), encoding="utf-8")
+
+
 def main() -> int:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(name)s: %(message)s")
     dry = "--dry-run" in sys.argv
     now = datetime.now(BRT)
     log = _load_log()
+    if "--insights" in sys.argv:            # roda em toda conferência do workflow
+        logger.info(f"Números atualizados em {refresh_insights(log, now)} stories")
+        _save_log(log)
+        return 0
     post, reason = pick(recent_posts(), log, now)
     if "--due" in sys.argv:                 # usado pelo workflow para não instalar ffmpeg à toa
         logger.info(reason if post is None else f"há story a publicar ({'reel' if post['is_reel'] else 'post'})")
@@ -277,7 +314,7 @@ def main() -> int:
     if not story_id:
         return 1
     log.append({"media_id": post["id"], "story_id": story_id, "at": now.isoformat(timespec="seconds")})
-    LOG_PATH.write_text(json.dumps(log[-200:], indent=1, ensure_ascii=False), encoding="utf-8")
+    _save_log(log)
     logger.info(f"Story publicado: {story_id}")
     return 0
 

@@ -77,6 +77,7 @@ def _normalize(posts: list[dict], now: datetime) -> list[dict]:
         ins = fetch_insights(p["id"]) if age_h <= WINDOW_DAYS * 24 else {}
         saved, shares = ins.get("saved", 0), ins.get("shares", 0)
         rows.append({
+            "id": p["id"],
             "ts": ts,
             "age_h": (now - ts).total_seconds() / 3600,
             "is_video": p.get("media_type") == "VIDEO",
@@ -254,6 +255,48 @@ def _tiktok_section(tk: list[dict]) -> list[str]:
     return lines
 
 
+def _stories_section(rows: list[dict], now: datetime) -> list[str]:
+    """Stories das últimas 24h e dos 7 dias, a partir do registro do stories.py."""
+    import stories
+    log = stories._load_log()
+    try:
+        stories.refresh_insights(log, now)
+        stories._save_log(log)
+    except Exception as exc:
+        logger.warning(f"Stories: não consegui atualizar os números: {exc}")
+    title = {r["id"]: r for r in rows}
+    age = lambda e: (now - datetime.fromisoformat(e["at"])).total_seconds() / 3600
+    day = [e for e in log if age(e) <= 24]
+    week = [e for e in log if age(e) <= 7 * 24 and e.get("insights")]
+    lines = ["", "## Stories (últimas 24h)", "",
+             "| Hora | Origem | Alcance | Views | Respostas | Saídas | Visitas ao perfil | Post |",
+             "|---|---|---|---|---|---|---|---|"]
+    for e in sorted(day, key=lambda e: e["at"]):
+        src, ins = title.get(e["media_id"], {}), e.get("insights")
+        kind = "reel" if src.get("is_video") else "feed"
+        nums = (f"{ins.get('reach', '-')} | {ins.get('views', '-')} | {ins.get('replies', 0)} | "
+                f"{ins.get('tap_exit', 0)} | {ins.get('profile_visits', 0)}") if ins else "- | - | - | - | -"
+        lines.append(f"| {e['at'][11:16]} | {kind} | {nums} | {src.get('title', e['media_id'])} |")
+    if not day:
+        lines.append("| - | - | - | - | - | - | - | nenhum story nas últimas 24h |")
+    lines.append("")
+    if week:
+        med = lambda sel: statistics.median([e["insights"].get("reach", 0) for e in sel]) if sel else 0
+        reels = [e for e in week if title.get(e["media_id"], {}).get("is_video")]
+        feed = [e for e in week if e not in reels]
+        lines += [f"- 7 dias: {len(week)} stories com números | alcance mediano {med(week)}"
+                  f" (de reel {med(reels)}, de feed {med(feed)})",
+                  f"- Respostas: {sum(e['insights'].get('replies', 0) for e in week)}"
+                  f" | visitas ao perfil: {sum(e['insights'].get('profile_visits', 0) for e in week)}"
+                  f" | novos seguidores: {sum(e['insights'].get('follows', 0) for e in week)}"]
+        for name in ("manhã", "tarde", "noite"):
+            sel = [e for e in week if stories._period(datetime.fromisoformat(e["at"]).hour) == name]
+            if sel:
+                lines.append(f"- {name}: {len(sel)} stories | alcance mediano {med(sel)}")
+    lines.append("- Sem número = story com menos de 5 espectadores ou lido tarde demais (a Meta só responde em 24h).")
+    return lines
+
+
 def write_report(rows: list[dict], weights: dict, brief: dict, now: datetime,
                  tiktok: list[dict] = None, split: dict = None) -> Path:
     today = [r for r in rows if r["ts"].date() == now.date()]
@@ -301,6 +344,7 @@ def write_report(rows: list[dict], weights: dict, brief: dict, now: datetime,
                   "- Não seguidor perto de zero por vários dias = conta fora das recomendações "
                   "(conferir em Configurações > Status da conta)."]
     lines += _tiktok_section(tiktok or [])
+    lines += _stories_section(rows, now)
     lines += ["", f"## Orientação para {brief['date']}", "", brief["strategy_note"], ""]
 
     REPORT_DIR.mkdir(parents=True, exist_ok=True)

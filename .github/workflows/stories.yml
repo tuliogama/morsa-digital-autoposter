@@ -51,12 +51,14 @@ jobs:
         if: steps.gate.outputs.due == 'true'
         run: python src/stories.py
 
+      - name: Ler os números dos stories no ar
+        run: python src/stories.py --insights
+
       - name: Persistir registro
-        if: steps.gate.outputs.due == 'true'
         run: |
           git config user.name "morsa-bot"
           git config user.email "bot@morsadigital.com"
           git add data/stories_log.json 2>/dev/null || exit 0
-          git diff --staged --quiet || git commit -m "chore: story publicado [skip ci]"
+          git diff --staged --quiet || git commit -m "chore: stories [skip ci]"
           git pull --rebase origin main
           git push origin main

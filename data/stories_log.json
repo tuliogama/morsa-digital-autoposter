@@ -2,7 +2,21 @@
  {
   "media_id": "18106932341215892",
   "story_id": "18112565987017235",
-  "at": "2026-10-11T09:43:38-03:00"
+  "at": "2026-10-11T09:43:38-03:00",
+  "insights": {
+   "reach": 107,
+   "views": 124,
+   "replies": 0,
+   "shares": 0,
+   "total_interactions": 1,
+   "follows": 0,
+   "profile_visits": 0,
+   "tap_back": 1,
+   "tap_exit": 12,
+   "swipe_forward": 17,
+   "tap_forward": 86
+  },
+  "insights_at": "2026-10-11T21:28:58-03:00"
  },
  {
   "media_id": "18095627501651859",
