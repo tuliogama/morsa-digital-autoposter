@@ -335,8 +335,14 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   (`_review_day`); a orientação usa 7 dias e só posts com +20h (com 48h ela virava
   de lado toda noite).
 - **Crons do GitHub disparam bem menos que o configurado** (medido em 11/10/2026: o
-  watchdog de 15 min rodou 4 a 5 vezes por dia; 9h saiu 11h–12h). Solução proposta
-  e ainda não instalada: o Mac confere a cada 10 min e dispara o workflow devido.
+  watchdog de 15 min rodou 4 a 5 vezes por dia; 9h saiu 11h–12h). Solução, instalada
+  em 11/10/2026 com o ok do Tulio: `tick_local.sh` via launchd `com.morsa.tick`
+  (`~/Library/LaunchAgents/com.morsa.tick.plist`), a cada 10 min das 8h às 23h. Roda
+  os portões localmente (feed, reel, story) dos DOIS repositórios e só dispara o
+  workflow quando há algo devido; espera 40 min antes de repetir o mesmo disparo
+  (`~/.morsa_tick`). ~45 MB por alguns segundos; log em `logs/tick.log`. Os crons do
+  GitHub ficam como reserva para quando o Mac estiver desligado.
+  Desligar: `launchctl bootout gui/$(id -u)/com.morsa.tick`.
 - **Stories na revisão noturna** (desde 11/10/2026): `stories.py --insights` roda em toda
   conferência do workflow e guarda alcance, views, respostas, saídas e visitas ao perfil
   em `data/stories_log.json` (a Meta só responde com o story no ar e com 5+ espectadores).
