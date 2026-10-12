@@ -1,6 +1,6 @@
 name: Stories — chamada para os posts novos
 
-# Cada post ou reel novo ganha um story com a arte da marca (src/stories.py).
+# Reel novo ganha um teaser de 15s em vídeo; post novo, a arte do post (src/stories.py).
 # No máximo 3 por dia, 2h30 entre um e outro, nunca de madrugada. Os crons são
 # só gatilhos: quem decide se sai story é o script.
 
@@ -26,6 +26,7 @@ jobs:
       IMGUR_CLIENT_ID: ${{ secrets.IMGUR_CLIENT_ID }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       GITHUB_REPOSITORY: ${{ github.repository }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
       - uses: actions/checkout@v4
@@ -37,6 +38,9 @@ jobs:
           python-version: "3.12"
 
       - run: pip install -q "pillow>=10.0.0"
+
+      - name: Instalar ffmpeg (teaser em vídeo dos reels)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
 
       - name: Publicar story
         run: python src/stories.py

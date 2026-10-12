@@ -2,9 +2,10 @@
 Stories automáticos: cada post ou reel novo da conta ganha um story com a arte
 da marca chamando para ele.
 
-A Graph API publica story de imagem, mas não tem figurinha de enquete, caixinha
-nem link, e não faz o "compartilhar post no story" do app. Então o story é uma
-arte 1080x1920 com a imagem do post, o gancho da legenda e a marca.
+A Graph API publica story de imagem e de vídeo, mas não tem figurinha de enquete,
+caixinha nem link, e não faz o "compartilhar post no story" do app. Então:
+  - reel novo  → teaser de 15s do próprio vídeo, com selo e chamada discretos;
+  - post novo  → a arte do post inteira sobre preto, com dois rótulos pequenos.
 
 Regras: no máximo MAX_PER_DAY por dia, MIN_GAP_MIN entre um e outro, só posts das
 últimas 24h, um story por post. Estado em data/stories_log.json.
@@ -19,7 +20,11 @@ import json
 import logging
 import os
 import re
+import shutil
+import subprocess
 import sys
+import tempfile
+import time
 import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -71,6 +76,7 @@ def recent_posts(hours: int = 24) -> list[dict]:
             image = p.get("media_url")
         if image:
             out.append({"id": p["id"], "is_reel": p.get("media_type") == "VIDEO", "image": image,
+                        "video": p.get("media_url") if p.get("media_type") == "VIDEO" else None,
                         "hook": (p.get("caption") or "").strip().split("\n")[0]})
     return out
 
@@ -95,66 +101,129 @@ def pick(posts: list[dict], log: list[dict], now: datetime) -> tuple[dict | None
     return fresh[0], "ok"
 
 
-def render(post: dict) -> bytes:
-    """Arte 1080x1920: fundo desfocado do próprio post, cartão com a imagem, gancho e marca."""
-    from PIL import Image, ImageDraw, ImageFilter
-    from image_generator import COLOR_ORANGE as BRAND, _load_font, _round_logo, _wrap_text
+TEASER_SECONDS = 15
+
+
+def _spaced(draw, xy, text, font, fill, gap=6, anchor_center=None):
+    """Texto com espaçamento entre letras (rótulos pequenos ficam mais elegantes)."""
+    widths = [draw.textbbox((0, 0), ch, font=font)[2] for ch in text]
+    total = sum(widths) + gap * (len(text) - 1)
+    x, y = xy
+    if anchor_center is not None:
+        x = anchor_center - total / 2
+    for ch, w in zip(text, widths):
+        draw.text((x, y), ch, font=font, fill=fill)
+        x += w + gap
+    return total
+
+
+def render_feed(post: dict) -> bytes:
+    """
+    Story de post do feed: a arte do post (que já tem título e logo) inteira, sobre
+    preto, com as bordas de cima e de baixo esfumadas. Só dois rótulos pequenos.
+    """
+    from PIL import Image, ImageDraw
+    from image_generator import COLOR_ORANGE as BRAND, _load_font
 
     with urllib.request.urlopen(post["image"], timeout=30) as r:
-        src = Image.open(io.BytesIO(r.read())).convert("RGB")
-
-    # fundo: a própria imagem cobrindo a tela, desfocada e escurecida
-    scale = max(W / src.width, H / src.height)
-    bg = src.resize((int(src.width * scale) + 1, int(src.height * scale) + 1))
-    left, top = (bg.width - W) // 2, (bg.height - H) // 2
-    bg = bg.crop((left, top, left + W, top + H)).filter(ImageFilter.GaussianBlur(28))
-    canvas = Image.blend(bg, Image.new("RGB", (W, H), (0, 0, 0)), 0.6)
+        art = Image.open(io.BytesIO(r.read())).convert("RGB")
+    art = art.resize((W, int(art.height * W / art.width)))
+    if art.height > 1500:
+        cut = (art.height - 1500) // 2
+        art = art.crop((0, cut, W, cut + 1500))
+    canvas = Image.new("RGB", (W, H), (8, 8, 10))
+    top = (H - art.height) // 2
+    fade = Image.new("L", art.size, 255)                      # esfuma 90px em cima e embaixo
+    px = fade.load()
+    for y in range(90):
+        v = int(255 * y / 90)
+        for x in range(W):
+            px[x, y] = v
+            px[x, art.height - 1 - y] = v
+    canvas.paste(art, (0, top), fade)
     draw = ImageDraw.Draw(canvas)
-
-    # cartão com a imagem do post
-    card_w = 900
-    card = src.resize((card_w, int(src.height * card_w / src.width)))
-    if card.height > 940:
-        cut = (card.height - 940) // 2
-        card = card.crop((0, cut, card_w, cut + 940))
-    mask = Image.new("L", card.size, 0)
-    ImageDraw.Draw(mask).rounded_rectangle([0, 0, card.width, card.height], radius=40, fill=255)
-    card_y = 430
-    canvas.paste(card, ((W - card_w) // 2, card_y), mask)
-
-    # marca + etiqueta
-    logo = _round_logo(120)
-    canvas.paste(logo, (90, 230), logo)
-    label = "NOVO REEL" if post["is_reel"] else "NOVO NO FEED"
-    font_label = _load_font(58)
-    lw = draw.textbbox((0, 0), label, font=font_label)[2]
-    draw.rounded_rectangle([240, 252, 240 + lw + 60, 338], radius=43, fill=BRAND)
-    draw.text((270, 262), label, font=font_label, fill="white")
-
-    # gancho da legenda: sem emoji (a fonte não tem), no máximo 3 linhas
-    hook = re.sub(r"[^\w\s.,!?:;'\"()%&/+-]", "", post["hook"]).strip()
-    font_hook = _load_font(68)
-    lines = _wrap_text(draw, hook[:160], font_hook, 900)
-    if len(lines) > 3:
-        lines = lines[:3]
-        lines[-1] = lines[-1].rstrip(".,;: ") + "..."
-    y = card_y + card.height + 50
-    for line in lines:
-        draw.text((90, y), line, font=font_hook, fill="white", stroke_width=3, stroke_fill="black")
-        y += 80
-
-    # chamada final, sempre abaixo do texto
-    font_cta = _load_font(54)
-    cta = "VEJA NO PERFIL"
-    cw = draw.textbbox((0, 0), cta, font=font_cta)[2]
-    cy = max(y + 40, 1640)
-    draw.rounded_rectangle([(W - cw) // 2 - 40, cy, (W + cw) // 2 + 40, cy + 90], radius=45,
-                           outline="white", width=4)
-    draw.text(((W - cw) // 2, cy + 14), cta, font=font_cta, fill="white")
-
+    small = _load_font(46)
+    _spaced(draw, (0, top - 110), "NOVO NO FEED", small, BRAND, gap=10, anchor_center=W / 2)
+    draw.line([(W / 2 - 60, top - 44), (W / 2 + 60, top - 44)], fill=BRAND, width=4)
+    _spaced(draw, (0, top + art.height + 60), "LEIA NO PERFIL", small, (235, 235, 235), gap=10,
+            anchor_center=W / 2)
     buf = io.BytesIO()
-    canvas.save(buf, format="JPEG", quality=90)
+    canvas.save(buf, format="JPEG", quality=92)
     return buf.getvalue()
+
+
+def _teaser_overlay(path: str):
+    """Camada transparente do teaser: selo pequeno no alto e chamada no rodapé."""
+    from PIL import Image, ImageDraw
+    from image_generator import COLOR_ORANGE as BRAND, _load_font
+
+    layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    px = layer.load()
+    for y in range(H - 420, H):                               # degradê escuro só no rodapé
+        alpha = int(190 * (y - (H - 420)) / 420)
+        for x in range(W):
+            px[x, y] = (0, 0, 0, alpha)
+    draw = ImageDraw.Draw(layer)
+    label_font = _load_font(44)
+    lw = sum(draw.textbbox((0, 0), ch, font=label_font)[2] for ch in "NOVO REEL") + 8 * 8
+    draw.rounded_rectangle([60, 250, 60 + lw + 56, 322], radius=36, fill=BRAND + (255,))
+    _spaced(draw, (88, 262), "NOVO REEL", label_font, "white", gap=8)
+    cta_font = _load_font(52)
+    _spaced(draw, (0, H - 250), "ASSISTA COMPLETO NO PERFIL", cta_font, "white", gap=8, anchor_center=W / 2)
+    draw.line([(W / 2 - 70, H - 178), (W / 2 + 70, H - 178)], fill=BRAND + (255,), width=5)
+    layer.save(path)
+
+
+def render_teaser(post: dict, workdir: str) -> str:
+    """Story de reel: os primeiros segundos do próprio vídeo, com selo e chamada."""
+    src = os.path.join(workdir, "src.mp4")
+    urllib.request.urlretrieve(post["video"], src)
+    overlay = os.path.join(workdir, "overlay.png")
+    _teaser_overlay(overlay)
+    out = os.path.join(workdir, f"story_{post['id']}.mp4")
+    fade_at = TEASER_SECONDS - 0.6
+    r = subprocess.run(
+        ["ffmpeg", "-y", "-i", src, "-i", overlay, "-filter_complex",
+         f"[0:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1[v];"
+         f"[v][1:v]overlay=0:0,fade=t=out:st={fade_at}:d=0.6[o]",
+         "-map", "[o]", "-map", "0:a?", "-af", f"afade=t=out:st={fade_at}:d=0.6",
+         "-t", str(TEASER_SECONDS), "-c:v", "libx264", "-preset", "fast", "-crf", "21",
+         "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", out],
+        capture_output=True, text=True)
+    if r.returncode != 0:
+        raise RuntimeError(f"ffmpeg falhou: {r.stderr[-300:]}")
+    return out
+
+
+def _host_video(path: str) -> str:
+    """Hospeda o teaser numa Release do próprio repositório (URL pública para a Meta buscar)."""
+    repo = os.environ.get("GITHUB_REPOSITORY") or subprocess.run(
+        ["gh", "repo", "view", "--json", "nameWithOwner", "-q", ".nameWithOwner"],
+        capture_output=True, text=True).stdout.strip()
+    tag = "stories-media"
+    if subprocess.run(["gh", "release", "view", tag, "--repo", repo], capture_output=True).returncode != 0:
+        subprocess.run(["gh", "release", "create", tag, "--repo", repo, "--title", "Stories",
+                        "--notes", "Vídeos temporários dos stories."], capture_output=True, check=True)
+    r = subprocess.run(["gh", "release", "upload", tag, path, "--repo", repo, "--clobber"],
+                       capture_output=True, text=True)
+    if r.returncode != 0:
+        raise RuntimeError(f"upload falhou: {r.stderr[-200:]}")
+    return f"https://github.com/{repo}/releases/download/{tag}/{os.path.basename(path)}"
+
+
+def _publish_video_story(video_url: str) -> str:
+    from publishers.instagram import _post, _publish_container
+    token, ig = os.environ["FB_ACCESS_TOKEN"], os.environ["IG_USER_ID"]
+    container = _post(f"{GRAPH_URL}/{ig}/media",
+                      {"media_type": "STORIES", "video_url": video_url, "access_token": token})["id"]
+    for _ in range(24):                                       # até 4 minutos de processamento
+        time.sleep(10)
+        status = _get(f"{GRAPH_URL}/{container}?fields=status_code,status&access_token={token}")
+        if status.get("status_code") == "FINISHED":
+            return _publish_container(ig, token, container)
+        if status.get("status_code") == "ERROR":
+            raise RuntimeError(f"a Meta recusou o vídeo: {status}")
+    raise RuntimeError("vídeo do story não ficou pronto a tempo")
 
 
 def main() -> int:
@@ -167,21 +236,29 @@ def main() -> int:
         logger.info(f"Sem story agora: {reason}")
         return 0
     logger.info(f"Story para o {'reel' if post['is_reel'] else 'post'} {post['id']}: {post['hook'][:70]}")
-    image = render(post)
-    if dry:
-        out = ROOT / "logs" / "story_preview.jpg"
-        out.parent.mkdir(exist_ok=True)
-        out.write_bytes(image)
-        logger.info(f"Dry run: arte salva em {out}")
-        return 0
-
-    from image_generator import _upload_image
-    from publishers.instagram import _post_to_stories
-    url = _upload_image(image)
-    if not url:
-        logger.error("Não consegui hospedar a arte do story")
-        return 1
-    story_id = _post_to_stories(os.environ["IG_USER_ID"], os.environ["FB_ACCESS_TOKEN"], post["id"], url)
+    preview = ROOT / "logs"
+    preview.mkdir(exist_ok=True)
+    if post["is_reel"] and post.get("video"):
+        with tempfile.TemporaryDirectory(prefix="story_") as tmp:
+            teaser = render_teaser(post, tmp)
+            if dry:
+                shutil.copy(teaser, preview / "story_preview.mp4")
+                logger.info(f"Dry run: teaser salvo em {preview / 'story_preview.mp4'}")
+                return 0
+            story_id = _publish_video_story(_host_video(teaser))
+    else:
+        image = render_feed(post)
+        if dry:
+            (preview / "story_preview.jpg").write_bytes(image)
+            logger.info(f"Dry run: arte salva em {preview / 'story_preview.jpg'}")
+            return 0
+        from image_generator import _upload_image
+        from publishers.instagram import _post_to_stories
+        url = _upload_image(image)
+        if not url:
+            logger.error("Não consegui hospedar a arte do story")
+            return 1
+        story_id = _post_to_stories(os.environ["IG_USER_ID"], os.environ["FB_ACCESS_TOKEN"], post["id"], url)
     if not story_id:
         return 1
     log.append({"media_id": post["id"], "story_id": story_id, "at": now.isoformat(timespec="seconds")})

@@ -312,7 +312,9 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   em `_hook_ab`. Se o texto ganhar, estender às cenas do Instagram.
 - **Stories automáticos** (`src/stories.py`, workflow `stories.yml`, desde 11/10/2026;
   o mesmo arquivo roda no ordem-sith-autoposter): cada post ou reel novo ganha um
-  story com arte da marca (imagem do post, gancho da legenda, "veja no perfil").
+  story: reel → teaser de 15s do próprio vídeo com selo discreto; post → a arte do
+  post sobre preto. (A 1ª versão, um print do vídeo com texto por cima, o Tulio
+  reprovou como "grotesca"; manter o desenho limpo e sem texto duplicado.)
   Máx. 3/dia, 2h30 de intervalo, das 8h às 23h. A API não tem enquete, caixinha,
   link nem "compartilhar post": story interativo só à mão, pelo app.
 - **Auditoria** (`reel_queue.py audit`, roda no fim de `run_reel_local.sh`): confere
