@@ -110,22 +110,13 @@ def _fetch_url(url: str, timeout: int = 10) -> Optional[str]:
         return None
 
 
-# Nudez e sexo ficam fora da página, venha de onde vier (pedido do Tulio em 12/10/2026,
-# depois de sair um post sobre vazamento com a Lucia nua). Vale para título, resumo e legenda.
-ADULT_RE = re.compile(
-    r"\bnuas?\b|\bnus?\b(?! metal)|\bpelad[oa]s?\b|nudez|\bnudes?\b|\bnudity\b|naked|topless|"
-    r"sem roupa|semi-?nu|\bsexo\b|\bsex\b|sexual|sexy|er[oó]tic|porn|nsfw|onlyfans|hentai|"
-    r"striptease|stripper|\b18\+", re.IGNORECASE)
-
-
-def is_adult(*texts: str) -> bool:
-    return any(ADULT_RE.search(t or "") for t in texts)
-
-
 def _is_blocked(title: str) -> bool:
     """Rejeita podcasts, listas genéricas e conteúdo proibido independente da fonte."""
     title_lower = title.lower()
-    return is_adult(title) or any(kw in title_lower for kw in BLOCK_KEYWORDS)
+    from editorial_guard import hard_block
+    if hard_block(title):
+        return True
+    return any(kw in title_lower for kw in BLOCK_KEYWORDS)
 
 
 def fetch_article_text(url: str, max_chars: int = 1800) -> str:

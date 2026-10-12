@@ -343,10 +343,16 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   (`~/.morsa_tick`). ~45 MB por alguns segundos; log em `logs/tick.log`. Os crons do
   GitHub ficam como reserva para quando o Mac estiver desligado.
   Desligar: `launchctl bootout gui/$(id -u)/com.morsa.tick`.
-- **Nudez e sexo: nunca** (pedido do Tulio em 12/10/2026, depois de sair um post sobre
-  vazamento de GTA 6 com a Lucia nua). `news_fetcher.ADULT_RE`/`is_adult` barra no
-  título (`_is_blocked`), no título+resumo (`generate_post`) e na legenda pronta
-  (`_validate_caption`). Mesmo filtro no ordem-sith-autoposter. Não afrouxar.
+- **Linha editorial: `src/editorial_guard.py`** (pedido do Tulio em 12/10/2026, depois de
+  sair um post sobre vazamento de GTA 6 com personagem nua: "filtros anti disseminação
+  de coisa idiota, crime e coisas que deixem os incels da internet felizes. O Morsa não
+  é isso, e nem o Ordem"). Fora da página: nudez/sexo/sexualização, crime ou tragédia
+  real, vazamento de material roubado, isca de ódio e guerra cultural, fofoca e
+  humilhação de pessoa real, política, bobagem sem valor. Duas camadas: `hard_block`
+  (lista de termos; título em `_is_blocked`, legenda em `_validate_caption`, reels em
+  `lint_caption`) e `check` (juiz `gpt-oss-120b` com a política `POLICY`, chamado em
+  `generate_post`). Juiz fora do ar = pauta recusada, de propósito. Arquivo idêntico
+  no ordem-sith-autoposter. Não afrouxar; ao mexer na lista, testar com frases reais.
 - **Stories na revisão noturna** (desde 11/10/2026): `stories.py --insights` roda em toda
   conferência do workflow e guarda alcance, views, respostas, saídas e visitas ao perfil
   em `data/stories_log.json` (a Meta só responde com o story no ar e com 5+ espectadores).

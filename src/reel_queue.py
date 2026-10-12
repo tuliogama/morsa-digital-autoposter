@@ -735,6 +735,10 @@ _NEWS_WORDS_RE = re.compile(r"\b(chegou|acabou de sair|acaba de sair|estreia em 
 def lint_caption(item: dict, caption: str) -> list[str]:
     """Regras fixas que toda legenda tem que cumprir."""
     problems = []
+    from editorial_guard import hard_block
+    blocked = hard_block(item.get("title", ""), caption)
+    if blocked:
+        problems.append(f"fora da linha editorial: {blocked}")
     lines = [l for l in caption.splitlines() if l.strip()]
     tags = re.findall(r"#\w+", caption)
     from content_generator import has_template_echo

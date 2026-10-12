@@ -433,8 +433,8 @@ def _validate_caption(content: str, source: str) -> bool:
         return False
     if has_template_echo(content):
         return False
-    from news_fetcher import is_adult
-    if is_adult(content):                  # última barreira: nudez e sexo nunca saem
+    from editorial_guard import hard_block
+    if hard_block(content):                # última barreira da linha editorial
         return False
     # Indicadores de fallback ou scraping
     bad_patterns = [
@@ -461,9 +461,12 @@ def _validate_caption(content: str, source: str) -> bool:
 
 def generate_post(news_item: dict, platform: str, brief: dict = None) -> dict:
     import re
-    from news_fetcher import is_adult
-    if is_adult(news_item.get("title", ""), news_item.get("description", "")):
-        raise ValueError("pauta com nudez ou sexo: fora da linha da página")
+    # Linha editorial (editorial_guard.py): nudez, crime real, vazamento, isca de ódio
+    # e fofoca não viram post. Recusa também quando o juiz não responde.
+    import editorial_guard
+    ok, why = editorial_guard.check(news_item.get("title", ""), news_item.get("description", ""))
+    if not ok:
+        raise CaptionGenerationError(f"fora da linha editorial: {why}")
     cfg    = PLATFORM_PROMPTS.get(platform, PLATFORM_PROMPTS["instagram"])
     title  = news_item.get("title", "")
     url    = news_item.get("url", "")
