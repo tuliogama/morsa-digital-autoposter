@@ -363,6 +363,11 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   de arquivo corrompido; `categories_posted_today` soma o registro ao Instagram, para
   post apagado continuar contando na cota de GTA. Registro reconstruído do histórico
   do git (166 entradas). O mesmo vale para o ordem-sith-autoposter.
+- **Programa de apresentador fora dos reels e do TikTok (13/10/2026, pedido do Tulio):**
+  Disney Talks, Gaveta (Marvel Brasil), entrevista, análise, "3 motivos", teorias,
+  curiosidades. É o rosto de outra pessoa falando; a página quer cena, teaser e
+  trailer. `reel_queue.is_talk_show` barra em `_add_item` (título e descrição);
+  30 itens já baixados foram removidos e 3 agendamentos do TikTok cancelados.
 - **Stories na revisão noturna** (desde 11/10/2026): `stories.py --insights` roda em toda
   conferência do workflow e guarda alcance, views, respostas, saídas e visitas ao perfil
   em `data/stories_log.json` (a Meta só responde com o story no ar e com 5+ espectadores).

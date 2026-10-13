@@ -406,12 +406,30 @@ def _is_fresh(q: dict) -> bool:
     return q.get("kind", "fresh") == "fresh" and not q.get("scheduled_for")
 
 
+# Programa de apresentador (Disney Talks, Gaveta, entrevista, análise, "3 motivos") não
+# entra: é o rosto de outra pessoa falando, não cena, teaser ou trailer. O Tulio mandou
+# tirar em 13/10/2026 ("muito ruim... são outros rostos de pessoas que estamos pegando").
+_TALK_SHOW_RE = re.compile(r"disney ?talks|\bgaveta\b", re.IGNORECASE)            # título ou descrição
+_TALK_TITLE_RE = re.compile(
+    r"entrevista com|aul[aã]o\b|bate-?papo|podcast|\breacts?\b|reagindo|an[aá]lise\b|painel\b|"
+    r"\d+ (motivos|curiosidades|fatos)|motivos pr?a|curiosidades|expectativas|desafio\b|\bquiz\b|"
+    r"conex[aã]o emp[aá]tica|teorias? (para|de|sobre)\b", re.IGNORECASE)
+
+
+def is_talk_show(meta: dict) -> bool:
+    title = meta.get("title", "")
+    return bool(_TALK_TITLE_RE.search(title)
+                or _TALK_SHOW_RE.search(title + " " + meta.get("description", "")[:800]))
+
+
 def _add_item(queue: list[dict], video_id: str, meta: dict, **extra) -> dict:
     """Baixa, converte, sobe e registra um vídeo na fila (salva a cada item)."""
     # Chamada de bilheteria ("25 de junho, somente nos cinemas") envelhece mal e não
     # é cena: fora dos fluxos de cenas e do TikTok.
     if STREAM != "main" and _PROMO_TITLE_RE.search(meta["title"]):
         raise ValueError("chamada de bilheteria/estreia, não é cena")
+    if is_talk_show(meta):
+        raise ValueError("programa de apresentador (Disney Talks e afins), não é cena nem trailer")
     # Português primeiro: canal brasileiro (dublado ou legendado na origem) ou
     # legenda oficial em PT queimada no vídeo. Sem nenhum dos dois, não entra.
     # Exceção: Rockstar, cujos trailers não têm versão em português.
