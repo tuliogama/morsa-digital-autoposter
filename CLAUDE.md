@@ -373,6 +373,14 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   TikTok: os horários da manhã saíram; grade nova 13h30, 15h, 16h30, 17h15, 18h, 19h30,
   21h, 22h30 (+ os 2 reels do Instagram às 11h e 13h = 10/dia). Agendamento já feito
   se move com `PUT /posts/{id}` na Zernio (`scheduledFor` + `timezone`).
+- **Bastidores, making of e dublagem (13/10/2026):** o Tulio apontou que engajam muito,
+  principalmente em reel. `reel_queue.py backstage` (`find_backstage`, na rotina
+  noturna) busca nos canais oficiais BR por "bastidores", "dublagem" e "making of",
+  filtra por título (`_BACKSTAGE_RE`), duração (12 a 240s) e fora programa de
+  apresentador, e põe no começo dos planos de cenas (2/3) e do TikTok (1/3) com
+  `theme: bastidores`. Só busca quando há menos de 15 em estoque. No fluxo de cenas,
+  `_pick_next` alterna: bastidores dia sim, dia não. Não confundir com Disney Talks
+  (apresentador), que segue barrado.
 - **Stories na revisão noturna** (desde 11/10/2026): `stories.py --insights` roda em toda
   conferência do workflow e guarda alcance, views, respostas, saídas e visitas ao perfil
   em `data/stories_log.json` (a Meta só responde com o story no ar e com 5+ espectadores).

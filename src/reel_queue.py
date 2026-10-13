@@ -534,6 +534,85 @@ def _video_meta(video_id: str) -> dict:
     }
 
 
+# Bastidores, making of e dublagem: o Tulio apontou em 13/10/2026 que esse conteúdo
+# engaja muito, principalmente em reel. Não é programa de apresentador (esse segue
+# barrado em is_talk_show): é o elenco, a equipe e os dubladores trabalhando.
+_BACKSTAGE_RE = re.compile(
+    r"bastidor|backstage|making of|por tr[aá]s d[aeo]s? |dublag|dublador|dublando|"
+    r"behind the scenes|featurette|erros de grava|bloopers?|cenas? deletada", re.IGNORECASE)
+BACKSTAGE_QUERIES = ("bastidores", "dublagem", "making of")
+BACKSTAGE_MAX_SECONDS = 240          # o vídeo é cortado em 90s; acima disso o corte fica sem sentido
+
+
+def find_backstage(max_new: int = 60) -> int:
+    """
+    Procura bastidores nos canais oficiais brasileiros e põe no começo dos planos de
+    cenas (2 de cada 3) e do TikTok (1 de cada 3). Só consulta títulos: o download é
+    do premap, no ritmo de sempre.
+    """
+    from reel_downloader import _ytdlp
+    known, stock = set(), 0
+    for name in STREAMS:
+        use_stream(name)
+        queue = load_queue()
+        known |= {q["video_id"] for q in queue}
+        done = {q["video_id"] for q in queue if q.get("posted")}
+        if PLAN_PATH.exists():
+            plan = json.loads(PLAN_PATH.read_text(encoding="utf-8"))
+            known |= {p["video_id"] for p in plan}
+            stock += sum(1 for p in plan if p.get("theme") == "bastidores" and p["video_id"] not in done)
+    if stock >= 15:
+        logger.info(f"bastidores: {stock} em estoque, sem busca nova")
+        return 0
+    try:
+        known |= set(json.loads((ROOT / "data" / "reel_rejected.json").read_text(encoding="utf-8")))
+    except (OSError, ValueError):
+        pass
+    found, seen_titles = [], set()
+    for channel_id, channel in ALL_OFFICIAL.items():
+        if not _is_br_channel(channel):
+            continue
+        start = len(found)
+        for query in BACKSTAGE_QUERIES:
+            if len(found) - start >= 12:           # no máximo 12 por canal, para variar
+                break
+            r = _ytdlp("--flat-playlist", "--playlist-end", "30", "-J",
+                       f"https://www.youtube.com/channel/{channel_id}/search?query={query}")
+            if "not a bot" in r.stderr or "confirm you" in r.stderr:
+                logger.warning("YouTube bloqueou a busca de bastidores — parando")
+                break
+            try:
+                entries = json.loads(r.stdout).get("entries") or []
+            except ValueError:
+                continue
+            for e in entries:
+                title, vid = e.get("title") or "", e.get("id")
+                key = re.sub(r"\W+", "", title.lower())[:40]
+                if (not vid or vid in known or key in seen_titles or not _BACKSTAGE_RE.search(title)
+                        or is_talk_show({"title": title}) or _PROMO_TITLE_RE.search(title)
+                        or not 12 <= (e.get("duration") or 0) <= BACKSTAGE_MAX_SECONDS):
+                    continue
+                if len(found) - start >= 12:
+                    break
+                known.add(vid); seen_titles.add(key)
+                found.append({"video_id": vid, "theme": "bastidores", "_t": f"{channel}: {title}"})
+            time.sleep(4)
+    # franquias de maior retorno primeiro (mesma ordem de prioridade do feed)
+    from content_generator import _categorize, _CATEGORY_TIER
+    found.sort(key=lambda f: _CATEGORY_TIER.get(_categorize({"title": f["_t"]}), 4))
+    found = found[:max_new]
+    split = {"cenas": [f for i, f in enumerate(found) if i % 3 != 2],
+             "tiktok": [f for i, f in enumerate(found) if i % 3 == 2]}
+    for name, items in split.items():
+        use_stream(name)
+        plan = json.loads(PLAN_PATH.read_text(encoding="utf-8"))
+        new = [{k: v for k, v in f.items() if k != "_t"} for f in items]
+        PLAN_PATH.write_text(json.dumps(new + plan, indent=1, ensure_ascii=False), encoding="utf-8")
+        for f in items:
+            logger.info(f"[{name}] bastidores + {f['_t'][:90]}")
+    return len(found)
+
+
 def premap() -> int:
     """
     Baixa e enfileira o que falta de PLAN_PATH, no máximo PREMAP_MAX_PER_RUN por
@@ -573,7 +652,7 @@ def premap() -> int:
             logger.warning(f"YouTube bloqueou o IP — parando por hoje ({e})")
             break
         except ValueError as e:
-            if any(k in str(e) for k in ("bilheteria", "fora da lista oficial", "sem versão em português")):
+            if any(k in str(e) for k in ("bilheteria", "fora da lista oficial", "sem versão em português", "programa de apresentador")):
                 rejected[p["video_id"]] = str(e)[:80]
                 rejected_path.write_text(json.dumps(rejected, indent=1, ensure_ascii=False), encoding="utf-8")
             logger.warning(f"[{n}/{len(batch)}] FALHOU {p['video_id']}: {str(e)[:150]}")
@@ -639,6 +718,13 @@ def _pick_next(queue: list[dict], today=None) -> dict | None:
         return next((q for q in fresh if q["category"] != last_cat), fresh[0])
     acervo = sorted((q for q in todo if not q.get("scheduled_for")),
                     key=lambda q: q.get("plan_order", 0))
+    # Bastidores dia sim, dia não: entram com força sem virar a única coisa do fluxo
+    back = [q for q in acervo if q.get("theme") == "bastidores"]
+    rest = [q for q in acervo if q.get("theme") != "bastidores"]
+    if back and rest:
+        posted = sorted((q for q in queue if q.get("posted")), key=lambda q: q.get("posted_at", ""))
+        last_was_back = bool(posted) and posted[-1].get("theme") == "bastidores"
+        return rest[0] if last_was_back else back[0]
     return acervo[0] if acervo else None
 
 
@@ -648,6 +734,8 @@ _THEME_NOTES = {
     "ano_novo": "Este Reel é da virada de ano da Morsa.",
     "vingadores": "Este Reel faz parte do aquecimento da Morsa para o novo filme dos Vingadores.",
     "gta": "Este Reel faz parte da contagem da Morsa para GTA VI.",
+    "bastidores": "Este Reel é de BASTIDORES (gravação, making of ou dublagem): fale de quem faz a obra "
+                  "acontecer e pergunte ao fã sobre isso. Não é cena do filme.",
     "criancas": "Este Reel é do especial de Dia das Crianças da Morsa (12 de outubro).",
     "animacao": "Este Reel é do Dia Internacional da Animação (28 de outubro).",
 }
@@ -1147,6 +1235,8 @@ def main():
         for q in todo:
             print(f"{q['tiktok_scheduled_for'][5:16].replace('T', ' ')} | {q['channel']}: {q['title'][:70]}")
         print(f"{len(todo)} agendados | {len(pending(load_queue()))} na fila do TikTok")
+    elif cmd == "backstage":
+        logger.info(f"bastidores novos nos planos: {find_backstage()}")
     elif cmd == "rehook":
         logger.info(f"[tiktok] texto na tela aplicado em {rehook()} vídeos já baixados")
     elif cmd == "premap":

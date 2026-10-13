@@ -42,6 +42,8 @@ set +a
   if [ -n "$TIKTOK_BOOST" ]; then
     REEL_STREAM=tiktok PREMAP_MAX_PER_RUN="$TIKTOK_BOOST" PREMAP_PAUSE_SECONDS=45 python3 src/reel_queue.py premap
   fi
+  # bastidores, making of e dublagem: busca nos canais oficiais quando o estoque baixa
+  python3 src/reel_queue.py backstage
   python3 src/reel_queue.py premap   # baixa o que faltar dos planos (acervo, cenas e TikTok)
 
   # legendas prontas e checadas, arquivos conferidos, relatório em data/reel_report.md
