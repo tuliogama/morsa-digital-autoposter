@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-12",
-  "generated_at": "2026-10-12T07:01:57.683145+00:00",
-  "strategy_note": "Priorize pautas de DC Comics, que apresentam a maior mediana da categoria (14) e concentram os dois melhores resultados dos últimos 7 dias. Evite ângulos sobre exclusividade de streaming para GTA 6, pois os posts com essa temática registraram as piores performas do período, mantendo a frequência de 1 post diário focada em outros recortes."
+  "date": "2026-10-13",
+  "generated_at": "2026-10-13T07:26:20.898812+00:00",
+  "strategy_note": "Priorize pautas de DC Comics, que apresentam a maior mediana recente (14.5) com n=8, impulsionadas pelos fortes desempenhos de Batman e Green Lantern nos últimos dias. Evite pautas de jogos independentes ou nichos, pois a categoria game_niche tem n=3 e mediana de 6, abaixo da mediana geral do feed."
 }
