@@ -56,7 +56,9 @@ IG_STREAMS = [name for name, cfg in STREAMS.items() if cfg["slot"] is not None]
 # Meta do Tulio (09/10/2026): 10 vídeos por dia no TikTok por um mês, para puxar
 # view e seguidor do nicho. São os 2 reels do Instagram (11h e 13h) + estes 8.
 # O TikTok aceita ~15 posts/dia por conta via API.
-TIKTOK_SLOTS_BRT = ["08:00", "09:30", "15:00", "16:30", "18:00", "19:30", "21:00", "22:30"]
+# 13/10/2026: os dois da manhã (8h e 9h30) foram para 13h30 e 17h15, por sugestão da
+# rotina de análise. 13h30 e não 13h: às 13h já entra no TikTok o reel principal do Instagram.
+TIKTOK_SLOTS_BRT = ["13:30", "15:00", "16:30", "17:15", "18:00", "19:30", "21:00", "22:30"]
 TIKTOK_THEME_WINDOWS = {"halloween": ("10-24", "10-31"), "natal": ("12-20", "12-25")}
 MIN_GAP_MIN = 90             # intervalo mínimo entre dois reels
 

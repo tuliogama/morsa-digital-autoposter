@@ -368,6 +368,11 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   curiosidades. É o rosto de outra pessoa falando; a página quer cena, teaser e
   trailer. `reel_queue.is_talk_show` barra em `_add_item` (título e descrição);
   30 itens já baixados foram removidos e 3 agendamentos do TikTok cancelados.
+- **13/10/2026, da rotina de análise (ok do Tulio):** DC e Marvel com pessoa no título
+  (ator, diretor) sobem um degrau em `_tier` (`_FACE_RE`) e a legenda abre pelo nome.
+  TikTok: os horários da manhã saíram; grade nova 13h30, 15h, 16h30, 17h15, 18h, 19h30,
+  21h, 22h30 (+ os 2 reels do Instagram às 11h e 13h = 10/dia). Agendamento já feito
+  se move com `PUT /posts/{id}` na Zernio (`scheduledFor` + `timezone`).
 - **Stories na revisão noturna** (desde 11/10/2026): `stories.py --insights` roda em toda
   conferência do workflow e guarda alcance, views, respostas, saídas e visitas ao perfil
   em `data/stories_log.json` (a Meta só responde com o story no ar e com 5+ espectadores).

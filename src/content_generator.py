@@ -503,6 +503,12 @@ def generate_post(news_item: dict, platform: str, brief: dict = None) -> dict:
         f"- Hashtags só relacionadas a esta notícia específica, nada genérico\n"
         f"- Se o título promete especificidade (nomes, qual regra, quais modelos), o corpo DEVE entregar essa especificidade. Se a descrição não tiver os dados, adapte o título para não prometer o que não pode cumprir."
     )
+    if _categorize(news_item) in ("dc", "marvel") and _FACE_RE.search(title):
+        user_msg += (
+            "\n- DC/Marvel com pessoa no centro: se a notícia traz o nome de um ator, atriz ou "
+            "diretor, a primeira linha começa por esse nome e pelo que a pessoa disse ou fez. "
+            "Só use nome que esteja no título ou no resumo."
+        )
     if _categorize(news_item) == "gta":
         # Revisão de 11/10/2026: GTA com ângulo corporativo ficou entre os piores da
         # semana; o que o fã comenta é o que muda no jogo dele.
@@ -729,6 +735,14 @@ def _learned_adjust() -> dict:
 _LEARNED = _learned_adjust()
 
 
+_FACE_RE = _re.compile(
+    r"\b(atores?|ator|atriz|elenco|star|actor|actress|diretor\w*|director|"
+    r"disse|diz|says|said|confirm\w+|revel\w+|admit\w+|explic\w+|coment\w+|fala sobre|"
+    r"robert downey|rdj|pattinson|affleck|cavill|gunn|corenswet|holland|garfield|maguire|"
+    r"jackman|reynolds|evans|hemsworth|johansson|pascal|feige|reeves|bale|keaton|"
+    r"gadot|momoa|phoenix|gaga|cox|bernthal|olsen|cumberbatch|ruffalo|larson)\b", _re.IGNORECASE)
+
+
 def _tier(news_item: dict, today_cats: list) -> int:
     """Tier do dia: repetir categoria (ou somar mais um game) custa prioridade."""
     cat = _categorize(news_item)
@@ -738,6 +752,10 @@ def _tier(news_item: dict, today_cats: list) -> int:
     tier += 2 * today_cats.count(cat)
     if cat in _GAME_CATS and any(c in _GAME_CATS for c in today_cats):
         tier += 2
+    # DC e Marvel com uma pessoa no centro (ator, diretor) sobem um degrau: os campeões
+    # da semana de 13/10/2026 tinham RDJ, Pattinson e Affleck na primeira linha.
+    if cat in ("dc", "marvel") and _FACE_RE.search(news_item.get("title", "")):
+        tier -= 1
     return tier
 
 
