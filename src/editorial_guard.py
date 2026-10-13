@@ -20,6 +20,8 @@ import json
 import logging
 import os
 import re
+import time
+import urllib.error
 import urllib.request
 
 logger = logging.getLogger("editorial_guard")
@@ -82,8 +84,14 @@ def _ask(model: str, system: str, user: str) -> dict:
         GROQ_API_URL, data=json.dumps(body).encode(), method="POST",
         headers={"Authorization": f"Bearer {os.environ['GROQ_API_KEY']}",
                  "Content-Type": "application/json", "User-Agent": "Mozilla/5.0"})
-    with urllib.request.urlopen(req, timeout=45) as r:
-        return json.loads(json.loads(r.read())["choices"][0]["message"]["content"])
+    for attempt in (1, 2):
+        try:
+            with urllib.request.urlopen(req, timeout=45) as r:
+                return json.loads(json.loads(r.read())["choices"][0]["message"]["content"])
+        except urllib.error.HTTPError as e:
+            if e.code != 429 or attempt == 2:
+                raise
+            time.sleep(35)                 # limite de tokens por minuto da Groq: espera a janela virar
 
 
 def _judge(model: str, title: str, description: str) -> dict:
@@ -140,10 +148,10 @@ def same_story(title: str, description: str = "", published: list[str] = None) -
         memory = list(published or []) + recent_published()
     except Exception as e:
         return True, f"não consegui ler o que já saiu ({str(e)[:60]})"
-    memory = list(dict.fromkeys(m for m in memory if m))[:70]
+    memory = list(dict.fromkeys(m[:150] for m in memory if m))[:45]   # cabe no limite por minuto
     if not memory:
         return False, ""
-    listing = "\n".join(f"- {m[:240]}" for m in memory)
+    listing = "\n".join(f"- {m}" for m in memory)
     error = None
     for model in JUDGE_MODELS:
         try:
