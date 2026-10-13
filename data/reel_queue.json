@@ -126,14 +126,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=f_VBXRZuHTc",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/f_VBXRZuHTc.mp4",
     "added_at": "2026-10-06T18:52:36.975823-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 1,
     "scheduled_for": "2026-10-13",
     "theme": "gta",
     "caption": "Vice City tá na cabeça e a nostalgia bateu de uma vez só.\n\nO Rockstar Games liberou esse vídeo de aniversário para celebrar a década do lançamento original, resgatando aquela vibe de Florida anos 80 que marcou a geração de gamers. É o tipo de conteúdo que faz a gente lembrar por que essa franquia é tão icônica e importante para a cultura pop.\n\nQual foi a primeira missão que você fez no jogo e nunca mais esqueceu?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#GTA #ViceCity #RockstarGames #GTA6 #GamerBr #Nostalgia",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-13T13:06:09.381842-03:00",
+    "media_id": "18076457012440053",
+    "tiktok_id": "6ace56f2a0d54f8ecb67d4eb",
+    "tiktok_status": "published",
+    "tiktok_url": null
   },
   {
     "video_id": "M80K51DosFo",
