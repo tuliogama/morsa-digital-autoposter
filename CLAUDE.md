@@ -353,6 +353,16 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   `lint_caption`) e `check` (juiz `gpt-oss-120b` com a política `POLICY`, chamado em
   `generate_post`). Juiz fora do ar = pauta recusada, de propósito. Arquivo idêntico
   no ordem-sith-autoposter. Não afrouxar; ao mexer na lista, testar com frases reais.
+- **Repetição e registro de posts (13/10/2026):** o `logs/posts_log.json` foi zerado
+  várias vezes porque o passo "Persistir log" fazia `git stash pop` e deixava marcador
+  de conflito dentro do JSON; o fluxo seguinte não conseguia ler e recomeçava do zero.
+  Sem memória, saiu pauta repetida (rádio a pé do GTA 6 em 11 e 12/10). Correções:
+  `editorial_guard.same_story` compara cada pauta com as últimas 40 legendas lidas do
+  próprio Instagram (juiz `gpt-oss`, barra se não responder); os workflows gravam com
+  `rebase -X theirs` + `posts_log.py union` (nunca `stash`); `_load` recupera entradas
+  de arquivo corrompido; `categories_posted_today` soma o registro ao Instagram, para
+  post apagado continuar contando na cota de GTA. Registro reconstruído do histórico
+  do git (166 entradas). O mesmo vale para o ordem-sith-autoposter.
 - **Stories na revisão noturna** (desde 11/10/2026): `stories.py --insights` roda em toda
   conferência do workflow e guarda alcance, views, respostas, saídas e visitas ao perfil
   em `data/stories_log.json` (a Meta só responde com o story no ar e com 5+ espectadores).

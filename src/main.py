@@ -50,14 +50,16 @@ BRT = timezone(timedelta(hours=-3))
 
 def categories_posted_today() -> list[str]:
     """
-    Categorias já publicadas hoje (dia em BRT). Lê o Instagram direto, que é a
-    fonte da verdade; o posts_log entra só se a API não responder.
+    Categorias já publicadas hoje (dia em BRT): Instagram mais o registro local,
+    para um post apagado continuar contando na cota do dia.
     """
     from posts_log import captions_posted_on, get_recent_posts
     from content_generator import _categorize
     today = datetime.now(BRT).date()
     titles = captions_posted_on(today, BRT)
-    if not titles:
+    # O registro local entra SEMPRE, não só quando a API falha: post apagado some do
+    # Instagram e a cota do dia reabria (12/10/2026: saíram 3 de GTA no mesmo dia).
+    if True:
         for p in get_recent_posts(platform="instagram", limit=20):
             try:
                 pub = datetime.fromisoformat(p.get("published_at", ""))
@@ -204,6 +206,12 @@ def main():
 
         if _is_same_run_dup(n):
             logger.info(f"⏭️  Pulando '{n['title'][:60]}' — mesmo evento já publicado neste run")
+            continue
+
+        import editorial_guard
+        repeated, same_as = editorial_guard.same_story(n.get("title", ""), n.get("description", ""))
+        if repeated:
+            logger.info(f"⏭️  Pulando '{n['title'][:60]}' — história já publicada: {same_as}")
             continue
 
         if published > 0:

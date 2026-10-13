@@ -106,13 +106,25 @@ jobs:
         run: |
           git config user.name "morsa-bot"
           git config user.email "bot@morsadigital.com"
-          git fetch origin main
-          git stash || true
-          git rebase origin/main || git reset --hard origin/main
-          git stash pop || true
           git add -f logs/posts_log.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "chore: atualiza posts_log [skip ci]"
-          git push origin main || true
+          # O registro é um JSON que vários fluxos escrevem. No conflito vale a versão
+          # deste job e, em seguida, as entradas da cópia do GitHub são reunidas a ela:
+          # ninguém perde entrada e nunca sobra marcador de conflito no arquivo.
+          for i in 1 2 3 4; do
+            git fetch origin main
+            git show origin/main:logs/posts_log.json > /tmp/upstream_log.json 2>/dev/null || echo "[]" > /tmp/upstream_log.json
+            if git rebase -X theirs origin/main; then
+              python3 src/posts_log.py union /tmp/upstream_log.json
+              git add -f logs/posts_log.json
+              git diff --staged --quiet || git commit -m "chore: une posts_log [skip ci]"
+              git push origin main && exit 0
+            else
+              git rebase --abort 2>/dev/null || true
+            fi
+            echo "push falhou (tentativa $i)"; sleep $((i*15))
+          done
+          exit 1
 
       - uses: actions/upload-artifact@v4
         if: always() && steps.gate.outputs.due != 'false'
@@ -197,10 +209,22 @@ jobs:
         run: |
           git config user.name "morsa-bot"
           git config user.email "bot@morsadigital.com"
-          git fetch origin main
-          git stash || true
-          git rebase origin/main || git reset --hard origin/main
-          git stash pop || true
           git add -f logs/posts_log.json data/release_calendar.json 2>/dev/null || true
           git diff --staged --quiet || git commit -m "chore: estreia publicada — atualiza calendário [skip ci]"
-          git push origin main || true
+          # O registro é um JSON que vários fluxos escrevem. No conflito vale a versão
+          # deste job e, em seguida, as entradas da cópia do GitHub são reunidas a ela:
+          # ninguém perde entrada e nunca sobra marcador de conflito no arquivo.
+          for i in 1 2 3 4; do
+            git fetch origin main
+            git show origin/main:logs/posts_log.json > /tmp/upstream_log.json 2>/dev/null || echo "[]" > /tmp/upstream_log.json
+            if git rebase -X theirs origin/main; then
+              python3 src/posts_log.py union /tmp/upstream_log.json
+              git add -f logs/posts_log.json
+              git diff --staged --quiet || git commit -m "chore: une posts_log [skip ci]"
+              git push origin main && exit 0
+            else
+              git rebase --abort 2>/dev/null || true
+            fi
+            echo "push falhou (tentativa $i)"; sleep $((i*15))
+          done
+          exit 1

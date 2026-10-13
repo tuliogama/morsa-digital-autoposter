@@ -73,11 +73,20 @@ jobs:
           git add data/reel_queue.json data/reel_queue_cenas.json
           git add -f logs/posts_log.json
           git diff --staged --quiet || git commit -m "chore: reel publicado da fila [skip ci]"
-          # Se outro fluxo gravou ao mesmo tempo, a versão DESTE job vence no conflito:
-          # perder o "publicado" faz o mesmo reel ser tentado de novo (11/10/2026).
+          # O registro é um JSON que vários fluxos escrevem. No conflito vale a versão
+          # deste job e, em seguida, as entradas da cópia do GitHub são reunidas a ela:
+          # ninguém perde entrada e nunca sobra marcador de conflito no arquivo.
           for i in 1 2 3 4; do
-            git pull --rebase -X theirs origin main && git push origin main && exit 0
-            git rebase --abort 2>/dev/null || true
+            git fetch origin main
+            git show origin/main:logs/posts_log.json > /tmp/upstream_log.json 2>/dev/null || echo "[]" > /tmp/upstream_log.json
+            if git rebase -X theirs origin/main; then
+              python3 src/posts_log.py union /tmp/upstream_log.json
+              git add -f logs/posts_log.json
+              git diff --staged --quiet || git commit -m "chore: une posts_log [skip ci]"
+              git push origin main && exit 0
+            else
+              git rebase --abort 2>/dev/null || true
+            fi
             echo "push falhou (tentativa $i)"; sleep $((i*15))
           done
           exit 1

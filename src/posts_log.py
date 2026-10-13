@@ -23,10 +23,24 @@ _api_words_cache: Optional[set] = None
 def _load() -> list[dict]:
     if not LOG_PATH.exists():
         return []
+    text = LOG_PATH.read_text(encoding="utf-8")
     try:
-        return json.loads(LOG_PATH.read_text(encoding="utf-8"))
-    except Exception:
-        return []
+        return json.loads(text)
+    except ValueError:
+        pass
+    # Arquivo corrompido (marcador de conflito do git, em 12/10/2026, zerou o registro
+    # e a página repetiu pauta). Salva o que der: cada objeto inteiro que ainda se lê.
+    logger.error("posts_log.json ilegível: recuperando as entradas inteiras")
+    posts, decoder, i = [], json.JSONDecoder(), 0
+    while (i := text.find('{', i)) != -1:
+        try:
+            obj, end = decoder.raw_decode(text, i)
+            if isinstance(obj, dict) and obj.get("media_id"):
+                posts.append(obj)
+            i = end
+        except ValueError:
+            i += 1
+    return posts
 
 
 def _save(posts: list[dict]):
@@ -220,3 +234,26 @@ def update_metrics(media_id: str, metrics: dict):
             p["metrics"] = metrics
             break
     _save(posts)
+
+
+def union_with(path: str) -> int:
+    """
+    Junta ao registro local as entradas de outra cópia (a do GitHub no momento do
+    push). Dois fluxos gravando ao mesmo tempo perdiam a entrada um do outro.
+    """
+    try:
+        other = json.loads(Path(path).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return 0
+    mine = _load()
+    known = {p.get("media_id") for p in mine}
+    extra = [p for p in other if isinstance(p, dict) and p.get("media_id") not in known]
+    if extra:
+        _save(sorted(mine + extra, key=lambda p: p.get("published_at", "")))
+    return len(extra)
+
+
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) == 3 and sys.argv[1] == "union":
+        print(f"posts_log: {union_with(sys.argv[2])} entradas vindas da outra cópia")

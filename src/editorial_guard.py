@@ -72,12 +72,11 @@ def hard_block(*texts: str) -> str | None:
     return None
 
 
-def _judge(model: str, title: str, description: str) -> dict:
+def _ask(model: str, system: str, user: str) -> dict:
     body = {
         "model": model, "temperature": 0, "max_tokens": 900, "reasoning_effort": "low",
         "response_format": {"type": "json_object"},
-        "messages": [{"role": "system", "content": POLICY},
-                     {"role": "user", "content": f"Título: {title}\nResumo: {description[:1200]}"}],
+        "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],
     }
     req = urllib.request.Request(
         GROQ_API_URL, data=json.dumps(body).encode(), method="POST",
@@ -85,6 +84,10 @@ def _judge(model: str, title: str, description: str) -> dict:
                  "Content-Type": "application/json", "User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=45) as r:
         return json.loads(json.loads(r.read())["choices"][0]["message"]["content"])
+
+
+def _judge(model: str, title: str, description: str) -> dict:
+    return _ask(model, POLICY, f"Título: {title}\nResumo: {description[:1200]}")
 
 
 def check(title: str, description: str = "") -> tuple[bool, str]:
@@ -102,3 +105,52 @@ def check(title: str, description: str = "") -> tuple[bool, str]:
             error = e
             logger.warning(f"Juiz editorial ({model}) falhou: {str(e)[:120]}")
     return False, f"juiz editorial indisponível ({str(error)[:80]})"
+
+
+# ── Repetição: a mesma história não sai duas vezes ───────────────────────────
+# Em 11 e 12/10/2026 as duas páginas repetiram pauta (rádio a pé no GTA 6; HQs de
+# Rogue One e Boba Fett): o registro local tinha sido zerado e o modelo menor, que
+# fazia a comparação, deixou passar a mesma notícia vinda de outra fonte e idioma.
+# Aqui a memória é o próprio Instagram, que não se perde, e quem compara é o juiz.
+
+SAME_STORY = """Você evita post repetido numa página de cultura pop. Recebe uma PAUTA candidata e a lista do que a página JÁ PUBLICOU nos últimos dias.
+
+Responda repetida=true se a pauta trata do MESMO fato, anúncio, declaração ou novidade de algum item da lista, mesmo com outro título, outro idioma, outra fonte ou outro ângulo. Exemplos de repetida: "GTA 6 radio stations revealed" contra "GTA 6 permite ouvir rádio a pé"; "Novas HQs de Rogue One e Boba Fett chegam" contra "Rogue One e Boba Fett chegam em outubro".
+
+Responda repetida=false só se for um fato diferente, ainda que da mesma franquia ou personagem. Na dúvida, repetida=true.
+
+Responda SÓ com JSON: {"repetida": true ou false, "igual_a": "trecho do item da lista, ou vazio"}"""
+
+
+def recent_published(limit: int = 40) -> list[str]:
+    """Começo da legenda dos últimos posts, lido do Instagram. [] se a consulta falhar."""
+    token, user = os.environ.get("FB_ACCESS_TOKEN"), os.environ.get("IG_USER_ID")
+    if not token or not user:
+        return []
+    url = (f"https://graph.facebook.com/v19.0/{user}/media"
+           f"?fields=caption&limit={limit}&access_token={token}")
+    with urllib.request.urlopen(url, timeout=20) as r:
+        data = json.loads(r.read()).get("data", [])
+    return [" ".join((p.get("caption") or "").split())[:240] for p in data if p.get("caption")]
+
+
+def same_story(title: str, description: str = "", published: list[str] = None) -> tuple[bool, str]:
+    """(é repetida?, com o quê). Sem resposta do juiz ou sem memória, barra."""
+    try:
+        memory = list(published or []) + recent_published()
+    except Exception as e:
+        return True, f"não consegui ler o que já saiu ({str(e)[:60]})"
+    memory = list(dict.fromkeys(m for m in memory if m))[:70]
+    if not memory:
+        return False, ""
+    listing = "\n".join(f"- {m[:240]}" for m in memory)
+    error = None
+    for model in JUDGE_MODELS:
+        try:
+            out = _ask(model, SAME_STORY, f"PAUTA: {title}\n{description[:400]}\n\nJÁ PUBLICADO:\n{listing}")
+            if isinstance(out.get("repetida"), bool):
+                return out["repetida"], str(out.get("igual_a", ""))[:100]
+        except Exception as e:
+            error = e
+            logger.warning(f"Juiz de repetição ({model}) falhou: {str(e)[:120]}")
+    return True, f"juiz de repetição indisponível ({str(error)[:60]})"
