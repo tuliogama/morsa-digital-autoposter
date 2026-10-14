@@ -29,6 +29,7 @@ Fluxo reel:
 import json
 import logging
 import os
+import re
 import sys
 import time
 import urllib.parse
@@ -47,13 +48,31 @@ class NoImageError(Exception):
 
 
 
+MAX_HASHTAGS = 5      # limite do Instagram desde dez/2025; no TikTok, 3 a 5 relevantes rendem mais
+
+
+def cap_hashtags(caption: str, max_tags: int = MAX_HASHTAGS) -> str:
+    """Corta as hashtags excedentes (fica com as primeiras, que são as mais específicas)."""
+    tags = re.findall(r"#\w+", caption or "")
+    if len(tags) <= max_tags:
+        return caption
+    seen, kept = set(), []
+    for t in tags:
+        if t.lower() not in seen:
+            seen.add(t.lower()); kept.append(t)
+    body = re.sub(r"#\w+", "", caption)
+    body = re.sub(r"[ \t]+\n", "\n", body)
+    body = re.sub(r"\n{3,}", "\n\n", body).rstrip()
+    return f"{body}\n\n{' '.join(kept[:max_tags])}"
+
+
 def _clean_caption(caption: str) -> str:
     """Última barreira antes do Instagram: legenda com resto de prompt não sai."""
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     from content_generator import has_template_echo
     if has_template_echo(caption or ""):
         raise ValueError("legenda contém o molde do prompt — publicação cancelada")
-    return caption
+    return cap_hashtags(caption)
 
 
 def _post(url: str, params: dict) -> dict:

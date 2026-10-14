@@ -48,13 +48,18 @@ def account_id() -> str:
     return accounts[0]["_id"]
 
 
+def _cap(caption: str) -> str:
+    from publishers.instagram import cap_hashtags
+    return cap_hashtags(caption)
+
+
 def post_video(video_url: str, caption: str, scheduled_for: str = None, wait: bool = True) -> dict:
     """
     Publica (ou agenda, com `scheduled_for` em ISO 8601) um vídeo público.
     Devolve {"id", "status", "url"}; com wait=True espera o TikTok processar.
     """
     body = {
-        "content": caption[:2200],
+        "content": _cap(caption)[:2200],
         "mediaItems": [{"type": "video", "url": video_url}],
         "platforms": [{"platform": "tiktok", "accountId": account_id()}],
         "tiktokSettings": {

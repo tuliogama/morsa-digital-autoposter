@@ -218,7 +218,7 @@ FORMATO:
 - Linha em branco
 - CTA para arrastar os slides
 - Linha em branco
-- 5-7 hashtags específicas do tema (filme/série/game/anime), nunca genéricas
+- 3 a 5 hashtags específicas (nunca mais de 5) do tema (filme/série/game/anime), nunca genéricas
 NÃO truncar. NÃO começar com emoji.
 PROIBIDO ABSOLUTO: qualquer menção a "marketing", "agência", "seu negócio", "presença online", "estratégia digital", "resultados", "consultoria", "nossa equipe de especialistas" ou qualquer linguagem de venda de serviço. Isso é sobre cultura pop, não sobre o próprio canal."""
 
@@ -261,7 +261,7 @@ FORMATO:
 - Linha em branco
 - CTA: "Assiste até o final 👇" ou similar
 - Linha em branco
-- 5-6 hashtags específicas + #MorsaDigital
+- 4 hashtags específicas + #MorsaDigital (5 no total)
 NÃO usar mais de 200 palavras.
 PROIBIDO: qualquer menção a marketing, agência, "seu negócio", "presença online", "estratégia digital" ou venda de serviço."""
 

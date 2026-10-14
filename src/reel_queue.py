@@ -777,7 +777,7 @@ ESTRUTURA OBRIGATÓRIA:
 
 [linha em branco]
 
-#hashtags (5 a 7, específicas da obra e dos personagens, terminando em #MorsaDigital)
+#hashtags (4 específicas da obra e dos personagens + #MorsaDigital, 5 no total)
 
 REGRAS:
 - Português do Brasil, informal, como um fã escreve. Nada de tom de release.
@@ -808,7 +808,7 @@ def _caption(item: dict) -> str:
         "PROIBIDO afirmar qualquer coisa que não esteja nos fatos acima: data de estreia, "
         "elenco, enredo, se é final de série, se terá continuação, opinião sobre a obra "
         "completa (ninguém assistiu ainda). Na dúvida, fale do que o título promete e "
-        "faça a pergunta ao fã. Termine com 5 a 6 hashtags específicas da franquia "
+        "faça a pergunta ao fã. Termine com 4 ou 5 hashtags específicas da franquia (nunca mais de 5) "
         "(nada genérico como #Cinema, #Trailer ou #Filmes)."
     )
     # Teste (desde 11/10/2026): metade dos trailers abre com reação em primeira pessoa,
@@ -856,8 +856,8 @@ def lint_caption(item: dict, caption: str) -> list[str]:
         problems.append("sem crédito do canal")
     if "—" in caption or "–" in caption:
         problems.append("tem travessão")
-    if not 4 <= len(tags) <= 8:
-        problems.append(f"{len(tags)} hashtags (esperado 4 a 8)")
+    if not 3 <= len(tags) <= 5:
+        problems.append(f"{len(tags)} hashtags (esperado 3 a 5)")
     if any(t.lower() in ("#cinema", "#filmes", "#trailer", "#série", "#series") for t in tags):
         problems.append("hashtag genérica")
     if len(caption) < 150 or len(caption) > 1200:

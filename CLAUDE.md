@@ -41,7 +41,7 @@ cd src && python3 -m metrics_analyzer
 ### 3. Publicar post
 ```bash
 # Fluxo normal (GitHub Actions roda automaticamente 6x/dia)
-cd /Users/tuliogama/morsa-digital-autoposter
+cd /Users/tuliogama/Code/Omni/morsa-digital-autoposter
 source .env.secrets && export $(cat .env.secrets | grep -v '#' | xargs)
 python3 src/main.py --platforms instagram
 
@@ -381,6 +381,7 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   `theme: bastidores`. Só busca quando há menos de 15 em estoque. No fluxo de cenas,
   `_pick_next` alterna: bastidores dia sim, dia não. Não confundir com Disney Talks
   (apresentador), que segue barrado.
+- **Hashtags: no máximo 5** (14/10/2026). O Instagram limita a 5 desde dez/2025 e os posts do Morsa saíam com 8 (feed) e 6 (reels). `publishers.instagram.cap_hashtags` corta na barreira final de todo envio (e no TikTok, em `publishers.tiktok`); prompts pedem 3 a 5.
 - **Stories na revisão noturna** (desde 11/10/2026): `stories.py --insights` roda em toda
   conferência do workflow e guarda alcance, views, respostas, saídas e visitas ao perfil
   em `data/stories_log.json` (a Meta só responde com o story no ar e com 5+ espectadores).

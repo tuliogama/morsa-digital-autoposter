@@ -37,7 +37,7 @@ FORMATO OBRIGATÓRIO (use exatamente esta estrutura com linhas em branco entre b
 
 [linha em branco]
 
-#hashtag1 #hashtag2 #hashtag3 #hashtag4 #hashtag5 #hashtag6 #hashtag7 #hashtag8
+#hashtag1 #hashtag2 #hashtag3 #hashtag4 #hashtag5
 
 EXEMPLO DE FORMATO CORRETO:
 ---
@@ -107,7 +107,7 @@ ESTRUTURA OBRIGATÓRIA:
 
 [linha em branco]
 
-#hashtag1 #hashtag2 #hashtag3 #hashtag4 #hashtag5 #hashtag6
+#hashtag1 #hashtag2 #hashtag3 #hashtag4 #hashtag5
 
 REGRAS:
 - Nunca descreva cenas específicas do trailer (quem não assistiu ainda vai ver no Reel)
@@ -136,7 +136,7 @@ PLATFORM_PROMPTS = {
             "- Parágrafo de abertura forte (sem emoji no início)\n"
             "- 2-3 parágrafos de desenvolvimento\n"
             "- Pergunta ou CTA ao final\n"
-            "- Linha em branco + 4-6 hashtags relevantes\n\n"
+            "- Linha em branco + 3 a 5 hashtags relevantes (nunca mais de 5)\n\n"
             "Separe parágrafos com linha em branco. Nunca truncar."
         ),
     },
@@ -370,7 +370,7 @@ def _strip_ai_tells(text: str) -> str:
     return text
 
 
-def _cap_hashtags(content: str, max_tags: int = 8) -> str:
+def _cap_hashtags(content: str, max_tags: int = 5) -> str:
     """
     Mantém no máximo `max_tags` hashtags (as primeiras, mais específicas),
     removendo o excesso. O modelo às vezes despeja 15-20 — parece bot e
@@ -558,7 +558,7 @@ def generate_post(news_item: dict, platform: str, brief: dict = None) -> dict:
 
     # Remove travessão (tell de IA) e corta excesso de hashtags
     content = _strip_ai_tells(content)
-    content = _cap_hashtags(content, max_tags=8)
+    content = _cap_hashtags(content, max_tags=5)
 
     # Headline para a imagem: gerado pelo Groq — curto, completo, sem reticências
     try:

@@ -82,7 +82,7 @@ ESTRUTURA OBRIGATÓRIA:
 
 [linha em branco]
 
-#hashtag1 #hashtag2 #hashtag3 #hashtag4 #hashtag5 #hashtag6
+#hashtag1 #hashtag2 #hashtag3 #hashtag4 #hashtag5
 
 REGRAS:
 - Tom: fã empolgado, não robô corporativo
@@ -109,7 +109,7 @@ ESTRUTURA OBRIGATÓRIA:
 
 [linha em branco]
 
-#hashtag1 #hashtag2 #hashtag3 #hashtag4 #hashtag5 #hashtag6
+#hashtag1 #hashtag2 #hashtag3 #hashtag4 #hashtag5
 
 REGRAS:
 - Tom: celebração, como um fã que está ansioso para o dia chegar
