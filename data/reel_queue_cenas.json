@@ -250,14 +250,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=JiWTkbu9HvU",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/JiWTkbu9HvU.mp4",
     "added_at": "2026-10-06T22:25:14.333215-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 7,
     "layout": "vertical",
     "lang": "pt",
     "caption": "Rock Lee ou Gaara, quem você acha que leva a melhor nessa?\n\nTodo mundo sabe que o Lee é o cara que nunca desiste, mas aquele olhar do Gaara...\n\nComenta aí qual dos dois te dá mais medo de enfrentar.\n\nVídeo: Crunchyroll Brasil (canal oficial no YouTube)\n\n#Naruto #RockLee #Gaara #NarutoShippuden #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-14T11:11:42.707501-03:00",
+    "media_id": "18641145952032871",
+    "tiktok_id": "6acf8d9f2e8343fc6ba303c5",
+    "tiktok_status": "published",
+    "tiktok_url": null
   },
   {
     "video_id": "_xGeGUYAwBo",
