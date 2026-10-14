@@ -4,7 +4,7 @@
 # PUBLICAÇÃO é do GitHub (workflow reel-queue.yml): com a fila cheia, o Mac
 # pode ficar dias desligado.
 
-cd /Users/tuliogama/morsa-digital-autoposter
+cd /Users/tuliogama/Code/Omni/morsa-digital-autoposter
 
 # launchd não herda o PATH do shell — fixa o Homebrew (python3.14, yt-dlp, ffmpeg, gh)
 export PATH="/opt/homebrew/bin:/usr/bin:/bin:$PATH"
@@ -52,10 +52,13 @@ set +a
   # teste do texto na tela: aplica a pergunta em metade dos vídeos já baixados
   python3 src/reel_queue.py rehook
 
+  # TikTok: acervo do feed como post de foto, 10 por dia até alcançar o dia atual
+  python3 src/tiktok_photos.py schedule
+
   # TikTok: confere os que já saíram e agenda os próximos horários (Zernio)
   python3 src/reel_queue.py tiktok
 
-  git add data/reel_queue.json data/reel_queue_cenas.json data/reel_queue_tiktok.json data/reel_report.md data/reel_rejected.json 2>/dev/null
+  git add data/reel_queue.json data/reel_queue_cenas.json data/reel_queue_tiktok.json data/reel_report.md data/reel_rejected.json data/tiktok_photo_backlog.json 2>/dev/null
   git diff --staged --quiet || {
     git commit -q -m "chore: fila de reels abastecida [skip ci]"
     git pull -q --rebase --autostash origin main

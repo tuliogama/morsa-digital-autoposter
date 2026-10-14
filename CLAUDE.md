@@ -392,6 +392,18 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   15 vídeos por 24h, contados à parte. Não burlar a detecção de conteúdo não
   original (espelhar, mudar tom, cortar borda de vídeo de terceiros): perguntado em
   14/10, recusado; o caminho é conteúdo nosso (fotos, narração, vídeos do Tulio).
+- **Acervo do feed no TikTok (14/10/2026, pedido do Tulio: "vai pra cima dos mil
+  seguidores nerds"):** `src/tiktok_photos.py` põe as notícias estáticas publicadas no
+  Instagram desde 29/05/2026 no TikTok como post de foto, 10 por dia (`PHOTO_SLOTS_BRT`,
+  fora dos minutos dos vídeos), da mais antiga para a mais nova, até alcançar hoje
+  (~467 posts, termina perto de 28/11/2026). `build` monta
+  `data/tiktok_photo_backlog.json` (fora: linha editorial, data relativa como "hoje",
+  repetido, e post fraco da fase de junho: promoção, preço, tecnologia, empresa,
+  `_weak`); `schedule` roda na rotina noturna, agenda 2 dias à frente, baixa as
+  imagens do Instagram (a URL expira) e sobe na Release `tiktok-fotos`;
+  `clean_caption` tira travessão, markdown e emoji do começo. Com as 3 notícias do
+  dia são 13 fotos por dia (limite da Zernio: 15). Metas seguintes: 1 mil seguidores
+  (Marketplace), 10 mil e 100 mil views em 30 dias (Recompensas do Criador).
 - **Stories na revisão noturna** (desde 11/10/2026): `stories.py --insights` roda em toda
   conferência do workflow e guarda alcance, views, respostas, saídas e visitas ao perfil
   em `data/stories_log.json` (a Meta só responde com o story no ar e com 5+ espectadores).
