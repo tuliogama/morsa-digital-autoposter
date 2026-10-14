@@ -1891,7 +1891,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=8hZ6qxECOVU",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/8hZ6qxECOVU.mp4",
     "added_at": "2026-10-12T05:36:19.793438-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "fresh",
     "hook_text": null,
     "layout": "horizontal",
@@ -1899,7 +1899,12 @@
     "caption_style": "padrao",
     "caption": "Coven Academy acabou de soltar esse trailer e eu já tô com aquele frio na barriga de quem vai se matar tentando conjurar um feitiço simples.\n\nA ideia de uma academia de magia onde o básico já é um desafio em si é exatamente o tipo de premissa que prende a atenção. Trazendo isso pro catálogo do Disney+ no dia 1 de outubro, a expectativa é que a gente veja uma jornada de aprendizado cheia de tropeços e descobertas.\n\nVocê acha que o maior vilão nessa história é a falta de talento ou a pressão de estar sempre sendo avaliado?\n\nVídeo: Disney+ Brasil (canal oficial no YouTube)\n\n#CovenAcademy #DisneyPlus #Magia #SérieDeFantasia #NovidadesDisney #Ficção",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-14T14:24:04.095543-03:00",
+    "media_id": "18000813236812731",
+    "tiktok_id": "6acfbab466d8442fbd03a045",
+    "tiktok_status": "published",
+    "tiktok_url": null
   },
   {
     "video_id": "o4kJTYSAwXE",
