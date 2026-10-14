@@ -389,8 +389,9 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   também ao TikTok como carrossel de fotos (`publishers.tiktok.post_photos`, chamado
   no fim de `instagram.publish`; título = 1ª linha, legenda em `description`,
   `auto_add_music`). Desliga com `TIKTOK_PHOTOS=off`. Limite da Zernio: 15 fotos e
-  15 vídeos por 24h, contados à parte. O Tulio pediu para NÃO tentar burlar a
-  detecção de conteúdo não original (eu recusei espelhar/alterar vídeo de terceiros).
+  15 vídeos por 24h, contados à parte. Não burlar a detecção de conteúdo não
+  original (espelhar, mudar tom, cortar borda de vídeo de terceiros): perguntado em
+  14/10, recusado; o caminho é conteúdo nosso (fotos, narração, vídeos do Tulio).
 - **Stories na revisão noturna** (desde 11/10/2026): `stories.py --insights` roda em toda
   conferência do workflow e guarda alcance, views, respostas, saídas e visitas ao perfil
   em `data/stories_log.json` (a Meta só responde com o story no ar e com 5+ espectadores).
