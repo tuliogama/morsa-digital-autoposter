@@ -280,6 +280,15 @@ def publish(post: dict) -> dict:
     except Exception as e:
         logger.warning(f"Falha ao registrar no posts_log: {e}")
 
+    # Mesma notícia como post de foto no TikTok (as artes são nossas: conteúdo original)
+    try:
+        from publishers import tiktok
+        if tiktok.enabled() and os.environ.get("TIKTOK_PHOTOS", "on") != "off":
+            tk = tiktok.post_photos([u for u in (image_url, slide2_url) if u], caption)
+            logger.info(f"TikTok (foto): {tk}")
+    except Exception as e:
+        logger.warning(f"TikTok (foto) falhou, segue só no Instagram: {str(e)[:200]}")
+
     return {"platform": "instagram", "id": media_id, "image_url": image_url}
 
 

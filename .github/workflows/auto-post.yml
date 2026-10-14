@@ -47,6 +47,7 @@ env:
   GITHUB_REPOSITORY: ${{ github.repository }}
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   BING_SEARCH_KEY: ${{ secrets.BING_SEARCH_KEY }}
+  ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
 
 jobs:
   # ── Job 1: Posts de feed (notícias automáticas) ──────────────────────────

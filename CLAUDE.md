@@ -382,6 +382,15 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   `_pick_next` alterna: bastidores dia sim, dia não. Não confundir com Disney Talks
   (apresentador), que segue barrado.
 - **Hashtags: no máximo 5** (14/10/2026). O Instagram limita a 5 desde dez/2025 e os posts do Morsa saíam com 8 (feed) e 6 (reels). `publishers.instagram.cap_hashtags` corta na barreira final de todo envio (e no TikTok, em `publishers.tiktok`); prompts pedem 3 a 5.
+- **TikTok: notícia estática como post de FOTO (14/10/2026).** Os vídeos repostados
+  aparecem no TikTok como "Não se qualifica para recomendação" (conteúdo não original:
+  importado de outra fonte, com logotipo) e a mediana caiu de 154 views (09/10) para
+  0 a 7. O TikTok passou a recomendar foto à conta. Cada notícia do feed agora vai
+  também ao TikTok como carrossel de fotos (`publishers.tiktok.post_photos`, chamado
+  no fim de `instagram.publish`; título = 1ª linha, legenda em `description`,
+  `auto_add_music`). Desliga com `TIKTOK_PHOTOS=off`. Limite da Zernio: 15 fotos e
+  15 vídeos por 24h, contados à parte. O Tulio pediu para NÃO tentar burlar a
+  detecção de conteúdo não original (eu recusei espelhar/alterar vídeo de terceiros).
 - **Stories na revisão noturna** (desde 11/10/2026): `stories.py --insights` roda em toda
   conferência do workflow e guarda alcance, views, respostas, saídas e visitas ao perfil
   em `data/stories_log.json` (a Meta só responde com o story no ar e com 5+ espectadores).

@@ -11,6 +11,7 @@ Ativa quando existe ZERNIO_API_KEY. Sem a chave, tudo aqui é no-op.
 import json
 import logging
 import os
+import re
 import time
 import urllib.error
 import urllib.request
@@ -88,3 +89,32 @@ def post_video(video_url: str, caption: str, scheduled_for: str = None, wait: bo
                 raise RuntimeError(f"TikTok recusou o post: {json.dumps(entry)[:300]}")
             return result
     return result
+
+
+def post_photos(image_urls: list[str], caption: str, scheduled_for: str = None) -> dict:
+    """
+    Post de FOTO no TikTok (carrossel de imagens, com música sugerida pelo TikTok).
+    Desde 14/10/2026: os vídeos repostados caíram em "conteúdo não original" e o
+    TikTok passou a recomendar foto ao Morsa; a notícia estática é arte nossa.
+    `content` vira o título (90 caracteres, sem hashtag); a legenda inteira vai em
+    `description`.
+    """
+    caption = _cap(caption)
+    title = re.sub(r"#\w+", "", caption.split("\n")[0]).strip()[:90]
+    body = {
+        "content": title,
+        "mediaItems": [{"type": "image", "url": u} for u in image_urls[:35]],
+        "platforms": [{"platform": "tiktok", "accountId": account_id()}],
+        "tiktokSettings": {
+            "privacy_level": "PUBLIC_TO_EVERYONE", "allow_comment": True,
+            "media_type": "photo", "photo_cover_index": 0,
+            "description": caption[:4000], "auto_add_music": True,
+            "content_preview_confirmed": True, "express_consent_given": True,
+        },
+    }
+    if scheduled_for:
+        body.update(scheduledFor=scheduled_for, timezone="America/Sao_Paulo")
+    else:
+        body["publishNow"] = True
+    post = _api("POST", "/posts", body).get("post", {})
+    return {"id": post.get("_id"), "status": post.get("status")}
