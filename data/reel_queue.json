@@ -198,10 +198,11 @@
     "scheduled_for": "2026-10-19",
     "theme": "halloween",
     "caption_style": "eu",
-    "caption": "Eu tô com o coração na garganta só de lembrar da tensão daquele final, e você?\n\nUntil Dawn: Noite de Terror é aquele tipo de filme que transforma a ideia de \"sobreviver até o amanhecer\" em um pesadelo interativo e claustrofóbico. A premissa é simples, mas a execução prende a gente pelo colarinho, fazendo o tempo passar devagar em cada decisão.\n\nEsse especial de Halloween da Morsa resgata essa vibe de terror psicológico que a gente ama, e a dublagem ajuda a imersão total na atmosfera gélida da montanha.\n\nQual foi a sua reação na primeira vez que viu esse trailer?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)",
+    "caption": "Eu não consigo lembrar de um trailer de terror que me deu tanto frio na espinha sem eu nem ter visto o filme ainda.\n\nA Morsa tá relembrando essa joia do especial de Halloween porque a premissa é simples e brutal: você só tem uma noite pra ficar vivo. Sem fôlego sobrando, essa é a definição exata do que significa estar preso até o amanhecer.\n\nSe você já assistiu, me conta aqui: foi o terror mais tenso que você viu esse ano ou ficou devendo na expectativa?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#UntilDawn #NoiteDeTerror #Halloween #MorsaDigital #Terror",
     "caption_check": "revisar",
     "caption_problems": [
-      "0 hashtags (esperado 4 a 8)"
+      "detalhe sem base: A Morsa tá relembrando essa joia do especial de Halloween",
+      "detalhe sem base: especial de Halloween"
     ]
   },
   {
@@ -357,7 +358,11 @@
     "scheduled_for": "2026-10-20",
     "theme": "gta",
     "layout": "horizontal",
-    "lang": "en"
+    "lang": "en",
+    "caption_style": "padrao",
+    "caption": "GTA III, Vice City e San Andreas num pacote só é o tipo de nostalgia que dá bico.\n\nEssa trilogia definitiva junta os três clássicos que definiram o gênero, remasterizados para as novas gerações e disponíveis em todas as plataformas principais. É a oportunidade perfeita de revisitar Liberty City, Vice City e Los Santos com uma nova apresentação visual e gameplay otimizada, sem precisar ficar garimpando versões antigas.\n\nQual desses três títulos é o seu favorito pra maratonar agora enquanto a gente conta os dias pro GTA VI?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#GTA #GrandTheftAuto #ViceCity #SanAndreas #RockstarGames",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "QkkoHAzjnUs",

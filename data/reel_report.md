@@ -1,8 +1,8 @@
-# Fila de reels @morsadigital — 14/10/2026 14:03 BRT
+# Fila de reels @morsadigital — 15/10/2026 13:26 BRT
 
 ## cenas — a partir das 11h
 
-131 na fila | legendas ok: 35 | a revisar: 1 | dias sem reel no calendário: 0
+140 na fila | legendas ok: 35 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 15/10 — Mulher-Maravilha - Especial de Bastidores: Gal Gadot
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ok
@@ -607,7 +607,7 @@ Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 #HomemAranha #SpiderMan #UmNovoDia #Core #SonyPictures #MorsaDigital
 ```
 
-### 01/12 — O Quebra-Nozes e os Quatro Reinos - Bastidores
+### 01/12 — Cruella: Featurette | Walt Disney Studios
 Walt Disney Studios BR · horizontal · pt · legenda: ainda não gerada
 
 ```
@@ -631,7 +631,7 @@ Vídeo: Prime Video Brasil (canal oficial no YouTube)
 #Shrek #Fiona #Burro #ShrekEm3D #MorsaDigital
 ```
 
-### 03/12 — Horas Decisivas - Bastidores do Filme
+### 03/12 — O Quebra-Nozes e os Quatro Reinos - Bastidores
 Walt Disney Studios BR · horizontal · pt · legenda: ainda não gerada
 
 ```
@@ -655,8 +655,8 @@ Vídeo: HBO Brasil (canal oficial no YouTube)
 #GameOfThrones #GoT #CasamentoVermelho #Winterfell #HBO #MorsaDigital
 ```
 
-### 05/12 — The Last of Us | Bastidores | HBO Max
-HBO Max Brasil · horizontal · pt · legenda: ainda não gerada
+### 05/12 — Horas Decisivas - Bastidores do Filme
+Walt Disney Studios BR · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
@@ -669,8 +669,8 @@ Netflix Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
-### 07/12 — Dunkirk - Especial de Bastidores: Realidade (leg) [HD]
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+### 07/12 — The Last of Us | Bastidores | HBO Max
+HBO Max Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
@@ -683,7 +683,7 @@ Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
-### 09/12 — Interestelar - Bastidores | Matthew McConaughey
+### 09/12 — Dunkirk - Especial de Bastidores: Realidade (leg) [HD]
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
@@ -697,7 +697,7 @@ HBO Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
-### 11/12 — De Onde Eu Te Vejo - Bastidores com Domingos Montagner
+### 11/12 — Interestelar - Bastidores | Matthew McConaughey
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
@@ -711,7 +711,7 @@ Prime Video Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
-### 13/12 — Círculo de Fogo - Vídeo de Bastidores "Arte Digital" (leg) [HD]
+### 13/12 — De Onde Eu Te Vejo - Bastidores com Domingos Montagner
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
@@ -725,57 +725,57 @@ Netflix Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
-### 15/12 — NÓS. SOMOS. VENOM 😀 NÓS. ESTAMOS. NA. M*RD* 🙃
+### 15/12 — Círculo de Fogo - Vídeo de Bastidores "Arte Digital" (leg) [HD]
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 16/12 — NÓS. SOMOS. VENOM 😀 NÓS. ESTAMOS. NA. M*RD* 🙃
 Sony Pictures Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 16/12 — Posso ver Shrek pela 7286x mas sempre vou rir como se fosse a 1° toda vez que o 
+### 17/12 — Harry Potter e as Relíquias da Morte: Parte 2 - Bastidores - A História (leg) [H
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 18/12 — Posso ver Shrek pela 7286x mas sempre vou rir como se fosse a 1° toda vez que o 
 Prime Video Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 17/12 — O MUNDO FICOU EM FESTA DEPOIS DESSA CENA DO JOFFREY EM #GOT! 😉
+### 19/12 — A Casa do Dragão | Segunda Temporada | Bastidores
+HBO Max Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 20/12 — O MUNDO FICOU EM FESTA DEPOIS DESSA CENA DO JOFFREY EM #GOT! 😉
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 18/12 — Dublagens do filme de MINECRAFT: QUAL FICOU MELHOR?
+### 21/12 — Bastidores | O Esquadrão Suicida | HBO Max
+HBO Max Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 22/12 — Dublagens do filme de MINECRAFT: QUAL FICOU MELHOR?
 Netflix Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 19/12 — Toy Story 5 | Dubladores
-Walt Disney Studios BR · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 20/12 — Thor: Ragnarok: Hoje nos Cinemas - "Deusa da Morte"
-Marvel Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 21/12 — Não tente correr, as sombras sempre surgirão para te encontrar 🔥 #SoloLeveling
-Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 22/12 — HÁ 3 ANOS, JOEL CHAMOU ELLIE DE "MEU AMOR" 💚 | THE LAST OF US
-HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
@@ -802,43 +802,43 @@ Paramount Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
-### 26/12 — Vazou o Homem-Aranha passando perrengue desde o dia 1 🗣️ #OEspetacularHomemAranh
-Prime Video Brasil · vertical · pt · legenda: ainda não gerada
+### 26/12 — À procura de Harry: A Arte por Trás da Magia já está disponível na HBO Max. #Har
+HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 27/12 — Monstros vs. Alienígenas core.
-Netflix Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 28/12 — Percy Jackson e os Olimpianos | Falando Grego | Disney+
-Disney+ Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 29/12 — CERSEI VENDO UM WHITE WALKER PELA PRIMEIRA VEZ! | GOT
-HBO Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 30/12 — O filho do Gru não é brincadeira!
-Netflix Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 31/12 — Zootopia 2 | Elenco de Dublagem
+### 27/12 — Toy Story 5 | Dubladores
 Walt Disney Studios BR · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 28/12 — Os Muitos Santos de Newark | Bastidores | HBO Max
+HBO Max Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 29/12 — Thor: Ragnarok: Hoje nos Cinemas - "Deusa da Morte"
+Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 30/12 — King Richard: Criando Campeãs | Bastidores | HBO Max
+HBO Max Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 31/12 — Não tente correr, as sombras sempre surgirão para te encontrar 🔥 #SoloLeveling
+Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
@@ -851,288 +851,288 @@ Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
-### 02/01 — HAL JORDAN INDO RESOLVER PROBLEMAS
+### 02/01 — Como as cenas foram gravadas? | Bateau Mouche: O Naufrágio da Justiça | Bastidor
+HBO Max Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 03/01 — HÁ 3 ANOS, JOEL CHAMOU ELLIE DE "MEU AMOR" 💚 | THE LAST OF US
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 03/01 — O que o Omini-man e o Invencível têm em comum? 👀 #Invencível
+### 04/01 — Colocando o moicano no Falcão | #CobraKai | Netflix Brasil #bastidores
+Netflix Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 05/01 — Vazou o Homem-Aranha passando perrengue desde o dia 1 🗣️ #OEspetacularHomemAranh
 Prime Video Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 04/01 — QUANDO PERCEBEMOS QUE GOT NÃO ERA UMA SÉRIE COMUM!
+### 06/01 — Monstros vs. Alienígenas core.
+Netflix Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 07/01 — Percy Jackson e os Olimpianos | Falando Grego | Disney+
+Disney+ Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 08/01 — CERSEI VENDO UM WHITE WALKER PELA PRIMEIRA VEZ! | GOT
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 05/01 — AVISA: hoje é um ótimo dia pra ser fã de Resident Evil 🌂 #RE5Retribuição
+### 09/01 — O filho do Gru não é brincadeira!
+Netflix Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 10/01 — Zootopia 2 | Elenco de Dublagem
+Walt Disney Studios BR · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 11/01 — HAL JORDAN INDO RESOLVER PROBLEMAS
+HBO Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 12/01 — O que o Omini-man e o Invencível têm em comum? 👀 #Invencível
 Prime Video Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 06/01 — "Escondido de Todos" - Pantera Negra: Hoje nos cinemas
+### 13/01 — QUANDO PERCEBEMOS QUE GOT NÃO ERA UMA SÉRIE COMUM!
+HBO Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 14/01 — AVISA: hoje é um ótimo dia pra ser fã de Resident Evil 🌂 #RE5Retribuição
+Prime Video Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 15/01 — "Escondido de Todos" - Pantera Negra: Hoje nos cinemas
 Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 07/01 — Homem-Aranha: Um Novo Dia | Vozinha | Hoje nos cinemas
+### 16/01 — Homem-Aranha: Um Novo Dia | Vozinha | Hoje nos cinemas
 Sony Pictures Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 08/01 — O PRIMEIRO DRACARYS DA RHAENYRA EM A CASA DO DRAGÃO! 👌
+### 17/01 — O PRIMEIRO DRACARYS DA RHAENYRA EM A CASA DO DRAGÃO! 👌
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 09/01 — Acho que não é uma boa perder um dinossauro 🦕😰 #JurassicWorldOMundoDosDinossauro
+### 18/01 — Acho que não é uma boa perder um dinossauro 🦕😰 #JurassicWorldOMundoDosDinossauro
 Prime Video Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 10/01 — RHAENYRA ACALMANDO O VERMITHOR! 🔥
+### 19/01 — RHAENYRA ACALMANDO O VERMITHOR! 🔥
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 11/01 — Demolidor: Renascido | Jessica Jones | Disney+
+### 20/01 — Demolidor: Renascido | Jessica Jones | Disney+
 Marvel Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 12/01 — Peter Dinklage nasceu para fazer história em Game Of Thrones, e eu posso provar!
+### 21/01 — Peter Dinklage nasceu para fazer história em Game Of Thrones, e eu posso provar!
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 13/01 — O Brabo tem nome: #BatmanCruzadoEncapuzado 🦇💥
+### 22/01 — O Brabo tem nome: #BatmanCruzadoEncapuzado 🦇💥
 Prime Video Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 14/01 — A PRIMEIRA MESA DE LEITURA DE GAME OF THRONES! ⚔️
+### 23/01 — A PRIMEIRA MESA DE LEITURA DE GAME OF THRONES! ⚔️
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 15/01 — Quem é igual ao Donatello e queria ver o BTS ao vivo? ✨💜#AsTartarugasNinja: Caos
+### 24/01 — Quem é igual ao Donatello e queria ver o BTS ao vivo? ✨💜#AsTartarugasNinja: Caos
 Paramount Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 16/01 — Uma caçada brutal vai começar! 💥💥#Kraven: O Caçador, 12 de dezembro, nos cinemas
+### 25/01 — Uma caçada brutal vai começar! 💥💥#Kraven: O Caçador, 12 de dezembro, nos cinemas
 Sony Pictures Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 17/01 — Já se passaram 2 décadas e a gente ainda não viu uma transição mais CINEMA que e
+### 26/01 — Já se passaram 2 décadas e a gente ainda não viu uma transição mais CINEMA que e
 HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 18/01 — Quando o ator esquece que está atuando. 🥵😮‍💨 #Batman #OCavaleiroDasTrevas
+### 27/01 — Quando o ator esquece que está atuando. 🥵😮‍💨 #Batman #OCavaleiroDasTrevas
 HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 19/01 — Marvel’s Wolverine - Chega em 2026 | PS5
+### 28/01 — Marvel’s Wolverine - Chega em 2026 | PS5
 PlayStation Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 20/01 — Demolidor: Renascido | Recap Episódico | Disney+
+### 29/01 — Demolidor: Renascido | Recap Episódico | Disney+
 Marvel Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 21/01 — Scooby-Doo é revelado #netflix
+### 30/01 — Scooby-Doo é revelado #netflix
 Netflix Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 22/01 — CHAVES: O MAIOR FÃ DO PELÉ
+### 31/01 — CHAVES: O MAIOR FÃ DO PELÉ
 Netflix Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 23/01 — ONE PIECE OU NARUTO NO DATE?
+### 01/02 — ONE PIECE OU NARUTO NO DATE?
 Netflix Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 24/01 — A DAENERYS SOU EU IRRITADO: DRACARYS! 🔥
+### 02/02 — A DAENERYS SOU EU IRRITADO: DRACARYS! 🔥
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 25/01 — Me algema, Sr. Policial | BLUE LOCK
+### 03/02 — Me algema, Sr. Policial | BLUE LOCK
 Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 26/01 — TODAS AS VEZES QUE O JACK BLACK FALA COISAS DE MINECRAFT NO FILME!
+### 04/02 — TODAS AS VEZES QUE O JACK BLACK FALA COISAS DE MINECRAFT NO FILME!
 Netflix Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 27/01 — O Dean chegou bem na hora certa... 😮‍💨 #Sobrenatural #Supernatural
+### 05/02 — O Dean chegou bem na hora certa... 😮‍💨 #Sobrenatural #Supernatural
 Prime Video Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 28/01 — NARUTO VERSÃO SÓ SOM FILÉ
+### 06/02 — NARUTO VERSÃO SÓ SOM FILÉ
 Netflix Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 29/01 — JAIME E BRAIN SE REENCONTRAM EM #GOT! ❤️‍🔥
+### 07/02 — JAIME E BRAIN SE REENCONTRAM EM #GOT! ❤️‍🔥
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 30/01 — Já pensou um BLUE LOCK no país do futebol? ⚽️
+### 08/02 — Já pensou um BLUE LOCK no país do futebol? ⚽️
 Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 31/01 — ESTOU VICIADA EM VER O STEVE CANTANDO EM UM FILME MINECRAFT.
+### 09/02 — ESTOU VICIADA EM VER O STEVE CANTANDO EM UM FILME MINECRAFT.
 Netflix Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 01/02 — Como eu vou ser normal se eu assistia ISSO quando era criança?? 👀#CoragemOCaoCov
+### 10/02 — Como eu vou ser normal se eu assistia ISSO quando era criança?? 👀#CoragemOCaoCov
 HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 02/02 — JUJUTSU KAISEN ESCONDEU ESSES EASTER EGGS?
+### 11/02 — JUJUTSU KAISEN ESCONDEU ESSES EASTER EGGS?
 Netflix Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 03/02 — JOFFREY CITA SOR DUNCAN EM GAME OF THRONES! 💪
-HBO Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 04/02 — Não estava esperando essa surra... I That Time I Got Reincarnated as a Slime 4ª 
-Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 05/02 — Loki | Loki invadiu o Brasil | Disney+
-Marvel Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 06/02 — Marvel’s Wolverine – Trailer de Gameplay Estendido | PS5
-PlayStation Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 07/02 — Velma representou todas as fãs do Sam Winchester aqui. ☝️🤓 #Supernatural #Scooby
-HBO Max Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 08/02 — NUNCA APERTEI "PRÓXIMO EPISÓDIO" EM JUJUTSU KAISEN
-Netflix Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 09/02 — JAIME LANNISTER RELEMBRA PRIMEIRO EPISÓDIO DE GOT! 🥹
-HBO Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 10/02 — O quão fã de My Hero Academia você é??
-Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 11/02 — Liu Kang Vs Kung Lao em Mortal Kombat II. 🔥😮‍💨  #MortalKombat
-HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
@@ -1140,22 +1140,7 @@ HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ## main — a partir das 13h
 
-98 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
-
-### 14/10 — Coven Academy | Trailer Oficial Dublado | Disney+
-Disney+ Brasil · horizontal · pt · legenda: ok
-
-```
-Coven Academy acabou de soltar esse trailer e eu já tô com aquele frio na barriga de quem vai se matar tentando conjurar um feitiço simples.
-
-A ideia de uma academia de magia onde o básico já é um desafio em si é exatamente o tipo de premissa que prende a atenção. Trazendo isso pro catálogo do Disney+ no dia 1 de outubro, a expectativa é que a gente veja uma jornada de aprendizado cheia de tropeços e descobertas.
-
-Você acha que o maior vilão nessa história é a falta de talento ou a pressão de estar sempre sendo avaliado?
-
-Vídeo: Disney+ Brasil (canal oficial no YouTube)
-
-#CovenAcademy #DisneyPlus #Magia #SérieDeFantasia #NovidadesDisney #Ficção
-```
+97 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 15/10 — Blade Runner 2099 | Trailer NYCC | Prime Video
 Prime Video Brasil · horizontal · pt · legenda: ok
@@ -1218,25 +1203,33 @@ Vídeo: HBO Max Brasil (canal oficial no YouTube)
 ```
 
 ### 19/10 — Until Dawn: Noite de Terror | Trailer Oficial Dublado
-Sony Pictures Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 4 a 8))
+Sony Pictures Brasil · ? · ? · legenda: revisar (detalhe sem base: A Morsa tá relembrando essa joia do especial de Halloween; detalhe sem base: especial de Halloween)
 
 ```
-Eu tô com o coração na garganta só de lembrar da tensão daquele final, e você?
+Eu não consigo lembrar de um trailer de terror que me deu tanto frio na espinha sem eu nem ter visto o filme ainda.
 
-Until Dawn: Noite de Terror é aquele tipo de filme que transforma a ideia de "sobreviver até o amanhecer" em um pesadelo interativo e claustrofóbico. A premissa é simples, mas a execução prende a gente pelo colarinho, fazendo o tempo passar devagar em cada decisão.
+A Morsa tá relembrando essa joia do especial de Halloween porque a premissa é simples e brutal: você só tem uma noite pra ficar vivo. Sem fôlego sobrando, essa é a definição exata do que significa estar preso até o amanhecer.
 
-Esse especial de Halloween da Morsa resgata essa vibe de terror psicológico que a gente ama, e a dublagem ajuda a imersão total na atmosfera gélida da montanha.
-
-Qual foi a sua reação na primeira vez que viu esse trailer?
+Se você já assistiu, me conta aqui: foi o terror mais tenso que você viu esse ano ou ficou devendo na expectativa?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
+
+#UntilDawn #NoiteDeTerror #Halloween #MorsaDigital #Terror
 ```
 
 ### 20/10 — Grand Theft Auto: The Trilogy – The Definitive Edition Trailer
-Rockstar Games · horizontal · en · legenda: ainda não gerada
+Rockstar Games · horizontal · en · legenda: ok
 
 ```
-(gerada na hora da publicação)
+GTA III, Vice City e San Andreas num pacote só é o tipo de nostalgia que dá bico.
+
+Essa trilogia definitiva junta os três clássicos que definiram o gênero, remasterizados para as novas gerações e disponíveis em todas as plataformas principais. É a oportunidade perfeita de revisitar Liberty City, Vice City e Los Santos com uma nova apresentação visual e gameplay otimizada, sem precisar ficar garimpando versões antigas.
+
+Qual desses três títulos é o seu favorito pra maratonar agora enquanto a gente conta os dias pro GTA VI?
+
+Vídeo: Rockstar Games (canal oficial no YouTube)
+
+#GTA #GrandTheftAuto #ViceCity #SanAndreas #RockstarGames
 ```
 
 ### 21/10 — Sorria 2 | Teaser Trailer Oficial | DUB | Paramount Pictures Brasil
