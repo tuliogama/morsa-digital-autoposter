@@ -32,6 +32,7 @@ import os
 import re
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from typing import Optional
@@ -81,15 +82,20 @@ def _post(url: str, params: dict) -> dict:
         url, data=body, method="POST",
         headers={"Content-Type": "application/x-www-form-urlencoded"},
     )
-    with urllib.request.urlopen(req, timeout=15) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            return json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        # sem isto o log só dizia "400 Bad Request"; o motivo vem no corpo
+        detail = e.read().decode("utf-8", "ignore")[:400]
+        logger.error(f"Meta recusou {url.rsplit('/', 1)[-1]}: {detail}")
+        raise
 
 
 def _create_container(ig_user_id: str, token: str, caption: str, image_url: str) -> str:
     params = {
         "image_url": image_url,
         "caption": _clean_caption(caption),
-        "like_and_view_counts_disabled": "true",
         "access_token": token,
     }
     # Cross-post para Facebook se pages_manage_posts estiver disponível
@@ -116,7 +122,6 @@ def _disable_like_count(media_id: str, token: str) -> bool:
     """
     try:
         result = _post(f"{GRAPH_URL}/{media_id}", {
-            "like_and_view_counts_disabled": "true",
             "access_token": token,
         })
         return result.get("success", False)
@@ -245,7 +250,6 @@ def publish(post: dict) -> dict:
             "media_type": "CAROUSEL",
             "children": ",".join(child_ids),
             "caption": _clean_caption(caption),
-            "like_and_view_counts_disabled": "true",
             "access_token": token,
         })
         container_id = carousel_result["id"]
@@ -358,7 +362,6 @@ def publish_carousel(carousel_data: dict, caption: str) -> dict:
         "media_type": "CAROUSEL",
         "children": ",".join(child_ids),
         "caption": _clean_caption(caption),
-        "like_and_view_counts_disabled": "true",
         "access_token": token,
     })
     carousel_container_id = carousel_result["id"]
@@ -482,7 +485,6 @@ def publish_reel(reel_data: dict, caption: str) -> dict:
             "upload_id": upload_session_id,
             "caption": _clean_caption(caption),
             "share_to_feed": "true",
-            "like_and_view_counts_disabled": "true",
             "access_token": token,
         })
         container_id = container_result["id"]
@@ -605,7 +607,6 @@ def publish_reel_from_url(video_url: str, caption: str) -> dict:
         "video_url": video_url,
         "caption": _clean_caption(caption),
         "share_to_feed": "true",
-        "like_and_view_counts_disabled": "true",
         "access_token": token,
     })["id"]
     logger.info(f"Container REELS criado: {container_id}")
