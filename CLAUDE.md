@@ -404,6 +404,7 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   `clean_caption` tira travessão, markdown e emoji do começo. Com as 3 notícias do
   dia são 13 fotos por dia (limite da Zernio: 15). Metas seguintes: 1 mil seguidores
   (Marketplace), 10 mil e 100 mil views em 30 dias (Recompensas do Criador).
+- **15/10/2026:** a Meta passou a recusar `like_and_view_counts_disabled` na criação do container (erro "(#3) Unknown method", HTTP 400): todo feed e reel falhou até ser retirado. `_post` agora registra o corpo do erro da Meta.
 - **Stories na revisão noturna** (desde 11/10/2026): `stories.py --insights` roda em toda
   conferência do workflow e guarda alcance, views, respostas, saídas e visitas ao perfil
   em `data/stories_log.json` (a Meta só responde com o story no ar e com 5+ espectadores).
