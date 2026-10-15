@@ -1922,7 +1922,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=o4kJTYSAwXE",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/o4kJTYSAwXE.mp4",
     "added_at": "2026-10-12T05:41:52.049287-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "fresh",
     "hook_text": null,
     "layout": "horizontal",
@@ -1930,6 +1930,11 @@
     "caption_style": "padrao",
     "caption": "Blade Runner 2099 chegou e eu senti um arrepio só de ver o nome na tela.\n\nA franquia mais icônica do cinema sci-fi está voltando em formato de minissérie, estreando dia 25 de novembro no Prime Video. É a oportunidade perfeita para vermos essa visão distópica evoluir, mantendo a essência que nos prendeu por décadas.\n\nVai honrar o legado ou vai tentar reinventar a roda e errar?\n\nVídeo: Prime Video Brasil (canal oficial no YouTube)\n\n#BladeRunner2099 #PrimeVideo #Minissérie #SciFi #BladeRunner #CulturaPop",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-15T16:49:14.093026-03:00",
+    "media_id": "18085210385333724",
+    "tiktok_id": "6ad12e3a5fb460ab40a8a004",
+    "tiktok_status": "published",
+    "tiktok_url": null
   }
 ]
