@@ -2093,7 +2093,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=2Gwkh1LpsFg",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/2Gwkh1LpsFg.mp4",
     "added_at": "2026-10-13T01:43:26.578848-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 1,
     "theme": "bastidores",
@@ -2102,7 +2102,12 @@
     "lang": "pt",
     "caption": "Gal Gadot segura firme o peso da Mulher-Maravilha?\n\nVer a produção desse épico de ação e aventura dirigido por Patty Jenkins é outra dimensão.\nA presença de nomes como Chris Pine e Robin Wright no set mostra a força do elenco reunido.\nÉ o tipo de bastidores que dá uma nova perspectiva sobre a personagem.\n\nComenta aí qual foi a sua primeira reação ao ver essa Gal em ação.\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#MulherMaravilha #GalGadot #DCFilms #Bastidores #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-15T14:16:48.600361-03:00",
+    "media_id": "17973315930073142",
+    "tiktok_id": "6ad10a813df2beea39b68cbd",
+    "tiktok_status": "publishing",
+    "tiktok_url": null
   },
   {
     "video_id": "_JMY6cKScnc",
