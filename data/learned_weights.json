@@ -1,10 +1,10 @@
 {
-  "baseline_median": 7.0,
-  "sample": 64,
+  "baseline_median": 7,
+  "sample": 67,
   "categories": {
     "anime_big": {
-      "n": 4,
-      "median": 8.0,
+      "n": 5,
+      "median": 9,
       "adjust": 0
     },
     "dc": {
@@ -23,8 +23,8 @@
       "adjust": 0
     },
     "gta": {
-      "n": 19,
-      "median": 5,
+      "n": 20,
+      "median": 5.0,
       "adjust": 0
     },
     "marvel": {
@@ -38,8 +38,8 @@
       "adjust": 0
     },
     "other": {
-      "n": 8,
-      "median": 5.5,
+      "n": 9,
+      "median": 6,
       "adjust": 0
     },
     "series": {
@@ -53,5 +53,5 @@
       "adjust": 0
     }
   },
-  "generated_at": "2026-10-15T02:37:29.185683-03:00"
+  "generated_at": "2026-10-16T02:32:11.695866-03:00"
 }
