@@ -275,14 +275,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=_xGeGUYAwBo",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/_xGeGUYAwBo.mp4",
     "added_at": "2026-10-06T22:26:49.576049-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 8,
     "layout": "vertical",
     "lang": "pt",
     "caption": "Amy Rose é a única personagem que faz você gritar assim?\n\nÉ impossível não sentir aquele eco de \"É A AMY ROSE!\" na cabeça.\nEssa cena tem uma energia que trava o coração de todo fã.\n\nQual foi a reação mais louca que você teve com ela?\n\nVídeo: Paramount Brasil (canal oficial no YouTube)\n\n#Sonic #Sonic3 #AmyRose #SonicHedgehog #Paramount #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-16T11:04:02.213422-03:00",
+    "media_id": "17900555265604212",
+    "tiktok_id": "6ad22ed3c21a9bb49bd2d947",
+    "tiktok_status": "published",
+    "tiktok_url": null
   },
   {
     "video_id": "FeUYvqcec0w",
