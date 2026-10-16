@@ -2180,7 +2180,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6acd9fdedc21beabeb4b5ad0",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-15T13:30:00",
     "posted_at": "2026-10-15T13:30:00"
   },
@@ -2205,7 +2205,7 @@
     "caption": "Daenerys Targaryen ainda é a rainha absoluta pra você?\n\nO título promete esse modo de destruição total e a energia caótica da personagem.\nÉ o tipo de cena que faz a gente relembrar o poder e a presença dela na série.\n\nQual é a sua: a rainha dos dragões ou a mãe dos dragões?\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#GameOfThrones #DaenerysTargaryen #HBO #CulturaPop #MorsaDigital",
     "caption_check": "ok",
     "tiktok_id": "6acd9febe4079a9ab376dfed",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-15T16:30:00",
     "posted_at": "2026-10-15T16:30:00"
   },
@@ -2264,12 +2264,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=0GZxVr4rVQA",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/0GZxVr4rVQA.mp4",
     "added_at": "2026-10-10T01:46:32.967265-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 134,
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": "Bob Esponja: lembra do Patrick?"
+    "hook_text": "Bob Esponja: lembra do Patrick?",
+    "caption_problems": [],
+    "caption": "Seu amigo é mais Bob ou mais Patrick?\n\nEssa dinâmica de um tentar se salvar e o outro só atrapalhando é o que faz a amizade deles ser tão caótica e engraçada.\nNada como ver esse duo em ação para lembrar por que a gente ama essa dupla.\n\nMarca aquele amigo que agiria exatamente como o Patrick nessa situação.\n\nVídeo: Paramount+ Brasil (canal oficial no YouTube)\n\n#BobEsponja #Patrick #BobEsponjaEmBuscaDaCalcaQuadrada #ParamountPlusBrasil #MorsaDigital",
+    "caption_check": "ok",
+    "tiktok_id": "6ad22e7532d41335b34ed966",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-18T13:30:00",
+    "posted_at": "2026-10-18T13:30:00"
   },
   {
     "video_id": "xqK7Z1_4MjM",
@@ -2287,7 +2294,13 @@
     "plan_order": 137,
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": null
+    "hook_text": null,
+    "caption_problems": [
+      "detalhe sem base: Rosie",
+      "detalhe sem base: dueto",
+      "detalhe sem base: cena de Rosie e Alastor dividindo o palco"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "-vzQuB_GpF4",
@@ -2300,12 +2313,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=-vzQuB_GpF4",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/-vzQuB_GpF4.mp4",
     "added_at": "2026-10-10T01:50:52.566330-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 138,
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": "Jujutsu Kaisen: qual sentimento ficou?"
+    "hook_text": "Jujutsu Kaisen: qual sentimento ficou?",
+    "caption_problems": [],
+    "caption": "Jujutsu Kaisen no cinema: vale a pena o susto?\n\nRelembrar essa experiência nas telonas traz aquela sensação de intensidade que só a franquia entrega.\nAs fortes emoções de assistir JJK em grande tela ficam marcadas na memória de quem foi.\n\nQual foi o seu sentimento ao ver essa cena?\n\nVídeo: Crunchyroll Brasil (canal oficial no YouTube)\n\n#JujutsuKaisen #JJK #MorsaDigital #Crunchyroll #Anime",
+    "caption_check": "ok",
+    "tiktok_id": "6ad22ecb543837215729d09b",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-18T16:30:00",
+    "posted_at": "2026-10-18T16:30:00"
   },
   {
     "video_id": "QAKSiaUXbno",
@@ -2323,7 +2343,14 @@
     "plan_order": 139,
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": null
+    "hook_text": null,
+    "caption_problems": [
+      "detalhe sem base: Saruê Rosa 🦨",
+      "detalhe sem base: Feliniker 🐆",
+      "detalhe sem base: Camaleão Gomes 🦎",
+      "detalhe sem base: Rock The Mountain"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "FBDjgJrtgkw",
@@ -2336,12 +2363,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=FBDjgJrtgkw",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/FBDjgJrtgkw.mp4",
     "added_at": "2026-10-10T02:32:54.284481-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 141,
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": "Emilia Clarke arrasou na cena?"
+    "hook_text": "Emilia Clarke arrasou na cena?",
+    "caption": "Emilia Clarke entregou a Daenerys perfeita ou tem quem discorda?\n\nRelembre essa atuação icônica de Game of Thrones.\nÉ o tipo de momento que fixa a Rainha de Westeros na memória.\nA intensidade dela nessa cena é inegável.\n\nComenta aí: qual é a sua cena favorita da Daenerys?\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#GameOfThrones #Daenerys #EmiliaClarke #GoT #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad22f0a84d7092fa8b55403",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-18T19:30:00",
+    "posted_at": "2026-10-18T19:30:00"
   },
   {
     "video_id": "S5_DoY6dG0w",
@@ -2558,7 +2592,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6acd9fe0b5e09d5168d7ed5d",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-15T15:00:00",
     "posted_at": "2026-10-15T15:00:00"
   },
@@ -2583,7 +2617,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6acd9fedcf5deb30a8cdbd7c",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-15T17:15:00",
     "posted_at": "2026-10-15T17:15:00"
   },
@@ -2608,7 +2642,7 @@
     "caption": "Bella Ramsey imitando o clicker de The Last Of Us: você curtiu ou achou exagero?\n\nA cena do clicker é um dos momentos mais tensos e marcantes da série.\nVer a atriz se apropriando desse personagem na internet mostra o quanto ele ficou na memória de todo mundo.\n\nQual é a sua: o clicker ou a Bella fazendo a imitação?\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#TheLastOfUs #BellaRamsey #HBO #Clicker #SérieDeTV #MorsaDigital",
     "caption_check": "ok",
     "tiktok_id": "6acd9ff9e4079a9ab376e021",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-15T18:00:00",
     "posted_at": "2026-10-15T18:00:00"
   },
@@ -2633,7 +2667,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6acd9ffbcf5deb30a8cdbda0",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-15T19:30:00",
     "posted_at": "2026-10-15T19:30:00"
   },
@@ -2653,7 +2687,12 @@
     "plan_order": 132,
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": "Superman vs Lanterna verde, quem ganha?"
+    "hook_text": "Superman vs Lanterna verde, quem ganha?",
+    "caption_problems": [
+      "detalhe sem base: Guy Gardner apareceu pro Superman",
+      "detalhe sem base: É a prova de que o Arca Verde não é só Luthor"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "Jx28FF5HgAw",
@@ -2671,7 +2710,12 @@
     "plan_order": 134,
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": "Overlord chega ao cinema, vai curtir?"
+    "hook_text": "Overlord chega ao cinema, vai curtir?",
+    "caption_problems": [
+      "detalhe sem base: chegará aos cinemas em 7 de novembro",
+      "detalhe sem base: ver como essa parte da história se desenrola no cinema"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "e7U_Lbr2icU",
@@ -2684,12 +2728,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=e7U_Lbr2icU",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/e7U_Lbr2icU.mp4",
     "added_at": "2026-10-11T23:37:16.013495-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 136,
     "hook_text": null,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Chernobyl: você lembra da tensão ou tá descobrindo agora?\n\nEssa minissérie da HBO ficou marcada não só pela história, mas pelo peso de cada decisão dos personagens.\nÉ impossível assistir sem sentir o clima de desespero e a urgência que tomam conta de tudo.\n\nComenta aí qual cena te pegou mais forte.\n\nVídeo: HBO Max Brasil (canal oficial no YouTube)\n\n#Chernobyl #HBO #Minissérie #Drama #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad22e8cc21a9bb49bd2d7e8",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-18T15:00:00",
+    "posted_at": "2026-10-18T15:00:00"
   },
   {
     "video_id": "xsP5Ssy1dUc",
@@ -2707,7 +2758,12 @@
     "plan_order": 137,
     "hook_text": "Jooj Natu ficou impressionado?",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: Marc Spector",
+      "detalhe sem base: Jooj Natu"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "S1JrPdiwW9U",
@@ -2720,12 +2776,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=S1JrPdiwW9U",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/S1JrPdiwW9U.mp4",
     "added_at": "2026-10-11T23:43:04.032171-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 138,
     "hook_text": null,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [],
+    "caption": "Aqua é a deusa mais insuportável ou a mais engraçada da Konosuba?\n\nRelembre esse \"bom dia\" caótico que só a Aqua consegue entregar.\nÉ tipo um abraço que te joga no chão, mas você ainda agradece.\nO grupo de Kazuma vive de acidentes e dívidas, e ela é o caos perfeito.\n\nMarca aquele amigo que precisa de um recado assim pra acordar!\n\nVídeo: Crunchyroll Brasil (canal oficial no YouTube)\n\n#Konosuba #Aqua #Kazuma #Animacao #MorsaDigital",
+    "caption_check": "ok",
+    "tiktok_id": "6ad22ed989f33ef8c7ce0710",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-18T17:15:00",
+    "posted_at": "2026-10-18T17:15:00"
   },
   {
     "video_id": "XPb8nVJEFPk",
@@ -2738,12 +2801,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=XPb8nVJEFPk",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/XPb8nVJEFPk.mp4",
     "added_at": "2026-10-11T23:48:05.503176-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 139,
     "hook_text": "Bob Esponja já visitou todos os continentes?",
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Bob Esponja no Brasil: você lembra dessa viagem?\n\nÉ impossível não sentir aquele carinho ao ver nossos queridos invertebrados fora d'água.\nEssa aventura de defender a Fenda do Biquini sempre trouxe uma energia única.\nVer Bob e Patrick como heróis fora do mar é algo que ficou gravado na memória de muita gente.\n\nComenta aí qual foi a parte que mais te marcou nessa viagem.\n\nVídeo: Paramount Brasil (canal oficial no YouTube)\n\n#BobEsponja #Patrick #BobEsponjaOFilme #ParamountBrasil #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad22ef184d7092fa8b55382",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-18T18:00:00",
+    "posted_at": "2026-10-18T18:00:00"
   },
   {
     "video_id": "4Koznz3VP9A",
@@ -2761,7 +2831,14 @@
     "plan_order": 140,
     "hook_text": null,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: Rochelle fazendo aula particular: você ri mais ou acha que o Chris merecia?",
+      "detalhe sem base: A dinâmica dela ensinando (ou tentando) manter a ordem sempre rendia as melhores reações.",
+      "detalhe sem base: É aquele tipo de cena que a gente guarda na memória só de pensar no nome dela.",
+      "detalhe sem base: Qual foi a aula da Rochelle que mais te marcou?"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "stimOGdOxwQ",
@@ -2774,12 +2851,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=stimOGdOxwQ",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/stimOGdOxwQ.mp4",
     "added_at": "2026-10-11T23:56:22.009659-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 141,
     "hook_text": "Família Soprano: o final foi perfeito?",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Esse final de Família Soprano ainda divide opiniões?\n\nPoucos desfechos na TV geraram tanto debate e repercussão entre os fãs.\nÉ uma daquelas cenas que a gente nunca vai esquecer, seja pela tensão ou pelo choque.\n\nComenta aí: você entendeu ou ficou com raiva da HBO?\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#FamiliaSoprano #TonySoprano #HBO #Max #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad22f0c06f341ede0459bce",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-18T21:00:00",
+    "posted_at": "2026-10-18T21:00:00"
   },
   {
     "video_id": "tzqzYFWp4v8",
@@ -2792,12 +2876,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=tzqzYFWp4v8",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/tzqzYFWp4v8.mp4",
     "added_at": "2026-10-11T23:58:18.968745-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 142,
     "hook_text": null,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [],
+    "caption": "Você acha que o Naruto conseguiria ficar feliz por muito tempo sem o Sasuke?\n\nAquele contraste entre a energia dele e a saudade do amigo sempre bateu forte.\nÉ impossível não sentir aquele aperto no peito quando a brincadeira vira lembrança.\n\nQual é a sua cena favorita de Naruto e Sasuke juntos?\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#Naruto #Sasuke #NarutoShippuden #Animes #MorsaDigital",
+    "caption_check": "ok",
+    "tiktok_id": "6ad22f18e1ba20bc5565be4b",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-18T22:30:00",
+    "posted_at": "2026-10-18T22:30:00"
   },
   {
     "video_id": "hsoF2nzJZ6c",
@@ -3567,7 +3658,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6acdd27858c3d529df5e7003",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-15T21:00:00",
     "posted_at": "2026-10-15T21:00:00"
   },
@@ -3593,7 +3684,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6acdd27ae9c635e5aa1d5351",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-15T22:30:00",
     "posted_at": "2026-10-15T22:30:00"
   },
@@ -4391,6 +4482,150 @@
     "kind": "cena",
     "plan_order": 224,
     "hook_text": "Todo Mundo Em Pânico 3 surpreende?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "rJEGAhvVK9A",
+    "title": "Humor global ativado! 😂 Essa cena é engraçada em qualquer idioma. #UmFilmeMinecraft",
+    "channel": "HBO Max Brasil",
+    "channel_id": "UCR7ZwQz60rW9dK59Dirdc8w",
+    "category": "game_big",
+    "description": "Não perca #UmFilmeMinecraft, já está disponível na Max.",
+    "published": "2025-06-30",
+    "youtube_url": "https://www.youtube.com/watch?v=rJEGAhvVK9A",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/rJEGAhvVK9A.mp4",
+    "added_at": "2026-10-16T10:11:52.409211-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 227,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "Z-Etiapu91M",
+    "title": "Husk: de bartender a psicólogo #HazbinHotel",
+    "channel": "Prime Video Brasil",
+    "channel_id": "UCuNjvqjTzw9LcD9PVpTVWRA",
+    "category": "series",
+    "description": "Claramente o Husk nasceu com um dom pra ser psicólogo KKKK \n\nInscreva-se no canal do YouTube: https://bit.ly/35FaAo8 \n\nSobre o #PrimeVideo: Assine Prime Video para assistir a filmes e séries populares, incluindo Amazon Originals premiados. Além de um catálogo cheio de títulos, membros Prime têm acesso a benefícios, como frete GRÁTIS e rápido em milhares de produtos na Amazon.com.br, músicas sem anúncios na Amazon Music, Prime Gaming na Twitch e e-books e revistas no Prime Reading. Tudo na mesma assinatura, por apenas R$ 14,90/mês. Teste Grátis por 30 dias. \n\nSiga nossas redes sociais: \n\nInstagram: https://www.instagram.com/primevideobr/ \n\nFacebook: https://www.facebook.com/PrimeVideoBR/ \n\nTw",
+    "published": "2026-02-14",
+    "youtube_url": "https://www.youtube.com/watch?v=Z-Etiapu91M",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/Z-Etiapu91M.mp4",
+    "added_at": "2026-10-16T10:14:11.559502-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 228,
+    "hook_text": "Husk virou psicólogo, o que acha?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "JUJK17YpGIk",
+    "title": "Café temático de Attack on Titan no Japão ☕ #shorts #attackontitan",
+    "channel": "Crunchyroll Brasil",
+    "channel_id": "UCVc-JLY3Db6-O48y7TS4N7Q",
+    "category": "anime_big",
+    "description": "Assista Attack on Titan na Crunchyroll https://got.cr/AssistaShingeki\n\nTESTE CRUNCHYROLL DE GRAÇA POR 14 DIAS: https://got.cr/14DayFreeTrialPT\n\n🔸FACEBOOK: https://www.facebook.com/Crunchyroll.pt/\n🔸TWITTER: https://twitter.com/Crunchyroll_pt\n🔸INSTAGRAM: https://www.instagram.com/crunchyroll_PT\n\n#shorts  #shingekinokyojin",
+    "published": "2021-03-30",
+    "youtube_url": "https://www.youtube.com/watch?v=JUJK17YpGIk",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/JUJK17YpGIk.mp4",
+    "added_at": "2026-10-16T10:24:21.776898-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 229,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "mEny6699D8E",
+    "title": "Bob Esponja e Patrick viajam pelo mundo - Brasil | Paramount Pictures Brasil",
+    "channel": "Paramount Brasil",
+    "channel_id": "UCgqD3GdUEfupsdY1kmFLIrw",
+    "category": "other",
+    "description": "Bob Esponja e Patrick visitaram o Brasil!\n\nDepois do roubo da fórmula secreta do hamburger de siri , Bob Esponja, Patrick, Lula Molusco e seus amigos vão invadir nosso mundo para defender a Fenda do Biquini.  \n\nBob Esponja Calça Quadrada, o invertebrado mais amado do fundo do mar, sai da água e invade o nosso mundo para virar um super-herói numa grande aventura.   \n\nInscreva-se: http://bit.ly/17Yo6DD \n\nConecte-se com Bob Esponja: Um Herói Fora d'Água online: \n\nSITE: www.bobesponjaofilme.com.br Facebook: www.facebook.com/BobEsponjaFilme.BR Twitter: www.twitter.com/paramountbrasil \n\nParamount Pictures Internacional A Paramount Pictures há mais de 100 anos leva entretenimento para o\npúblico de ",
+    "published": "2015-02-04",
+    "youtube_url": "https://www.youtube.com/watch?v=mEny6699D8E",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/mEny6699D8E.mp4",
+    "added_at": "2026-10-16T10:32:47.691842-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 230,
+    "hook_text": "Bob Esponja já chegou ao Brasil?",
+    "layout": "horizontal",
+    "lang": "pt"
+  },
+  {
+    "video_id": "FFFxLGowwf0",
+    "title": "Regras de ano novo | Todo Mundo Odeia O Chris | Paramount Plus",
+    "channel": "Paramount+ Brasil",
+    "channel_id": "UCAnCxJ1Weh2pUAKJW0bro0Q",
+    "category": "other",
+    "description": "Qual simpatia não pode faltar no seu ano novo?? #TodoMundoOdeiaOChris +++++++++++++++++++++++++++++++++++++++++++++++++++++++++\nCurtiu? Assista o Paramount+ em https://www.paramountplus.com ou baixe o app, disponível para telefones e tablets, IOS e Android:\nhttps://smart.link/z36qrfjaimzim\nInscreva-se no canal do YouTube: https://www.youtube.com/channel/UCW8l...\nSiga a nossa página no Facebook: https://www.facebook.com/ParamountPlusbr\nSiga o nosso Twitter: https://twitter.com/ParamountPlusbr\nSiga o nosso Instagram: https://www.instagram.com/paramountplusbr\nSiga o nosso TikTok: https://www.tiktok.com/@paramountplusbr\n\n\n\nParamount+ possui milhares de episódios de: Comedy Central, MTV, Nickelod",
+    "published": "2023-12-30",
+    "youtube_url": "https://www.youtube.com/watch?v=FFFxLGowwf0",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/FFFxLGowwf0.mp4",
+    "added_at": "2026-10-16T10:40:50.919519-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 231,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "0i-P3ig2wAI",
+    "title": "Os mistérios da Muralha em GOT e A Casa do Dragão! ❄️",
+    "channel": "HBO Brasil",
+    "channel_id": "UCX2M7xn-jMmq4KfX25TCTCA",
+    "category": "series",
+    "description": "#GameOfThrones e #ACasaDoDragão estão disponíveis na Max.",
+    "published": "2025-03-17",
+    "youtube_url": "https://www.youtube.com/watch?v=0i-P3ig2wAI",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/0i-P3ig2wAI.mp4",
+    "added_at": "2026-10-16T10:43:17.698762-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 232,
+    "hook_text": "Muralha: quais segredos ainda faltam?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "XgrvE5C3wAk",
+    "title": "TA CHEGANDO! Cyberpunk: Mercenários 2!",
+    "channel": "Netflix Brasil",
+    "channel_id": "UCc1l5mTmAv2GC_PXrBpqyKQ",
+    "category": "game_big",
+    "description": "Os 10 episódios de Cyberpunk: Mercenários 2 estreiam dia 20 de outubro.\n\nAssista na Netflix: https://www.netflix.com/title/81744227\n\nInscreva-se: https://bit.ly/31ynwtw\n\nSobre a Netflix:\nA Netflix é um dos principais serviços de entretenimento do mundo com um vasto catálogo de séries, filmes, jogos e eventos ao vivo disponíveis em diversos idiomas. Nossos assinantes podem assistir, pausar e voltar a um título quantas vezes quiserem, onde quer que estejam, e alterar o plano a qualquer momento.\n\nTA CHEGANDO! Cyberpunk: Mercenários 2!\nhttps://www.youtube.com/@NetflixBrasil\n\nA gangue mudou, mas o inferno é o mesmo. Um novo grupo de assassinos chega às ruas de Night City nesta história do univers",
+    "published": "2026-10-06",
+    "youtube_url": "https://www.youtube.com/watch?v=XgrvE5C3wAk",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/XgrvE5C3wAk.mp4",
+    "added_at": "2026-10-16T10:51:54.204252-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 233,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "0y_4xkPmz00",
+    "title": "Krypto ataca Lex | Superman | HBO Max Brasil",
+    "channel": "HBO Max Brasil",
+    "channel_id": "UCR7ZwQz60rW9dK59Dirdc8w",
+    "category": "dc",
+    "description": "Krypto é o dog: mordida de justiça e um pouco de rebeldia. Assista #Superman na HBO Max.",
+    "published": "2025-10-08",
+    "youtube_url": "https://www.youtube.com/watch?v=0y_4xkPmz00",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/0y_4xkPmz00.mp4",
+    "added_at": "2026-10-16T10:55:26.989114-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 234,
+    "hook_text": "Krypto vai vencer Lex?",
     "layout": "vertical",
     "lang": "pt"
   }

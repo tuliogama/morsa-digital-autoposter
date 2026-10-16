@@ -1,25 +1,8 @@
-# Fila de reels @morsadigital — 15/10/2026 13:26 BRT
+# Fila de reels @morsadigital — 16/10/2026 10:59 BRT
 
 ## cenas — a partir das 11h
 
-140 na fila | legendas ok: 35 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 15/10 — Mulher-Maravilha - Especial de Bastidores: Gal Gadot
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: ok
-
-```
-Gal Gadot segura firme o peso da Mulher-Maravilha?
-
-Ver a produção desse épico de ação e aventura dirigido por Patty Jenkins é outra dimensão.
-A presença de nomes como Chris Pine e Robin Wright no set mostra a força do elenco reunido.
-É o tipo de bastidores que dá uma nova perspectiva sobre a personagem.
-
-Comenta aí qual foi a sua primeira reação ao ver essa Gal em ação.
-
-Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
-
-#MulherMaravilha #GalGadot #DCFilms #Bastidores #MorsaDigital
-```
+139 na fila | legendas ok: 34 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 16/10 — Eu consigo ouvir os gritos de “É A AMY ROSE!” só de rever essa cena! 🗣️🩷#Sonic3O
 Paramount Brasil · vertical · pt · legenda: ok
@@ -1138,24 +1121,16 @@ Netflix Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
+### 12/02 — JOFFREY CITA SOR DUNCAN EM GAME OF THRONES! 💪
+HBO Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
 ## main — a partir das 13h
 
-97 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
-
-### 15/10 — Blade Runner 2099 | Trailer NYCC | Prime Video
-Prime Video Brasil · horizontal · pt · legenda: ok
-
-```
-Blade Runner 2099 chegou e eu senti um arrepio só de ver o nome na tela.
-
-A franquia mais icônica do cinema sci-fi está voltando em formato de minissérie, estreando dia 25 de novembro no Prime Video. É a oportunidade perfeita para vermos essa visão distópica evoluir, mantendo a essência que nos prendeu por décadas.
-
-Vai honrar o legado ou vai tentar reinventar a roda e errar?
-
-Vídeo: Prime Video Brasil (canal oficial no YouTube)
-
-#BladeRunner2099 #PrimeVideo #Minissérie #SciFi #BladeRunner #CulturaPop
-```
+96 na fila | legendas ok: 8 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 16/10 — Grand Theft Auto IV Trailer 1 "Things Will Be Different"
 Rockstar Games · ? · ? · legenda: ok
@@ -1203,18 +1178,18 @@ Vídeo: HBO Max Brasil (canal oficial no YouTube)
 ```
 
 ### 19/10 — Until Dawn: Noite de Terror | Trailer Oficial Dublado
-Sony Pictures Brasil · ? · ? · legenda: revisar (detalhe sem base: A Morsa tá relembrando essa joia do especial de Halloween; detalhe sem base: especial de Halloween)
+Sony Pictures Brasil · ? · ? · legenda: ok
 
 ```
-Eu não consigo lembrar de um trailer de terror que me deu tanto frio na espinha sem eu nem ter visto o filme ainda.
+Eu fiquei gelado só de ver o nome Until Dawn na tela, e você?
 
-A Morsa tá relembrando essa joia do especial de Halloween porque a premissa é simples e brutal: você só tem uma noite pra ficar vivo. Sem fôlego sobrando, essa é a definição exata do que significa estar preso até o amanhecer.
+O conceito de estar preso num lugar isolado, sem celular e sem esperança de resgate, é o pesadelo definitivo para quem curte terror interativo. É aquela sensação de que o perigo tá colado na sua pele o tempo todo, e a pressão de tentar entender o que realmente aconteceu ali só aumenta a cada segundo.
 
-Se você já assistiu, me conta aqui: foi o terror mais tenso que você viu esse ano ou ficou devendo na expectativa?
+Pra quem já viveu essa noite de terror, qual foi a parte que mais te deu arrepi?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#UntilDawn #NoiteDeTerror #Halloween #MorsaDigital #Terror
+#UntilDawn #NoiteDeTerror #Terror #Sobrevivencia #HalloweenMorsa
 ```
 
 ### 20/10 — Grand Theft Auto: The Trilogy – The Definitive Edition Trailer
@@ -1233,10 +1208,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 21/10 — Sorria 2 | Teaser Trailer Oficial | DUB | Paramount Pictures Brasil
-Paramount Brasil · ? · ? · legenda: ainda não gerada
+Paramount Brasil · ? · ? · legenda: ok
 
 ```
-(gerada na hora da publicação)
+Sorria 2, aquela maldição do sorriso voltou pra nos assustar novamente.
+
+Será lançado nos cinemas em 2024, esse retorno da franquia trouxe de volta o terror psicológico que prendia a gente na poltrona.
+
+Qual foi o momento que mais te deixou com a pulga atrás da orelha quando você assistiu?
+
+Vídeo: Paramount Brasil (canal oficial no YouTube)
+
+#Sorria2 #SorriaOFilme #ParamountPictures #Terror
 ```
 
 ### 22/10 — Alien: Earth | Trailer Oficial Dublado | Disney+

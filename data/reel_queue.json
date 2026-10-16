@@ -198,12 +198,9 @@
     "scheduled_for": "2026-10-19",
     "theme": "halloween",
     "caption_style": "eu",
-    "caption": "Eu não consigo lembrar de um trailer de terror que me deu tanto frio na espinha sem eu nem ter visto o filme ainda.\n\nA Morsa tá relembrando essa joia do especial de Halloween porque a premissa é simples e brutal: você só tem uma noite pra ficar vivo. Sem fôlego sobrando, essa é a definição exata do que significa estar preso até o amanhecer.\n\nSe você já assistiu, me conta aqui: foi o terror mais tenso que você viu esse ano ou ficou devendo na expectativa?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#UntilDawn #NoiteDeTerror #Halloween #MorsaDigital #Terror",
-    "caption_check": "revisar",
-    "caption_problems": [
-      "detalhe sem base: A Morsa tá relembrando essa joia do especial de Halloween",
-      "detalhe sem base: especial de Halloween"
-    ]
+    "caption": "Eu fiquei gelado só de ver o nome Until Dawn na tela, e você?\n\nO conceito de estar preso num lugar isolado, sem celular e sem esperança de resgate, é o pesadelo definitivo para quem curte terror interativo. É aquela sensação de que o perigo tá colado na sua pele o tempo todo, e a pressão de tentar entender o que realmente aconteceu ali só aumenta a cada segundo.\n\nPra quem já viveu essa noite de terror, qual foi a parte que mais te deu arrepi?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#UntilDawn #NoiteDeTerror #Terror #Sobrevivencia #HalloweenMorsa",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "nC8b6tgMfMU",
@@ -220,7 +217,11 @@
     "kind": "acervo",
     "plan_order": 6,
     "scheduled_for": "2026-10-21",
-    "theme": "halloween"
+    "theme": "halloween",
+    "caption_style": "padrao",
+    "caption": "Sorria 2, aquela maldição do sorriso voltou pra nos assustar novamente.\n\nSerá lançado nos cinemas em 2024, esse retorno da franquia trouxe de volta o terror psicológico que prendia a gente na poltrona.\n\nQual foi o momento que mais te deixou com a pulga atrás da orelha quando você assistiu?\n\nVídeo: Paramount Brasil (canal oficial no YouTube)\n\n#Sorria2 #SorriaOFilme #ParamountPictures #Terror",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "IxTYXVyNOfk",
