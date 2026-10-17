@@ -518,14 +518,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=ZHMY6nvZAqs",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/ZHMY6nvZAqs.mp4",
     "added_at": "2026-10-06T23:56:50.538721-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 21,
     "layout": "horizontal",
     "lang": "pt",
     "caption": "Homem-Aranha: Um Novo Dia e o fato de Peter Parker estar sozinho num mundo que apagou sua memória é o que mais me pega emocionalmente nesse trailer.\n\nÉ aquela sensação de solidão que a franquia nunca explorou tão a fundo, com Tom Holland carregando o peso de ser o único que se lembra de quem ele foi. A dinâmica com Zendaya e o resto do time ganha um peso muito maior quando você sabe que eles não reconhecem mais o amigo de sempre.\n\nComo você se sentiu ao ver a reação do Peter nesse momento de transformação? Você acha que ele vai conseguir lidar com essa nova realidade ou vai se afogar nela?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#HomemAranha #SpiderMan #TomHolland #Zendaya #SonyPictures #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-17T14:07:21.801870-03:00",
+    "media_id": "17936098170400582",
+    "tiktok_id": "6ad3ab4a5d5ff4392f2c2515",
+    "tiktok_status": "published",
+    "tiktok_url": null
   },
   {
     "video_id": "JsfSvTvydEY",
