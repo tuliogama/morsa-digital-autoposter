@@ -2412,7 +2412,12 @@
     "plan_order": 144,
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": null
+    "hook_text": null,
+    "caption_problems": [
+      "detalhe sem base: Oda no set da 3ª temporada de One Piece: você esperava essa visita?",
+      "detalhe sem base: Ver o criador original nos bastões da série é surreal."
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "dGq_hpP6rWU",
@@ -2444,12 +2449,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=acG---rnKrA",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/acG---rnKrA.mp4",
     "added_at": "2026-10-10T04:53:47.924298-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 147,
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": "Bob Esponja, curtiu o novo filme?"
+    "hook_text": "Bob Esponja, curtiu o novo filme?",
+    "caption": "Bob Esponja vai atrás da calça quadrada no novo filme. Você já viu ou tá esperando?\n\nVer o Bob assumindo o comando da promoção do longa é nostálgico.\nAquele tom de animação que a gente ama não muda.\nÉ impossível não sentir um carinho extra por ele.\n\nQual é a sua expectativa pro lançamento?\n\nVídeo: Paramount Brasil (canal oficial no YouTube)\n\n#BobEsponja #BobEsponjaEmBuscaDaCalçaQuadrada #ParamountBrasil #SpongeBob #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad3d0680dbba775a03e1b57",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-19T17:15:00",
+    "posted_at": "2026-10-19T17:15:00"
   },
   {
     "video_id": "QeOM7WMNPzQ",
@@ -2467,7 +2479,12 @@
     "plan_order": 148,
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": null
+    "hook_text": null,
+    "caption_problems": [
+      "detalhe sem base: Ninguém esquece a tensão que ela traz pra Hazbin Hotel.",
+      "detalhe sem base: É a prova de que nem toda vilã precisa fazer barulho."
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "8fJrWT_5XD0",
@@ -2480,12 +2497,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=8fJrWT_5XD0",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/8fJrWT_5XD0.mp4",
     "added_at": "2026-10-10T05:35:33.553613-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 149,
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": null
+    "hook_text": null,
+    "caption": "Yuji Itadori tinha como se livrar do Sukuna dessa forma?\n\nAquele momento em que o garoto toma uma decisão drástica para tentar resolver o impasse.\nFica a dúvida no ar sobre o quanto isso realmente ajuda ou se só piora as coisas.\n\nComenta aí qual foi sua reação ao ver essa cena.\n\nVídeo: Crunchyroll Brasil (canal oficial no YouTube)\n\n#JujutsuKaisen #YujiItadori #Sukuna #CrunchyrollBrasil #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad3d098b17836cf426099e3",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-19T21:00:00",
+    "posted_at": "2026-10-19T21:00:00"
   },
   {
     "video_id": "RgleVYiR6P4",
@@ -2901,12 +2925,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=hsoF2nzJZ6c",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/hsoF2nzJZ6c.mp4",
     "added_at": "2026-10-12T00:00:37.379671-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 143,
     "hook_text": "Superman faria parte da Gangue da Justiça?",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Superman: essa gangue da justiça te fez vibrar?\n\nVer o Superman cercado por tanta gente poderosa sempre acende aquele brio de fã.\nÉ o tipo de cena que faz a gente querer estar no meio dessa bagunça.\n\nComenta aí: qual personagem dessa galera é seu favorito?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#Superman #GangueDaJustiça #DC #LigaDaJustiça #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad3d04d27655d6c6abc4f3b",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-19T13:30:00",
+    "posted_at": "2026-10-19T13:30:00"
   },
   {
     "video_id": "R58NCLkjUUI",
@@ -2919,12 +2950,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=R58NCLkjUUI",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/R58NCLkjUUI.mp4",
     "added_at": "2026-10-12T01:33:10.737352-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 145,
     "hook_text": "The Office: qual cena te surpreendeu?",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "The Office: você já tentou explicar isso pra alguém?\n\nEsse episódio é o tipo que divide opiniões. Ou você amou a loucura ou ficou perdido no meio do caos.\n\nQual foi a sua reação ao assistir?\n\nVídeo: HBO Max Brasil (canal oficial no YouTube)\n\n#TheOffice #HBO #Séries #Comédia #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad3d06327655d6c6abc4f84",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-19T15:00:00",
+    "posted_at": "2026-10-19T15:00:00"
   },
   {
     "video_id": "KXWzouVCJco",
@@ -2937,12 +2975,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=KXWzouVCJco",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/KXWzouVCJco.mp4",
     "added_at": "2026-10-12T01:35:16.065494-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 146,
     "hook_text": null,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "O Burro sendo brasileiro e teimoso faz sentido?\n\nQuem não sentiu aquele carinho bobo do Burro tentando ficar perto do Shrek o tempo todo?\n\nComenta o que achou dessa amizade aqui.\n\nVídeo: Prime Video Brasil (canal oficial no YouTube)\n\n#Shrek #OBurro #DreamWorks #Animação #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad3d0665ad1bc4b18739f93",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-19T16:30:00",
+    "posted_at": "2026-10-19T16:30:00"
   },
   {
     "video_id": "MH-oMpLzvGE",
@@ -2955,12 +3000,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=MH-oMpLzvGE",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/MH-oMpLzvGE.mp4",
     "added_at": "2026-10-12T01:37:36.368641-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 147,
     "hook_text": "Hinata tem a melhor voz?",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [],
+    "caption": "Qual foi a primeira frase do Hinata que te fez amar a dublagem?\n\nAquele entusiasmo do personagem combinou perfeitamente com a voz escolhida para o Brasil.\nÉ impossível não sentir o mesmo empolgação ao ouvir a dublagem nacional.\n\nComenta aí qual cena específica te marcou mais.\n\nVídeo: Crunchyroll Brasil (canal oficial no YouTube)\n\n#Haikyuu #HinataShoyo #DublagemBrasil #Crunchyroll #MorsaDigital",
+    "caption_check": "ok",
+    "tiktok_id": "6ad3d08027655d6c6abc4fba",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-19T18:00:00",
+    "posted_at": "2026-10-19T18:00:00"
   },
   {
     "video_id": "gOXLxIVWb7U",
@@ -2973,12 +3025,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=gOXLxIVWb7U",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/gOXLxIVWb7U.mp4",
     "added_at": "2026-10-12T01:40:02.698437-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 148,
     "hook_text": null,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Megatron esquentou a cabeça e foi pro Optimus. Você concorda?\n\nRelembre essa tensão clássica entre os líderes.\nAquele olhar de quem já sabe que vai dar ruim.\nO clássico que todo fã de Transformers carrega no coração.\n\nQual é a sua? Comenta aí o que você achou dessa dinâmica.\n\nVídeo: Paramount Brasil (canal oficial no YouTube)\n\n#Transformers #Megatron #OptimusPrime #TransformersOInício #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad3d096b17836cf426099cd",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-19T19:30:00",
+    "posted_at": "2026-10-19T19:30:00"
   },
   {
     "video_id": "4Nxu061aZxg",
@@ -2996,7 +3055,12 @@
     "plan_order": 149,
     "hook_text": "Todo Mundo vale a maratona?",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: Todo Mundo em Pânico voltou e você tá pronto pra rir ou ainda tá em choque?",
+      "detalhe sem base: O caos total da série tá de volta na tela."
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "mxca1RUE2Q0",
@@ -3009,12 +3073,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=mxca1RUE2Q0",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/mxca1RUE2Q0.mp4",
     "added_at": "2026-10-12T01:48:01.614662-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 150,
     "hook_text": null,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Você lembra daquele frio que parecia congelar a alma?\n\nVer o bastidores de Game of Thrones sempre traz aquela sensação de nostalgia.\nÉ incrível ver como a mágica acontecia no set.\n\nMarca aquele amigo que precisava estar lá!\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#GameOfThrones #HBO #Westeros #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad3d0ae0dbba775a03e1caa",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-19T22:30:00",
+    "posted_at": "2026-10-19T22:30:00"
   },
   {
     "video_id": "WM-i5qpBsCE",
@@ -3710,7 +3781,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6acfb5e7eb57f6762af48a5a",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-16T13:30:00",
     "posted_at": "2026-10-16T13:30:00"
   },
@@ -3736,7 +3807,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6acfb5ea775b248ee53f329a",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-16T15:00:00",
     "posted_at": "2026-10-16T15:00:00"
   },
@@ -3762,7 +3833,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6acfb5eceb57f6762af48a82",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-16T16:30:00",
     "posted_at": "2026-10-16T16:30:00"
   },
@@ -3788,7 +3859,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6acfb5ef495672488a247167",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-16T17:15:00",
     "posted_at": "2026-10-16T17:15:00"
   },
@@ -3814,7 +3885,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6acfb5f33b566d34308970e1",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-16T18:00:00",
     "posted_at": "2026-10-16T18:00:00"
   },
@@ -3840,7 +3911,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6acfb5f5eb57f6762af48aca",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-16T19:30:00",
     "posted_at": "2026-10-16T19:30:00"
   },
@@ -3866,7 +3937,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6acfb5f7eb57f6762af48adc",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-16T21:00:00",
     "posted_at": "2026-10-16T21:00:00"
   },
@@ -3892,7 +3963,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6acfb5fbe87e5a891a0b2a05",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-16T22:30:00",
     "posted_at": "2026-10-16T22:30:00"
   },
@@ -3918,7 +3989,7 @@
     "caption": "Meryl Streep como bruxa: você aprovou ou achou que tirou a graça?\n\nVer a equipe por trás de Caminhos da Floresta trabalhando mostra o cuidado com cada detalhe.\nÉ um musical que mistura Cinderela, Chapeuzinho e outros contos de uma forma única.\nE ver a interação dos atores nos bastidores ajuda a entender a energia do filme.\n\nComenta aí: qual personagem teve a interpretação mais marcante pra você?\n\nVídeo: Walt Disney Studios BR (canal oficial no YouTube)\n\n#CaminhosDaFloresta #MerylStreep #EmilyBlunt #AnnaKendrick #MorsaDigital",
     "caption_check": "ok",
     "tiktok_id": "6ad0ff0b60e2ac4b8159c3e5",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-17T13:30:00",
     "posted_at": "2026-10-17T13:30:00"
   },
@@ -3944,7 +4015,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ad0ff0d424aa7e4f18664a2",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-17T15:00:00",
     "posted_at": "2026-10-17T15:00:00"
   },
@@ -4626,6 +4697,60 @@
     "kind": "cena",
     "plan_order": 234,
     "hook_text": "Krypto vai vencer Lex?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "jNyhH1yx7pY",
+    "title": "Eles estão te chamando pra ver o Volume 2 de Stranger Things!",
+    "channel": "Netflix Brasil",
+    "channel_id": "UCc1l5mTmAv2GC_PXrBpqyKQ",
+    "category": "series",
+    "description": "Se você ainda não viu os episódios novos... Esse era o sinal que faltava. O Volume 2 de Stranger Things 5 já está disponível.",
+    "published": "2025-12-26",
+    "youtube_url": "https://www.youtube.com/watch?v=jNyhH1yx7pY",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/jNyhH1yx7pY.mp4",
+    "added_at": "2026-10-17T14:10:20.403021-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 240,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "FbMF_w2nhhc",
+    "title": "Gumball e Penny. 🥹❤️  #OIncrívelMundoDeGumball",
+    "channel": "HBO Max Brasil",
+    "channel_id": "UCR7ZwQz60rW9dK59Dirdc8w",
+    "category": "series",
+    "description": "#Darwin #Cartoon #Desenhos #fyp",
+    "published": "2026-08-18",
+    "youtube_url": "https://www.youtube.com/watch?v=FbMF_w2nhhc",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/FbMF_w2nhhc.mp4",
+    "added_at": "2026-10-17T14:17:21.197833-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 241,
+    "hook_text": "Gumball, quem te faz rir mais?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "jHMVqawT0gM",
+    "title": "Shrek confronta a fada madrinha 😎",
+    "channel": "Prime Video Brasil",
+    "channel_id": "UCuNjvqjTzw9LcD9PVpTVWRA",
+    "category": "series",
+    "description": "O que ele não faz pela Fiona, né? 🥹 #shrek \n\nInscreva-se no canal do YouTube: https://bit.ly/35FaAo8 \n\nSobre o #PrimeVideo: Assine Prime Video para assistir a filmes e séries populares, incluindo Amazon Originals premiados. Além de um catálogo cheio de títulos, membros Prime têm acesso a benefícios, como frete GRÁTIS e rápido em milhares de produtos na Amazon.com.br, músicas sem anúncios na Amazon Music, Prime Gaming na Twitch e e-books e revistas no Prime Reading. Tudo na mesma assinatura, por apenas R$ 14,90/mês. Teste Grátis por 30 dias. \n\nSiga nossas redes sociais: \n\nInstagram: https://www.instagram.com/primevideobr/ \n\nFacebook: https://www.facebook.com/PrimeVideoBR/ \n\nTwitter: https://t",
+    "published": "2026-03-29",
+    "youtube_url": "https://www.youtube.com/watch?v=jHMVqawT0gM",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/jHMVqawT0gM.mp4",
+    "added_at": "2026-10-17T15:20:14.402026-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 242,
+    "hook_text": null,
     "layout": "vertical",
     "lang": "pt"
   }

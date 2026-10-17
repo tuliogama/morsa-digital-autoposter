@@ -1,40 +1,8 @@
-# Fila de reels @morsadigital — 16/10/2026 10:59 BRT
+# Fila de reels @morsadigital — 17/10/2026 16:44 BRT
 
 ## cenas — a partir das 11h
 
-139 na fila | legendas ok: 34 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 16/10 — Eu consigo ouvir os gritos de “É A AMY ROSE!” só de rever essa cena! 🗣️🩷#Sonic3O
-Paramount Brasil · vertical · pt · legenda: ok
-
-```
-Amy Rose é a única personagem que faz você gritar assim?
-
-É impossível não sentir aquele eco de "É A AMY ROSE!" na cabeça.
-Essa cena tem uma energia que trava o coração de todo fã.
-
-Qual foi a reação mais louca que você teve com ela?
-
-Vídeo: Paramount Brasil (canal oficial no YouTube)
-
-#Sonic #Sonic3 #AmyRose #SonicHedgehog #Paramount #MorsaDigital
-```
-
-### 17/10 — Mulher-Maravilha - Especial de Bastidores: Patty Jenkins
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: ok
-
-```
-Patty Jenkins dirigindo a Mulher-Maravilha te surpreendeu ou você já esperava?
-
-Ver o processo de criação da Diana por trás das câmeras faz a gente entender o peso que a personagem carrega.
-É outro olhar pro filme que a gente geralmente não vê na tela, focando na visão da diretora.
-
-Comenta aí: qual foi a primeira coisa que você sentiu ao saber que ela ia assumir o comando?
-
-Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
-
-#MulherMaravilha #WonderWoman #PattyJenkins #GalGadot #Bastidores #MorsaDigital
-```
+137 na fila | legendas ok: 32 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 18/10 — Hola b*tches! #Venom: A Última Rodada, hoje, exclusivamente nos cinemas.
 Sony Pictures Brasil · vertical · pt · legenda: ok
@@ -1128,24 +1096,23 @@ HBO Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
+### 13/02 — Não estava esperando essa surra... I That Time I Got Reincarnated as a Slime 4ª 
+Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 14/02 — Loki | Loki invadiu o Brasil | Disney+
+Marvel Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
 ## main — a partir das 13h
 
-96 na fila | legendas ok: 8 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 16/10 — Grand Theft Auto IV Trailer 1 "Things Will Be Different"
-Rockstar Games · ? · ? · legenda: ok
-
-```
-Grand Theft Auto IV e a frase "Things Will Be Different" ecoam na cabeça de qualquer fã que cresceu com a série.
-
-Esse trailer foi o divisor de águas entre a era PS2/Xbox e a chegada do HD no PS3 e Xbox 360. A Rockstar prometeu um salto gráfico e uma narrativa mais sombria, mudando completamente o tom da franquia.
-
-Qual foi a primeira coisa que você jogou em 2008? Foi GTA IV ou esperou a continuação?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
-
-#GTAIV #GrandTheftAuto #RockstarGames #GTACommunity #NostalgiaGamer #GTA6
-```
+95 na fila | legendas ok: 8 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 17/10 — Homem-Aranha: Um Novo Dia - Novo Trailer (Dublado)
 Sony Pictures Brasil · horizontal · pt · legenda: ok
@@ -1223,10 +1190,18 @@ Vídeo: Paramount Brasil (canal oficial no YouTube)
 ```
 
 ### 22/10 — Alien: Earth | Trailer Oficial Dublado | Disney+
-Disney+ Brasil · ? · ? · legenda: ainda não gerada
+Disney+ Brasil · ? · ? · legenda: ok
 
 ```
-(gerada na hora da publicação)
+Tô com calafrios só de lembrar do primeiro minuto dessa série, o medo de alienígena é uma coisa que não se apaga nunca.
+
+Aquela frase "Era mais seguro no espaço" ainda ecoa na cabeça de todo fã da franquia. É o retorno direto ao terror puro que definiu o gênero, agora adaptando o universo de Alien para uma nova realidade na Terra.
+
+Você já assistiu? Qual foi a cena que mais te deixou com medo de olhar pela janela?
+
+Vídeo: Disney+ Brasil (canal oficial no YouTube)
+
+#AlienEarth #Alien #DisneyPlus #Halloween #MorsaDigital
 ```
 
 ### 23/10 — Grand Theft Auto V Trailer
