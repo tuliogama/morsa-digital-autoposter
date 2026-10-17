@@ -2125,7 +2125,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=_JMY6cKScnc",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/_JMY6cKScnc.mp4",
     "added_at": "2026-10-13T01:49:01.627494-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 2,
     "theme": "bastidores",
@@ -2134,7 +2134,12 @@
     "lang": "pt",
     "caption": "Patty Jenkins dirigindo a Mulher-Maravilha te surpreendeu ou você já esperava?\n\nVer o processo de criação da Diana por trás das câmeras faz a gente entender o peso que a personagem carrega.\nÉ outro olhar pro filme que a gente geralmente não vê na tela, focando na visão da diretora.\n\nComenta aí: qual foi a primeira coisa que você sentiu ao saber que ela ia assumir o comando?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#MulherMaravilha #WonderWoman #PattyJenkins #GalGadot #Bastidores #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-17T11:06:51.251291-03:00",
+    "media_id": "18641916931009583",
+    "tiktok_id": "6ad380fbc8d93838efb76f82",
+    "tiktok_status": "published",
+    "tiktok_url": null
   },
   {
     "video_id": "QYKZAlGuHm0",
