@@ -305,7 +305,7 @@
   "at": "2026-10-16T10:10:52-03:00",
   "insights": {
    "reach": 36,
-   "views": 46,
+   "views": 47,
    "replies": 1,
    "shares": 0,
    "total_interactions": 2,
@@ -316,7 +316,7 @@
    "tap_forward": 29,
    "tap_back": 5
   },
-  "insights_at": "2026-10-17T02:05:06-03:00"
+  "insights_at": "2026-10-17T02:22:05-03:00"
  },
  {
   "media_id": "17900555265604212",
@@ -335,7 +335,7 @@
    "swipe_forward": 2,
    "tap_back": 1
   },
-  "insights_at": "2026-10-17T02:05:06-03:00"
+  "insights_at": "2026-10-17T02:22:05-03:00"
  },
  {
   "media_id": "18099212300544079",
@@ -354,6 +354,6 @@
    "tap_exit": 7,
    "swipe_forward": 2
   },
-  "insights_at": "2026-10-17T02:05:06-03:00"
+  "insights_at": "2026-10-17T02:22:05-03:00"
  }
 ]
