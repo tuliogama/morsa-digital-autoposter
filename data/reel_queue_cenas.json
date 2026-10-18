@@ -2207,7 +2207,10 @@
     "theme": "bastidores",
     "hook_text": null,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "A trapaça do Loki te pegou de jeito ou você já esperava?\n\nVer os bastidores de como essa cena foi gravada mostra o quanto o personagem é caótico.\nÉ impossível não pensar em quantas vezes ele já virou o jogo contra o público.\n\nComenta aí qual foi a sua reação quando viu essa parte.\n\nVídeo: Marvel Brasil (canal oficial no YouTube)\n\n#Loki #MarvelStudios #DisneyPlus #MCU #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "Y2zmCKXTSX0",
@@ -2226,7 +2229,10 @@
     "theme": "bastidores",
     "hook_text": null,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Você se lembra de quando era só um pouco de CGI?\n\nVer os bastidores da Capitã Marvel mostra o trabalho pesado por trás do legado.\nÉ tipo \"o que a gente não vê, mas faz a mágica acontecer\".\n\nComenta aí: o que mais te impressionou nessa produção?\n\nVídeo: Marvel Brasil (canal oficial no YouTube)\n\n#CapitaMarvel #Marvel #MCU #Bastidores #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "ADSd_5eJFVA",
@@ -2812,6 +2818,44 @@
     "posted": false,
     "kind": "cena",
     "plan_order": 38,
+    "theme": "bastidores",
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "Ztqqb051asU",
+    "title": "Os bastidores da minissérie Ângela Diniz: Assassinada e Condenada | HBO Max Brasil",
+    "channel": "HBO Max Brasil",
+    "channel_id": "UCR7ZwQz60rW9dK59Dirdc8w",
+    "category": "series",
+    "description": "Estava com curiosidade pra ver os bastidores de uma minissérie brasileira original HBO? 👀 Pronto! Aqui tem um olhar por trás das câmeras de #ÂngelaDiniz: Assassinada e Condenada, uma das obras mais necessárias desse ano.\n--\nA #HBOMax é a casa dos seus filmes e séries favoritos da Warner Bros., DC, Cartoon Network, TNT, Adult Swim, Discovery, HBO e Max Originals – além de TODOS os jogos da Champions League ao vivo! Tudo no mesmo lugar para você assistir quando e onde quiser. Nos vemos na hbomax.com   \n\nInscreva-se no canal: https://bit.ly/YouTubeStreamMaxBR\n\nMe segue nas redes! \nTwitter: https://twitter.com/StreamMaxBR\nInstagram: https://www.instagram.com/hbomaxbrasil/ \nFacebook: https://www.",
+    "published": "2025-12-16",
+    "youtube_url": "https://www.youtube.com/watch?v=Ztqqb051asU",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/Ztqqb051asU.mp4",
+    "added_at": "2026-10-18T09:06:14.241863-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 31,
+    "theme": "bastidores",
+    "hook_text": null,
+    "layout": "horizontal",
+    "lang": "pt"
+  },
+  {
+    "video_id": "HMPWyymWFKc",
+    "title": "Cenas fofas nos bastidores de Caramelo",
+    "channel": "Netflix Brasil",
+    "channel_id": "UCc1l5mTmAv2GC_PXrBpqyKQ",
+    "category": "series",
+    "description": "O vira-lata Amendoim entregou carisma e muito profissionalismo nos bastidores interpretando o doguinho Caramelo! 🐶\n\nAssista na Netflix: https://www.netflix.com/title/81702623\n\nInscreva-se: https://bit.ly/31ynwtw\n\nSobre a Netflix:\nA Netflix é um dos principais serviços de entretenimento do mundo. São mais de 300 milhões de assinaturas pagas em mais de 190 países com acesso a séries, filmes e jogos de diversos gêneros e idiomas. Assinantes podem assistir, pausar e voltar a assistir a um título quantas vezes quiserem em qualquer lugar e alterar o plano a qualquer momento.\n\nCenas fofas nos bastidores de Caramelo\nhttps://www.youtube.com/@NetflixBrasil\n\nAo receber um diagnóstico grave, um chef em ",
+    "published": "2025-10-24",
+    "youtube_url": "https://www.youtube.com/watch?v=HMPWyymWFKc",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/HMPWyymWFKc.mp4",
+    "added_at": "2026-10-18T10:49:04.638533-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 39,
     "theme": "bastidores",
     "hook_text": null,
     "layout": "vertical",

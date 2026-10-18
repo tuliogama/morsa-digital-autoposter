@@ -396,7 +396,11 @@
     "scheduled_for": "2026-10-23",
     "theme": "gta",
     "layout": "horizontal",
-    "lang": "en"
+    "lang": "en",
+    "caption_style": "padrao",
+    "caption": "GTA V. Sim, aquele mesmo.\n\nLembra da sensação de ver esse trailer pela primeira vez em 2011? A expectativa era tão alta que parecia que o jogo ia mudar o mundo do videogame ali mesmo.\n\nMuita gente ainda usa esse vídeo como referência pra medir o hype do GTA VI. Qual foi a sua primeira reação quando esse anúncio aconteceu lá atrás?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#GTA5 #GTA #RockstarGames #GTA6",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "eaW0tYpxyp0",
