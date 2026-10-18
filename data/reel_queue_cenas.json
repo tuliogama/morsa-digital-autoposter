@@ -300,14 +300,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=FeUYvqcec0w",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/FeUYvqcec0w.mp4",
     "added_at": "2026-10-06T22:27:44.272003-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 9,
     "layout": "vertical",
     "lang": "pt",
     "caption": "Essa cena do Venom já te fez rir ou ainda tá no seu radar?\n\nAquele \"Hola b*tches\" é puro caos e energia do simbionte.\nÉ o tipo de momento que define o tom caótico da franquia.\nTem gente que ama essa atitude, tem quem prefira o lado sério.\n\nMarca aquele amigo que precisa ver essa energia.\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#Venom #VenomUltimaRodada #SonyPictures #CineNerd #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-18T13:23:19.386232-03:00",
+    "media_id": "18108800708632200",
+    "tiktok_id": "6ad4f278b6392060e1f5b6db",
+    "tiktok_status": "published",
+    "tiktok_url": null
   },
   {
     "video_id": "2Bto3Mlbn0o",
