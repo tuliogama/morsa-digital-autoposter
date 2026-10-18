@@ -176,7 +176,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=K8BgHgL_pr8",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/K8BgHgL_pr8.mp4",
     "added_at": "2026-10-06T18:57:21.682263-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 3,
     "scheduled_for": "2026-10-18",
@@ -184,7 +184,12 @@
     "caption_style": "eu",
     "caption": "Aquele arrepio de ver o balão vermelho de novo me fez lembrar da infância, e você?\n\nDerry voltou e trouxe uma nova geração de crianças para enfrentar o mal, mantendo a essência sombria que fez a franquia ser tão cultuada no Brasil.\n\nAgora que já passou de 26 de outubro, relembre esse trailer red band e diga: qual foi a cena que mais te assustou quando você assistiu?\n\nVídeo: HBO Max Brasil (canal oficial no YouTube)\n\n#IT #ITMovie #StephenKing #HBO #HBOMax #Derry",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-18T16:14:28.668040-03:00",
+    "media_id": "18192094432404099",
+    "tiktok_id": "6ad51a95f8f9eda25593049d",
+    "tiktok_status": "published",
+    "tiktok_url": null
   },
   {
     "video_id": "W--kUNMg1-E",
