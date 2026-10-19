@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 18/10/2026 17:07 BRT
+# Fila de reels @morsadigital — 19/10/2026 00:27 BRT
 
 ## cenas — a partir das 11h
 
@@ -1120,7 +1120,7 @@ Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
 
 ## main — a partir das 13h
 
-93 na fila | legendas ok: 7 | a revisar: 1 | dias sem reel no calendário: 0
+93 na fila | legendas ok: 8 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 19/10 — Until Dawn: Noite de Terror | Trailer Oficial Dublado
 Sony Pictures Brasil · ? · ? · legenda: ok
@@ -1198,10 +1198,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 24/10 — Fortnite: Pesadelos 2026 - Trailer Cinematográfico | PS5 & PS4
-PlayStation Brasil · ? · ? · legenda: ainda não gerada
+PlayStation Brasil · ? · ? · legenda: ok
 
 ```
-(gerada na hora da publicação)
+Eu ainda tô com o coração acelerado só de lembrar a primeira vez que vi esses pesadelos invadirem o mapa, e vocês?
+
+Fortnitemares sempre foi o momento mais assustador do Battle Royale, misturando o caos da caçada com uma atmosfera de terror que pega de surpresa. Com a volta marcada para o dia 1º de outubro, a expectativa é de que a experiência seja ainda mais imersiva, aproveitando o clima de Halloween para assombrar os jogadores.
+
+O que vocês acham, a tensão vai superar o medo de ficar sozinho no final do jogo?
+
+Vídeo: PlayStation Brasil (canal oficial no YouTube)
+
+#Fortnite #Fortnitemares #Halloween #BattleRoyale #PS5
 ```
 
 ### 25/10 — Premonição 6: Laços de Sangue l Trailer Oficial

@@ -2373,7 +2373,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ad22f0a84d7092fa8b55403",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-18T19:30:00",
     "posted_at": "2026-10-18T19:30:00"
   },
@@ -2822,7 +2822,7 @@
     "caption": "Aqua é a deusa mais insuportável ou a mais engraçada da Konosuba?\n\nRelembre esse \"bom dia\" caótico que só a Aqua consegue entregar.\nÉ tipo um abraço que te joga no chão, mas você ainda agradece.\nO grupo de Kazuma vive de acidentes e dívidas, e ela é o caos perfeito.\n\nMarca aquele amigo que precisa de um recado assim pra acordar!\n\nVídeo: Crunchyroll Brasil (canal oficial no YouTube)\n\n#Konosuba #Aqua #Kazuma #Animacao #MorsaDigital",
     "caption_check": "ok",
     "tiktok_id": "6ad22ed989f33ef8c7ce0710",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-18T17:15:00",
     "posted_at": "2026-10-18T17:15:00"
   },
@@ -2847,7 +2847,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ad22ef184d7092fa8b55382",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-18T18:00:00",
     "posted_at": "2026-10-18T18:00:00"
   },
@@ -2897,7 +2897,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ad22f0c06f341ede0459bce",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-18T21:00:00",
     "posted_at": "2026-10-18T21:00:00"
   },
@@ -2922,7 +2922,7 @@
     "caption": "Você acha que o Naruto conseguiria ficar feliz por muito tempo sem o Sasuke?\n\nAquele contraste entre a energia dele e a saudade do amigo sempre bateu forte.\nÉ impossível não sentir aquele aperto no peito quando a brincadeira vira lembrança.\n\nQual é a sua cena favorita de Naruto e Sasuke juntos?\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#Naruto #Sasuke #NarutoShippuden #Animes #MorsaDigital",
     "caption_check": "ok",
     "tiktok_id": "6ad22f18e1ba20bc5565be4b",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-18T22:30:00",
     "posted_at": "2026-10-18T22:30:00"
   },
@@ -3361,7 +3361,11 @@
     "plan_order": 161,
     "hook_text": "Superman já tirou selfie épica?",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "hashtag genérica"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "jkmrwBcxIU0",
@@ -3374,12 +3378,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=jkmrwBcxIU0",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/jkmrwBcxIU0.mp4",
     "added_at": "2026-10-12T03:58:53.326566-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 162,
     "hook_text": null,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Você lembra do primeiro pit stop do Relâmpago?\n\nSão 20 anos da franquia que virou parte da nossa infância.\nVer o Carros voltar aos cinemas é um momento de nostalgia pura.\n\nComenta aí qual foi a primeira vez que você viu esse filme.\n\nVídeo: Walt Disney Studios BR (canal oficial no YouTube)\n\n#Carros #RelampagoMcQueen #Pixar #Disney #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad58e99ccc517bb01c7edad",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-21T13:30:00",
+    "posted_at": "2026-10-21T13:30:00"
   },
   {
     "video_id": "yxFusL46MBw",
@@ -3392,12 +3403,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=yxFusL46MBw",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/yxFusL46MBw.mp4",
     "added_at": "2026-10-12T04:00:52.092890-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 163,
     "hook_text": "Superman consegue manter a postura?",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Superman aguentando a fofura do Krypto ou já desistiu?\n\nVer o Homem de Aço tentando manter a pose de herói enquanto um cachorro destrói sua seriedade com um abano de rabo é o tipo de cena que derrete qualquer um. É impossível não sentir o coração amolecer com essa dinâmica.\n\nQual foi a sua reação ao ver essa interação?\n\nVídeo: HBO Max Brasil (canal oficial no YouTube)\n\n#Superman #Krypto #DC #HBOMax #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad58e9cccc517bb01c7edb9",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-21T15:00:00",
+    "posted_at": "2026-10-21T15:00:00"
   },
   {
     "video_id": "r_c1Ph9XKfU",
@@ -3410,12 +3428,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=r_c1Ph9XKfU",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/r_c1Ph9XKfU.mp4",
     "added_at": "2026-10-12T04:03:22.633746-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 164,
     "hook_text": null,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Qual é a sua cena caótica favorita de Hazbin Hotel?\n\nAquele clima de caos absoluto que só essa série entrega é o que faz a gente nunca sair.\nÉ impossível não se envolver com a energia descontrolada dos personagens em cada episódio.\n\nComenta aí qual momento te deixou mais impressionado.\n\nVídeo: Prime Video Brasil (canal oficial no YouTube)\n\n#HazbinHotel #CharlieMorningstar #Alastor #PrimeVideoBR #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad58e9e607a83c378e933ec",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-21T16:30:00",
+    "posted_at": "2026-10-21T16:30:00"
   },
   {
     "video_id": "vm57IR2CCTY",
@@ -3428,12 +3453,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=vm57IR2CCTY",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/vm57IR2CCTY.mp4",
     "added_at": "2026-10-12T05:43:06.558943-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 165,
     "hook_text": "My Hero Academia: qual dublador prefere?",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Qual dublador de My Hero Academia te pega mais?\n\nRelembre esse teste de \"Você prefere\" com as vozes da dublagem.\nÉ impossível não torcer por um lado ou outro, né?\nE aquela última opção... bom, já sabemos que vai dividir opiniões.\n\nComenta aí quem ganhou seu coração nessa escolha.\n\nVídeo: Crunchyroll Brasil (canal oficial no YouTube)\n\n#MyHeroAcademia #MHA #Dublagem #Anime #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad58ea0ccc517bb01c7edd1",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-21T17:15:00",
+    "posted_at": "2026-10-21T17:15:00"
   },
   {
     "video_id": "nzmQ2u1AoVg",
@@ -3446,12 +3478,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=nzmQ2u1AoVg",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/nzmQ2u1AoVg.mp4",
     "added_at": "2026-10-12T05:47:30.316638-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 166,
     "hook_text": null,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Essa viagem pela Alemanha com Bob Esponja e Patrick faz você lembrar do filme?\n\nA ideia de ver o fundo do mar invadindo nosso mundo sempre rendeu cenas marcantes.\nÉ tipo aquele misto de nostalgia com uma aventura que a gente nunca esquece.\n\nComenta aí qual foi a primeira vez que você viu esse clip.\n\nVídeo: Paramount Brasil (canal oficial no YouTube)\n\n#BobEsponja #BobEsponjaUmHeróiForaDAgua #ParamountBrasil #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad58ea2607a83c378e933f4",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-21T18:00:00",
+    "posted_at": "2026-10-21T18:00:00"
   },
   {
     "video_id": "WoXJpPeWd7c",
@@ -3464,12 +3503,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=WoXJpPeWd7c",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/WoXJpPeWd7c.mp4",
     "added_at": "2026-10-12T05:51:17.046798-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 167,
     "hook_text": "Todo Mundo Odeia o Chris: já viu?",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Julius é o pai que você queria ter?\n\nRelembre a energia do Julius no Todo Mundo Odeia o Chris.\nÉ aquele tipo de cena que resume por que a gente ama esse personagem.\nA pureza dele nunca sai de moda.\n\nComenta aí o que achou dessa atitude.\n\nVídeo: Paramount+ Brasil (canal oficial no YouTube)\n\n#TodoMundoOdeiaOChris #Julius #ParamountPlus #SerieNerd #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad58ea5ccc517bb01c7edf0",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-21T19:30:00",
+    "posted_at": "2026-10-21T19:30:00"
   },
   {
     "video_id": "TP60FBINsn4",
@@ -3487,7 +3533,13 @@
     "plan_order": 168,
     "hook_text": null,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: cena de Natal mais icônica de Família Soprano",
+      "detalhe sem base: Esse momento virou lenda entre os fãs",
+      "detalhe sem base: É daquelas cenas que marcam a memória de quem acompanhou a série e não sai mais da cabeça"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "SmzB2DI7xac",
@@ -3505,7 +3557,12 @@
     "plan_order": 169,
     "hook_text": "Qual a teoria mais cabulosa de Death Note?",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: Light virou Shinigami e o Ryuk tava escondendo o jogo?",
+      "detalhe sem base: A ideia de uma troca de papéis entre eles é perturbadora."
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "jJUAJOF_5IA",
@@ -3518,12 +3575,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=jJUAJOF_5IA",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/jJUAJOF_5IA.mp4",
     "added_at": "2026-10-12T06:00:36.383806-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 170,
     "hook_text": null,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [],
+    "caption": "Supergirl no CCXP: você esperava mais drama ou mais ação?\n\nVer a nossa SUPER Agente Secreta em um momento tão marcante é algo que fica na memória.\nÉ aquele tipo de cena que faz a gente querer pausar e curtir a vibe.\n\nComenta aí qual foi a sua primeira reação ao ver essa imagem.\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#Supergirl #CCXP #DCComics #WarnerBros #MorsaDigital",
+    "caption_check": "ok",
+    "tiktok_id": "6ad58ed812d9e409eea93e91",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-21T21:00:00",
+    "posted_at": "2026-10-21T21:00:00"
   },
   {
     "video_id": "7PLPKYLD2h4",
@@ -3536,12 +3600,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=7PLPKYLD2h4",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/7PLPKYLD2h4.mp4",
     "added_at": "2026-10-12T06:04:48.951613-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 171,
     "hook_text": "Carros faz 20 anos, ainda curte?",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Carros tá de volta e você tá pronto pra rever?\n\nSão 20 anos da estreia e o filme retorna aos cinemas em 8 de outubro.\nÉ a chance perfeita de rever aquele raio de relâmpago que a gente ama.\n\nComenta aí se você já está animado ou se vai esperar a estreia.\n\nVídeo: Walt Disney Studios BR (canal oficial no YouTube)\n\n#Carros #LightningMcQueen #Disney #Pixar #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad58edae155879d25ca87ae",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-21T22:30:00",
+    "posted_at": "2026-10-21T22:30:00"
   },
   {
     "video_id": "N-IYK1WNKno",
@@ -5008,6 +5079,78 @@
     "posted": false,
     "kind": "cena",
     "plan_order": 245,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "OkJb5WXagLg",
+    "title": "Pedro Pascal ainda se lembra das falas do Oberyn de GOT! 🥹",
+    "channel": "HBO Brasil",
+    "channel_id": "UCX2M7xn-jMmq4KfX25TCTCA",
+    "category": "series",
+    "description": "#TheLastOfUs e #GameOfThrones estão disponíveis na Max.",
+    "published": "2025-03-19",
+    "youtube_url": "https://www.youtube.com/watch?v=OkJb5WXagLg",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/OkJb5WXagLg.mp4",
+    "added_at": "2026-10-18T23:35:08.047549-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 246,
+    "hook_text": "Pedro Pascal lembra das falas de Oberyn?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "XmXn1OElw_Q",
+    "title": "Do dia 1 à despedida no set de Stranger Things",
+    "channel": "Netflix Brasil",
+    "channel_id": "UCc1l5mTmAv2GC_PXrBpqyKQ",
+    "category": "series",
+    "description": "Depois de 224 dias de gravações, chegou a hora de dizer adeus. Stranger Things se despede, mas tudo o que foi vivido aqui fica pra sempre.\n\nStranger Things 5 - Episódio Final já está disponível.\n\nAssista na Netflix: https://www.netflix.com/title/81297917\n\nInscreva-se: https://bit.ly/31ynwtw\n\nSobre a Netflix:\nA Netflix é um dos principais serviços de entretenimento do mundo. São mais de 300 milhões de assinaturas pagas em mais de 190 países com acesso a séries, filmes e jogos de diversos gêneros e idiomas. Assinantes podem assistir, pausar e voltar a assistir a um título quantas vezes quiserem em qualquer lugar e alterar o plano a qualquer momento.\n\nDo dia 1 à despedida no set de Stranger Thi",
+    "published": "2026-01-04",
+    "youtube_url": "https://www.youtube.com/watch?v=XmXn1OElw_Q",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/XmXn1OElw_Q.mp4",
+    "added_at": "2026-10-18T23:43:52.371303-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 247,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "6jTmQkYELDA",
+    "title": "🦅✨GRWM para entrar para time do Pacificador✨🦅 a Melody entregou com este look. DC OLHA ELA!!!",
+    "channel": "HBO Max Brasil",
+    "channel_id": "UCR7ZwQz60rW9dK59Dirdc8w",
+    "category": "dc",
+    "description": "Assista a performance dela no vídeo do nosso canal #Pacificador \n\n💅 Beleza e caracterização por @marilia_martins_ com assistência de @katheportillo_",
+    "published": "2025-08-25",
+    "youtube_url": "https://www.youtube.com/watch?v=6jTmQkYELDA",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/6jTmQkYELDA.mp4",
+    "added_at": "2026-10-18T23:59:38.251883-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 248,
+    "hook_text": "Melody, curtiu o look do Pacificador?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "_DI6IF1IAaM",
+    "title": "Omni-Man confronta Thragg | Invencível | Prime Video",
+    "channel": "Prime Video Brasil",
+    "channel_id": "UCuNjvqjTzw9LcD9PVpTVWRA",
+    "category": "series",
+    "description": "Só um papo “amigável” entre os Viltrumitas mais poderosos da galáxia. A 4ª temporada de Invencível está com episódios semanais no Prime Video. \n\nInscreva-se no canal do YouTube: https://bit.ly/35FaAo8 \n\nSobre o #PrimeVideo: Assine Prime Video para assistir a filmes e séries populares, incluindo Amazon Originals premiados. Além de um catálogo cheio de títulos, membros Prime têm acesso a benefícios, como frete GRÁTIS e rápido em milhares de produtos na Amazon.com.br, músicas sem anúncios na Amazon Music, Prime Gaming na Twitch e e-books e revistas no Prime Reading. Tudo na mesma assinatura, por apenas R$ 14,90/mês. Teste Grátis por 30 dias. \n\nSiga nossas redes sociais: \n\nInstagram: https://www",
+    "published": "2026-04-16",
+    "youtube_url": "https://www.youtube.com/watch?v=_DI6IF1IAaM",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/_DI6IF1IAaM.mp4",
+    "added_at": "2026-10-19T00:02:40.980497-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 249,
     "hook_text": null,
     "layout": "vertical",
     "lang": "pt"
