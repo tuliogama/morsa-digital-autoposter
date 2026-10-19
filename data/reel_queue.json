@@ -206,7 +206,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=W--kUNMg1-E",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/W--kUNMg1-E.mp4",
     "added_at": "2026-10-06T19:00:09.179275-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 4,
     "scheduled_for": "2026-10-19",
@@ -214,7 +214,12 @@
     "caption_style": "eu",
     "caption": "Eu fiquei gelado só de ver o nome Until Dawn na tela, e você?\n\nO conceito de estar preso num lugar isolado, sem celular e sem esperança de resgate, é o pesadelo definitivo para quem curte terror interativo. É aquela sensação de que o perigo tá colado na sua pele o tempo todo, e a pressão de tentar entender o que realmente aconteceu ali só aumenta a cada segundo.\n\nPra quem já viveu essa noite de terror, qual foi a parte que mais te deu arrepi?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#UntilDawn #NoiteDeTerror #Terror #Sobrevivencia #HalloweenMorsa",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-19T13:05:12.975576-03:00",
+    "media_id": "18020248982950470",
+    "tiktok_id": "6ad63fb9a9d507faab20ae1b",
+    "tiktok_status": "published",
+    "tiktok_url": null
   },
   {
     "video_id": "nC8b6tgMfMU",
