@@ -2157,7 +2157,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=QYKZAlGuHm0",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/QYKZAlGuHm0.mp4",
     "added_at": "2026-10-13T01:53:57.527599-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 3,
     "theme": "bastidores",
@@ -2166,7 +2166,12 @@
     "lang": "pt",
     "caption": "Chris Pine achando que a Diana não vai levar um soco?\n\nVer o Chris Pine nos bastidores de Mulher-Maravilha é entender o carisma do Steve Trevor antes do filme estrear.\nÉ aquele papo de camarim que faz a gente se conectar com o personagem de uma forma diferente.\n\nQual foi a primeira vibe que você teve ao ver o Chris Pine interpretando o Steve?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#MulherMaravilha #ChrisPine #GalGadot #SteveTrevor #DianaPrince #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-19T11:03:33.637875-03:00",
+    "media_id": "18145899136600759",
+    "tiktok_id": "6ad623364f83906e75cbd3ca",
+    "tiktok_status": "published",
+    "tiktok_url": null
   },
   {
     "video_id": "83HbpqEXTqo",
