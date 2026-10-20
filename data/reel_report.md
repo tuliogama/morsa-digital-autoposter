@@ -1,24 +1,8 @@
-# Fila de reels @morsadigital — 19/10/2026 06:30 BRT
+# Fila de reels @morsadigital — 20/10/2026 03:00 BRT
 
 ## cenas — a partir das 11h
 
-138 na fila | legendas ok: 33 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 19/10 — Mulher-Maravilha - Especial de Bastidores: Chris Pine
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: ok
-
-```
-Chris Pine achando que a Diana não vai levar um soco?
-
-Ver o Chris Pine nos bastidores de Mulher-Maravilha é entender o carisma do Steve Trevor antes do filme estrear.
-É aquele papo de camarim que faz a gente se conectar com o personagem de uma forma diferente.
-
-Qual foi a primeira vibe que você teve ao ver o Chris Pine interpretando o Steve?
-
-Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
-
-#MulherMaravilha #ChrisPine #GalGadot #SteveTrevor #DianaPrince #MorsaDigital
-```
+137 na fila | legendas ok: 32 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 20/10 — Memória coletiva: a primeira aparição do Shrek
 Prime Video Brasil · vertical · pt · legenda: ok
@@ -1118,24 +1102,16 @@ Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
+### 16/02 — Loki | Loki invadiu o Brasil | Disney+
+Marvel Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
 ## main — a partir das 13h
 
-96 na fila | legendas ok: 8 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 19/10 — Until Dawn: Noite de Terror | Trailer Oficial Dublado
-Sony Pictures Brasil · ? · ? · legenda: ok
-
-```
-Eu fiquei gelado só de ver o nome Until Dawn na tela, e você?
-
-O conceito de estar preso num lugar isolado, sem celular e sem esperança de resgate, é o pesadelo definitivo para quem curte terror interativo. É aquela sensação de que o perigo tá colado na sua pele o tempo todo, e a pressão de tentar entender o que realmente aconteceu ali só aumenta a cada segundo.
-
-Pra quem já viveu essa noite de terror, qual foi a parte que mais te deu arrepi?
-
-Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
-
-#UntilDawn #NoiteDeTerror #Terror #Sobrevivencia #HalloweenMorsa
-```
+95 na fila | legendas ok: 8 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 20/10 — Grand Theft Auto: The Trilogy – The Definitive Edition Trailer
 Rockstar Games · horizontal · en · legenda: ok
@@ -1213,10 +1189,18 @@ Vídeo: PlayStation Brasil (canal oficial no YouTube)
 ```
 
 ### 25/10 — Premonição 6: Laços de Sangue l Trailer Oficial
-Warner Bros. Pictures Brasil · ? · ? · legenda: ainda não gerada
+Warner Bros. Pictures Brasil · ? · ? · legenda: ok
 
 ```
-(gerada na hora da publicação)
+Premonição 6: Laços de Sangue voltou a me dar calafrios só de lembrar da tensão daquela franquia, e você?
+
+É o retorno da série que redefine o terror psicológico nos cinemas, trazendo de volta aquela sensação de impotência diante de um destino inescapável. A trama foca em Stefanie, que precisa voltar para casa para tentar quebrar um ciclo fatal que ameaça toda a sua família.
+
+Para quem já viu, qual foi a parte que mais te deixou com o coração acelerado?
+
+Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
+
+#Premonicao #Premonicao6 #LaçosDeSangue #KaitlynSantaJuana #Terror
 ```
 
 ### 26/10 — A FREIRA 2 | TRAILER OFICIAL

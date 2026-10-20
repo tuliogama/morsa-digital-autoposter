@@ -2459,7 +2459,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ad3d0680dbba775a03e1b57",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-19T17:15:00",
     "posted_at": "2026-10-19T17:15:00"
   },
@@ -2507,7 +2507,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ad3d098b17836cf426099e3",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-19T21:00:00",
     "posted_at": "2026-10-19T21:00:00"
   },
@@ -2947,7 +2947,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ad3d04d27655d6c6abc4f3b",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-19T13:30:00",
     "posted_at": "2026-10-19T13:30:00"
   },
@@ -2972,7 +2972,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ad3d06327655d6c6abc4f84",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-19T15:00:00",
     "posted_at": "2026-10-19T15:00:00"
   },
@@ -2997,7 +2997,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ad3d0665ad1bc4b18739f93",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-19T16:30:00",
     "posted_at": "2026-10-19T16:30:00"
   },
@@ -3022,7 +3022,7 @@
     "caption": "Qual foi a primeira frase do Hinata que te fez amar a dublagem?\n\nAquele entusiasmo do personagem combinou perfeitamente com a voz escolhida para o Brasil.\nÉ impossível não sentir o mesmo empolgação ao ouvir a dublagem nacional.\n\nComenta aí qual cena específica te marcou mais.\n\nVídeo: Crunchyroll Brasil (canal oficial no YouTube)\n\n#Haikyuu #HinataShoyo #DublagemBrasil #Crunchyroll #MorsaDigital",
     "caption_check": "ok",
     "tiktok_id": "6ad3d08027655d6c6abc4fba",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-19T18:00:00",
     "posted_at": "2026-10-19T18:00:00"
   },
@@ -3047,7 +3047,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ad3d096b17836cf426099cd",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-19T19:30:00",
     "posted_at": "2026-10-19T19:30:00"
   },
@@ -3095,7 +3095,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ad3d0ae0dbba775a03e1caa",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-19T22:30:00",
     "posted_at": "2026-10-19T22:30:00"
   },
@@ -3625,12 +3625,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=N-IYK1WNKno",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/N-IYK1WNKno.mp4",
     "added_at": "2026-10-12T06:06:56.344037-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 172,
     "hook_text": null,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "O rebranding da HBO Max te deixou com cara de Gumball?\n\nEssa mudança de identidade visual sempre vai gerar essa discussão.\nTem uma vibe muito específica que lembra demais a animação.\nE todo mundo tem uma opinião forte sobre o novo logo.\n\nComenta aí: você aprova essa cara nova ou prefere a antiga?\n\nVídeo: HBO Max Brasil (canal oficial no YouTube)\n\n#HBO #Gumball #Rebranding #Séries #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad70469a9c24373574a1730",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-22T13:30:00",
+    "posted_at": "2026-10-22T13:30:00"
   },
   {
     "video_id": "mYrik9ZepSw",
@@ -3643,12 +3650,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=mYrik9ZepSw",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/mYrik9ZepSw.mp4",
     "added_at": "2026-10-12T15:15:37.439140-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 173,
     "hook_text": "Rosie merece mais atenção?",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Rosie é insuportável ou a gente ama mesmo?\n\nEssa interação com a Rosie é puro caos e afeto.\nÉ aquele tipo de cena que faz a gente rir alto e lembrar por que a gente se envolveu com o universo de Hazbin Hotel.\n\nQual é a sua opinião sobre a Rosie?\n\nVídeo: Prime Video Brasil (canal oficial no YouTube)\n\n#HazbinHotel #Rosie #CharlieMorningstar #Alastor #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad7046ba9c24373574a1734",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-22T15:00:00",
+    "posted_at": "2026-10-22T15:00:00"
   },
   {
     "video_id": "EKeegh1SREo",
@@ -3661,12 +3675,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=EKeegh1SREo",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/EKeegh1SREo.mp4",
     "added_at": "2026-10-12T15:18:25.914621-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 174,
     "hook_text": null,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [],
+    "caption": "Você lembra da dublagem de Attack on Titan?\n\nÉ tipo, quem nunca parou pra pensar no suor que deve ter saído tentando não deixar a voz tremer em cenas tão intensas?\nO trabalho atrás da voz desses Titãs é uma loucura e tanto.\n\nConta aqui: qual foi a primeira vez que você se arrepiou com a dublagem?\n\nVídeo: Crunchyroll Brasil (canal oficial no YouTube)\n\n#AttackOnTitan #ShingekiNoKyojin #Crunchyroll #MorsaDigital #Animes",
+    "caption_check": "ok",
+    "tiktok_id": "6ad7047715471dff01d571db",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-22T16:30:00",
+    "posted_at": "2026-10-22T16:30:00"
   },
   {
     "video_id": "TNzQvpafLmY",
@@ -3679,12 +3700,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=TNzQvpafLmY",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/TNzQvpafLmY.mp4",
     "added_at": "2026-10-12T23:31:21.126633-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 175,
     "hook_text": "SorriaOFilme2 vale a pena assistir?",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Você lembra da maldição do sorriso de Sorria?\n\nAquele terror que assustou todo mundo em 2022 e deixou a gente com o pé na porta do cinema.\nVer que existe uma continuação só aumenta a ansiedade e a vontade de reviver aquele medo.\n\nComenta aqui se você topa encarar de novo essa maldição.\n\nVídeo: Paramount Brasil (canal oficial no YouTube)\n\n#SorriaOFilme #Terror #Paramount #FilmesDeTerror #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad7047b6f54b35c341558aa",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-22T17:15:00",
+    "posted_at": "2026-10-22T17:15:00"
   },
   {
     "video_id": "FgpJ9QW4Cxs",
@@ -3702,7 +3730,12 @@
     "plan_order": 176,
     "hook_text": null,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: plagiou o moonwalk do Billy Ocean",
+      "detalhe sem base: a Tonya tá certa ou é exagero?"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "4FNfKx5CAAo",
@@ -3720,7 +3753,11 @@
     "plan_order": 177,
     "hook_text": "Colin Farrell ficou bom como o Pinguim?",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: A cena final da série mostrou o peso do personagem."
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "DEbQyWj_Nck",
@@ -3733,12 +3770,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=DEbQyWj_Nck",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/DEbQyWj_Nck.mp4",
     "added_at": "2026-10-12T23:45:11.137992-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 178,
     "hook_text": null,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Scooby-Doo fazendo piada com o vilão te lembra infância?\n\nNada como ver o cachorro mais famoso do mundo brilhando no humor.\nTem aquela energia clássica que nunca deixa a gente esquecer por que amamos essa franquia.\n\nComenta aí qual é a sua melhor lembrança de rir com o Scooby.\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#ScoobyDoo #MysteryInc #Velma #FredJones #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad704a4750a74a88a0c9723",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-22T18:00:00",
+    "posted_at": "2026-10-22T18:00:00"
   },
   {
     "video_id": "SdrwI1lh7Oo",
@@ -3756,7 +3800,12 @@
     "plan_order": 179,
     "hook_text": "Nicoshida, quem ama mais?",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: Nicoshida: você já tinha batizado esse duo ou tá criando agora?",
+      "detalhe sem base: A química entre Nicole e a Senhora Yoshida sempre foi a alma da série."
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "r8srA8BGeEo",
@@ -3774,7 +3823,14 @@
     "plan_order": 180,
     "hook_text": null,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: Lucifer e Alastor trocando farpas: você acha que um ganha do outro?",
+      "detalhe sem base: Essa dinâmica de provocações entre os dois é pura diversão.",
+      "detalhe sem base: Ver esses dois se tratando com essa malícia é algo que nunca enjoa.",
+      "detalhe sem base: É o tipo de interação que faz a gente querer pausar e rever."
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "H6xvsf2KeZY",
@@ -3792,7 +3848,11 @@
     "plan_order": 181,
     "hook_text": "Mashle vai quebrar tudo na porrada?",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: Mash Burnedead quebra o mundo na porrada ou você prefere magia?"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "rvvyH8GMQNg",
@@ -3805,12 +3865,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=rvvyH8GMQNg",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/rvvyH8GMQNg.mp4",
     "added_at": "2026-10-12T23:58:22.973635-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 183,
     "hook_text": null,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Bob Esponja tá completando 25 anos e você ainda não sentiu a nostalgia?\n\nImagina o primeiro dia que você assistiu essa animação.\nÉ aquele tipo de série que parece que nunca vai envelhecer.\n\nQual foi o episódio que mais marcou a sua infância?\n\nVídeo: Paramount+ Brasil (canal oficial no YouTube)\n\n#BobEsponja #FofocaNerd #Séries #DesenhoAnimado #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad704debf52b1509b974e43",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-22T21:00:00",
+    "posted_at": "2026-10-22T21:00:00"
   },
   {
     "video_id": "tFJAiyeqyyM",
@@ -3828,7 +3895,13 @@
     "plan_order": 184,
     "hook_text": "Michael B. Jordan em Família Soprano?",
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_problems": [
+      "detalhe sem base: O PRIMEIRO TRABALHO DO MICHAEL B. JORDAN FOI EM FAMÍLIA SOPRANO!",
+      "detalhe sem base: Muita gente só percebeu a cara familiar do Tony Soprano nos créditos finais anos depois.",
+      "detalhe sem base: Ver o ator de Creed e Black Panther começando sua carreira ali foi um choque."
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "neJUJbfP9es",
@@ -4356,12 +4429,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=tR-bDRFE7h8",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/tR-bDRFE7h8.mp4",
     "added_at": "2026-10-14T11:28:43.995249-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 205,
     "hook_text": null,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "O Batman de Lego é superior a todos os outros?\n\nEmmet se meteu numa fria, mas com o Batman por perto, estava tudo sob controle. Essa cena sempre vai ter um lugar especial no coração de quem cresceu com a obra.\n\nQual é a sua opinião: ele realmente rouba a cena?\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#UmaAventuraLego #Batman #Emmet #Lego #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ad704f32937bd47f011f752",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-22T22:30:00",
+    "posted_at": "2026-10-22T22:30:00"
   },
   {
     "video_id": "u-0LuOkfkiY",
@@ -5674,6 +5754,186 @@
     "kind": "cena",
     "plan_order": 279,
     "hook_text": "Optimus Prime, você aceita o desafio?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "9zUuezVJ80A",
+    "title": "Felicidade PURA | Shrek Para Sempre | Paramount Plus",
+    "channel": "Paramount+ Brasil",
+    "channel_id": "UCAnCxJ1Weh2pUAKJW0bro0Q",
+    "category": "other",
+    "description": "Quando a empresa não emenda o feriadão!\n#ShrekParaSempre\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++\nCurtiu? Assista o Paramount+ em https://www.paramountplus.com ou baixe o app, disponível para telefones e tablets, IOS e Android:\nhttps://smart.link/z36qrfjaimzim\nInscreva-se no canal do YouTube: https://www.youtube.com/channel/UCW8l...\nSiga a nossa página no Facebook: https://www.facebook.com/ParamountPlusbr\nSiga o nosso Twitter: https://twitter.com/ParamountPlusbr\nSiga o nosso Instagram: https://www.instagram.com/paramountplusbr\nSiga o nosso TikTok: https://www.tiktok.com/@paramountplusbr\n\n\n\nParamount+ possui milhares de episódios de: Comedy Central, MTV, Nickelodeon, Paramoun",
+    "published": "2023-10-22",
+    "youtube_url": "https://www.youtube.com/watch?v=9zUuezVJ80A",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/9zUuezVJ80A.mp4",
+    "added_at": "2026-10-20T01:53:22.700090-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 280,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "VIFRn1tiiN4",
+    "title": "Qual item de GOT o elenco de The Last Of Us levaria para o apocalipse? 🫢",
+    "channel": "HBO Brasil",
+    "channel_id": "UCX2M7xn-jMmq4KfX25TCTCA",
+    "category": "game_big",
+    "description": "#TheLastOfUs está disponível na @streammaxbr, e a 2ª temporada chega em 2025!",
+    "published": "2024-11-16",
+    "youtube_url": "https://www.youtube.com/watch?v=VIFRn1tiiN4",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/VIFRn1tiiN4.mp4",
+    "added_at": "2026-10-20T02:02:57.926677-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 281,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "O6lzrMjaHVo",
+    "title": "Eu NÃO estou pronta pro final de Stranger Things!",
+    "channel": "Netflix Brasil",
+    "channel_id": "UCc1l5mTmAv2GC_PXrBpqyKQ",
+    "category": "series",
+    "description": "Stranger Things 5 - Episódio Final. HOJE, às 22h (horário de Brasília).\n\nAssista na Netflix: https://www.netflix.com/title/81297917\n\nInscreva-se: https://bit.ly/31ynwtw\n\nSobre a Netflix:\nA Netflix é um dos principais serviços de entretenimento do mundo. São mais de 300 milhões de assinaturas pagas em mais de 190 países com acesso a séries, filmes e jogos de diversos gêneros e idiomas. Assinantes podem assistir, pausar e voltar a assistir a um título quantas vezes quiserem em qualquer lugar e alterar o plano a qualquer momento.\n\nEu NÃO estou pronta pro final de Stranger Things!\nhttps://www.youtube.com/@NetflixBrasil\n\nVecna se prepara para destruir o mundo, e o grupo precisa arriscar tudo para",
+    "published": "2025-12-31",
+    "youtube_url": "https://www.youtube.com/watch?v=O6lzrMjaHVo",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/O6lzrMjaHVo.mp4",
+    "added_at": "2026-10-20T02:08:04.063643-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 282,
+    "hook_text": null,
+    "layout": "horizontal",
+    "lang": "pt"
+  },
+  {
+    "video_id": "rECvx0pr5rM",
+    "title": "O James Gunn falando que o #Pacificador lembra o pai dele!! 🖤 #Peacemaker #JamesGunn #Dc",
+    "channel": "HBO Max Brasil",
+    "channel_id": "UCR7ZwQz60rW9dK59Dirdc8w",
+    "category": "dc",
+    "description": "",
+    "published": "2025-10-10",
+    "youtube_url": "https://www.youtube.com/watch?v=rECvx0pr5rM",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/rECvx0pr5rM.mp4",
+    "added_at": "2026-10-20T02:21:23.166070-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 283,
+    "hook_text": "James Gunn acha Pacificador parecido?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "PeShMiyWVDM",
+    "title": "O Husk NÃO quer improvisar com o Angel Dust | Hazbin Hotel | Prime Video",
+    "channel": "Prime Video Brasil",
+    "channel_id": "UCuNjvqjTzw9LcD9PVpTVWRA",
+    "category": "series",
+    "description": "O Husk não se inscreveu pra entrar no “sim, e…” do Angel Dust. Hazbin Hotel já está disponível no Prime Video. \n\nInscreva-se no canal do YouTube: https://bit.ly/35FaAo8 \n\nSobre o #PrimeVideo: Assine Prime Video para assistir a filmes e séries populares, incluindo Amazon Originals premiados. Além de um catálogo cheio de títulos, membros Prime têm acesso a benefícios, como frete GRÁTIS e rápido em milhares de produtos na Amazon.com.br, músicas sem anúncios na Amazon Music, Prime Gaming na Twitch e e-books e revistas no Prime Reading. Tudo na mesma assinatura, por apenas R$ 14,90/mês. Teste Grátis por 30 dias. \n\nSiga nossas redes sociais: \n\nInstagram: https://www.instagram.com/primevideobr/ \n\nF",
+    "published": "2026-03-15",
+    "youtube_url": "https://www.youtube.com/watch?v=PeShMiyWVDM",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/PeShMiyWVDM.mp4",
+    "added_at": "2026-10-20T02:25:37.902982-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 284,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "fs8lN3LEWsM",
+    "title": "Os Kaijus estão tentando dominar o Anime Awards 2025!",
+    "channel": "Crunchyroll Brasil",
+    "channel_id": "UCVc-JLY3Db6-O48y7TS4N7Q",
+    "category": "anime",
+    "description": "Os Kaijus estão tentando dominar o Anime Awards 2025! 🏆🔥 Se este é um dos seus favoritos, então ajude Kafka a ganhar o prêmio de Anime do Ano. \n\nTESTE CRUNCHYROLL DE GRAÇA POR 7 DIAS: https://got.cr/7DayFreeTrialPT\n\n🔸FACEBOOK: https://www.facebook.com/Crunchyroll.pt/\n🔸TWITTER: https://twitter.com/Crunchyroll_pt\n🔸INSTAGRAM: https://www.instagram.com/crunchyroll_PT",
+    "published": "2025-04-14",
+    "youtube_url": "https://www.youtube.com/watch?v=fs8lN3LEWsM",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/fs8lN3LEWsM.mp4",
+    "added_at": "2026-10-20T02:29:42.484085-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 285,
+    "hook_text": "Kaijus vão dominar o Anime Awards 2025?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "D37TRDKrwIQ",
+    "title": "De São Paulo para Londres, o elenco de #Sonic3OFilme continua a viajar o mundo! 🌎💙",
+    "channel": "Paramount Brasil",
+    "channel_id": "UCgqD3GdUEfupsdY1kmFLIrw",
+    "category": "game_big",
+    "description": "De São Paulo para Londres, o elenco de #Sonic3OFilme continua a viajar o mundo! 🌎💙\nO ouriço azul vai estar de volta aos cinemas no dia 25 de dezembro. Garanta seu ingresso: https://bit.ly/ingressos_sonic3\n\nInscreva-se: http://bit.ly/Paramount_Inscreva\r\n\r\nConecte-se com a Paramount Pictures Brasil online:\r\nWEBSITE: http://bit.ly/siteparamount\r\nFACEBOOK: http://bit.ly/faceparamount\r\nTWITTER: http://bit.ly/twitterparamount\r\n\r\nA Paramount Pictures há mais de 100 anos leva entretenimento para o público de todo o mundo através da Paramount Pictures Internacional (PPI). Mercados PPI distribuem os filmes globalmente, possibilitando que espectadores dos quatro cantos do planeta se encantem com sucess",
+    "published": "2024-12-12",
+    "youtube_url": "https://www.youtube.com/watch?v=D37TRDKrwIQ",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/D37TRDKrwIQ.mp4",
+    "added_at": "2026-10-20T02:39:33.510908-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 286,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "toxuoFrqNSg",
+    "title": "Por essa ninguém esperava | Todo Mundo Odeia O Chris | Paramount Plus",
+    "channel": "Paramount+ Brasil",
+    "channel_id": "UCAnCxJ1Weh2pUAKJW0bro0Q",
+    "category": "other",
+    "description": "Agora TUDO faz sentido! #TodoMundoOdeiaOChris #AsBranquelas +++++++++++++++++++++++++++++++++++++++++++++++++++++++++\nCurtiu? Assista o Paramount+ em https://www.paramountplus.com ou baixe o app, disponível para telefones e tablets, IOS e Android:\nhttps://smart.link/z36qrfjaimzim\nInscreva-se no canal do YouTube: https://www.youtube.com/channel/UCW8l...\nSiga a nossa página no Facebook: https://www.facebook.com/ParamountPlusbr\nSiga o nosso Twitter: https://twitter.com/ParamountPlusbr\nSiga o nosso Instagram: https://www.instagram.com/paramountplusbr\nSiga o nosso TikTok: https://www.tiktok.com/@paramountplusbr\n\n\n\nParamount+ possui milhares de episódios de: Comedy Central, MTV, Nickelodeon, Param",
+    "published": "2024-01-06",
+    "youtube_url": "https://www.youtube.com/watch?v=toxuoFrqNSg",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/toxuoFrqNSg.mp4",
+    "added_at": "2026-10-20T02:46:17.940551-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 287,
+    "hook_text": "O Chris surpreendeu você?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "QIk058qHExc",
+    "title": "A CENA MAIS ANGUSTIANTE DE FAMÍLIA SOPRANO! 😮‍💨",
+    "channel": "HBO Brasil",
+    "channel_id": "UCX2M7xn-jMmq4KfX25TCTCA",
+    "category": "series",
+    "description": "Família Soprano está disponível na HBO Max.",
+    "published": "2025-11-18",
+    "youtube_url": "https://www.youtube.com/watch?v=QIk058qHExc",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/QIk058qHExc.mp4",
+    "added_at": "2026-10-20T02:49:53.490680-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 288,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "S1JegfDyqrE",
+    "title": "Elenco de One Piece reage à emocionante entrada da Laboon ao bando",
+    "channel": "Netflix Brasil",
+    "channel_id": "UCc1l5mTmAv2GC_PXrBpqyKQ",
+    "category": "anime_big",
+    "description": "Se a Laboon feliz pelas palavras do Luffy já foi muito emocionante, agora com o elenco de ONE PIECE: A Série reagindo deixou tudo mais bonito! 🐳\n\nSérie: ONE PIECE: A Série\n\nAssista na Netflix: https://www.netflix.com/title/81218765\n\nInscreva-se: https://bit.ly/31ynwtw\n\nSobre a Netflix:\nA Netflix é um dos principais serviços de entretenimento do mundo com um vasto catálogo de séries, filmes, jogos e eventos ao vivo disponíveis em diversos idiomas. Nossos assinantes podem assistir, pausar e voltar a um título quantas vezes quiserem, onde quer que estejam, e alterar o plano a qualquer momento.\n\nElenco de One Piece reage à emocionante entrada da Laboon ao bando\nhttps://www.youtube.com/@NetflixBr",
+    "published": "2026-03-21",
+    "youtube_url": "https://www.youtube.com/watch?v=S1JegfDyqrE",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/S1JegfDyqrE.mp4",
+    "added_at": "2026-10-20T02:57:56.966481-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 289,
+    "hook_text": "Laboon surpreendeu o bando?",
     "layout": "vertical",
     "lang": "pt"
   }
