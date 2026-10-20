@@ -457,14 +457,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=eJfkIG6edTc",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/eJfkIG6edTc.mp4",
     "added_at": "2026-10-06T23:21:09.397215-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 9,
     "layout": "vertical",
     "lang": "pt",
     "caption": "Shrek: você lembra exatamente onde estava quando viu o ogro pela primeira vez?\n\nEssa cena é pura memória coletiva. Não importa o ano, todo mundo tem um lugar e uma época gravados na cabeça pra quando aquele ogro verde apareceu na tela. É o tipo de momento que define uma geração inteira de fãs de animação.\n\nConta aqui nos comentários: em que situação você assistiu a essa estreia?\n\nVídeo: Prime Video Brasil (canal oficial no YouTube)\n\n#Shrek #PrincesaFiona #Animação #ClássicosDaInfância #PrimeVideo #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-20T11:51:42.892218-03:00",
+    "media_id": "18144328654608434",
+    "tiktok_id": "6ad77fff61a357dfd9d3a3dc",
+    "tiktok_status": "published",
+    "tiktok_url": null
   },
   {
     "video_id": "3yujJ-nRO_c",
