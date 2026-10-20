@@ -380,7 +380,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=D71cBUeAL58",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/D71cBUeAL58.mp4",
     "added_at": "2026-10-06T23:25:24.185373-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 5,
     "scheduled_for": "2026-10-20",
@@ -390,7 +390,12 @@
     "caption_style": "padrao",
     "caption": "GTA III, Vice City e San Andreas num pacote só é o tipo de nostalgia que dá bico.\n\nEssa trilogia definitiva junta os três clássicos que definiram o gênero, remasterizados para as novas gerações e disponíveis em todas as plataformas principais. É a oportunidade perfeita de revisitar Liberty City, Vice City e Los Santos com uma nova apresentação visual e gameplay otimizada, sem precisar ficar garimpando versões antigas.\n\nQual desses três títulos é o seu favorito pra maratonar agora enquanto a gente conta os dias pro GTA VI?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#GTA #GrandTheftAuto #ViceCity #SanAndreas #RockstarGames",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-20T13:26:35.660300-03:00",
+    "media_id": "18105033413007563",
+    "tiktok_id": "6ad7963cf375b78129d09793",
+    "tiktok_status": "published",
+    "tiktok_url": null
   },
   {
     "video_id": "QkkoHAzjnUs",
