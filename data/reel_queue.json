@@ -232,7 +232,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=nC8b6tgMfMU",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/nC8b6tgMfMU.mp4",
     "added_at": "2026-10-06T19:05:42.471583-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 6,
     "scheduled_for": "2026-10-21",
@@ -240,7 +240,12 @@
     "caption_style": "padrao",
     "caption": "Sorria 2, aquela maldição do sorriso voltou pra nos assustar novamente.\n\nSerá lançado nos cinemas em 2024, esse retorno da franquia trouxe de volta o terror psicológico que prendia a gente na poltrona.\n\nQual foi o momento que mais te deixou com a pulga atrás da orelha quando você assistiu?\n\nVídeo: Paramount Brasil (canal oficial no YouTube)\n\n#Sorria2 #SorriaOFilme #ParamountPictures #Terror",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-21T13:11:31.311849-03:00",
+    "media_id": "17998807056037681",
+    "tiktok_id": "6ad8e433bdc10b09d9fac6cf",
+    "tiktok_status": "published",
+    "tiktok_url": null
   },
   {
     "video_id": "IxTYXVyNOfk",
