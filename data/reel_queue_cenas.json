@@ -2189,7 +2189,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=83HbpqEXTqo",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/83HbpqEXTqo.mp4",
     "added_at": "2026-10-13T01:59:39.186511-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 4,
     "theme": "bastidores",
@@ -2198,7 +2198,12 @@
     "lang": "pt",
     "caption": "Você lembra como era a Marvel Studios há 10 anos?\n\nAquele vídeo de bastidores mostrando os talentos celebrando a marca de uma década da produtora.\nÉ sempre bom rever a energia de quem faz tudo isso acontecer.\n\nComenta aí o que você sentiu ao ver esse arquivo.\n\nVídeo: Marvel Brasil (canal oficial no YouTube)\n\n#MarvelStudios #Bastidores #10Anos #MCU #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-21T11:07:30.542212-03:00",
+    "media_id": "18125260093684844",
+    "tiktok_id": "6ad8c72300cd59d8fc100f5e",
+    "tiktok_status": "published",
+    "tiktok_url": null
   },
   {
     "video_id": "gXPvHFV1T6k",
