@@ -1,23 +1,8 @@
-# Fila de reels @morsadigital — 20/10/2026 06:13 BRT
+# Fila de reels @morsadigital — 21/10/2026 09:34 BRT
 
 ## cenas — a partir das 11h
 
-137 na fila | legendas ok: 32 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 20/10 — Memória coletiva: a primeira aparição do Shrek
-Prime Video Brasil · vertical · pt · legenda: ok
-
-```
-Shrek: você lembra exatamente onde estava quando viu o ogro pela primeira vez?
-
-Essa cena é pura memória coletiva. Não importa o ano, todo mundo tem um lugar e uma época gravados na cabeça pra quando aquele ogro verde apareceu na tela. É o tipo de momento que define uma geração inteira de fãs de animação.
-
-Conta aqui nos comentários: em que situação você assistiu a essa estreia?
-
-Vídeo: Prime Video Brasil (canal oficial no YouTube)
-
-#Shrek #PrincesaFiona #Animação #ClássicosDaInfância #PrimeVideo #MorsaDigital
-```
+136 na fila | legendas ok: 31 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 21/10 — Bastidores - Marvel Studios | 10 anos
 Marvel Brasil · horizontal · pt · legenda: ok
@@ -1109,24 +1094,16 @@ Marvel Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
+### 17/02 — Marvel’s Wolverine – Trailer de Gameplay Estendido | PS5
+PlayStation Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
 ## main — a partir das 13h
 
-95 na fila | legendas ok: 8 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 20/10 — Grand Theft Auto: The Trilogy – The Definitive Edition Trailer
-Rockstar Games · horizontal · en · legenda: ok
-
-```
-GTA III, Vice City e San Andreas num pacote só é o tipo de nostalgia que dá bico.
-
-Essa trilogia definitiva junta os três clássicos que definiram o gênero, remasterizados para as novas gerações e disponíveis em todas as plataformas principais. É a oportunidade perfeita de revisitar Liberty City, Vice City e Los Santos com uma nova apresentação visual e gameplay otimizada, sem precisar ficar garimpando versões antigas.
-
-Qual desses três títulos é o seu favorito pra maratonar agora enquanto a gente conta os dias pro GTA VI?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
-
-#GTA #GrandTheftAuto #ViceCity #SanAndreas #RockstarGames
-```
+94 na fila | legendas ok: 8 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 21/10 — Sorria 2 | Teaser Trailer Oficial | DUB | Paramount Pictures Brasil
 Paramount Brasil · ? · ? · legenda: ok
@@ -1204,10 +1181,18 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 ```
 
 ### 26/10 — A FREIRA 2 | TRAILER OFICIAL
-Warner Bros. Pictures Brasil · ? · ? · legenda: ainda não gerada
+Warner Bros. Pictures Brasil · ? · ? · legenda: ok
 
 ```
-(gerada na hora da publicação)
+A Freira 2 e aquele arrepio que volta quando a Irmã Irene aparece de novo.
+
+A franquia é o rolo compressor do Universo Invocação do Mal, com mais de US$ 2 bilhões em bilheteria mundial. Taissa Farmiga retorna para enfrentar Valak em 1956, na França, mantendo a tensão alta nesse novo capítulo da história.
+
+Qual foi a cena que mais te tirou o sono depois de assistir?
+
+Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
+
+#AFreira2 #InvocacaoDoMal #TaissaFarmiga #Halloween #MorsaDigital
 ```
 
 ### 27/10 — Red Dead Redemption 2: Official Trailer #3
