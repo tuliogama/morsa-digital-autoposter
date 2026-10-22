@@ -99,6 +99,13 @@ def post_photos(image_urls: list[str], caption: str, scheduled_for: str = None) 
     `content` vira o título (90 caracteres, sem hashtag); a legenda inteira vai em
     `description`.
     """
+    # Imgur devolve "conteúdo indisponível na sua região" para o servidor da Zernio
+    # (22/10/2026: os dois posts da CCXP saíram assim). Imagem fora do GitHub é
+    # rehospedada na Release pública antes de ir para o TikTok.
+    if any("github" not in u for u in image_urls):
+        from tiktok_photos import _host
+        import hashlib
+        image_urls = _host(image_urls, "x" + hashlib.md5("".join(image_urls).encode()).hexdigest()[:10])
     caption = _cap(caption)
     title = re.sub(r"#\w+", "", caption.split("\n")[0]).strip()[:90]
     body = {

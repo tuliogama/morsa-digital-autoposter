@@ -424,6 +424,7 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   seguidores do dia (`data/tiktok_followers.json`).
   Meta fixa das páginas (Tulio, 22/10): engajamento, visualização, seguidores e
   comunidade; toda mudança deve dizer qual desses números move.
+- **Imgur não serve para o TikTok (22/10/2026):** a Zernio recebe do Imgur a imagem "conteúdo indisponível na sua região", e os 2 posts manuais da CCXP saíram assim. `post_photos` rehospeda na Release `tiktok-fotos` qualquer URL que não seja do GitHub; o workflow de feed ganhou `GH_TOKEN` para isso. Post publicado não pode ser apagado pela Zernio: só no app.
 - **Stories na revisão noturna** (desde 11/10/2026): `stories.py --insights` roda em toda
   conferência do workflow e guarda alcance, views, respostas, saídas e visitas ao perfil
   em `data/stories_log.json` (a Meta só responde com o story no ar e com 5+ espectadores).
