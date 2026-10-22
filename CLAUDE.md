@@ -413,6 +413,12 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   das fotos, então a grade dos vídeos não foi mexida. A orientação automática só
   pode citar categoria que a conta aponta acima/abaixo da mediana (n>=5), nas duas
   contas.
+- **Vídeos repostados no TikTok PAUSADOS (22/10/2026, ok do Tulio):** mediana de 4 views
+  contra 37 das fotos em 7 dias, e 105 → 106 seguidores em 8 dias. `TIKTOK_VIDEOS`
+  (padrão off) desliga `schedule_tiktok` e o envio dos reels do Instagram ao TikTok;
+  18 agendamentos cancelados. O TikTok fica só com fotos (notícias do dia + acervo).
+  Meta fixa das páginas (Tulio, 22/10): engajamento, visualização, seguidores e
+  comunidade; toda mudança deve dizer qual desses números move.
 - **Stories na revisão noturna** (desde 11/10/2026): `stories.py --insights` roda em toda
   conferência do workflow e guarda alcance, views, respostas, saídas e visitas ao perfil
   em `data/stories_log.json` (a Meta só responde com o story no ar e com 5+ espectadores).

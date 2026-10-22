@@ -58,6 +58,10 @@ IG_STREAMS = [name for name, cfg in STREAMS.items() if cfg["slot"] is not None]
 # O TikTok aceita ~15 posts/dia por conta via API.
 # 13/10/2026: os dois da manhã (8h e 9h30) foram para 13h30 e 17h15, por sugestão da
 # rotina de análise. 13h30 e não 13h: às 13h já entra no TikTok o reel principal do Instagram.
+# Vídeos repostados no TikTok PAUSADOS em 22/10/2026 (decisão do Tulio): o TikTok os
+# marca como "não original" e não recomenda; em 7 dias tiveram mediana de 4 views
+# contra 37 das fotos. Religar com TIKTOK_VIDEOS=on (ex.: vídeo próprio do Tulio).
+TIKTOK_VIDEOS = os.environ.get("TIKTOK_VIDEOS", "off") == "on"
 TIKTOK_SLOTS_BRT = ["13:30", "15:00", "16:30", "17:15", "18:00", "19:30", "21:00", "22:30"]
 TIKTOK_THEME_WINDOWS = {"halloween": ("10-24", "10-31"), "natal": ("12-20", "12-25")}
 MIN_GAP_MIN = 90             # intervalo mínimo entre dois reels
@@ -1051,7 +1055,7 @@ def publish() -> int:
     # Mesmo vídeo e legenda no TikTok (só se a conta estiver ligada via Zernio).
     # Falha aqui nunca derruba o que já saiu no Instagram.
     from publishers import tiktok
-    if tiktok.enabled() and not item.get("tiktok_id"):
+    if tiktok.enabled() and TIKTOK_VIDEOS and not item.get("tiktok_id"):
         try:
             tk = tiktok.post_video(item["asset_url"], caption)
             item.update(tiktok_id=tk["id"], tiktok_status=tk["status"], tiktok_url=tk["url"])
@@ -1088,6 +1092,9 @@ def schedule_tiktok(days_ahead: int = 2, max_new: int = 8) -> int:
     própria. Poucos por execução: cada legenda gasta cota do modelo.
     """
     from publishers import tiktok
+    if not TIKTOK_VIDEOS:
+        logger.info("[tiktok] vídeos pausados (TIKTOK_VIDEOS=off) — nada a agendar")
+        return 0
     if not tiktok.enabled():
         logger.info("[tiktok] sem ZERNIO_API_KEY — nada a agendar")
         return 0
