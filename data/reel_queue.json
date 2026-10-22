@@ -258,7 +258,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=IxTYXVyNOfk",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/IxTYXVyNOfk.mp4",
     "added_at": "2026-10-06T19:07:57.153787-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 7,
     "scheduled_for": "2026-10-22",
@@ -266,7 +266,12 @@
     "caption_style": "padrao",
     "caption": "Tô com calafrios só de lembrar do primeiro minuto dessa série, o medo de alienígena é uma coisa que não se apaga nunca.\n\nAquela frase \"Era mais seguro no espaço\" ainda ecoa na cabeça de todo fã da franquia. É o retorno direto ao terror puro que definiu o gênero, agora adaptando o universo de Alien para uma nova realidade na Terra.\n\nVocê já assistiu? Qual foi a cena que mais te deixou com medo de olhar pela janela?\n\nVídeo: Disney+ Brasil (canal oficial no YouTube)\n\n#AlienEarth #Alien #DisneyPlus #Halloween #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-22T14:11:02.907543-03:00",
+    "media_id": "17875197156594225",
+    "tiktok_id": "6ada43a7cc442fff5aa22250",
+    "tiktok_status": "published",
+    "tiktok_url": null
   },
   {
     "video_id": "TTwbsctteuw",
