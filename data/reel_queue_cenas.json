@@ -482,14 +482,19 @@
     "youtube_url": "https://www.youtube.com/watch?v=3yujJ-nRO_c",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/3yujJ-nRO_c.mp4",
     "added_at": "2026-10-06T23:23:00.240542-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 18,
     "layout": "vertical",
     "lang": "pt",
     "caption": "Qual dublagem você defende: a brasileira ou a original?\n\nShrek é uma das poucas animações em que a versão em português brilha tanto quanto a original.\nÉ impossível não se lembrar de como a dublagem brasileira pegou no osso e criou memórias únicas para o fã.\nEssa escolha de vozes fez o ogro verde virar um clássico absoluto no Brasil.\n\nComenta aí qual foi a primeira frase do Shrek que você nunca mais esqueceu.\n\nVídeo: Prime Video Brasil (canal oficial no YouTube)\n\n#Shrek #DublagemBrasileira #FilmesAnimados #PrimeVideo #MemóriasDeInfância #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-22T12:31:40.882239-03:00",
+    "media_id": "18103437416334146",
+    "tiktok_id": "6ada2c5e87a7eae99fceafaa",
+    "tiktok_status": "published",
+    "tiktok_url": null
   },
   {
     "video_id": "ToyHbBkiuRk",
