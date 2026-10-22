@@ -272,10 +272,16 @@ def fetch_rss(max_per_feed: int = 6, feeds: list = None, max_age_hours: int = 72
     return items
 
 
+# Revisão de 21/10/2026: em 30 dias o estático de GTA teve mediana 5 contra 8 do
+# feed; nostalgia e jogabilidade rendem, detalhe técnico de GTA 6 afunda.
 _GTA_GAMEPLAY_RE = re.compile(
-    r"gameplay|jogabilidade|mec[aâ]nic|mapa|\bmap\b|miss[aãõ]|mission|f[ií]sica|physics|npc|ve[ií]culo|"
-    r"vehicle|carro|\bcars?\b|r[aá]dio|feature|recurso|detalhe|detail|trailer|lucia|jason|online|"
-    r"armas?|weapon|pol[ií]cia|police|cidade|vice city|leonida|easter egg|anima[cç]", re.IGNORECASE)
+    r"gameplay|jogabilidade|mec[aâ]nic|mapa|\bmap\b|miss[aãõ]|mission|ve[ií]culo|vehicle|"
+    r"r[aá]dio|online|armas?|weapon|pol[ií]cia|police|trailer|lucia|jason|"
+    r"gta (iii|3|iv|4|v|5)\b|vice city|san andreas|liberty city|trilogia|trilogy|cl[aá]ssic|"
+    r"nostalgi|lembra|remember|anos 2000|ps2", re.IGNORECASE)
+_GTA_TECH_RE = re.compile(
+    r"detalh|detail|f[ií]sica|physics|gr[aá]fic|graphic|textura|texture|resolu[cç]|\bfps\b|"
+    r"ray ?tracing|rosto|face|ilumina|lighting|reflex|frame|polygon|npc", re.IGNORECASE)
 _GTA_CORPORATE_RE = re.compile(
     r"switch|xbox|nintendo|take-?two|zelnick|\bceo\b|a[cç][oõ]es|shares|stock|investor|earnings|"
     r"receita|revenue|vendas|sales|pre[cç]o|price|processo|lawsuit|sindicato|union|demiss|layoff|"
@@ -302,6 +308,7 @@ def fetch_gta_news(max_age_days: int = 5) -> list[dict]:
     unique.sort(key=lambda i: i["source"] not in br_sources)
     # Jogabilidade na frente, assunto de empresa no fim (sorts estáveis: o último manda)
     unique.sort(key=lambda i: (bool(_GTA_CORPORATE_RE.search(i["title"])),
+                               bool(_GTA_TECH_RE.search(i["title"])) and not _GTA_GAMEPLAY_RE.search(i["title"]),
                                not _GTA_GAMEPLAY_RE.search(i["title"])))
     logger.info(f"GTA: {len(unique)} notícias nos últimos {max_age_days} dias")
     return unique

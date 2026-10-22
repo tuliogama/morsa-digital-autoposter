@@ -513,9 +513,10 @@ def generate_post(news_item: dict, platform: str, brief: dict = None) -> dict:
         # Revisão de 11/10/2026: GTA com ângulo corporativo ficou entre os piores da
         # semana; o que o fã comenta é o que muda no jogo dele.
         user_msg += (
-            "\n- GTA: abra pelo que isso muda na hora de JOGAR e feche com uma pergunta de "
-            "opinião ao fã (ex.: \"isso muda como você joga?\"). Só afirme o que está no "
-            "resumo; nada de bastidor de empresa, ações ou vendas no gancho."
+            "\n- GTA: abra pelo que isso muda na hora de JOGAR, ou puxe a memória dos GTAs "
+            "anteriores (Vice City, San Andreas, GTA V) quando couber, e feche com uma pergunta de "
+            "opinião ao fã. Nada de gancho em detalhe técnico (gráfico, física, textura) nem em "
+            "bastidor de empresa, ações ou vendas. Só afirme o que está no resumo."
         )
 
     content = None

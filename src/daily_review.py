@@ -145,7 +145,16 @@ def build_brief(rows: list[dict], weights: dict, for_date) -> dict:
     note = _fallback_note(weights)
     try:
         from content_generator import _call_groq
+        # Quem decide o que está acima ou abaixo da mediana é a conta, não o modelo: em
+        # 21/10/2026 a orientação da Ordem mandou priorizar games e saga, que estavam
+        # abaixo da mediana geral, e evitar séries, que tinham só 2 posts.
+        base = weights.get("baseline_median") or 0
+        cats = weights.get("categories", {})
+        above = [c for c, v in cats.items() if v["n"] >= MIN_SAMPLE and base and v["median"] >= 1.15 * base]
+        below = [c for c, v in cats.items() if v["n"] >= MIN_SAMPLE and base and v["median"] <= 0.85 * base]
         facts = (
+            f"Categorias ACIMA da mediana geral (com {MIN_SAMPLE}+ posts): {', '.join(above) or 'nenhuma'}\n"
+            f"Categorias ABAIXO da mediana geral (com {MIN_SAMPLE}+ posts): {', '.join(below) or 'nenhuma'}\n"
             f"Mediana geral (feed, {WINDOW_DAYS} dias): {weights.get('baseline_median')}\n"
             "Por categoria (n, mediana): "
             + "; ".join(f"{c} n={v['n']} med={v['median']}"
@@ -162,7 +171,11 @@ def build_brief(rows: list[dict], weights: dict, for_date) -> dict:
             "1 post por dia por decisão editorial: nunca recomende cortar GTA; se for o "
             "caso, diga qual ângulo de GTA rendeu mais. Só recomende priorizar ou evitar um tema se o padrão "
             f"aparecer em mais de um post ou numa categoria com n de {MIN_SAMPLE} ou mais; "
-            "um post isolado não é tendência. Não invente dados, "
+            "um post isolado não é tendência. Só recomende PRIORIZAR categoria da lista ACIMA e só "
+            "recomende EVITAR categoria da lista ABAIXO; categoria fora das duas listas não pode "
+            "ser citada como prioridade nem como algo a evitar. Se a lista estiver vazia, oriente "
+            "pelo tipo de pauta dos melhores posts (pessoa, bastidor, nostalgia), sem citar categoria. "
+            "Não invente dados, "
             "não cite números que não estejam no texto. Sem travessão.",
             facts, max_tokens=160,
         ).strip()
@@ -199,15 +212,25 @@ def fetch_tiktok(days: int = 7) -> list[dict]:
     if not os.environ.get("ZERNIO_API_KEY"):
         return []
     since = (datetime.now(BRT) - timedelta(days=days)).date().isoformat()
-    req = urllib.request.Request(
-        f"https://zernio.com/api/v1/analytics?platform=tiktok&source=all&fromDate={since}&limit=100&sortBy=date",
-        headers={"Authorization": f"Bearer {os.environ['ZERNIO_API_KEY']}", "User-Agent": "Mozilla/5.0"})
+    # Paginado: com ~23 posts por dia, a 1ª página (100) cobria só 4 dias e o teste do
+    # texto na tela "parou de contar" em 21/10/2026.
+    posts, page = [], 1
     try:
-        with urllib.request.urlopen(req, timeout=60) as r:
-            posts = json.loads(r.read()).get("posts", [])
+        while True:
+            req = urllib.request.Request(
+                f"https://zernio.com/api/v1/analytics?platform=tiktok&source=all&fromDate={since}"
+                f"&limit=100&sortBy=date&page={page}",
+                headers={"Authorization": f"Bearer {os.environ['ZERNIO_API_KEY']}", "User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=60) as r:
+                data = json.loads(r.read())
+            posts += data.get("posts", [])
+            if page >= (data.get("pagination") or {}).get("pages", 1) or page >= 10:
+                break
+            page += 1
     except Exception as e:
         logger.warning(f"Números do TikTok indisponíveis: {e}")
-        return []
+        if not posts:
+            return []
     rows = []
     for p in posts:
         a = p.get("analytics") or {}
@@ -219,6 +242,7 @@ def fetch_tiktok(days: int = 7) -> list[dict]:
                      "views": a.get("views", 0), "likes": a.get("likes", 0),
                      "comments": a.get("comments", 0), "shares": a.get("shares", 0),
                      "ours": bool(p.get("latePostId") or not p.get("isExternal", False)),
+                     "kind": "foto" if p.get("mediaType") in ("photo", "image", "carousel") else "vídeo",
                      "ids": {str(p.get(k)) for k in ("_id", "latePostId", "postId") if p.get(k)}})
     return sorted(rows, key=lambda r: r["ts"])
 
@@ -254,13 +278,21 @@ def _tiktok_section(tk: list[dict]) -> list[str]:
              "| Quando | Views | Curtidas | Coment. | Compart. | Vídeo |", "|---|---|---|---|---|---|"]
     for r in sorted(tk, key=lambda r: -r["views"])[:15]:
         lines.append(f"| {r['ts']:%d/%m %H:%M} | {r['views']} | {r['likes']} | {r['comments']} | {r['shares']} | {r['title']} |")
-    by_hour = defaultdict(list)
-    for r in tk:
-        by_hour[r["ts"].hour].append(r["views"])
-    lines += _hook_ab(tk)
-    if len(tk) >= 8:
-        lines += ["", "Mediana de views por horário: " +
-                  " · ".join(f"{h}h: {statistics.median(v):.0f} ({len(v)})" for h, v in sorted(by_hour.items()))]
+    # Foto e vídeo separados: desde 14/10 os vídeos repostados não entram na recomendação
+    # e as fotos saem em outros horários; misturados, o "melhor horário" era só o da foto.
+    for kind in ("vídeo", "foto"):
+        sel = [r for r in tk if r.get("kind") == kind]
+        if not sel:
+            continue
+        lines += ["", f"**{kind.capitalize()}s:** {len(sel)} | mediana de views {statistics.median([r['views'] for r in sel]):.0f}"
+                  f" | curtidas {sum(r['likes'] for r in sel)} | comentários {sum(r['comments'] for r in sel)}"]
+        by_hour = defaultdict(list)
+        for r in sel:
+            by_hour[r["ts"].hour].append(r["views"])
+        if len(sel) >= 8:
+            lines.append("Mediana por horário: " + " · ".join(
+                f"{h}h: {statistics.median(v):.0f} ({len(v)})" for h, v in sorted(by_hour.items())))
+    lines += _hook_ab([r for r in tk if r.get("kind") == "vídeo"])
     return lines
 
 
