@@ -1,24 +1,8 @@
-# Fila de reels @morsadigital — 21/10/2026 09:34 BRT
+# Fila de reels @morsadigital — 22/10/2026 01:07 BRT
 
 ## cenas — a partir das 11h
 
-136 na fila | legendas ok: 31 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 21/10 — Bastidores - Marvel Studios | 10 anos
-Marvel Brasil · horizontal · pt · legenda: ok
-
-```
-Você lembra como era a Marvel Studios há 10 anos?
-
-Aquele vídeo de bastidores mostrando os talentos celebrando a marca de uma década da produtora.
-É sempre bom rever a energia de quem faz tudo isso acontecer.
-
-Comenta aí o que você sentiu ao ver esse arquivo.
-
-Vídeo: Marvel Brasil (canal oficial no YouTube)
-
-#MarvelStudios #Bastidores #10Anos #MCU #MorsaDigital
-```
+135 na fila | legendas ok: 30 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 22/10 — Melhores pérolas da dublagem em Shrek 🗣️
 Prime Video Brasil · vertical · pt · legenda: ok
@@ -1101,24 +1085,16 @@ PlayStation Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
+### 18/02 — Velma representou todas as fãs do Sam Winchester aqui. ☝️🤓 #Supernatural #Scooby
+HBO Max Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
 ## main — a partir das 13h
 
-94 na fila | legendas ok: 8 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 21/10 — Sorria 2 | Teaser Trailer Oficial | DUB | Paramount Pictures Brasil
-Paramount Brasil · ? · ? · legenda: ok
-
-```
-Sorria 2, aquela maldição do sorriso voltou pra nos assustar novamente.
-
-Será lançado nos cinemas em 2024, esse retorno da franquia trouxe de volta o terror psicológico que prendia a gente na poltrona.
-
-Qual foi o momento que mais te deixou com a pulga atrás da orelha quando você assistiu?
-
-Vídeo: Paramount Brasil (canal oficial no YouTube)
-
-#Sorria2 #SorriaOFilme #ParamountPictures #Terror
-```
+93 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 22/10 — Alien: Earth | Trailer Oficial Dublado | Disney+
 Disney+ Brasil · ? · ? · legenda: ok
@@ -1196,10 +1172,16 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 ```
 
 ### 27/10 — Red Dead Redemption 2: Official Trailer #3
-Rockstar Games · horizontal · en · legenda: ainda não gerada
+Rockstar Games · horizontal · en · legenda: revisar (0 hashtags (esperado 3 a 5))
 
 ```
-(gerada na hora da publicação)
+Red Dead Redemption 2 e aquele frio na barriga que só quem jogou sabe explicar.
+
+Não é à toa que esse título definiu o que é um mundo aberto moderno. A Rockstar Games levou o universo do velho oeste para um nível de detalhamento absurdo, onde cada decisão de Arthur Morgan pesa e o ambiente reage de forma quase real. É a última grande saga da era dos foras da lei, contada com uma profundidade emocional rara no gênero.
+
+Qual foi o momento do jogo que mais mexeu com você?
+
+Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 28/10 — OS FANTASMAS AINDA SE DIVERTEM: BEETLEJUICE BEETLEJUICE l Trailer Oficial #2

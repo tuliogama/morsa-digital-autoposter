@@ -1866,7 +1866,7 @@
    "participação",
    "surpreender"
   ],
-  "tiktok_id": null,
+  "tiktok_id": "erro: upload falhou: Post \"https://api.github.com/graphql\": read tcp 192.168.15.6:59669->4.228.31.149:443: read: connection re",
   "scheduled_for": null
  },
  {
@@ -1881,7 +1881,7 @@
    "história",
    "épica"
   ],
-  "tiktok_id": null,
+  "tiktok_id": "erro: [Errno 60] Operation timed out",
   "scheduled_for": null
  },
  {
@@ -1895,8 +1895,8 @@
    "thor",
    "tornar"
   ],
-  "tiktok_id": null,
-  "scheduled_for": null
+  "tiktok_id": "6ada3e72afda219c8d557e57",
+  "scheduled_for": "2026-10-24T10:30:00"
  },
  {
   "media_id": "18064501448706197",
@@ -1911,7 +1911,7 @@
    "vader",
    "vilão"
   ],
-  "tiktok_id": null,
+  "tiktok_id": "erro: upload falhou: read tcp 192.168.0.217:63507->4.228.31.149:443: read: connection reset by peer\n",
   "scheduled_for": null
  },
  {
@@ -1927,8 +1927,8 @@
    "mais",
    "merecem"
   ],
-  "tiktok_id": null,
-  "scheduled_for": null
+  "tiktok_id": "6ada3f4e5ab6919b7e81442c",
+  "scheduled_for": "2026-10-24T14:15:00"
  },
  {
   "media_id": "17936246925071816",
@@ -1949,8 +1949,8 @@
    "sucesso",
    "trás"
   ],
-  "tiktok_id": null,
-  "scheduled_for": null
+  "tiktok_id": "6ada3f69c698dd1e779f2f19",
+  "scheduled_for": "2026-10-24T15:45:00"
  },
  {
   "media_id": "17937252033067871",
@@ -1963,8 +1963,8 @@
    "maneira",
    "mundo"
   ],
-  "tiktok_id": null,
-  "scheduled_for": null
+  "tiktok_id": "6ada3fbcc6833aa68442c8d5",
+  "scheduled_for": "2026-10-24T17:45:00"
  },
  {
   "media_id": "18107129317768501",
@@ -1981,8 +1981,8 @@
    "limites",
    "sempre"
   ],
-  "tiktok_id": null,
-  "scheduled_for": null
+  "tiktok_id": "6ada3fcfc6833aa68442c94f",
+  "scheduled_for": "2026-10-24T19:00:00"
  },
  {
   "media_id": "18118700164758545",
@@ -1998,8 +1998,8 @@
    "universo",
    "volta"
   ],
-  "tiktok_id": null,
-  "scheduled_for": null
+  "tiktok_id": "6ada3fddc6833aa68442c994",
+  "scheduled_for": "2026-10-24T20:15:00"
  },
  {
   "media_id": "17929336614335433",
@@ -2014,8 +2014,8 @@
    "próximo",
    "superman"
   ],
-  "tiktok_id": null,
-  "scheduled_for": null
+  "tiktok_id": "6ada3febc6833aa68442c9cc",
+  "scheduled_for": "2026-10-24T21:45:00"
  },
  {
   "media_id": "17881257792600165",

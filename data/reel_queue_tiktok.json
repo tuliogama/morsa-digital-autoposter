@@ -10,13 +10,20 @@
     "youtube_url": "https://www.youtube.com/watch?v=_8PXFyRB2Nk",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/_8PXFyRB2Nk.mp4",
     "added_at": "2026-10-09T13:20:30.155870-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 0,
     "theme": "halloween",
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": "Pânico7 voltou mais afiado, curtiu?"
+    "hook_text": "Pânico7 voltou mais afiado, curtiu?",
+    "caption_problems": [],
+    "caption": "Ghostface e Sidney Prescott de volta: essa dupla ainda te assusta?\n\nRelembre a cena que todo fã da franquia esperava.\nÉ o tipo de retorno que faz a gente sentir o frio na barriga de novo.\n\nQual foi sua primeira reação ao ver os dois juntos?\n\nVídeo: Paramount Brasil (canal oficial no YouTube)\n\n#Pânico7 #Ghostface #SidneyPrescott #Halloween #MorsaDigital",
+    "caption_check": "ok",
+    "tiktok_id": "6ada400ac6833aa68442ca91",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-24T13:30:00",
+    "posted_at": "2026-10-24T13:30:00"
   },
   {
     "video_id": "idr7PFzpLYU",
@@ -318,13 +325,20 @@
     "youtube_url": "https://www.youtube.com/watch?v=QmK4BkEfJAk",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/QmK4BkEfJAk.mp4",
     "added_at": "2026-10-09T18:27:14.150598-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 13,
     "theme": "halloween",
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": null
+    "hook_text": null,
+    "caption": "TodoMundoEmPânico: você lembra quando o trailer te fez rir?\n\nAquele clima de terror que vira comédia de terror é inconfundível.\nVer o elenco de volta aos cinemas é garantia de mais uma sessão de risadas.\nÉ o tipo de filme que a gente revisita só pra matar as saudades.\n\nMarca aquele amigo que precisa rever essa nostalgia com você.\n\nVídeo: Paramount Brasil (canal oficial no YouTube)\n\n#TodoMundoEmPânico #TodoMundoEmPânico2 #MorsaDigital #EspecialDeHalloween #ComédiaDeTerror",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ada400dc2f77f1d5a49050e",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-24T15:00:00",
+    "posted_at": "2026-10-24T15:00:00"
   },
   {
     "video_id": "hAhvwBXnY9I",
@@ -432,13 +446,20 @@
     "youtube_url": "https://www.youtube.com/watch?v=Z0336eXroZU",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/Z0336eXroZU.mp4",
     "added_at": "2026-10-09T18:33:33.778026-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 19,
     "theme": "halloween",
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": null
+    "hook_text": null,
+    "caption": "Genoveva merecia esse desfecho ou você tava torcendo contra ela?\n\nA paciência dela foi testada até o limite, mas o momento em que ela reage é pura satisfação para quem acompanhou a história.\nVer a Dona Beja ter o que quer depois de tanta espera é o tipo de cena que fica na memória.\n\nQual é a sua opinião sobre o final dela?\n\nVídeo: HBO Max Brasil (canal oficial no YouTube)\n\n#DonaBeja #Genoveva #HBO #SériesNerd #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ada4010c2f77f1d5a490514",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-24T16:30:00",
+    "posted_at": "2026-10-24T16:30:00"
   },
   {
     "video_id": "5469Ntt_bQE",
@@ -480,7 +501,13 @@
     "theme": "halloween",
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": "Todo Mundo Em Pânico: já assistiu?"
+    "hook_text": "Todo Mundo Em Pânico: já assistiu?",
+    "caption_problems": [
+      "detalhe sem base: Cena do loro ainda te assusta?",
+      "detalhe sem base: Quem cresceu com o José e suas tiradas não esquece esse bichinho",
+      "detalhe sem base: Comenta aí se você também tinha medo desse pássaro."
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "pO_R4ZTIWWk",
@@ -738,7 +765,12 @@
     "theme": "halloween",
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": "Ghostface: qual seu filme favorito?"
+    "hook_text": "Ghostface: qual seu filme favorito?",
+    "caption_problems": [
+      "detalhe sem base: toda geração Prescott precisa perder uma melhor amiga",
+      "detalhe sem base: Rose McGowan"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "2Lp6x5vakns",
@@ -781,7 +813,11 @@
     "theme": "halloween",
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": null
+    "hook_text": null,
+    "caption_problems": [
+      "trata vídeo antigo como novidade"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "ZjQL_CMytMU",
@@ -896,7 +932,12 @@
     "theme": "halloween",
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": null
+    "hook_text": null,
+    "caption_problems": [
+      "detalhe sem base: Harley Quinn já virou o rosto clássico da liga",
+      "detalhe sem base: É impossível não lembrar do visual dela nesse especial"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "d6OXH35F-1s",
@@ -985,7 +1026,11 @@
     "theme": "halloween",
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": null
+    "hook_text": null,
+    "caption_problems": [
+      "detalhe sem base: nos cinemas"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "ylY19Yqzeu4",
@@ -1188,13 +1233,20 @@
     "youtube_url": "https://www.youtube.com/watch?v=NgNuZ9hIsF0",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/NgNuZ9hIsF0.mp4",
     "added_at": "2026-10-09T20:01:23.015975-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 62,
     "theme": "halloween",
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": "Todo Mundo Em Pânico, já viu?"
+    "hook_text": "Todo Mundo Em Pânico, já viu?",
+    "caption": "Tem como o jeito da Cindy não ser icônico?\n\nRelembre essa energia caótica que só a Anna Faris entrega. É puro caos e humor que a gente adora no Halloween.\n\nQual é a sua cena favorita dela?\n\nVídeo: Paramount+ Brasil (canal oficial no YouTube)\n\n#TodoMundoEmPanico #Cindy #AnnaFaris #ScaryMovie #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ada407206b0d74534fda420",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-24T18:00:00",
+    "posted_at": "2026-10-24T18:00:00"
   },
   {
     "video_id": "3dDIBDpgD9I",
@@ -1207,13 +1259,20 @@
     "youtube_url": "https://www.youtube.com/watch?v=3dDIBDpgD9I",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/3dDIBDpgD9I.mp4",
     "added_at": "2026-10-09T20:03:10.600354-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 64,
     "theme": "halloween",
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": null
+    "hook_text": null,
+    "caption": "Pânico 7: você lembra da cena que mais te deu medo?\n\nAquele clima de terror clássico da franquia sempre bateu forte.\nVer os bastidores de como essa tensão foi criada deixa o filme ainda mais intenso.\n\nComenta aí qual cena te tirou o sono.\n\nVídeo: Paramount Brasil (canal oficial no YouTube)\n\n#Pânico7 #Scream #Terror #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ada407506b0d74534fda446",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-24T19:30:00",
+    "posted_at": "2026-10-24T19:30:00"
   },
   {
     "video_id": "16h-yqRB0Zk",
@@ -1422,7 +1481,11 @@
     "theme": "halloween",
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": null
+    "hook_text": null,
+    "caption_problems": [
+      "detalhe sem base: Essa tensão do Pânico 7 é o que a gente esperava pra fechar o ano."
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "BOBcvgd0XeE",
@@ -1435,13 +1498,20 @@
     "youtube_url": "https://www.youtube.com/watch?v=BOBcvgd0XeE",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/BOBcvgd0XeE.mp4",
     "added_at": "2026-10-09T20:56:25.584945-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 76,
     "theme": "halloween",
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": "Ghostface voltou mais assustador?"
+    "hook_text": "Ghostface voltou mais assustador?",
+    "caption": "Sidney tá preparada pra aguentar o Ghostface dessa vez?\n\nA expectativa pro Pânico 7 tá lá em cima, né?\nVer esse clássico de terror voltar com essa energia é o que a gente queria.\n\nComenta aí qual foi o seu palpite pro final.\n\nVídeo: Paramount Brasil (canal oficial no YouTube)\n\n#Pânico #Scream #Ghostface #SidneyWesley #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ada408b06b0d74534fda50b",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-24T21:00:00",
+    "posted_at": "2026-10-24T21:00:00"
   },
   {
     "video_id": "WyLv5Dk1zIs",
@@ -1507,7 +1577,12 @@
     "theme": "halloween",
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": "Penny ficou ainda mais major?"
+    "hook_text": "Penny ficou ainda mais major?",
+    "caption_problems": [
+      "detalhe sem base: Penny finalmente virou Major?",
+      "detalhe sem base: Ver a nossa Penny mais madura e com esse cargo novo"
+    ],
+    "caption_check": "revisar"
   },
   {
     "video_id": "rMy4UG49n8I",
@@ -1593,13 +1668,20 @@
     "youtube_url": "https://www.youtube.com/watch?v=PZmg_LE12kQ",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/PZmg_LE12kQ.mp4",
     "added_at": "2026-10-09T21:07:14.327414-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 86,
     "theme": "halloween",
     "layout": "vertical",
     "lang": "pt",
-    "hook_text": "Todo Mundo, já viu?"
+    "hook_text": "Todo Mundo, já viu?",
+    "caption": "TodoMundoEmPânico: o quarteto mais caótico fez você rir ou foi um desastre?\n\nRelembre esse clássico da comédia de terror que divide opiniões.\nÉ aquele tipo de filme que a gente fica dividido entre amar e odiar.\nO humor ácido da franquia ainda cai bem nessa época do ano?\n\nComenta aí o que você achou da volta deles.\n\nVídeo: Paramount+ Brasil (canal oficial no YouTube)\n\n#TodoMundoEmPânico #ScaryMovie #ComédiaDeTerror #Halloween #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": [],
+    "tiktok_id": "6ada40a306b0d74534fda5a5",
+    "tiktok_status": "scheduled",
+    "tiktok_scheduled_for": "2026-10-24T22:30:00",
+    "posted_at": "2026-10-24T22:30:00"
   },
   {
     "video_id": "NfNDM9PYCoU",
@@ -3388,7 +3470,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ad58e99ccc517bb01c7edad",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-21T13:30:00",
     "posted_at": "2026-10-21T13:30:00"
   },
@@ -3413,7 +3495,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ad58e9cccc517bb01c7edb9",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-21T15:00:00",
     "posted_at": "2026-10-21T15:00:00"
   },
@@ -3438,7 +3520,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ad58e9e607a83c378e933ec",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-21T16:30:00",
     "posted_at": "2026-10-21T16:30:00"
   },
@@ -3463,7 +3545,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ad58ea0ccc517bb01c7edd1",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-21T17:15:00",
     "posted_at": "2026-10-21T17:15:00"
   },
@@ -3488,7 +3570,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ad58ea2607a83c378e933f4",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-21T18:00:00",
     "posted_at": "2026-10-21T18:00:00"
   },
@@ -3513,7 +3595,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ad58ea5ccc517bb01c7edf0",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-21T19:30:00",
     "posted_at": "2026-10-21T19:30:00"
   },
@@ -3585,7 +3667,7 @@
     "caption": "Supergirl no CCXP: você esperava mais drama ou mais ação?\n\nVer a nossa SUPER Agente Secreta em um momento tão marcante é algo que fica na memória.\nÉ aquele tipo de cena que faz a gente querer pausar e curtir a vibe.\n\nComenta aí qual foi a sua primeira reação ao ver essa imagem.\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#Supergirl #CCXP #DCComics #WarnerBros #MorsaDigital",
     "caption_check": "ok",
     "tiktok_id": "6ad58ed812d9e409eea93e91",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-21T21:00:00",
     "posted_at": "2026-10-21T21:00:00"
   },
@@ -3610,7 +3692,7 @@
     "caption_check": "ok",
     "caption_problems": [],
     "tiktok_id": "6ad58edae155879d25ca87ae",
-    "tiktok_status": "scheduled",
+    "tiktok_status": "published",
     "tiktok_scheduled_for": "2026-10-21T22:30:00",
     "posted_at": "2026-10-21T22:30:00"
   },
@@ -6551,6 +6633,186 @@
     "kind": "cena",
     "plan_order": 319,
     "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "Z8mahVzfo4Q",
+    "title": "Ok... talvez eu goste mais do que deveria dessa versão Kaiju do Kafka! 😳 Anime: Kaiju No. 8",
+    "channel": "Crunchyroll Brasil",
+    "channel_id": "UCVc-JLY3Db6-O48y7TS4N7Q",
+    "category": "anime",
+    "description": "Kaiju No. 8 fancams\n-\nTESTE CRUNCHYROLL DE GRAÇA POR 7 DIAS: https://got.cr/7DayFreeTrialPT\n\n🔸FACEBOOK: https://www.facebook.com/Crunchyroll.pt/\n🔸TWITTER: https://twitter.com/Crunchyroll_pt\n🔸INSTAGRAM: https://www.instagram.com/crunchyroll_PT",
+    "published": "2024-05-14",
+    "youtube_url": "https://www.youtube.com/watch?v=Z8mahVzfo4Q",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/Z8mahVzfo4Q.mp4",
+    "added_at": "2026-10-21T23:32:00.335860-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 320,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "0U0CjdxDMUc",
+    "title": "Bob Esponja e Patrick viajam pelo mundo - França | Paramount Pictures Brasil",
+    "channel": "Paramount Brasil",
+    "channel_id": "UCgqD3GdUEfupsdY1kmFLIrw",
+    "category": "other",
+    "description": "Bob Esponja e Patrick visitaram a França!\n\nDepois do roubo da fórmula secreta do hamburger de siri , Bob Esponja, Patrick, Lula Molusco e seus amigos vão invadir nosso mundo para defender a Fenda do Biquini.  \n\nBob Esponja Calça Quadrada, o invertebrado mais amado do fundo do mar, sai da água e invade o nosso mundo para virar um super-herói numa grande aventura.   \n\nInscreva-se: http://bit.ly/17Yo6DD \n\nConecte-se com Bob Esponja: Um Herói Fora d'Água online: \n\nSITE: www.bobesponjaofilme.com.br Facebook: www.facebook.com/BobEsponjaFilme.BR Twitter: www.twitter.com/paramountbrasil \n\nParamount Pictures Internacional A Paramount Pictures há mais de 100 anos leva entretenimento para o\npúblico de ",
+    "published": "2015-02-10",
+    "youtube_url": "https://www.youtube.com/watch?v=0U0CjdxDMUc",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/0U0CjdxDMUc.mp4",
+    "added_at": "2026-10-21T23:37:46.394921-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 321,
+    "hook_text": "Bob Esponja já visitou a França?",
+    "layout": "horizontal",
+    "lang": "pt"
+  },
+  {
+    "video_id": "7WF4CUK8-nI",
+    "title": "Aulas grátis com Brenda | Todo Mundo em Pânico 3 | Paramount Plus",
+    "channel": "Paramount+ Brasil",
+    "channel_id": "UCAnCxJ1Weh2pUAKJW0bro0Q",
+    "category": "other",
+    "description": "Aulas de autodefesa com #Brenda. #TodoMundoEmPânico3\n\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++\nCurtiu? Assista o Paramount+ em https://www.paramountplus.com ou baixe o app, disponível para telefones e tablets, IOS e Android:\nhttps://smart.link/z36qrfjaimzim\nInscreva-se no canal do YouTube: https://www.youtube.com/channel/UCW8l...\nSiga a nossa página no Facebook: https://www.facebook.com/ParamountPlusbr\nSiga o nosso Twitter: https://twitter.com/ParamountPlusbr\nSiga o nosso Instagram: https://www.instagram.com/paramountplusbr\nSiga o nosso TikTok: https://www.tiktok.com/@paramountplusbr\n\n\n\nParamount+ possui milhares de episódios de: Comedy Central, MTV, Nickelodeon, Paramount P",
+    "published": "2023-11-02",
+    "youtube_url": "https://www.youtube.com/watch?v=7WF4CUK8-nI",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/7WF4CUK8-nI.mp4",
+    "added_at": "2026-10-21T23:43:03.577787-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 322,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "CKuyyx0PxOw",
+    "title": "Os erros de gravação de Game Of Thrones! 🤭",
+    "channel": "HBO Brasil",
+    "channel_id": "UCX2M7xn-jMmq4KfX25TCTCA",
+    "category": "game_niche",
+    "description": "#GameOfThrones está disponível na Max.",
+    "published": "2025-01-18",
+    "youtube_url": "https://www.youtube.com/watch?v=CKuyyx0PxOw",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/CKuyyx0PxOw.mp4",
+    "added_at": "2026-10-21T23:54:50.600651-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 323,
+    "hook_text": "Game of Thrones tem muitos erros?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "7YgqQexfZWY",
+    "title": "Naruto é coisa de nerd?",
+    "channel": "Netflix Brasil",
+    "channel_id": "UCc1l5mTmAv2GC_PXrBpqyKQ",
+    "category": "anime_big",
+    "description": "Bom saber que não era só eu e meus amigos que faziam jutsu na escola…\n\nAssista na Netflix: https://www.netflix.com\n\nInscreva-se: https://bit.ly/31ynwtw\n\nSobre a Netflix:\nA Netflix é um dos principais serviços de entretenimento do mundo com um vasto catálogo de séries, filmes, jogos e eventos ao vivo disponíveis em diversos idiomas. Nossos assinantes podem assistir, pausar e voltar a um título quantas vezes quiserem, onde quer que estejam, e alterar o plano a qualquer momento.\n\nNaruto é coisa de nerd?\nhttps://www.youtube.com/@NetflixBrasil",
+    "published": "2026-02-13",
+    "youtube_url": "https://www.youtube.com/watch?v=7YgqQexfZWY",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/7YgqQexfZWY.mp4",
+    "added_at": "2026-10-22T00:15:00.740499-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 324,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "X6JmUmPhoow",
+    "title": "Neil Druckmann: The Last of Us – Temporada 2 | Max",
+    "channel": "HBO Max Brasil",
+    "channel_id": "UCR7ZwQz60rW9dK59Dirdc8w",
+    "category": "game_big",
+    "description": "Recebemos o aviso: a segunda temporada de #TheLastOfUs não vai pegar leve.\n\nPreparem os lencinhos e os corações, porque vem chumbo grosso por aí.\n\nNa segunda temporada de The Last of Us, Joel (Pedro Pascal) e Ellie (Bella Ramsey) enfrentam um mundo ainda mais implacável, onde cada decisão pode ser mortal. Novos inimigos, velhas cicatrizes e a busca por justiça colocarão tudo em risco.\n\nBaseada no aclamado videogame da Naughty Dog, a nova temporada aprofunda a dor, a vingança e a luta pela sobrevivência em um mundo devastado.\n\nThe Last of Us estreia em 13 de abril, só na Max.\n\n#TheLastOfUs #TLOU2 #PedroPascal #BellaRamsey #Max #TheLastOfUsSeries #TheLastOfUsPart2 #joelmiller\n\nThe Last of Us –",
+    "published": "2025-04-10",
+    "youtube_url": "https://www.youtube.com/watch?v=X6JmUmPhoow",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/X6JmUmPhoow.mp4",
+    "added_at": "2026-10-22T00:18:47.344348-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 325,
+    "hook_text": "The Last of Us vale a espera?",
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "W7BTCDFzsw4",
+    "title": "45 segundos para destruir a autoestima do Capitão Pátria? Nem precisa dizer mais nada. | The Boys",
+    "channel": "Prime Video Brasil",
+    "channel_id": "UCuNjvqjTzw9LcD9PVpTVWRA",
+    "category": "series",
+    "description": "O episódio 3 da temporada final de #TheBoys está disponível no Prime Video.  \n\nInscreva-se no canal do YouTube: https://bit.ly/35FaAo8 \n\nSobre o #PrimeVideo: Assine Prime Video para assistir a filmes e séries populares, incluindo Amazon Originals premiados. Além de um catálogo cheio de títulos, membros Prime têm acesso a benefícios, como frete GRÁTIS e rápido em milhares de produtos na Amazon.com.br, músicas sem anúncios na Amazon Music, Prime Gaming na Twitch e e-books e revistas no Prime Reading. Tudo na mesma assinatura, por apenas R$ 14,90/mês. Teste Grátis por 30 dias. \n\nSiga nossas redes sociais: \n\nInstagram: https://www.instagram.com/primevideobr/ \n\nFacebook: https://www.facebook.com/",
+    "published": "2026-04-17",
+    "youtube_url": "https://www.youtube.com/watch?v=W7BTCDFzsw4",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/W7BTCDFzsw4.mp4",
+    "added_at": "2026-10-22T00:27:28.569411-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 326,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "xmpPfehjT6g",
+    "title": "O verdadeiro protagonista do filme de KONOSUBA! #shorts",
+    "channel": "Crunchyroll Brasil",
+    "channel_id": "UCVc-JLY3Db6-O48y7TS4N7Q",
+    "category": "movie",
+    "description": "Assista Konosuba aqui na Crunchyroll - disponível nas opções dublado em português brasileiro e também com áudio original japonês e legendas em português: https://got.cr/konosuba-ybpt\n\nSinopse oficial: \"Satou Kazuma quase morreu ao ser atropelado por um caminhão, mas um acaso do destino o faz reencarnar em outro mundo, acompanhado da deusa trapalhona Aqua, da feiticeira maluca Megumin e da cavaleira delirante Darkness. Esse grupo de indivíduos problemáticos passam por maus bocados, acumulando dívidas, sendo enviados pra prisão e até morrendo (de novo).\nCerto dia, o grupo descobre que a Vila do Demônio Escarlate, de onde veio Megumin, está encarando um problema que pode culminar em seu fim. Na",
+    "published": "2023-04-29",
+    "youtube_url": "https://www.youtube.com/watch?v=xmpPfehjT6g",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/xmpPfehjT6g.mp4",
+    "added_at": "2026-10-22T00:35:18.111691-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 327,
+    "hook_text": null,
+    "layout": "vertical",
+    "lang": "pt"
+  },
+  {
+    "video_id": "gSq4aj7dePo",
+    "title": "Bob Esponja e Patrick viajam pelo mundo - México (Short) | Paramount Pictures Brasil",
+    "channel": "Paramount Brasil",
+    "channel_id": "UCgqD3GdUEfupsdY1kmFLIrw",
+    "category": "other",
+    "description": "Bob Esponja e Patrick visitaram o México!\n\nDepois do roubo da fórmula secreta do hamburger de siri , Bob Esponja, Patrick, Lula Molusco e seus amigos vão invadir nosso mundo para defender a Fenda do Biquini.  \n\nBob Esponja Calça Quadrada, o invertebrado mais amado do fundo do mar, sai da água e invade o nosso mundo para virar um super-herói numa grande aventura.   \n\nInscreva-se: http://bit.ly/17Yo6DD \n\nConecte-se com Bob Esponja: Um Herói Fora d'Água online: \n\nSITE: www.bobesponjaofilme.com.br Facebook: www.facebook.com/BobEsponjaFilme.BR Twitter: www.twitter.com/paramountbrasil \n\nParamount Pictures Internacional A Paramount Pictures há mais de 100 anos leva entretenimento para o\npúblico de ",
+    "published": "2015-02-04",
+    "youtube_url": "https://www.youtube.com/watch?v=gSq4aj7dePo",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/gSq4aj7dePo.mp4",
+    "added_at": "2026-10-22T00:39:15.134594-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 328,
+    "hook_text": null,
+    "layout": "horizontal",
+    "lang": "pt"
+  },
+  {
+    "video_id": "XhZ9n_Q3pWE",
+    "title": "A Estratégia PERFEITA | Todo Mundo Odeia O Chris | Paramount Plus",
+    "channel": "Paramount+ Brasil",
+    "channel_id": "UCAnCxJ1Weh2pUAKJW0bro0Q",
+    "category": "other",
+    "description": "Lições de Natal: tenha alvo certo e vença pelo cansaço! #TodoMundoOdeiaOChris #ONatalDoParamountPlus +++++++++++++++++++++++++++++++++++++++++++++++++++++++++\nCurtiu? Assista o Paramount+ em https://www.paramountplus.com ou baixe o app, disponível para telefones e tablets, IOS e Android:\nhttps://smart.link/z36qrfjaimzim\nInscreva-se no canal do YouTube: https://www.youtube.com/channel/UCW8l...\nSiga a nossa página no Facebook: https://www.facebook.com/ParamountPlusbr\nSiga o nosso Twitter: https://twitter.com/ParamountPlusbr\nSiga o nosso Instagram: https://www.instagram.com/paramountplusbr\nSiga o nosso TikTok: https://www.tiktok.com/@paramountplusbr\n\n\n\nParamount+ possui milhares de episódios de",
+    "published": "2023-12-21",
+    "youtube_url": "https://www.youtube.com/watch?v=XhZ9n_Q3pWE",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/XhZ9n_Q3pWE.mp4",
+    "added_at": "2026-10-22T00:43:42.557456-03:00",
+    "posted": false,
+    "kind": "cena",
+    "plan_order": 329,
+    "hook_text": "Todo Mundo Odeia: estratégia perfeita?",
     "layout": "vertical",
     "lang": "pt"
   }
