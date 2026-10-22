@@ -1,7 +1,8 @@
 """
 Acervo do feed no TikTok: as notícias estáticas que o Morsa publicou no Instagram
 desde que a automação foi ligada (29/05/2026) entram no TikTok como post de FOTO,
-10 por dia, da mais antiga para a mais nova, até alcançar o dia atual.
+3 por dia, das que mais engajaram no Instagram para as que menos (desde 22/10/2026;
+antes eram 10 por dia em ordem cronológica).
 
 Pedido do Tulio em 14/10/2026: os vídeos repostados caíram em "conteúdo não
 original" e o TikTok passou a recomendar foto para a conta; a meta é chegar aos
@@ -38,8 +39,11 @@ REPO = os.environ.get("GITHUB_REPOSITORY", "tuliogama/morsa-digital-autoposter")
 RELEASE_TAG = "tiktok-fotos"
 # 10 por dia, fora dos minutos dos vídeos (11h, 13h, 13h30, 15h, 16h30, 17h15, 18h,
 # 19h30, 21h, 22h30) e longe das notícias do dia (9h, 16h, 21h)
-PHOTO_SLOTS_BRT = ["08:00", "09:30", "10:30", "12:00", "14:15", "15:45",
-                   "17:45", "19:00", "20:15", "21:45"]
+PHOTO_SLOTS_BRT = ["12:00", "14:00", "18:30"]
+# 22/10/2026: de 10 para 3 por dia (com as 3 notícias do dia, 6 fotos). Com 23 posts por
+# dia a conta não ganhou seguidor (105 → 106 em 8 dias) e a mediana por foto caiu de 64
+# para 18; foto a 30-60 min do post anterior rendeu 58, a menos de 30 min, 35. Os
+# horários ficam a mais de 1h das notícias (9h, 16h, 21h).
 
 # Notícia velha que fala em "hoje", "amanhã", "esta semana" vira informação errada
 _STALE_RE = re.compile(r"\b(hoje|amanh[aã]|ontem|esta semana|nesta semana|neste fim de semana|"
@@ -75,6 +79,31 @@ def clean_caption(caption: str) -> str:
     text = re.sub(r"\*\*(.+?)\*\*", r"\1", text)
     text = re.sub(r"^[^\w\"'(]+", "", text.strip())             # emoji ou símbolo no começo
     return text
+
+
+_DATED_RE = re.compile(r"vem a[ií]|est[aá] vindo|vai chegar|chega (em|dia|no|na|ao)|estreia|estreou|"
+                       r"lan[cç]a(mento|do|r)?\b|anunci|confirm|data de|revelad|primeiro trailer|"
+                       r"\bem breve\b|nesta (sexta|semana)|\b20[0-9]{2}\b", re.IGNORECASE)
+
+
+def rank() -> int:
+    """Guarda em cada item o engajamento que o post teve no Instagram (curtidas + 3x comentários)."""
+    token, user = os.environ["FB_ACCESS_TOKEN"], os.environ["IG_USER_ID"]
+    url = (f"https://graph.facebook.com/v19.0/{user}/media?fields=id,like_count,comments_count,timestamp"
+           f"&limit=100&access_token={token}")
+    score = {}
+    while url:
+        data = _graph(url)
+        for p in data.get("data", []):
+            score[p["id"]] = p.get("like_count", 0) + 3 * p.get("comments_count", 0)
+        if data.get("data") and data["data"][-1]["timestamp"][:10] < START:
+            break
+        url = data.get("paging", {}).get("next")
+    backlog = _load()
+    for b in backlog:
+        b["ig_score"] = score.get(b["media_id"], 0)
+    _save(backlog)
+    return len(score)
 
 
 def _graph(url: str) -> dict:
@@ -180,7 +209,10 @@ def schedule(days_ahead: int = 2, max_new: int = 25) -> int:
         return 0
     backlog = _load()
     taken = {b["scheduled_for"] for b in backlog if b.get("scheduled_for")}
-    todo = [b for b in backlog if not b.get("tiktok_id")]
+    # Melhores primeiro (engajamento do post no Instagram), e notícia com cara de
+    # novidade datada ("vem aí", "estreia", "anuncia") vai para o fim: envelhece mal.
+    todo = sorted((b for b in backlog if not b.get("tiktok_id")),
+                  key=lambda b: (bool(_DATED_RE.search(b["title"])), -b.get("ig_score", 0)))
     now = datetime.now(BRT)
     created = 0
     for offset in range(days_ahead + 1):
@@ -214,7 +246,7 @@ def status() -> str:
     left = len(backlog) - len(done)
     end = (datetime.now(BRT) + timedelta(days=left / len(PHOTO_SLOTS_BRT))).strftime("%d/%m/%Y")
     return (f"acervo: {len(backlog)} | agendados ou publicados: {len(done)} | faltam {left} "
-            f"(a 10 por dia, termina por volta de {end})")
+            f"(a {len(PHOTO_SLOTS_BRT)} por dia, termina por volta de {end})")
 
 
 if __name__ == "__main__":
@@ -253,6 +285,8 @@ if __name__ == "__main__":
                 tiktok._api("DELETE", f"/posts/{b['tiktok_id']}")
                 b.update(tiktok_id=None, scheduled_for=None)
         _save(items)
+    elif cmd == "rank":
+        logger.info(f"engajamento lido de {rank()} posts")
     elif cmd == "schedule":
         logger.info(f"novos agendamentos: {schedule()}")
     print(status())

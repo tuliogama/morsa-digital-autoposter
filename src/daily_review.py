@@ -293,7 +293,48 @@ def _tiktok_section(tk: list[dict]) -> list[str]:
             lines.append("Mediana por horário: " + " · ".join(
                 f"{h}h: {statistics.median(v):.0f} ({len(v)})" for h, v in sorted(by_hour.items())))
     lines += _hook_ab([r for r in tk if r.get("kind") == "vídeo"])
+    lines += _community_lines(tk)
     return lines
+
+
+def _community_lines(tk: list[dict]) -> list[str]:
+    """
+    Comunidade, não só alcance (meta do Tulio, 22/10/2026): curtidas e comentários por
+    post e seguidores ganhos. O número de seguidores é guardado por dia em
+    data/tiktok_followers.json para dar a variação.
+    """
+    out = []
+    week = [r for r in tk if (datetime.now(BRT) - r["ts"]).days < 7]
+    if week:
+        lk = statistics.mean(r["likes"] for r in week)
+        cm = sum(r["comments"] for r in week)
+        rate = 100 * sum(r["likes"] + r["comments"] + r["shares"] for r in week) / max(1, sum(r["views"] for r in week))
+        out += ["", f"**Comunidade (7 dias):** {lk:.1f} curtidas por post | {cm} comentários no total | "
+                    f"engajamento {rate:.1f}% das views"]
+    path = ROOT / "data" / "tiktok_followers.json"
+    try:
+        hist = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        hist = {}
+    try:
+        req = urllib.request.Request("https://zernio.com/api/v1/accounts",
+                                     headers={"Authorization": f"Bearer {os.environ['ZERNIO_API_KEY']}",
+                                              "User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            acc = next(a for a in json.loads(r.read())["accounts"] if a.get("platform") == "tiktok")
+        today = datetime.now(BRT).date().isoformat()
+        hist[today] = acc.get("followersCount")
+        path.write_text(json.dumps(hist, indent=1), encoding="utf-8")
+        days = sorted(hist)
+        prev = next((hist[d] for d in reversed(days[:-1]) if hist[d] is not None), None)
+        week_ago = next((hist[d] for d in days if d >= (datetime.now(BRT) - timedelta(days=7)).date().isoformat()), None)
+        out.append(f"**Seguidores no TikTok:** {hist[today]}"
+                   + (f" ({hist[today] - prev:+d} desde a última revisão)" if prev is not None else "")
+                   + (f" | {hist[today] - week_ago:+d} em 7 dias" if week_ago is not None and len(days) > 1 else "")
+                   + " | metas: 1 mil (Marketplace), 10 mil e 100 mil views em 30 dias (Recompensas)")
+    except Exception as e:
+        logger.warning(f"Seguidores do TikTok indisponíveis: {e}")
+    return out
 
 
 def _trailer_ab(rows: list[dict]) -> list[str]:

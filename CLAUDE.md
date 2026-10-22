@@ -417,6 +417,11 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   contra 37 das fotos em 7 dias, e 105 → 106 seguidores em 8 dias. `TIKTOK_VIDEOS`
   (padrão off) desliga `schedule_tiktok` e o envio dos reels do Instagram ao TikTok;
   18 agendamentos cancelados. O TikTok fica só com fotos (notícias do dia + acervo).
+  No mesmo dia, ok do Tulio: acervo de 10 para **3 por dia** (12h, 14h, 18h30; com as
+  notícias, ~6 fotos), ordenado pelo engajamento que o post teve no Instagram
+  (`tiktok_photos.py rank`, `ig_score`) e com notícia datada no fim (`_DATED_RE`). A
+  revisão mostra comunidade (curtidas e comentários por post, % de engajamento) e
+  seguidores do dia (`data/tiktok_followers.json`).
   Meta fixa das páginas (Tulio, 22/10): engajamento, visualização, seguidores e
   comunidade; toda mudança deve dizer qual desses números move.
 - **Stories na revisão noturna** (desde 11/10/2026): `stories.py --insights` roda em toda
