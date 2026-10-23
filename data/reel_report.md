@@ -1,25 +1,8 @@
-# Fila de reels @morsadigital — 22/10/2026 01:07 BRT
+# Fila de reels @morsadigital — 23/10/2026 10:05 BRT
 
 ## cenas — a partir das 11h
 
-135 na fila | legendas ok: 30 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 22/10 — Melhores pérolas da dublagem em Shrek 🗣️
-Prime Video Brasil · vertical · pt · legenda: ok
-
-```
-Qual dublagem você defende: a brasileira ou a original?
-
-Shrek é uma das poucas animações em que a versão em português brilha tanto quanto a original.
-É impossível não se lembrar de como a dublagem brasileira pegou no osso e criou memórias únicas para o fã.
-Essa escolha de vozes fez o ogro verde virar um clássico absoluto no Brasil.
-
-Comenta aí qual foi a primeira frase do Shrek que você nunca mais esqueceu.
-
-Vídeo: Prime Video Brasil (canal oficial no YouTube)
-
-#Shrek #DublagemBrasileira #FilmesAnimados #PrimeVideo #MemóriasDeInfância #MorsaDigital
-```
+134 na fila | legendas ok: 29 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 23/10 — Loki | Marvel Studios | Trapaça | Featurette Oficial Legendado
 Marvel Brasil · horizontal · pt · legenda: ok
@@ -1092,24 +1075,16 @@ HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
+### 19/02 — NUNCA APERTEI "PRÓXIMO EPISÓDIO" EM JUJUTSU KAISEN
+Netflix Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
 ## main — a partir das 13h
 
-93 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
-
-### 22/10 — Alien: Earth | Trailer Oficial Dublado | Disney+
-Disney+ Brasil · ? · ? · legenda: ok
-
-```
-Tô com calafrios só de lembrar do primeiro minuto dessa série, o medo de alienígena é uma coisa que não se apaga nunca.
-
-Aquela frase "Era mais seguro no espaço" ainda ecoa na cabeça de todo fã da franquia. É o retorno direto ao terror puro que definiu o gênero, agora adaptando o universo de Alien para uma nova realidade na Terra.
-
-Você já assistiu? Qual foi a cena que mais te deixou com medo de olhar pela janela?
-
-Vídeo: Disney+ Brasil (canal oficial no YouTube)
-
-#AlienEarth #Alien #DisneyPlus #Halloween #MorsaDigital
-```
+92 na fila | legendas ok: 6 | a revisar: 3 | dias sem reel no calendário: 0
 
 ### 23/10 — Grand Theft Auto V Trailer
 Rockstar Games · horizontal · en · legenda: ok
@@ -1175,20 +1150,26 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 Rockstar Games · horizontal · en · legenda: revisar (0 hashtags (esperado 3 a 5))
 
 ```
-Red Dead Redemption 2 e aquele frio na barriga que só quem jogou sabe explicar.
+Red Dead Redemption 2, esse trailer de 2018 ainda bate forte na memória de quem acompanhou o final da era western.
 
-Não é à toa que esse título definiu o que é um mundo aberto moderno. A Rockstar Games levou o universo do velho oeste para um nível de detalhamento absurdo, onde cada decisão de Arthur Morgan pesa e o ambiente reage de forma quase real. É a última grande saga da era dos foras da lei, contada com uma profundidade emocional rara no gênero.
+A história de Arthur Morgan e a fuga da gangue Van der Linde pelo coração dos EUA em 1899 marcou uma geração de gamers. Ver a tensão entre os ideais pessoais e a lealdade ao bando que o criou continua sendo o coração pulsante da narrativa criada pela Rockstar.
 
-Qual foi o momento do jogo que mais mexeu com você?
+Qual foi a primeira reação de vocês quando esse vídeo saiu pela primeira vez?
 
 Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 28/10 — OS FANTASMAS AINDA SE DIVERTEM: BEETLEJUICE BEETLEJUICE l Trailer Oficial #2
-Warner Bros. Pictures Brasil · ? · ? · legenda: ainda não gerada
+Warner Bros. Pictures Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 3 a 5))
 
 ```
-(gerada na hora da publicação)
+Beetlejuice Beetlejuice, essa sequência do Tim Burton e do Michael Keaton é um absoluto caos e eu não poderia estar mais feliz com isso.
+
+Vale rever esse trailer oficial número 2, especialmente agora que estamos no clima de Halloween da Morsa. Ter Winona Ryder voltando como Lydia Deetz e Catherine O'Hara no elenco faz todo sentido pra quem cresceu com o clássico e quer ver como a dinâmica da família Deetz evoluiu. A direção do Burton nessa fase é pura alucinação visual, do jeito que a gente adora.
+
+Qual foi a primeira coisa que te veio à cabeça ao ver o Beetlejuice de volta?
+
+Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 ```
 
 ### 29/10 — Stranger Things 5 | Trailer - Volume 2 | Netflix

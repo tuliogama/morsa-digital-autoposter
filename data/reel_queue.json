@@ -330,7 +330,13 @@
     "kind": "acervo",
     "plan_order": 12,
     "scheduled_for": "2026-10-28",
-    "theme": "halloween"
+    "theme": "halloween",
+    "caption_style": "padrao",
+    "caption": "Beetlejuice Beetlejuice, essa sequência do Tim Burton e do Michael Keaton é um absoluto caos e eu não poderia estar mais feliz com isso.\n\nVale rever esse trailer oficial número 2, especialmente agora que estamos no clima de Halloween da Morsa. Ter Winona Ryder voltando como Lydia Deetz e Catherine O'Hara no elenco faz todo sentido pra quem cresceu com o clássico e quer ver como a dinâmica da família Deetz evoluiu. A direção do Burton nessa fase é pura alucinação visual, do jeito que a gente adora.\n\nQual foi a primeira coisa que te veio à cabeça ao ver o Beetlejuice de volta?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "0 hashtags (esperado 3 a 5)"
+    ]
   },
   {
     "video_id": "GqR2FG3G810",
@@ -453,7 +459,7 @@
     "layout": "horizontal",
     "lang": "en",
     "caption_style": "padrao",
-    "caption": "Red Dead Redemption 2 e aquele frio na barriga que só quem jogou sabe explicar.\n\nNão é à toa que esse título definiu o que é um mundo aberto moderno. A Rockstar Games levou o universo do velho oeste para um nível de detalhamento absurdo, onde cada decisão de Arthur Morgan pesa e o ambiente reage de forma quase real. É a última grande saga da era dos foras da lei, contada com uma profundidade emocional rara no gênero.\n\nQual foi o momento do jogo que mais mexeu com você?\n\nVídeo: Rockstar Games (canal oficial no YouTube)",
+    "caption": "Red Dead Redemption 2, esse trailer de 2018 ainda bate forte na memória de quem acompanhou o final da era western.\n\nA história de Arthur Morgan e a fuga da gangue Van der Linde pelo coração dos EUA em 1899 marcou uma geração de gamers. Ver a tensão entre os ideais pessoais e a lealdade ao bando que o criou continua sendo o coração pulsante da narrativa criada pela Rockstar.\n\nQual foi a primeira reação de vocês quando esse vídeo saiu pela primeira vez?\n\nVídeo: Rockstar Games (canal oficial no YouTube)",
     "caption_check": "revisar",
     "caption_problems": [
       "0 hashtags (esperado 3 a 5)"
