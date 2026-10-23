@@ -355,6 +355,48 @@ def _trailer_ab(rows: list[dict]) -> list[str]:
         for name, v in groups.items())]
 
 
+def _facebook_section(now: datetime) -> list[str]:
+    """Página do Facebook (desde 23/10/2026): interações por post e seguidores do dia."""
+    token, page = os.environ.get("FB_ACCESS_TOKEN"), os.environ.get("FB_PAGE_ID")
+    if not token or not page:
+        return []
+    try:
+        url = (f"https://graph.facebook.com/v21.0/{page}/posts?fields=created_time,message,"
+               f"reactions.summary(true).limit(0),comments.summary(true).limit(0),shares&limit=40"
+               f"&access_token={token}")
+        with urllib.request.urlopen(url, timeout=30) as r:
+            posts = json.loads(r.read()).get("data", [])
+        with urllib.request.urlopen(f"https://graph.facebook.com/v21.0/{page}?fields=followers_count"
+                                    f"&access_token={token}", timeout=30) as r:
+            followers = json.loads(r.read()).get("followers_count")
+    except Exception as e:
+        logger.warning(f"Facebook indisponível: {e}")
+        return []
+    cutoff = (now - timedelta(days=7)).astimezone(timezone.utc).isoformat()
+    week = [p for p in posts if p["created_time"] >= cutoff[:19]]
+    def eng(p):
+        return (p.get("reactions", {}).get("summary", {}).get("total_count", 0)
+                + p.get("comments", {}).get("summary", {}).get("total_count", 0)
+                + p.get("shares", {}).get("count", 0))
+    path = ROOT / "data" / "facebook_followers.json"
+    try:
+        hist = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        hist = {}
+    hist[now.date().isoformat()] = followers
+    path.write_text(json.dumps(hist, indent=1), encoding="utf-8")
+    days = sorted(hist)
+    prev = hist[days[-2]] if len(days) > 1 else None
+    lines = ["", "## Facebook (7 dias)", "",
+             f"- Seguidores: {followers}" + (f" ({followers - prev:+d} desde a última revisão)" if prev is not None else ""),
+             f"- Posts: {len(week)} | interações por post (mediana): "
+             f"{statistics.median([eng(p) for p in week]) if week else 0} | comentários: "
+             f"{sum(p.get('comments', {}).get('summary', {}).get('total_count', 0) for p in week)}"]
+    for p in sorted(week, key=eng, reverse=True)[:5]:
+        lines.append(f"  - {eng(p)} · {(p.get('message') or '').splitlines()[0][:80] if p.get('message') else '(sem texto)'}")
+    return lines
+
+
 def _stories_section(rows: list[dict], now: datetime) -> list[str]:
     """Stories das últimas 24h e dos 7 dias, a partir do registro do stories.py."""
     import stories
@@ -447,6 +489,7 @@ def write_report(rows: list[dict], weights: dict, brief: dict, now: datetime,
     lines += _tiktok_section(tiktok or [])
     lines += _trailer_ab(rows)
     lines += _stories_section(rows, now)
+    lines += _facebook_section(now)
     lines += ["", f"## Orientação para {brief['date']}", "", brief["strategy_note"], ""]
 
     REPORT_DIR.mkdir(parents=True, exist_ok=True)

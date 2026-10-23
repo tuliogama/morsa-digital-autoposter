@@ -293,6 +293,14 @@ def publish(post: dict) -> dict:
     except Exception as e:
         logger.warning(f"TikTok (foto) falhou, segue só no Instagram: {str(e)[:200]}")
 
+    # Mesma notícia na Página do Facebook, como foto (sem link)
+    try:
+        fb_id = post_to_facebook_page([image_url, slide2_url], caption)
+        if fb_id:
+            logger.info(f"Facebook (foto): {fb_id}")
+    except Exception as e:
+        logger.warning(f"Facebook falhou, segue só no Instagram: {str(e)[:200]}")
+
     return {"platform": "instagram", "id": media_id, "image_url": image_url}
 
 
@@ -635,3 +643,23 @@ def publish_reel_from_url(video_url: str, caption: str) -> dict:
     _post_to_broadcast_channel(token, media_id)
 
     return {"platform": "instagram", "format": "reel", "id": media_id}
+
+
+def post_to_facebook_page(image_urls: list, caption: str) -> Optional[str]:
+    """
+    A mesma notícia como post de foto na Página do Facebook (desde 23/10/2026). No
+    histórico da Ordem Sith foto teve mediana de 37 interações e vídeo, 1; link para
+    fora derruba o alcance lá, então vai só a foto com a legenda. Devolve o id do post.
+    """
+    import json as _json
+    page_id, token = os.environ.get("FB_PAGE_ID"), os.environ["FB_ACCESS_TOKEN"]
+    if not page_id or os.environ.get("FACEBOOK_POSTS", "on") == "off":
+        return None
+    ids = []
+    for u in [u for u in image_urls if u][:10]:
+        r = _post(f"{GRAPH_URL}/{page_id}/photos", {"url": u, "published": "false", "access_token": token})
+        ids.append(r["id"])
+    params = {"message": cap_hashtags(caption), "access_token": token}
+    for i, fbid in enumerate(ids):
+        params[f"attached_media[{i}]"] = _json.dumps({"media_fbid": fbid})
+    return _post(f"{GRAPH_URL}/{page_id}/feed", params).get("id")

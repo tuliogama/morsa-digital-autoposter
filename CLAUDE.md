@@ -425,6 +425,15 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   Meta fixa das páginas (Tulio, 22/10): engajamento, visualização, seguidores e
   comunidade; toda mudança deve dizer qual desses números move.
 - **Imgur não serve para o TikTok (22/10/2026):** a Zernio recebe do Imgur a imagem "conteúdo indisponível na sua região", e os 2 posts manuais da CCXP saíram assim. `post_photos` rehospeda na Release `tiktok-fotos` qualquer URL que não seja do GitHub; o workflow de feed ganhou `GH_TOKEN` para isso. Post publicado não pode ser apagado pela Zernio: só no app.
+- **Facebook religado (23/10/2026, ok do Tulio):** o app ganhou `pages_manage_posts` e
+  `pages_read_user_content` (caso de uso "Gerenciar tudo na sua Página"); o token
+  permanente da página herdou as permissões. Cada estático do Instagram sai também
+  como post de FOTO na Página (`instagram.post_to_facebook_page`, sem link, mesma
+  legenda; desliga com `FACEBOOK_POSTS=off`). Reels não vão (vídeo nunca rendeu lá e
+  repost de terceiros é derrubado). Histórico lido: Ordem Sith (13.994 seguidores)
+  teve mediana de 102 interações em 2022 e morreu por falta de post (8 em 2024); foto
+  37, vídeo 1; melhor hora 8h-9h e 15h. Morsa (254) nunca passou de mediana 1. A
+  revisão noturna traz a seção Facebook (`_facebook_section`).
 - **Stories na revisão noturna** (desde 11/10/2026): `stories.py --insights` roda em toda
   conferência do workflow e guarda alcance, views, respostas, saídas e visitas ao perfil
   em `data/stories_log.json` (a Meta só responde com o story no ar e com 5+ espectadores).
