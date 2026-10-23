@@ -102,10 +102,22 @@ def post_photos(image_urls: list[str], caption: str, scheduled_for: str = None) 
     # Imgur devolve "conteúdo indisponível na sua região" para o servidor da Zernio
     # (22/10/2026: os dois posts da CCXP saíram assim). Imagem fora do GitHub é
     # rehospedada na Release pública antes de ir para o TikTok.
+    import hashlib
+    key = "x" + hashlib.md5("".join(image_urls).encode()).hexdigest()[:10]
+    # Carrossel de 5 ou 6 imagens (desde 23/10/2026): capa, a notícia em partes, a
+    # pergunta em destaque e "segue o Morsa". Com 2 imagens a foto tinha 2 ou 3
+    # curtidas a cada 50 views. Se a montagem falhar, vai como antes.
+    if os.environ.get("TIKTOK_CAROUSEL", "on") != "off":
+        try:
+            import tiktok_slides
+            from tiktok_photos import host_bytes
+            slides = tiktok_slides.build(image_urls[0], caption, image_urls[1] if len(image_urls) > 1 else None)
+            image_urls = host_bytes(slides, key)
+        except Exception as e:
+            logger.warning(f"Carrossel não montou ({str(e)[:150]}); vai com as imagens do post")
     if any("github" not in u for u in image_urls):
         from tiktok_photos import _host
-        import hashlib
-        image_urls = _host(image_urls, "x" + hashlib.md5("".join(image_urls).encode()).hexdigest()[:10])
+        image_urls = _host(image_urls, key)
     caption = _cap(caption)
     title = re.sub(r"#\w+", "", caption.split("\n")[0]).strip()[:90]
     body = {

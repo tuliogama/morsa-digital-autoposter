@@ -434,6 +434,14 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   teve mediana de 102 interações em 2022 e morreu por falta de post (8 em 2024); foto
   37, vídeo 1; melhor hora 8h-9h e 15h. Morsa (254) nunca passou de mediana 1. A
   revisão noturna traz a seção Facebook (`_facebook_section`).
+- **Carrossel de 5 ou 6 imagens no TikTok (23/10/2026, ok do Tulio):** `src/tiktok_slides.py`
+  monta capa (arte do post) + até 3 slides com a notícia em partes + a pergunta da
+  legenda em destaque + "segue o Morsa". Fundo = a própria arte desfocada; fonte
+  Montserrat (OFL) em `assets/fonts`. Vale para notícia do dia e acervo, dentro de
+  `publishers.tiktok.post_photos` (slides sobem na Release `tiktok-fotos` via
+  `tiktok_photos.host_bytes`); se falhar, vai com as 2 imagens. Desliga com
+  `TIKTOK_CAROUSEL=off`. Motivo: com 2 imagens eram 2-3 curtidas a cada 50 views;
+  estudos apontam 5-6 imagens como ideal em conta pequena.
 - **Stories na revisão noturna** (desde 11/10/2026): `stories.py --insights` roda em toda
   conferência do workflow e guarda alcance, views, respostas, saídas e visitas ao perfil
   em `data/stories_log.json` (a Meta só responde com o story no ar e com 5+ espectadores).

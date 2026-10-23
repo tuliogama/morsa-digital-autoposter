@@ -202,6 +202,26 @@ def _host(urls: list[str], media_id: str) -> list[str]:
     return out
 
 
+def host_bytes(images: list[bytes], key: str) -> list[str]:
+    """Sobe imagens já montadas (o carrossel) na Release pública e devolve as URLs."""
+    if subprocess.run(["gh", "release", "view", RELEASE_TAG, "--repo", REPO],
+                      capture_output=True).returncode != 0:
+        subprocess.run(["gh", "release", "create", RELEASE_TAG, "--repo", REPO, "--title",
+                        "Fotos do TikTok", "--notes", "Artes do feed aguardando o TikTok."],
+                       capture_output=True, check=True)
+    out = []
+    with tempfile.TemporaryDirectory(prefix="tk_car_") as tmp:
+        for i, data in enumerate(images):
+            path = os.path.join(tmp, f"{key}_c{i}.jpg")
+            Path(path).write_bytes(data)
+            r = subprocess.run(["gh", "release", "upload", RELEASE_TAG, path, "--repo", REPO,
+                                "--clobber"], capture_output=True, text=True)
+            if r.returncode != 0:
+                raise RuntimeError(f"upload falhou: {r.stderr[-200:]}")
+            out.append(f"https://github.com/{REPO}/releases/download/{RELEASE_TAG}/{os.path.basename(path)}")
+    return out
+
+
 def schedule(days_ahead: int = 2, max_new: int = 25) -> int:
     from publishers import tiktok
     if not tiktok.enabled():
