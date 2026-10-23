@@ -671,21 +671,40 @@
   "story_id": "18083361665338413",
   "at": "2026-10-22T18:06:16-03:00",
   "insights": {
-   "reach": 14,
-   "views": 17,
+   "reach": 20,
+   "views": 29,
    "replies": 1,
    "shares": 0,
-   "total_interactions": 2,
+   "total_interactions": 3,
    "follows": 0,
    "profile_visits": 1,
+   "tap_back": 2,
    "tap_exit": 7,
-   "tap_forward": 8
+   "tap_forward": 18
   },
-  "insights_at": "2026-10-23T09:36:15-03:00"
+  "insights_at": "2026-10-23T12:48:32-03:00"
  },
  {
   "media_id": "18103437416334146",
   "story_id": "17910058731590885",
-  "at": "2026-10-23T09:35:28-03:00"
+  "at": "2026-10-23T09:35:28-03:00",
+  "insights": {
+   "reach": 13,
+   "views": 22,
+   "replies": 1,
+   "shares": 0,
+   "total_interactions": 2,
+   "follows": 0,
+   "profile_visits": 0,
+   "tap_forward": 9,
+   "tap_exit": 5,
+   "tap_back": 4
+  },
+  "insights_at": "2026-10-23T12:48:32-03:00"
+ },
+ {
+  "media_id": "18233917891324478",
+  "story_id": "18117817099791064",
+  "at": "2026-10-23T12:47:39-03:00"
  }
 ]
