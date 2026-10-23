@@ -2221,7 +2221,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=gXPvHFV1T6k",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/gXPvHFV1T6k.mp4",
     "added_at": "2026-10-13T02:04:52.319505-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 5,
     "theme": "bastidores",
@@ -2230,7 +2230,9 @@
     "lang": "pt",
     "caption": "A trapaça do Loki te pegou de jeito ou você já esperava?\n\nVer os bastidores de como essa cena foi gravada mostra o quanto o personagem é caótico.\nÉ impossível não pensar em quantas vezes ele já virou o jogo contra o público.\n\nComenta aí qual foi a sua reação quando viu essa parte.\n\nVídeo: Marvel Brasil (canal oficial no YouTube)\n\n#Loki #MarvelStudios #DisneyPlus #MCU #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-23T11:11:28.979359-03:00",
+    "media_id": "18233917891324478"
   },
   {
     "video_id": "Y2zmCKXTSX0",
