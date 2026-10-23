@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-22",
-  "generated_at": "2026-10-22T05:49:43.231237+00:00",
-  "strategy_note": "Priorize pautas de anime_big e dc, que apresentam as maiores medianas de engajamento, e mantenha o foco no GTA 6 explorando ângulos de humor ou polêmica, já que as notícias factuais sobre o jogo estão entre as piores performas recentes. Evite pautas de game_niche e other, cujas medianas são as mais baixas do feed, e não corte o GTA 6 da grade, pois sua frequência é fixa por decisão editorial."
+  "date": "2026-10-23",
+  "generated_at": "2026-10-23T05:48:47.813442+00:00",
+  "strategy_note": "Priorize pautas de DC e Marvel com foco em notícias de bastidores ou correções de boatos, pois essas categorias apresentam medianas acima da média geral e os melhores posts recentes trataram justamente de esclarecimentos e comparações. Evite novos posts de GTA, já que a categoria está abaixo da mediana com alta frequência (n=26) e os piores resultados dos últimos 7 dias foram todos desse tema, mantendo a cota diária apenas para ângulos que realmente gerem engajamento."
 }
