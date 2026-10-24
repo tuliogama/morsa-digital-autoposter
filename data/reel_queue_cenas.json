@@ -325,7 +325,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=2Bto3Mlbn0o",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/2Bto3Mlbn0o.mp4",
     "added_at": "2026-10-06T23:06:48.027465-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 1,
     "scheduled_for": "2026-10-24",
@@ -334,7 +334,9 @@
     "lang": "pt",
     "caption": "A Última Casa te deixou em alerta máximo ou só no sufoco?\n\nA ideia de estar trancado na própria casa com Wagner Moura e Greta Lee, lidando com a escassez e uma força desconhecida, é o tipo de tensão que gruda.\n\nQual foi o momento que mais te deixou com o coração na boca?\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#AultimaCasa #WagnerMoura #GretaLee #Suspense #Netflix #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-24T11:03:11.922645-03:00",
+    "media_id": "18110359583132477"
   },
   {
     "video_id": "0MLmL4uOg0k",
