@@ -1,24 +1,8 @@
-# Fila de reels @morsadigital — 23/10/2026 10:05 BRT
+# Fila de reels @morsadigital — 24/10/2026 01:25 BRT
 
 ## cenas — a partir das 11h
 
-134 na fila | legendas ok: 29 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 23/10 — Loki | Marvel Studios | Trapaça | Featurette Oficial Legendado
-Marvel Brasil · horizontal · pt · legenda: ok
-
-```
-A trapaça do Loki te pegou de jeito ou você já esperava?
-
-Ver os bastidores de como essa cena foi gravada mostra o quanto o personagem é caótico.
-É impossível não pensar em quantas vezes ele já virou o jogo contra o público.
-
-Comenta aí qual foi a sua reação quando viu essa parte.
-
-Vídeo: Marvel Brasil (canal oficial no YouTube)
-
-#Loki #MarvelStudios #DisneyPlus #MCU #MorsaDigital
-```
+133 na fila | legendas ok: 28 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 24/10 — NOVO MEDO DESBLOQUEADO 😱
 Netflix Brasil · vertical · pt · legenda: ok
@@ -1082,24 +1066,16 @@ Netflix Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
+### 20/02 — JAIME LANNISTER RELEMBRA PRIMEIRO EPISÓDIO DE GOT! 🥹
+HBO Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
 ## main — a partir das 13h
 
-92 na fila | legendas ok: 6 | a revisar: 3 | dias sem reel no calendário: 0
-
-### 23/10 — Grand Theft Auto V Trailer
-Rockstar Games · horizontal · en · legenda: ok
-
-```
-GTA V. Sim, aquele mesmo.
-
-Lembra da sensação de ver esse trailer pela primeira vez em 2011? A expectativa era tão alta que parecia que o jogo ia mudar o mundo do videogame ali mesmo.
-
-Muita gente ainda usa esse vídeo como referência pra medir o hype do GTA VI. Qual foi a sua primeira reação quando esse anúncio aconteceu lá atrás?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
-
-#GTA5 #GTA #RockstarGames #GTA6
-```
+91 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 24/10 — Fortnite: Pesadelos 2026 - Trailer Cinematográfico | PS5 & PS4
 PlayStation Brasil · ? · ? · legenda: ok
@@ -1147,36 +1123,48 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 ```
 
 ### 27/10 — Red Dead Redemption 2: Official Trailer #3
-Rockstar Games · horizontal · en · legenda: revisar (0 hashtags (esperado 3 a 5))
+Rockstar Games · horizontal · en · legenda: ok
 
 ```
-Red Dead Redemption 2, esse trailer de 2018 ainda bate forte na memória de quem acompanhou o final da era western.
+Red Dead Redemption 2 e aquele final da era do velho oeste. Não tô pronto pra reviver essa sensação de urgência que o trailer 3 passava.
 
-A história de Arthur Morgan e a fuga da gangue Van der Linde pelo coração dos EUA em 1899 marcou uma geração de gamers. Ver a tensão entre os ideais pessoais e a lealdade ao bando que o criou continua sendo o coração pulsante da narrativa criada pela Rockstar.
+É a última dança da gangue Van der Linde antes de tudo desmoronar. Com Arthur Morgan no centro de um dilema entre ideais e lealdade, a Rockstar entregou uma narrativa densa sobre a queda de um grupo que tentava sobreviver em um mundo que já não tinha lugar para foras da lei.
 
-Qual foi a primeira reação de vocês quando esse vídeo saiu pela primeira vez?
+Qual foi a sua primeira reação quando viu esse trailer pela primeira vez? Você sentiu o peso da despedida desde o início?
 
 Vídeo: Rockstar Games (canal oficial no YouTube)
+
+#RedDeadRedemption2 #ArthurMorgan #RockstarGames #GTA6 #Gamer
 ```
 
 ### 28/10 — OS FANTASMAS AINDA SE DIVERTEM: BEETLEJUICE BEETLEJUICE l Trailer Oficial #2
-Warner Bros. Pictures Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 3 a 5))
+Warner Bros. Pictures Brasil · ? · ? · legenda: revisar (detalhe sem base: Winona Ryder (série “Stranger Things”, “Adoráveis Mulheres”))
 
 ```
-Beetlejuice Beetlejuice, essa sequência do Tim Burton e do Michael Keaton é um absoluto caos e eu não poderia estar mais feliz com isso.
+Beetlejuice Beetlejuice e aquele frio na barriga de ver o Tim Burton soltar a imaginação de novo.
 
-Vale rever esse trailer oficial número 2, especialmente agora que estamos no clima de Halloween da Morsa. Ter Winona Ryder voltando como Lydia Deetz e Catherine O'Hara no elenco faz todo sentido pra quem cresceu com o clássico e quer ver como a dinâmica da família Deetz evoluiu. A direção do Burton nessa fase é pura alucinação visual, do jeito que a gente adora.
+A sequência chega com Michael Keaton de volta ao papel que é dele, Winona Ryder como Lydia Deetz e a talentosa Catherine O'Hara no elenco. É a mistura perfeita do caos estético do diretor com a nostalgia de quem cresceu com o original, tudo embalado nesse clima de Halloween que a Morsa ama.
 
-Qual foi a primeira coisa que te veio à cabeça ao ver o Beetlejuice de volta?
+Agora que já viu, qual foi a cena que mais te pegou de surpresa ou qual parte do universo fantasma te fez rir?
 
 Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
+
+#Beetlejuice #OsFantasmasAindaSeDivertem #MichaelKeaton #WinonaRyder #TimBurton
 ```
 
 ### 29/10 — Stranger Things 5 | Trailer - Volume 2 | Netflix
-Netflix Brasil · ? · ? · legenda: ainda não gerada
+Netflix Brasil · ? · ? · legenda: ok
 
 ```
-(gerada na hora da publicação)
+Que alívio perceber que a gente estava completamente errado sobre o Mundo Invertido.
+
+Esse é o Volume 2 da temporada final, o último ato da saga que marcou uma geração. A Netflix confirmou que esse trecho chega em 25 de dezembro às 22h (horário de Brasília), fechando o ciclo com tudo.
+
+Qual foi o momento do trailer que mais te deixou com o coração acelerado?
+
+Vídeo: Netflix Brasil (canal oficial no YouTube)
+
+#StrangerThings #StrangerThings5 #MundoInvertido #Netflix #Halloween
 ```
 
 ### 30/10 — Grand Theft Auto Online – Heists Trailer

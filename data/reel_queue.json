@@ -332,10 +332,10 @@
     "scheduled_for": "2026-10-28",
     "theme": "halloween",
     "caption_style": "padrao",
-    "caption": "Beetlejuice Beetlejuice, essa sequência do Tim Burton e do Michael Keaton é um absoluto caos e eu não poderia estar mais feliz com isso.\n\nVale rever esse trailer oficial número 2, especialmente agora que estamos no clima de Halloween da Morsa. Ter Winona Ryder voltando como Lydia Deetz e Catherine O'Hara no elenco faz todo sentido pra quem cresceu com o clássico e quer ver como a dinâmica da família Deetz evoluiu. A direção do Burton nessa fase é pura alucinação visual, do jeito que a gente adora.\n\nQual foi a primeira coisa que te veio à cabeça ao ver o Beetlejuice de volta?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)",
+    "caption": "Beetlejuice Beetlejuice e aquele frio na barriga de ver o Tim Burton soltar a imaginação de novo.\n\nA sequência chega com Michael Keaton de volta ao papel que é dele, Winona Ryder como Lydia Deetz e a talentosa Catherine O'Hara no elenco. É a mistura perfeita do caos estético do diretor com a nostalgia de quem cresceu com o original, tudo embalado nesse clima de Halloween que a Morsa ama.\n\nAgora que já viu, qual foi a cena que mais te pegou de surpresa ou qual parte do universo fantasma te fez rir?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#Beetlejuice #OsFantasmasAindaSeDivertem #MichaelKeaton #WinonaRyder #TimBurton",
     "caption_check": "revisar",
     "caption_problems": [
-      "0 hashtags (esperado 3 a 5)"
+      "detalhe sem base: Winona Ryder (série “Stranger Things”, “Adoráveis Mulheres”)"
     ]
   },
   {
@@ -353,7 +353,11 @@
     "kind": "acervo",
     "plan_order": 13,
     "scheduled_for": "2026-10-29",
-    "theme": "halloween"
+    "theme": "halloween",
+    "caption_style": "eu",
+    "caption": "Que alívio perceber que a gente estava completamente errado sobre o Mundo Invertido.\n\nEsse é o Volume 2 da temporada final, o último ato da saga que marcou uma geração. A Netflix confirmou que esse trecho chega em 25 de dezembro às 22h (horário de Brasília), fechando o ciclo com tudo.\n\nQual foi o momento do trailer que mais te deixou com o coração acelerado?\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#StrangerThings #StrangerThings5 #MundoInvertido #Netflix #Halloween",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "n0sq-r0mBXQ",
@@ -461,11 +465,9 @@
     "layout": "horizontal",
     "lang": "en",
     "caption_style": "padrao",
-    "caption": "Red Dead Redemption 2, esse trailer de 2018 ainda bate forte na memória de quem acompanhou o final da era western.\n\nA história de Arthur Morgan e a fuga da gangue Van der Linde pelo coração dos EUA em 1899 marcou uma geração de gamers. Ver a tensão entre os ideais pessoais e a lealdade ao bando que o criou continua sendo o coração pulsante da narrativa criada pela Rockstar.\n\nQual foi a primeira reação de vocês quando esse vídeo saiu pela primeira vez?\n\nVídeo: Rockstar Games (canal oficial no YouTube)",
-    "caption_check": "revisar",
-    "caption_problems": [
-      "0 hashtags (esperado 3 a 5)"
-    ]
+    "caption": "Red Dead Redemption 2 e aquele final da era do velho oeste. Não tô pronto pra reviver essa sensação de urgência que o trailer 3 passava.\n\nÉ a última dança da gangue Van der Linde antes de tudo desmoronar. Com Arthur Morgan no centro de um dilema entre ideais e lealdade, a Rockstar entregou uma narrativa densa sobre a queda de um grupo que tentava sobreviver em um mundo que já não tinha lugar para foras da lei.\n\nQual foi a sua primeira reação quando viu esse trailer pela primeira vez? Você sentiu o peso da despedida desde o início?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#RedDeadRedemption2 #ArthurMorgan #RockstarGames #GTA6 #Gamer",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "UDd3pTE8UsQ",
