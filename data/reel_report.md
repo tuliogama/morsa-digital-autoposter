@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 24/10/2026 01:25 BRT
+# Fila de reels @morsadigital — 24/10/2026 06:21 BRT
 
 ## cenas — a partir das 11h
 
@@ -1138,18 +1138,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 28/10 — OS FANTASMAS AINDA SE DIVERTEM: BEETLEJUICE BEETLEJUICE l Trailer Oficial #2
-Warner Bros. Pictures Brasil · ? · ? · legenda: revisar (detalhe sem base: Winona Ryder (série “Stranger Things”, “Adoráveis Mulheres”))
+Warner Bros. Pictures Brasil · ? · ? · legenda: revisar (detalhe sem base: especial de Halloween da Morsa)
 
 ```
-Beetlejuice Beetlejuice e aquele frio na barriga de ver o Tim Burton soltar a imaginação de novo.
+Que clássico voltou com tudo e já tá garantindo risadas no especial de Halloween da Morsa.
 
-A sequência chega com Michael Keaton de volta ao papel que é dele, Winona Ryder como Lydia Deetz e a talentosa Catherine O'Hara no elenco. É a mistura perfeita do caos estético do diretor com a nostalgia de quem cresceu com o original, tudo embalado nesse clima de Halloween que a Morsa ama.
+Tim Burton e Michael Keaton se unem novamente para essa aguardada sequência, trazendo de volta a vibe única do original. É a chance perfeita de relembrar por que o fantasma mais caótico do cinema conquistou o Brasil há décadas.
 
-Agora que já viu, qual foi a cena que mais te pegou de surpresa ou qual parte do universo fantasma te fez rir?
+Relembre esse trailer e me conta: qual memória do primeiro filme ficou marcada na sua cabeça até hoje?
 
 Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
-#Beetlejuice #OsFantasmasAindaSeDivertem #MichaelKeaton #WinonaRyder #TimBurton
+#Beetlejuice #OsFantasmasAindaSeDivertem #MichaelKeaton #TimBurton #Halloween
 ```
 
 ### 29/10 — Stranger Things 5 | Trailer - Volume 2 | Netflix
