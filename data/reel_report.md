@@ -1,23 +1,8 @@
-# Fila de reels @morsadigital — 24/10/2026 06:21 BRT
+# Fila de reels @morsadigital — 25/10/2026 08:44 BRT
 
 ## cenas — a partir das 11h
 
-133 na fila | legendas ok: 28 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 24/10 — NOVO MEDO DESBLOQUEADO 😱
-Netflix Brasil · vertical · pt · legenda: ok
-
-```
-A Última Casa te deixou em alerta máximo ou só no sufoco?
-
-A ideia de estar trancado na própria casa com Wagner Moura e Greta Lee, lidando com a escassez e uma força desconhecida, é o tipo de tensão que gruda.
-
-Qual foi o momento que mais te deixou com o coração na boca?
-
-Vídeo: Netflix Brasil (canal oficial no YouTube)
-
-#AultimaCasa #WagnerMoura #GretaLee #Suspense #Netflix #MorsaDigital
-```
+132 na fila | legendas ok: 27 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 25/10 — AUTOMATICAMENTE mudo de personalidade. 🥵  #Halloween
 HBO Max Brasil · vertical · pt · legenda: ok
@@ -1073,24 +1058,16 @@ HBO Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
+### 21/02 — O quão fã de My Hero Academia você é??
+Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
 ## main — a partir das 13h
 
-91 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
-
-### 24/10 — Fortnite: Pesadelos 2026 - Trailer Cinematográfico | PS5 & PS4
-PlayStation Brasil · ? · ? · legenda: ok
-
-```
-Eu ainda tô com o coração acelerado só de lembrar a primeira vez que vi esses pesadelos invadirem o mapa, e vocês?
-
-Fortnitemares sempre foi o momento mais assustador do Battle Royale, misturando o caos da caçada com uma atmosfera de terror que pega de surpresa. Com a volta marcada para o dia 1º de outubro, a expectativa é de que a experiência seja ainda mais imersiva, aproveitando o clima de Halloween para assombrar os jogadores.
-
-O que vocês acham, a tensão vai superar o medo de ficar sozinho no final do jogo?
-
-Vídeo: PlayStation Brasil (canal oficial no YouTube)
-
-#Fortnite #Fortnitemares #Halloween #BattleRoyale #PS5
-```
+90 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 25/10 — Premonição 6: Laços de Sangue l Trailer Oficial
 Warner Bros. Pictures Brasil · ? · ? · legenda: ok
@@ -1138,14 +1115,14 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 28/10 — OS FANTASMAS AINDA SE DIVERTEM: BEETLEJUICE BEETLEJUICE l Trailer Oficial #2
-Warner Bros. Pictures Brasil · ? · ? · legenda: revisar (detalhe sem base: especial de Halloween da Morsa)
+Warner Bros. Pictures Brasil · ? · ? · legenda: revisar (detalhe sem base: retorno de Winona Ryder e Catherine O'Hara)
 
 ```
-Que clássico voltou com tudo e já tá garantindo risadas no especial de Halloween da Morsa.
+Beetlejuice Beetlejuice, esse retorno do Tim Burton e do Michael Keaton me pegou de surpresa.
 
-Tim Burton e Michael Keaton se unem novamente para essa aguardada sequência, trazendo de volta a vibe única do original. É a chance perfeita de relembrar por que o fantasma mais caótico do cinema conquistou o Brasil há décadas.
+A sequência de Os Fantasmas se Divertem traz a criatividade única do diretor e o retorno de Winona Ryder e Catherine O'Hara ao lado do astro. É aquele mix de terror e comédia que só o Burton sabe fazer, renovando uma das franquias mais queridas do cinema.
 
-Relembre esse trailer e me conta: qual memória do primeiro filme ficou marcada na sua cabeça até hoje?
+Qual parte da trilha sonora ou do design de produção te fez lembrar da infância?
 
 Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
@@ -1168,10 +1145,18 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 30/10 — Grand Theft Auto Online – Heists Trailer
-Rockstar Games · horizontal · en · legenda: ainda não gerada
+Rockstar Games · horizontal · en · legenda: ok
 
 ```
-(gerada na hora da publicação)
+Lembrando que esse trailer de Heists pra GTA Online me colocou no hype máximo em 2014, e você ainda lembra da primeira vez que jogou uma assalto em equipe?
+
+Era o conteúdo que faltava pra transformar o multiplayer de Los Santos em algo realmente estratégico. A Rockstar trabalhou meses nisso pra garantir que a comunicação entre os quatro jogadores fosse essencial, com missões multiestágios que exigiam coordenação precisa.
+
+Qual foi o primeiro assalto que você e seus amigos completaram sem ninguém morrer?
+
+Vídeo: Rockstar Games (canal oficial no YouTube)
+
+#GTAV #GTAOnline #Assaltos #RockstarGames #MorsaDigital
 ```
 
 ### 31/10 — Invocação do Mal: O Último Ritual l Trailer Oficial Dublado

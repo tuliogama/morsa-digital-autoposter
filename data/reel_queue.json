@@ -334,10 +334,10 @@
     "scheduled_for": "2026-10-28",
     "theme": "halloween",
     "caption_style": "padrao",
-    "caption": "Que clássico voltou com tudo e já tá garantindo risadas no especial de Halloween da Morsa.\n\nTim Burton e Michael Keaton se unem novamente para essa aguardada sequência, trazendo de volta a vibe única do original. É a chance perfeita de relembrar por que o fantasma mais caótico do cinema conquistou o Brasil há décadas.\n\nRelembre esse trailer e me conta: qual memória do primeiro filme ficou marcada na sua cabeça até hoje?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#Beetlejuice #OsFantasmasAindaSeDivertem #MichaelKeaton #TimBurton #Halloween",
+    "caption": "Beetlejuice Beetlejuice, esse retorno do Tim Burton e do Michael Keaton me pegou de surpresa.\n\nA sequência de Os Fantasmas se Divertem traz a criatividade única do diretor e o retorno de Winona Ryder e Catherine O'Hara ao lado do astro. É aquele mix de terror e comédia que só o Burton sabe fazer, renovando uma das franquias mais queridas do cinema.\n\nQual parte da trilha sonora ou do design de produção te fez lembrar da infância?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#Beetlejuice #OsFantasmasAindaSeDivertem #MichaelKeaton #TimBurton #Halloween",
     "caption_check": "revisar",
     "caption_problems": [
-      "detalhe sem base: especial de Halloween da Morsa"
+      "detalhe sem base: retorno de Winona Ryder e Catherine O'Hara"
     ]
   },
   {
@@ -488,7 +488,11 @@
     "scheduled_for": "2026-10-30",
     "theme": "gta",
     "layout": "horizontal",
-    "lang": "en"
+    "lang": "en",
+    "caption_style": "eu",
+    "caption": "Lembrando que esse trailer de Heists pra GTA Online me colocou no hype máximo em 2014, e você ainda lembra da primeira vez que jogou uma assalto em equipe?\n\nEra o conteúdo que faltava pra transformar o multiplayer de Los Santos em algo realmente estratégico. A Rockstar trabalhou meses nisso pra garantir que a comunicação entre os quatro jogadores fosse essencial, com missões multiestágios que exigiam coordenação precisa.\n\nQual foi o primeiro assalto que você e seus amigos completaram sem ninguém morrer?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#GTAV #GTAOnline #Assaltos #RockstarGames #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "hvoD7ehZPcM",
