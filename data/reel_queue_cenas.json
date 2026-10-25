@@ -349,7 +349,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=0MLmL4uOg0k",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/0MLmL4uOg0k.mp4",
     "added_at": "2026-10-06T23:08:14.824140-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 2,
     "scheduled_for": "2026-10-25",
@@ -358,7 +358,9 @@
     "lang": "pt",
     "caption": "Qual cena de Halloween te deu mais medo: a original ou essa?\n\nA mudança de personalidade automática é o tipo de detalhe que faz o sangue gelar.\nÉ o momento em que você percebe que não existe mais ninguém ali, só o monstro.\nEsse é o poder do clássico revisitado para a nova geração.\n\nComenta aí qual foi a primeira vez que você sentiu esse arrepio.\n\nVídeo: HBO Max Brasil (canal oficial no YouTube)\n\n#Halloween #HalloweenHBO #MichaelMyers #SérieDeTerror #EspecialDeHalloween #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-25T14:18:45.410057-03:00",
+    "media_id": "17938495284127125"
   },
   {
     "video_id": "gbTPu89fEXg",
