@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 26/10/2026 00:16 BRT
+# Fila de reels @morsadigital — 26/10/2026 01:47 BRT
 
 ## cenas — a partir das 11h
 
@@ -1137,18 +1137,16 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 31/10 — Invocação do Mal: O Último Ritual l Trailer Oficial Dublado
-Warner Bros. Pictures Brasil · ? · ? · legenda: revisar (trata vídeo antigo como novidade)
+Warner Bros. Pictures Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 3 a 5))
 
 ```
-Invocação do Mal: O Último Ritual chegou pra fechar com chave de ouro a saga dos Warren e eu ainda tô com a vibe de Halloween batendo forte.
+Vera Farmiga e Patrick Wilson de volta, e o peso de "Último Ritual" no título já deixa a gente com um frio na espinha.
 
-Vera Farmiga e Patrick Wilson voltam às telas nesse nono capítulo da franquia, produzido pelos criadores do universo, James Wan e Peter Safran. É o encerramento oficial dessa história baseada em eventos reais, então o peso emocional de ver a dupla agindo pela última vez juntos é outro.
+É o nono filme do universo Invocação do Mal, que já passou dos 2 bilhões de dólares em bilheteria. Michael Chaves na direção e James Wan por trás da produção mantêm a essência da franquia que virou referência no terror brasileiro.
 
-O que mais te marcou nessa conclusão: a tensão final ou a despedida dos atores?
+Qual cena específica desse trailer te fez segurar o ar?
 
 Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
-
-#InvocacaoDoMal #VeraFarmiga #PatrickWilson #Halloween #NewLineCinema
 ```
 
 ### 01/11 — Resident Evil | Trailer Oficial | Dublado
