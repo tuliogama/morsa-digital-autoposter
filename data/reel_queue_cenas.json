@@ -373,7 +373,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=gbTPu89fEXg",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/gbTPu89fEXg.mp4",
     "added_at": "2026-10-06T23:10:11.065737-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 3,
     "scheduled_for": "2026-10-26",
@@ -382,7 +382,9 @@
     "lang": "pt",
     "caption": "Sidney Prescott voltou, e você acha que ela aguenta mais um Ghostface?\n\nVer Neve Campbell de volta no papel é o tipo de notícia que dá um frio na espinha, né?\nÉ a certeza de que a franquia Pânico continua viva e pronta para aterrorizar.\n\nComenta aqui: você vai ao cinema conferir ou fica de fora?\n\nVídeo: Paramount Brasil (canal oficial no YouTube)\n\n#Panico #Scream #NeveCampbell #SidneyPrescott #Ghostface #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-26T11:08:14.294472-03:00",
+    "media_id": "18105846338574915"
   },
   {
     "video_id": "N5xoBTnuW1w",
