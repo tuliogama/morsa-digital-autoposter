@@ -336,11 +336,9 @@
     "scheduled_for": "2026-10-28",
     "theme": "halloween",
     "caption_style": "padrao",
-    "caption": "Beetlejuice Beetlejuice, esse retorno do Tim Burton e do Michael Keaton me pegou de surpresa.\n\nA sequência de Os Fantasmas se Divertem traz a criatividade única do diretor e o retorno de Winona Ryder e Catherine O'Hara ao lado do astro. É aquele mix de terror e comédia que só o Burton sabe fazer, renovando uma das franquias mais queridas do cinema.\n\nQual parte da trilha sonora ou do design de produção te fez lembrar da infância?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#Beetlejuice #OsFantasmasAindaSeDivertem #MichaelKeaton #TimBurton #Halloween",
-    "caption_check": "revisar",
-    "caption_problems": [
-      "detalhe sem base: retorno de Winona Ryder e Catherine O'Hara"
-    ]
+    "caption": "Beetlejuice voltou e o meu instinto de nerd foi direto pro modo nostalgia extrema.\n\nTim Burton e Michael Keaton reunidos para essa sequência é o tipo de notícia que faz o coração acelerar. A volta de Winona Ryder como Lydia Deetz depois de tantos anos é um detalhe que fecha o ciclo de uma forma que só cinema sabe fazer.\n\nVale rever essa segunda parte do trailer para pegar todos os detalhes da direção do Burton.\n\nQual foi a primeira reação de vocês quando o nome dele apareceu nessa continuação?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#OsFantasmasAindaSeDivertem #Beetlejuice #MichaelKeaton #WinonaRyder #TimBurton",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "GqR2FG3G810",
@@ -378,7 +376,13 @@
     "kind": "acervo",
     "plan_order": 15,
     "scheduled_for": "2026-10-31",
-    "theme": "halloween"
+    "theme": "halloween",
+    "caption_style": "padrao",
+    "caption": "Invocação do Mal: O Último Ritual chegou pra fechar com chave de ouro a saga dos Warren e eu ainda tô com a vibe de Halloween batendo forte.\n\nVera Farmiga e Patrick Wilson voltam às telas nesse nono capítulo da franquia, produzido pelos criadores do universo, James Wan e Peter Safran. É o encerramento oficial dessa história baseada em eventos reais, então o peso emocional de ver a dupla agindo pela última vez juntos é outro.\n\nO que mais te marcou nessa conclusão: a tensão final ou a despedida dos atores?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#InvocacaoDoMal #VeraFarmiga #PatrickWilson #Halloween #NewLineCinema",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "trata vídeo antigo como novidade"
+    ]
   },
   {
     "video_id": "M-WFfF2ETgk",

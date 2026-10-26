@@ -1,25 +1,8 @@
-# Fila de reels @morsadigital — 25/10/2026 08:44 BRT
+# Fila de reels @morsadigital — 26/10/2026 00:16 BRT
 
 ## cenas — a partir das 11h
 
-132 na fila | legendas ok: 27 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 25/10 — AUTOMATICAMENTE mudo de personalidade. 🥵  #Halloween
-HBO Max Brasil · vertical · pt · legenda: ok
-
-```
-Qual cena de Halloween te deu mais medo: a original ou essa?
-
-A mudança de personalidade automática é o tipo de detalhe que faz o sangue gelar.
-É o momento em que você percebe que não existe mais ninguém ali, só o monstro.
-Esse é o poder do clássico revisitado para a nova geração.
-
-Comenta aí qual foi a primeira vez que você sentiu esse arrepio.
-
-Vídeo: HBO Max Brasil (canal oficial no YouTube)
-
-#Halloween #HalloweenHBO #MichaelMyers #SérieDeTerror #EspecialDeHalloween #MorsaDigital
-```
+131 na fila | legendas ok: 26 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 26/10 — Nada será um obstáculo para o Ghostface em #Pânico7! 🔪
 Paramount Brasil · vertical · pt · legenda: ok
@@ -1065,24 +1048,16 @@ Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
+### 22/02 — Liu Kang Vs Kung Lao em Mortal Kombat II. 🔥😮‍💨  #MortalKombat
+HBO Max Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
 ## main — a partir das 13h
 
-90 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
-
-### 25/10 — Premonição 6: Laços de Sangue l Trailer Oficial
-Warner Bros. Pictures Brasil · ? · ? · legenda: ok
-
-```
-Premonição 6: Laços de Sangue voltou a me dar calafrios só de lembrar da tensão daquela franquia, e você?
-
-É o retorno da série que redefine o terror psicológico nos cinemas, trazendo de volta aquela sensação de impotência diante de um destino inescapável. A trama foca em Stefanie, que precisa voltar para casa para tentar quebrar um ciclo fatal que ameaça toda a sua família.
-
-Para quem já viu, qual foi a parte que mais te deixou com o coração acelerado?
-
-Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
-
-#Premonicao #Premonicao6 #LaçosDeSangue #KaitlynSantaJuana #Terror
-```
+89 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 26/10 — A FREIRA 2 | TRAILER OFICIAL
 Warner Bros. Pictures Brasil · ? · ? · legenda: ok
@@ -1115,18 +1090,20 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 28/10 — OS FANTASMAS AINDA SE DIVERTEM: BEETLEJUICE BEETLEJUICE l Trailer Oficial #2
-Warner Bros. Pictures Brasil · ? · ? · legenda: revisar (detalhe sem base: retorno de Winona Ryder e Catherine O'Hara)
+Warner Bros. Pictures Brasil · ? · ? · legenda: ok
 
 ```
-Beetlejuice Beetlejuice, esse retorno do Tim Burton e do Michael Keaton me pegou de surpresa.
+Beetlejuice voltou e o meu instinto de nerd foi direto pro modo nostalgia extrema.
 
-A sequência de Os Fantasmas se Divertem traz a criatividade única do diretor e o retorno de Winona Ryder e Catherine O'Hara ao lado do astro. É aquele mix de terror e comédia que só o Burton sabe fazer, renovando uma das franquias mais queridas do cinema.
+Tim Burton e Michael Keaton reunidos para essa sequência é o tipo de notícia que faz o coração acelerar. A volta de Winona Ryder como Lydia Deetz depois de tantos anos é um detalhe que fecha o ciclo de uma forma que só cinema sabe fazer.
 
-Qual parte da trilha sonora ou do design de produção te fez lembrar da infância?
+Vale rever essa segunda parte do trailer para pegar todos os detalhes da direção do Burton.
+
+Qual foi a primeira reação de vocês quando o nome dele apareceu nessa continuação?
 
 Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
-#Beetlejuice #OsFantasmasAindaSeDivertem #MichaelKeaton #TimBurton #Halloween
+#OsFantasmasAindaSeDivertem #Beetlejuice #MichaelKeaton #WinonaRyder #TimBurton
 ```
 
 ### 29/10 — Stranger Things 5 | Trailer - Volume 2 | Netflix
@@ -1160,10 +1137,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 31/10 — Invocação do Mal: O Último Ritual l Trailer Oficial Dublado
-Warner Bros. Pictures Brasil · ? · ? · legenda: ainda não gerada
+Warner Bros. Pictures Brasil · ? · ? · legenda: revisar (trata vídeo antigo como novidade)
 
 ```
-(gerada na hora da publicação)
+Invocação do Mal: O Último Ritual chegou pra fechar com chave de ouro a saga dos Warren e eu ainda tô com a vibe de Halloween batendo forte.
+
+Vera Farmiga e Patrick Wilson voltam às telas nesse nono capítulo da franquia, produzido pelos criadores do universo, James Wan e Peter Safran. É o encerramento oficial dessa história baseada em eventos reais, então o peso emocional de ver a dupla agindo pela última vez juntos é outro.
+
+O que mais te marcou nessa conclusão: a tensão final ou a despedida dos atores?
+
+Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
+
+#InvocacaoDoMal #VeraFarmiga #PatrickWilson #Halloween #NewLineCinema
 ```
 
 ### 01/11 — Resident Evil | Trailer Oficial | Dublado
