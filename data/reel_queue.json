@@ -309,7 +309,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=0JZ8WGVSrwM",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/0JZ8WGVSrwM.mp4",
     "added_at": "2026-10-06T19:20:36.642162-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 10,
     "scheduled_for": "2026-10-26",
@@ -317,7 +317,9 @@
     "caption_style": "padrao",
     "caption": "A Freira 2 e aquele arrepio que volta quando a Irmã Irene aparece de novo.\n\nA franquia é o rolo compressor do Universo Invocação do Mal, com mais de US$ 2 bilhões em bilheteria mundial. Taissa Farmiga retorna para enfrentar Valak em 1956, na França, mantendo a tensão alta nesse novo capítulo da história.\n\nQual foi a cena que mais te tirou o sono depois de assistir?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#AFreira2 #InvocacaoDoMal #TaissaFarmiga #Halloween #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-26T13:11:18.126140-03:00",
+    "media_id": "18207483853372934"
   },
   {
     "video_id": "jqVGSIIwLi0",
