@@ -4802,7 +4802,7 @@
    "retorno",
    "revela"
   ],
-  "tiktok_id": null,
+  "tiktok_id": "erro: HTTP Error 400: Bad Request",
   "scheduled_for": null,
   "ig_score": 17
  },
@@ -7715,7 +7715,7 @@
    "redemption",
    "roubou"
   ],
-  "tiktok_id": null,
+  "tiktok_id": "erro: HTTP Error 400: Bad Request",
   "scheduled_for": null,
   "ig_score": 17
  },
@@ -8198,7 +8198,7 @@
    "mutante",
    "teve"
   ],
-  "tiktok_id": null,
+  "tiktok_id": "erro: HTTP Error 400: Bad Request",
   "scheduled_for": null,
   "ig_score": 17
  },
