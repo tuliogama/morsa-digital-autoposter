@@ -1,24 +1,8 @@
-# Fila de reels @morsadigital — 26/10/2026 05:48 BRT
+# Fila de reels @morsadigital — 26/10/2026 23:48 BRT
 
 ## cenas — a partir das 11h
 
-131 na fila | legendas ok: 26 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 26/10 — Nada será um obstáculo para o Ghostface em #Pânico7! 🔪
-Paramount Brasil · vertical · pt · legenda: ok
-
-```
-Sidney Prescott voltou, e você acha que ela aguenta mais um Ghostface?
-
-Ver Neve Campbell de volta no papel é o tipo de notícia que dá um frio na espinha, né?
-É a certeza de que a franquia Pânico continua viva e pronta para aterrorizar.
-
-Comenta aqui: você vai ao cinema conferir ou fica de fora?
-
-Vídeo: Paramount Brasil (canal oficial no YouTube)
-
-#Panico #Scream #NeveCampbell #SidneyPrescott #Ghostface #MorsaDigital
-```
+130 na fila | legendas ok: 26 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 27/10 — A próxima cena é sempre a mais absurda! | Todo Mundo em Pânico | Paramount+ Bras
 Paramount+ Brasil · vertical · pt · legenda: ok
@@ -102,10 +86,19 @@ Vídeo: HBO Brasil (canal oficial no YouTube)
 ```
 
 ### 01/11 — Marvel Studios Avante: Os Bastidores de Loki | Trailer Oficial Legendado | Disne
-Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+Marvel Brasil · horizontal · pt · legenda: ok
 
 ```
-(gerada na hora da publicação)
+Você lembra da época em que a Marvel mudou o jogo com Loki?
+
+Ver a equipe trabalhando para mudar a direção do MCU foi um momento histórico.
+É sempre especial ver quem está por trás dessas ideias ousadas.
+
+Qual foi a sua primeira reação quando soube disso?
+
+Vídeo: Marvel Brasil (canal oficial no YouTube)
+
+#Loki #MarvelStudiosAvante #MCU #DisneyPlus #MorsaDigital
 ```
 
 ### 02/11 — SATORU GOJO 🤝 QUICO DO CHAVES
@@ -1055,24 +1048,16 @@ HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
+### 23/02 — Essa família é muito unida 🎶  #Superman #Supergirl
+HBO Max Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
 ## main — a partir das 13h
 
-89 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
-
-### 26/10 — A FREIRA 2 | TRAILER OFICIAL
-Warner Bros. Pictures Brasil · ? · ? · legenda: ok
-
-```
-A Freira 2 e aquele arrepio que volta quando a Irmã Irene aparece de novo.
-
-A franquia é o rolo compressor do Universo Invocação do Mal, com mais de US$ 2 bilhões em bilheteria mundial. Taissa Farmiga retorna para enfrentar Valak em 1956, na França, mantendo a tensão alta nesse novo capítulo da história.
-
-Qual foi a cena que mais te tirou o sono depois de assistir?
-
-Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
-
-#AFreira2 #InvocacaoDoMal #TaissaFarmiga #Halloween #MorsaDigital
-```
+88 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 27/10 — Red Dead Redemption 2: Official Trailer #3
 Rockstar Games · horizontal · en · legenda: ok
@@ -1137,16 +1122,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 31/10 — Invocação do Mal: O Último Ritual l Trailer Oficial Dublado
-Warner Bros. Pictures Brasil · ? · ? · legenda: revisar (0 hashtags (esperado 3 a 5))
+Warner Bros. Pictures Brasil · ? · ? · legenda: revisar (detalhe sem base: nono filme do universo)
 
 ```
-Invocação do Mal: O Último Ritual, essa conclusão do universo de Ed e Lorraine Warren me deixa arrepiado só de lembrar.
+O título desse trailer é um soco no estômago, não tô pronto pra aceitar que esse é o desfecho.
 
-Vera Farmiga e Patrick Wilson voltam para fechar o ciclo de um dos maiores fenômenos do terror moderno, com direção de Michael Chaves e produção de James Wan. É o nono filme dessa franquia que já faturou bilhões e que todo fã de suspense brasileiro acompanha de perto.
+A Warner confirmou que esse é o nono filme do universo e que encerra a saga baseada em eventos reais. Ver Vera Farmiga e Patrick Wilson de volta, sob a direção de Michael Chaves e com o selo de James Wan, é o peso que esse final merece.
 
-Qual cena desse final ficou marcada na sua memória?
+Se você já assistiu, qual foi o momento que te fez prender a respiração?
 
 Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
+
+#InvocacaoDoMal #OUltimoRitual #VeraFarmiga #PatrickWilson #HalloweenMorsa
 ```
 
 ### 01/11 — Resident Evil | Trailer Oficial | Dublado
@@ -1157,10 +1144,18 @@ Sony Pictures Brasil · ? · ? · legenda: ainda não gerada
 ```
 
 ### 02/11 — Grand Theft Auto VI Launch Trailer
-Rockstar Games · horizontal · en · legenda: ainda não gerada
+Rockstar Games · horizontal · en · legenda: ok
 
 ```
-(gerada na hora da publicação)
+Jason e Lucia em Vice City, aquele frio na barriga de quem sabe que o jogo mais esperado da década acabou de abrir as portas.
+
+Vice City nunca foi só cenário, é um personagem. Ver o duo Justice, que compôs a trilha original, trazer uma colab com Tame Impala, SZA e King Gizzard & The Lizard Wizard mostra que a Rockstar tá apostando tudo na atmosfera, não só na ação.
+
+Vai ser a entrega definitiva ou a Rockstar vai decepcionar a expectativa gigante?
+
+Vídeo: Rockstar Games (canal oficial no YouTube)
+
+#GTA6 #GrandTheftAutoVI #ViceCity #RockstarGames #Just
 ```
 
 ### 03/11 — Grand Theft Auto V: The Official Trailer

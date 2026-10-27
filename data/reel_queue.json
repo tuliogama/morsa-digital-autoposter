@@ -380,10 +380,10 @@
     "scheduled_for": "2026-10-31",
     "theme": "halloween",
     "caption_style": "padrao",
-    "caption": "Invocação do Mal: O Último Ritual, essa conclusão do universo de Ed e Lorraine Warren me deixa arrepiado só de lembrar.\n\nVera Farmiga e Patrick Wilson voltam para fechar o ciclo de um dos maiores fenômenos do terror moderno, com direção de Michael Chaves e produção de James Wan. É o nono filme dessa franquia que já faturou bilhões e que todo fã de suspense brasileiro acompanha de perto.\n\nQual cena desse final ficou marcada na sua memória?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)",
+    "caption": "O título desse trailer é um soco no estômago, não tô pronto pra aceitar que esse é o desfecho.\n\nA Warner confirmou que esse é o nono filme do universo e que encerra a saga baseada em eventos reais. Ver Vera Farmiga e Patrick Wilson de volta, sob a direção de Michael Chaves e com o selo de James Wan, é o peso que esse final merece.\n\nSe você já assistiu, qual foi o momento que te fez prender a respiração?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#InvocacaoDoMal #OUltimoRitual #VeraFarmiga #PatrickWilson #HalloweenMorsa",
     "caption_check": "revisar",
     "caption_problems": [
-      "0 hashtags (esperado 3 a 5)"
+      "detalhe sem base: nono filme do universo"
     ]
   },
   {
@@ -2038,7 +2038,11 @@
     "kind": "fresh",
     "hook_text": null,
     "layout": "horizontal",
-    "lang": "en"
+    "lang": "en",
+    "caption_style": "padrao",
+    "caption": "Jason e Lucia em Vice City, aquele frio na barriga de quem sabe que o jogo mais esperado da década acabou de abrir as portas.\n\nVice City nunca foi só cenário, é um personagem. Ver o duo Justice, que compôs a trilha original, trazer uma colab com Tame Impala, SZA e King Gizzard & The Lizard Wizard mostra que a Rockstar tá apostando tudo na atmosfera, não só na ação.\n\nVai ser a entrega definitiva ou a Rockstar vai decepcionar a expectativa gigante?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#GTA6 #GrandTheftAutoVI #ViceCity #RockstarGames #Just",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "GE0w3EiBV-c",
