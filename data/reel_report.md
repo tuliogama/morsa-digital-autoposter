@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 27/10/2026 03:48 BRT
+# Fila de reels @morsadigital — 27/10/2026 05:47 BRT
 
 ## cenas — a partir das 11h
 
@@ -1057,7 +1057,7 @@ HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ## main — a partir das 13h
 
-88 na fila | legendas ok: 8 | a revisar: 2 | dias sem reel no calendário: 0
+88 na fila | legendas ok: 9 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 27/10 — Red Dead Redemption 2: Official Trailer #3
 Rockstar Games · horizontal · en · legenda: ok
@@ -1122,18 +1122,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 31/10 — Invocação do Mal: O Último Ritual l Trailer Oficial Dublado
-Warner Bros. Pictures Brasil · ? · ? · legenda: revisar (detalhe sem base: nono filme do universo Invocação do Mal; detalhe sem base: já passou da marca de 2 bilhões de dólares nas bilheterias)
+Warner Bros. Pictures Brasil · ? · ? · legenda: ok
 
 ```
-Vera Farmiga e Patrick Wilson de volta para encerrar tudo, e só de ver o nome desse título já dá um frio na espinha.
+Vera Farmiga e Patrick Wilson no último capítulo, e o frio na barriga bateu de novo só de ver o nome.
 
-Esse é o nono filme do universo Invocação do Mal, que já passou da marca de 2 bilhões de dólares nas bilheterias. A direção fica por conta de Michael Chaves, veterano da franquia, com produção de James Wan e Peter Safran, os mesmos que construíram essa mitologia.
+É o nono filme do universo Invocação do Mal, dirigido por Michael Chaves e produzido por James Wan e Peter Safran. Com mais de 2 bilhões de dólares arrecadados até agora, a franquia continua sendo o terror definitivo para quem curte casos baseados em eventos reais.
 
-Você já assistiu? Qual foi a sua reação ao ver essa última etapa dos agentes Warren em tela?
+Esse trailer foi o seu favorito da saga ou o que mais te deixou na dúvida?
 
 Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
-#InvocaçãoDoMal #OÚltimoRitual #VeraFarmiga #PatrickWilson #Halloween
+#InvocaçãoDoMal #OÚltimoRitual #VeraFarmiga #PatrickWilson #MichaelChaves
 ```
 
 ### 01/11 — Resident Evil | Trailer Oficial | Dublado
