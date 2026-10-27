@@ -2384,7 +2384,7 @@
    "seria",
    "tobey"
   ],
-  "tiktok_id": null,
+  "tiktok_id": "erro: HTTP Error 400: Bad Request",
   "scheduled_for": null,
   "ig_score": 17
  },
@@ -3556,7 +3556,7 @@
    "rotten",
    "supergirl"
   ],
-  "tiktok_id": null,
+  "tiktok_id": "erro: HTTP Error 400: Bad Request",
   "scheduled_for": null,
   "ig_score": 17
  },
@@ -7753,7 +7753,7 @@
    "ranking",
    "zoro"
   ],
-  "tiktok_id": null,
+  "tiktok_id": "erro: HTTP Error 400: Bad Request",
   "scheduled_for": null,
   "ig_score": 18
  },

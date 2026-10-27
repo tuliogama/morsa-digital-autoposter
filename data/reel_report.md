@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 26/10/2026 23:48 BRT
+# Fila de reels @morsadigital — 27/10/2026 01:48 BRT
 
 ## cenas — a partir das 11h
 
@@ -1057,7 +1057,7 @@ HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ## main — a partir das 13h
 
-88 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
+88 na fila | legendas ok: 8 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 27/10 — Red Dead Redemption 2: Official Trailer #3
 Rockstar Games · horizontal · en · legenda: ok
@@ -1122,25 +1122,35 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 31/10 — Invocação do Mal: O Último Ritual l Trailer Oficial Dublado
-Warner Bros. Pictures Brasil · ? · ? · legenda: revisar (detalhe sem base: nono filme do universo)
+Warner Bros. Pictures Brasil · ? · ? · legenda: revisar (trata vídeo antigo como novidade)
 
 ```
-O título desse trailer é um soco no estômago, não tô pronto pra aceitar que esse é o desfecho.
+O Último Ritual chegou e a tensão desse novo trailer dublado me deixou com a pele arrepiada.
 
-A Warner confirmou que esse é o nono filme do universo e que encerra a saga baseada em eventos reais. Ver Vera Farmiga e Patrick Wilson de volta, sob a direção de Michael Chaves e com o selo de James Wan, é o peso que esse final merece.
+É o nono filme do universo cinematográfico Invocação do Mal que já faturou mais de 2 bilhões nos cinemas. Michael Chaves assume a direção novamente, com Vera Farmiga e Patrick Wilson de volta aos papéis de Ed e Lorraine Warren para encerrar essa saga baseada em eventos reais.
 
-Se você já assistiu, qual foi o momento que te fez prender a respiração?
+Vale rever esse trailer no especial de Halloween da Morsa. Qual cena específica te fez prender a respiração mais?
 
 Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
-#InvocacaoDoMal #OUltimoRitual #VeraFarmiga #PatrickWilson #HalloweenMorsa
+#InvocacaoDoMal #TheConjuring #VeraFarmiga #PatrickWilson #Halloween
 ```
 
 ### 01/11 — Resident Evil | Trailer Oficial | Dublado
-Sony Pictures Brasil · ? · ? · legenda: ainda não gerada
+Sony Pictures Brasil · ? · ? · legenda: ok
 
 ```
-(gerada na hora da publicação)
+Tô com o coração acelerado só de pensar no terror que esse filme trouxe pro especial de Halloween, e você?
+
+Zach Cregger, o cara por trás de "Barbarian", assume a direção e escreve o roteiro com Shay Hatten. É uma mistura perigosa de criatividade e tensão que faz valer cada segundo de suspense.
+
+O elenco tem nomes fortes como Paul Walter Hauser e Kali Reis, e a produção conta com gente do peso de Robert Kulzer.
+
+Qual foi a cena que mais te deu arrepios quando você assistiu?
+
+Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
+
+#ResidentEvil #ZachCregger #PaulWalterHauser #KaliReis #AustinAbrams
 ```
 
 ### 02/11 — Grand Theft Auto VI Launch Trailer
