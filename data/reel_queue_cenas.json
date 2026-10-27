@@ -513,7 +513,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=ToyHbBkiuRk",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/ToyHbBkiuRk.mp4",
     "added_at": "2026-10-07T00:04:32.659003-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 4,
     "scheduled_for": "2026-10-27",
@@ -522,7 +522,9 @@
     "lang": "pt",
     "caption": "Todo Mundo em Pânico 6 chega dia 22 de outubro e você tá pronto?\n\nA regra é clara: a próxima cena é sempre a mais absurda.\nÉ o tipo de caos que a gente ama, não dá pra prever o que vem.\nSó tem uma certeza: nada é sério nessa franquia.\n\nComenta aí se você tá ansioso ou se vai rir de nervoso.\n\nVídeo: Paramount+ Brasil (canal oficial no YouTube)\n\n#TodoMundoEmPânico #TodoMundoEmPânico6 #ParamountPlus #Comédia #Halloween #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-27T12:14:08.408170-03:00",
+    "media_id": "17914761600517522"
   },
   {
     "video_id": "I6CLLfzjZXM",
