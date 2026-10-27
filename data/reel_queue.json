@@ -469,7 +469,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=eaW0tYpxyp0",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/eaW0tYpxyp0.mp4",
     "added_at": "2026-10-06T23:34:30.083673-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 11,
     "scheduled_for": "2026-10-27",
@@ -479,7 +479,9 @@
     "caption_style": "padrao",
     "caption": "Red Dead Redemption 2 e aquele final da era do velho oeste. Não tô pronto pra reviver essa sensação de urgência que o trailer 3 passava.\n\nÉ a última dança da gangue Van der Linde antes de tudo desmoronar. Com Arthur Morgan no centro de um dilema entre ideais e lealdade, a Rockstar entregou uma narrativa densa sobre a queda de um grupo que tentava sobreviver em um mundo que já não tinha lugar para foras da lei.\n\nQual foi a sua primeira reação quando viu esse trailer pela primeira vez? Você sentiu o peso da despedida desde o início?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#RedDeadRedemption2 #ArthurMorgan #RockstarGames #GTA6 #Gamer",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-27T13:51:36.697652-03:00",
+    "media_id": "18025738904920478"
   },
   {
     "video_id": "UDd3pTE8UsQ",
