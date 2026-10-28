@@ -332,7 +332,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=jqVGSIIwLi0",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/jqVGSIIwLi0.mp4",
     "added_at": "2026-10-06T19:35:23.860557-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 12,
     "scheduled_for": "2026-10-28",
@@ -340,7 +340,9 @@
     "caption_style": "padrao",
     "caption": "Beetlejuice voltou e o meu instinto de nerd foi direto pro modo nostalgia extrema.\n\nTim Burton e Michael Keaton reunidos para essa sequência é o tipo de notícia que faz o coração acelerar. A volta de Winona Ryder como Lydia Deetz depois de tantos anos é um detalhe que fecha o ciclo de uma forma que só cinema sabe fazer.\n\nVale rever essa segunda parte do trailer para pegar todos os detalhes da direção do Burton.\n\nQual foi a primeira reação de vocês quando o nome dele apareceu nessa continuação?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#OsFantasmasAindaSeDivertem #Beetlejuice #MichaelKeaton #WinonaRyder #TimBurton",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-28T16:33:16.546826-03:00",
+    "media_id": "18439178920176057"
   },
   {
     "video_id": "GqR2FG3G810",
