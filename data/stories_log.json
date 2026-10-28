@@ -942,6 +942,24 @@
  {
   "media_id": "18097562606137342",
   "story_id": "18101094089559350",
-  "at": "2026-10-28T14:14:09-03:00"
+  "at": "2026-10-28T14:14:09-03:00",
+  "insights": {
+   "reach": 8,
+   "views": 8,
+   "replies": 0,
+   "shares": 0,
+   "total_interactions": 1,
+   "follows": 0,
+   "profile_visits": 0,
+   "tap_forward": 4,
+   "tap_exit": 3,
+   "swipe_forward": 1
+  },
+  "insights_at": "2026-10-28T18:45:34-03:00"
+ },
+ {
+  "media_id": "18439178920176057",
+  "story_id": "18134079817708003",
+  "at": "2026-10-28T18:45:19-03:00"
  }
 ]
