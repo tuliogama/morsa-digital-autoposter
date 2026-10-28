@@ -926,17 +926,22 @@
   "story_id": "18127592392910249",
   "at": "2026-10-27T18:24:23-03:00",
   "insights": {
-   "reach": 13,
-   "views": 14,
+   "reach": 17,
+   "views": 20,
    "replies": 1,
    "shares": 0,
    "total_interactions": 2,
    "follows": 0,
    "profile_visits": 0,
    "tap_exit": 3,
-   "tap_forward": 9,
-   "swipe_forward": 1
+   "tap_forward": 12,
+   "swipe_forward": 2
   },
-  "insights_at": "2026-10-28T03:22:57-03:00"
+  "insights_at": "2026-10-28T14:14:24-03:00"
+ },
+ {
+  "media_id": "18097562606137342",
+  "story_id": "18101094089559350",
+  "at": "2026-10-28T14:14:09-03:00"
  }
 ]
