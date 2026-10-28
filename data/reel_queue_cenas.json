@@ -2253,7 +2253,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=Y2zmCKXTSX0",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/Y2zmCKXTSX0.mp4",
     "added_at": "2026-10-13T02:11:29.410554-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 6,
     "theme": "bastidores",
@@ -2262,7 +2262,9 @@
     "lang": "pt",
     "caption": "Você se lembra de quando era só um pouco de CGI?\n\nVer os bastidores da Capitã Marvel mostra o trabalho pesado por trás do legado.\nÉ tipo \"o que a gente não vê, mas faz a mágica acontecer\".\n\nComenta aí: o que mais te impressionou nessa produção?\n\nVídeo: Marvel Brasil (canal oficial no YouTube)\n\n#CapitaMarvel #Marvel #MCU #Bastidores #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-28T14:24:17.955972-03:00",
+    "media_id": "18118701937809447"
   },
   {
     "video_id": "ADSd_5eJFVA",
