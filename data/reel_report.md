@@ -1,41 +1,8 @@
-# Fila de reels @morsadigital — 27/10/2026 05:47 BRT
+# Fila de reels @morsadigital — 28/10/2026 23:47 BRT
 
 ## cenas — a partir das 11h
 
-130 na fila | legendas ok: 26 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 27/10 — A próxima cena é sempre a mais absurda! | Todo Mundo em Pânico | Paramount+ Bras
-Paramount+ Brasil · vertical · pt · legenda: ok
-
-```
-Todo Mundo em Pânico 6 chega dia 22 de outubro e você tá pronto?
-
-A regra é clara: a próxima cena é sempre a mais absurda.
-É o tipo de caos que a gente ama, não dá pra prever o que vem.
-Só tem uma certeza: nada é sério nessa franquia.
-
-Comenta aí se você tá ansioso ou se vai rir de nervoso.
-
-Vídeo: Paramount+ Brasil (canal oficial no YouTube)
-
-#TodoMundoEmPânico #TodoMundoEmPânico6 #ParamountPlus #Comédia #Halloween #MorsaDigital
-```
-
-### 28/10 — Capitã Marvel - Bastidores do filme
-Marvel Brasil · horizontal · pt · legenda: ok
-
-```
-Você se lembra de quando era só um pouco de CGI?
-
-Ver os bastidores da Capitã Marvel mostra o trabalho pesado por trás do legado.
-É tipo "o que a gente não vê, mas faz a mágica acontecer".
-
-Comenta aí: o que mais te impressionou nessa produção?
-
-Vídeo: Marvel Brasil (canal oficial no YouTube)
-
-#CapitaMarvel #Marvel #MCU #Bastidores #MorsaDigital
-```
+128 na fila | legendas ok: 24 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 29/10 — IT DO STEPHEN KING FOI O MEU PRIMEIRO TRAUMA DE INFÂNCIA! 🤡
 HBO Brasil · vertical · pt · legenda: ok
@@ -1055,41 +1022,23 @@ HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
+### 24/02 — SE VOCÊ PRECISA DIZER QUE É REI, VOCÊ NÃO É UM REI DE VERDADE | GOT
+HBO Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 25/02 — A CORAGEM DE JON SNOW
+HBO Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
 ## main — a partir das 13h
 
-88 na fila | legendas ok: 9 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 27/10 — Red Dead Redemption 2: Official Trailer #3
-Rockstar Games · horizontal · en · legenda: ok
-
-```
-Red Dead Redemption 2 e aquele final da era do velho oeste. Não tô pronto pra reviver essa sensação de urgência que o trailer 3 passava.
-
-É a última dança da gangue Van der Linde antes de tudo desmoronar. Com Arthur Morgan no centro de um dilema entre ideais e lealdade, a Rockstar entregou uma narrativa densa sobre a queda de um grupo que tentava sobreviver em um mundo que já não tinha lugar para foras da lei.
-
-Qual foi a sua primeira reação quando viu esse trailer pela primeira vez? Você sentiu o peso da despedida desde o início?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
-
-#RedDeadRedemption2 #ArthurMorgan #RockstarGames #GTA6 #Gamer
-```
-
-### 28/10 — OS FANTASMAS AINDA SE DIVERTEM: BEETLEJUICE BEETLEJUICE l Trailer Oficial #2
-Warner Bros. Pictures Brasil · ? · ? · legenda: ok
-
-```
-Beetlejuice voltou e o meu instinto de nerd foi direto pro modo nostalgia extrema.
-
-Tim Burton e Michael Keaton reunidos para essa sequência é o tipo de notícia que faz o coração acelerar. A volta de Winona Ryder como Lydia Deetz depois de tantos anos é um detalhe que fecha o ciclo de uma forma que só cinema sabe fazer.
-
-Vale rever essa segunda parte do trailer para pegar todos os detalhes da direção do Burton.
-
-Qual foi a primeira reação de vocês quando o nome dele apareceu nessa continuação?
-
-Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
-
-#OsFantasmasAindaSeDivertem #Beetlejuice #MichaelKeaton #WinonaRyder #TimBurton
-```
+86 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 29/10 — Stranger Things 5 | Trailer - Volume 2 | Netflix
 Netflix Brasil · ? · ? · legenda: ok
@@ -1176,10 +1125,18 @@ Rockstar Games · horizontal · en · legenda: ainda não gerada
 ```
 
 ### 04/11 — Nárnia: O Sobrinho do Mago - Trailer Oficial
-Sony Pictures Brasil · vertical · pt · legenda: ainda não gerada
+Sony Pictures Brasil · vertical · pt · legenda: revisar (detalhe sem base: Greta Gerwig assumindo a direção; detalhe sem base: 11 de fevereiro exclusivamente nos cinemas)
 
 ```
-(gerada na hora da publicação)
+Nárnia: O Sobrinho do Mago e eu não acredito que finalmente vamos ver a origem desse universo, qual parte da história dos livros te deixou mais ansioso?
+
+Greta Gerwig assumindo a direção e a Sony trazendo essa adaptação inédita é o tipo de notícia que faz o coração de fã acelerar. Ver como o mundo foi criado antes de As Crônicas de Nárnia é uma experiência que ninguém mais vai ter primeiro.
+
+Você já está convencido ou ainda está na dúvida sobre essa nova abordagem para a franquia?
+
+Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
+
+#Narnia #OSobrinhoDoMago #GretaGerwig #NarniaMovie #SonyPictures
 ```
 
 ### 05/11 — Ramayana: O Nascimento de uma Lenda | Novo Trailer
