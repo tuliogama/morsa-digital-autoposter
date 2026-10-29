@@ -397,7 +397,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=N5xoBTnuW1w",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/N5xoBTnuW1w.mp4",
     "added_at": "2026-10-06T23:16:13.130718-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 6,
     "scheduled_for": "2026-10-29",
@@ -406,7 +406,9 @@
     "lang": "pt",
     "caption": "Pennywise assustou você tanto quanto a gente?\n\nAquele trauma de infância que a gente carrega até hoje.\nDerry tá de volta e o medo voltou junto.\n\nQual foi o momento de IT que mais te marcou?\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#IT #Pennywise #StephenKing #HBO #Derry #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-29T11:32:54.725896-03:00",
+    "media_id": "18186516628424106"
   },
   {
     "video_id": "pZBO3kq7Zng",
