@@ -1,8 +1,8 @@
-# Fila de reels @morsadigital — 28/10/2026 23:47 BRT
+# Fila de reels @morsadigital — 29/10/2026 01:46 BRT
 
 ## cenas — a partir das 11h
 
-128 na fila | legendas ok: 24 | a revisar: 1 | dias sem reel no calendário: 0
+128 na fila | legendas ok: 25 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 29/10 — IT DO STEPHEN KING FOI O MEU PRIMEIRO TRAUMA DE INFÂNCIA! 🤡
 HBO Brasil · vertical · pt · legenda: ok
@@ -85,10 +85,19 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 03/11 — Guardiões da Galáxia Bastidores Povoando a Galáxia Parte II
-Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+Marvel Brasil · horizontal · pt · legenda: ok
 
 ```
-(gerada na hora da publicação)
+Peter Quill e os Guardiões da Galáxia: você lembra como era esse grupo desorganizado?
+
+Vale rever esses bastidores para ver a energia da gravação e a química que formou aquele quarteto.
+É incrível ver o esforço por trás da união desse grupo que precisava salvar o universo.
+
+Comenta aí qual foi a primeira vez que você assistiu a esse filme.
+
+Vídeo: Marvel Brasil (canal oficial no YouTube)
+
+#GuardioesDaGalaxia #PeterQuill #Marvel #Bastidores #MorsaDigital
 ```
 
 ### 04/11 — COMO ESQUECER O JULGAMENTO DO TYRION? | GOT
@@ -1038,7 +1047,7 @@ HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ## main — a partir das 13h
 
-86 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
+86 na fila | legendas ok: 8 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 29/10 — Stranger Things 5 | Trailer - Volume 2 | Netflix
 Netflix Brasil · ? · ? · legenda: ok
@@ -1118,10 +1127,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 03/11 — Grand Theft Auto V: The Official Trailer
-Rockstar Games · horizontal · en · legenda: ainda não gerada
+Rockstar Games · horizontal · en · legenda: ok
 
 ```
-(gerada na hora da publicação)
+GTA V, aquele trailer que mudou a forma como a gente joga.
+
+São três protagonistas com personalidades opostas roubando a cena em Los Santos, uma metrópole caótica e cheia de personagens marcantes. A mistura de humor ácido e tensão nos assaltos definiu o padrão para os jogos abertos que vieram depois.
+
+Qual desses três ladrões você escolheu como seu favorito na época?
+
+Vídeo: Rockstar Games (canal oficial no YouTube)
+
+#GTA5 #GrandTheftAuto #RockstarGames #LosSantos #GTA
 ```
 
 ### 04/11 — Nárnia: O Sobrinho do Mago - Trailer Oficial

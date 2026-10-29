@@ -525,7 +525,11 @@
     "scheduled_for": "2026-11-03",
     "theme": "gta",
     "layout": "horizontal",
-    "lang": "en"
+    "lang": "en",
+    "caption_style": "padrao",
+    "caption": "GTA V, aquele trailer que mudou a forma como a gente joga.\n\nSão três protagonistas com personalidades opostas roubando a cena em Los Santos, uma metrópole caótica e cheia de personagens marcantes. A mistura de humor ácido e tensão nos assaltos definiu o padrão para os jogos abertos que vieram depois.\n\nQual desses três ladrões você escolheu como seu favorito na época?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#GTA5 #GrandTheftAuto #RockstarGames #LosSantos #GTA",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "gmA6MrX81z4",
