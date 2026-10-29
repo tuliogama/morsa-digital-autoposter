@@ -355,7 +355,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=GqR2FG3G810",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/GqR2FG3G810.mp4",
     "added_at": "2026-10-06T19:41:00.518170-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 13,
     "scheduled_for": "2026-10-29",
@@ -363,7 +363,9 @@
     "caption_style": "eu",
     "caption": "Que alívio perceber que a gente estava completamente errado sobre o Mundo Invertido.\n\nEsse é o Volume 2 da temporada final, o último ato da saga que marcou uma geração. A Netflix confirmou que esse trecho chega em 25 de dezembro às 22h (horário de Brasília), fechando o ciclo com tudo.\n\nQual foi o momento do trailer que mais te deixou com o coração acelerado?\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#StrangerThings #StrangerThings5 #MundoInvertido #Netflix #Halloween",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-29T16:36:33.049898-03:00",
+    "media_id": "18017216027986880"
   },
   {
     "video_id": "n0sq-r0mBXQ",
