@@ -498,7 +498,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=UDd3pTE8UsQ",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/UDd3pTE8UsQ.mp4",
     "added_at": "2026-10-06T23:38:32.177307-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 14,
     "scheduled_for": "2026-10-30",
@@ -508,7 +508,9 @@
     "caption_style": "eu",
     "caption": "Lembrando que esse trailer de Heists pra GTA Online me colocou no hype máximo em 2014, e você ainda lembra da primeira vez que jogou uma assalto em equipe?\n\nEra o conteúdo que faltava pra transformar o multiplayer de Los Santos em algo realmente estratégico. A Rockstar trabalhou meses nisso pra garantir que a comunicação entre os quatro jogadores fosse essencial, com missões multiestágios que exigiam coordenação precisa.\n\nQual foi o primeiro assalto que você e seus amigos completaram sem ninguém morrer?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#GTAV #GTAOnline #Assaltos #RockstarGames #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-30T16:18:23.314227-03:00",
+    "media_id": "18202078135347891"
   },
   {
     "video_id": "hvoD7ehZPcM",
