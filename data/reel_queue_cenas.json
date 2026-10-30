@@ -421,7 +421,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=pZBO3kq7Zng",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/pZBO3kq7Zng.mp4",
     "added_at": "2026-10-06T23:17:45.073680-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 7,
     "scheduled_for": "2026-10-30",
@@ -430,7 +430,9 @@
     "lang": "pt",
     "caption": "Qual dublagem de Pennywise assustava mais você?\n\nTer que escolher entre as vozes que deram vida ao palhaço mais temido da franquia é uma dor de cabeça boa pra quem ama IT. Cada interpretação traz um medo diferente, e a gente nunca sabe qual vai tirar o sono primeiro.\n\nComenta aí qual foi a sua favorita.\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#IT #Pennywise #ITBemVindosADerry #HBO #CulturaPop #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-30T12:58:09.623324-03:00",
+    "media_id": "17902366050608152"
   },
   {
     "video_id": "24VK5kL6vIA",
