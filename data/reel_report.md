@@ -1,24 +1,8 @@
-# Fila de reels @morsadigital — 29/10/2026 05:46 BRT
+# Fila de reels @morsadigital — 30/10/2026 00:08 BRT
 
 ## cenas — a partir das 11h
 
-128 na fila | legendas ok: 25 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 29/10 — IT DO STEPHEN KING FOI O MEU PRIMEIRO TRAUMA DE INFÂNCIA! 🤡
-HBO Brasil · vertical · pt · legenda: ok
-
-```
-Pennywise assustou você tanto quanto a gente?
-
-Aquele trauma de infância que a gente carrega até hoje.
-Derry tá de volta e o medo voltou junto.
-
-Qual foi o momento de IT que mais te marcou?
-
-Vídeo: HBO Brasil (canal oficial no YouTube)
-
-#IT #Pennywise #StephenKing #HBO #Derry #MorsaDigital
-```
+127 na fila | legendas ok: 24 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 30/10 — AS DUBLAGENS DO PENNYWISE EM IT: BEM-VINDOS A DERRY 🤡
 HBO Brasil · vertical · pt · legenda: ok
@@ -1045,24 +1029,16 @@ HBO Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
+### 26/02 — ELENCO DE GOT CANTANDO PARABÉNS PARA EMILIA CLARKE! 👑
+HBO Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
 ## main — a partir das 13h
 
-86 na fila | legendas ok: 8 | a revisar: 2 | dias sem reel no calendário: 0
-
-### 29/10 — Stranger Things 5 | Trailer - Volume 2 | Netflix
-Netflix Brasil · ? · ? · legenda: ok
-
-```
-Que alívio perceber que a gente estava completamente errado sobre o Mundo Invertido.
-
-Esse é o Volume 2 da temporada final, o último ato da saga que marcou uma geração. A Netflix confirmou que esse trecho chega em 25 de dezembro às 22h (horário de Brasília), fechando o ciclo com tudo.
-
-Qual foi o momento do trailer que mais te deixou com o coração acelerado?
-
-Vídeo: Netflix Brasil (canal oficial no YouTube)
-
-#StrangerThings #StrangerThings5 #MundoInvertido #Netflix #Halloween
-```
+85 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 30/10 — Grand Theft Auto Online – Heists Trailer
 Rockstar Games · horizontal · en · legenda: ok
@@ -1142,18 +1118,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 04/11 — Nárnia: O Sobrinho do Mago - Trailer Oficial
-Sony Pictures Brasil · vertical · pt · legenda: revisar (detalhe sem base: Greta Gerwig assumindo a direção; detalhe sem base: 11 de fevereiro exclusivamente nos cinemas)
+Sony Pictures Brasil · vertical · pt · legenda: revisar (detalhe sem base: A Greta Gerwig assumindo a direção; detalhe sem base: 11 de fevereiro exclusivamente nos cinemas)
 
 ```
-Nárnia: O Sobrinho do Mago e eu não acredito que finalmente vamos ver a origem desse universo, qual parte da história dos livros te deixou mais ansioso?
+Ver Nárnia ganhar vida de um jeito que eu nunca imaginei me pegou de surpresa. Cadê quem cresceu com as crônicas e tá sentindo o mesmo arrepio?
 
-Greta Gerwig assumindo a direção e a Sony trazendo essa adaptação inédita é o tipo de notícia que faz o coração de fã acelerar. Ver como o mundo foi criado antes de As Crônicas de Nárnia é uma experiência que ninguém mais vai ter primeiro.
+A Greta Gerwig assumindo a direção transforma completamente a expectativa para essa adaptação. Estamos falando da origem do universo que milhões de fãs adoram, e ver como a magia foi criada do zero é algo que mexe com a memória afetiva de todo nerd. É o tipo de projeto que divide opiniões antes mesmo do filme chegar às telonas, mas a curiosidade é gigantesca.
 
-Você já está convencido ou ainda está na dúvida sobre essa nova abordagem para a franquia?
+Você acredita que essa abordagem vai conquistar o público ou vai decepcionar quem esperava algo mais fiel aos livros?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#Narnia #OSobrinhoDoMago #GretaGerwig #NarniaMovie #SonyPictures
+#Narnia #O_Sobrinho_do_Mago #GretaGerwig #UniversoNarnia #SonyPicturesBrasil
 ```
 
 ### 05/11 — Ramayana: O Nascimento de uma Lenda | Novo Trailer
