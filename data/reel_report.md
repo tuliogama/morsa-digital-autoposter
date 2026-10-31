@@ -1,23 +1,8 @@
-# Fila de reels @morsadigital — 30/10/2026 07:58 BRT
+# Fila de reels @morsadigital — 30/10/2026 23:49 BRT
 
 ## cenas — a partir das 11h
 
-127 na fila | legendas ok: 24 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 30/10 — AS DUBLAGENS DO PENNYWISE EM IT: BEM-VINDOS A DERRY 🤡
-HBO Brasil · vertical · pt · legenda: ok
-
-```
-Qual dublagem de Pennywise assustava mais você?
-
-Ter que escolher entre as vozes que deram vida ao palhaço mais temido da franquia é uma dor de cabeça boa pra quem ama IT. Cada interpretação traz um medo diferente, e a gente nunca sabe qual vai tirar o sono primeiro.
-
-Comenta aí qual foi a sua favorita.
-
-Vídeo: HBO Brasil (canal oficial no YouTube)
-
-#IT #Pennywise #ITBemVindosADerry #HBO #CulturaPop #MorsaDigital
-```
+126 na fila | legendas ok: 24 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 31/10 — PENNYWISE DIZ "BIP BIP" PARA MARGE E RICHIE EM IT! 🤡
 HBO Brasil · vertical · pt · legenda: ok
@@ -101,10 +86,20 @@ Vídeo: HBO Brasil (canal oficial no YouTube)
 ```
 
 ### 05/11 — Marvel Studios Avante: Os Bastidores de Falcão e o Soldado Invernal | Trailer Of
-Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+Marvel Brasil · horizontal · pt · legenda: ok
 
 ```
-(gerada na hora da publicação)
+Você assistiu aos bastidores de Falcão e o Soldado Invernal?
+
+Ver por trás das câmeras muda completamente a percepção da série.
+É legal entender o esforço que vai por trás de cada cena.
+Só no Disney+ mesmo.
+
+Conta pra gente: o que mais te impressionou nessa produção?
+
+Vídeo: Marvel Brasil (canal oficial no YouTube)
+
+#FalcãoEOSoldadoInvernal #MarvelStudios #DisneyPlus #Bastidores #MorsaDigital
 ```
 
 ### 06/11 — Nem sempre Naruto será seu primeiro anime... qual é o de vocês? 👀
@@ -1036,24 +1031,16 @@ HBO Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
+### 27/02 — A CASA DO DRAGÃO É DE TIRAR O FÔLEGO
+HBO Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
 ## main — a partir das 13h
 
-85 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
-
-### 30/10 — Grand Theft Auto Online – Heists Trailer
-Rockstar Games · horizontal · en · legenda: ok
-
-```
-Lembrando que esse trailer de Heists pra GTA Online me colocou no hype máximo em 2014, e você ainda lembra da primeira vez que jogou uma assalto em equipe?
-
-Era o conteúdo que faltava pra transformar o multiplayer de Los Santos em algo realmente estratégico. A Rockstar trabalhou meses nisso pra garantir que a comunicação entre os quatro jogadores fosse essencial, com missões multiestágios que exigiam coordenação precisa.
-
-Qual foi o primeiro assalto que você e seus amigos completaram sem ninguém morrer?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
-
-#GTAV #GTAOnline #Assaltos #RockstarGames #MorsaDigital
-```
+84 na fila | legendas ok: 6 | a revisar: 3 | dias sem reel no calendário: 0
 
 ### 31/10 — Invocação do Mal: O Último Ritual l Trailer Oficial Dublado
 Warner Bros. Pictures Brasil · ? · ? · legenda: ok
@@ -1118,25 +1105,33 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 04/11 — Nárnia: O Sobrinho do Mago - Trailer Oficial
-Sony Pictures Brasil · vertical · pt · legenda: revisar (hashtag genérica)
+Sony Pictures Brasil · vertical · pt · legenda: revisar (detalhe sem base: sob a direção de Greta Gerwig; detalhe sem base: chega em 11 de fevereiro)
 
 ```
-Tô com o coração na mão porque Nárnia: O Sobrinho do Mago chegou e eu não acredito que Greta Gerwig vai dirigir essa história.
+Ver o universo de Nárnia ganhar vida de novo me pegou de surpresa, e você ficou com a mesma sensação?
 
-O filme estreia em 11 de fevereiro exclusivamente nos cinemas. É a origem do universo, mostrando como tudo começou e como esse mundo mágico ganhou vida nas telas.
+A chegada do Sobrinho do Mago sob a direção de Greta Gerwig chega em 11 de fevereiro exclusivamente nos cinemas. É o momento de reverenciar a origem da magia e ver como esse clássico foi criado para uma nova geração.
 
-Você vai entrar nessa com a mesma memória afetiva de quando leu os livros ou assistiu aos primeiros filmes?
+O fato de ser um filme de estreia na franquia já garante que a equipe vai querer surpreender, mas será que a adaptação vai conseguir manter a mesma aura mágica das histórias originais?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#Narnia #OSobrinhoDoMago #GretaGerwig #UniversoNarnia #Cinema
+#Narnia #O Sobrinho do Mago #GretaGerwig #SonyPictures #UniversoNarnia
 ```
 
 ### 05/11 — Ramayana: O Nascimento de uma Lenda | Novo Trailer
-Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: É o primeiro grande filme de Hollywood baseado diretamente nesse texto ancestral da Índia)
 
 ```
-(gerada na hora da publicação)
+Ramayana: O Nascimento de uma Lenda chama atenção logo de cara pela escala épica dessa adaptação.
+
+É o primeiro grande filme de Hollywood baseado diretamente nesse texto ancestral da Índia, uma das histórias mais antigas e influentes do mundo, conhecida por bilhões de pessoas. O nome já carrega o peso de uma mitologia que atravessou milênios.
+
+Essa história vai dividir a opinião dos puristas ou vai finalmente entregar a grandiosidade que o material original merece?
+
+Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
+
+#Ramayana #NamitMalhotra #SonyPicturesBrasil #MitologiaIndiana #EpicFilm
 ```
 
 ### 06/11 — Red Dead Redemption 2 Trailer

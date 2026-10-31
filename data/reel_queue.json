@@ -2075,10 +2075,11 @@
     "layout": "vertical",
     "lang": "pt",
     "caption_style": "eu",
-    "caption": "Tô com o coração na mão porque Nárnia: O Sobrinho do Mago chegou e eu não acredito que Greta Gerwig vai dirigir essa história.\n\nO filme estreia em 11 de fevereiro exclusivamente nos cinemas. É a origem do universo, mostrando como tudo começou e como esse mundo mágico ganhou vida nas telas.\n\nVocê vai entrar nessa com a mesma memória afetiva de quando leu os livros ou assistiu aos primeiros filmes?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#Narnia #OSobrinhoDoMago #GretaGerwig #UniversoNarnia #Cinema",
+    "caption": "Ver o universo de Nárnia ganhar vida de novo me pegou de surpresa, e você ficou com a mesma sensação?\n\nA chegada do Sobrinho do Mago sob a direção de Greta Gerwig chega em 11 de fevereiro exclusivamente nos cinemas. É o momento de reverenciar a origem da magia e ver como esse clássico foi criado para uma nova geração.\n\nO fato de ser um filme de estreia na franquia já garante que a equipe vai querer surpreender, mas será que a adaptação vai conseguir manter a mesma aura mágica das histórias originais?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#Narnia #O Sobrinho do Mago #GretaGerwig #SonyPictures #UniversoNarnia",
     "caption_check": "revisar",
     "caption_problems": [
-      "hashtag genérica"
+      "detalhe sem base: sob a direção de Greta Gerwig",
+      "detalhe sem base: chega em 11 de fevereiro"
     ]
   },
   {
@@ -2096,6 +2097,12 @@
     "kind": "fresh",
     "hook_text": null,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_style": "padrao",
+    "caption": "Ramayana: O Nascimento de uma Lenda chama atenção logo de cara pela escala épica dessa adaptação.\n\nÉ o primeiro grande filme de Hollywood baseado diretamente nesse texto ancestral da Índia, uma das histórias mais antigas e influentes do mundo, conhecida por bilhões de pessoas. O nome já carrega o peso de uma mitologia que atravessou milênios.\n\nEssa história vai dividir a opinião dos puristas ou vai finalmente entregar a grandiosidade que o material original merece?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#Ramayana #NamitMalhotra #SonyPicturesBrasil #MitologiaIndiana #EpicFilm",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "detalhe sem base: É o primeiro grande filme de Hollywood baseado diretamente nesse texto ancestral da Índia"
+    ]
   }
 ]
