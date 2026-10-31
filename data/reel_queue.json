@@ -378,7 +378,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=n0sq-r0mBXQ",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/n0sq-r0mBXQ.mp4",
     "added_at": "2026-10-06T19:51:45.088616-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 15,
     "scheduled_for": "2026-10-31",
@@ -386,7 +386,9 @@
     "caption_style": "padrao",
     "caption": "Vera Farmiga e Patrick Wilson no último capítulo, e o frio na barriga bateu de novo só de ver o nome.\n\nÉ o nono filme do universo Invocação do Mal, dirigido por Michael Chaves e produzido por James Wan e Peter Safran. Com mais de 2 bilhões de dólares arrecadados até agora, a franquia continua sendo o terror definitivo para quem curte casos baseados em eventos reais.\n\nEsse trailer foi o seu favorito da saga ou o que mais te deixou na dúvida?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#InvocaçãoDoMal #OÚltimoRitual #VeraFarmiga #PatrickWilson #MichaelChaves",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-10-31T15:30:52.598678-03:00",
+    "media_id": "18097832477395162"
   },
   {
     "video_id": "M-WFfF2ETgk",
