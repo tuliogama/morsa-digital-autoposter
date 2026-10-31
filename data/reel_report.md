@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 31/10/2026 03:48 BRT
+# Fila de reels @morsadigital — 31/10/2026 05:47 BRT
 
 ## cenas — a partir das 11h
 
@@ -1040,7 +1040,7 @@ HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ## main — a partir das 13h
 
-84 na fila | legendas ok: 6 | a revisar: 3 | dias sem reel no calendário: 0
+84 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 31/10 — Invocação do Mal: O Último Ritual l Trailer Oficial Dublado
 Warner Bros. Pictures Brasil · ? · ? · legenda: ok
@@ -1105,33 +1105,33 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 04/11 — Nárnia: O Sobrinho do Mago - Trailer Oficial
-Sony Pictures Brasil · vertical · pt · legenda: revisar (detalhe sem base: Greta Gerwig assume a direção dessa premissa que exploram as origens do reino)
+Sony Pictures Brasil · vertical · pt · legenda: revisar (hashtag genérica)
 
 ```
-Nárnia: O Sobrinho do Mago chegou e eu não tô preparado pra voltar a esse universo, e você?
+Nárnia: O Sobrinho do Mago chegou e eu confesso que fiquei com o coração na mão, mas será que você vai se emocionar tanto quanto eu quando a magia voltar às telas?
 
-Greta Gerwig assume a direção dessa premissa que exploram as origens do reino, mostrando como tudo foi criado antes da história que a gente conhece. É um mergulho em um passado distante que promete redefinir a mágica da franquia para uma nova geração de fãs.
+Greta Gerwig assume a direção para contar a história que deu origem a todo o universo, explorando como Nárnia foi criada antes dos livros que nos marcaram. É a chance de ver a origem de tudo, com uma nova visão criativa que promete redefinir o que a gente espera da franquia.
 
-Esse tom mais adulto e introspectivo vai agradar ou vai afastar quem só lembrava dos livros infantis?
+Agora é esperar o dia 11 de fevereiro nos cinemas para descobrir se essa nova fase vai superar as expectativas ou se vai deixar a gente na dúvida.
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#Narnia #O Sobrinho do Mago #GretaGerwig #SonyPicturesBrasil #Fantasia
+#Narnia #O Sobrinho do Mago #GretaGerwig #SonyPictures #Trailer
 ```
 
 ### 05/11 — Ramayana: O Nascimento de uma Lenda | Novo Trailer
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Ravana, um rei imortal; detalhe sem base: a profecia que amarra os destinos desses dois personagens)
+Sony Pictures Brasil · horizontal · pt · legenda: ok
 
 ```
-Ramayana: O Nascimento de uma Lenda e o hype só cresce. É impossível não sentir o peso dessa história que atravessa milênios e continua viva na cultura de bilhões de pessoas.
+Ramayana: O Nascimento de uma Lenda chegou e o peso desse título já me coloca em alerta máximo.
 
-O filme, dirigido por Namit Malhotra, adapta o épico da Antiguidade que já conhecemos, focando na jornada de Rama, um príncipe marcado pelo sacrifício, e de Ravana, um rei imortal movido pela vingança. A tensão nasce da profecia que amarra os destinos desses dois personagens de formas opostas e poderosas.
+A gente cresce ouvindo essa história, mas ver Namit Malhotra colocar mão nesse épico milenar, com o destino de Rama e a vingança imortal de Ravana, muda o jogo. É a adaptação que o Brasil inteiro esperava pra ver essa lenda ganhar vida com essa escala.
 
-Essa adaptação cinematográfica de uma das maiores obras da história vai entregar a grandiosidade que a lenda merece no grande tela? Você já tinha curiosidade sobre como essa história seria contada de forma tão visual?
+Vai manter a grandiosidade do original ou vai cair no clichê? Qual desses dois destinos te deixou mais com medo?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#Ramayana #NascimentoDeUmaLenda #NamitMalhotra #Epicos #Mitologia
+#Ramayana #Ramayana2025 #NamitMalhotra #SonyPicturesBrasil #PopNerd
 ```
 
 ### 06/11 — Red Dead Redemption 2 Trailer
