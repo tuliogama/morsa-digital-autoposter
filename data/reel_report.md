@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 30/10/2026 23:49 BRT
+# Fila de reels @morsadigital — 31/10/2026 01:50 BRT
 
 ## cenas — a partir das 11h
 
@@ -1105,33 +1105,33 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 04/11 — Nárnia: O Sobrinho do Mago - Trailer Oficial
-Sony Pictures Brasil · vertical · pt · legenda: revisar (detalhe sem base: sob a direção de Greta Gerwig; detalhe sem base: chega em 11 de fevereiro)
+Sony Pictures Brasil · vertical · pt · legenda: revisar (hashtag genérica)
 
 ```
-Ver o universo de Nárnia ganhar vida de novo me pegou de surpresa, e você ficou com a mesma sensação?
+Eu nunca imaginei que ver a criação do mundo de Nárnia fosse me deixar assim, mas esse trailer me pegou de surpresa. Vocês sentiram o peso dessa história se desenhando na tela?
 
-A chegada do Sobrinho do Mago sob a direção de Greta Gerwig chega em 11 de fevereiro exclusivamente nos cinemas. É o momento de reverenciar a origem da magia e ver como esse clássico foi criado para uma nova geração.
+Greta Gerwig assume o comando dessa premissa, colocando a origem de tudo em foco. É uma oportunidade rara de conhecer a fundo as raízes do universo que a gente acompanha há décadas.
 
-O fato de ser um filme de estreia na franquia já garante que a equipe vai querer surpreender, mas será que a adaptação vai conseguir manter a mesma aura mágica das histórias originais?
+O fato de ser uma obra inédita, focada na gênese da magia, muda completamente a perspectiva de quem já conhece os livros. A data de 11 de fevereiro está marcada, mas a dúvida que fica na cabeça é: será que a adaptação vai conseguir capturar a essência mística sem depender tanto das referências visuais que já temos na cabeça?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#Narnia #O Sobrinho do Mago #GretaGerwig #SonyPictures #UniversoNarnia
+#Narnia #O_Sobrinho_do_Mago #GretaGerwig #UniversoNarnia #Cinema
 ```
 
 ### 05/11 — Ramayana: O Nascimento de uma Lenda | Novo Trailer
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: É o primeiro grande filme de Hollywood baseado diretamente nesse texto ancestral da Índia)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: rei imortal)
 
 ```
-Ramayana: O Nascimento de uma Lenda chama atenção logo de cara pela escala épica dessa adaptação.
+Ramayana: O Nascimento de uma Lenda e eu não tô acreditando no que acabei de ver.
 
-É o primeiro grande filme de Hollywood baseado diretamente nesse texto ancestral da Índia, uma das histórias mais antigas e influentes do mundo, conhecida por bilhões de pessoas. O nome já carrega o peso de uma mitologia que atravessou milênios.
+É a adaptação do épico indiano milenar que já é conhecido por bilhões de pessoas no mundo todo. A história gira em torno de Rama, um príncipe marcado pelo sacrifício, e Ravana, um rei imortal movido pela vingança, unidos por uma profecia fatal.
 
-Essa história vai dividir a opinião dos puristas ou vai finalmente entregar a grandiosidade que o material original merece?
+Vai conseguir capturar a grandiosidade de uma mitologia tão antiga ou vai parecer uma cópia barata de épicos ocidentais?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#Ramayana #NamitMalhotra #SonyPicturesBrasil #MitologiaIndiana #EpicFilm
+#Ramayana #NamitMalhotra #SonyPicturesBrasil #Mitologia #CineNerd
 ```
 
 ### 06/11 — Red Dead Redemption 2 Trailer
