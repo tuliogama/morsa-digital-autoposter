@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 01/11/2026 01:37 BRT
+# Fila de reels @morsadigital — 01/11/2026 11:52 BRT
 
 ## cenas — a partir das 11h
 
@@ -1039,7 +1039,7 @@ HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ## main — a partir das 13h
 
-83 na fila | legendas ok: 6 | a revisar: 3 | dias sem reel no calendário: 0
+83 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 01/11 — Resident Evil | Trailer Oficial | Dublado
 Sony Pictures Brasil · ? · ? · legenda: ok
@@ -1089,18 +1089,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 04/11 — Nárnia: O Sobrinho do Mago - Trailer Oficial
-Sony Pictures Brasil · vertical · pt · legenda: revisar (detalhe sem base: Greta Gerwig; detalhe sem base: 11 de fevereiro)
+Sony Pictures Brasil · vertical · pt · legenda: revisar (hashtag genérica)
 
 ```
-Nárnia: O Sobrinho do Mago chegou e eu ainda tô sem ar, mas você já tá se sentindo parte dessa nova era?
+Ver Nárnia ganhar vida pela lente de Greta Gerwig me deixa com o coração acelerado, vocês já estão sentindo esse arrepio?
 
-A direção de Greta Gerwig pegou o material original e transformou tudo numa experiência visual que parece ter saído direto dos sonhos de quem cresceu lendo C.S. Lewis. É o tipo de adaptação que faz a gente lembrar por que amamos tanto esse universo mágico desde a infância.
+A direção de Gerwig traz uma nova camada de profundidade emocional para um universo que já é icônico. Estrear em 11 de fevereiro nos cinemas significa que a espera vale a pena para quem ama essa mitologia.
 
-A gente vai conseguir sentir o peso da magia nos cinemas ou vai ficar aquela sensação de "poxa, esperava mais"?
+Vai superar as expectativas ou vai deixar a gente na dúvida?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#Narnia #O_Sobrinho_do_Mago #GretaGerwig #CSPictures #FilmesDeFantasia
+#Narnia #O_Sobrinho_Do_Mago #GretaGerwig #SonyPicturesBrasil #Cinema
 ```
 
 ### 05/11 — Ramayana: O Nascimento de uma Lenda | Novo Trailer
@@ -1119,18 +1119,18 @@ Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 ```
 
 ### 06/11 — Red Dead Redemption 2 Trailer
-Rockstar Games · horizontal · en · legenda: revisar (hashtag genérica)
+Rockstar Games · horizontal · en · legenda: ok
 
 ```
-Red Dead Redemption 2, aquele trailer que mudou o jogo pra sempre.
+Red Dead Redemption 2, esse anúncio mudou o jogo pra sempre.
 
-Vale rever essa obra prima da Rockstar, criada pelos mesmos devs de GTA V. É a história épica da vida no coração implacável da América, num mundo vasto e cheio de atmosfera que virou base para uma nova experiência multiplayer online.
+Lembrando de quando a Rockstar anunciou que o mesmo time que criou GTA V e o primeiro Red Dead Redemption estava trabalhando nessa nova história épica sobre a vida no coração implacável da América. A expectativa era enorme porque o mundo aberto prometia ser a base de uma nova experiência multiplayer.
 
-Qual foi a primeira imagem que te fez pensar que aquele mundo seria imersivo demais?
+Qual foi a sua primeira reação quando esse trailer saiu em 2016? Você já jogou ou ainda tá na fila?
 
 Vídeo: Rockstar Games (canal oficial no YouTube)
 
-#RedDeadRedemption2 #GTA6 #RockstarGames #Gaming #Trailer
+#RedDeadRedemption2 #RockstarGames #GTA6 #RedDead #Gamer
 ```
 
 ### 07/11 — ONE PIECE: A Série - Temporada 2 | Trailer final | Netflix
