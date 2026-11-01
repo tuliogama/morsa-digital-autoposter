@@ -401,7 +401,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=M-WFfF2ETgk",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/M-WFfF2ETgk.mp4",
     "added_at": "2026-10-06T19:56:09.231295-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 16,
     "scheduled_for": "2026-11-01",
@@ -409,7 +409,9 @@
     "caption_style": "eu",
     "caption": "Tô com o coração acelerado só de pensar no terror que esse filme trouxe pro especial de Halloween, e você?\n\nZach Cregger, o cara por trás de \"Barbarian\", assume a direção e escreve o roteiro com Shay Hatten. É uma mistura perigosa de criatividade e tensão que faz valer cada segundo de suspense.\n\nO elenco tem nomes fortes como Paul Walter Hauser e Kali Reis, e a produção conta com gente do peso de Robert Kulzer.\n\nQual foi a cena que mais te deu arrepios quando você assistiu?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#ResidentEvil #ZachCregger #PaulWalterHauser #KaliReis #AustinAbrams",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-01T15:54:11.028533-03:00",
+    "media_id": "18219996370357770"
   },
   {
     "video_id": "D71cBUeAL58",
