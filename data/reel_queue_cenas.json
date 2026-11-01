@@ -2283,7 +2283,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=ADSd_5eJFVA",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/ADSd_5eJFVA.mp4",
     "added_at": "2026-10-13T02:17:17.912168-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 7,
     "theme": "bastidores",
@@ -2292,7 +2292,9 @@
     "lang": "pt",
     "caption": "Você lembra da época em que a Marvel mudou o jogo com Loki?\n\nVer a equipe trabalhando para mudar a direção do MCU foi um momento histórico.\nÉ sempre especial ver quem está por trás dessas ideias ousadas.\n\nQual foi a sua primeira reação quando soube disso?\n\nVídeo: Marvel Brasil (canal oficial no YouTube)\n\n#Loki #MarvelStudiosAvante #MCU #DisneyPlus #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-01T11:32:32.291650-03:00",
+    "media_id": "17962676252999362"
   },
   {
     "video_id": "PpVb_CHLsFE",
