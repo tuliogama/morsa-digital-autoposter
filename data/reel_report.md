@@ -1,25 +1,8 @@
-# Fila de reels @morsadigital — 31/10/2026 05:47 BRT
+# Fila de reels @morsadigital — 01/11/2026 01:37 BRT
 
 ## cenas — a partir das 11h
 
-126 na fila | legendas ok: 24 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 31/10 — PENNYWISE DIZ "BIP BIP" PARA MARGE E RICHIE EM IT! 🤡
-HBO Brasil · vertical · pt · legenda: ok
-
-```
-Pennywise gritando "bip bip" pra Marge e Richie divide opiniões?
-
-Essa cena é o tipo de coisa que gruda na cabeça e não sai mais.
-Aquele som de pato saindo da boca do Palhaço é puro pesadelo.
-Quem já assistiu sabe o quão desconcertante isso foi.
-
-Marca aquele amigo que tava com você nesse momento.
-
-Vídeo: HBO Brasil (canal oficial no YouTube)
-
-#It #Pennywise #MorsaDigital #HBO #SérieDeTerror #Palhaço #ItBemVindosADerry
-```
+125 na fila | legendas ok: 24 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 01/11 — Marvel Studios Avante: Os Bastidores de Loki | Trailer Oficial Legendado | Disne
 Marvel Brasil · horizontal · pt · legenda: ok
@@ -119,10 +102,19 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 07/11 — Falcão e o Soldado Invernal | Marvel Studios | Featurette | Disney+
-Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+Marvel Brasil · horizontal · pt · legenda: ok
 
 ```
-(gerada na hora da publicação)
+Colegas de trabalho? Brothers? Qual é a sua visão dele?
+
+Ver a dinâmica deles nos bastidores muda completamente a percepção da parceria.
+É aquele tipo de material que mostra a química real por trás das capas.
+
+Comenta aí como você vê essa dupla.
+
+Vídeo: Marvel Brasil (canal oficial no YouTube)
+
+#FalcãoEOSoldadoInvernal #MarvelStudios #DisneyPlus #MorsaDigital
 ```
 
 ### 08/11 — Momentos que deixaram os Illuminati mais humildes 🤪#Shorts
@@ -1038,24 +1030,16 @@ HBO Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
+### 28/02 — Chego, FAÇO HISTÓRIA com o Dracarys mais bonito da temporada, vou embora. 🔥  #AC
+HBO Max Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
 ## main — a partir das 13h
 
-84 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
-
-### 31/10 — Invocação do Mal: O Último Ritual l Trailer Oficial Dublado
-Warner Bros. Pictures Brasil · ? · ? · legenda: ok
-
-```
-Vera Farmiga e Patrick Wilson no último capítulo, e o frio na barriga bateu de novo só de ver o nome.
-
-É o nono filme do universo Invocação do Mal, dirigido por Michael Chaves e produzido por James Wan e Peter Safran. Com mais de 2 bilhões de dólares arrecadados até agora, a franquia continua sendo o terror definitivo para quem curte casos baseados em eventos reais.
-
-Esse trailer foi o seu favorito da saga ou o que mais te deixou na dúvida?
-
-Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
-
-#InvocaçãoDoMal #OÚltimoRitual #VeraFarmiga #PatrickWilson #MichaelChaves
-```
+83 na fila | legendas ok: 6 | a revisar: 3 | dias sem reel no calendário: 0
 
 ### 01/11 — Resident Evil | Trailer Oficial | Dublado
 Sony Pictures Brasil · ? · ? · legenda: ok
@@ -1105,18 +1089,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 04/11 — Nárnia: O Sobrinho do Mago - Trailer Oficial
-Sony Pictures Brasil · vertical · pt · legenda: revisar (hashtag genérica)
+Sony Pictures Brasil · vertical · pt · legenda: revisar (detalhe sem base: Greta Gerwig; detalhe sem base: 11 de fevereiro)
 
 ```
-Nárnia: O Sobrinho do Mago chegou e eu confesso que fiquei com o coração na mão, mas será que você vai se emocionar tanto quanto eu quando a magia voltar às telas?
+Nárnia: O Sobrinho do Mago chegou e eu ainda tô sem ar, mas você já tá se sentindo parte dessa nova era?
 
-Greta Gerwig assume a direção para contar a história que deu origem a todo o universo, explorando como Nárnia foi criada antes dos livros que nos marcaram. É a chance de ver a origem de tudo, com uma nova visão criativa que promete redefinir o que a gente espera da franquia.
+A direção de Greta Gerwig pegou o material original e transformou tudo numa experiência visual que parece ter saído direto dos sonhos de quem cresceu lendo C.S. Lewis. É o tipo de adaptação que faz a gente lembrar por que amamos tanto esse universo mágico desde a infância.
 
-Agora é esperar o dia 11 de fevereiro nos cinemas para descobrir se essa nova fase vai superar as expectativas ou se vai deixar a gente na dúvida.
+A gente vai conseguir sentir o peso da magia nos cinemas ou vai ficar aquela sensação de "poxa, esperava mais"?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#Narnia #O Sobrinho do Mago #GretaGerwig #SonyPictures #Trailer
+#Narnia #O_Sobrinho_do_Mago #GretaGerwig #CSPictures #FilmesDeFantasia
 ```
 
 ### 05/11 — Ramayana: O Nascimento de uma Lenda | Novo Trailer
@@ -1135,10 +1119,18 @@ Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 ```
 
 ### 06/11 — Red Dead Redemption 2 Trailer
-Rockstar Games · horizontal · en · legenda: ainda não gerada
+Rockstar Games · horizontal · en · legenda: revisar (hashtag genérica)
 
 ```
-(gerada na hora da publicação)
+Red Dead Redemption 2, aquele trailer que mudou o jogo pra sempre.
+
+Vale rever essa obra prima da Rockstar, criada pelos mesmos devs de GTA V. É a história épica da vida no coração implacável da América, num mundo vasto e cheio de atmosfera que virou base para uma nova experiência multiplayer online.
+
+Qual foi a primeira imagem que te fez pensar que aquele mundo seria imersivo demais?
+
+Vídeo: Rockstar Games (canal oficial no YouTube)
+
+#RedDeadRedemption2 #GTA6 #RockstarGames #Gaming #Trailer
 ```
 
 ### 07/11 — ONE PIECE: A Série - Temporada 2 | Trailer final | Netflix
