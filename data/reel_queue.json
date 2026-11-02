@@ -2056,7 +2056,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=rz1B4B2yBZY",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/rz1B4B2yBZY.mp4",
     "added_at": "2026-10-19T05:37:51.217483-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "fresh",
     "hook_text": null,
     "layout": "horizontal",
@@ -2064,7 +2064,9 @@
     "caption_style": "padrao",
     "caption": "Jason e Lucia em Vice City, aquele frio na barriga de quem sabe que o jogo mais esperado da década acabou de abrir as portas.\n\nVice City nunca foi só cenário, é um personagem. Ver o duo Justice, que compôs a trilha original, trazer uma colab com Tame Impala, SZA e King Gizzard & The Lizard Wizard mostra que a Rockstar tá apostando tudo na atmosfera, não só na ação.\n\nVai ser a entrega definitiva ou a Rockstar vai decepcionar a expectativa gigante?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#GTA6 #GrandTheftAutoVI #ViceCity #RockstarGames #Just",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-02T19:48:03.169278-03:00",
+    "media_id": "17994289383061670"
   },
   {
     "video_id": "GE0w3EiBV-c",
