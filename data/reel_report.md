@@ -1,24 +1,8 @@
-# Fila de reels @morsadigital — 01/11/2026 11:52 BRT
+# Fila de reels @morsadigital — 02/11/2026 11:01 BRT
 
 ## cenas — a partir das 11h
 
-125 na fila | legendas ok: 24 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 01/11 — Marvel Studios Avante: Os Bastidores de Loki | Trailer Oficial Legendado | Disne
-Marvel Brasil · horizontal · pt · legenda: ok
-
-```
-Você lembra da época em que a Marvel mudou o jogo com Loki?
-
-Ver a equipe trabalhando para mudar a direção do MCU foi um momento histórico.
-É sempre especial ver quem está por trás dessas ideias ousadas.
-
-Qual foi a sua primeira reação quando soube disso?
-
-Vídeo: Marvel Brasil (canal oficial no YouTube)
-
-#Loki #MarvelStudiosAvante #MCU #DisneyPlus #MorsaDigital
-```
+124 na fila | legendas ok: 23 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 02/11 — SATORU GOJO 🤝 QUICO DO CHAVES
 Netflix Brasil · vertical · pt · legenda: ok
@@ -1037,26 +1021,16 @@ HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
+### 01/03 — O AMOR FLORESCENDO EM THE LAST OF US
+HBO Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
 ## main — a partir das 13h
 
-83 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
-
-### 01/11 — Resident Evil | Trailer Oficial | Dublado
-Sony Pictures Brasil · ? · ? · legenda: ok
-
-```
-Tô com o coração acelerado só de pensar no terror que esse filme trouxe pro especial de Halloween, e você?
-
-Zach Cregger, o cara por trás de "Barbarian", assume a direção e escreve o roteiro com Shay Hatten. É uma mistura perigosa de criatividade e tensão que faz valer cada segundo de suspense.
-
-O elenco tem nomes fortes como Paul Walter Hauser e Kali Reis, e a produção conta com gente do peso de Robert Kulzer.
-
-Qual foi a cena que mais te deu arrepios quando você assistiu?
-
-Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
-
-#ResidentEvil #ZachCregger #PaulWalterHauser #KaliReis #AustinAbrams
-```
+82 na fila | legendas ok: 6 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 02/11 — Grand Theft Auto VI Launch Trailer
 Rockstar Games · horizontal · en · legenda: ok
@@ -1089,18 +1063,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 04/11 — Nárnia: O Sobrinho do Mago - Trailer Oficial
-Sony Pictures Brasil · vertical · pt · legenda: revisar (hashtag genérica)
+Sony Pictures Brasil · vertical · pt · legenda: revisar (checagem indisponível (The read operation timed out))
 
 ```
-Ver Nárnia ganhar vida pela lente de Greta Gerwig me deixa com o coração acelerado, vocês já estão sentindo esse arrepio?
+O universo de Nárnia ganhando vida nas mãos da Greta Gerwig me deixou com o coração acelerado. Você também sentiu esse arrepio ao ver a mágica tomar forma?
 
-A direção de Gerwig traz uma nova camada de profundidade emocional para um universo que já é icônico. Estrear em 11 de fevereiro nos cinemas significa que a espera vale a pena para quem ama essa mitologia.
+A promessa é clara: este filme vai mostrar a origem de tudo, explicando como esse mundo mágico foi criado antes mesmo das aventuras que a gente já ama. É uma oportunidade única de entender as raízes da franquia e ver esse universo ganhar uma nova camada de profundidade e visual.
 
-Vai superar as expectativas ou vai deixar a gente na dúvida?
+Vai ser a introdução perfeita para quem nunca leu os livros ou vai surpreender até os fãs mais antigos da saga?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#Narnia #O_Sobrinho_Do_Mago #GretaGerwig #SonyPicturesBrasil #Cinema
+#Narnia #O_Sobrinho_do_Mago #GretaGerwig #SonyPictures #CulturaGeek
 ```
 
 ### 05/11 — Ramayana: O Nascimento de uma Lenda | Novo Trailer
