@@ -543,14 +543,16 @@
     "youtube_url": "https://www.youtube.com/watch?v=I6CLLfzjZXM",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/I6CLLfzjZXM.mp4",
     "added_at": "2026-10-07T00:07:37.546098-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 19,
     "layout": "vertical",
     "lang": "pt",
     "caption": "Gojo é o Quico de peruca branca ou tá sendo injusto?\n\nA energia de mimado da vila combinando com o cara mais poderoso de Jujutsu Kaisen faz todo sentido.\nNão tem como não sentir o peso dessa comparação tão pesada.\n\nComenta aí se você concorda ou se vai defender o Gojo.\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#JujutsuKaisen #SatoruGojo #QuicoDoChaves #NetflixBrasil #Anime #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-02T15:50:07.997112-03:00",
+    "media_id": "18493984729111829"
   },
   {
     "video_id": "2tMXpY_topE",
