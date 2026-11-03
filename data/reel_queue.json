@@ -527,7 +527,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=hvoD7ehZPcM",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/hvoD7ehZPcM.mp4",
     "added_at": "2026-10-06T23:42:52.703782-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 17,
     "scheduled_for": "2026-11-03",
@@ -537,7 +537,9 @@
     "caption_style": "padrao",
     "caption": "GTA V, aquele trailer que mudou a forma como a gente joga.\n\nSão três protagonistas com personalidades opostas roubando a cena em Los Santos, uma metrópole caótica e cheia de personagens marcantes. A mistura de humor ácido e tensão nos assaltos definiu o padrão para os jogos abertos que vieram depois.\n\nQual desses três ladrões você escolheu como seu favorito na época?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#GTA5 #GrandTheftAuto #RockstarGames #LosSantos #GTA",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-03T17:30:59.661110-03:00",
+    "media_id": "18182382703453667"
   },
   {
     "video_id": "gmA6MrX81z4",
