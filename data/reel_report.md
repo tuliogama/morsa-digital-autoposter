@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 02/11/2026 23:47 BRT
+# Fila de reels @morsadigital — 03/11/2026 07:28 BRT
 
 ## cenas — a partir das 11h
 
@@ -1058,18 +1058,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 04/11 — Nárnia: O Sobrinho do Mago - Trailer Oficial
-Sony Pictures Brasil · vertical · pt · legenda: revisar (detalhe sem base: A direção de Greta Gerwig assume o universo criado por C.S. Lewis para trazer essa nova história ao grande telão; detalhe sem base: O trailer oficial chega em 11 de fevereiro exclusivamente nos cinemas)
+Sony Pictures Brasil · vertical · pt · legenda: revisar (detalhe sem base: Greta Gerwig – 11 de fevereiro exclusivamente nos cinemas; detalhe sem base: A Sony e a Greta Gerwig assumem a responsabilidade de criar o universo que a gente ama)
 
 ```
-Ver o nome da Nárnia ganhar vida de novo me deu aquele frio na barriga, e você?
+Nárnia: O Sobrinho do Mago chegou e eu tô com o coração acelerado, e você?
 
-A direção de Greta Gerwig assume o universo criado por C.S. Lewis para trazer essa nova história ao grande telão, e a expectativa da comunidade nerd brasileira está lá no teto.
+A Sony e a Greta Gerwig assumem a responsabilidade de criar o universo que a gente ama, mostrando como Nárnia foi dada vida antes de todas as histórias que conhecemos. É a oportunidade de ver a origem mágica sem os olhos de quem já viveu as aventuras clássicas, o que muda completamente a perspectiva de quem cresceu com a literatura.
 
-O trailer oficial chega em 11 de fevereiro exclusivamente nos cinemas, e a dúvida que divide a galera é se essa nova abordagem vai cativar quem cresceu com as sagas originais.
+Você acha que essa abordagem mais "cosmética" e de bastidores vai agradar ou vai decepcionar quem esperava uma história de ação direta?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#Narnia #OSobrinhoDoMago #GretaGerwig #NarniaMovie #SonyPicturesBrasil
+#Narnia #O_Sobrinho_Do_Mago #GretaGerwig #SonyPictures #MorsaDigital
 ```
 
 ### 05/11 — Ramayana: O Nascimento de uma Lenda | Novo Trailer
