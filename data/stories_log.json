@@ -1129,17 +1129,17 @@
   "story_id": "18221504227344993",
   "at": "2026-11-02T17:50:50-03:00",
   "insights": {
-   "reach": 25,
-   "views": 30,
+   "reach": 29,
+   "views": 35,
    "replies": 1,
    "shares": 0,
    "total_interactions": 2,
    "follows": 0,
    "profile_visits": 0,
-   "swipe_forward": 3,
-   "tap_forward": 16,
-   "tap_exit": 7
+   "tap_exit": 7,
+   "tap_forward": 20,
+   "swipe_forward": 3
   },
-  "insights_at": "2026-11-02T23:58:16-03:00"
+  "insights_at": "2026-11-03T04:18:48-03:00"
  }
 ]
