@@ -1,24 +1,8 @@
-# Fila de reels @morsadigital — 02/11/2026 11:01 BRT
+# Fila de reels @morsadigital — 02/11/2026 23:47 BRT
 
 ## cenas — a partir das 11h
 
-124 na fila | legendas ok: 23 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 02/11 — SATORU GOJO 🤝 QUICO DO CHAVES
-Netflix Brasil · vertical · pt · legenda: ok
-
-```
-Gojo é o Quico de peruca branca ou tá sendo injusto?
-
-A energia de mimado da vila combinando com o cara mais poderoso de Jujutsu Kaisen faz todo sentido.
-Não tem como não sentir o peso dessa comparação tão pesada.
-
-Comenta aí se você concorda ou se vai defender o Gojo.
-
-Vídeo: Netflix Brasil (canal oficial no YouTube)
-
-#JujutsuKaisen #SatoruGojo #QuicoDoChaves #NetflixBrasil #Anime #MorsaDigital
-```
+123 na fila | legendas ok: 23 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 03/11 — Guardiões da Galáxia Bastidores Povoando a Galáxia Parte II
 Marvel Brasil · horizontal · pt · legenda: ok
@@ -118,10 +102,20 @@ Vídeo: Marvel Brasil (canal oficial no YouTube)
 ```
 
 ### 09/11 — Gavião Arqueiro | Featurette Oficial Legendado | Disney+
-Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+Marvel Brasil · horizontal · pt · legenda: ok
 
 ```
-(gerada na hora da publicação)
+O encontro entre o melhor arqueiro e a melhor arqueira do mundo te pegou de surpresa?
+
+Ver o bastidores desse encontro é outra coisa.
+É a prova de que a química entre eles não é só roteiro, é pura energia.
+Quem mais sentiu esse choque de titãs na hora?
+
+Comenta aí qual foi a sua reação ao ver essa interação.
+
+Vídeo: Marvel Brasil (canal oficial no YouTube)
+
+#GaviãoArqueiro #YelenaBelo #MarvelStudios #DisneyPlus #MorsaDigital
 ```
 
 ### 10/11 — Sung Jinwoo vs. Baruka | Solo Leveling
@@ -1028,24 +1022,25 @@ HBO Brasil · vertical · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
+### 02/03 — Homem-Formiga -  Clipe: Teste de Fogo
+Marvel Brasil · horizontal · pt · legenda: ok
+
+```
+Scott Lang aguentou o tranco nesse Teste de Fogo?
+
+É impossível não lembrar da tensão que esse clipe passava.
+A expectativa era altíssima para ver o herói em ação.
+
+Qual foi a sua primeira impressão quando assistiu?
+
+Vídeo: Marvel Brasil (canal oficial no YouTube)
+
+#HomemFormiga #AntMan #Marvel #ScottLang #PaulRudd #MorsaDigital
+```
+
 ## main — a partir das 13h
 
-82 na fila | legendas ok: 6 | a revisar: 2 | dias sem reel no calendário: 0
-
-### 02/11 — Grand Theft Auto VI Launch Trailer
-Rockstar Games · horizontal · en · legenda: ok
-
-```
-Jason e Lucia em Vice City, aquele frio na barriga de quem sabe que o jogo mais esperado da década acabou de abrir as portas.
-
-Vice City nunca foi só cenário, é um personagem. Ver o duo Justice, que compôs a trilha original, trazer uma colab com Tame Impala, SZA e King Gizzard & The Lizard Wizard mostra que a Rockstar tá apostando tudo na atmosfera, não só na ação.
-
-Vai ser a entrega definitiva ou a Rockstar vai decepcionar a expectativa gigante?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
-
-#GTA6 #GrandTheftAutoVI #ViceCity #RockstarGames #Just
-```
+81 na fila | legendas ok: 5 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 03/11 — Grand Theft Auto V: The Official Trailer
 Rockstar Games · horizontal · en · legenda: ok
@@ -1063,18 +1058,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 04/11 — Nárnia: O Sobrinho do Mago - Trailer Oficial
-Sony Pictures Brasil · vertical · pt · legenda: revisar (checagem indisponível (The read operation timed out))
+Sony Pictures Brasil · vertical · pt · legenda: revisar (detalhe sem base: A direção de Greta Gerwig assume o universo criado por C.S. Lewis para trazer essa nova história ao grande telão; detalhe sem base: O trailer oficial chega em 11 de fevereiro exclusivamente nos cinemas)
 
 ```
-O universo de Nárnia ganhando vida nas mãos da Greta Gerwig me deixou com o coração acelerado. Você também sentiu esse arrepio ao ver a mágica tomar forma?
+Ver o nome da Nárnia ganhar vida de novo me deu aquele frio na barriga, e você?
 
-A promessa é clara: este filme vai mostrar a origem de tudo, explicando como esse mundo mágico foi criado antes mesmo das aventuras que a gente já ama. É uma oportunidade única de entender as raízes da franquia e ver esse universo ganhar uma nova camada de profundidade e visual.
+A direção de Greta Gerwig assume o universo criado por C.S. Lewis para trazer essa nova história ao grande telão, e a expectativa da comunidade nerd brasileira está lá no teto.
 
-Vai ser a introdução perfeita para quem nunca leu os livros ou vai surpreender até os fãs mais antigos da saga?
+O trailer oficial chega em 11 de fevereiro exclusivamente nos cinemas, e a dúvida que divide a galera é se essa nova abordagem vai cativar quem cresceu com as sagas originais.
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#Narnia #O_Sobrinho_do_Mago #GretaGerwig #SonyPictures #CulturaGeek
+#Narnia #OSobrinhoDoMago #GretaGerwig #NarniaMovie #SonyPicturesBrasil
 ```
 
 ### 05/11 — Ramayana: O Nascimento de uma Lenda | Novo Trailer
