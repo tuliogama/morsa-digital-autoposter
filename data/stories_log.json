@@ -1147,18 +1147,23 @@
   "story_id": "18013465577768826",
   "at": "2026-11-03T21:02:43-03:00",
   "insights": {
-   "reach": 23,
-   "views": 27,
-   "replies": 0,
+   "reach": 31,
+   "views": 39,
+   "replies": 1,
    "shares": 0,
-   "total_interactions": 1,
+   "total_interactions": 2,
    "follows": 0,
    "profile_visits": 0,
-   "tap_back": 1,
+   "tap_forward": 26,
+   "swipe_forward": 5,
    "tap_exit": 3,
-   "swipe_forward": 4,
-   "tap_forward": 18
+   "tap_back": 1
   },
-  "insights_at": "2026-11-04T04:00:58-03:00"
+  "insights_at": "2026-11-04T15:45:13-03:00"
+ },
+ {
+  "media_id": "18100282319547763",
+  "story_id": "17975808162165092",
+  "at": "2026-11-04T15:44:27-03:00"
  }
 ]
