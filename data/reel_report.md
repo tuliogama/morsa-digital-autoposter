@@ -1,24 +1,8 @@
-# Fila de reels @morsadigital — 03/11/2026 07:28 BRT
+# Fila de reels @morsadigital — 04/11/2026 10:30 BRT
 
 ## cenas — a partir das 11h
 
-123 na fila | legendas ok: 23 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 03/11 — Guardiões da Galáxia Bastidores Povoando a Galáxia Parte II
-Marvel Brasil · horizontal · pt · legenda: ok
-
-```
-Peter Quill e os Guardiões da Galáxia: você lembra como era esse grupo desorganizado?
-
-Vale rever esses bastidores para ver a energia da gravação e a química que formou aquele quarteto.
-É incrível ver o esforço por trás da união desse grupo que precisava salvar o universo.
-
-Comenta aí qual foi a primeira vez que você assistiu a esse filme.
-
-Vídeo: Marvel Brasil (canal oficial no YouTube)
-
-#GuardioesDaGalaxia #PeterQuill #Marvel #Bastidores #MorsaDigital
-```
+122 na fila | legendas ok: 22 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 04/11 — COMO ESQUECER O JULGAMENTO DO TYRION? | GOT
 HBO Brasil · vertical · pt · legenda: ok
@@ -1038,38 +1022,39 @@ Vídeo: Marvel Brasil (canal oficial no YouTube)
 #HomemFormiga #AntMan #Marvel #ScottLang #PaulRudd #MorsaDigital
 ```
 
+### 03/03 — Game Of Thrones | Ygritte dispara em Jon Snow | #MomentoHBO
+HBO Brasil · horizontal · pt · legenda: ok
+
+```
+Ygritte atirando no Jon Snow ainda te dói?
+
+Essa tensão entre o amor dela e a missão dele é o que faz essa cena pesar tanto na memória.
+É difícil não se colocar no lugar de quem fica pra trás quando a história exige sacrifício.
+
+Comenta aí qual foi a sua primeira reação ao ver isso.
+
+Vídeo: HBO Brasil (canal oficial no YouTube)
+
+#GameOfThrones #JonSnow #Ygritte #HBO #MomentoHBO #MorsaDigital
+```
+
 ## main — a partir das 13h
 
-81 na fila | legendas ok: 5 | a revisar: 2 | dias sem reel no calendário: 0
-
-### 03/11 — Grand Theft Auto V: The Official Trailer
-Rockstar Games · horizontal · en · legenda: ok
-
-```
-GTA V, aquele trailer que mudou a forma como a gente joga.
-
-São três protagonistas com personalidades opostas roubando a cena em Los Santos, uma metrópole caótica e cheia de personagens marcantes. A mistura de humor ácido e tensão nos assaltos definiu o padrão para os jogos abertos que vieram depois.
-
-Qual desses três ladrões você escolheu como seu favorito na época?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
-
-#GTA5 #GrandTheftAuto #RockstarGames #LosSantos #GTA
-```
+80 na fila | legendas ok: 4 | a revisar: 3 | dias sem reel no calendário: 0
 
 ### 04/11 — Nárnia: O Sobrinho do Mago - Trailer Oficial
-Sony Pictures Brasil · vertical · pt · legenda: revisar (detalhe sem base: Greta Gerwig – 11 de fevereiro exclusivamente nos cinemas; detalhe sem base: A Sony e a Greta Gerwig assumem a responsabilidade de criar o universo que a gente ama)
+Sony Pictures Brasil · vertical · pt · legenda: revisar (detalhe sem base: Greta Gerwig assumindo o comando de uma das franquias infantis mais cultuadas da história; detalhe sem base: Vocês sentiram esse mesmo choque ao ver o nome da diretora?)
 
 ```
-Nárnia: O Sobrinho do Mago chegou e eu tô com o coração acelerado, e você?
+Nárnia: O Sobrinho do Mago chegou ao meu feed e eu senti um arrepio imediato, mas confesso que tô divididíssimo entre a nostalgia e a ansiedade. Vocês sentiram esse mesmo choque ao ver o nome da diretora?
 
-A Sony e a Greta Gerwig assumem a responsabilidade de criar o universo que a gente ama, mostrando como Nárnia foi dada vida antes de todas as histórias que conhecemos. É a oportunidade de ver a origem mágica sem os olhos de quem já viveu as aventuras clássicas, o que muda completamente a perspectiva de quem cresceu com a literatura.
+Greta Gerwig assumindo o comando de uma das franquias infantis mais cultuadas da história é o tipo de aposta ousada que o cinema atual precisa. A premissa foca na origem do universo, explorando como o mundo mágico foi criado, o que sugere uma abordagem mais introspectiva e literária do que apenas ação pura.
 
-Você acha que essa abordagem mais "cosmética" e de bastidores vai agradar ou vai decepcionar quem esperava uma história de ação direta?
+Teremos o tom sombrio e épico de sempre ou uma releitura mais íntima e psicológica?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#Narnia #O_Sobrinho_Do_Mago #GretaGerwig #SonyPictures #MorsaDigital
+#Narnia #O Sobrinho do Mago #GretaGerwig #SonyPictures #CulturaPop
 ```
 
 ### 05/11 — Ramayana: O Nascimento de uma Lenda | Novo Trailer
@@ -1133,10 +1118,18 @@ Vídeo: Paramount Brasil (canal oficial no YouTube)
 ```
 
 ### 09/11 — Deadpool & Wolverine | Trailer 2 Oficial Dublado
-Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+Marvel Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Morsa Digital)
 
 ```
-(gerada na hora da publicação)
+Não tô acreditando que a dupla caótica finalmente tá falando em bom português, e você?
+
+É a vez de vermos o Mercenário Tagarela e o Wolverine trocando farpas com a nossa cara, sem a barreira do áudio original. A Morsa Digital sempre amou esse tipo de humor ácido, mas ver esse trocadilho em português muda completamente a experiência de quem acompanha a franquia há anos.
+
+Qual foi a primeira cena que te fez rir alto ou gritar de ansiedade quando você viu esse trailer pela primeira vez?
+
+Vídeo: Marvel Brasil (canal oficial no YouTube)
+
+#DeadpoolEWolverine #Marvel #RyanReynolds #HughJackman #Dublado
 ```
 
 ### 10/11 — Grand Theft Auto V: PlayStation 4, Xbox One & PC Announcement Trailer

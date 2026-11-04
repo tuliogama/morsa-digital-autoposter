@@ -687,7 +687,13 @@
     "kind": "acervo",
     "plan_order": 24,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_style": "eu",
+    "caption": "Não tô acreditando que a dupla caótica finalmente tá falando em bom português, e você?\n\nÉ a vez de vermos o Mercenário Tagarela e o Wolverine trocando farpas com a nossa cara, sem a barreira do áudio original. A Morsa Digital sempre amou esse tipo de humor ácido, mas ver esse trocadilho em português muda completamente a experiência de quem acompanha a franquia há anos.\n\nQual foi a primeira cena que te fez rir alto ou gritar de ansiedade quando você viu esse trailer pela primeira vez?\n\nVídeo: Marvel Brasil (canal oficial no YouTube)\n\n#DeadpoolEWolverine #Marvel #RyanReynolds #HughJackman #Dublado",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "detalhe sem base: Morsa Digital"
+    ]
   },
   {
     "video_id": "14qzQDMcTqM",
@@ -2087,11 +2093,11 @@
     "layout": "vertical",
     "lang": "pt",
     "caption_style": "eu",
-    "caption": "Nárnia: O Sobrinho do Mago chegou e eu tô com o coração acelerado, e você?\n\nA Sony e a Greta Gerwig assumem a responsabilidade de criar o universo que a gente ama, mostrando como Nárnia foi dada vida antes de todas as histórias que conhecemos. É a oportunidade de ver a origem mágica sem os olhos de quem já viveu as aventuras clássicas, o que muda completamente a perspectiva de quem cresceu com a literatura.\n\nVocê acha que essa abordagem mais \"cosmética\" e de bastidores vai agradar ou vai decepcionar quem esperava uma história de ação direta?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#Narnia #O_Sobrinho_Do_Mago #GretaGerwig #SonyPictures #MorsaDigital",
+    "caption": "Nárnia: O Sobrinho do Mago chegou ao meu feed e eu senti um arrepio imediato, mas confesso que tô divididíssimo entre a nostalgia e a ansiedade. Vocês sentiram esse mesmo choque ao ver o nome da diretora?\n\nGreta Gerwig assumindo o comando de uma das franquias infantis mais cultuadas da história é o tipo de aposta ousada que o cinema atual precisa. A premissa foca na origem do universo, explorando como o mundo mágico foi criado, o que sugere uma abordagem mais introspectiva e literária do que apenas ação pura.\n\nTeremos o tom sombrio e épico de sempre ou uma releitura mais íntima e psicológica?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#Narnia #O Sobrinho do Mago #GretaGerwig #SonyPictures #CulturaPop",
     "caption_check": "revisar",
     "caption_problems": [
-      "detalhe sem base: Greta Gerwig – 11 de fevereiro exclusivamente nos cinemas",
-      "detalhe sem base: A Sony e a Greta Gerwig assumem a responsabilidade de criar o universo que a gente ama"
+      "detalhe sem base: Greta Gerwig assumindo o comando de uma das franquias infantis mais cultuadas da história",
+      "detalhe sem base: Vocês sentiram esse mesmo choque ao ver o nome da diretora?"
     ]
   },
   {
