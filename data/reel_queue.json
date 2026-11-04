@@ -2087,7 +2087,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=GE0w3EiBV-c",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/GE0w3EiBV-c.mp4",
     "added_at": "2026-10-19T05:58:01.297736-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "fresh",
     "hook_text": null,
     "layout": "vertical",
@@ -2098,7 +2098,9 @@
     "caption_problems": [
       "detalhe sem base: Greta Gerwig assumindo o comando de uma das franquias infantis mais cultuadas da história",
       "detalhe sem base: Vocês sentiram esse mesmo choque ao ver o nome da diretora?"
-    ]
+    ],
+    "posted_at": "2026-11-04T17:49:50.437819-03:00",
+    "media_id": "17964432054234798"
   },
   {
     "video_id": "vW5i_zHHSkc",
