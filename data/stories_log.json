@@ -1145,6 +1145,20 @@
  {
   "media_id": "18182382703453667",
   "story_id": "18013465577768826",
-  "at": "2026-11-03T21:02:43-03:00"
+  "at": "2026-11-03T21:02:43-03:00",
+  "insights": {
+   "reach": 23,
+   "views": 27,
+   "replies": 0,
+   "shares": 0,
+   "total_interactions": 1,
+   "follows": 0,
+   "profile_visits": 0,
+   "tap_back": 1,
+   "tap_exit": 3,
+   "swipe_forward": 4,
+   "tap_forward": 18
+  },
+  "insights_at": "2026-11-04T04:00:58-03:00"
  }
 ]
