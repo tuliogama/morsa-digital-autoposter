@@ -1,24 +1,8 @@
-# Fila de reels @morsadigital — 04/11/2026 10:30 BRT
+# Fila de reels @morsadigital — 05/11/2026 00:09 BRT
 
 ## cenas — a partir das 11h
 
-122 na fila | legendas ok: 22 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 04/11 — COMO ESQUECER O JULGAMENTO DO TYRION? | GOT
-HBO Brasil · vertical · pt · legenda: ok
-
-```
-TyrionLannister seria justo julgado por seus crimes ou por quem ele é?
-
-Muita gente ainda discute se o veredicto foi a virada mais inteligente da história do personagem.
-É uma das cenas que divide opiniões até hoje entre os fãs da série.
-
-Comenta aí: você concorda com o julgamento ou acha que ele merecia mais?
-
-Vídeo: HBO Brasil (canal oficial no YouTube)
-
-#GameOfThrones #TyrionLannister #HBO #GOT #MelhoresCenas #MorsaDigital
-```
+121 na fila | legendas ok: 21 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 05/11 — Marvel Studios Avante: Os Bastidores de Falcão e o Soldado Invernal | Trailer Of
 Marvel Brasil · horizontal · pt · legenda: ok
@@ -1038,24 +1022,25 @@ Vídeo: HBO Brasil (canal oficial no YouTube)
 #GameOfThrones #JonSnow #Ygritte #HBO #MomentoHBO #MorsaDigital
 ```
 
+### 04/03 — Sonic 3: O Filme | Bastidores: O Doutor Está De Volta | Paramount Pictures Brasi
+Paramount Brasil · horizontal · pt · legenda: ok
+
+```
+Jim Carrey raspando a cabeça ao vivo: você achou ousado ou exagero?
+
+Relembre os bastidores de Sonic 3: O Filme e veja o empenho do ator para viver o Doutor Eggman Robotnik.
+Aquele comprometimento com o personagem realmente marcou a memória de muita gente.
+
+Comenta aí qual foi a sua reação quando viu isso.
+
+Vídeo: Paramount Brasil (canal oficial no YouTube)
+
+#Sonic3 #JimCarrey #DoutorEggman #SonicTheHedgehog #ParamountBrazil #MorsaDigital
+```
+
 ## main — a partir das 13h
 
-80 na fila | legendas ok: 4 | a revisar: 3 | dias sem reel no calendário: 0
-
-### 04/11 — Nárnia: O Sobrinho do Mago - Trailer Oficial
-Sony Pictures Brasil · vertical · pt · legenda: revisar (detalhe sem base: Greta Gerwig assumindo o comando de uma das franquias infantis mais cultuadas da história; detalhe sem base: Vocês sentiram esse mesmo choque ao ver o nome da diretora?)
-
-```
-Nárnia: O Sobrinho do Mago chegou ao meu feed e eu senti um arrepio imediato, mas confesso que tô divididíssimo entre a nostalgia e a ansiedade. Vocês sentiram esse mesmo choque ao ver o nome da diretora?
-
-Greta Gerwig assumindo o comando de uma das franquias infantis mais cultuadas da história é o tipo de aposta ousada que o cinema atual precisa. A premissa foca na origem do universo, explorando como o mundo mágico foi criado, o que sugere uma abordagem mais introspectiva e literária do que apenas ação pura.
-
-Teremos o tom sombrio e épico de sempre ou uma releitura mais íntima e psicológica?
-
-Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
-
-#Narnia #O Sobrinho do Mago #GretaGerwig #SonyPictures #CulturaPop
-```
+79 na fila | legendas ok: 6 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 05/11 — Ramayana: O Nascimento de uma Lenda | Novo Trailer
 Sony Pictures Brasil · horizontal · pt · legenda: ok
@@ -1118,25 +1103,33 @@ Vídeo: Paramount Brasil (canal oficial no YouTube)
 ```
 
 ### 09/11 — Deadpool & Wolverine | Trailer 2 Oficial Dublado
-Marvel Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Morsa Digital)
+Marvel Brasil · horizontal · pt · legenda: ok
 
 ```
-Não tô acreditando que a dupla caótica finalmente tá falando em bom português, e você?
+Eu não acredito que a dupla mais caótica da Marvel finalmente está falando em bom português, e me pergunto: quem é o fã que não ficou arrepiado ao ouvir o Mercenário Tagarela em português?
 
-É a vez de vermos o Mercenário Tagarela e o Wolverine trocando farpas com a nossa cara, sem a barreira do áudio original. A Morsa Digital sempre amou esse tipo de humor ácido, mas ver esse trocadilho em português muda completamente a experiência de quem acompanha a franquia há anos.
+Ver Ryan Reynolds e Hugh Jackman juntos em cena é o tipo de momento que a gente esperou a vida inteira. A química entre eles transforma o que seria apenas mais um filme de super-heróis em uma explosão de humor e ação que divide opiniões desde o primeiro frame.
 
-Qual foi a primeira cena que te fez rir alto ou gritar de ansiedade quando você viu esse trailer pela primeira vez?
+Qual foi a primeira frase do Deadpool dublado que te fez rir alto ou gritar?
 
 Vídeo: Marvel Brasil (canal oficial no YouTube)
 
-#DeadpoolEWolverine #Marvel #RyanReynolds #HughJackman #Dublado
+#DeadpoolEWolverine #Marvel #RyanReynolds #HughJackman #MCU
 ```
 
 ### 10/11 — Grand Theft Auto V: PlayStation 4, Xbox One & PC Announcement Trailer
-Rockstar Games · horizontal · en · legenda: ainda não gerada
+Rockstar Games · horizontal · en · legenda: ok
 
 ```
-(gerada na hora da publicação)
+Lembrar desse trailer me traz uma nostalgia absurda de quando todo mundo ficava animadão com a chegada da nova geração, e você?
+
+Foi o momento em que GTA V dominou de vez o mercado, quebrando recordes e se tornando a experiência de mundo aberto definitiva que a gente conhecia.
+
+Qual foi a primeira coisa que você fez ao jogar o game no PS4 ou no PC?
+
+Vídeo: Rockstar Games (canal oficial no YouTube)
+
+#GTA5 #GrandTheftAutoV #RockstarGames #GTA #GamerBR
 ```
 
 ### 11/11 — Superman l Trailer Teaser Oficial Dublado

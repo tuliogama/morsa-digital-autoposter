@@ -581,7 +581,11 @@
     "scheduled_for": "2026-11-10",
     "theme": "gta",
     "layout": "horizontal",
-    "lang": "en"
+    "lang": "en",
+    "caption_style": "eu",
+    "caption": "Lembrar desse trailer me traz uma nostalgia absurda de quando todo mundo ficava animadão com a chegada da nova geração, e você?\n\nFoi o momento em que GTA V dominou de vez o mercado, quebrando recordes e se tornando a experiência de mundo aberto definitiva que a gente conhecia.\n\nQual foi a primeira coisa que você fez ao jogar o game no PS4 ou no PC?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#GTA5 #GrandTheftAutoV #RockstarGames #GTA #GamerBR",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "rsQEor4y2hg",
@@ -689,11 +693,9 @@
     "layout": "horizontal",
     "lang": "pt",
     "caption_style": "eu",
-    "caption": "Não tô acreditando que a dupla caótica finalmente tá falando em bom português, e você?\n\nÉ a vez de vermos o Mercenário Tagarela e o Wolverine trocando farpas com a nossa cara, sem a barreira do áudio original. A Morsa Digital sempre amou esse tipo de humor ácido, mas ver esse trocadilho em português muda completamente a experiência de quem acompanha a franquia há anos.\n\nQual foi a primeira cena que te fez rir alto ou gritar de ansiedade quando você viu esse trailer pela primeira vez?\n\nVídeo: Marvel Brasil (canal oficial no YouTube)\n\n#DeadpoolEWolverine #Marvel #RyanReynolds #HughJackman #Dublado",
-    "caption_check": "revisar",
-    "caption_problems": [
-      "detalhe sem base: Morsa Digital"
-    ]
+    "caption": "Eu não acredito que a dupla mais caótica da Marvel finalmente está falando em bom português, e me pergunto: quem é o fã que não ficou arrepiado ao ouvir o Mercenário Tagarela em português?\n\nVer Ryan Reynolds e Hugh Jackman juntos em cena é o tipo de momento que a gente esperou a vida inteira. A química entre eles transforma o que seria apenas mais um filme de super-heróis em uma explosão de humor e ação que divide opiniões desde o primeiro frame.\n\nQual foi a primeira frase do Deadpool dublado que te fez rir alto ou gritar?\n\nVídeo: Marvel Brasil (canal oficial no YouTube)\n\n#DeadpoolEWolverine #Marvel #RyanReynolds #HughJackman #MCU",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "14qzQDMcTqM",
