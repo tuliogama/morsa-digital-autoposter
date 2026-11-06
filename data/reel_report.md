@@ -1,8 +1,8 @@
-# Fila de reels @morsadigital — 05/11/2026 23:50 BRT
+# Fila de reels @morsadigital — 06/11/2026 03:20 BRT
 
 ## cenas — a partir das 11h
 
-120 na fila | legendas ok: 20 | a revisar: 1 | dias sem reel no calendário: 0
+120 na fila | legendas ok: 21 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 06/11 — Nem sempre Naruto será seu primeiro anime... qual é o de vocês? 👀
 Netflix Brasil · horizontal · pt · legenda: ok
@@ -87,10 +87,18 @@ Vídeo: Crunchyroll Brasil (canal oficial no YouTube)
 ```
 
 ### 11/11 — Bastidores de ONE PIECE: A Série cena do passado de Sanji #onepiece #vfx #bts
-Netflix Brasil · vertical · pt · legenda: ainda não gerada
+Netflix Brasil · vertical · pt · legenda: ok
 
 ```
-(gerada na hora da publicação)
+Sanji no meio do oceano? Você esperava ver isso nos bastidores?
+
+Ver o mini Sanji e o Zeff sendo fotografados ali, cercados por água, muda completamente a percepção da cena. É impressionante como a equipe transformou aquilo em realidade.
+
+Conta pra gente: qual foi a primeira coisa que te veio à mente ao ver essa foto?
+
+Vídeo: Netflix Brasil (canal oficial no YouTube)
+
+#OnePiece #Sanji #Zeff #Bastidores #MorsaDigital
 ```
 
 ### 12/11 — POR TRÁS DOS EFEITOS DE THE LAST OF US 🍄
