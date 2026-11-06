@@ -1223,22 +1223,41 @@
   "story_id": "18260264995308317",
   "at": "2026-11-05T21:25:48-03:00",
   "insights": {
-   "reach": 21,
-   "views": 24,
+   "reach": 28,
+   "views": 34,
    "replies": 1,
    "shares": 0,
    "total_interactions": 2,
    "follows": 0,
    "profile_visits": 0,
+   "swipe_forward": 1,
    "tap_back": 2,
-   "tap_forward": 14,
-   "tap_exit": 6
+   "tap_forward": 19,
+   "tap_exit": 11
   },
-  "insights_at": "2026-11-06T15:08:49-03:00"
+  "insights_at": "2026-11-06T20:46:46-03:00"
  },
  {
   "media_id": "18645254395027403",
   "story_id": "18118370936016677",
-  "at": "2026-11-06T15:07:47-03:00"
+  "at": "2026-11-06T15:07:47-03:00",
+  "insights": {
+   "reach": 15,
+   "views": 15,
+   "replies": 1,
+   "shares": 0,
+   "total_interactions": 2,
+   "follows": 0,
+   "profile_visits": 0,
+   "tap_exit": 4,
+   "tap_forward": 10,
+   "swipe_forward": 1
+  },
+  "insights_at": "2026-11-06T20:46:46-03:00"
+ },
+ {
+  "media_id": "17952103812312725",
+  "story_id": "17979244961932483",
+  "at": "2026-11-06T20:45:53-03:00"
  }
 ]
