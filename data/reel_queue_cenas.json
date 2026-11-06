@@ -587,14 +587,16 @@
     "youtube_url": "https://www.youtube.com/watch?v=zJE319Ui_pM",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/zJE319Ui_pM.mp4",
     "added_at": "2026-10-07T00:11:08.744974-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 21,
     "layout": "horizontal",
     "lang": "pt",
     "caption": "Sailor Moon foi seu primeiro anime ou você já tinha outro favorito?\n\nEssa abertura tem um peso emocional que desmonta qualquer defesa de Naruto.\nÉ impossível não sentir aquele aperto no peito ao ver a Sailor Moon em ação.\n\nComenta aí qual foi o anime que te apresentou ao mundo nerd.\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#SailorMoon #Anime #NetfilxBrazil #CulturaNerd #Animes #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-06T14:00:46.549699-03:00",
+    "media_id": "18645254395027403"
   },
   {
     "video_id": "7XdML3Rd_xA",
