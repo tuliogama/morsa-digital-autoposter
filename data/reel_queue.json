@@ -552,7 +552,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=gmA6MrX81z4",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/gmA6MrX81z4.mp4",
     "added_at": "2026-10-06T23:46:52.072622-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 18,
     "scheduled_for": "2026-11-06",
@@ -562,7 +562,9 @@
     "caption_style": "padrao",
     "caption": "Red Dead Redemption 2, esse anúncio mudou o jogo pra sempre.\n\nLembrando de quando a Rockstar anunciou que o mesmo time que criou GTA V e o primeiro Red Dead Redemption estava trabalhando nessa nova história épica sobre a vida no coração implacável da América. A expectativa era enorme porque o mundo aberto prometia ser a base de uma nova experiência multiplayer.\n\nQual foi a sua primeira reação quando esse trailer saiu em 2016? Você já jogou ou ainda tá na fila?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#RedDeadRedemption2 #RockstarGames #GTA6 #RedDead #Gamer",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-06T17:26:34.220315-03:00",
+    "media_id": "17952103812312725"
   },
   {
     "video_id": "3DBrG2YjqQA",
