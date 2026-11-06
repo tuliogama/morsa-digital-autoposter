@@ -1,25 +1,8 @@
-# Fila de reels @morsadigital — 05/11/2026 06:17 BRT
+# Fila de reels @morsadigital — 05/11/2026 23:50 BRT
 
 ## cenas — a partir das 11h
 
-121 na fila | legendas ok: 21 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 05/11 — Marvel Studios Avante: Os Bastidores de Falcão e o Soldado Invernal | Trailer Of
-Marvel Brasil · horizontal · pt · legenda: ok
-
-```
-Você assistiu aos bastidores de Falcão e o Soldado Invernal?
-
-Ver por trás das câmeras muda completamente a percepção da série.
-É legal entender o esforço que vai por trás de cada cena.
-Só no Disney+ mesmo.
-
-Conta pra gente: o que mais te impressionou nessa produção?
-
-Vídeo: Marvel Brasil (canal oficial no YouTube)
-
-#FalcãoEOSoldadoInvernal #MarvelStudios #DisneyPlus #Bastidores #MorsaDigital
-```
+120 na fila | legendas ok: 20 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 06/11 — Nem sempre Naruto será seu primeiro anime... qual é o de vocês? 👀
 Netflix Brasil · horizontal · pt · legenda: ok
@@ -1038,24 +1021,25 @@ Vídeo: Paramount Brasil (canal oficial no YouTube)
 #Sonic3 #JimCarrey #DoutorEggman #SonicTheHedgehog #ParamountBrazil #MorsaDigital
 ```
 
+### 05/03 — THE FLASH | CENA EXCLUSIVA
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ok
+
+```
+Essa cena exclusiva de The Flash te pegou de surpresa?
+
+Relembre o momento em que Barry Allen viaja no tempo e acaba preso numa realidade onde o General Zod ameaça o mundo sem super-heróis por perto.
+É a chance de rever como o Batman aposentado reage a ser chamado de volta para salvar a situação.
+
+Comenta aí o que você achou dessa versão do Batman.
+
+Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
+
+#TheFlash #DC #BarryAllen #Batman #GeneralZod #MorsaDigital
+```
+
 ## main — a partir das 13h
 
-79 na fila | legendas ok: 6 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 05/11 — Ramayana: O Nascimento de uma Lenda | Novo Trailer
-Sony Pictures Brasil · horizontal · pt · legenda: ok
-
-```
-Ramayana: O Nascimento de uma Lenda chegou e o peso desse título já me coloca em alerta máximo.
-
-A gente cresce ouvindo essa história, mas ver Namit Malhotra colocar mão nesse épico milenar, com o destino de Rama e a vingança imortal de Ravana, muda o jogo. É a adaptação que o Brasil inteiro esperava pra ver essa lenda ganhar vida com essa escala.
-
-Vai manter a grandiosidade do original ou vai cair no clichê? Qual desses dois destinos te deixou mais com medo?
-
-Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
-
-#Ramayana #Ramayana2025 #NamitMalhotra #SonyPicturesBrasil #PopNerd
-```
+78 na fila | legendas ok: 6 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 06/11 — Red Dead Redemption 2 Trailer
 Rockstar Games · horizontal · en · legenda: ok
@@ -1133,10 +1117,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 11/11 — Superman l Trailer Teaser Oficial Dublado
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ok
 
 ```
-(gerada na hora da publicação)
+Superman. Sim, aquele mesmo, mas com uma energia que eu nunca tinha visto antes.
+
+Esse é o primeiro longa da nova era da DC Studios, liderado por James Gunn, que promete misturar ação épica, humor e aquele coração que a gente ama no herói original. A vibe de compaixão e crença na bondade da humanidade que ele descreveu parece que vai mudar completamente a cara do universo cinematográfico.
+
+Vocês sentiram esse novo tom logo de cara ou acharam que estava mais conservador do que o esperado?
+
+Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
+
+#SupermanFilme #DCStudios #JamesGunn #DCU #WarnerBros
 ```
 
 ### 12/11 — Demon Slayer: Kimetsu no Yaiba Castelo Infinito | Trailer | Em breve nos cinemas

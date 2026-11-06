@@ -712,7 +712,11 @@
     "kind": "acervo",
     "plan_order": 25,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_style": "padrao",
+    "caption": "Superman. Sim, aquele mesmo, mas com uma energia que eu nunca tinha visto antes.\n\nEsse é o primeiro longa da nova era da DC Studios, liderado por James Gunn, que promete misturar ação épica, humor e aquele coração que a gente ama no herói original. A vibe de compaixão e crença na bondade da humanidade que ele descreveu parece que vai mudar completamente a cara do universo cinematográfico.\n\nVocês sentiram esse novo tom logo de cara ou acharam que estava mais conservador do que o esperado?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#SupermanFilme #DCStudios #JamesGunn #DCU #WarnerBros",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "KN921po7cEE",
