@@ -735,7 +735,13 @@
     "kind": "acervo",
     "plan_order": 26,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_style": "eu",
+    "caption": "O trailer de Demon Slayer: Kimetsu no Yaiba Castelo Infinito me deixou sem ar, mas será que vocês conseguem conter a ansiedade só olhando isso?\n\nA Sony Pictures Brasil trouxe essa trilogia épica para os cinemas e o hype da comunidade nerd brasileira é surreal. É aquele momento em que a arte animada bate de frente com a escala de uma produção cinematográfica, elevando o padrão da franquia.\n\nQual foi a primeira imagem do trailer que fez seu coração disparar?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#DemonSlayer #KimetsuNoYaiba #CasteloInfinito #Anime #MorsaDigital",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "detalhe sem base: Sony Pictures Brasil trouxe essa trilogia épica para os cinemas"
+    ]
   },
   {
     "video_id": "6z3MisfGttY",

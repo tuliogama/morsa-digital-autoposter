@@ -1,24 +1,8 @@
-# Fila de reels @morsadigital — 06/11/2026 05:50 BRT
+# Fila de reels @morsadigital — 07/11/2026 09:37 BRT
 
 ## cenas — a partir das 11h
 
-120 na fila | legendas ok: 21 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 06/11 — Nem sempre Naruto será seu primeiro anime... qual é o de vocês? 👀
-Netflix Brasil · horizontal · pt · legenda: ok
-
-```
-Sailor Moon foi seu primeiro anime ou você já tinha outro favorito?
-
-Essa abertura tem um peso emocional que desmonta qualquer defesa de Naruto.
-É impossível não sentir aquele aperto no peito ao ver a Sailor Moon em ação.
-
-Comenta aí qual foi o anime que te apresentou ao mundo nerd.
-
-Vídeo: Netflix Brasil (canal oficial no YouTube)
-
-#SailorMoon #Anime #NetfilxBrazil #CulturaNerd #Animes #MorsaDigital
-```
+119 na fila | legendas ok: 20 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 07/11 — Falcão e o Soldado Invernal | Marvel Studios | Featurette | Disney+
 Marvel Brasil · horizontal · pt · legenda: ok
@@ -1047,22 +1031,7 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
 ## main — a partir das 13h
 
-78 na fila | legendas ok: 6 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 06/11 — Red Dead Redemption 2 Trailer
-Rockstar Games · horizontal · en · legenda: ok
-
-```
-Red Dead Redemption 2, esse anúncio mudou o jogo pra sempre.
-
-Lembrando de quando a Rockstar anunciou que o mesmo time que criou GTA V e o primeiro Red Dead Redemption estava trabalhando nessa nova história épica sobre a vida no coração implacável da América. A expectativa era enorme porque o mundo aberto prometia ser a base de uma nova experiência multiplayer.
-
-Qual foi a sua primeira reação quando esse trailer saiu em 2016? Você já jogou ou ainda tá na fila?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
-
-#RedDeadRedemption2 #RockstarGames #GTA6 #RedDead #Gamer
-```
+77 na fila | legendas ok: 5 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 07/11 — ONE PIECE: A Série - Temporada 2 | Trailer final | Netflix
 Netflix Brasil · horizontal · pt · legenda: ok
@@ -1140,10 +1109,18 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 ```
 
 ### 12/11 — Demon Slayer: Kimetsu no Yaiba Castelo Infinito | Trailer | Em breve nos cinemas
-Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Sony Pictures Brasil trouxe essa trilogia épica para os cinemas)
 
 ```
-(gerada na hora da publicação)
+O trailer de Demon Slayer: Kimetsu no Yaiba Castelo Infinito me deixou sem ar, mas será que vocês conseguem conter a ansiedade só olhando isso?
+
+A Sony Pictures Brasil trouxe essa trilogia épica para os cinemas e o hype da comunidade nerd brasileira é surreal. É aquele momento em que a arte animada bate de frente com a escala de uma produção cinematográfica, elevando o padrão da franquia.
+
+Qual foi a primeira imagem do trailer que fez seu coração disparar?
+
+Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
+
+#DemonSlayer #KimetsuNoYaiba #CasteloInfinito #Anime #MorsaDigital
 ```
 
 ### 13/11 — GTA Online: The Doomsday Heist Official Trailer
