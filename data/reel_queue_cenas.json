@@ -2361,7 +2361,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=VHDg7_6L2JY",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/VHDg7_6L2JY.mp4",
     "added_at": "2026-10-13T05:34:04.509923-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 10,
     "theme": "bastidores",
@@ -2370,7 +2370,9 @@
     "lang": "pt",
     "caption": "Colegas de trabalho? Brothers? Qual é a sua visão dele?\n\nVer a dinâmica deles nos bastidores muda completamente a percepção da parceria.\nÉ aquele tipo de material que mostra a química real por trás das capas.\n\nComenta aí como você vê essa dupla.\n\nVídeo: Marvel Brasil (canal oficial no YouTube)\n\n#FalcãoEOSoldadoInvernal #MarvelStudios #DisneyPlus #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-07T11:15:44.644796-03:00",
+    "media_id": "18148072840596615"
   },
   {
     "video_id": "UgFXlLa_67o",
