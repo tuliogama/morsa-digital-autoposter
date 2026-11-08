@@ -609,14 +609,16 @@
     "youtube_url": "https://www.youtube.com/watch?v=7XdML3Rd_xA",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/7XdML3Rd_xA.mp4",
     "added_at": "2026-10-07T00:12:40.784209-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 22,
     "layout": "vertical",
     "lang": "pt",
     "caption": "Quem você acha que saiu mais humilde nessa história?\n\nÉ impossível não rir quando o time mais poderoso do MCU encontra limites.\nEsses momentos de vulnerabilidade mostram que nem todo poderoso é intocável.\n\nMarca aquele amigo que sempre acha que os Illuminati vão ganhar de tudo.\n\nVídeo: Marvel Brasil (canal oficial no YouTube)\n\n#DoutorEstranho #MultiversoDaLoucura #Illuminati #Marvel #DisneyPlus #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-08T11:40:21.953122-03:00",
+    "media_id": "18036776954898479"
   },
   {
     "video_id": "6aak98shoCg",
