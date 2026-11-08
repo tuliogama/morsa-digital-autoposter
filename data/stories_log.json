@@ -1278,16 +1278,22 @@
   "story_id": "18138335602660195",
   "at": "2026-11-07T13:55:37-03:00",
   "insights": {
-   "reach": 11,
-   "views": 12,
+   "reach": 16,
+   "views": 16,
    "replies": 0,
    "shares": 0,
    "total_interactions": 1,
    "follows": 0,
    "profile_visits": 0,
-   "tap_forward": 9,
+   "swipe_forward": 1,
+   "tap_forward": 12,
    "tap_exit": 2
   },
-  "insights_at": "2026-11-07T17:59:12-03:00"
+  "insights_at": "2026-11-07T21:49:38-03:00"
+ },
+ {
+  "media_id": "17910523818573507",
+  "story_id": "18114225266522576",
+  "at": "2026-11-07T21:48:44-03:00"
  }
 ]
