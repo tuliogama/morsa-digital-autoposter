@@ -693,7 +693,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=dEbe0rS4Z2A",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/dEbe0rS4Z2A.mp4",
     "added_at": "2026-10-07T00:27:23.347466-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 24,
     "layout": "horizontal",
@@ -701,7 +701,9 @@
     "caption_style": "eu",
     "caption": "Eu não acredito que a dupla mais caótica da Marvel finalmente está falando em bom português, e me pergunto: quem é o fã que não ficou arrepiado ao ouvir o Mercenário Tagarela em português?\n\nVer Ryan Reynolds e Hugh Jackman juntos em cena é o tipo de momento que a gente esperou a vida inteira. A química entre eles transforma o que seria apenas mais um filme de super-heróis em uma explosão de humor e ação que divide opiniões desde o primeiro frame.\n\nQual foi a primeira frase do Deadpool dublado que te fez rir alto ou gritar?\n\nVídeo: Marvel Brasil (canal oficial no YouTube)\n\n#DeadpoolEWolverine #Marvel #RyanReynolds #HughJackman #MCU",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-09T20:26:06.827645-03:00",
+    "media_id": "18454300495125358"
   },
   {
     "video_id": "14qzQDMcTqM",
