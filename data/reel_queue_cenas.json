@@ -2387,7 +2387,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=UgFXlLa_67o",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/UgFXlLa_67o.mp4",
     "added_at": "2026-10-13T05:39:17.815483-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 11,
     "theme": "bastidores",
@@ -2396,7 +2396,9 @@
     "lang": "pt",
     "caption": "O encontro entre o melhor arqueiro e a melhor arqueira do mundo te pegou de surpresa?\n\nVer o bastidores desse encontro é outra coisa.\nÉ a prova de que a química entre eles não é só roteiro, é pura energia.\nQuem mais sentiu esse choque de titãs na hora?\n\nComenta aí qual foi a sua reação ao ver essa interação.\n\nVídeo: Marvel Brasil (canal oficial no YouTube)\n\n#GaviãoArqueiro #YelenaBelo #MarvelStudios #DisneyPlus #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-09T17:05:26.501004-03:00",
+    "media_id": "17917162146498481"
   },
   {
     "video_id": "KdRm2AWpxbI",
