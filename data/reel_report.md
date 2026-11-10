@@ -1,8 +1,8 @@
-# Fila de reels @morsadigital — 10/11/2026 02:32 BRT
+# Fila de reels @morsadigital — 10/11/2026 04:14 BRT
 
 ## cenas — a partir das 11h
 
-116 na fila | legendas ok: 18 | a revisar: 2 | dias sem reel no calendário: 0
+116 na fila | legendas ok: 19 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 10/11 — Sung Jinwoo vs. Baruka | Solo Leveling
 Crunchyroll Brasil · vertical · pt · legenda: ok
@@ -86,20 +86,19 @@ Vídeo: Prime Video Brasil (canal oficial no YouTube)
 ```
 
 ### 15/11 — Marvel’s Iron Man VR - Bastidores do Tony  | PS VR
-PlayStation Brasil · horizontal · pt · legenda: revisar (detalhe sem base: ver o "porquê" por trás da Impulse Armor e da mansão em Malibu)
+PlayStation Brasil · horizontal · pt · legenda: ok
 
 ```
-Você já viveu a vida do Tony Stark no VR ou prefere só jogar?
+A Camouflaj acertou a mão ao criar o Tony Stark em VR?
 
-Ver a equipe Camouflaj mostrando como criaram essa experiência é outro nível.
-É aquela sensação de ver o "porquê" por trás da Impulse Armor e da mansão em Malibu.
-A gente sempre quis sentir que o design era nosso, e aqui eles mostram como tentaram entregar isso.
+Ver quem por trás das telas e da tecnologia dá vida ao Homem de Ferro é outro nível.
+É a chance de entender como transformaram a experiência em algo imersivo e completo.
 
-Comenta aí: você topa testar o VR ou fica só no sofá assistindo?
+Qual foi a sua reação ao ver esse making of?
 
 Vídeo: PlayStation Brasil (canal oficial no YouTube)
 
-#IronManVR #TonyStark #PlayStationVR #Camouflaj #MorsaDigital
+#IronManVR #TonyStark #Marvel #Camouflaj #MorsaDigital
 ```
 
 ### 16/11 — Avatar: O Último Mestre do Ar recria a abertura clássica
@@ -1034,18 +1033,18 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 ```
 
 ### 12/11 — Demon Slayer: Kimetsu no Yaiba Castelo Infinito | Trailer | Em breve nos cinemas
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (trata vídeo antigo como novidade)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Essa trilogia épica nos cinemas é a continuação direta da saga dos Tanjiro e dos Hashiras.)
 
 ```
-Eu ainda sinto o arrepio de quando a taça do Tanjiro apareceu na tela, e você?
+Demon Slayer: Kimetsu no Yaiba Castelo Infinito. Lembro de chorar na primeira temporada e, agora, esse trailer me deixou com a barriga amarrada. Qual parte da franquia mais te marcou até hoje?
 
-A trilogia do Castelo Infinito chegou aos cinemas brasileiros de uma vez, o que muda completamente a experiência de acompanhar o confronto final. É o ápice da jornada que a Crunchyroll e a Sony trouxeram para nós, reunindo tudo o que o anime construiu até aqui.
+Essa trilogia épica nos cinemas é a continuação direta da saga dos Tanjiro e dos Hashiras. A ansiedade da comunidade BR era enorme porque todos sabiam que o final da história precisava de um palco à altura para fechar o arco.
 
-Qual momento dessa fase ficou gravado na sua memória?
+Você achou que a expectativa era maior que a realidade ou o filme entregou tudo que a gente sonhava?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#DemonSlayer #KimetsuNoYaiba #CasteloInfinito #AnimeBR #MorsaDigital
+#DemonSlayer #KimetsuNoYaiba #CasteloInfinito #AnimeNoCinema #MorsaDigital
 ```
 
 ### 13/11 — GTA Online: The Doomsday Heist Official Trailer
