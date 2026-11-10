@@ -577,7 +577,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=3DBrG2YjqQA",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/3DBrG2YjqQA.mp4",
     "added_at": "2026-10-06T23:50:38.049306-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 19,
     "scheduled_for": "2026-11-10",
@@ -587,7 +587,9 @@
     "caption_style": "eu",
     "caption": "Lembrar desse trailer me traz uma nostalgia absurda de quando todo mundo ficava animadão com a chegada da nova geração, e você?\n\nFoi o momento em que GTA V dominou de vez o mercado, quebrando recordes e se tornando a experiência de mundo aberto definitiva que a gente conhecia.\n\nQual foi a primeira coisa que você fez ao jogar o game no PS4 ou no PC?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#GTA5 #GrandTheftAutoV #RockstarGames #GTA #GamerBR",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-10T17:48:50.775879-03:00",
+    "media_id": "18043054805641558"
   },
   {
     "video_id": "rsQEor4y2hg",
