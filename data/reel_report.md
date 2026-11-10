@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 10/11/2026 04:14 BRT
+# Fila de reels @morsadigital — 10/11/2026 07:27 BRT
 
 ## cenas — a partir das 11h
 
@@ -1033,18 +1033,18 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 ```
 
 ### 12/11 — Demon Slayer: Kimetsu no Yaiba Castelo Infinito | Trailer | Em breve nos cinemas
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Essa trilogia épica nos cinemas é a continuação direta da saga dos Tanjiro e dos Hashiras.)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (trata vídeo antigo como novidade)
 
 ```
-Demon Slayer: Kimetsu no Yaiba Castelo Infinito. Lembro de chorar na primeira temporada e, agora, esse trailer me deixou com a barriga amarrada. Qual parte da franquia mais te marcou até hoje?
+Demon Slayer: Kimetsu no Yaiba Castelo Infinito chegou e eu ainda não acredito que estamos de volta ao arco mais aguardado da história, como você tá se sentindo agora que viu esse trailer de novo?
 
-Essa trilogia épica nos cinemas é a continuação direta da saga dos Tanjiro e dos Hashiras. A ansiedade da comunidade BR era enorme porque todos sabiam que o final da história precisava de um palco à altura para fechar o arco.
+A trilogia épica que a Crunchyroll trouxe pra telona já é um marco no anime brasileiro, e rever esse material é essencial pra quem quer entender o peso dessa fase. O hype de ver os lutadores enfrentando o fim da jornada continua intacto mesmo depois de tanto tempo, mostrando por que essa franquia dominou a cultura pop global.
 
-Você achou que a expectativa era maior que a realidade ou o filme entregou tudo que a gente sonhava?
+Qual foi a cena ou o momento do filme que mais te marcou ao assistir pela primeira vez?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#DemonSlayer #KimetsuNoYaiba #CasteloInfinito #AnimeNoCinema #MorsaDigital
+#DemonSlayer #KimetsuNoYaiba #CasteloInfinito #Crunchyroll #Anime
 ```
 
 ### 13/11 — GTA Online: The Doomsday Heist Official Trailer
