@@ -743,10 +743,10 @@
     "layout": "horizontal",
     "lang": "pt",
     "caption_style": "eu",
-    "caption": "O trailer de Demon Slayer: Kimetsu no Yaiba Castelo Infinito me deixou sem ar, mas será que vocês conseguem conter a ansiedade só olhando isso?\n\nA Sony Pictures Brasil trouxe essa trilogia épica para os cinemas e o hype da comunidade nerd brasileira é surreal. É aquele momento em que a arte animada bate de frente com a escala de uma produção cinematográfica, elevando o padrão da franquia.\n\nQual foi a primeira imagem do trailer que fez seu coração disparar?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#DemonSlayer #KimetsuNoYaiba #CasteloInfinito #Anime #MorsaDigital",
+    "caption": "Eu ainda sinto o arrepio de quando a taça do Tanjiro apareceu na tela, e você?\n\nA trilogia do Castelo Infinito chegou aos cinemas brasileiros de uma vez, o que muda completamente a experiência de acompanhar o confronto final. É o ápice da jornada que a Crunchyroll e a Sony trouxeram para nós, reunindo tudo o que o anime construiu até aqui.\n\nQual momento dessa fase ficou gravado na sua memória?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#DemonSlayer #KimetsuNoYaiba #CasteloInfinito #AnimeBR #MorsaDigital",
     "caption_check": "revisar",
     "caption_problems": [
-      "detalhe sem base: Sony Pictures Brasil trouxe essa trilogia épica para os cinemas"
+      "trata vídeo antigo como novidade"
     ]
   },
   {
@@ -764,7 +764,11 @@
     "kind": "acervo",
     "plan_order": 27,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_style": "eu",
+    "caption": "Aquele peso na alma quando a trilogia grega do God of War volta a ganhar vida, e você ainda se lembra do quanto a saga original marcou seu coração?\n\nA confirmação de que o remake está em desenvolvimento para o PS5 é o tipo de notícia que faz qualquer fã de Sparta parar o que está fazendo. Ver a equipe trabalhando para trazer essa jornada icônica de volta em alta definição é um sinal claro de respeito à história que moldou o gênero de ação.\n\nQual foi o momento específico da trilogia grega que você mais espera ver renovado?\n\nVídeo: PlayStation Brasil (canal oficial no YouTube)\n\n#GodofWar #GoWremake #ps5 #ps5games #stateofplay",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "LZBlXkDvhh4",
@@ -781,7 +785,11 @@
     "kind": "acervo",
     "plan_order": 28,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption_style": "padrao",
+    "caption": "Homem-Aranha: Através do AranhaVerso é aquele tipo de trailer que faz o coração acelerar só de pensar nas possibilidades.\n\nA animação continua explorando as infinitas possibilidades do multiverso, unindo versões de Spider-Man de diferentes universos em uma jornada visualmente deslumbrante. A ideia de ver tantos heróis com a teia trabalhando juntos (e às vezes contra tudo e todos) sempre foi o ponto forte dessa franquia. Para muitos fãs no Brasil, essa fase marcou a evolução do personagem nos cinemas, trazendo uma profundidade e criatividade que poucos esperavam.\n\nQual foi a cena que mais te impactou quando você viu essa fase pela primeira vez?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#SpiderManAcrossTheSpiderVerse #AranhaVerso #SonyPicturesBrasil #Animacao #GeekBR",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "CyYffSLpWqM",
@@ -1734,7 +1742,11 @@
     "scheduled_for": "2026-11-13",
     "theme": "gta",
     "layout": "horizontal",
-    "lang": "en"
+    "lang": "en",
+    "caption_style": "padrao",
+    "caption": "GTA Online: The Doomsday Heist. Que lembrança dos bons tempos.\n\nEsse update transformou o multiplayer em uma verdadeira saga de ficção científica, misturando conspirações e apocalipse no meio de Los Santos. A dinâmica de equipe com um bilionário, um agente, um conspiracionista e um supercomputador criou umas das interações mais únicas do jogo.\n\nQual foi a sua experiência com esse heist: você achou que a dificuldade estava equilibrada ou sentiu falta de mais liberdade de ação?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#GTAV #GTAOnline #RockstarGames #GTA6 #Gaming",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "88KNf0MtU14",

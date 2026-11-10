@@ -1,8 +1,8 @@
-# Fila de reels @morsadigital — 09/11/2026 23:53 BRT
+# Fila de reels @morsadigital — 10/11/2026 02:32 BRT
 
 ## cenas — a partir das 11h
 
-116 na fila | legendas ok: 18 | a revisar: 1 | dias sem reel no calendário: 0
+116 na fila | legendas ok: 18 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 10/11 — Sung Jinwoo vs. Baruka | Solo Leveling
 Crunchyroll Brasil · vertical · pt · legenda: ok
@@ -86,10 +86,20 @@ Vídeo: Prime Video Brasil (canal oficial no YouTube)
 ```
 
 ### 15/11 — Marvel’s Iron Man VR - Bastidores do Tony  | PS VR
-PlayStation Brasil · horizontal · pt · legenda: ainda não gerada
+PlayStation Brasil · horizontal · pt · legenda: revisar (detalhe sem base: ver o "porquê" por trás da Impulse Armor e da mansão em Malibu)
 
 ```
-(gerada na hora da publicação)
+Você já viveu a vida do Tony Stark no VR ou prefere só jogar?
+
+Ver a equipe Camouflaj mostrando como criaram essa experiência é outro nível.
+É aquela sensação de ver o "porquê" por trás da Impulse Armor e da mansão em Malibu.
+A gente sempre quis sentir que o design era nosso, e aqui eles mostram como tentaram entregar isso.
+
+Comenta aí: você topa testar o VR ou fica só no sofá assistindo?
+
+Vídeo: PlayStation Brasil (canal oficial no YouTube)
+
+#IronManVR #TonyStark #PlayStationVR #Camouflaj #MorsaDigital
 ```
 
 ### 16/11 — Avatar: O Último Mestre do Ar recria a abertura clássica
@@ -991,7 +1001,7 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
 ## main — a partir das 13h
 
-74 na fila | legendas ok: 2 | a revisar: 2 | dias sem reel no calendário: 0
+74 na fila | legendas ok: 5 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 10/11 — Grand Theft Auto V: PlayStation 4, Xbox One & PC Announcement Trailer
 Rockstar Games · horizontal · en · legenda: ok
@@ -1024,39 +1034,63 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 ```
 
 ### 12/11 — Demon Slayer: Kimetsu no Yaiba Castelo Infinito | Trailer | Em breve nos cinemas
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Sony Pictures Brasil trouxe essa trilogia épica para os cinemas)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (trata vídeo antigo como novidade)
 
 ```
-O trailer de Demon Slayer: Kimetsu no Yaiba Castelo Infinito me deixou sem ar, mas será que vocês conseguem conter a ansiedade só olhando isso?
+Eu ainda sinto o arrepio de quando a taça do Tanjiro apareceu na tela, e você?
 
-A Sony Pictures Brasil trouxe essa trilogia épica para os cinemas e o hype da comunidade nerd brasileira é surreal. É aquele momento em que a arte animada bate de frente com a escala de uma produção cinematográfica, elevando o padrão da franquia.
+A trilogia do Castelo Infinito chegou aos cinemas brasileiros de uma vez, o que muda completamente a experiência de acompanhar o confronto final. É o ápice da jornada que a Crunchyroll e a Sony trouxeram para nós, reunindo tudo o que o anime construiu até aqui.
 
-Qual foi a primeira imagem do trailer que fez seu coração disparar?
+Qual momento dessa fase ficou gravado na sua memória?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#DemonSlayer #KimetsuNoYaiba #CasteloInfinito #Anime #MorsaDigital
+#DemonSlayer #KimetsuNoYaiba #CasteloInfinito #AnimeBR #MorsaDigital
 ```
 
 ### 13/11 — GTA Online: The Doomsday Heist Official Trailer
-Rockstar Games · horizontal · en · legenda: ainda não gerada
+Rockstar Games · horizontal · en · legenda: ok
 
 ```
-(gerada na hora da publicação)
+GTA Online: The Doomsday Heist. Que lembrança dos bons tempos.
+
+Esse update transformou o multiplayer em uma verdadeira saga de ficção científica, misturando conspirações e apocalipse no meio de Los Santos. A dinâmica de equipe com um bilionário, um agente, um conspiracionista e um supercomputador criou umas das interações mais únicas do jogo.
+
+Qual foi a sua experiência com esse heist: você achou que a dificuldade estava equilibrada ou sentiu falta de mais liberdade de ação?
+
+Vídeo: Rockstar Games (canal oficial no YouTube)
+
+#GTAV #GTAOnline #RockstarGames #GTA6 #Gaming
 ```
 
 ### 14/11 — Remake da trilogia God of War - Teaser de anúncio | PS5
-PlayStation Brasil · horizontal · pt · legenda: ainda não gerada
+PlayStation Brasil · horizontal · pt · legenda: ok
 
 ```
-(gerada na hora da publicação)
+Aquele peso na alma quando a trilogia grega do God of War volta a ganhar vida, e você ainda se lembra do quanto a saga original marcou seu coração?
+
+A confirmação de que o remake está em desenvolvimento para o PS5 é o tipo de notícia que faz qualquer fã de Sparta parar o que está fazendo. Ver a equipe trabalhando para trazer essa jornada icônica de volta em alta definição é um sinal claro de respeito à história que moldou o gênero de ação.
+
+Qual foi o momento específico da trilogia grega que você mais espera ver renovado?
+
+Vídeo: PlayStation Brasil (canal oficial no YouTube)
+
+#GodofWar #GoWremake #ps5 #ps5games #stateofplay
 ```
 
 ### 15/11 — Homem-Aranha: Através do AranhaVerso | Trailer Oficial Dublado
-Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+Sony Pictures Brasil · horizontal · pt · legenda: ok
 
 ```
-(gerada na hora da publicação)
+Homem-Aranha: Através do AranhaVerso é aquele tipo de trailer que faz o coração acelerar só de pensar nas possibilidades.
+
+A animação continua explorando as infinitas possibilidades do multiverso, unindo versões de Spider-Man de diferentes universos em uma jornada visualmente deslumbrante. A ideia de ver tantos heróis com a teia trabalhando juntos (e às vezes contra tudo e todos) sempre foi o ponto forte dessa franquia. Para muitos fãs no Brasil, essa fase marcou a evolução do personagem nos cinemas, trazendo uma profundidade e criatividade que poucos esperavam.
+
+Qual foi a cena que mais te impactou quando você viu essa fase pela primeira vez?
+
+Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
+
+#SpiderManAcrossTheSpiderVerse #AranhaVerso #SonyPicturesBrasil #Animacao #GeekBR
 ```
 
 ### 16/11 — Bully Trailer

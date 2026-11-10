@@ -2461,7 +2461,12 @@
     "theme": "bastidores",
     "hook_text": null,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Você já viveu a vida do Tony Stark no VR ou prefere só jogar?\n\nVer a equipe Camouflaj mostrando como criaram essa experiência é outro nível.\nÉ aquela sensação de ver o \"porquê\" por trás da Impulse Armor e da mansão em Malibu.\nA gente sempre quis sentir que o design era nosso, e aqui eles mostram como tentaram entregar isso.\n\nComenta aí: você topa testar o VR ou fica só no sofá assistindo?\n\nVídeo: PlayStation Brasil (canal oficial no YouTube)\n\n#IronManVR #TonyStark #PlayStationVR #Camouflaj #MorsaDigital",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "detalhe sem base: ver o \"porquê\" por trás da Impulse Armor e da mansão em Malibu"
+    ]
   },
   {
     "video_id": "ZTZf3ZZXm4E",
