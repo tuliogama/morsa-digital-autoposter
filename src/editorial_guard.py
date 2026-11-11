@@ -162,3 +162,68 @@ def same_story(title: str, description: str = "", published: list[str] = None) -
             error = e
             logger.warning(f"Juiz de repetição ({model}) falhou: {str(e)[:120]}")
     return True, f"juiz de repetição indisponível ({str(error)[:60]})"
+
+
+# ── Imagem: a foto tem que mostrar o assunto do post ─────────────────────────
+# 10/11/2026: seguidores da Ordem Sith reclamaram de "IA burra". O post sobre Samuel
+# L. Jackson saiu com foto do Poe Dameron, e o do Kylo Ren com "OFFICIAL CLIP" na tela:
+# a imagem vinha da meta tag da matéria sem ninguém olhar. Um modelo que enxerga
+# confere antes de publicar; sem resposta, a imagem é recusada.
+
+VISION_MODEL = "qwen/qwen3.8-27b"
+
+
+def _small_jpeg(image_bytes: bytes, side: int = 448) -> bytes:
+    """Reduz a imagem antes de mandar ao modelo: custa muito menos tokens por minuto."""
+    try:
+        import io
+        from PIL import Image
+        im = Image.open(io.BytesIO(image_bytes)).convert("RGB")
+        im.thumbnail((side, side))
+        buf = io.BytesIO()
+        im.save(buf, format="JPEG", quality=80)
+        return buf.getvalue()
+    except Exception:
+        return image_bytes
+
+
+def image_matches(image_bytes: bytes, subject: str) -> tuple[bool, str]:
+    import base64
+    image_bytes = _small_jpeg(image_bytes)
+    q = ("Esta foto vai ilustrar um post de fãs sobre: '" + subject[:160] + "'. Responda só JSON: "
+         "{\"combina\": true/false (a foto mostra a pessoa, o personagem ou a coisa principal do assunto? "
+         "Se o assunto é um ator e a foto mostra outro, é false; foto genérica que não mostra o assunto é false), "
+         "\"quem_aparece\": \"curto\", \"marca_dagua\": true/false (texto de vídeo como OFFICIAL CLIP ou TRAILER, "
+         "logo de canal, de site ou marca d'água visível), \"qualidade\": \"boa\" ou \"baixa\" (borrada, pixelada, "
+         "rosto cortado, só um logo ou texto)}")
+    body = {"model": VISION_MODEL, "max_tokens": 220, "reasoning_effort": "none",
+            "messages": [{"role": "user", "content": [
+                {"type": "text", "text": q},
+                {"type": "image_url", "image_url": {"url": "data:image/jpeg;base64," + base64.b64encode(image_bytes).decode()}}]}]}
+    req = urllib.request.Request(
+        GROQ_API_URL, data=json.dumps(body).encode(), method="POST",
+        headers={"Authorization": f"Bearer {os.environ['GROQ_API_KEY']}",
+                 "Content-Type": "application/json", "User-Agent": "Mozilla/5.0"})
+    for attempt in (1, 2, 3):
+        try:
+            with urllib.request.urlopen(req, timeout=90) as r:
+                txt = json.loads(r.read())["choices"][0]["message"]["content"]
+            out = json.loads(re.search(r"\{.*\}", txt, re.S).group(0))
+            break
+        except urllib.error.HTTPError as e:
+            if e.code == 429 and attempt < 3:
+                time.sleep(35)              # limite por minuto: espera a janela virar
+                continue
+            return False, f"conferência de imagem indisponível ({e.code})"
+        except Exception as e:
+            return False, f"conferência de imagem falhou ({str(e)[:60]})"
+    else:
+        return False, "conferência de imagem indisponível"
+    seen = str(out.get("quem_aparece", ""))[:60]
+    if out.get("combina") is not True:
+        return False, f"foto não mostra o assunto (mostra: {seen})"
+    if out.get("marca_dagua") is True:
+        return False, f"foto com marca d'água ou texto de vídeo ({seen})"
+    if str(out.get("qualidade", "")).lower().startswith("baixa"):
+        return False, f"foto de baixa qualidade ({seen})"
+    return True, seen
