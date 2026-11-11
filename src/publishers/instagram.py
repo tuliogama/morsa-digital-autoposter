@@ -229,10 +229,24 @@ def publish(post: dict) -> dict:
     if slide2_url:
         logger.info(f"Slide 2 (imagem limpa): {slide2_url}")
 
-    # 2. Publicar como carrossel (2 slides) ou fallback para imagem simples
-    if slide2_url:
+    # 2. Publicar como carrossel ou fallback para imagem simples.
+    # Desde 10/11/2026 o carrossel do Instagram é o mesmo do TikTok (5 ou 6 imagens:
+    # capa, notícia em partes, pergunta, segue o Morsa). No TikTok ele levou a mediana
+    # de 56 para 387 views por post. Se a montagem falhar, vai o de 2 slides.
+    slide_urls = [image_url, slide2_url] if slide2_url else [image_url]
+    if os.environ.get("IG_CAROUSEL", "on") != "off":
+        try:
+            import tiktok_slides
+            from image_generator import _upload_image
+            built = tiktok_slides.build(image_url, caption, slide2_url)
+            urls = [_upload_image(b) for b in built]
+            if len(urls) >= 3 and all(urls):
+                slide_urls = urls[:10]
+                logger.info(f"Carrossel de {len(slide_urls)} imagens montado")
+        except Exception as e:
+            logger.warning(f"Carrossel longo não montou ({str(e)[:150]}); vai o de 2 slides")
+    if len(slide_urls) > 1:
         # Criar child containers
-        slide_urls = [image_url, slide2_url]
         child_ids = []
         for url in slide_urls:
             result = _post(f"{GRAPH_URL}/{ig_user_id}/media", {

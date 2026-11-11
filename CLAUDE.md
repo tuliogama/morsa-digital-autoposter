@@ -442,6 +442,16 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   `tiktok_photos.host_bytes`); se falhar, vai com as 2 imagens. Desliga com
   `TIKTOK_CAROUSEL=off`. Motivo: com 2 imagens eram 2-3 curtidas a cada 50 views;
   estudos apontam 5-6 imagens como ideal em conta pequena.
+- **Carrossel de 5 ou 6 imagens também no Instagram (10/11/2026, ok do Tulio):** no TikTok o
+  carrossel levou a mediana de 56 para 387 views e as curtidas de 2,1 para 7,3 por post.
+  `instagram.publish` monta com `tiktok_slides.build` e sobe por `_upload_image`; se falhar,
+  vai o de 2 slides. Desliga com `IG_CAROUSEL=off`. Comparar alcance, salvos e
+  compartilhamentos por 2 semanas antes de levar para a Ordem.
+- **Conta do GitHub (10/11/2026):** o `gh` deste Mac tem duas contas, a do Ado
+  (adosilvaviana, ativa) e a do Tulio. Desde 27/10 a ativa era a do Ado e todo disparo
+  da conferência e upload do acervo falhou (271 fotos). Os scripts (`tick_local.sh`,
+  `run_reel_local.sh`, `night_boost.sh`) exportam `GH_TOKEN=$(gh auth token --user
+  tuliogama)`. NUNCA trocar a conta ativa nem deslogar o Ado (pedido do Tulio).
 - **Stories na revisão noturna** (desde 11/10/2026): `stories.py --insights` roda em toda
   conferência do workflow e guarda alcance, views, respostas, saídas e visitas ao perfil
   em `data/stories_log.json` (a Meta só responde com o story no ar e com 5+ espectadores).
