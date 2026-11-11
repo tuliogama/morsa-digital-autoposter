@@ -1,25 +1,8 @@
-# Fila de reels @morsadigital — 10/11/2026 07:27 BRT
+# Fila de reels @morsadigital — 11/11/2026 03:55 BRT
 
 ## cenas — a partir das 11h
 
-116 na fila | legendas ok: 19 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 10/11 — Sung Jinwoo vs. Baruka | Solo Leveling
-Crunchyroll Brasil · vertical · pt · legenda: ok
-
-```
-Jinwoo ou Baruka, qual dos dois você joga mais nessa luta?
-
-Aquele 1% que torce pelo vilão sempre existe, né?
-Ganhar é ótimo, mas ver o Baruka brilhar na batalha
-deve ter deixado muita gente dividida aqui.
-
-Comenta aí: você sentiu falta de mais ação do Baruka?
-
-Vídeo: Crunchyroll Brasil (canal oficial no YouTube)
-
-#SoloLeveling #SungJinwoo #Baruka #Anime #Crunchyroll #MorsaDigital
-```
+115 na fila | legendas ok: 18 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 11/11 — Bastidores de ONE PIECE: A Série cena do passado de Sanji #onepiece #vfx #bts
 Netflix Brasil · vertical · pt · legenda: ok
@@ -1000,22 +983,7 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
 ## main — a partir das 13h
 
-74 na fila | legendas ok: 5 | a revisar: 2 | dias sem reel no calendário: 0
-
-### 10/11 — Grand Theft Auto V: PlayStation 4, Xbox One & PC Announcement Trailer
-Rockstar Games · horizontal · en · legenda: ok
-
-```
-Lembrar desse trailer me traz uma nostalgia absurda de quando todo mundo ficava animadão com a chegada da nova geração, e você?
-
-Foi o momento em que GTA V dominou de vez o mercado, quebrando recordes e se tornando a experiência de mundo aberto definitiva que a gente conhecia.
-
-Qual foi a primeira coisa que você fez ao jogar o game no PS4 ou no PC?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
-
-#GTA5 #GrandTheftAutoV #RockstarGames #GTA #GamerBR
-```
+73 na fila | legendas ok: 5 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 11/11 — Superman l Trailer Teaser Oficial Dublado
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ok
@@ -1036,15 +1004,15 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 Sony Pictures Brasil · horizontal · pt · legenda: revisar (trata vídeo antigo como novidade)
 
 ```
-Demon Slayer: Kimetsu no Yaiba Castelo Infinito chegou e eu ainda não acredito que estamos de volta ao arco mais aguardado da história, como você tá se sentindo agora que viu esse trailer de novo?
+Demon Slayer: Kimetsu no Yaiba Castelo Infinito chegou aos cinemas e eu ainda não acredito que essa trilogia épica finalmente está completa. Qual foi a sua primeira reação ao ver essa animação em grande tela?
 
-A trilogia épica que a Crunchyroll trouxe pra telona já é um marco no anime brasileiro, e rever esse material é essencial pra quem quer entender o peso dessa fase. O hype de ver os lutadores enfrentando o fim da jornada continua intacto mesmo depois de tanto tempo, mostrando por que essa franquia dominou a cultura pop global.
+A Crunchyroll trouxe essa experiência única para o público brasileiro, garantindo que a batalha contra os demônios tivesse o impacto visual e sonoro que a obra merece. É o tipo de evento que une a comunidade geek em torno de uma narrativa que marcou gerações.
 
-Qual foi a cena ou o momento do filme que mais te marcou ao assistir pela primeira vez?
+Você já teve a chance de reviver essa jornada no cinema ou ainda está planejando sua ida?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#DemonSlayer #KimetsuNoYaiba #CasteloInfinito #Crunchyroll #Anime
+#DemonSlayer #KimetsuNoYaiba #CasteloInfinito #Anime #Crunchyroll
 ```
 
 ### 13/11 — GTA Online: The Doomsday Heist Official Trailer
@@ -1093,10 +1061,18 @@ Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 ```
 
 ### 16/11 — Bully Trailer
-Rockstar Games · horizontal · en · legenda: ainda não gerada
+Rockstar Games · horizontal · en · legenda: ok
 
 ```
-(gerada na hora da publicação)
+Eu ainda sinto o cheiro de tinta de caneta e desespero ao lembrar da primeira vez que vi isso. Qual foi a primeira travessura que você fez no Bullworth?
+
+O jogo que provou que não precisa de super-heróis ou mundos abertos gigantes para criar uma imersão absurda. Aqui, o vilão é o sistema, os professores são corruptos e a única regra é a sobrevivência social em uma escola preparatória que parece um pesadelo gótico moderno.
+
+Você ainda tem o Jimmy Hopkins na sua lista de favoritos ou acha que ele era só mais um anti-herói dos anos 2000?
+
+Vídeo: Rockstar Games (canal oficial no YouTube)
+
+#Bully #RockstarGames #GTA #GTA6 #Nostalgia
 ```
 
 ### 17/11 — Grand Theft Auto VI Trailer 1
