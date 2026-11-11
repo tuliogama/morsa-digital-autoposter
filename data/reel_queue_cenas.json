@@ -2413,7 +2413,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=KdRm2AWpxbI",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/KdRm2AWpxbI.mp4",
     "added_at": "2026-10-13T05:42:05.539081-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 12,
     "theme": "bastidores",
@@ -2422,7 +2422,9 @@
     "lang": "pt",
     "caption": "Sanji no meio do oceano? Você esperava ver isso nos bastidores?\n\nVer o mini Sanji e o Zeff sendo fotografados ali, cercados por água, muda completamente a percepção da cena. É impressionante como a equipe transformou aquilo em realidade.\n\nConta pra gente: qual foi a primeira coisa que te veio à mente ao ver essa foto?\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#OnePiece #Sanji #Zeff #Bastidores #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-11T11:09:09.774943-03:00",
+    "media_id": "18002228850009591"
   },
   {
     "video_id": "Jxm5mLzGKk0",
