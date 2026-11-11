@@ -2,8 +2,11 @@
 # Noite de carga para o TikTok: repete a rotina local com lote grande de Shorts
 # até de manhã. Uso: nohup bash night_boost.sh > logs/night_boost.log 2>&1 &
 # Para às 7h30 da manhã seguinte ou quando o plano acabar.
-cd /Users/tuliogama/morsa-digital-autoposter
+cd /Users/tuliogama/Code/Omni/morsa-digital-autoposter
 export PATH="/opt/homebrew/bin:/usr/bin:/bin:$PATH"
+# O gh deste Mac pode estar com outra conta ativa (em 10/11/2026 estava "adosilvaviana"
+# e todo disparo e upload falhou). Os scripts usam sempre a conta tuliogama.
+export GH_TOKEN="$(gh auth token --user tuliogama 2>/dev/null)"
 
 # Começa na hora em que for chamado e vai até as 7h30 da manhã seguinte.
 if [ "$(date +%H%M)" -lt 0730 ]; then DAY=$(date +%Y-%m-%d); else DAY=$(date -v+1d +%Y-%m-%d); fi

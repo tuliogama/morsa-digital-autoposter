@@ -8,6 +8,9 @@ cd /Users/tuliogama/Code/Omni/morsa-digital-autoposter
 
 # launchd não herda o PATH do shell — fixa o Homebrew (python3.14, yt-dlp, ffmpeg, gh)
 export PATH="/opt/homebrew/bin:/usr/bin:/bin:$PATH"
+# O gh deste Mac pode estar com outra conta ativa (em 10/11/2026 estava "adosilvaviana"
+# e todo disparo e upload falhou). Os scripts usam sempre a conta tuliogama.
+export GH_TOKEN="$(gh auth token --user tuliogama 2>/dev/null)"
 
 mkdir -p logs
 

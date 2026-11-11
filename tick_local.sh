@@ -6,6 +6,9 @@
 # Com o Mac desligado, os crons do GitHub continuam valendo como reserva.
 
 export PATH="/opt/homebrew/bin:/usr/bin:/bin:$PATH"
+# O gh deste Mac pode estar com outra conta ativa (em 10/11/2026 estava "adosilvaviana"
+# e todo disparo e upload falhou). Os scripts usam sempre a conta tuliogama.
+export GH_TOKEN="$(gh auth token --user tuliogama 2>/dev/null)"
 HOUR=$((10#$(date +%H)))
 [ "$HOUR" -lt 8 ] || [ "$HOUR" -ge 23 ] && exit 0
 
@@ -39,7 +42,7 @@ check() {  # check <repo-dir> <feed|reel|story> → 0 se há algo devido
   grep -q "^$key=true" "$out"; local rc=$?; rm -f "$out"; return $rc
 }
 
-for dir in /Users/tuliogama/morsa-digital-autoposter /Users/tuliogama/ordem-sith-autoposter; do
+for dir in /Users/tuliogama/Code/Omni/morsa-digital-autoposter /Users/tuliogama/Code/Omni/ordem-sith-autoposter; do
   [ -f "$dir/.env.secrets" ] || continue
   check "$dir" feed  && fire "$dir" feed  auto-post.yml -f mode=feed -f gate=true
   check "$dir" reel  && fire "$dir" reel  reel-queue.yml
