@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 12/11/2026 03:59 BRT
+# Fila de reels @morsadigital — 12/11/2026 05:32 BRT
 
 ## cenas — a partir das 11h
 
@@ -85,19 +85,20 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 17/11 — Caça-Fantasmas | Bastidores Chris Hemsworth | 14 de julho nos cinema
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth como Caça-Fantasmas; detalhe sem base: Thors segurando o equipamento e interagindo com a equipe; detalhe sem base: 14 de julho nos cinema)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth de Caça-Fantasmas; detalhe sem base: Thorkin)
 
 ```
-Chris Hemsworth como Caça-Fantasmas, você topa com essa ideia?
+Chris Hemsworth de Caça-Fantasmas: você lembra dessa fase?
 
-Ver o Thors segurando o equipamento e interagindo com a equipe é um conforto pra gente.
-Aquele cara é um ícone do MCU, então vê-lo em qualquer set parece um sonho de fã.
+Ver o Thorkin em ação nos bastidores é uma viagem no tempo.
+Era a época em que a gente acompanhava tudo de perto.
+Relembre esse making of e volte àquela vibe.
 
-Comenta aí: esse era o seu candidato perfeito para o elenco?
+Marca aquele amigo que não esquece esse período.
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#CaçaFantasmas #ChrisHemsworth #SonyPictures #Bastidores #MorsaDigital
+#CaçaFantasmas #ChrisHemsworth #Thorkin #SonyPicturesBrasil #MorsaDigital
 ```
 
 ### 18/11 — Ativando sua nostalgia em 3, 2, 1... 🥹 #Shrek2
