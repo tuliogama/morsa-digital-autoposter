@@ -2201,7 +2201,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=1YZJdTogSiw",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/1YZJdTogSiw.mp4",
     "added_at": "2026-11-11T05:56:16.289908-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "fresh",
     "hook_text": null,
     "layout": "horizontal",
@@ -2209,7 +2209,9 @@
     "caption_style": "padrao",
     "caption": "O Cyclops finalmente chegou ao campo de batalha com o poder da Phoenix e eu já tô sentindo o chão tremer.\n\nA mistura dos Raios Óticos com as chamas cósmicas cria um gameplay que parece absurdamente visceral. A mecânica de acumular Fragmentos Solares adiciona uma camada de estratégia que vai separar os puristas dos caóticos.\n\nVocê vai tentar dominar essa força cósmica ou acha que o personagem vai ser só mais um no roster?\n\nVídeo: PlayStation Brasil (canal oficial no YouTube)\n\n#MarvelTokon #FightingSouls #Cyclops #Phoenix #PS5",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-12T13:06:32.457307-03:00",
+    "media_id": "18653832595054886"
   },
   {
     "video_id": "8ByWqeyiy44",
