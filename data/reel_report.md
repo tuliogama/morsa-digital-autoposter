@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 12/11/2026 03:13 BRT
+# Fila de reels @morsadigital — 12/11/2026 03:59 BRT
 
 ## cenas — a partir das 11h
 
@@ -85,19 +85,19 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 17/11 — Caça-Fantasmas | Bastidores Chris Hemsworth | 14 de julho nos cinema
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth de Caça-Fantasmas: você acha que ele fica com o personagem?; detalhe sem base: Ver o Thor vestindo a roupa de caçador de fantasmas nos bastões é uma das imagens mais icônicas da franquia.)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth como Caça-Fantasmas; detalhe sem base: Thors segurando o equipamento e interagindo com a equipe; detalhe sem base: 14 de julho nos cinema)
 
 ```
-Chris Hemsworth de Caça-Fantasmas: você acha que ele fica com o personagem?
+Chris Hemsworth como Caça-Fantasmas, você topa com essa ideia?
 
-Ver o Thor vestindo a roupa de caçador de fantasmas nos bastidores é uma das imagens mais icônicas da franquia.
-Aquele visual misto de deus do trovão e caçador de monstros ainda divide opiniões entre os fãs.
+Ver o Thors segurando o equipamento e interagindo com a equipe é um conforto pra gente.
+Aquele cara é um ícone do MCU, então vê-lo em qualquer set parece um sonho de fã.
 
-Marca aquele amigo que torce pra ele ganhar o papel.
+Comenta aí: esse era o seu candidato perfeito para o elenco?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#CaçaFantasmas #ChrisHemsworth #Thor #SonyPictures #MorsaDigital
+#CaçaFantasmas #ChrisHemsworth #SonyPictures #Bastidores #MorsaDigital
 ```
 
 ### 18/11 — Ativando sua nostalgia em 3, 2, 1... 🥹 #Shrek2
