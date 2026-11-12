@@ -653,14 +653,16 @@
     "youtube_url": "https://www.youtube.com/watch?v=lSr9dwh4DxM",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/lSr9dwh4DxM.mp4",
     "added_at": "2026-10-07T00:15:44.902135-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 24,
     "layout": "vertical",
     "lang": "pt",
     "caption": "The Last of Us: você percebeu esse detalhe nos bastidores?\n\nÉ impressionante ver o nível de cuidado que vai por trás de cada cena.\nEsses detalhes são o que fazem a série ser um verdadeiro espetáculo.\nA produção caprichou demais nos efeitos, né?\n\nComenta aí qual cena te deixou mais impressionado.\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#TheLastOfUs #TLOU #HBO #JoaquinPhoenix #BellaRamsey #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-12T11:02:53.511692-03:00",
+    "media_id": "18113359874520498"
   },
   {
     "video_id": "_n9gDRR6hKY",
