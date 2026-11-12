@@ -2487,7 +2487,13 @@
     "theme": "bastidores",
     "hook_text": null,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Chris Hemsworth como Caça-Fantasmas: você esperava esse time?\n\nVer o Thor trocando o martelo por equipamento de caça aos mortos-vivos é o tipo de surpresa que faz a gente repensar a franquia.\nBastidores sempre mostram a dedicação atrás da tela, e aqui a gente vê a construção do personagem em ação.\nQual é a sua opinião sobre essa escolha de elenco?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#CaçaFantasmas #ChrisHemsworth #SonyPictures #Bastidores #MorsaDigital",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "detalhe sem base: Chris Hemsworth como Caça-Fantasmas",
+      "detalhe sem base: Thor trocando o martelo por equipamento de caça aos mortos-vivos"
+    ]
   },
   {
     "video_id": "0V9ua1K8zB0",

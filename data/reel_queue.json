@@ -1790,7 +1790,13 @@
     "scheduled_for": "2026-11-17",
     "theme": "gta",
     "layout": "horizontal",
-    "lang": "pt-legenda"
+    "lang": "pt-legenda",
+    "caption_style": "padrao",
+    "caption": "GTA VI, aquele trailer que ainda faz meu coração disparar só de lembrar.\n\nFazem uns tempos que esse vídeo caiu e a internet inteira parou pra rever cada segundo, mas até hoje a sensação é a mesma: a Rockstar não brincou. É o retorno de um universo que redefine o que a gente espera de um jogo, e a expectativa só cresce conforme a contagem regressiva avança.\n\nQual foi a primeira coisa que te fez pensar \"isso aqui é o futuro dos games\"?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#GTA6 #GrandTheftAuto #RockstarGames #GTA #Trailer",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "hashtag genérica"
+    ]
   },
   {
     "video_id": "VQRLujxTm3c",
@@ -2224,11 +2230,29 @@
     "layout": "horizontal",
     "lang": "pt",
     "caption_style": "padrao",
-    "caption": "Shikamaru finalmente desabou e eu junto, isso foi brutal.\n\nA morte de Asuma deixou um buraco no time, mas o episódio 82 mostra como o luto de Shikamaru é pesado. Só a frase do pai dele, \"Eu vou juntar as suas peças\", transforma a dor em algo que dá pra lidar, e essa cena de vulnerabilidade é o que faz o Naruto Shippuden ser mais que só luta.\n\nVocê acha que esse momento humaniza o personagem ou mostra que ele ainda precisa evoluir emocionalmente?\n\nVídeo: Crunchyroll Brasil (canal oficial no YouTube)\n\n#NarutoShippuden #Shikamaru #Animes #Crunchyroll #Naruto",
-    "caption_check": "revisar",
-    "caption_problems": [
-      "detalhe sem base: “Eu vou juntar as suas peças” - Shikaku Nara",
-      "detalhe sem base: Só a frase do pai dele, \"Eu vou juntar as suas peças\", transforma a dor em algo que dá pra lidar"
-    ]
+    "caption": "Shikamaru finalmente desabou e eu não aguentei.\n\nAquele momento em que o peso da perda de Asuma fica insuportável e só as palavras do pai conseguem trazer algum alívio é devastador. É o tipo de cena que pega no peito e mostra a maturidade emocional do personagem.\n\nVocês acham que esse é o ponto de virada emocional da série ou tinha algo ainda mais forte?\n\nVídeo: Crunchyroll Brasil (canal oficial no YouTube)\n\n#NarutoShippuden #Shikamaru #Nara #Anime #Crunchyroll",
+    "caption_check": "ok",
+    "caption_problems": []
+  },
+  {
+    "video_id": "k02hVjlAQjg",
+    "title": "Jumanji: Mundo Real | Novo Trailer | Dublado",
+    "channel": "Sony Pictures Brasil",
+    "channel_id": "UC9NXpIA01HVRhYgcEbs80Nw",
+    "category": "movie",
+    "description": "Direção: Jake Kasdan \nRoteiro:\nJake Kasdan & Jeff Pinkner & Scott Rosenberg\nBaseado no livro Jumanji de: Chris Van Allsburg\nProdução: Matt Tolmach, Jake Kasdan, Dwayne Johnson, Dany Garcia, Hiram Garcia\nProdutores Executivos: Barry Waldman, Melvin Mar, Sky Salem Robinson, Jeff Pinkner, Scott Rosenberg, Chris Van Allsburg , William Teitler, Ted Field, Mike Weber\nElenco: Dwayne Johnson, Jack Black, Kevin Hart, Karen Gillan, Alex Wolff, Morgan Turner, Ser'Darius Blain, Madison Iseman with Nick Jonas and Danny DeVito",
+    "published": "2026-10-28T13:00:15+00:00",
+    "youtube_url": "https://www.youtube.com/watch?v=k02hVjlAQjg",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/k02hVjlAQjg.mp4",
+    "added_at": "2026-11-11T23:37:52.659065-03:00",
+    "posted": false,
+    "kind": "fresh",
+    "hook_text": null,
+    "layout": "horizontal",
+    "lang": "pt",
+    "caption_style": "eu",
+    "caption": "Jumanji: Mundo Real chegou e eu já tô com o coração acelerado, você tá preparado pra essa nova fase?\n\nA volta de Dwayne Johnson, Jack Black, Kevin Hart e Karen Gillan promete levar a confusão do jogo direto pra nossa rua. Com a direção de Jake Kasdan e a participação especial de Nick Jonas e Danny DeVito, a franquia que nasceu no livro de Chris Van Allsburg ganha um novo twist que divide a galera.\n\nVai ser só mais uma comédia caótica ou essa vez eles realmente mudaram o jogo pra sempre?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#JumanjiMundoReal #Jumanji #DwayneJohnson #JackBlack #KevinHart",
+    "caption_check": "ok",
+    "caption_problems": []
   }
 ]

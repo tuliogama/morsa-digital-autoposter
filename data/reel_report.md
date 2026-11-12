@@ -1,23 +1,8 @@
-# Fila de reels @morsadigital — 11/11/2026 06:44 BRT
+# Fila de reels @morsadigital — 12/11/2026 00:37 BRT
 
 ## cenas — a partir das 11h
 
-115 na fila | legendas ok: 18 | a revisar: 1 | dias sem reel no calendário: 0
-
-### 11/11 — Bastidores de ONE PIECE: A Série cena do passado de Sanji #onepiece #vfx #bts
-Netflix Brasil · vertical · pt · legenda: ok
-
-```
-Sanji no meio do oceano? Você esperava ver isso nos bastidores?
-
-Ver o mini Sanji e o Zeff sendo fotografados ali, cercados por água, muda completamente a percepção da cena. É impressionante como a equipe transformou aquilo em realidade.
-
-Conta pra gente: qual foi a primeira coisa que te veio à mente ao ver essa foto?
-
-Vídeo: Netflix Brasil (canal oficial no YouTube)
-
-#OnePiece #Sanji #Zeff #Bastidores #MorsaDigital
-```
+114 na fila | legendas ok: 17 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 12/11 — POR TRÁS DOS EFEITOS DE THE LAST OF US 🍄
 HBO Brasil · vertical · pt · legenda: ok
@@ -100,10 +85,18 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 17/11 — Caça-Fantasmas | Bastidores Chris Hemsworth | 14 de julho nos cinema
-Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth como Caça-Fantasmas; detalhe sem base: Thor trocando o martelo por equipamento de caça aos mortos-vivos)
 
 ```
-(gerada na hora da publicação)
+Chris Hemsworth como Caça-Fantasmas: você esperava esse time?
+
+Ver o Thor trocando o martelo por equipamento de caça aos mortos-vivos é o tipo de surpresa que faz a gente repensar a franquia.
+Bastidores sempre mostram a dedicação atrás da tela, e aqui a gente vê a construção do personagem em ação.
+Qual é a sua opinião sobre essa escolha de elenco?
+
+Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
+
+#CaçaFantasmas #ChrisHemsworth #SonyPictures #Bastidores #MorsaDigital
 ```
 
 ### 18/11 — Ativando sua nostalgia em 3, 2, 1... 🥹 #Shrek2
@@ -983,22 +976,7 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
 ## main — a partir das 13h
 
-76 na fila | legendas ok: 7 | a revisar: 3 | dias sem reel no calendário: 0
-
-### 11/11 — Dragon Ball Super: Beerus | Trailer em Português
-Crunchyroll Brasil · horizontal · pt · legenda: ok
-
-```
-Dragon Ball Super: Beerus em português e eu já estou com o coração acelerado.
-
-A dublagem oficial chega dia 12 de novembro e finalmente temos essa fase lendária com a voz que a gente conhece. É o momento em que a paz na Terra fica em xeque e o Deus da Destruição acorda para conhecer o Saiyajin que já derrotou Freeza.
-
-Qual foi a primeira reação de vocês quando souberam que essa temporada ganharia dublagem brasileira?
-
-Vídeo: Crunchyroll Brasil (canal oficial no YouTube)
-
-#DragonBallSuper #Beerus #Goku #CrunchyrollBrasil #Anime
-```
+76 na fila | legendas ok: 8 | a revisar: 3 | dias sem reel no calendário: 0
 
 ### 12/11 — Marvel Tōkon: Fighting Souls - Trailer de jogabilidade do Phoenix Cyclops | PS5 
 PlayStation Brasil · horizontal · pt · legenda: ok
@@ -1031,33 +1009,33 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 14/11 — Seria essa a cena mais forte? | Naruto Shippuden
-Crunchyroll Brasil · horizontal · pt · legenda: revisar (detalhe sem base: “Eu vou juntar as suas peças” - Shikaku Nara; detalhe sem base: Só a frase do pai dele, "Eu vou juntar as suas peças", transforma a dor em algo que dá pra lidar)
+Crunchyroll Brasil · horizontal · pt · legenda: ok
 
 ```
-Shikamaru finalmente desabou e eu junto, isso foi brutal.
+Shikamaru finalmente desabou e eu não aguentei.
 
-A morte de Asuma deixou um buraco no time, mas o episódio 82 mostra como o luto de Shikamaru é pesado. Só a frase do pai dele, "Eu vou juntar as suas peças", transforma a dor em algo que dá pra lidar, e essa cena de vulnerabilidade é o que faz o Naruto Shippuden ser mais que só luta.
+Aquele momento em que o peso da perda de Asuma fica insuportável e só as palavras do pai conseguem trazer algum alívio é devastador. É o tipo de cena que pega no peito e mostra a maturidade emocional do personagem.
 
-Você acha que esse momento humaniza o personagem ou mostra que ele ainda precisa evoluir emocionalmente?
+Vocês acham que esse é o ponto de virada emocional da série ou tinha algo ainda mais forte?
 
 Vídeo: Crunchyroll Brasil (canal oficial no YouTube)
 
-#NarutoShippuden #Shikamaru #Animes #Crunchyroll #Naruto
+#NarutoShippuden #Shikamaru #Nara #Anime #Crunchyroll
 ```
 
-### 15/11 — Superman l Trailer Teaser Oficial Dublado
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: ok
+### 15/11 — Jumanji: Mundo Real | Novo Trailer | Dublado
+Sony Pictures Brasil · horizontal · pt · legenda: ok
 
 ```
-Superman. Sim, aquele mesmo, mas com uma energia que eu nunca tinha visto antes.
+Jumanji: Mundo Real chegou e eu já tô com o coração acelerado, você tá preparado pra essa nova fase?
 
-Esse é o primeiro longa da nova era da DC Studios, liderado por James Gunn, que promete misturar ação épica, humor e aquele coração que a gente ama no herói original. A vibe de compaixão e crença na bondade da humanidade que ele descreveu parece que vai mudar completamente a cara do universo cinematográfico.
+A volta de Dwayne Johnson, Jack Black, Kevin Hart e Karen Gillan promete levar a confusão do jogo direto pra nossa rua. Com a direção de Jake Kasdan e a participação especial de Nick Jonas e Danny DeVito, a franquia que nasceu no livro de Chris Van Allsburg ganha um novo twist que divide a galera.
 
-Vocês sentiram esse novo tom logo de cara ou acharam que estava mais conservador do que o esperado?
+Vai ser só mais uma comédia caótica ou essa vez eles realmente mudaram o jogo pra sempre?
 
-Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
+Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#SupermanFilme #DCStudios #JamesGunn #DCU #WarnerBros
+#JumanjiMundoReal #Jumanji #DwayneJohnson #JackBlack #KevinHart
 ```
 
 ### 16/11 — Bully Trailer
@@ -1076,13 +1054,43 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 17/11 — Grand Theft Auto VI Trailer 1
+Rockstar Games · horizontal · pt-legenda · legenda: revisar (hashtag genérica)
+
+```
+GTA VI, aquele trailer que ainda faz meu coração disparar só de lembrar.
+
+Fazem uns tempos que esse vídeo caiu e a internet inteira parou pra rever cada segundo, mas até hoje a sensação é a mesma: a Rockstar não brincou. É o retorno de um universo que redefine o que a gente espera de um jogo, e a expectativa só cresce conforme a contagem regressiva avança.
+
+Qual foi a primeira coisa que te fez pensar "isso aqui é o futuro dos games"?
+
+Vídeo: Rockstar Games (canal oficial no YouTube)
+
+#GTA6 #GrandTheftAuto #RockstarGames #GTA #Trailer
+```
+
+### 18/11 — Superman l Trailer Teaser Oficial Dublado
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ok
+
+```
+Superman. Sim, aquele mesmo, mas com uma energia que eu nunca tinha visto antes.
+
+Esse é o primeiro longa da nova era da DC Studios, liderado por James Gunn, que promete misturar ação épica, humor e aquele coração que a gente ama no herói original. A vibe de compaixão e crença na bondade da humanidade que ele descreveu parece que vai mudar completamente a cara do universo cinematográfico.
+
+Vocês sentiram esse novo tom logo de cara ou acharam que estava mais conservador do que o esperado?
+
+Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
+
+#SupermanFilme #DCStudios #JamesGunn #DCU #WarnerBros
+```
+
+### 19/11 — Grand Theft Auto VI Trailer 2
 Rockstar Games · horizontal · pt-legenda · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 18/11 — Demon Slayer: Kimetsu no Yaiba Castelo Infinito | Trailer | Em breve nos cinemas
+### 20/11 — Demon Slayer: Kimetsu no Yaiba Castelo Infinito | Trailer | Em breve nos cinemas
 Sony Pictures Brasil · horizontal · pt · legenda: revisar (trata vídeo antigo como novidade)
 
 ```
@@ -1097,14 +1105,7 @@ Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 #DemonSlayer #KimetsuNoYaiba #CasteloInfinito #Anime #Crunchyroll
 ```
 
-### 19/11 — Grand Theft Auto VI Trailer 2
-Rockstar Games · horizontal · pt-legenda · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 20/11 — Remake da trilogia God of War - Teaser de anúncio | PS5
+### 21/11 — Remake da trilogia God of War - Teaser de anúncio | PS5
 PlayStation Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -1119,7 +1120,7 @@ Vídeo: PlayStation Brasil (canal oficial no YouTube)
 #GodofWar #GoWremake #ps5 #ps5games #stateofplay
 ```
 
-### 21/11 — Homem-Aranha: Através do AranhaVerso | Trailer Oficial Dublado
+### 22/11 — Homem-Aranha: Através do AranhaVerso | Trailer Oficial Dublado
 Sony Pictures Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -1134,56 +1135,56 @@ Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 #SpiderManAcrossTheSpiderVerse #AranhaVerso #SonyPicturesBrasil #Animacao #GeekBR
 ```
 
-### 22/11 — Supergirl l Teaser Trailer Oficial
+### 23/11 — Supergirl l Teaser Trailer Oficial
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 23/11 — CHAINSAW MAN: O FILME - ARCO DA REZE - NOVO TRAILER (Dublado)
+### 24/11 — CHAINSAW MAN: O FILME - ARCO DA REZE - NOVO TRAILER (Dublado)
 Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 24/11 — Mortal Kombat 2 l Trailer Oficial Dublado #2
+### 25/11 — Mortal Kombat 2 l Trailer Oficial Dublado #2
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 25/11 — Thor: Ragnarok - Trailer Oficial | HD
+### 26/11 — Thor: Ragnarok - Trailer Oficial | HD
 Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 26/11 — The Batman - O Morcego e a Gata - Trailer
+### 27/11 — The Batman - O Morcego e a Gata - Trailer
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 27/11 — THE ONE PIECE | Teaser oficial | Netflix
+### 28/11 — THE ONE PIECE | Teaser oficial | Netflix
 Netflix Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 28/11 — Resident Evil Requiem - 4º Trailer | PS5
+### 29/11 — Resident Evil Requiem - 4º Trailer | PS5
 PlayStation Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 29/11 — Quarteto Fantástico: Primeiros Passos | Trailer Oficial 2 Dublado
+### 30/11 — Quarteto Fantástico: Primeiros Passos | Trailer Oficial 2 Dublado
 Marvel Brasil · horizontal · pt · legenda: revisar (trata vídeo antigo como novidade)
 
 ```
@@ -1198,85 +1199,78 @@ Vídeo: Marvel Brasil (canal oficial no YouTube)
 #QuartetoFantástico #PrimeirosPassos #MarvelStudios #Dublado #Relembre #NerdBR
 ```
 
-### 30/11 — The Mandalorian | Trailer Oficial Dublado | Temporada 2 | Disney+
+### 01/12 — The Mandalorian | Trailer Oficial Dublado | Temporada 2 | Disney+
 Disney+ Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 01/12 — Jujutsu Kaisen 0 | Trailer oficial dublado | 28 de abril exclusivamente nos cine
+### 02/12 — Jujutsu Kaisen 0 | Trailer oficial dublado | 28 de abril exclusivamente nos cine
 Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 02/12 — Um Filme Minecraft l Trailer Final
+### 03/12 — Um Filme Minecraft l Trailer Final
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 03/12 — Homem-Aranha: Sem Volta Para Casa | Trailer Oficial Dublado | 16 de dezembro nos
+### 04/12 — Homem-Aranha: Sem Volta Para Casa | Trailer Oficial Dublado | 16 de dezembro nos
 Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 04/12 — The Flash – Trailer Oficial
+### 05/12 — The Flash – Trailer Oficial
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 05/12 — The Boys – Temporada Final Trailer | Prime Video
+### 06/12 — The Boys – Temporada Final Trailer | Prime Video
 Prime Video Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 06/12 — STEEL BALL RUN JoJo’s Bizarre Adventure | Trailer oficial | Netflix
+### 07/12 — STEEL BALL RUN JoJo’s Bizarre Adventure | Trailer oficial | Netflix
 Netflix Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 07/12 — Demolidor: Renascido | Trailer Oficial Dublado | Disney+
+### 08/12 — Demolidor: Renascido | Trailer Oficial Dublado | Disney+
 Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 08/12 — Aquaman 2: O Reino Perdido | Trailer
+### 09/12 — Aquaman 2: O Reino Perdido | Trailer
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 09/12 — Street Fighter | Novo Trailer | DUB | Paramount Pictures Brasil
+### 10/12 — Street Fighter | Novo Trailer | DUB | Paramount Pictures Brasil
 Paramount Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 10/12 — Dragon Ball Daima | Trailer Oficial | Max
+### 11/12 — Dragon Ball Daima | Trailer Oficial | Max
 HBO Max Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 11/12 — Guardiões da Galáxia: Volume 3 | Marvel Studios | Trailer Oficial 2 Dublado
-Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
@@ -1317,22 +1311,22 @@ Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
-### 17/12 — Godzilla e Kong: O Novo Império | Trailer Oficial 2
+### 17/12 — Guardiões da Galáxia: Volume 3 | Marvel Studios | Trailer Oficial 2 Dublado
+Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 18/12 — Godzilla e Kong: O Novo Império | Trailer Oficial 2
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 18/12 — Frieren e a Jornada para o Além 2ª Temporada | TRAILER OFICIAL
+### 19/12 — Frieren e a Jornada para o Além 2ª Temporada | TRAILER OFICIAL
 Crunchyroll Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 19/12 — Doutor Estranho no Multiverso da Loucura | Marvel Studios | Trailer Oficial Dubl
-Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
@@ -1380,36 +1374,36 @@ Disney+ Brasil · horizontal · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
-### 26/12 — Besouro Azul | Trailer Final Oficial
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 27/12 — The Last of Us Complete - Trailer de Lançamento
-PlayStation Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 28/12 — Cavaleiro da Lua | Marvel Studios | Trailer Oficial Dublado | Disney+
+### 26/12 — Doutor Estranho no Multiverso da Loucura | Marvel Studios | Trailer Oficial Dubl
 Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 29/12 — Invencível - Temporada 4 | Teaser Oficial | Prime Video
-Prime Video Brasil · horizontal · pt · legenda: ainda não gerada
+### 27/12 — Besouro Azul | Trailer Final Oficial
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 30/12 — Cena da 2ª temporada: o Bando do Chapéu de Palha vai a Loguetown | ONE PIECE: A 
-Netflix Brasil · horizontal · pt · legenda: ainda não gerada
+### 28/12 — The Last of Us Complete - Trailer de Lançamento
+PlayStation Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 29/12 — Cavaleiro da Lua | Marvel Studios | Trailer Oficial Dublado | Disney+
+Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 30/12 — Invencível - Temporada 4 | Teaser Oficial | Prime Video
+Prime Video Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
@@ -1429,168 +1423,175 @@ Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
-### 02/01 — Pantera Negra: Wakanda para Sempre | Marvel Studios | Trailer Oficial Dublado
-Marvel Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 03/01 — Adão Negro - Trailer Oficial 1
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 04/01 — Sonic: O Filme | Trailer Oficial | DUB | Paramount Pictures Brasil
-Paramount Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 05/01 — Capitão América: Admirável Mundo Novo | Trailer Oficial Dublado
-Marvel Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 06/01 — JUJUTSU KAISEN: Hidden Inventory / Premature Death – The Movie | TRAILER
-Crunchyroll Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 07/01 — Guardiões da Galáxia Vol. 2 - TRAILER
-Marvel Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 08/01 — SHAZAM! FÚRIA DOS DEUSES - Trailer Oficial 2
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 09/01 — Metal Gear Solid Δ: Snake Eater - Trailer da data de lançamento | PS5
-PlayStation Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 10/01 — Shang-Chi e a Lenda dos Dez Anéis | Marvel Studios | Trailer 2 Oficial Dublado
-Marvel Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 11/01 — Dragon Ball Super: Super Hero | Trailer Oficial Dublado | 18 de agosto exclusiva
-Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 12/01 — Venom: A Última Rodada | Trailer Final Dublado
-Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 13/01 — Animais Fantásticos: Os Segredos de Dumbledore – Trailer Oficial 2
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 14/01 — Black Clover 2ª Temporada | TRAILER OFICIAL
-Crunchyroll Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 15/01 — Homem-Formiga e a Vespa: Quantumania | Trailer Oficial 2 Dublado
-Marvel Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 16/01 — Star Wars: The Bad Batch | Trailer Oficial | Disney+
-Disney+ Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 17/01 — Coração de Ferro | Trailer 3 Oficial Dublado | Disney+
-Marvel Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 18/01 — My Hero Academia: Missão Mundial de Heróis | Trailer Oficial | 6 de janeiro nos 
-Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 19/01 — As Marvels | Trailer Oficial Dublado
-Marvel Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 20/01 — Jumanji: Mundo Real | Trailer Oficial | Dublado
-Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 21/01 — Hazbin Hotel - Temporada 2 Trailer Oficial | Prime Video
-Prime Video Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 22/01 — Teaser Trailer - Doutor Estranho - 2 de Novembro Nos Cinemas
-Marvel Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 23/01 — God of War Sons of Sparta - Trailer de Revelação | PS5
-PlayStation Brasil · horizontal · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 24/01 — Peaky Blinders: O Homem Imortal | Trailer oficial | Netflix
+### 02/01 — Cena da 2ª temporada: o Bando do Chapéu de Palha vai a Loguetown | ONE PIECE: A 
 Netflix Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 25/01 — DC Liga dos SuperPets - Trailer Oficial Dublado
+### 03/01 — Pantera Negra: Wakanda para Sempre | Marvel Studios | Trailer Oficial Dublado
+Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 04/01 — Adão Negro - Trailer Oficial 1
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 05/01 — Sonic: O Filme | Trailer Oficial | DUB | Paramount Pictures Brasil
+Paramount Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 06/01 — Capitão América: Admirável Mundo Novo | Trailer Oficial Dublado
+Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 07/01 — JUJUTSU KAISEN: Hidden Inventory / Premature Death – The Movie | TRAILER
+Crunchyroll Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 08/01 — Guardiões da Galáxia Vol. 2 - TRAILER
+Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 09/01 — SHAZAM! FÚRIA DOS DEUSES - Trailer Oficial 2
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 10/01 — Metal Gear Solid Δ: Snake Eater - Trailer da data de lançamento | PS5
+PlayStation Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 11/01 — Shang-Chi e a Lenda dos Dez Anéis | Marvel Studios | Trailer 2 Oficial Dublado
+Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 12/01 — Dragon Ball Super: Super Hero | Trailer Oficial Dublado | 18 de agosto exclusiva
+Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 13/01 — Venom: A Última Rodada | Trailer Final Dublado
+Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 14/01 — Animais Fantásticos: Os Segredos de Dumbledore – Trailer Oficial 2
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 15/01 — Black Clover 2ª Temporada | TRAILER OFICIAL
+Crunchyroll Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 16/01 — Homem-Formiga e a Vespa: Quantumania | Trailer Oficial 2 Dublado
+Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 17/01 — Star Wars: The Bad Batch | Trailer Oficial | Disney+
+Disney+ Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 18/01 — Coração de Ferro | Trailer 3 Oficial Dublado | Disney+
+Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 19/01 — My Hero Academia: Missão Mundial de Heróis | Trailer Oficial | 6 de janeiro nos 
+Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 20/01 — As Marvels | Trailer Oficial Dublado
+Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 21/01 — Jumanji: Mundo Real | Trailer Oficial | Dublado
+Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 22/01 — Hazbin Hotel - Temporada 2 Trailer Oficial | Prime Video
+Prime Video Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 23/01 — Teaser Trailer - Doutor Estranho - 2 de Novembro Nos Cinemas
+Marvel Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 24/01 — God of War Sons of Sparta - Trailer de Revelação | PS5
+PlayStation Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 25/01 — Peaky Blinders: O Homem Imortal | Trailer oficial | Netflix
+Netflix Brasil · horizontal · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 26/01 — DC Liga dos SuperPets - Trailer Oficial Dublado
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
