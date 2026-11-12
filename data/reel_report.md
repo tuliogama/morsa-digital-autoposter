@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 12/11/2026 00:37 BRT
+# Fila de reels @morsadigital — 12/11/2026 03:13 BRT
 
 ## cenas — a partir das 11h
 
@@ -85,18 +85,19 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 17/11 — Caça-Fantasmas | Bastidores Chris Hemsworth | 14 de julho nos cinema
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth como Caça-Fantasmas; detalhe sem base: Thor trocando o martelo por equipamento de caça aos mortos-vivos)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth de Caça-Fantasmas: você acha que ele fica com o personagem?; detalhe sem base: Ver o Thor vestindo a roupa de caçador de fantasmas nos bastões é uma das imagens mais icônicas da franquia.)
 
 ```
-Chris Hemsworth como Caça-Fantasmas: você esperava esse time?
+Chris Hemsworth de Caça-Fantasmas: você acha que ele fica com o personagem?
 
-Ver o Thor trocando o martelo por equipamento de caça aos mortos-vivos é o tipo de surpresa que faz a gente repensar a franquia.
-Bastidores sempre mostram a dedicação atrás da tela, e aqui a gente vê a construção do personagem em ação.
-Qual é a sua opinião sobre essa escolha de elenco?
+Ver o Thor vestindo a roupa de caçador de fantasmas nos bastidores é uma das imagens mais icônicas da franquia.
+Aquele visual misto de deus do trovão e caçador de monstros ainda divide opiniões entre os fãs.
+
+Marca aquele amigo que torce pra ele ganhar o papel.
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#CaçaFantasmas #ChrisHemsworth #SonyPictures #Bastidores #MorsaDigital
+#CaçaFantasmas #ChrisHemsworth #Thor #SonyPictures #MorsaDigital
 ```
 
 ### 18/11 — Ativando sua nostalgia em 3, 2, 1... 🥹 #Shrek2
@@ -976,7 +977,7 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
 ## main — a partir das 13h
 
-76 na fila | legendas ok: 8 | a revisar: 3 | dias sem reel no calendário: 0
+76 na fila | legendas ok: 9 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 12/11 — Marvel Tōkon: Fighting Souls - Trailer de jogabilidade do Phoenix Cyclops | PS5 
 PlayStation Brasil · horizontal · pt · legenda: ok
@@ -1054,18 +1055,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 17/11 — Grand Theft Auto VI Trailer 1
-Rockstar Games · horizontal · pt-legenda · legenda: revisar (hashtag genérica)
+Rockstar Games · horizontal · pt-legenda · legenda: ok
 
 ```
-GTA VI, aquele trailer que ainda faz meu coração disparar só de lembrar.
+GTA VI Trailer 1: aquele arrepio de 2023 que ainda parece ontem
 
-Fazem uns tempos que esse vídeo caiu e a internet inteira parou pra rever cada segundo, mas até hoje a sensação é a mesma: a Rockstar não brincou. É o retorno de um universo que redefine o que a gente espera de um jogo, e a expectativa só cresce conforme a contagem regressiva avança.
+Relembre o momento em que o hype atingiu o pico máximo. A trilha sonora, liderada por Tom Petty, definiu o tom melancólico e urbano que a comunidade brasileira está pedindo há anos. É a vibe que só o mundo de Los Santos consegue entregar.
 
-Qual foi a primeira coisa que te fez pensar "isso aqui é o futuro dos games"?
+Qual foi a primeira imagem que te fez sentir que o retorno da série principal valeria cada segundo de espera?
 
 Vídeo: Rockstar Games (canal oficial no YouTube)
 
-#GTA6 #GrandTheftAuto #RockstarGames #GTA #Trailer
+#GTA6 #GrandTheftAuto #RockstarGames #LosSantos #GTA
 ```
 
 ### 18/11 — Superman l Trailer Teaser Oficial Dublado
