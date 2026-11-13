@@ -2439,7 +2439,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=Jxm5mLzGKk0",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/Jxm5mLzGKk0.mp4",
     "added_at": "2026-10-13T05:48:10.546882-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 13,
     "theme": "bastidores",
@@ -2448,7 +2448,9 @@
     "lang": "pt",
     "caption": "Você parou pra observar a equipe de WandaVision?\n\nVer o processo por trás da magia de Wanda e Visão muda completamente a percepção da série.\nÉ outro nível de admiração quando a gente entende o trabalho de quem faz tudo aquilo acontecer.\n\nComenta aí: qual parte dos bastidores te surpreendeu mais?\n\nVídeo: Disney+ Brasil (canal oficial no YouTube)\n\n#WandaVision #MarvelStudiosAvante #DisneyPlus #Bastidores #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-13T11:03:47.524859-03:00",
+    "media_id": "18134679490767479"
   },
   {
     "video_id": "ylIIIrxoCoo",
