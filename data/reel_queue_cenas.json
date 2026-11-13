@@ -2490,11 +2490,11 @@
     "hook_text": null,
     "layout": "horizontal",
     "lang": "pt",
-    "caption": "Chris Hemsworth de Caça-Fantasmas: você lembra dessa fase?\n\nVer o Thorkin em ação nos bastidores é uma viagem no tempo.\nEra a época em que a gente acompanhava tudo de perto.\nRelembre esse making of e volte àquela vibe.\n\nMarca aquele amigo que não esquece esse período.\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#CaçaFantasmas #ChrisHemsworth #Thorkin #SonyPicturesBrasil #MorsaDigital",
+    "caption": "Chris Hemsworth como Caça-Fantasmas: você torceu ou torceu pela zoeira?\n\nVer o Thor pegando leve no set é o tipo de bastidores que faz qualquer fã soltar o \"haha\".\nÉ pura energia de quem está curtindo a experiência de gravar, longe da tensão dos filmes.\n\nComenta aí: qual foi a primeira vez que você viu esse clipe?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#CacaFantasmas #ChrisHemsworth #Bastidores #SonyPictures #MorsaDigital",
     "caption_check": "revisar",
     "caption_problems": [
-      "detalhe sem base: Chris Hemsworth de Caça-Fantasmas",
-      "detalhe sem base: Thorkin"
+      "detalhe sem base: Chris Hemsworth como Caça-Fantasmas",
+      "detalhe sem base: Thor pegando leve no set"
     ]
   },
   {
@@ -2514,7 +2514,10 @@
     "theme": "bastidores",
     "hook_text": null,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Percy Jackson: você já viu os bastidores dessa gravação?\n\nVer o elenco por trás das câmeras muda a perspectiva.\nÉ outro nível de conexão com a jornada do herói.\n\nQual foi a parte que mais te surpreendeu?\n\nVídeo: Disney+ Brasil (canal oficial no YouTube)\n\n#PercyJackson #Olimpianos #DisneyPlus #Bastidores #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "9L6UI5UsgpE",
