@@ -1738,7 +1738,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=oCZgVGFwKo0",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/oCZgVGFwKo0.mp4",
     "added_at": "2026-10-08T14:13:07.347350-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 81,
     "scheduled_for": "2026-11-13",
@@ -1748,7 +1748,9 @@
     "caption_style": "padrao",
     "caption": "GTA Online: The Doomsday Heist. Que lembrança dos bons tempos.\n\nEsse update transformou o multiplayer em uma verdadeira saga de ficção científica, misturando conspirações e apocalipse no meio de Los Santos. A dinâmica de equipe com um bilionário, um agente, um conspiracionista e um supercomputador criou umas das interações mais únicas do jogo.\n\nQual foi a sua experiência com esse heist: você achou que a dificuldade estava equilibrada ou sentiu falta de mais liberdade de ação?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#GTAV #GTAOnline #RockstarGames #GTA6 #Gaming",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-13T13:06:18.312936-03:00",
+    "media_id": "18029862797872573"
   },
   {
     "video_id": "88KNf0MtU14",
