@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 13/11/2026 01:33 BRT
+# Fila de reels @morsadigital — 13/11/2026 03:33 BRT
 
 ## cenas — a partir das 11h
 
@@ -68,19 +68,19 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 17/11 — Caça-Fantasmas | Bastidores Chris Hemsworth | 14 de julho nos cinema
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth de Caça-Fantasmas; detalhe sem base: Ver o Thors em ação nos bastidores)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth ou Thora Birch, quem você ia querer no time?; detalhe sem base: Ver o processo de criação dessa versão clássica sempre nos arrepia de nostalgia.)
 
 ```
-Chris Hemsworth de Caça-Fantasmas: você achou que ia ser só mais um herói?
+Chris Hemsworth ou Thora Birch, quem você ia querer no time?
 
-Ver o Thors em ação nos bastidores muda completamente a percepção da cena.
-É aquele tipo de momento que a gente só valoriza depois de rever o filme.
+Relembrar os bastidores de quem dá vida aos caçadores é uma delícia.
+Ver o processo de criação dessa versão clássica sempre nos arrepia de nostalgia.
 
-Comenta aí: qual foi a primeira reação de vocês quando viram ele nesse universo?
+Qual é a sua memória favorita dessa filmagem?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#CaçaFantasmas #ChrisHemsworth #Thor #SonyPictures #MorsaDigital
+#CaçaFantasmas #ChrisHemsworth #SonyPictures #Bastidores #MorsaDigital
 ```
 
 ### 18/11 — Ativando sua nostalgia em 3, 2, 1... 🥹 #Shrek2
