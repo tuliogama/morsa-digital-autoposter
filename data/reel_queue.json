@@ -2230,7 +2230,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=8ByWqeyiy44",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/8ByWqeyiy44.mp4",
     "added_at": "2026-11-11T06:06:20.103909-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "fresh",
     "hook_text": null,
     "layout": "horizontal",
@@ -2238,7 +2238,9 @@
     "caption_style": "padrao",
     "caption": "Shikamaru finalmente desabou e eu não aguentei.\n\nAquele momento em que o peso da perda de Asuma fica insuportável e só as palavras do pai conseguem trazer algum alívio é devastador. É o tipo de cena que pega no peito e mostra a maturidade emocional do personagem.\n\nVocês acham que esse é o ponto de virada emocional da série ou tinha algo ainda mais forte?\n\nVídeo: Crunchyroll Brasil (canal oficial no YouTube)\n\n#NarutoShippuden #Shikamaru #Nara #Anime #Crunchyroll",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-14T13:05:07.042393-03:00",
+    "media_id": "18078388097765479"
   },
   {
     "video_id": "k02hVjlAQjg",
