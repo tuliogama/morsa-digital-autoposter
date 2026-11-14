@@ -1,24 +1,8 @@
-# Fila de reels @morsadigital — 13/11/2026 05:33 BRT
+# Fila de reels @morsadigital — 13/11/2026 23:47 BRT
 
 ## cenas — a partir das 11h
 
-113 na fila | legendas ok: 17 | a revisar: 2 | dias sem reel no calendário: 0
-
-### 13/11 — Marvel Studios Avante: Os Bastidores de WandaVision | Trailer Oficial Legendado 
-Disney+ Brasil · horizontal · pt · legenda: ok
-
-```
-Você parou pra observar a equipe de WandaVision?
-
-Ver o processo por trás da magia de Wanda e Visão muda completamente a percepção da série.
-É outro nível de admiração quando a gente entende o trabalho de quem faz tudo aquilo acontecer.
-
-Comenta aí: qual parte dos bastidores te surpreendeu mais?
-
-Vídeo: Disney+ Brasil (canal oficial no YouTube)
-
-#WandaVision #MarvelStudiosAvante #DisneyPlus #Bastidores #MorsaDigital
-```
+112 na fila | legendas ok: 16 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 14/11 — Isso quebrou o coração do Mark 😓💔 #Invencível
 Prime Video Brasil · vertical · pt · legenda: ok
@@ -68,19 +52,19 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 17/11 — Caça-Fantasmas | Bastidores Chris Hemsworth | 14 de julho nos cinema
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth como Caça-Fantasmas; detalhe sem base: Ver o Thor segurando o equipamento de captura)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (1ª linha não é pergunta)
 
 ```
-Chris Hemsworth como Caça-Fantasmas: você esperava isso?
+Segundo o título, Chris Hemsworth está nos bastidores de Caça-Fantasmas.
 
-Ver o Thor segurando o equipamento de captura é pura nostalgia.
-É aquele tipo de bastidor que faz qualquer fã da franquia sorrir só de lembrar.
+Ver o Thor fora do MCU e dentro desse universo é sempre uma curiosidade.
+Aquele clima de set com o elenco reunido tem um peso diferente.
 
-Comenta aí: qual foi a primeira vez que você viu esse vídeo?
+Qual foi a sua primeira reação ao saber dessa participação?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#CaçaFantasmas #ChrisHemsworth #SonyPicturesBrasil #MorsaDigital
+#CaçaFantasmas #ChrisHemsworth #Thor #SonyPictures #MorsaDigital
 ```
 
 ### 18/11 — Ativando sua nostalgia em 3, 2, 1... 🥹 #Shrek2
@@ -969,22 +953,7 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
 ## main — a partir das 13h
 
-76 na fila | legendas ok: 9 | a revisar: 2 | dias sem reel no calendário: 0
-
-### 13/11 — GTA Online: The Doomsday Heist Official Trailer
-Rockstar Games · horizontal · en · legenda: ok
-
-```
-GTA Online: The Doomsday Heist. Que lembrança dos bons tempos.
-
-Esse update transformou o multiplayer em uma verdadeira saga de ficção científica, misturando conspirações e apocalipse no meio de Los Santos. A dinâmica de equipe com um bilionário, um agente, um conspiracionista e um supercomputador criou umas das interações mais únicas do jogo.
-
-Qual foi a sua experiência com esse heist: você achou que a dificuldade estava equilibrada ou sentiu falta de mais liberdade de ação?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
-
-#GTAV #GTAOnline #RockstarGames #GTA6 #Gaming
-```
+75 na fila | legendas ok: 8 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 14/11 — Seria essa a cena mais forte? | Naruto Shippuden
 Crunchyroll Brasil · horizontal · pt · legenda: ok
