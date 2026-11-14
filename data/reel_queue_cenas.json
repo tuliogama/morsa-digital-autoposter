@@ -2492,10 +2492,12 @@
     "hook_text": null,
     "layout": "horizontal",
     "lang": "pt",
-    "caption": "Segundo o título, Chris Hemsworth está nos bastidores de Caça-Fantasmas.\n\nVer o Thor fora do MCU e dentro desse universo é sempre uma curiosidade.\nAquele clima de set com o elenco reunido tem um peso diferente.\n\nQual foi a sua primeira reação ao saber dessa participação?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#CaçaFantasmas #ChrisHemsworth #Thor #SonyPictures #MorsaDigital",
+    "caption": "Chris Hemsworth nos bastidores de Caça-Fantasmas, você lembra disso?\n\nVer o Thor sacando a espada e virando um caçador de fantasmas é o tipo de cena que a gente ainda curte hoje.\nAquele carisma dele junto com o time original sempre teve uma química única que me fez querer rever o filme.\n\nQual foi sua primeira reação quando soube que ele entraria no time?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#CaçaFantasmas #ChrisHemsworth #Thor #SonyPicturesBrasil #MorsaDigital",
     "caption_check": "revisar",
     "caption_problems": [
-      "1ª linha não é pergunta"
+      "detalhe sem base: Ver o Thor sacando a espada e virando um caçador de fantasmas",
+      "detalhe sem base: Aquele carisma dele junto com o time original sempre teve uma química única que me fez querer rever o filme",
+      "detalhe sem base: Chris Hemsworth nos bastidores de Caça-Fantasmas"
     ]
   },
   {

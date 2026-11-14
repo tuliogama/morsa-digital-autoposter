@@ -1815,7 +1815,13 @@
     "scheduled_for": "2026-11-19",
     "theme": "gta",
     "layout": "horizontal",
-    "lang": "pt-legenda"
+    "lang": "pt-legenda",
+    "caption_style": "padrao",
+    "caption": "Tô revendo o Trailer 2 do GTA VI e ainda não acredito que a Morsa Digital tá fazendo essa contagem regressiva pro lançamento.\n\nA galera de Vice City finalmente volta ao mapa com Jason e Lucia, dois personagens que mostram que a vida no sol do estado da Leonida não é só férias e praias. O jogo captura tudo em tempo real no PS5, misturando gameplay com cutscenes num nível de detalhe que faz qualquer fã de Rockstar parar o que tá fazendo pra olhar.\n\nQual foi o momento desse trailer que mais te deixou com o coração acelerado?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#GTA6 #GrandTheftAuto #RockstarGames #ViceCity #GTA",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "detalhe sem base: Morsa Digital tá fazendo essa contagem regressiva pro lançamento"
+    ]
   },
   {
     "video_id": "xwaY3Epk4RE",
