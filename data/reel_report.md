@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 14/11/2026 03:37 BRT
+# Fila de reels @morsadigital — 14/11/2026 05:33 BRT
 
 ## cenas — a partir das 11h
 
@@ -52,20 +52,19 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 17/11 — Caça-Fantasmas | Bastidores Chris Hemsworth | 14 de julho nos cinema
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth como Caça-Fantasmas; detalhe sem base: a ideia de ver Chris no meio dessa trupe ainda é genial)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth como Ghostbuster; detalhe sem base: Ver o Thor vestindo o macacão e segurando o equipamento de captura; detalhe sem base: um ícone da Marvel assumindo o manto de caçador de fantasmas)
 
 ```
-Chris Hemsworth como Caça-Fantasmas: você esperava isso ou achou que seria um absurdo?
+Chris Hemsworth como Ghostbuster: top ou flop?
 
-Bastidores raramente mostram a química entre os atores, mas aqui dá pra sentir a energia do grupo.
-É o tipo de material que conecta o ator que a gente ama na Marvel com o universo fantástico da Sony.
-E olha, a ideia de ver Chris no meio dessa trupe ainda é genial.
+Ver o Thor vestindo o macacão e segurando o equipamento de captura é uma daquelas imagens que a gente nunca esperava.
+Ainda mais nos bastidores, dá pra sentir o peso de ver um ícone da Marvel assumindo o manto de caçador de fantasmas.
 
-Qual é a sua opinião sobre essa escalação?
+Comenta aí qual foi a primeira reação de vocês quando viram ele no set.
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#CacaFantasmas #ChrisHemsworth #SonyPictures #Bastidores #MorsaDigital
+#CaçaFantasmas #ChrisHemsworth #Ghostbusters #SonyPicturesBrasil #MorsaDigital
 ```
 
 ### 18/11 — Ativando sua nostalgia em 3, 2, 1... 🥹 #Shrek2
