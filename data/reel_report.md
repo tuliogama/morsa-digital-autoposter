@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 14/11/2026 01:33 BRT
+# Fila de reels @morsadigital — 14/11/2026 03:37 BRT
 
 ## cenas — a partir das 11h
 
@@ -52,19 +52,20 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 17/11 — Caça-Fantasmas | Bastidores Chris Hemsworth | 14 de julho nos cinema
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Ver o Thor sacando a espada e virando um caçador de fantasmas; detalhe sem base: Aquele carisma dele junto com o time original sempre teve uma química única que me fez querer rever o filme; detalhe sem base: Chris Hemsworth nos bastidores de Caça-Fantasmas)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth como Caça-Fantasmas; detalhe sem base: a ideia de ver Chris no meio dessa trupe ainda é genial)
 
 ```
-Chris Hemsworth nos bastidores de Caça-Fantasmas, você lembra disso?
+Chris Hemsworth como Caça-Fantasmas: você esperava isso ou achou que seria um absurdo?
 
-Ver o Thor sacando a espada e virando um caçador de fantasmas é o tipo de cena que a gente ainda curte hoje.
-Aquele carisma dele junto com o time original sempre teve uma química única que me fez querer rever o filme.
+Bastidores raramente mostram a química entre os atores, mas aqui dá pra sentir a energia do grupo.
+É o tipo de material que conecta o ator que a gente ama na Marvel com o universo fantástico da Sony.
+E olha, a ideia de ver Chris no meio dessa trupe ainda é genial.
 
-Qual foi sua primeira reação quando soube que ele entraria no time?
+Qual é a sua opinião sobre essa escalação?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#CaçaFantasmas #ChrisHemsworth #Thor #SonyPicturesBrasil #MorsaDigital
+#CacaFantasmas #ChrisHemsworth #SonyPictures #Bastidores #MorsaDigital
 ```
 
 ### 18/11 — Ativando sua nostalgia em 3, 2, 1... 🥹 #Shrek2
@@ -953,7 +954,7 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
 ## main — a partir das 13h
 
-75 na fila | legendas ok: 8 | a revisar: 3 | dias sem reel no calendário: 0
+75 na fila | legendas ok: 9 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 14/11 — Seria essa a cena mais forte? | Naruto Shippuden
 Crunchyroll Brasil · horizontal · pt · legenda: ok
@@ -1031,18 +1032,18 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 19/11 — Grand Theft Auto VI Trailer 2
-Rockstar Games · horizontal · pt-legenda · legenda: revisar (detalhe sem base: Morsa Digital tá fazendo essa contagem regressiva pro lançamento)
+Rockstar Games · horizontal · pt-legenda · legenda: ok
 
 ```
-Tô revendo o Trailer 2 do GTA VI e ainda não acredito que a Morsa Digital tá fazendo essa contagem regressiva pro lançamento.
+Tô revisando o GTA VI Trailer 2 e ainda não acredito no nível de detalhe que a Rockstar colocou nessa.
 
-A galera de Vice City finalmente volta ao mapa com Jason e Lucia, dois personagens que mostram que a vida no sol do estado da Leonida não é só férias e praias. O jogo captura tudo em tempo real no PS5, misturando gameplay com cutscenes num nível de detalhe que faz qualquer fã de Rockstar parar o que tá fazendo pra olhar.
+O retorno a Vice City é surreal, mas a história de Jason e Lucia me pegou de surpresa. A dinâmica entre os dois e a tensão de estarem no meio de uma conspiração criminosa na Flórida fictícia, Leonida, dá um peso novo a todo esse universo.
 
-Qual foi o momento desse trailer que mais te deixou com o coração acelerado?
+Vocês acham que a química entre Jason e Lucia vai ser o coração do jogo ou o foco vai ser mais na ação pura?
 
 Vídeo: Rockstar Games (canal oficial no YouTube)
 
-#GTA6 #GrandTheftAuto #RockstarGames #ViceCity #GTA
+#GTA6 #GrandTheftAuto #ViceCity #RockstarGames #GTA
 ```
 
 ### 20/11 — Superman l Trailer Teaser Oficial Dublado
