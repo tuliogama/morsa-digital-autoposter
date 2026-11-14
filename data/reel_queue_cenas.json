@@ -675,14 +675,16 @@
     "youtube_url": "https://www.youtube.com/watch?v=_n9gDRR6hKY",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/_n9gDRR6hKY.mp4",
     "added_at": "2026-10-07T00:17:45.704137-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 25,
     "layout": "vertical",
     "lang": "pt",
     "caption": "Mark foi longe demais no Invencível?\n\nAquela cena pesou demais pra quem acompanha a jornada dele.\nÉ o tipo de momento que deixa qualquer fã em choque.\n\nComenta aí: você chorou junto ou ficou indiferente?\n\nVídeo: Prime Video Brasil (canal oficial no YouTube)\n\n#Invencível #MarkGrayson #PrimeVideo #SérieDeAção #UniversoInvencível #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-14T11:02:40.398151-03:00",
+    "media_id": "18035105402856586"
   },
   {
     "video_id": "uvzE7vLnxHo",
