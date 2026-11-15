@@ -2465,7 +2465,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=ylIIIrxoCoo",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/ylIIIrxoCoo.mp4",
     "added_at": "2026-10-13T05:56:33.817936-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 14,
     "theme": "bastidores",
@@ -2474,7 +2474,9 @@
     "lang": "pt",
     "caption": "A Camouflaj acertou a mão ao criar o Tony Stark em VR?\n\nVer quem por trás das telas e da tecnologia dá vida ao Homem de Ferro é outro nível.\nÉ a chance de entender como transformaram a experiência em algo imersivo e completo.\n\nQual foi a sua reação ao ver esse making of?\n\nVídeo: PlayStation Brasil (canal oficial no YouTube)\n\n#IronManVR #TonyStark #Marvel #Camouflaj #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-15T11:08:24.714211-03:00",
+    "media_id": "18485620939116046"
   },
   {
     "video_id": "ZTZf3ZZXm4E",
