@@ -2253,7 +2253,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=k02hVjlAQjg",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/k02hVjlAQjg.mp4",
     "added_at": "2026-11-11T23:37:52.659065-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "fresh",
     "hook_text": null,
     "layout": "horizontal",
@@ -2261,7 +2261,9 @@
     "caption_style": "eu",
     "caption": "Jumanji: Mundo Real chegou e eu já tô com o coração acelerado, você tá preparado pra essa nova fase?\n\nA volta de Dwayne Johnson, Jack Black, Kevin Hart e Karen Gillan promete levar a confusão do jogo direto pra nossa rua. Com a direção de Jake Kasdan e a participação especial de Nick Jonas e Danny DeVito, a franquia que nasceu no livro de Chris Van Allsburg ganha um novo twist que divide a galera.\n\nVai ser só mais uma comédia caótica ou essa vez eles realmente mudaram o jogo pra sempre?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#JumanjiMundoReal #Jumanji #DwayneJohnson #JackBlack #KevinHart",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-15T13:09:58.636950-03:00",
+    "media_id": "18133634020772945"
   },
   {
     "video_id": "5fqDgm4II34",
