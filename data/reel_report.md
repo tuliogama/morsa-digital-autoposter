@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 14/11/2026 23:33 BRT
+# Fila de reels @morsadigital — 15/11/2026 01:33 BRT
 
 ## cenas — a partir das 11h
 
@@ -36,19 +36,19 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 17/11 — Caça-Fantasmas | Bastidores Chris Hemsworth | 14 de julho nos cinema
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Ver o Thor segurando o equipamento de Ghostbusters foi um choque de realidade pra quem acompanhava as gravações.)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth como vilão dos Caça-Fantasmas; detalhe sem base: Ver o Thor de Asgard entrando no mundo dos fantasmas)
 
 ```
-Chris Hemsworth nos bastidores de Caça-Fantasmas: você lembra dessa fase?
+Chris Hemsworth como vilão dos Caça-Fantasmas, você torcia pra isso ou tava achando que era golpe?
 
-Ver o Thor segurando o equipamento de Ghostbusters foi um choque de realidade pra quem acompanhava as gravações.
-A transição de um universo para o outro sempre gerou muita curiosidade nos making of.
+Ver o Thor de Asgard entrando no mundo dos fantasmas sempre mexeu com a nossa cabeça.
+É aquele tipo de curiosidade que só os bastidores satisfazem, né?
 
-Comenta aí: qual foi a sua primeira reação ao ver o Hemsworth nesse projeto?
+Quem mais ficou chocado quando soube que ele tava no elenco?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#CaçaFantasmas #ChrisHemsworth #SonyPictures #Bastidores #MorsaDigital
+#CacaFantasmas #ChrisHemsworth #Vilao #Bastidores #MorsaDigital
 ```
 
 ### 18/11 — Ativando sua nostalgia em 3, 2, 1... 🥹 #Shrek2
