@@ -2494,12 +2494,10 @@
     "hook_text": null,
     "layout": "horizontal",
     "lang": "pt",
-    "caption": "Chris Hemsworth como Ghostbuster: top ou flop?\n\nVer o Thor vestindo o macacão e segurando o equipamento de captura é uma daquelas imagens que a gente nunca esperava.\nAinda mais nos bastidores, dá pra sentir o peso de ver um ícone da Marvel assumindo o manto de caçador de fantasmas.\n\nComenta aí qual foi a primeira reação de vocês quando viram ele no set.\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#CaçaFantasmas #ChrisHemsworth #Ghostbusters #SonyPicturesBrasil #MorsaDigital",
+    "caption": "Chris Hemsworth nos bastidores de Caça-Fantasmas: você lembra dessa fase?\n\nVer o Thor segurando o equipamento de Ghostbusters foi um choque de realidade pra quem acompanhava as gravações.\nA transição de um universo para o outro sempre gerou muita curiosidade nos making of.\n\nComenta aí: qual foi a sua primeira reação ao ver o Hemsworth nesse projeto?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#CaçaFantasmas #ChrisHemsworth #SonyPictures #Bastidores #MorsaDigital",
     "caption_check": "revisar",
     "caption_problems": [
-      "detalhe sem base: Chris Hemsworth como Ghostbuster",
-      "detalhe sem base: Ver o Thor vestindo o macacão e segurando o equipamento de captura",
-      "detalhe sem base: um ícone da Marvel assumindo o manto de caçador de fantasmas"
+      "detalhe sem base: Ver o Thor segurando o equipamento de Ghostbusters foi um choque de realidade pra quem acompanhava as gravações."
     ]
   },
   {
@@ -2541,7 +2539,12 @@
     "theme": "bastidores",
     "hook_text": null,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Você lembra dessa clássica? Ou tá descobrindo agora?\n\nVer o Walt Disney nos bastidores de Mary Poppins é uma viagem no tempo fascinante.\nÉ impossível não sentir o peso da magia que ele colocou em cada detalhe da produção.\nA simplicidade do processo contrasta com a grandiosidade do resultado final.\n\nComenta aqui: qual é a sua memória mais forte sobre esse clássico?\n\nVídeo: Walt Disney Studios BR (canal oficial no YouTube)\n\n#MaryPoppins #WaltDisney #BastidoresDeFilme #ClássicosDaDisney #MorsaDigital",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "detalhe sem base: Ver o Walt Disney nos bastidores de Mary Poppins"
+    ]
   },
   {
     "video_id": "ovpwoO091tk",

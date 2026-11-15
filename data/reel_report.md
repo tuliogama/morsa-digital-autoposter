@@ -1,24 +1,8 @@
-# Fila de reels @morsadigital — 14/11/2026 05:33 BRT
+# Fila de reels @morsadigital — 14/11/2026 23:33 BRT
 
 ## cenas — a partir das 11h
 
-112 na fila | legendas ok: 16 | a revisar: 2 | dias sem reel no calendário: 0
-
-### 14/11 — Isso quebrou o coração do Mark 😓💔 #Invencível
-Prime Video Brasil · vertical · pt · legenda: ok
-
-```
-Mark foi longe demais no Invencível?
-
-Aquela cena pesou demais pra quem acompanha a jornada dele.
-É o tipo de momento que deixa qualquer fã em choque.
-
-Comenta aí: você chorou junto ou ficou indiferente?
-
-Vídeo: Prime Video Brasil (canal oficial no YouTube)
-
-#Invencível #MarkGrayson #PrimeVideo #SérieDeAção #UniversoInvencível #MorsaDigital
-```
+111 na fila | legendas ok: 15 | a revisar: 3 | dias sem reel no calendário: 0
 
 ### 15/11 — Marvel’s Iron Man VR - Bastidores do Tony  | PS VR
 PlayStation Brasil · horizontal · pt · legenda: ok
@@ -52,19 +36,19 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 17/11 — Caça-Fantasmas | Bastidores Chris Hemsworth | 14 de julho nos cinema
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth como Ghostbuster; detalhe sem base: Ver o Thor vestindo o macacão e segurando o equipamento de captura; detalhe sem base: um ícone da Marvel assumindo o manto de caçador de fantasmas)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Ver o Thor segurando o equipamento de Ghostbusters foi um choque de realidade pra quem acompanhava as gravações.)
 
 ```
-Chris Hemsworth como Ghostbuster: top ou flop?
+Chris Hemsworth nos bastidores de Caça-Fantasmas: você lembra dessa fase?
 
-Ver o Thor vestindo o macacão e segurando o equipamento de captura é uma daquelas imagens que a gente nunca esperava.
-Ainda mais nos bastidores, dá pra sentir o peso de ver um ícone da Marvel assumindo o manto de caçador de fantasmas.
+Ver o Thor segurando o equipamento de Ghostbusters foi um choque de realidade pra quem acompanhava as gravações.
+A transição de um universo para o outro sempre gerou muita curiosidade nos making of.
 
-Comenta aí qual foi a primeira reação de vocês quando viram ele no set.
+Comenta aí: qual foi a sua primeira reação ao ver o Hemsworth nesse projeto?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#CaçaFantasmas #ChrisHemsworth #Ghostbusters #SonyPicturesBrasil #MorsaDigital
+#CaçaFantasmas #ChrisHemsworth #SonyPictures #Bastidores #MorsaDigital
 ```
 
 ### 18/11 — Ativando sua nostalgia em 3, 2, 1... 🥹 #Shrek2
@@ -116,10 +100,20 @@ Vídeo: HBO Brasil (canal oficial no YouTube)
 ```
 
 ### 21/11 — Walt nos Bastidores de Mary Poppins - Trailer Oficial
-Walt Disney Studios BR · horizontal · pt · legenda: ainda não gerada
+Walt Disney Studios BR · horizontal · pt · legenda: revisar (detalhe sem base: Ver o Walt Disney nos bastidores de Mary Poppins)
 
 ```
-(gerada na hora da publicação)
+Você lembra dessa clássica? Ou tá descobrindo agora?
+
+Ver o Walt Disney nos bastidores de Mary Poppins é uma viagem no tempo fascinante.
+É impossível não sentir o peso da magia que ele colocou em cada detalhe da produção.
+A simplicidade do processo contrasta com a grandiosidade do resultado final.
+
+Comenta aqui: qual é a sua memória mais forte sobre esse clássico?
+
+Vídeo: Walt Disney Studios BR (canal oficial no YouTube)
+
+#MaryPoppins #WaltDisney #BastidoresDeFilme #ClássicosDaDisney #MorsaDigital
 ```
 
 ### 22/11 — Wendel e Ursula dublando juntos em Naruto?
@@ -953,22 +947,7 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
 ## main — a partir das 13h
 
-75 na fila | legendas ok: 9 | a revisar: 2 | dias sem reel no calendário: 0
-
-### 14/11 — Seria essa a cena mais forte? | Naruto Shippuden
-Crunchyroll Brasil · horizontal · pt · legenda: ok
-
-```
-Shikamaru finalmente desabou e eu não aguentei.
-
-Aquele momento em que o peso da perda de Asuma fica insuportável e só as palavras do pai conseguem trazer algum alívio é devastador. É o tipo de cena que pega no peito e mostra a maturidade emocional do personagem.
-
-Vocês acham que esse é o ponto de virada emocional da série ou tinha algo ainda mais forte?
-
-Vídeo: Crunchyroll Brasil (canal oficial no YouTube)
-
-#NarutoShippuden #Shikamaru #Nara #Anime #Crunchyroll
-```
+74 na fila | legendas ok: 8 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 15/11 — Jumanji: Mundo Real | Novo Trailer | Dublado
 Sony Pictures Brasil · horizontal · pt · legenda: ok
