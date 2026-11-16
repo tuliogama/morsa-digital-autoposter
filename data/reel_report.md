@@ -1,8 +1,8 @@
-# Fila de reels @morsadigital — 15/11/2026 23:33 BRT
+# Fila de reels @morsadigital — 16/11/2026 01:36 BRT
 
 ## cenas — a partir das 11h
 
-110 na fila | legendas ok: 14 | a revisar: 3 | dias sem reel no calendário: 0
+110 na fila | legendas ok: 15 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 16/11 — Avatar: O Último Mestre do Ar recria a abertura clássica
 Netflix Brasil · vertical · pt · legenda: ok
@@ -20,19 +20,20 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 17/11 — Caça-Fantasmas | Bastidores Chris Hemsworth | 14 de julho nos cinema
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth como Caça-Fantasmas; detalhe sem base: Ver o Thors na pele de um caçador de monstros)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: O Chris Hemsworth como vilão do Caça-Fantasmas; detalhe sem base: Ver o Thor fora de Asgard e dentro do set de Caça-Fantasmas)
 
 ```
-Chris Hemsworth como Caça-Fantasmas: você achou que ia dar certo?
+O Chris Hemsworth como vilão do Caça-Fantasmas: você topa ou acha que estraga a vibe?
 
-É impressionante como a gente olha pra trás e lembra dessa fase de bastidores.
-Ver o Thors na pele de um caçador de monstros muda completamente a perspectiva do projeto.
+Ver o Thor fora de Asgard e dentro do set de Caça-Fantasmas muda completamente a percepção da cena.
+É aquele tipo de bastidor que mostra o quanto o personagem exige da atuação dele.
+Fica aquela curiosidade de como a imagem final ficou depois de tudo isso.
 
-Qual foi a primeira reação de vocês quando viram essa notícia?
+Comenta aí: qual foi a primeira coisa que você pensou ao ver ele naquele figurino?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#CacaFantasmas #ChrisHemsworth #SonyPictures #Bastidores #MorsaDigital
+#CaçaFantasmas #ChrisHemsworth #Ghostbusters #Bastidores #MorsaDigital
 ```
 
 ### 18/11 — Ativando sua nostalgia em 3, 2, 1... 🥹 #Shrek2
@@ -84,20 +85,19 @@ Vídeo: HBO Brasil (canal oficial no YouTube)
 ```
 
 ### 21/11 — Walt nos Bastidores de Mary Poppins - Trailer Oficial
-Walt Disney Studios BR · horizontal · pt · legenda: revisar (detalhe sem base: Ver o Walt Disney nos bastidores de Mary Poppins)
+Walt Disney Studios BR · horizontal · pt · legenda: ok
 
 ```
-Você lembra dessa clássica? Ou tá descobrindo agora?
+Você achava que sabia tudo sobre a Mary Poppins?
 
-Ver o Walt Disney nos bastidores de Mary Poppins é uma viagem no tempo fascinante.
-É impossível não sentir o peso da magia que ele colocou em cada detalhe da produção.
-A simplicidade do processo contrasta com a grandiosidade do resultado final.
+Ver o Walt nos bastidores é outra experiência.
+É aquele misto de nostalgia e admiração por quem fez aquela magia acontecer.
 
-Comenta aqui: qual é a sua memória mais forte sobre esse clássico?
+Comenta aí: qual foi a primeira vez que você viu a Mary Poppins?
 
 Vídeo: Walt Disney Studios BR (canal oficial no YouTube)
 
-#MaryPoppins #WaltDisney #BastidoresDeFilme #ClássicosDaDisney #MorsaDigital
+#MaryPoppins #WaltDisney #BastidoresDisney #MagiaDisney #MorsaDigital
 ```
 
 ### 22/11 — Wendel e Ursula dublando juntos em Naruto?
@@ -994,18 +994,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 20/11 — Duna: Parte Três l Trailer Final Dublado
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: dois anos após ele assumir o trono do Império)
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Denis Villeneuve fecha a trilogia quase duas décadas depois de Paul Atreides assumir o trono.; detalhe sem base: Ele não é mais o salvador, é um imperador implacável cercado por traições, aliados antigos e ameaças que nascem das sombras.)
 
 ```
-Duna: Parte Três chegou e o peso dessa conclusão final já bateu.
+Duna: Parte Três chegou e o peso dessa conclusão é absurdo.
 
-A trilogia de Denis Villeneuve encerra o arco de Paul Atreides dois anos após ele assumir o trono do Império. Agora, o imperador lida com as consequências de seu reinado, enfrentando antigos aliados, novas ameaças e a traição escondida em cada sombra.
+Denis Villeneuve fecha a trilogia quase duas décadas depois de Paul Atreides assumir o trono. Ele não é mais o salvador, é um imperador implacável cercado por traições, aliados antigos e ameaças que nascem das sombras.
 
-Você está no hype ou ainda na dúvida sobre o destino final de Paul?
+O filme promete consequências pesadas para um reinado marcado por visões de colapso. Você espera uma redenção ou um final trágico pra Paul?
 
 Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
-#DunaParteTres #DenisVilleneuve #TimotheeChalamet #Zendaya #Duna
+#DunaParteTres #DenisVilleneuve #TimotheeChalamet #Zendaya #Dune
 ```
 
 ### 21/11 — Superman l Trailer Teaser Oficial Dublado
