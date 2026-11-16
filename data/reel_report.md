@@ -1,24 +1,8 @@
-# Fila de reels @morsadigital — 15/11/2026 05:39 BRT
+# Fila de reels @morsadigital — 15/11/2026 23:33 BRT
 
 ## cenas — a partir das 11h
 
-111 na fila | legendas ok: 15 | a revisar: 3 | dias sem reel no calendário: 0
-
-### 15/11 — Marvel’s Iron Man VR - Bastidores do Tony  | PS VR
-PlayStation Brasil · horizontal · pt · legenda: ok
-
-```
-A Camouflaj acertou a mão ao criar o Tony Stark em VR?
-
-Ver quem por trás das telas e da tecnologia dá vida ao Homem de Ferro é outro nível.
-É a chance de entender como transformaram a experiência em algo imersivo e completo.
-
-Qual foi a sua reação ao ver esse making of?
-
-Vídeo: PlayStation Brasil (canal oficial no YouTube)
-
-#IronManVR #TonyStark #Marvel #Camouflaj #MorsaDigital
-```
+110 na fila | legendas ok: 14 | a revisar: 3 | dias sem reel no calendário: 0
 
 ### 16/11 — Avatar: O Último Mestre do Ar recria a abertura clássica
 Netflix Brasil · vertical · pt · legenda: ok
@@ -36,19 +20,19 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 17/11 — Caça-Fantasmas | Bastidores Chris Hemsworth | 14 de julho nos cinema
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth como fantasma?; detalhe sem base: Ver o Thor de capa e espada nos bastidores mudando completamente a vibe da Caça-Fantasmas; detalhe sem base: ele estava no filme)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth como Caça-Fantasmas; detalhe sem base: Ver o Thors na pele de um caçador de monstros)
 
 ```
-Chris Hemsworth como fantasma? Você achou que era só marketing?
+Chris Hemsworth como Caça-Fantasmas: você achou que ia dar certo?
 
-Ver o Thor de capa e espada nos bastidores mudando completamente a vibe da Caça-Fantasmas é algo que fica na memória.
-Aquele momento de dublagem ou ensaio mostra a dedicação que fez o personagem entrar pra cabeça de muita gente.
+É impressionante como a gente olha pra trás e lembra dessa fase de bastidores.
+Ver o Thors na pele de um caçador de monstros muda completamente a perspectiva do projeto.
 
-Comenta aí: qual foi a primeira reação de vocês quando souberam que ele estava no filme?
+Qual foi a primeira reação de vocês quando viram essa notícia?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#CaçaFantasmas #ChrisHemsworth #Thor #Bastidores #MorsaDigital
+#CacaFantasmas #ChrisHemsworth #SonyPictures #Bastidores #MorsaDigital
 ```
 
 ### 18/11 — Ativando sua nostalgia em 3, 2, 1... 🥹 #Shrek2
@@ -947,22 +931,7 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
 ## main — a partir das 13h
 
-75 na fila | legendas ok: 8 | a revisar: 3 | dias sem reel no calendário: 0
-
-### 15/11 — Jumanji: Mundo Real | Novo Trailer | Dublado
-Sony Pictures Brasil · horizontal · pt · legenda: ok
-
-```
-Jumanji: Mundo Real chegou e eu já tô com o coração acelerado, você tá preparado pra essa nova fase?
-
-A volta de Dwayne Johnson, Jack Black, Kevin Hart e Karen Gillan promete levar a confusão do jogo direto pra nossa rua. Com a direção de Jake Kasdan e a participação especial de Nick Jonas e Danny DeVito, a franquia que nasceu no livro de Chris Van Allsburg ganha um novo twist que divide a galera.
-
-Vai ser só mais uma comédia caótica ou essa vez eles realmente mudaram o jogo pra sempre?
-
-Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
-
-#JumanjiMundoReal #Jumanji #DwayneJohnson #JackBlack #KevinHart
-```
+74 na fila | legendas ok: 7 | a revisar: 3 | dias sem reel no calendário: 0
 
 ### 16/11 — Bully Trailer
 Rockstar Games · horizontal · en · legenda: ok
@@ -1025,18 +994,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 20/11 — Duna: Parte Três l Trailer Final Dublado
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: quase duas décadas após ele assumir o controle do Império; detalhe sem base: antigos aliados voltando à tona; detalhe sem base: traições marcando cada sombra do cenário)
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: dois anos após ele assumir o trono do Império)
 
 ```
-Duna: Parte Três chegou e o peso de saber que é o fim da trilogia bateu forte.
+Duna: Parte Três chegou e o peso dessa conclusão final já bateu.
 
-Denis Villeneuve fecha essa jornada épica levando Paul Atreides a um ponto de não retorno, quase duas décadas após ele assumir o controle do Império. O roteiro aponta para consequências pesadas do seu reinado, com antigos aliados voltando à tona e traições marcando cada sombra do cenário.
+A trilogia de Denis Villeneuve encerra o arco de Paul Atreides dois anos após ele assumir o trono do Império. Agora, o imperador lida com as consequências de seu reinado, enfrentando antigos aliados, novas ameaças e a traição escondida em cada sombra.
 
-Você já decidiu se vai chorar ou ficar com raiva quando essa história chegar ao seu desfecho?
+Você está no hype ou ainda na dúvida sobre o destino final de Paul?
 
 Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
-#DunaParte3 #Duna #DenisVilleneuve #WarnerBros #LegendaryPictures
+#DunaParteTres #DenisVilleneuve #TimotheeChalamet #Zendaya #Duna
 ```
 
 ### 21/11 — Superman l Trailer Teaser Oficial Dublado
