@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 16/11/2026 01:36 BRT
+# Fila de reels @morsadigital — 16/11/2026 03:33 BRT
 
 ## cenas — a partir das 11h
 
@@ -20,20 +20,19 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 17/11 — Caça-Fantasmas | Bastidores Chris Hemsworth | 14 de julho nos cinema
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: O Chris Hemsworth como vilão do Caça-Fantasmas; detalhe sem base: Ver o Thor fora de Asgard e dentro do set de Caça-Fantasmas)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth como Caça-Fantasmas; detalhe sem base: Ver o Thor saindo da armadura para entrar num traje de caça-fantasma nos bastidores)
 
 ```
-O Chris Hemsworth como vilão do Caça-Fantasmas: você topa ou acha que estraga a vibe?
+Chris Hemsworth como Caça-Fantasmas: você curtiu a ideia ou ficou com medo?
 
-Ver o Thor fora de Asgard e dentro do set de Caça-Fantasmas muda completamente a percepção da cena.
-É aquele tipo de bastidor que mostra o quanto o personagem exige da atuação dele.
-Fica aquela curiosidade de como a imagem final ficou depois de tudo isso.
+Ver o Thor saindo da armadura para entrar num traje de caça-fantasma nos bastidores é algo que só quem vive de pop cultura entende.
+É a prova de que ele se entrega de verdade a cada personagem que aceita interpretar.
 
-Comenta aí: qual foi a primeira coisa que você pensou ao ver ele naquele figurino?
+Comenta aí: qual foi a sua primeira reação quando soube dessa escolha?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#CaçaFantasmas #ChrisHemsworth #Ghostbusters #Bastidores #MorsaDigital
+#CaçaFantasmas #ChrisHemsworth #Thor #SonyPictures #MorsaDigital
 ```
 
 ### 18/11 — Ativando sua nostalgia em 3, 2, 1... 🥹 #Shrek2
@@ -994,18 +993,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 20/11 — Duna: Parte Três l Trailer Final Dublado
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Denis Villeneuve fecha a trilogia quase duas décadas depois de Paul Atreides assumir o trono.; detalhe sem base: Ele não é mais o salvador, é um imperador implacável cercado por traições, aliados antigos e ameaças que nascem das sombras.)
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: 17 de dezembro, somente nos cinemas; detalhe sem base: duas décadas após assumir o controle do Império; detalhe sem base: Paul Atreides agora é um imperador implacável)
 
 ```
-Duna: Parte Três chegou e o peso dessa conclusão é absurdo.
+Denis Villeneuve fechou a trilogia de Duna e o trailer final dublado acaba de cair.
 
-Denis Villeneuve fecha a trilogia quase duas décadas depois de Paul Atreides assumir o trono. Ele não é mais o salvador, é um imperador implacável cercado por traições, aliados antigos e ameaças que nascem das sombras.
+Paul Atreides agora é um imperador implacável, duas décadas após assumir o controle do Império. O peso desse reinado traz consequências pesadas, com antigos aliados retornando e traições rondando cada sombra. É o encerramento espetacular de uma das maiores sagas visuais do cinema recente.
 
-O filme promete consequências pesadas para um reinado marcado por visões de colapso. Você espera uma redenção ou um final trágico pra Paul?
+Você acha que Paul vai conseguir lidar com o colapso do próprio império ou a queda vai ser inevitável?
 
 Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
-#DunaParteTres #DenisVilleneuve #TimotheeChalamet #Zendaya #Dune
+#Duna #DunaParteTres #DenisVilleneuve #TimotheeChalamet #ReynoldsBourne
 ```
 
 ### 21/11 — Superman l Trailer Teaser Oficial Dublado
