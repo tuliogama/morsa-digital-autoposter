@@ -1763,7 +1763,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=88KNf0MtU14",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/88KNf0MtU14.mp4",
     "added_at": "2026-10-08T14:16:08.284459-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 82,
     "scheduled_for": "2026-11-16",
@@ -1773,7 +1773,9 @@
     "caption_style": "eu",
     "caption": "Eu ainda sinto o cheiro de tinta de caneta e desespero ao lembrar da primeira vez que vi isso. Qual foi a primeira travessura que você fez no Bullworth?\n\nO jogo que provou que não precisa de super-heróis ou mundos abertos gigantes para criar uma imersão absurda. Aqui, o vilão é o sistema, os professores são corruptos e a única regra é a sobrevivência social em uma escola preparatória que parece um pesadelo gótico moderno.\n\nVocê ainda tem o Jimmy Hopkins na sua lista de favoritos ou acha que ele era só mais um anti-herói dos anos 2000?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#Bully #RockstarGames #GTA #GTA6 #Nostalgia",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-16T15:10:40.961482-03:00",
+    "media_id": "18151123969563799"
   },
   {
     "video_id": "QdBZY2fkU-0",
