@@ -2498,11 +2498,11 @@
     "hook_text": null,
     "layout": "horizontal",
     "lang": "pt",
-    "caption": "Chris Hemsworth de Caça-Fantasmas: você esperava ver o Thor por aqui?\n\nVer o Hemsworth fora do universo Marvel nos bastidores é sempre um choque.\nÉ aquela curiosidade de fã que só vem quando a gente vê a troca de figurino.\nE a dublagem ou o comportamento dele no set te pegou de surpresa?\n\nComenta aí o que mais te impressionou nesse making of.\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#CaçaFantasmas #ChrisHemsworth #Thor #SonyPictures #MorsaDigital",
+    "caption": "Chris Hemsworth como Ghostbuster: você esperava esse crossover?\n\nVer o Thor de capa e botas nos bastidores da equipe de Caça-Fantasmas muda totalmente a perspectiva.\nÉ aquele tipo de revelação que faz a gente rever o filme inteiro procurando pistas que talvez a gente tenha ignorado na primeira vez.\n\nConta pra gente: qual foi a primeira vez que você viu o Hemsworth nessa produção?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#CacaFantasmas #ChrisHemsworth #Thor #SonyPictures #MorsaDigital",
     "caption_check": "revisar",
     "caption_problems": [
-      "detalhe sem base: Chris Hemsworth de Caça-Fantasmas: você esperava ver o Thor por aqui?",
-      "detalhe sem base: Ver o Hemsworth fora do universo Marvel nos bastidores é sempre um choque."
+      "detalhe sem base: Chris Hemsworth como Ghostbuster: você esperava esse crossover?",
+      "detalhe sem base: Ver o Thor de capa e botas nos bastidores da equipe de Caça-Fantasmas muda totalmente a perspectiva."
     ]
   },
   {
@@ -2566,7 +2566,13 @@
     "theme": "bastidores",
     "hook_text": null,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "A Bela e a Fera: você lembra da voz de Ariana Grande?\n\nVer a cantora e o John Legend nos bastidores dá uma dimensão nova da magia.\nÉ incrível como a adaptação em live-action conseguiu capturar a essência do clássico.\nRelembrar esses momentos de gravação faz a gente entender o cuidado por trás de cada detalhe.\n\nComenta aí: qual foi a primeira vez que você viu o filme e o que mais te marcou?\n\nVídeo: Walt Disney Studios BR (canal oficial no YouTube)\n\n#ABelaEFera #ArianaGrande #JohnLegend #DisneyLiveAction #MorsaDigital",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "detalhe sem base: A Bela e a Fera: você lembra da voz de Ariana Grande?",
+      "detalhe sem base: Ver a cantora e o John Legend nos bastidores dá uma dimensão nova da magia."
+    ]
   },
   {
     "video_id": "c33Uvn7Tgc4",

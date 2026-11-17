@@ -1,39 +1,23 @@
-# Fila de reels @morsadigital — 16/11/2026 05:41 BRT
+# Fila de reels @morsadigital — 16/11/2026 23:41 BRT
 
 ## cenas — a partir das 11h
 
-110 na fila | legendas ok: 15 | a revisar: 2 | dias sem reel no calendário: 0
-
-### 16/11 — Avatar: O Último Mestre do Ar recria a abertura clássica
-Netflix Brasil · vertical · pt · legenda: ok
-
-```
-Aang dominando a dobra de terra te fez relembrar a abertura clássica?
-
-Ver o universo de Avatar: O Último Mestre do Ar ganhar vida nessa recriação traz aquela nostalgia pura de quem cresceu com a animação. É impossível não conectar a energia dos personagens com os traços que marcaram nossa infância.
-
-Comenta aí qual cena da série mais te pegou pela nostalgia.
-
-Vídeo: Netflix Brasil (canal oficial no YouTube)
-
-#AvatarOUltimoMestreDoAr #Aang #NetflixBrasil #CulturaNerd #Nostalgia #MorsaDigital
-```
+109 na fila | legendas ok: 14 | a revisar: 3 | dias sem reel no calendário: 0
 
 ### 17/11 — Caça-Fantasmas | Bastidores Chris Hemsworth | 14 de julho nos cinema
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth de Caça-Fantasmas: você esperava ver o Thor por aqui?; detalhe sem base: Ver o Hemsworth fora do universo Marvel nos bastidores é sempre um choque.)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth como Ghostbuster: você esperava esse crossover?; detalhe sem base: Ver o Thor de capa e botas nos bastidores da equipe de Caça-Fantasmas muda totalmente a perspectiva.)
 
 ```
-Chris Hemsworth de Caça-Fantasmas: você esperava ver o Thor por aqui?
+Chris Hemsworth como Ghostbuster: você esperava esse crossover?
 
-Ver o Hemsworth fora do universo Marvel nos bastidores é sempre um choque.
-É aquela curiosidade de fã que só vem quando a gente vê a troca de figurino.
-E a dublagem ou o comportamento dele no set te pegou de surpresa?
+Ver o Thor de capa e botas nos bastidores da equipe de Caça-Fantasmas muda totalmente a perspectiva.
+É aquele tipo de revelação que faz a gente rever o filme inteiro procurando pistas que talvez a gente tenha ignorado na primeira vez.
 
-Comenta aí o que mais te impressionou nesse making of.
+Conta pra gente: qual foi a primeira vez que você viu o Hemsworth nessa produção?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#CaçaFantasmas #ChrisHemsworth #Thor #SonyPictures #MorsaDigital
+#CacaFantasmas #ChrisHemsworth #Thor #SonyPictures #MorsaDigital
 ```
 
 ### 18/11 — Ativando sua nostalgia em 3, 2, 1... 🥹 #Shrek2
@@ -116,10 +100,20 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 23/11 — A Bela e a Fera - Bastidores Ariana Grande e John Legend
-Walt Disney Studios BR · horizontal · pt · legenda: ainda não gerada
+Walt Disney Studios BR · horizontal · pt · legenda: revisar (detalhe sem base: A Bela e a Fera: você lembra da voz de Ariana Grande?; detalhe sem base: Ver a cantora e o John Legend nos bastidores dá uma dimensão nova da magia.)
 
 ```
-(gerada na hora da publicação)
+A Bela e a Fera: você lembra da voz de Ariana Grande?
+
+Ver a cantora e o John Legend nos bastidores dá uma dimensão nova da magia.
+É incrível como a adaptação em live-action conseguiu capturar a essência do clássico.
+Relembrar esses momentos de gravação faz a gente entender o cuidado por trás de cada detalhe.
+
+Comenta aí: qual foi a primeira vez que você viu o filme e o que mais te marcou?
+
+Vídeo: Walt Disney Studios BR (canal oficial no YouTube)
+
+#ABelaEFera #ArianaGrande #JohnLegend #DisneyLiveAction #MorsaDigital
 ```
 
 ### 24/11 — GOLAÇO! ⚽ | BLUE LOCK
@@ -931,22 +925,7 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
 ## main — a partir das 13h
 
-75 na fila | legendas ok: 7 | a revisar: 4 | dias sem reel no calendário: 0
-
-### 16/11 — Bully Trailer
-Rockstar Games · horizontal · en · legenda: ok
-
-```
-Eu ainda sinto o cheiro de tinta de caneta e desespero ao lembrar da primeira vez que vi isso. Qual foi a primeira travessura que você fez no Bullworth?
-
-O jogo que provou que não precisa de super-heróis ou mundos abertos gigantes para criar uma imersão absurda. Aqui, o vilão é o sistema, os professores são corruptos e a única regra é a sobrevivência social em uma escola preparatória que parece um pesadelo gótico moderno.
-
-Você ainda tem o Jimmy Hopkins na sua lista de favoritos ou acha que ele era só mais um anti-herói dos anos 2000?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
-
-#Bully #RockstarGames #GTA #GTA6 #Nostalgia
-```
+74 na fila | legendas ok: 7 | a revisar: 3 | dias sem reel no calendário: 0
 
 ### 17/11 — Grand Theft Auto VI Trailer 1
 Rockstar Games · horizontal · pt-legenda · legenda: ok
@@ -994,33 +973,33 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 20/11 — Duna: Parte Três l Trailer Final Dublado
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: revisar (hashtag genérica)
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: quase duas décadas depois de Paul Atreides assumir o controle do Império; detalhe sem base: um imperador implacável enfrentando as consequências de seu reinado quase duas décadas depois; detalhe sem base: traições e ameaças que surgem nas sombras)
 
 ```
-Duna: Parte Três fecha a trilogia de Denis Villeneuve e eu já tô com o coração batendo forte.
+Duna: Parte Três fechando essa trilogia com o peso que a gente esperava.
 
-Paul Atreides agora é imperador, mas a responsabilidade de governar o Império parece pesada demais para qualquer pessoa. A história avança quase duas décadas após os eventos anteriores, trazendo de volta aliados antigos e ameaças assustadoras. A traição está em cada sombra e as visões de colapso imperial rondam o protagonista.
+Denis Villeneuve levou a história de Paul Atreides para a conclusão, mostrando um imperador implacável enfrentando as consequências de seu reinado quase duas décadas depois. É o momento final dessa jornada épica, marcada por traições e ameaças que surgem nas sombras.
 
-Você acha que Paul vai conseguir lidar com o peso do trono ou o fim da sua linhagem será inevitável?
+Você sente que esse desfecho vai honrar a expectativa ou vai ser uma queda de braço com a própria mitologia?
 
 Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
-#DunaParteTres #DenisVilleneuve #TimotheeChalamet #JodieComer #Cinema
+#DunaParteTres #DenisVilleneuve #WarnerBros #TrailerDublado
 ```
 
 ### 21/11 — Duna: Parte Três l Trailer Final
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: O peso de ser o vilão da história tá pesado demais)
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ok
 
 ```
-Duna: Parte Três e eu não tô nem um pouco pronto pra essa conclusão.
+Duna: Parte Três chegou e o peso de fechar essa trilogia está pesado demais.
 
-Denis Villeneuve fechou a trilogia com Paul Atreides já como imperador, lidando com as consequências reais do seu reinado. São quase duas décadas depois da história anterior, e agora ele precisa enfrentar a traição e ameaças novas enquanto é assombrado por visões do colapso do império.
+Denis Villeneuve levou quase duas décadas de história de Paul Atreides até esse ponto, transformando o herói em um imperador implacável. A tensão de ver as consequências de seu reinado e a traição rondando cada sombra cria um clima denso que só o final da saga poderia entregar.
 
-O peso de ser o vilão da história tá pesado demais ou você sente que ele ainda tem redenção?
+Você sente que esse desfecho vai honrar a complexidade do personagem ou vai deixar aquela sensação de que faltou algo no caminho?
 
 Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
-#DunaParteTres #DenisVilleneuve #TimotheeChalamet #Zendaya #Dune
+#Duna #DunaParteTres #DenisVilleneuve #TimotheeChalamet #WarnerBros
 ```
 
 ### 22/11 — Superman l Trailer Teaser Oficial Dublado

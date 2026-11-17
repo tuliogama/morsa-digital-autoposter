@@ -2305,10 +2305,12 @@
     "layout": "horizontal",
     "lang": "pt",
     "caption_style": "padrao",
-    "caption": "Duna: Parte Três fecha a trilogia de Denis Villeneuve e eu já tô com o coração batendo forte.\n\nPaul Atreides agora é imperador, mas a responsabilidade de governar o Império parece pesada demais para qualquer pessoa. A história avança quase duas décadas após os eventos anteriores, trazendo de volta aliados antigos e ameaças assustadoras. A traição está em cada sombra e as visões de colapso imperial rondam o protagonista.\n\nVocê acha que Paul vai conseguir lidar com o peso do trono ou o fim da sua linhagem será inevitável?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#DunaParteTres #DenisVilleneuve #TimotheeChalamet #JodieComer #Cinema",
+    "caption": "Duna: Parte Três fechando essa trilogia com o peso que a gente esperava.\n\nDenis Villeneuve levou a história de Paul Atreides para a conclusão, mostrando um imperador implacável enfrentando as consequências de seu reinado quase duas décadas depois. É o momento final dessa jornada épica, marcada por traições e ameaças que surgem nas sombras.\n\nVocê sente que esse desfecho vai honrar a expectativa ou vai ser uma queda de braço com a própria mitologia?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#DunaParteTres #DenisVilleneuve #WarnerBros #TrailerDublado",
     "caption_check": "revisar",
     "caption_problems": [
-      "hashtag genérica"
+      "detalhe sem base: quase duas décadas depois de Paul Atreides assumir o controle do Império",
+      "detalhe sem base: um imperador implacável enfrentando as consequências de seu reinado quase duas décadas depois",
+      "detalhe sem base: traições e ameaças que surgem nas sombras"
     ]
   },
   {
@@ -2328,10 +2330,8 @@
     "layout": "horizontal",
     "lang": "pt",
     "caption_style": "padrao",
-    "caption": "Duna: Parte Três e eu não tô nem um pouco pronto pra essa conclusão.\n\nDenis Villeneuve fechou a trilogia com Paul Atreides já como imperador, lidando com as consequências reais do seu reinado. São quase duas décadas depois da história anterior, e agora ele precisa enfrentar a traição e ameaças novas enquanto é assombrado por visões do colapso do império.\n\nO peso de ser o vilão da história tá pesado demais ou você sente que ele ainda tem redenção?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#DunaParteTres #DenisVilleneuve #TimotheeChalamet #Zendaya #Dune",
-    "caption_check": "revisar",
-    "caption_problems": [
-      "detalhe sem base: O peso de ser o vilão da história tá pesado demais"
-    ]
+    "caption": "Duna: Parte Três chegou e o peso de fechar essa trilogia está pesado demais.\n\nDenis Villeneuve levou quase duas décadas de história de Paul Atreides até esse ponto, transformando o herói em um imperador implacável. A tensão de ver as consequências de seu reinado e a traição rondando cada sombra cria um clima denso que só o final da saga poderia entregar.\n\nVocê sente que esse desfecho vai honrar a complexidade do personagem ou vai deixar aquela sensação de que faltou algo no caminho?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#Duna #DunaParteTres #DenisVilleneuve #TimotheeChalamet #WarnerBros",
+    "caption_check": "ok",
+    "caption_problems": []
   }
 ]
