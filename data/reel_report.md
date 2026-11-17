@@ -1,23 +1,23 @@
-# Fila de reels @morsadigital — 17/11/2026 03:33 BRT
+# Fila de reels @morsadigital — 17/11/2026 05:32 BRT
 
 ## cenas — a partir das 11h
 
 109 na fila | legendas ok: 14 | a revisar: 3 | dias sem reel no calendário: 0
 
 ### 17/11 — Caça-Fantasmas | Bastidores Chris Hemsworth | 14 de julho nos cinema
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth de Caça-Fantasmas; detalhe sem base: Ver o Thor vestindo o macacão de agente; detalhe sem base: ele faria parte do elenco)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth como vilão em Caça-Fantasmas?; detalhe sem base: Ver o Thors de Thor ganhar vida no set)
 
 ```
-Chris Hemsworth de Caça-Fantasmas: você lembra disso?
+Chris Hemsworth como vilão em Caça-Fantasmas? Concorda com a escolha?
 
-Ver o Thor vestindo o macacão de agente é uma das coisas mais aleatórias e divertidas que a gente já viu nos bastidores.
-É tipo o universo cinematográfico dando as costas pra Marvel e entregando o heri pro time dos fantasmas.
+Relembre os bastidores desse personagem icônico e veja como ele foi construído.
+Ver o Thors de Thor ganhar vida no set é algo que divide opiniões até hoje.
 
-Comenta aí: qual foi sua reação quando soube que ele faria parte do elenco?
+Qual foi a sua primeira reação quando soube dessa participação?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#CaçaFantasmas #ChrisHemsworth #Thor #SonyPictures #MorsaDigital
+#CaçaFantasmas #ChrisHemsworth #SonyPictures #Bastidores #MorsaDigital
 ```
 
 ### 18/11 — Ativando sua nostalgia em 3, 2, 1... 🥹 #Shrek2
