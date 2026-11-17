@@ -1,23 +1,23 @@
-# Fila de reels @morsadigital — 16/11/2026 23:41 BRT
+# Fila de reels @morsadigital — 17/11/2026 01:33 BRT
 
 ## cenas — a partir das 11h
 
 109 na fila | legendas ok: 14 | a revisar: 3 | dias sem reel no calendário: 0
 
 ### 17/11 — Caça-Fantasmas | Bastidores Chris Hemsworth | 14 de julho nos cinema
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth como Ghostbuster: você esperava esse crossover?; detalhe sem base: Ver o Thor de capa e botas nos bastidores da equipe de Caça-Fantasmas muda totalmente a perspectiva.)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth como Caça-Fantasmas; detalhe sem base: ele assumiria o papel)
 
 ```
-Chris Hemsworth como Ghostbuster: você esperava esse crossover?
+Chris Hemsworth como Caça-Fantasmas: você defende a escolha ou acha que estragou a franquia?
 
-Ver o Thor de capa e botas nos bastidores da equipe de Caça-Fantasmas muda totalmente a perspectiva.
-É aquele tipo de revelação que faz a gente rever o filme inteiro procurando pistas que talvez a gente tenha ignorado na primeira vez.
+Ver os bastidores da gravação sempre muda a percepção sobre o personagem.
+É impossível não conectar o rosto dele com o Thor quando a gente vê o processo por trás das câmeras.
 
-Conta pra gente: qual foi a primeira vez que você viu o Hemsworth nessa produção?
+Qual foi a sua reação quando soube que ele assumiria o papel?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#CacaFantasmas #ChrisHemsworth #Thor #SonyPictures #MorsaDigital
+#CaçaFantasmas #ChrisHemsworth #SonyPictures #Bastidores #MorsaDigital
 ```
 
 ### 18/11 — Ativando sua nostalgia em 3, 2, 1... 🥹 #Shrek2
@@ -973,18 +973,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 20/11 — Duna: Parte Três l Trailer Final Dublado
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: quase duas décadas depois de Paul Atreides assumir o controle do Império; detalhe sem base: um imperador implacável enfrentando as consequências de seu reinado quase duas décadas depois; detalhe sem base: traições e ameaças que surgem nas sombras)
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Paul Atreides virou o vilão; detalhe sem base: imperador assombrado pelas consequências de seu reinado)
 
 ```
-Duna: Parte Três fechando essa trilogia com o peso que a gente esperava.
+Paul Atreides virou o vilão e eu ainda tô processando o peso disso.
 
-Denis Villeneuve levou a história de Paul Atreides para a conclusão, mostrando um imperador implacável enfrentando as consequências de seu reinado quase duas décadas depois. É o momento final dessa jornada épica, marcada por traições e ameaças que surgem nas sombras.
+Denis Villeneuve fecha a trilogia com uma premissa que muda tudo, mostrando um imperador assombrado pelas consequências de seu reinado. A ideia de antigos aliados voltando e traições em cada sombra eleva a tensão de um jeito que poucos filmes ousam fazer.
 
-Você sente que esse desfecho vai honrar a expectativa ou vai ser uma queda de braço com a própria mitologia?
+Você acha que vamos torcer por ele ou odiar cada minuto desse imperador implacável?
 
 Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
-#DunaParteTres #DenisVilleneuve #WarnerBros #TrailerDublado
+#DunaParteTres #Duna #DenisVilleneuve #TimotheeChalamet #WarnerBros
 ```
 
 ### 21/11 — Duna: Parte Três l Trailer Final
