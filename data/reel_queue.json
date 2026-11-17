@@ -1788,7 +1788,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=QdBZY2fkU-0",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/QdBZY2fkU-0.mp4",
     "added_at": "2026-10-08T14:22:01.666197-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 83,
     "scheduled_for": "2026-11-17",
@@ -1798,7 +1798,9 @@
     "caption_style": "padrao",
     "caption": "GTA VI Trailer 1: aquele arrepio de 2023 que ainda parece ontem\n\nRelembre o momento em que o hype atingiu o pico máximo. A trilha sonora, liderada por Tom Petty, definiu o tom melancólico e urbano que a comunidade brasileira está pedindo há anos. É a vibe que só o mundo de Los Santos consegue entregar.\n\nQual foi a primeira imagem que te fez sentir que o retorno da série principal valeria cada segundo de espera?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#GTA6 #GrandTheftAuto #RockstarGames #LosSantos #GTA",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-17T13:08:58.351377-03:00",
+    "media_id": "17916261513285893"
   },
   {
     "video_id": "VQRLujxTm3c",
