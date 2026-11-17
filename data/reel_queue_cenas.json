@@ -2491,7 +2491,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=ZTZf3ZZXm4E",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/ZTZf3ZZXm4E.mp4",
     "added_at": "2026-10-13T06:03:13.684359-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 15,
     "theme": "bastidores",
@@ -2503,7 +2503,9 @@
     "caption_problems": [
       "detalhe sem base: Chris Hemsworth como vilão em Caça-Fantasmas?",
       "detalhe sem base: Ver o Thors de Thor ganhar vida no set"
-    ]
+    ],
+    "posted_at": "2026-11-17T11:06:19.913980-03:00",
+    "media_id": "18132655108830691"
   },
   {
     "video_id": "0V9ua1K8zB0",
