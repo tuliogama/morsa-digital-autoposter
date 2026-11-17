@@ -1,23 +1,23 @@
-# Fila de reels @morsadigital — 17/11/2026 01:33 BRT
+# Fila de reels @morsadigital — 17/11/2026 03:33 BRT
 
 ## cenas — a partir das 11h
 
 109 na fila | legendas ok: 14 | a revisar: 3 | dias sem reel no calendário: 0
 
 ### 17/11 — Caça-Fantasmas | Bastidores Chris Hemsworth | 14 de julho nos cinema
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth como Caça-Fantasmas; detalhe sem base: ele assumiria o papel)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth de Caça-Fantasmas; detalhe sem base: Ver o Thor vestindo o macacão de agente; detalhe sem base: ele faria parte do elenco)
 
 ```
-Chris Hemsworth como Caça-Fantasmas: você defende a escolha ou acha que estragou a franquia?
+Chris Hemsworth de Caça-Fantasmas: você lembra disso?
 
-Ver os bastidores da gravação sempre muda a percepção sobre o personagem.
-É impossível não conectar o rosto dele com o Thor quando a gente vê o processo por trás das câmeras.
+Ver o Thor vestindo o macacão de agente é uma das coisas mais aleatórias e divertidas que a gente já viu nos bastidores.
+É tipo o universo cinematográfico dando as costas pra Marvel e entregando o heri pro time dos fantasmas.
 
-Qual foi a sua reação quando soube que ele assumiria o papel?
+Comenta aí: qual foi sua reação quando soube que ele faria parte do elenco?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#CaçaFantasmas #ChrisHemsworth #SonyPictures #Bastidores #MorsaDigital
+#CaçaFantasmas #ChrisHemsworth #Thor #SonyPictures #MorsaDigital
 ```
 
 ### 18/11 — Ativando sua nostalgia em 3, 2, 1... 🥹 #Shrek2
@@ -925,7 +925,7 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
 ## main — a partir das 13h
 
-74 na fila | legendas ok: 7 | a revisar: 3 | dias sem reel no calendário: 0
+74 na fila | legendas ok: 8 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 17/11 — Grand Theft Auto VI Trailer 1
 Rockstar Games · horizontal · pt-legenda · legenda: ok
@@ -973,18 +973,18 @@ Vídeo: Rockstar Games (canal oficial no YouTube)
 ```
 
 ### 20/11 — Duna: Parte Três l Trailer Final Dublado
-Warner Bros. Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Paul Atreides virou o vilão; detalhe sem base: imperador assombrado pelas consequências de seu reinado)
+Warner Bros. Pictures Brasil · horizontal · pt · legenda: ok
 
 ```
-Paul Atreides virou o vilão e eu ainda tô processando o peso disso.
+Duna: Parte Três chegou e o peso dessa conclusão tá batendo forte.
 
-Denis Villeneuve fecha a trilogia com uma premissa que muda tudo, mostrando um imperador assombrado pelas consequências de seu reinado. A ideia de antigos aliados voltando e traições em cada sombra eleva a tensão de um jeito que poucos filmes ousam fazer.
+Denis Villeneuve fecha a trilogia quase duas décadas após Paul assumir o império, mostrando um imperador implacável lidando com as consequências do próprio reinado. antiga aliados voltam e a traição ronda cada sombra enquanto ele enfrenta visões do colapso imperial.
 
-Você acha que vamos torcer por ele ou odiar cada minuto desse imperador implacável?
+O tom sombrio e a tensão política vão dividir a opinião da galera: vocês acham que essa conclusão entrega a justiça que Paul merecia ou o preço foi alto demais?
 
 Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
-#DunaParteTres #Duna #DenisVilleneuve #TimotheeChalamet #WarnerBros
+#DunaParteTres #DenisVilleneuve #TimotheeChalamet #Zendaya #Reynolds
 ```
 
 ### 21/11 — Duna: Parte Três l Trailer Final
