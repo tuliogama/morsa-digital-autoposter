@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 18/11/2026 03:32 BRT
+# Fila de reels @morsadigital — 18/11/2026 05:32 BRT
 
 ## cenas — a partir das 11h
 
@@ -84,18 +84,20 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 23/11 — A Bela e a Fera - Bastidores Ariana Grande e John Legend
-Walt Disney Studios BR · horizontal · pt · legenda: revisar (detalhe sem base: Ariana Grande cantando a Bela e a Fera te arrepiou?)
+Walt Disney Studios BR · horizontal · pt · legenda: revisar (1ª linha não é pergunta)
 
 ```
-Ariana Grande cantando a Bela e a Fera te arrepiou?
+Ariana Grande e John Legend nos bastidores da Bela e a Fera.
 
-Ver os bastidores da gravação mostra o cuidado que a produção teve para trazer o clássico da Disney ao live-action.
-É aquela sensação de nostalgia misturada com a tecnologia moderna que dá um peso especial à adaptação.
-Comenta aí qual foi a sua primeira reação ao ver esses cliques.
+Relembre como foi a gravação dessa dupla icônica.
+É sempre especial ver quem dá vida a essas vozes.
+O mistério e a emoção da história ganham outra camada com eles.
+
+Qual foi a sua primeira reação ao saber dessa parceria?
 
 Vídeo: Walt Disney Studios BR (canal oficial no YouTube)
 
-#ABelaEAfera #ArianaGrande #JohnLegend #Disney #MorsaDigital
+#ABelaEFera #ArianaGrande #JohnLegend #Disney #MorsaDigital
 ```
 
 ### 24/11 — GOLAÇO! ⚽ | BLUE LOCK
