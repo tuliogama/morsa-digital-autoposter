@@ -1,24 +1,8 @@
-# Fila de reels @morsadigital — 17/11/2026 05:32 BRT
+# Fila de reels @morsadigital — 17/11/2026 23:33 BRT
 
 ## cenas — a partir das 11h
 
-109 na fila | legendas ok: 14 | a revisar: 3 | dias sem reel no calendário: 0
-
-### 17/11 — Caça-Fantasmas | Bastidores Chris Hemsworth | 14 de julho nos cinema
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: Chris Hemsworth como vilão em Caça-Fantasmas?; detalhe sem base: Ver o Thors de Thor ganhar vida no set)
-
-```
-Chris Hemsworth como vilão em Caça-Fantasmas? Concorda com a escolha?
-
-Relembre os bastidores desse personagem icônico e veja como ele foi construído.
-Ver o Thors de Thor ganhar vida no set é algo que divide opiniões até hoje.
-
-Qual foi a sua primeira reação quando soube dessa participação?
-
-Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
-
-#CaçaFantasmas #ChrisHemsworth #SonyPictures #Bastidores #MorsaDigital
-```
+108 na fila | legendas ok: 14 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 18/11 — Ativando sua nostalgia em 3, 2, 1... 🥹 #Shrek2
 Prime Video Brasil · vertical · pt · legenda: ok
@@ -925,22 +909,7 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
 ## main — a partir das 13h
 
-74 na fila | legendas ok: 8 | a revisar: 2 | dias sem reel no calendário: 0
-
-### 17/11 — Grand Theft Auto VI Trailer 1
-Rockstar Games · horizontal · pt-legenda · legenda: ok
-
-```
-GTA VI Trailer 1: aquele arrepio de 2023 que ainda parece ontem
-
-Relembre o momento em que o hype atingiu o pico máximo. A trilha sonora, liderada por Tom Petty, definiu o tom melancólico e urbano que a comunidade brasileira está pedindo há anos. É a vibe que só o mundo de Los Santos consegue entregar.
-
-Qual foi a primeira imagem que te fez sentir que o retorno da série principal valeria cada segundo de espera?
-
-Vídeo: Rockstar Games (canal oficial no YouTube)
-
-#GTA6 #GrandTheftAuto #RockstarGames #LosSantos #GTA
-```
+73 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
 
 ### 18/11 — Suzane von Richthofen: O que o Tempo Não Apaga | Trailer oficial | Netflix Brasi
 Netflix Brasil · horizontal · pt · legenda: ok
@@ -1018,18 +987,18 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 ```
 
 ### 23/11 — Demon Slayer: Kimetsu no Yaiba Castelo Infinito | Trailer | Em breve nos cinemas
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (trata vídeo antigo como novidade)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: trilogia do Castelo Infinito)
 
 ```
-Demon Slayer: Kimetsu no Yaiba Castelo Infinito chegou aos cinemas e eu ainda não acredito que essa trilogia épica finalmente está completa. Qual foi a sua primeira reação ao ver essa animação em grande tela?
+Demon Slayer: Kimetsu no Yaiba Castelo Infinito voltou a circular por aí e eu fiquei com aquela sensação de nostalgia misturada com adrenalina. Qual foi a primeira vez que você sentiu esse arrepio ao ver Tanjiro em ação?
 
-A Crunchyroll trouxe essa experiência única para o público brasileiro, garantindo que a batalha contra os demônios tivesse o impacto visual e sonoro que a obra merece. É o tipo de evento que une a comunidade geek em torno de uma narrativa que marcou gerações.
+A trilogia do Castelo Infinito é um marco absoluto para o anime no Brasil, consolidando a produção animada como um fenômeno de público nos cinemas. Ver essa escala cinematográfica chegar às telonas mudou o jogo para o fandom nacional, provando que a comunidade brasileira tem sede de experiências imersivas de qualidade.
 
-Você já teve a chance de reviver essa jornada no cinema ou ainda está planejando sua ida?
+Qual cena específica dessa fase do anime ainda te deixa sem ar quando você pensa nela?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#DemonSlayer #KimetsuNoYaiba #CasteloInfinito #Anime #Crunchyroll
+#DemonSlayer #KimetsuNoYaiba #CasteloInfinito #Anime #MorsaDigital
 ```
 
 ### 24/11 — Remake da trilogia God of War - Teaser de anúncio | PS5
