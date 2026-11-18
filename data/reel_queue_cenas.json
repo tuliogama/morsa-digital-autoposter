@@ -719,14 +719,16 @@
     "youtube_url": "https://www.youtube.com/watch?v=5ULbTJ2LnB4",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/5ULbTJ2LnB4.mp4",
     "added_at": "2026-10-07T00:22:18.027733-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 27,
     "layout": "vertical",
     "lang": "pt",
     "caption": "Shrek 2: essa cena te tira do sério ou é pura nostalgia?\n\nQuem cresceu com o ogro mais amado dos cinemas sabe que esse filme foi um divisor de águas.\nTem algo no jeito dele de brigar com o mundo (e de se render ao amor) que nunca envelhece.\nÉ aquele tipo de momento que a gente guarda no coração pra sempre.\n\nComenta aí: qual a sua cena favorita da trilogia?\n\nVídeo: Prime Video Brasil (canal oficial no YouTube)\n\n#Shrek #Shrek2 #Ogro #FilmesDeAnimação #Nostalgia #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-18T11:42:25.421107-03:00",
+    "media_id": "18124572551515266"
   },
   {
     "video_id": "NSZcddMvjZY",
