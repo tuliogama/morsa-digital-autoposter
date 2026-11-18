@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 18/11/2026 01:33 BRT
+# Fila de reels @morsadigital — 18/11/2026 03:32 BRT
 
 ## cenas — a partir das 11h
 
@@ -84,19 +84,18 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 23/11 — A Bela e a Fera - Bastidores Ariana Grande e John Legend
-Walt Disney Studios BR · horizontal · pt · legenda: revisar (detalhe sem base: Quem mais ficou encantado com a química de Ariana Grande e John Legend?; detalhe sem base: 16 de março nos cinemas.)
+Walt Disney Studios BR · horizontal · pt · legenda: revisar (detalhe sem base: Ariana Grande cantando a Bela e a Fera te arrepiou?)
 
 ```
-Quem mais ficou encantado com a química de Ariana Grande e John Legend?
+Ariana Grande cantando a Bela e a Fera te arrepiou?
 
-Ver os bastidores da adaptação live-action de A Bela e a Fera mostra o cuidado para trazer vida a essa história amada.
-É sempre especial ver quem por trás das vozes e atuações faz esse mundo mágico acontecer.
-
-Comenta aí qual foi a sua reação ao assistir o filme.
+Ver os bastidores da gravação mostra o cuidado que a produção teve para trazer o clássico da Disney ao live-action.
+É aquela sensação de nostalgia misturada com a tecnologia moderna que dá um peso especial à adaptação.
+Comenta aí qual foi a sua primeira reação ao ver esses cliques.
 
 Vídeo: Walt Disney Studios BR (canal oficial no YouTube)
 
-#ABelaEFera #ArianaGrande #JohnLegend #DisneyLiveAction #MorsaDigital
+#ABelaEAfera #ArianaGrande #JohnLegend #Disney #MorsaDigital
 ```
 
 ### 24/11 — GOLAÇO! ⚽ | BLUE LOCK
@@ -908,7 +907,7 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 
 ## main — a partir das 13h
 
-73 na fila | legendas ok: 7 | a revisar: 2 | dias sem reel no calendário: 0
+73 na fila | legendas ok: 8 | a revisar: 1 | dias sem reel no calendário: 0
 
 ### 18/11 — Suzane von Richthofen: O que o Tempo Não Apaga | Trailer oficial | Netflix Brasi
 Netflix Brasil · horizontal · pt · legenda: ok
@@ -986,18 +985,18 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 ```
 
 ### 23/11 — Demon Slayer: Kimetsu no Yaiba Castelo Infinito | Trailer | Em breve nos cinemas
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: encontramos o Muzan)
+Sony Pictures Brasil · horizontal · pt · legenda: ok
 
 ```
-Demon Slayer: Kimetsu no Yaiba Castelo Infinito está nos cinemas e eu ainda não acredito que finalmente encontramos o Muzan. Qual foi a sua primeira reação ao ver esse trailer?
+Eu ainda sinto o peso da espada na mão só de lembrar dessa fase, e você?
 
-Essa adaptação para o cinema com a Ufotable elevou o padrão da animação no Brasil, trazendo aquele nível de produção que a gente só via nos grandes estúdios de Hollywood. É a prova definitiva de que o anime brasileiro está maduro e pronto para o grande ecrã, sem precisar de legenda.
+O Castelo Infinito é aquele capítulo que separa os meros espectadores dos verdadeiros devotos da franquia. A animação do Ufotable elevou a barra de uma forma que pareceu impossível na época, transformando cada combate em uma obra de arte visual.
 
-Agora que já vivemos essa experiência no cinema, qual momento do Castelo Infinito continua te dando arrepios ou te fez chorar?
+Qual foi a cena que mais te deixou sem ar quando você assistiu pela primeira vez?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
-#DemonSlayer #KimetsuNoYaiba #CasteloInfinito #Anime #MorsaDigital
+#DemonSlayer #KimetsuNoYaiba #CasteloInfinito #Ufotable #Animes
 ```
 
 ### 24/11 — Remake da trilogia God of War - Teaser de anúncio | PS5
