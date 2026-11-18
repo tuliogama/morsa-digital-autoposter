@@ -2278,7 +2278,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=5fqDgm4II34",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/5fqDgm4II34.mp4",
     "added_at": "2026-11-12T23:47:23.291008-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "fresh",
     "hook_text": null,
     "layout": "horizontal",
@@ -2286,7 +2286,9 @@
     "caption_style": "padrao",
     "caption": "Suzane von Richthofen finalmente abriu a boca e a reação é de choque misturado com curiosidade mórbida.\n\nO caso que dominou as manchetes brasileiras por décadas ganha uma perspectiva inédita, com a própria envolvida relatando os fatos e as consequências que moldaram sua vida. É um mergulho direto na mente por trás de um dos crimes mais comentados do país.\n\nEsse tipo de íntima confissão divide opiniões: gera empatia ou apenas reforça a noção de frieza? Qual parte da entrevista te deixou mais impactado?\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#SuzaneVonRichthofen #OQueOTempoNaoApaga #NetflixBrasil #TrueCrime #CasoSuzane",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-18T13:14:45.336802-03:00",
+    "media_id": "18437863720197484"
   },
   {
     "video_id": "iwNb50uScFM",
