@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 17/11/2026 23:33 BRT
+# Fila de reels @morsadigital — 18/11/2026 01:33 BRT
 
 ## cenas — a partir das 11h
 
@@ -84,16 +84,15 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 23/11 — A Bela e a Fera - Bastidores Ariana Grande e John Legend
-Walt Disney Studios BR · horizontal · pt · legenda: revisar (detalhe sem base: A Bela e a Fera: você lembra da voz de Ariana Grande?; detalhe sem base: Ver a cantora e o John Legend nos bastidores dá uma dimensão nova da magia.)
+Walt Disney Studios BR · horizontal · pt · legenda: revisar (detalhe sem base: Quem mais ficou encantado com a química de Ariana Grande e John Legend?; detalhe sem base: 16 de março nos cinemas.)
 
 ```
-A Bela e a Fera: você lembra da voz de Ariana Grande?
+Quem mais ficou encantado com a química de Ariana Grande e John Legend?
 
-Ver a cantora e o John Legend nos bastidores dá uma dimensão nova da magia.
-É incrível como a adaptação em live-action conseguiu capturar a essência do clássico.
-Relembrar esses momentos de gravação faz a gente entender o cuidado por trás de cada detalhe.
+Ver os bastidores da adaptação live-action de A Bela e a Fera mostra o cuidado para trazer vida a essa história amada.
+É sempre especial ver quem por trás das vozes e atuações faz esse mundo mágico acontecer.
 
-Comenta aí: qual foi a primeira vez que você viu o filme e o que mais te marcou?
+Comenta aí qual foi a sua reação ao assistir o filme.
 
 Vídeo: Walt Disney Studios BR (canal oficial no YouTube)
 
@@ -987,14 +986,14 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 ```
 
 ### 23/11 — Demon Slayer: Kimetsu no Yaiba Castelo Infinito | Trailer | Em breve nos cinemas
-Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: trilogia do Castelo Infinito)
+Sony Pictures Brasil · horizontal · pt · legenda: revisar (detalhe sem base: encontramos o Muzan)
 
 ```
-Demon Slayer: Kimetsu no Yaiba Castelo Infinito voltou a circular por aí e eu fiquei com aquela sensação de nostalgia misturada com adrenalina. Qual foi a primeira vez que você sentiu esse arrepio ao ver Tanjiro em ação?
+Demon Slayer: Kimetsu no Yaiba Castelo Infinito está nos cinemas e eu ainda não acredito que finalmente encontramos o Muzan. Qual foi a sua primeira reação ao ver esse trailer?
 
-A trilogia do Castelo Infinito é um marco absoluto para o anime no Brasil, consolidando a produção animada como um fenômeno de público nos cinemas. Ver essa escala cinematográfica chegar às telonas mudou o jogo para o fandom nacional, provando que a comunidade brasileira tem sede de experiências imersivas de qualidade.
+Essa adaptação para o cinema com a Ufotable elevou o padrão da animação no Brasil, trazendo aquele nível de produção que a gente só via nos grandes estúdios de Hollywood. É a prova definitiva de que o anime brasileiro está maduro e pronto para o grande ecrã, sem precisar de legenda.
 
-Qual cena específica dessa fase do anime ainda te deixa sem ar quando você pensa nela?
+Agora que já vivemos essa experiência no cinema, qual momento do Castelo Infinito continua te dando arrepios ou te fez chorar?
 
 Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 
