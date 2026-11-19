@@ -1811,7 +1811,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=VQRLujxTm3c",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/VQRLujxTm3c.mp4",
     "added_at": "2026-10-08T14:27:10.004458-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "acervo",
     "plan_order": 84,
     "scheduled_for": "2026-11-19",
@@ -1821,7 +1821,9 @@
     "caption_style": "padrao",
     "caption": "Tô revisando o GTA VI Trailer 2 e ainda não acredito no nível de detalhe que a Rockstar colocou nessa.\n\nO retorno a Vice City é surreal, mas a história de Jason e Lucia me pegou de surpresa. A dinâmica entre os dois e a tensão de estarem no meio de uma conspiração criminosa na Flórida fictícia, Leonida, dá um peso novo a todo esse universo.\n\nVocês acham que a química entre Jason e Lucia vai ser o coração do jogo ou o foco vai ser mais na ação pura?\n\nVídeo: Rockstar Games (canal oficial no YouTube)\n\n#GTA6 #GrandTheftAuto #ViceCity #RockstarGames #GTA",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-19T14:21:20.071311-03:00",
+    "media_id": "18080013848444512"
   },
   {
     "video_id": "xwaY3Epk4RE",
