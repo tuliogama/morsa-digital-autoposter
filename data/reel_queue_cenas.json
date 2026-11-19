@@ -850,7 +850,8 @@
     "lang": "pt",
     "caption": "Que tal relembrar o Core de Homem-Aranha: Um Novo Dia?\n\nRevisitar a essência do Aranha sempre traz aquela nostalgia de herói clássico.\nA vibe desse personagem é o que mantém a franquia viva na memória.\n\nQual cena do filme ficou gravada na sua cabeça?\n\nVídeo: Sony Pictures Brasil (canal oficial no YouTube)\n\n#HomemAranha #SpiderMan #UmNovoDia #Core #SonyPictures #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "skip": "chamada 'hoje nos cinemas' vencida"
   },
   {
     "video_id": "dITdeaQ1wAA",
@@ -1077,7 +1078,8 @@
     "kind": "cena",
     "plan_order": 51,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "skip": "chamada 'hoje nos cinemas' de 2017"
   },
   {
     "video_id": "5hEds2WX5-c",
@@ -1298,7 +1300,8 @@
     "kind": "cena",
     "plan_order": 64,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "skip": "chamada 'hoje nos cinemas' de 2018"
   },
   {
     "video_id": "3pKY5L80Ufo",
@@ -1451,7 +1454,8 @@
     "kind": "cena",
     "plan_order": 65,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "skip": "chamada 'hoje nos cinemas' vencida"
   },
   {
     "video_id": "her4kWUWVJY",
@@ -1468,7 +1472,8 @@
     "kind": "cena",
     "plan_order": 74,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "skip": "chamada de estreia de 2024"
   },
   {
     "video_id": "EHJN40Fn4yQ",
@@ -1502,7 +1507,8 @@
     "kind": "cena",
     "plan_order": 77,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "skip": "sexualização de ator"
   },
   {
     "video_id": "z9DLpcXYCNI",
@@ -1519,7 +1525,8 @@
     "kind": "cena",
     "plan_order": 78,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "skip": "chamada 'chega em 2026' vencida"
   },
   {
     "video_id": "k9Vs64O9Chg",
@@ -1791,7 +1798,8 @@
     "kind": "cena",
     "plan_order": 85,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "skip": "duplo sentido sexual"
   },
   {
     "video_id": "c17VR20Hi3o",
@@ -2920,7 +2928,8 @@
     "theme": "bastidores",
     "hook_text": null,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "skip": "tragédia real (Bateau Mouche)"
   },
   {
     "video_id": "BUqqwH16XNA",
@@ -2958,7 +2967,8 @@
     "theme": "bastidores",
     "hook_text": null,
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "skip": "crime real (Ângela Diniz)"
   },
   {
     "video_id": "HMPWyymWFKc",

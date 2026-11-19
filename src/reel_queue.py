@@ -131,6 +131,11 @@ _UNWANTED_RE = re.compile(r"#shorts|ao vivo|live|podcast|entrevista|bastidores|m
                           r"avaliações da imprensa", re.IGNORECASE)
 MIN_VIEWS_GENERIC = 100_000  # fora das franquias fortes, só entra o que já provou interesse
 _STRONG_CATS = {"dc", "marvel", "starwars", "anime_big", "gta", "game_big"}
+# Trailer horizontal só fica com o horário das 13h se for destas franquias. Em 90 reels
+# (06/10 a 18/11/2026) os trailers tiveram mediana de 165 views e, em novembro, nenhum
+# passou de 150; os Shorts verticais em português, mediana de 228 e todos os picos
+# (6,5 mil, 2,9 mil, 2,1 mil). Fora destas, o horário vai para um Short.
+TRAILER_CATS = {"dc", "marvel", "starwars", "gta"}
 
 
 # ── Estado da fila ──────────────────────────────────────────────────────────
@@ -147,7 +152,12 @@ def save_queue(queue: list[dict]):
 
 
 def pending(queue: list[dict]) -> list[dict]:
-    return [q for q in queue if not q.get("posted")]
+    # `skip` fica na fila (com o motivo) para o premap não baixar o vídeo de novo
+    return [q for q in queue if not q.get("posted") and not q.get("skip")]
+
+
+def _is_short(q: dict) -> bool:
+    return q.get("kind") == "cena" and q.get("layout") == "vertical"
 
 
 # ── Mac: abastecer ──────────────────────────────────────────────────────────
@@ -436,6 +446,12 @@ def _add_item(queue: list[dict], video_id: str, meta: dict, **extra) -> dict:
         raise ValueError("chamada de bilheteria/estreia, não é cena")
     if is_talk_show(meta):
         raise ValueError("programa de apresentador (Disney Talks e afins), não é cena nem trailer")
+    # O filtro da legenda não via o vídeo em si: em 18/11/2026 saiu o trailer do
+    # documentário da Suzane von Richthofen (crime real).
+    from editorial_guard import check
+    ok, why = check(meta["title"], meta.get("description", ""))
+    if not ok:
+        raise ValueError(f"fora da linha editorial: {why}")
     # Português primeiro: canal brasileiro (dublado ou legendado na origem) ou
     # legenda oficial em PT queimada no vídeo. Sem nenhum dos dois, não entra.
     # Exceção: Rockstar, cujos trailers não têm versão em português.
@@ -472,7 +488,7 @@ def _add_item(queue: list[dict], video_id: str, meta: dict, **extra) -> dict:
 def fill() -> int:
     """Lançamentos novos dos canais oficiais (mantém FRESH_TARGET em espera)."""
     queue = load_queue()
-    fresh = [q for q in pending(queue) if _is_fresh(q)]
+    fresh = [q for q in pending(queue) if _is_fresh(q) and q.get("category") in TRAILER_CATS]
     per_channel = {}
     for q in fresh:
         per_channel[q["channel_id"]] = per_channel.get(q["channel_id"], 0) + 1
@@ -485,7 +501,7 @@ def fill() -> int:
     for c in find_candidates(queue):
         if added >= missing:
             break
-        if per_channel.get(c["channel_id"], 0) >= MAX_PER_CHANNEL:
+        if per_channel.get(c["channel_id"], 0) >= MAX_PER_CHANNEL or c["category"] not in TRAILER_CATS:
             continue
         seconds = _duration(c["video_id"])
         if seconds == 0:
@@ -656,7 +672,9 @@ def premap() -> int:
             logger.warning(f"YouTube bloqueou o IP — parando por hoje ({e})")
             break
         except ValueError as e:
-            if any(k in str(e) for k in ("bilheteria", "fora da lista oficial", "sem versão em português", "programa de apresentador")):
+            if any(k in str(e) for k in ("bilheteria", "fora da lista oficial", "sem versão em português",
+                                         "programa de apresentador", "fora da linha editorial:")) \
+                    and "indisponível" not in str(e):
                 rejected[p["video_id"]] = str(e)[:80]
                 rejected_path.write_text(json.dumps(rejected, indent=1, ensure_ascii=False), encoding="utf-8")
             logger.warning(f"[{n}/{len(batch)}] FALHOU {p['video_id']}: {str(e)[:150]}")
@@ -705,7 +723,7 @@ def is_due() -> tuple[bool, str]:
 
 
 def _pick_next(queue: list[dict], today=None) -> dict | None:
-    """Fixo do dia → lançamento novo → acervo na ordem do plano."""
+    """Fixo do dia → trailer novo de franquia forte → Short vertical → acervo."""
     today = today or datetime.now(BRT).date()
     todo = pending(queue)
 
@@ -715,13 +733,18 @@ def _pick_next(queue: list[dict], today=None) -> dict | None:
     pinned = [q for q in todo if q.get("scheduled_for") and 0 <= days_late(q) <= PIN_GRACE_DAYS]
     if pinned:
         return min(pinned, key=days_late)
-    fresh = [q for q in todo if _is_fresh(q)]
+    fresh = [q for q in todo if _is_fresh(q) and q.get("category") in TRAILER_CATS]
     if fresh:
         posted = sorted((q for q in queue if q.get("posted")), key=lambda q: q.get("posted_at", ""))
         last_cat = posted[-1]["category"] if posted else None
         return next((q for q in fresh if q["category"] != last_cat), fresh[0])
-    acervo = sorted((q for q in todo if not q.get("scheduled_for")),
+    acervo = sorted((q for q in todo if not q.get("scheduled_for") and not _is_fresh(q)),
                     key=lambda q: q.get("plan_order", 0))
+    # Horizontal (trailer de acervo, featurette de bastidores) só quando acabar o vertical:
+    # em 16 reels horizontais de cena, nenhum passou de 500 views.
+    shorts = [q for q in acervo if _is_short(q)]
+    if shorts:
+        acervo = shorts
     # Bastidores dia sim, dia não: entram com força sem virar a única coisa do fluxo
     back = [q for q in acervo if q.get("theme") == "bastidores"]
     rest = [q for q in acervo if q.get("theme") != "bastidores"]
@@ -802,7 +825,8 @@ class CaptionUnavailable(RuntimeError):
 def _caption(item: dict) -> str:
     from content_generator import REEL_TRAILER_SYSTEM, _call_groq, _strip_ai_tells, _cap_hashtags
     from editorial import _with_credit
-    system = REEL_TRAILER_SYSTEM if STREAM == "main" else HOOK_SYSTEM
+    trailer = STREAM == "main" and item.get("kind") != "cena"
+    system = REEL_TRAILER_SYSTEM if trailer else HOOK_SYSTEM
     user_msg = (
         f"Escreva a legenda para o Reel: {item['title']}\n\n"
         f"{_age_note(item)}{_THEME_NOTES.get(item.get('theme', ''), '')}\n"
@@ -817,7 +841,7 @@ def _caption(item: dict) -> str:
     )
     # Teste (desde 11/10/2026): metade dos trailers abre com reação em primeira pessoa,
     # como os reels de cena que lideraram a semana. A revisão noturna compara os grupos.
-    if STREAM == "main":
+    if trailer:
         item["caption_style"] = "eu" if sum(map(ord, item["video_id"])) % 2 == 0 else "padrao"
         if item["caption_style"] == "eu":
             user_msg += ("\nNESTA legenda a linha 1 é em primeira pessoa (\"eu\"): a sua reação de fã "
@@ -868,7 +892,7 @@ def lint_caption(item: dict, caption: str) -> list[str]:
         problems.append(f"tamanho {len(caption)}")
     if lines and not lines[0][0].isalnum() and lines[0][0] not in '"“¿':
         problems.append("começa com emoji ou símbolo")
-    if STREAM != "main" and lines and "?" not in lines[0]:
+    if (STREAM != "main" or item.get("kind") == "cena") and lines and "?" not in lines[0]:
         problems.append("1ª linha não é pergunta")
     if _age_note(item) and _NEWS_WORDS_RE.search(caption):
         problems.append("trata vídeo antigo como novidade")

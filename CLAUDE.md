@@ -477,6 +477,25 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   intervalo entre reels, legenda nossa (fatos = descrição oficial; vídeo com +60
   dias é relembrança) e crédito do canal. `premap` baixa o que faltar dos planos.
   Para acrescentar reels: pôr o ID no plano e rodar `premap` no Mac.
+- **Vertical primeiro nos dois horários (19/11/2026, pedido do Tulio: "voltar a ter views e
+  relevância").** Em 90 reels de 06/10 a 18/11: Short vertical em PT, mediana 228 views e
+  todos os picos (6,5 mil The Last of Us, 2,9 mil Shrek, 2,1 mil Halloween); featurette de
+  bastidores horizontal, 175 e nenhum acima de 500; trailer, 165, e em novembro nenhum
+  passou de 150 (nem lançamento). Não seguidores caíram de 69% para 27% do alcance.
+  Regras em `_pick_next`: fixo do dia → trailer novo só de `TRAILER_CATS` (DC, Marvel,
+  Star Wars, GTA; `fill` só busca esses) → Short vertical (`_is_short`) → horizontal só
+  se acabar o vertical. A fila das 13h recebeu 68 Shorts que estavam parados na fila do
+  TikTok (vídeos pausados lá); no TikTok ficaram com `skip`. Item com `skip` fica na fila
+  só para o premap não rebaixar. Legenda de Short no fluxo main usa `HOOK_SYSTEM`
+  (pergunta na 1ª linha), decidido pelo `kind == "cena"`, não pelo fluxo.
+- **Linha editorial também na escolha do vídeo (19/11/2026):** saiu às 13h de 18/11 o
+  trailer do documentário da Suzane von Richthofen; o filtro só olhava a legenda.
+  `_add_item` agora passa título + descrição pelo `editorial_guard.check`. Ficaram de fora
+  da fila: Hazbin Hotel/Helluva Boss (palavrão, personagem sexualizado), bastidores de
+  Ângela Diniz e Bateau Mouche, chamadas "hoje nos cinemas" vencidas.
+- **Reel com alcance 1** (Shrek 2, Prime Video, 18/11/2026): sem aviso de direito autoral,
+  apto a impulsionar, mas zero distribuição. Hipótese: o Instagram achou o mesmo vídeo no
+  perfil oficial e mostrou o original. Se repetir com o mesmo canal, rever o canal.
 - `editorial.run_reel` e `data/trailer_backlog.json` são o fluxo antigo, sem uso.
 
 ---
