@@ -1,4 +1,4 @@
-# Fila de reels @morsadigital — 19/11/2026 01:33 BRT
+# Fila de reels @morsadigital — 19/11/2026 03:32 BRT
 
 ## cenas — a partir das 11h
 
@@ -67,20 +67,19 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 ```
 
 ### 23/11 — A Bela e a Fera - Bastidores Ariana Grande e John Legend
-Walt Disney Studios BR · horizontal · pt · legenda: revisar (detalhe sem base: Ariana Grande e John Legend juntos nos bastidores; detalhe sem base: Ver quem dá voz aos personagens favoritos sempre é um momento mágico.)
+Walt Disney Studios BR · horizontal · pt · legenda: revisar (detalhe sem base: Você lembra do clipe de "I'll Be There" com Ariana Grande e John Legend?; detalhe sem base: Nos bastidores da adaptação live-action de A Bela e a Fera, a energia da gravação da música era outro nível.)
 
 ```
-Ariana Grande e John Legend juntos nos bastidores: você aprovou?
+Você lembra do clipe de "I'll Be There" com Ariana Grande e John Legend?
 
-Ver quem dá voz aos personagens favoritos sempre é um momento mágico.
-É a prova de que o amor pela história vai muito além da tela.
-Essa dupla tem tudo para ser inesquecível.
+Nos bastidores da adaptação live-action de A Bela e a Fera, a energia da gravação da música era outro nível.
+Ver quem faz a magia acontecer por trás das câmeras sempre dá um gostinho a mais.
 
-Comenta aí qual foi a sua reação ao saber dessa parceria.
+Qual foi a sua reação quando ouviu essa faixa pela primeira vez?
 
 Vídeo: Walt Disney Studios BR (canal oficial no YouTube)
 
-#ABelaEFera #ArianaGrande #JohnLegend #Disney #MorsaDigital
+#ABelaEFera #ArianaGrande #JohnLegend #DisneyBrasil #MorsaDigital
 ```
 
 ### 24/11 — GOLAÇO! ⚽ | BLUE LOCK
