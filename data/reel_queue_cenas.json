@@ -741,14 +741,16 @@
     "youtube_url": "https://www.youtube.com/watch?v=NSZcddMvjZY",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/NSZcddMvjZY.mp4",
     "added_at": "2026-10-07T01:31:31.348576-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 28,
     "layout": "vertical",
     "lang": "pt",
     "caption": "Qual Dracarys mais te deixou com o coração apertado?\n\nEssa cena de A Casa do Dragão pega diferente. Não é só o fogo que impressiona, é o peso da perda que fica na memória de quem acompanha a saga dos Targaryens.\n\nConta pra gente qual foi o momento que mais te emociona.\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#ACasaDoDragao #HouseOfTheDragon #Targaryen #Dracarys #HBO #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-20T13:23:10.383942-03:00",
+    "media_id": "17897729943617112"
   },
   {
     "video_id": "ObaDxelIGO4",
