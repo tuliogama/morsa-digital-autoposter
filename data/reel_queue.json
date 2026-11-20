@@ -2366,12 +2366,14 @@
     "youtube_url": "https://www.youtube.com/watch?v=nYJo9Tk5cq4",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/nYJo9Tk5cq4.mp4",
     "added_at": "2026-11-19T11:45:29.848003-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "layout": "vertical",
     "lang": "pt",
     "plan_order": -1000,
-    "from_stream": "tiktok"
+    "from_stream": "tiktok",
+    "posted_at": "2026-11-20T15:44:13.999505-03:00",
+    "media_id": "18277595308306402"
   },
   {
     "video_id": "y4gM5gOJEQI",
