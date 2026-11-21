@@ -2867,13 +2867,15 @@
     "youtube_url": "https://www.youtube.com/watch?v=o8UBDlFQt78",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/o8UBDlFQt78.mp4",
     "added_at": "2026-10-15T12:30:44.314599-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 34,
     "theme": "bastidores",
     "hook_text": null,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "posted_at": "2026-11-21T11:04:43.650553-03:00",
+    "media_id": "18140522485712575"
   },
   {
     "video_id": "yxbs_sPG-S0",
