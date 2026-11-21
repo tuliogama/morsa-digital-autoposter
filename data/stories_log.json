@@ -1928,35 +1928,35 @@
   "story_id": "18111643886225600",
   "at": "2026-11-20T18:18:40-03:00",
   "insights": {
-   "reach": 32,
-   "views": 34,
+   "reach": 36,
+   "views": 40,
    "replies": 0,
    "shares": 0,
    "total_interactions": 0,
    "follows": 0,
    "profile_visits": 0,
-   "tap_exit": 3,
-   "tap_forward": 23
+   "tap_forward": 27,
+   "tap_exit": 3
   },
-  "insights_at": "2026-11-21T12:56:27-03:00"
+  "insights_at": "2026-11-21T13:35:41-03:00"
  },
  {
   "media_id": "18339888562262875",
   "story_id": "18004207277842609",
   "at": "2026-11-21T10:12:58-03:00",
   "insights": {
-   "reach": 19,
-   "views": 21,
+   "reach": 25,
+   "views": 27,
    "replies": 0,
    "shares": 0,
    "total_interactions": 0,
    "follows": 0,
    "profile_visits": 0,
-   "tap_forward": 17,
-   "swipe_forward": 1,
+   "tap_forward": 22,
+   "swipe_forward": 2,
    "tap_exit": 2
   },
-  "insights_at": "2026-11-21T12:56:27-03:00"
+  "insights_at": "2026-11-21T13:35:41-03:00"
  },
  {
   "media_id": "18140522485712575",
