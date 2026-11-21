@@ -1893,17 +1893,17 @@
   "at": "2026-11-20T08:53:01-03:00",
   "insights": {
    "reach": 25,
-   "views": 31,
+   "views": 32,
    "replies": 0,
    "shares": 0,
    "total_interactions": 0,
    "follows": 0,
    "profile_visits": 0,
-   "tap_exit": 2,
+   "swipe_forward": 4,
    "tap_forward": 19,
-   "swipe_forward": 3
+   "tap_exit": 2
   },
-  "insights_at": "2026-11-20T21:50:06-03:00"
+  "insights_at": "2026-11-20T21:52:07-03:00"
  },
  {
   "media_id": "17897729943617112",
@@ -1921,7 +1921,7 @@
    "tap_forward": 14,
    "swipe_forward": 2
   },
-  "insights_at": "2026-11-20T21:50:06-03:00"
+  "insights_at": "2026-11-20T21:52:07-03:00"
  },
  {
   "media_id": "18277595308306402",
@@ -1938,6 +1938,6 @@
    "tap_forward": 6,
    "tap_exit": 2
   },
-  "insights_at": "2026-11-20T21:50:06-03:00"
+  "insights_at": "2026-11-20T21:52:07-03:00"
  }
 ]
