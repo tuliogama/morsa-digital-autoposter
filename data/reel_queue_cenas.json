@@ -763,14 +763,16 @@
     "youtube_url": "https://www.youtube.com/watch?v=ObaDxelIGO4",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/ObaDxelIGO4.mp4",
     "added_at": "2026-10-07T01:33:25.127355-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 29,
     "layout": "vertical",
     "lang": "pt",
     "caption": "Wendel e Ursula juntos na dublagem de Naruto, você lembrava dessa coincidência?\n\nÉ o tipo de detalhe que só quem acompanha de perto a dublagem brasileira nota. A ligação de família no meio da obra chama a atenção de qualquer fã.\n\nConta pra gente: qual foi a primeira vez que você percebeu isso?\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#Naruto #Wendel #Ursula #Dublagem #Animes #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-22T11:10:08.339556-03:00",
+    "media_id": "18113718776229199"
   },
   {
     "video_id": "Zn_CR8vKGkQ",
