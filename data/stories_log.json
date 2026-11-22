@@ -1982,35 +1982,40 @@
   "story_id": "18125537869944597",
   "at": "2026-11-21T18:20:39-03:00",
   "insights": {
-   "reach": 46,
-   "views": 49,
+   "reach": 50,
+   "views": 53,
    "replies": 0,
    "shares": 0,
    "total_interactions": 0,
    "follows": 0,
    "profile_visits": 0,
-   "tap_exit": 4,
-   "tap_forward": 36,
-   "swipe_forward": 3,
-   "tap_back": 1
+   "tap_back": 1,
+   "swipe_forward": 4,
+   "tap_forward": 39,
+   "tap_exit": 4
   },
-  "insights_at": "2026-11-22T12:19:58-03:00"
+  "insights_at": "2026-11-22T13:01:41-03:00"
  },
  {
   "media_id": "18119346542325770",
   "story_id": "17925299766451115",
   "at": "2026-11-22T10:14:52-03:00",
   "insights": {
-   "reach": 13,
-   "views": 15,
+   "reach": 16,
+   "views": 18,
    "replies": 0,
    "shares": 0,
    "total_interactions": 0,
    "follows": 0,
    "profile_visits": 0,
-   "tap_forward": 13,
-   "swipe_forward": 1
+   "tap_forward": 15,
+   "swipe_forward": 2
   },
-  "insights_at": "2026-11-22T12:19:58-03:00"
+  "insights_at": "2026-11-22T13:01:41-03:00"
+ },
+ {
+  "media_id": "18113718776229199",
+  "story_id": "17937317517147823",
+  "at": "2026-11-22T13:00:46-03:00"
  }
 ]
