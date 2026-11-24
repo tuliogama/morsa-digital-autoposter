@@ -744,7 +744,7 @@ def _pick_next(queue: list[dict], today=None, branded_only: bool = False) -> dic
     today = today or datetime.now(BRT).date()
     todo = pending(queue)
     if branded_only and STREAM == "cenas" and _in_quarantine(today):
-        todo = [q for q in todo if q.get("ig_hook")]
+        todo = [q for q in todo if q.get("ig_hook") or q.get("kind") == "proprio"]
 
     def days_late(q):
         return (today - datetime.strptime(q["scheduled_for"], "%Y-%m-%d").date()).days
@@ -903,7 +903,8 @@ def lint_caption(item: dict, caption: str) -> list[str]:
     from content_generator import has_template_echo
     if has_template_echo(caption):
         problems.append("contém o molde do prompt")
-    if f"Vídeo: {item['channel']}" not in caption:
+    # vídeo gravado pelo Túlio (kind "proprio") é original: não leva crédito de canal
+    if item.get("kind") != "proprio" and f"Vídeo: {item['channel']}" not in caption:
         problems.append("sem crédito do canal")
     if "—" in caption or "–" in caption:
         problems.append("tem travessão")
