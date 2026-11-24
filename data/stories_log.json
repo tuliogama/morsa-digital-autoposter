@@ -2057,54 +2057,55 @@
   "story_id": "18020219867988256",
   "at": "2026-11-23T08:08:52-03:00",
   "insights": {
-   "reach": 43,
-   "views": 54,
+   "reach": 50,
+   "views": 62,
    "replies": 0,
    "shares": 0,
    "total_interactions": 0,
    "follows": 0,
    "profile_visits": 0,
    "tap_back": 1,
-   "swipe_forward": 5,
-   "tap_forward": 35,
+   "swipe_forward": 7,
+   "tap_forward": 42,
    "tap_exit": 9
   },
-  "insights_at": "2026-11-23T19:45:05-03:00"
+  "insights_at": "2026-11-23T21:02:24-03:00"
  },
  {
   "media_id": "18128535254286626",
   "story_id": "17991466935089262",
   "at": "2026-11-23T12:41:30-03:00",
   "insights": {
-   "reach": 34,
-   "views": 44,
+   "reach": 42,
+   "views": 52,
    "replies": 0,
    "shares": 0,
    "total_interactions": 0,
    "follows": 0,
    "profile_visits": 1,
-   "tap_exit": 7,
-   "tap_forward": 28,
-   "swipe_forward": 2
+   "swipe_forward": 4,
+   "tap_forward": 35,
+   "tap_exit": 7
   },
-  "insights_at": "2026-11-23T19:45:05-03:00"
+  "insights_at": "2026-11-23T21:02:24-03:00"
  },
  {
   "media_id": "18131845420836498",
   "story_id": "18110538722217145",
   "at": "2026-11-23T18:23:03-03:00",
   "insights": {
-   "reach": 9,
-   "views": 14,
+   "reach": 20,
+   "views": 28,
    "replies": 0,
    "shares": 0,
    "total_interactions": 0,
    "follows": 0,
    "profile_visits": 0,
+   "tap_back": 1,
+   "tap_forward": 19,
    "swipe_forward": 1,
-   "tap_forward": 10,
-   "tap_back": 1
+   "tap_exit": 2
   },
-  "insights_at": "2026-11-23T19:45:05-03:00"
+  "insights_at": "2026-11-23T21:02:24-03:00"
  }
 ]
