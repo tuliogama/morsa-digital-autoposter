@@ -72,7 +72,9 @@
     "posted": false,
     "kind": "fresh",
     "scheduled_for": "2026-12-23",
-    "theme": "natal"
+    "theme": "natal",
+    "layout": "horizontal",
+    "reprocessed": "179s em 24/11/2026"
   },
   {
     "video_id": "0fmcmV3SQWU",
@@ -1842,7 +1844,8 @@
     "scheduled_for": "2026-12-12",
     "theme": "vingadores",
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "reprocessed": "179s em 24/11/2026"
   },
   {
     "video_id": "3p1d_6_ocEE",
@@ -1861,7 +1864,8 @@
     "scheduled_for": "2026-12-13",
     "theme": "vingadores",
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "reprocessed": "179s em 24/11/2026"
   },
   {
     "video_id": "3BXq73F2_z4",
@@ -1880,7 +1884,8 @@
     "scheduled_for": "2026-12-14",
     "theme": "vingadores",
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "reprocessed": "179s em 24/11/2026"
   },
   {
     "video_id": "spJoZReeIeQ",
@@ -1899,7 +1904,8 @@
     "scheduled_for": "2026-12-15",
     "theme": "vingadores",
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "reprocessed": "179s em 24/11/2026"
   },
   {
     "video_id": "GMtQhGC38yI",
@@ -1937,7 +1943,8 @@
     "scheduled_for": "2026-12-20",
     "theme": "natal",
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "reprocessed": "179s em 24/11/2026"
   },
   {
     "video_id": "FNBKG2ku9N4",
@@ -1956,7 +1963,8 @@
     "scheduled_for": "2026-12-21",
     "theme": "natal",
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "reprocessed": "179s em 24/11/2026"
   },
   {
     "video_id": "rsXfe4nX6tw",
@@ -1975,7 +1983,8 @@
     "scheduled_for": "2026-12-22",
     "theme": "natal",
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "reprocessed": "179s em 24/11/2026"
   },
   {
     "video_id": "C-Wi9qu--0k",
@@ -1994,7 +2003,8 @@
     "scheduled_for": "2026-12-24",
     "theme": "natal",
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "reprocessed": "179s em 24/11/2026"
   },
   {
     "video_id": "tRuG0f3bPEQ",
@@ -2013,7 +2023,8 @@
     "scheduled_for": "2026-12-25",
     "theme": "natal",
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "reprocessed": "179s em 24/11/2026"
   },
   {
     "video_id": "6HsfXtgcAE4",
@@ -2032,7 +2043,8 @@
     "scheduled_for": "2026-12-31",
     "theme": "ano_novo",
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "reprocessed": "179s em 24/11/2026"
   },
   {
     "video_id": "bwt2-nyEP0A",
@@ -2051,7 +2063,8 @@
     "scheduled_for": "2027-01-01",
     "theme": "ano_novo",
     "layout": "horizontal",
-    "lang": "pt"
+    "lang": "pt",
+    "reprocessed": "179s em 24/11/2026"
   },
   {
     "video_id": "8hZ6qxECOVU",
@@ -2301,17 +2314,20 @@
     "description": "Não tenha medo do fim. Assista agora ao Trailer Final Dublado de Duna: Parte Três - 17 de dezembro, somente nos cinemas. Compre já o seu ingresso!\n\nA Warner Bros. Pictures e a Legendary Pictures apresentam Duna: Parte Três, que leva a trilogia épica do cineasta indicado ao Oscar, Denis Villeneuve, a uma conclusão espetacular e emocionante.\n\nDuna: Parte Três se passa quase duas décadas depois de Paul Atreides assumir o controle do Império. Agora um imperador implacável, Paul deve enfrentar as consequências de seu reinado à medida que antigos aliados retornam, novas ameaças aterrorizantes surgem e a traição está à espreita em cada sombra. Assombrado por visões do colapso imperial e do reaparec",
     "published": "2026-10-27T16:00:31+00:00",
     "youtube_url": "https://www.youtube.com/watch?v=iwNb50uScFM",
-    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/iwNb50uScFM.mp4",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-media/duna_parte_tres_trailer_final_dublado.mp4",
     "added_at": "2026-11-15T05:36:09.550711-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "fresh",
     "hook_text": null,
     "layout": "horizontal",
     "lang": "pt",
     "caption_style": "padrao",
-    "caption": "Duna: Parte Três chegou e o peso dessa conclusão tá batendo forte.\n\nDenis Villeneuve fecha a trilogia quase duas décadas após Paul assumir o império, mostrando um imperador implacável lidando com as consequências do próprio reinado. antiga aliados voltam e a traição ronda cada sombra enquanto ele enfrenta visões do colapso imperial.\n\nO tom sombrio e a tensão política vão dividir a opinião da galera: vocês acham que essa conclusão entrega a justiça que Paul merecia ou o preço foi alto demais?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#DunaParteTres #DenisVilleneuve #TimotheeChalamet #Zendaya #Reynolds",
+    "caption": "Duna: Parte Três fecha a trilogia de Denis Villeneuve, e o trailer final dublado mostra Paul Atreides como um imperador implacável.\n\nA história se passa quase duas décadas depois de Paul assumir o Império, com antigos aliados voltando, ameaças novas e traição em cada sombra. No trailer aparecem Timothée Chalamet, Zendaya, Florence Pugh e Jason Momoa, e o roteiro é de Villeneuve com Brian K. Vaughan. Estreia nos cinemas brasileiros em 17 de dezembro, um dia depois de Vingadores: Doutor Destino.\n\nVai ver os dois na mesma semana ou vai escolher um primeiro?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#DunaParteTres #Duna #PaulAtreides #DenisVilleneuve #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-24T16:25:47.812474-03:00",
+    "media_id": "18501021565105534",
+    "manual": "pedido do Tulio, 24/11/2026"
   },
   {
     "video_id": "vRq6txB8Ifo",
@@ -2332,7 +2348,8 @@
     "caption_style": "padrao",
     "caption": "Duna: Parte Três chegou e o peso de fechar essa trilogia está pesado demais.\n\nDenis Villeneuve levou quase duas décadas de história de Paul Atreides até esse ponto, transformando o herói em um imperador implacável. A tensão de ver as consequências de seu reinado e a traição rondando cada sombra cria um clima denso que só o final da saga poderia entregar.\n\nVocê sente que esse desfecho vai honrar a complexidade do personagem ou vai deixar aquela sensação de que faltou algo no caminho?\n\nVídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)\n\n#Duna #DunaParteTres #DenisVilleneuve #TimotheeChalamet #WarnerBros",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "skip": "versão legendada do trailer de Duna já publicado dublado"
   },
   {
     "video_id": "VuWRiyzm92Q",
