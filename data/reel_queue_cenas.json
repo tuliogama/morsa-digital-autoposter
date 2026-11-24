@@ -805,7 +805,7 @@
     "description": "Estes títulos estão disponíveis na HBO Max.",
     "published": "2025-10-08",
     "youtube_url": "https://www.youtube.com/watch?v=Wrak64LazLI",
-    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/Wrak64LazLI.mp4",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/Wrak64LazLI_ig.mp4",
     "added_at": "2026-10-07T01:42:28.062912-03:00",
     "posted": false,
     "kind": "cena",
@@ -817,7 +817,9 @@
     "caption_problems": [
       "detalhe sem base: Ver Joffrey apanhando é daquelas cenas que ficam gravadas na memória."
     ],
-    "ig_hook": "Você lembra dessa cena ou tá descobrindo agora?"
+    "asset_url_orig": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/Wrak64LazLI.mp4",
+    "hook_override": "O Joffrey mereceu esse tapa?",
+    "ig_hook": "O Joffrey mereceu esse tapa?"
   },
   {
     "video_id": "vcs4yuOWrcs",
@@ -828,7 +830,7 @@
     "description": "",
     "published": "2026-09-05",
     "youtube_url": "https://www.youtube.com/watch?v=vcs4yuOWrcs",
-    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/vcs4yuOWrcs.mp4",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/vcs4yuOWrcs_ig.mp4",
     "added_at": "2026-10-07T01:43:56.740334-03:00",
     "posted": false,
     "kind": "cena",
@@ -838,7 +840,9 @@
     "caption": "Qual teorista já viu o Batman Cruzado Encapuzado?\n\nA tensão desse título já faz o coração acelerar.\nÉ aquele mistério que a gente não quer resolver tão cedo.\nA dúvida fica maior quando a gente não sabe o que esperar.\n\nConta pra gente qual sua teoria é...\n\nVídeo: Prime Video Brasil (canal oficial no YouTube)\n\n#Batman #CruzadoEncapuzado #DC #PrimeVideoBrasil #MorsaDigital",
     "caption_check": "ok",
     "caption_problems": [],
-    "ig_hook": "Qual teorista já viu o Batman Cruzado Encapuzado?"
+    "asset_url_orig": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/vcs4yuOWrcs.mp4",
+    "hook_override": "Já viu o Batman: Cruzado Encapuzado?",
+    "ig_hook": "Já viu o Batman: Cruzado Encapuzado?"
   },
   {
     "video_id": "iO4uKziFlUI",
@@ -870,7 +874,7 @@
     "description": "Inscreva-se no canal do YouTube: https://bit.ly/35FaAo8 \n\nSobre o #PrimeVideo: Assine Prime Video para assistir a filmes e séries populares, incluindo Amazon Originals premiados. Além de um catálogo cheio de títulos, membros Prime têm acesso a benefícios, como frete GRÁTIS e rápido em milhares de produtos na Amazon.com.br, músicas sem anúncios na Amazon Music, Prime Gaming na Twitch e e-books e revistas no Prime Reading. Tudo na mesma assinatura, por apenas R$ 14,90/mês. Teste Grátis por 30 dias. \n\nSiga nossas redes sociais: \n\nInstagram: https://www.instagram.com/primevideobr/ \n\nFacebook: https://www.facebook.com/PrimeVideoBR/ \n\nTwitter: https://twitter.com/PrimeVideoBR \n\nTikTok: https://www",
     "published": "2026-07-24",
     "youtube_url": "https://www.youtube.com/watch?v=dITdeaQ1wAA",
-    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/dITdeaQ1wAA.mp4",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/dITdeaQ1wAA_ig.mp4",
     "added_at": "2026-10-07T01:48:19.456359-03:00",
     "posted": false,
     "kind": "cena",
@@ -880,7 +884,9 @@
     "caption": "Qual frase da Fiona você mais usa na vida?\n\nEssa cena de Shrek e Fiona sempre vai gerar discussão.\nÉ o tipo de momento que grava na memória de qualquer fã da série.\nA química entre os dois faz o resto da história funcionar.\n\nComenta aí qual parte dessa fala é a tua favorita.\n\nVídeo: Prime Video Brasil (canal oficial no YouTube)\n\n#Shrek #Fiona #Burro #ShrekEm3D #MorsaDigital",
     "caption_check": "ok",
     "caption_problems": [],
-    "ig_hook": "Qual frase da Fiona você mais usa na vida?"
+    "asset_url_orig": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/dITdeaQ1wAA.mp4",
+    "hook_override": "Qual fala do Shrek você sabe de cor?",
+    "ig_hook": "Qual fala do Shrek você sabe de cor?"
   },
   {
     "video_id": "THg5Ck4fOjI",
@@ -891,7 +897,7 @@
     "description": "Game of Thrones está disponível na HBO Max.",
     "published": "2025-11-17",
     "youtube_url": "https://www.youtube.com/watch?v=THg5Ck4fOjI",
-    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/THg5Ck4fOjI.mp4",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/THg5Ck4fOjI_ig.mp4",
     "added_at": "2026-10-07T02:56:27.981698-03:00",
     "posted": false,
     "kind": "cena",
@@ -901,7 +907,9 @@
     "caption": "Você lembra desse momento do Casamento Vermelho?\n\nFoi uma das cenas mais tensas e chocantes da série.\nA tensão era insuportável e as consequências mudaram tudo.\nNunca mais olhamos para Winterfell da mesma forma.\n\nQual é a sua opinião sobre esse episódio até hoje?\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#GameOfThrones #GoT #CasamentoVermelho #Winterfell #HBO #MorsaDigital",
     "caption_check": "ok",
     "caption_problems": [],
-    "ig_hook": "Você lembra desse momento do Casamento Vermelho?"
+    "asset_url_orig": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/THg5Ck4fOjI.mp4",
+    "hook_override": "Você lembra do Casamento Vermelho?",
+    "ig_hook": "Você lembra do Casamento Vermelho?"
   },
   {
     "video_id": "zL_DdeLeYTc",
@@ -912,13 +920,15 @@
     "description": "Parece roteiro de anime, mas é uma história real da dublagem. 🎙️\nÚrsula Bezerra conta como foi sua trajetória dando voz ao Naruto, como foi gravar cenas ao lado do próprio irmão e os desafios por trás das câmeras.\n\nAssista na Netflix: https://www.netflix.com\n\nInscreva-se: https://bit.ly/31ynwtw\n\nSobre a Netflix:\nA Netflix é um dos principais serviços de entretenimento do mundo com um vasto catálogo de séries, filmes, jogos e eventos ao vivo disponíveis em diversos idiomas. Nossos assinantes podem assistir, pausar e voltar a um título quantas vezes quiserem, onde quer que estejam, e alterar o plano a qualquer momento.\n\nFOI O NARUTO QUE DEU A FORÇA QUE ELA PRECISAVA\nhttps://www.youtube.com/@Ne",
     "published": "2026-07-23",
     "youtube_url": "https://www.youtube.com/watch?v=zL_DdeLeYTc",
-    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/zL_DdeLeYTc.mp4",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/zL_DdeLeYTc_ig.mp4",
     "added_at": "2026-10-07T02:59:40.025046-03:00",
     "posted": false,
     "kind": "cena",
     "plan_order": 39,
     "layout": "vertical",
     "lang": "pt",
+    "asset_url_orig": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/zL_DdeLeYTc.mp4",
+    "hook_override": "Naruto deu a força que ela precisava?",
     "ig_hook": "Naruto deu a força que ela precisava?"
   },
   {
@@ -2994,7 +3004,7 @@
     "description": "O vira-lata Amendoim entregou carisma e muito profissionalismo nos bastidores interpretando o doguinho Caramelo! 🐶\n\nAssista na Netflix: https://www.netflix.com/title/81702623\n\nInscreva-se: https://bit.ly/31ynwtw\n\nSobre a Netflix:\nA Netflix é um dos principais serviços de entretenimento do mundo. São mais de 300 milhões de assinaturas pagas em mais de 190 países com acesso a séries, filmes e jogos de diversos gêneros e idiomas. Assinantes podem assistir, pausar e voltar a assistir a um título quantas vezes quiserem em qualquer lugar e alterar o plano a qualquer momento.\n\nCenas fofas nos bastidores de Caramelo\nhttps://www.youtube.com/@NetflixBrasil\n\nAo receber um diagnóstico grave, um chef em ",
     "published": "2025-10-24",
     "youtube_url": "https://www.youtube.com/watch?v=HMPWyymWFKc",
-    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/HMPWyymWFKc.mp4",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/HMPWyymWFKc_ig.mp4",
     "added_at": "2026-10-18T10:49:04.638533-03:00",
     "posted": false,
     "kind": "cena",
@@ -3003,9 +3013,11 @@
     "hook_text": null,
     "layout": "vertical",
     "lang": "pt",
-    "ig_hook": "Caramelo: qual cena te fez sorrir?",
     "caption": "Caramelo nos bastidores: qual cena te fez sorrir?\n\nO vira-lata Amendoim, que interpreta o Caramelo, mostrou carisma e muito profissionalismo durante as gravações.\nÉ o tipo de bastidor que faz a gente gostar ainda mais do filme.\n\nComenta aí qual foi a sua cena favorita.\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#Caramelo #Amendoim #NetflixBrasil #Bastidores #MorsaDigital",
     "caption_check": "ok",
-    "aprovacao": "aguardando ok do Tulio (24/11)"
+    "aprovacao": "aguardando ok do Tulio (24/11)",
+    "asset_url_orig": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/HMPWyymWFKc.mp4",
+    "hook_override": "Caramelo nos bastidores: qual cena te fez sorrir?",
+    "ig_hook": "Caramelo nos bastidores: qual cena te fez sorrir?"
   }
 ]

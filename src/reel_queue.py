@@ -1114,8 +1114,9 @@ def publish() -> int:
         save_queue(queue)
 
     # Instagram e TikTok já copiaram o vídeo; o arquivo na Release não é mais necessário
-    subprocess.run(["gh", "release", "delete-asset", RELEASE_TAG, f"{item['video_id']}.mp4",
-                    "--repo", REPO, "--yes"], capture_output=True)
+    for name in {f"{item['video_id']}.mp4", os.path.basename(item["asset_url"])}:
+        subprocess.run(["gh", "release", "delete-asset", RELEASE_TAG, name,
+                        "--repo", REPO, "--yes"], capture_output=True)
     logger.info(f"Reel publicado: {result['id']} | restam {len(pending(queue))} na fila")
     return 0
 
@@ -1229,12 +1230,47 @@ def sync_tiktok() -> dict:
     return stats
 
 
+HOOK_SECONDS = 3.2   # a pergunta só abre o vídeo: tela inteira com texto o tempo todo o Tulio achou feio (24/11/2026)
+
+
+def _render_hook_ig(text: str, workdir: str) -> str:
+    """Pergunta de abertura no padrão das capas do feed: Montserrat Black, tarja escura, barra laranja."""
+    from PIL import Image, ImageDraw, ImageFont
+    font = ImageFont.truetype(str(ROOT / "assets" / "fonts" / "Montserrat.ttf"), 58)
+    try:
+        font.set_variation_by_name("Black")
+    except Exception:
+        pass
+    rows, row = [], ""
+    for w in text.split():
+        if font.getlength(f"{row} {w}".strip()) > 860 and row:
+            rows.append(row)
+            row = w
+        else:
+            row = f"{row} {w}".strip()
+    rows.append(row)
+    lh = 72
+    width = int(max(font.getlength(r) for r in rows)) + 96
+    height = lh * len(rows) + 56
+    img = Image.new("RGBA", (1080, height), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    x0 = (1080 - width) // 2
+    d.rounded_rectangle([x0, 0, x0 + width, height], radius=26, fill=(8, 8, 10, 205))
+    d.rounded_rectangle([x0 + 36, 14, x0 + 116, 22], radius=4, fill=(255, 107, 0, 255))
+    for i, r in enumerate(rows):
+        d.text(((1080 - font.getlength(r)) / 2, 32 + lh * i), r, font=font, fill="white")
+    path = os.path.join(workdir, "hook_ig.png")
+    img.save(path)
+    return path
+
+
 def brand(days: int = 6, limit: int = 6) -> int:
     """
-    Põe a pergunta ao fã escrita no vídeo dos próximos reels do Instagram (fluxo atual),
-    sem rebaixar do YouTube. É a transformação mínima exigida na quarentena de repost:
-    sem `ig_hook` o reel não sai. A pergunta é a 1ª linha da legenda quando ela é curta;
-    senão, uma pergunta curta feita pelo modelo a partir do título.
+    Abre os próximos reels do Instagram (fluxo atual) com a pergunta ao fã nos primeiros
+    HOOK_SECONDS, sumindo em seguida. É a transformação mínima da quarentena de repost:
+    sem `ig_hook` o reel não sai. O arquivo original fica em `asset_url_orig` e a versão
+    com a pergunta sobe como {video_id}_ig.mp4. A pergunta é `hook_override`, ou a 1ª
+    linha da legenda quando é curta, ou uma pergunta curta feita a partir do título.
     """
     queue = load_queue()
     done = 0
@@ -1242,26 +1278,33 @@ def brand(days: int = 6, limit: int = 6) -> int:
         if item.get("ig_hook") or done >= limit:
             continue
         first = (item.get("caption") or "").split("\n")[0].strip()
-        hook = first if first.endswith("?") and len(first) <= 60 else _hook_text(item)
+        hook = item.get("hook_override") or (first if first.endswith("?") and len(first) <= 60 else _hook_text(item))
         if not hook:
             logger.warning(f"[{STREAM}] sem pergunta curta para {item['video_id']}; fica para a próxima rodada")
             continue
+        src_url = item.get("asset_url_orig") or item["asset_url"]
         try:
             with tempfile.TemporaryDirectory(prefix="morsa_brand_") as tmp:
-                src, out = os.path.join(tmp, "src.mp4"), os.path.join(tmp, f"{item['video_id']}.mp4")
-                subprocess.run(["curl", "-sfL", "-o", src, item["asset_url"]], check=True, timeout=300)
-                y = "250" if item.get("layout") == "vertical" else "260"
+                src, out = os.path.join(tmp, "src.mp4"), os.path.join(tmp, f"{item['video_id']}_ig.mp4")
+                subprocess.run(["curl", "-sfL", "-o", src, src_url], check=True, timeout=300)
+                y = "300" if item.get("layout") == "vertical" else "280"
+                end = HOOK_SECONDS - 0.5
                 r = subprocess.run(
-                    ["ffmpeg", "-y", "-i", src, "-i", _render_hook(hook, tmp), "-filter_complex",
-                     f"[0:v][1:v]overlay=0:{y}[v]", "-map", "[v]", "-map", "0:a?",
-                     "-c:v", "libx264", "-preset", "fast", "-crf", "20", "-pix_fmt", "yuv420p",
-                     "-c:a", "copy", "-movflags", "+faststart", out], capture_output=True, text=True)
+                    ["ffmpeg", "-y", "-i", src, "-loop", "1", "-t", str(HOOK_SECONDS), "-i", _render_hook_ig(hook, tmp),
+                     "-filter_complex",
+                     f"[1:v]format=rgba,fade=t=in:st=0:d=0.25:alpha=1,fade=t=out:st={end}:d=0.5:alpha=1[h];"
+                     f"[0:v][h]overlay=0:{y}:eof_action=pass[v]",
+                     "-map", "[v]", "-map", "0:a?", "-c:v", "libx264", "-preset", "fast", "-crf", "20",
+                     "-pix_fmt", "yuv420p", "-c:a", "copy", "-movflags", "+faststart", out],
+                    capture_output=True, text=True)
                 if r.returncode != 0:
                     raise RuntimeError(r.stderr[-200:])
-                item["asset_url"] = _upload_asset(out)
+                url = _upload_asset(out)
         except Exception as e:
             logger.warning(f"[{STREAM}] pergunta na tela falhou em {item['video_id']}: {str(e)[:150]}")
             continue
+        item["asset_url_orig"] = src_url
+        item["asset_url"] = url
         item["ig_hook"] = hook
         done += 1
         save_queue(queue)
