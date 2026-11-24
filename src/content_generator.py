@@ -89,6 +89,10 @@ DADOS DE PERFORMANCE (use para calibrar o tom):
 - Fã brasileiro responde bem a: comparações entre franquias, polêmicas da indústria, spoilers controlados
 """
 
+
+from pt_names import PROMPT_RULE, fix_names
+INSTAGRAM_SYSTEM += PROMPT_RULE
+
 REEL_TRAILER_SYSTEM = """Você é o social media sênior da Morsa Digital — canal brasileiro de cultura pop/nerd/geek com 27k seguidores.
 
 Você escreve legendas para Reels de trailers oficiais. O vídeo já está postado, a legenda deve COMPLEMENTAR — não descrever o que se vê.
@@ -121,6 +125,7 @@ REGRAS:
 - Hook deve soar como fã brasileiro real, não like robô: "Tô hypado", "Que trailer foi esse?", "Não tô pronto pra isso". Linguagem natural BR.
 - PROIBIDO travessão (— ou –) no texto da legenda. Use vírgula, ponto ou reescreva. É o tell nº1 de IA e o público rejeita. Evite também "não é só X, é Y" e listas de três adjetivos.
 """
+REEL_TRAILER_SYSTEM += PROMPT_RULE
 
 PLATFORM_PROMPTS = {
     "instagram": {
@@ -367,7 +372,8 @@ def _strip_ai_tells(text: str) -> str:
     text = _re.sub(r",\s*,", ",", text)          # ", ," -> ","
     text = _re.sub(r",\s*([.!?])", r"\1", text)  # ", ." -> "."
     text = _re.sub(r"[ \t]{2,}", " ", text)
-    return text
+    from pt_names import fix_names
+    return fix_names(text)
 
 
 def _cap_hashtags(content: str, max_tags: int = 5) -> str:
@@ -565,15 +571,17 @@ def generate_post(news_item: dict, platform: str, brief: dict = None) -> dict:
     try:
         image_headline = _call_groq(
             "Você cria headlines curtos para imagens de posts de Instagram no estilo IGN Brasil. "
+            "Sempre em português do Brasil, mesmo que a notícia esteja em inglês. "
             "Máximo 6 palavras. ALL CAPS não necessário. Sem reticências. Sem ponto final. "
-            "A frase deve ser completa e fazer sentido sozinha.",
+            "A frase deve ser completa e fazer sentido sozinha." + PROMPT_RULE,
             f"Crie um headline de imagem para esta notícia: {title}",
             max_tokens=30,
         ).strip().strip('"').strip("'").rstrip(".")
+        image_headline = fix_names(image_headline)
     except Exception:
         # Fallback: pegar até 6 palavras que formem sentido
         words = title.split()
-        image_headline = " ".join(words[:6])
+        image_headline = fix_names(" ".join(words[:6]))
 
     return {
         "content":        content[:cfg["max_chars"]],

@@ -496,6 +496,14 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
 - **Reel com alcance 1** (Shrek 2, Prime Video, 18/11/2026): sem aviso de direito autoral,
   apto a impulsionar, mas zero distribuição. Hipótese: o Instagram achou o mesmo vídeo no
   perfil oficial e mostrou o original. Se repetir com o mesmo canal, rever o canal.
+- **Nomes oficiais no Brasil (24/11/2026, pedido do Tulio):** saíram "Doutor Demônio" (é Doutor
+  Destino), "Avengers: Doomsday" (no Brasil, Vingadores: Doutor Destino) e "Captain America" no
+  meio da legenda; o título da arte era gerado da manchete em inglês sem pedir português.
+  `src/pt_names.py`: `PROMPT_RULE` (lista de nomes) vai nos prompts do feed, do trailer, das
+  cenas e do título da arte; `fix_names` troca o que escapar em `_strip_ai_tells` e em
+  `_clean_caption` (última barreira de todo envio). Hashtags não mudam. "Doom" sozinho (jogo
+  DOOM), "Marvel's ..." (nome de jogo) e Wolverine, Deadpool, Gambit, Loki etc. ficam como estão.
+  Ao achar nome errado novo, acrescentar em `_FIXES` (só se nunca for nome oficial aqui) ou na lista.
 - `editorial.run_reel` e `data/trailer_backlog.json` são o fluxo antigo, sem uso.
 
 ---

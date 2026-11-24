@@ -818,6 +818,10 @@ REGRAS:
 - Nada de frase de enchimento como "vale dar o play", "vale a pena rever", "arrepia qualquer fã"."""
 
 
+from pt_names import PROMPT_RULE
+HOOK_SYSTEM += PROMPT_RULE
+
+
 class CaptionUnavailable(RuntimeError):
     """O modelo não respondeu (limite da Groq: 1.000 chamadas/dia, 8 mil tokens/min)."""
 

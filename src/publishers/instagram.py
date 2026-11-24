@@ -73,7 +73,8 @@ def _clean_caption(caption: str) -> str:
     from content_generator import has_template_echo
     if has_template_echo(caption or ""):
         raise ValueError("legenda contém o molde do prompt — publicação cancelada")
-    return cap_hashtags(caption)
+    from pt_names import fix_names
+    return cap_hashtags(fix_names(caption))
 
 
 def _post(url: str, params: dict) -> dict:
