@@ -504,6 +504,24 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
   `_clean_caption` (última barreira de todo envio). Hashtags não mudam. "Doom" sozinho (jogo
   DOOM), "Marvel's ..." (nome de jogo) e Wolverine, Deadpool, Gambit, Loki etc. ficam como estão.
   Ao achar nome errado novo, acrescentar em `_FIXES` (só se nunca for nome oficial aqui) ou na lista.
+- **PLANO B EM VIGOR (24/11/2026, aprovado pelo Tulio).** Plano completo:
+  https://claude.ai/artifact/QsRs1Q6SJgt2BXGUNatT84 (diagnóstico: 3.795 posts e 32 concorrentes;
+  conta virou agregador e saiu das recomendações; não seguidores 69% → 27%).
+  - Frente 1 aplicada: feed em 9h e 16h (`FEED_SLOTS_BRT`); trailers (fluxo main) parados até
+    `REPOST_QUARANTINE_UNTIL` = 2026-12-25; reel só de seg a sex (`REEL_WEEKDAYS_ONLY`); o reel
+    das 11h só sai com a pergunta escrita no vídeo (`ig_hook`, aplicada por `reel_queue.py brand`
+    no Mac, que usa fonte do macOS); capa do carrossel em `image_generator._cover_art`; pauta
+    Star Wars/Marvel/DC/cinema primeiro; cota diária de GTA desligada (`GTA_DAILY=on` religa).
+  - Quadros, nesta ordem: Morsa Pergunta (reel 11h), Primeiro Olhar (carrossel quando sai imagem
+    oficial, modelo do carrossel de Doutor Destino), Voz do Brasil (dublagem, vídeo do Tulio),
+    Estreia da Semana (sexta). Depois Lado a Lado e Linha do Tempo.
+  - Vídeos do Tulio na câmera: pautas nos eventos "🎬 Morsa: gravar..." da agenda dele; ele salva
+    em ~/Documents/Morsa Digital/gravacoes/brutos/AAAA-MM-DD; Claude edita (projeto CapCut com
+    faixas separadas + render), mostra prévia e agenda como item `kind: "proprio"` com
+    `scheduled_for` na fila de cenas (sai sem crédito de canal e sem exigir `ig_hook`).
+  - Mídia kit e contatos: ~/Documents/Morsa Digital/midia-kit/ (rascunhos no Gmail, nunca enviar).
+  - Metas de 90 dias: 30 mil seguidores, 60% do alcance de não seguidores, 60 interações
+    medianas por post. Revisar em 24/02/2027.
 - `editorial.run_reel` e `data/trailer_backlog.json` são o fluxo antigo, sem uso.
 
 ---
