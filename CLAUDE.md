@@ -265,7 +265,7 @@ Então o download é local e a publicação é do CI. Tudo em `src/reel_queue.py
 - **Mac** (`run_reel_local.sh`, launchd `com.morsa.dailyreel`, de madrugada: 23h30, 1h30, 3h30 e 5h30,
   em baixa prioridade, a pedido do Tulio para não travar o Mac de dia;
   até 10 vídeos por fluxo por execução, 70s de pausa, para o YouTube não bloquear): `fill` baixa,
-  converte para 9:16 (fundo desfocado + logo, máx. 90s), sobe na Release
+  converte para 9:16 (fundo desfocado + logo, máx. 179s; era 90s até 24/11/2026 e cortava trailer no meio), sobe na Release
   `reel-queue` e grava `data/reel_queue.json` até ter 7 pendentes. Com a fila
   cheia o Mac pode ficar dias desligado. yt-dlp SEM cookies (com cookies do Chrome
   o YouTube serve "only images"; foi o que zerou os reels de ago a out/2026) e

@@ -84,7 +84,9 @@ PIN_GRACE_DAYS = 2           # fixo que perdeu o dia ainda sai até 2 dias depoi
 MAX_PER_CHANNEL = 2          # variedade: no máximo 2 pendentes do mesmo canal
 MAX_AGE_DAYS = 30            # vídeo mais velho que isso não é mais novidade
 MIN_SECONDS, MAX_SECONDS = 20, 210
-TRIM_SECONDS = 90            # Reels até 90s entram na recomendação
+# Instagram recomenda Reels de até 3 min desde jan/2025. Com 90s o trailer dublado de
+# Vingadores: Doutor Destino (3min15s) saiu cortado na metade em 24/11/2026.
+TRIM_SECONDS = 179
 PREMAP_MAX_PER_RUN = int(os.environ.get("PREMAP_MAX_PER_RUN", "10"))   # por fluxo, por execução
 PREMAP_PAUSE_SECONDS = int(os.environ.get("PREMAP_PAUSE_SECONDS", "70"))
 
@@ -561,7 +563,7 @@ _BACKSTAGE_RE = re.compile(
     r"bastidor|backstage|making of|por tr[aá]s d[aeo]s? |dublag|dublador|dublando|"
     r"behind the scenes|featurette|erros de grava|bloopers?|cenas? deletada", re.IGNORECASE)
 BACKSTAGE_QUERIES = ("bastidores", "dublagem", "making of")
-BACKSTAGE_MAX_SECONDS = 240          # o vídeo é cortado em 90s; acima disso o corte fica sem sentido
+BACKSTAGE_MAX_SECONDS = 240          # o vídeo é cortado em TRIM_SECONDS; acima disso o corte fica sem sentido
 
 
 def find_backstage(max_new: int = 60) -> int:
