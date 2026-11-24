@@ -1,404 +1,564 @@
 [
- {
-  "video_id": "IJIdDdB8MLA",
-  "scheduled_for": "2026-10-12",
-  "theme": "criancas"
- },
- {
-  "video_id": "2Bto3Mlbn0o",
-  "scheduled_for": "2026-10-24",
-  "theme": "halloween"
- },
- {
-  "video_id": "0MLmL4uOg0k",
-  "scheduled_for": "2026-10-25",
-  "theme": "halloween"
- },
- {
-  "video_id": "gbTPu89fEXg",
-  "scheduled_for": "2026-10-26",
-  "theme": "halloween"
- },
- {
-  "video_id": "ToyHbBkiuRk",
-  "scheduled_for": "2026-10-27",
-  "theme": "halloween"
- },
- {
-  "video_id": "tESt0sLknEU",
-  "scheduled_for": "2026-10-28",
-  "theme": "animacao"
- },
- {
-  "video_id": "N5xoBTnuW1w",
-  "scheduled_for": "2026-10-29",
-  "theme": "halloween"
- },
- {
-  "video_id": "pZBO3kq7Zng",
-  "scheduled_for": "2026-10-30",
-  "theme": "halloween"
- },
- {
-  "video_id": "24VK5kL6vIA",
-  "scheduled_for": "2026-10-31",
-  "theme": "halloween"
- },
- {
-  "video_id": "eJfkIG6edTc"
- },
- {
-  "video_id": "5Ef6nSOCeJ4"
- },
- {
-  "video_id": "XqlghJoHds0"
- },
- {
-  "video_id": "9JX-0es-AXc"
- },
- {
-  "video_id": "Ay_2-oJxiwg"
- },
- {
-  "video_id": "hlX7oKKBfP0"
- },
- {
-  "video_id": "JiWTkbu9HvU"
- },
- {
-  "video_id": "_xGeGUYAwBo"
- },
- {
-  "video_id": "FeUYvqcec0w"
- },
- {
-  "video_id": "3yujJ-nRO_c"
- },
- {
-  "video_id": "I6CLLfzjZXM"
- },
- {
-  "video_id": "2tMXpY_topE"
- },
- {
-  "video_id": "zJE319Ui_pM"
- },
- {
-  "video_id": "7XdML3Rd_xA"
- },
- {
-  "video_id": "6aak98shoCg"
- },
- {
-  "video_id": "lSr9dwh4DxM"
- },
- {
-  "video_id": "_n9gDRR6hKY"
- },
- {
-  "video_id": "uvzE7vLnxHo"
- },
- {
-  "video_id": "5ULbTJ2LnB4"
- },
- {
-  "video_id": "NSZcddMvjZY"
- },
- {
-  "video_id": "ObaDxelIGO4"
- },
- {
-  "video_id": "KbZc9aYwbiY"
- },
- {
-  "video_id": "-y_EuZTIdAs"
- },
- {
-  "video_id": "Zn_CR8vKGkQ"
- },
- {
-  "video_id": "Wrak64LazLI"
- },
- {
-  "video_id": "vcs4yuOWrcs"
- },
- {
-  "video_id": "v_JDHZnjf3s"
- },
- {
-  "video_id": "iO4uKziFlUI"
- },
- {
-  "video_id": "dITdeaQ1wAA"
- },
- {
-  "video_id": "THg5Ck4fOjI"
- },
- {
-  "video_id": "zL_DdeLeYTc"
- },
- {
-  "video_id": "6RTFgYw2Apg"
- },
- {
-  "video_id": "SvCdqB4Yeag"
- },
- {
-  "video_id": "tF2ZHFxeh4E"
- },
- {
-  "video_id": "Ql63IfPSMCw"
- },
- {
-  "video_id": "OjtAiXZ4WwQ"
- },
- {
-  "video_id": "X2o3YWLeXgc"
- },
- {
-  "video_id": "KrIR5SM7_I0"
- },
- {
-  "video_id": "TG16ToqT1HM"
- },
- {
-  "video_id": "FVpUp6uzcKk"
- },
- {
-  "video_id": "-XwI8PkthCk"
- },
- {
-  "video_id": "cKCjqbOMHfI"
- },
- {
-  "video_id": "NApX78AMq28"
- },
- {
-  "video_id": "5hEds2WX5-c"
- },
- {
-  "video_id": "NW1XuNzvFM8"
- },
- {
-  "video_id": "z5jh051eyl4"
- },
- {
-  "video_id": "bHjW0xq8oSg"
- },
- {
-  "video_id": "m2xka2DgQ2o"
- },
- {
-  "video_id": "VeCL2xKSE8k"
- },
- {
-  "video_id": "NmWrSPeXFec"
- },
- {
-  "video_id": "0mFMfBFcjCo"
- },
- {
-  "video_id": "uvLtkthCE5A"
- },
- {
-  "video_id": "8LaTiMAcU8w"
- },
- {
-  "video_id": "Yt7_rewy9_c"
- },
- {
-  "video_id": "dQ4hgRcEINE"
- },
- {
-  "video_id": "3tf2VqITEYg"
- },
- {
-  "video_id": "o8yOQSHYXxo"
- },
- {
-  "video_id": "3pKY5L80Ufo"
- },
- {
-  "video_id": "JJBuP7ljvHA"
- },
- {
-  "video_id": "foledeGvZ6k"
- },
- {
-  "video_id": "FMOsqRjPfR8"
- },
- {
-  "video_id": "nboUWxFj2Z4"
- },
- {
-  "video_id": "Rf9UFTHN49Q"
- },
- {
-  "video_id": "XIUUcRtcZ88"
- },
- {
-  "video_id": "s2bFFv6Xxao"
- },
- {
-  "video_id": "her4kWUWVJY"
- },
- {
-  "video_id": "q1i3RLD-BJw"
- },
- {
-  "video_id": "EHJN40Fn4yQ"
- },
- {
-  "video_id": "qvH9MljXAhY"
- },
- {
-  "video_id": "z9DLpcXYCNI"
- },
- {
-  "video_id": "k9Vs64O9Chg"
- },
- {
-  "video_id": "3L9qLtsgZUw"
- },
- {
-  "video_id": "6Ux5m4opRU8"
- },
- {
-  "video_id": "65buIZxDmB0"
- },
- {
-  "video_id": "N6qUVHNse-s"
- },
- {
-  "video_id": "v0UxcKjTa-I"
- },
- {
-  "video_id": "5Dq2hMjilTY"
- },
- {
-  "video_id": "7L_oA-HA34w"
- },
- {
-  "video_id": "FKmieiU4Lx8"
- },
- {
-  "video_id": "MC4-S_r0I9U"
- },
- {
-  "video_id": "GEA2OoLOvwA"
- },
- {
-  "video_id": "XsHr196IwJ0"
- },
- {
-  "video_id": "guFn7JymKS0"
- },
- {
-  "video_id": "gkTIpjuj_rg"
- },
- {
-  "video_id": "c17VR20Hi3o"
- },
- {
-  "video_id": "ffCG56KpR74"
- },
- {
-  "video_id": "EKwFhSbDHh4"
- },
- {
-  "video_id": "d5yZCskyRxY"
- },
- {
-  "video_id": "ooTOHoXfjsI"
- },
- {
-  "video_id": "XcN5Or7FCrg"
- },
- {
-  "video_id": "6CkAbzGwano"
- },
- {
-  "video_id": "mfsBBM7ELQA"
- },
- {
-  "video_id": "yMr9NrRJgsE"
- },
- {
-  "video_id": "7Zf3QkpoCDA"
- },
- {
-  "video_id": "yxxfSSK5WNc"
- },
- {
-  "video_id": "BDtsaq3u400"
- },
- {
-  "video_id": "Apf7d_UlOQw"
- },
- {
-  "video_id": "7VWCn6uIptE"
- },
- {
-  "video_id": "gn9jlyd2cqA"
- },
- {
-  "video_id": "a-4_Km_NaP8"
- },
- {
-  "video_id": "vY5RHKqcLr4"
- },
- {
-  "video_id": "_C37K4kyyQk"
- },
- {
-  "video_id": "Ng_Iaa5Bemc"
- },
- {
-  "video_id": "s_AVVbRIdhM"
- },
- {
-  "video_id": "CXETio-OLV0",
-  "scheduled_for": "2026-12-13",
-  "theme": "vingadores"
- },
- {
-  "video_id": "D6gDgZDCbqM",
-  "scheduled_for": "2026-12-14",
-  "theme": "vingadores"
- },
- {
-  "video_id": "hGw2YINX5OM",
-  "scheduled_for": "2026-12-15",
-  "theme": "vingadores"
- },
- {
-  "video_id": "32x-UJLflZk",
-  "scheduled_for": "2026-12-16",
-  "theme": "vingadores"
- },
- {
-  "video_id": "Wi8QsZB4pUE",
-  "scheduled_for": "2026-12-17",
-  "theme": "vingadores"
- },
- {
-  "video_id": "2QhFGJGg7Ac",
-  "scheduled_for": "2026-12-23",
-  "theme": "natal"
- },
- {
-  "video_id": "Wvu5SPPfGkk",
-  "scheduled_for": "2026-12-24",
-  "theme": "natal"
- },
- {
-  "video_id": "ZAZuv3mUNfQ",
-  "scheduled_for": "2026-12-25",
-  "theme": "natal"
- },
- {
-  "video_id": "S3TfYc8SNtE",
-  "scheduled_for": "2027-01-01",
-  "theme": "ano_novo"
- }
+  {
+    "video_id": "IJIdDdB8MLA",
+    "scheduled_for": "2026-10-12",
+    "theme": "criancas"
+  },
+  {
+    "video_id": "2Bto3Mlbn0o",
+    "scheduled_for": "2026-10-24",
+    "theme": "halloween"
+  },
+  {
+    "video_id": "0MLmL4uOg0k",
+    "scheduled_for": "2026-10-25",
+    "theme": "halloween"
+  },
+  {
+    "video_id": "gbTPu89fEXg",
+    "scheduled_for": "2026-10-26",
+    "theme": "halloween"
+  },
+  {
+    "video_id": "ToyHbBkiuRk",
+    "scheduled_for": "2026-10-27",
+    "theme": "halloween"
+  },
+  {
+    "video_id": "tESt0sLknEU",
+    "scheduled_for": "2026-10-28",
+    "theme": "animacao"
+  },
+  {
+    "video_id": "N5xoBTnuW1w",
+    "scheduled_for": "2026-10-29",
+    "theme": "halloween"
+  },
+  {
+    "video_id": "pZBO3kq7Zng",
+    "scheduled_for": "2026-10-30",
+    "theme": "halloween"
+  },
+  {
+    "video_id": "24VK5kL6vIA",
+    "scheduled_for": "2026-10-31",
+    "theme": "halloween"
+  },
+  {
+    "video_id": "eJfkIG6edTc"
+  },
+  {
+    "video_id": "5Ef6nSOCeJ4"
+  },
+  {
+    "video_id": "XqlghJoHds0"
+  },
+  {
+    "video_id": "9JX-0es-AXc"
+  },
+  {
+    "video_id": "Ay_2-oJxiwg"
+  },
+  {
+    "video_id": "hlX7oKKBfP0"
+  },
+  {
+    "video_id": "JiWTkbu9HvU"
+  },
+  {
+    "video_id": "_xGeGUYAwBo"
+  },
+  {
+    "video_id": "FeUYvqcec0w"
+  },
+  {
+    "video_id": "3yujJ-nRO_c"
+  },
+  {
+    "video_id": "I6CLLfzjZXM"
+  },
+  {
+    "video_id": "2tMXpY_topE"
+  },
+  {
+    "video_id": "zJE319Ui_pM"
+  },
+  {
+    "video_id": "7XdML3Rd_xA"
+  },
+  {
+    "video_id": "6aak98shoCg"
+  },
+  {
+    "video_id": "lSr9dwh4DxM"
+  },
+  {
+    "video_id": "_n9gDRR6hKY"
+  },
+  {
+    "video_id": "uvzE7vLnxHo"
+  },
+  {
+    "video_id": "5ULbTJ2LnB4"
+  },
+  {
+    "video_id": "NSZcddMvjZY"
+  },
+  {
+    "video_id": "ObaDxelIGO4"
+  },
+  {
+    "video_id": "KbZc9aYwbiY"
+  },
+  {
+    "video_id": "-y_EuZTIdAs"
+  },
+  {
+    "video_id": "Zn_CR8vKGkQ"
+  },
+  {
+    "video_id": "Wrak64LazLI"
+  },
+  {
+    "video_id": "vcs4yuOWrcs"
+  },
+  {
+    "video_id": "v_JDHZnjf3s"
+  },
+  {
+    "video_id": "iO4uKziFlUI"
+  },
+  {
+    "video_id": "dITdeaQ1wAA"
+  },
+  {
+    "video_id": "THg5Ck4fOjI"
+  },
+  {
+    "video_id": "zL_DdeLeYTc"
+  },
+  {
+    "video_id": "6RTFgYw2Apg"
+  },
+  {
+    "video_id": "SvCdqB4Yeag"
+  },
+  {
+    "video_id": "tF2ZHFxeh4E"
+  },
+  {
+    "video_id": "Ql63IfPSMCw"
+  },
+  {
+    "video_id": "OjtAiXZ4WwQ"
+  },
+  {
+    "video_id": "X2o3YWLeXgc"
+  },
+  {
+    "video_id": "KrIR5SM7_I0"
+  },
+  {
+    "video_id": "TG16ToqT1HM"
+  },
+  {
+    "video_id": "FVpUp6uzcKk"
+  },
+  {
+    "video_id": "-XwI8PkthCk"
+  },
+  {
+    "video_id": "cKCjqbOMHfI"
+  },
+  {
+    "video_id": "NApX78AMq28"
+  },
+  {
+    "video_id": "5hEds2WX5-c"
+  },
+  {
+    "video_id": "NW1XuNzvFM8"
+  },
+  {
+    "video_id": "z5jh051eyl4"
+  },
+  {
+    "video_id": "bHjW0xq8oSg"
+  },
+  {
+    "video_id": "m2xka2DgQ2o"
+  },
+  {
+    "video_id": "VeCL2xKSE8k"
+  },
+  {
+    "video_id": "NmWrSPeXFec"
+  },
+  {
+    "video_id": "0mFMfBFcjCo"
+  },
+  {
+    "video_id": "uvLtkthCE5A"
+  },
+  {
+    "video_id": "8LaTiMAcU8w"
+  },
+  {
+    "video_id": "Yt7_rewy9_c"
+  },
+  {
+    "video_id": "dQ4hgRcEINE"
+  },
+  {
+    "video_id": "3tf2VqITEYg"
+  },
+  {
+    "video_id": "o8yOQSHYXxo"
+  },
+  {
+    "video_id": "3pKY5L80Ufo"
+  },
+  {
+    "video_id": "JJBuP7ljvHA"
+  },
+  {
+    "video_id": "foledeGvZ6k"
+  },
+  {
+    "video_id": "FMOsqRjPfR8"
+  },
+  {
+    "video_id": "nboUWxFj2Z4"
+  },
+  {
+    "video_id": "Rf9UFTHN49Q"
+  },
+  {
+    "video_id": "XIUUcRtcZ88"
+  },
+  {
+    "video_id": "s2bFFv6Xxao"
+  },
+  {
+    "video_id": "her4kWUWVJY"
+  },
+  {
+    "video_id": "q1i3RLD-BJw"
+  },
+  {
+    "video_id": "EHJN40Fn4yQ"
+  },
+  {
+    "video_id": "qvH9MljXAhY"
+  },
+  {
+    "video_id": "z9DLpcXYCNI"
+  },
+  {
+    "video_id": "k9Vs64O9Chg"
+  },
+  {
+    "video_id": "3L9qLtsgZUw"
+  },
+  {
+    "video_id": "6Ux5m4opRU8"
+  },
+  {
+    "video_id": "65buIZxDmB0"
+  },
+  {
+    "video_id": "N6qUVHNse-s"
+  },
+  {
+    "video_id": "v0UxcKjTa-I"
+  },
+  {
+    "video_id": "5Dq2hMjilTY"
+  },
+  {
+    "video_id": "7L_oA-HA34w"
+  },
+  {
+    "video_id": "FKmieiU4Lx8"
+  },
+  {
+    "video_id": "MC4-S_r0I9U"
+  },
+  {
+    "video_id": "GEA2OoLOvwA"
+  },
+  {
+    "video_id": "XsHr196IwJ0"
+  },
+  {
+    "video_id": "guFn7JymKS0"
+  },
+  {
+    "video_id": "gkTIpjuj_rg"
+  },
+  {
+    "video_id": "c17VR20Hi3o"
+  },
+  {
+    "video_id": "ffCG56KpR74"
+  },
+  {
+    "video_id": "EKwFhSbDHh4"
+  },
+  {
+    "video_id": "d5yZCskyRxY"
+  },
+  {
+    "video_id": "ooTOHoXfjsI"
+  },
+  {
+    "video_id": "XcN5Or7FCrg"
+  },
+  {
+    "video_id": "6CkAbzGwano"
+  },
+  {
+    "video_id": "mfsBBM7ELQA"
+  },
+  {
+    "video_id": "yMr9NrRJgsE"
+  },
+  {
+    "video_id": "7Zf3QkpoCDA"
+  },
+  {
+    "video_id": "yxxfSSK5WNc"
+  },
+  {
+    "video_id": "BDtsaq3u400"
+  },
+  {
+    "video_id": "Apf7d_UlOQw"
+  },
+  {
+    "video_id": "7VWCn6uIptE"
+  },
+  {
+    "video_id": "gn9jlyd2cqA"
+  },
+  {
+    "video_id": "a-4_Km_NaP8"
+  },
+  {
+    "video_id": "vY5RHKqcLr4"
+  },
+  {
+    "video_id": "_C37K4kyyQk"
+  },
+  {
+    "video_id": "Ng_Iaa5Bemc"
+  },
+  {
+    "video_id": "s_AVVbRIdhM"
+  },
+  {
+    "video_id": "CXETio-OLV0",
+    "scheduled_for": "2026-12-13",
+    "theme": "vingadores"
+  },
+  {
+    "video_id": "D6gDgZDCbqM",
+    "scheduled_for": "2026-12-14",
+    "theme": "vingadores"
+  },
+  {
+    "video_id": "hGw2YINX5OM",
+    "scheduled_for": "2026-12-15",
+    "theme": "vingadores"
+  },
+  {
+    "video_id": "32x-UJLflZk",
+    "scheduled_for": "2026-12-16",
+    "theme": "vingadores"
+  },
+  {
+    "video_id": "Wi8QsZB4pUE",
+    "scheduled_for": "2026-12-17",
+    "theme": "vingadores"
+  },
+  {
+    "video_id": "2QhFGJGg7Ac",
+    "scheduled_for": "2026-12-23",
+    "theme": "natal"
+  },
+  {
+    "video_id": "Wvu5SPPfGkk",
+    "scheduled_for": "2026-12-24",
+    "theme": "natal"
+  },
+  {
+    "video_id": "ZAZuv3mUNfQ",
+    "scheduled_for": "2026-12-25",
+    "theme": "natal"
+  },
+  {
+    "video_id": "S3TfYc8SNtE",
+    "scheduled_for": "2027-01-01",
+    "theme": "ano_novo"
+  },
+  {
+    "video_id": "D1tXfOz3kgg",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "2Gwkh1LpsFg",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "_JMY6cKScnc",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "QYKZAlGuHm0",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "83HbpqEXTqo",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "gXPvHFV1T6k",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "Y2zmCKXTSX0",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "ADSd_5eJFVA",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "PpVb_CHLsFE",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "1ggDawNt3iA",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "VHDg7_6L2JY",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "UgFXlLa_67o",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "KdRm2AWpxbI",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "Jxm5mLzGKk0",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "ylIIIrxoCoo",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "ZTZf3ZZXm4E",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "0V9ua1K8zB0",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "9L6UI5UsgpE",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "ovpwoO091tk",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "c33Uvn7Tgc4",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "fg4OIewroFQ",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "wki8oxnVHYU",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "duSUR21kun0",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "mYEgqlUhKTo",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "Jsqdrqz3gdg",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "9BDCe1Mr-LA",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "xMCgzb9jzwc",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "qKB26rhG-9o",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "ZMHc_9kQ6SY",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "YXMcm3tyF3k",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "Z3y9ii3pUFg",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "Ztqqb051asU",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "Eeu30JVeUJQ",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "ovOFmJYRnyQ",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "o8UBDlFQt78",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "yxbs_sPG-S0",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "SMFLMXqWzVY",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "6_eH6L0xLVI",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "BUqqwH16XNA",
+    "theme": "bastidores"
+  },
+  {
+    "video_id": "HMPWyymWFKc",
+    "theme": "bastidores"
+  }
 ]
