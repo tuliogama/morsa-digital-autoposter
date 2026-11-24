@@ -785,14 +785,16 @@
     "youtube_url": "https://www.youtube.com/watch?v=Zn_CR8vKGkQ",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/Zn_CR8vKGkQ.mp4",
     "added_at": "2026-10-07T01:41:01.351283-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 32,
     "layout": "vertical",
     "lang": "pt",
     "caption": "Quem foi o dono da bola mais bonita até agora na Blue Lock?\n\nEsse tipo de lance é o que faz a gente girar o volume e prender a atenção.\nÉ pura intensidade de quem vive pra fazer o gol perfeito.\n\nComenta aí quem você quer ver com a taça de gol mais bonito.\n\nVídeo: Crunchyroll Brasil (canal oficial no YouTube)\n\n#BlueLock #Anime #CrunchyrollBrasil #Futebol #Golaço #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "posted_at": "2026-11-24T11:07:23.141960-03:00",
+    "media_id": "17941490157122164"
   },
   {
     "video_id": "Wrak64LazLI",
