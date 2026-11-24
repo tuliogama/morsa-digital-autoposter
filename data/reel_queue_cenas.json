@@ -816,7 +816,8 @@
     "caption_check": "revisar",
     "caption_problems": [
       "detalhe sem base: Ver Joffrey apanhando é daquelas cenas que ficam gravadas na memória."
-    ]
+    ],
+    "ig_hook": "Você lembra dessa cena ou tá descobrindo agora?"
   },
   {
     "video_id": "vcs4yuOWrcs",
@@ -836,7 +837,8 @@
     "lang": "pt",
     "caption": "Qual teorista já viu o Batman Cruzado Encapuzado?\n\nA tensão desse título já faz o coração acelerar.\nÉ aquele mistério que a gente não quer resolver tão cedo.\nA dúvida fica maior quando a gente não sabe o que esperar.\n\nConta pra gente qual sua teoria é...\n\nVídeo: Prime Video Brasil (canal oficial no YouTube)\n\n#Batman #CruzadoEncapuzado #DC #PrimeVideoBrasil #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "ig_hook": "Qual teorista já viu o Batman Cruzado Encapuzado?"
   },
   {
     "video_id": "iO4uKziFlUI",
@@ -877,7 +879,8 @@
     "lang": "pt",
     "caption": "Qual frase da Fiona você mais usa na vida?\n\nEssa cena de Shrek e Fiona sempre vai gerar discussão.\nÉ o tipo de momento que grava na memória de qualquer fã da série.\nA química entre os dois faz o resto da história funcionar.\n\nComenta aí qual parte dessa fala é a tua favorita.\n\nVídeo: Prime Video Brasil (canal oficial no YouTube)\n\n#Shrek #Fiona #Burro #ShrekEm3D #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "ig_hook": "Qual frase da Fiona você mais usa na vida?"
   },
   {
     "video_id": "THg5Ck4fOjI",
@@ -897,7 +900,8 @@
     "lang": "pt",
     "caption": "Você lembra desse momento do Casamento Vermelho?\n\nFoi uma das cenas mais tensas e chocantes da série.\nA tensão era insuportável e as consequências mudaram tudo.\nNunca mais olhamos para Winterfell da mesma forma.\n\nQual é a sua opinião sobre esse episódio até hoje?\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#GameOfThrones #GoT #CasamentoVermelho #Winterfell #HBO #MorsaDigital",
     "caption_check": "ok",
-    "caption_problems": []
+    "caption_problems": [],
+    "ig_hook": "Você lembra desse momento do Casamento Vermelho?"
   },
   {
     "video_id": "zL_DdeLeYTc",
@@ -914,7 +918,8 @@
     "kind": "cena",
     "plan_order": 39,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "ig_hook": "Naruto deu a força que ela precisava?"
   },
   {
     "video_id": "tF2ZHFxeh4E",
@@ -2997,6 +3002,7 @@
     "theme": "bastidores",
     "hook_text": null,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "ig_hook": "Caramelo: qual cena te fez sorrir?"
   }
 ]

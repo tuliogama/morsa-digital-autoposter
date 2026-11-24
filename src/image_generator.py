@@ -810,6 +810,93 @@ def _fetch_article_images(url: str, count: int = 2) -> list:
     return result
 
 
+_EMOJI_RE = None
+
+
+def _strip_emoji(text: str) -> str:
+    """A Montserrat não tem emoji: sem isto o emoji vira um quadradinho na arte."""
+    import re
+    global _EMOJI_RE
+    if _EMOJI_RE is None:
+        _EMOJI_RE = re.compile("[\U0001F000-\U0001FFFF\u2600-\u27BF\uFE0F\u200D\u2B50\u2B06\u2934\u2935]")
+    return re.sub(r"\s{2,}", " ", _EMOJI_RE.sub("", text or "")).strip()
+
+
+_KICKERS = {"marvel": "MARVEL", "dc": "DC", "starwars": "STAR WARS", "gta": "GTA VI", "anime_big": "ANIME",
+            "anime": "ANIME", "game_big": "GAMES", "game_niche": "GAMES", "series": "SÉRIES", "movie": "CINEMA"}
+
+
+def _kicker(news_item: dict) -> str:
+    try:
+        from content_generator import _categorize
+        return _KICKERS.get(_categorize(news_item), "CULTURA POP")
+    except Exception:
+        return "CULTURA POP"
+
+
+def _cover_art(base, headline: str, kicker: str = "CULTURA POP"):
+    """
+    Capa do post no padrão do carrossel de Vingadores: Doutor Destino (24/11/2026): foto
+    em tela cheia, faixa escura embaixo, título em Montserrat Black (última linha em
+    laranja), editoria no alto e logo redonda no canto. Substitui o título com contorno
+    preto, que saía com fonte reserva porque o BebasNeue.ttf do repo está corrompido.
+    """
+    from PIL import Image, ImageDraw, ImageEnhance, ImageFont
+    img = ImageEnhance.Contrast(base.convert("RGB")).enhance(1.06)
+    img = ImageEnhance.Color(img).enhance(1.05).convert("RGBA")
+    W, H = img.size
+    start = int(H * 0.42)
+    mask = Image.new("L", (1, H))
+    for y in range(H):
+        mask.putpixel((0, y), 0 if y < start else int(240 * min(1, (y - start) / (H - start) * 1.35)))
+    shade = Image.new("RGBA", (W, H), (6, 6, 8, 255))
+    shade.putalpha(mask.resize((W, H)))
+    img.alpha_composite(shade)
+    top = Image.new("L", (1, 220))
+    for y in range(220):
+        top.putpixel((0, y), int(150 * (1 - y / 220)))
+    band = Image.new("RGBA", (W, 220), (6, 6, 8, 255))
+    band.putalpha(top.resize((W, 220)))
+    img.alpha_composite(band, (0, 0))
+
+    def font(size, weight):
+        f = ImageFont.truetype(str(ASSETS_DIR / "fonts" / "Montserrat.ttf"), size)
+        try:
+            f.set_variation_by_name(weight)
+        except Exception:
+            pass
+        return f
+
+    d = ImageDraw.Draw(img)
+    d.text((60, 62), kicker.upper(), font=font(28, "ExtraBold"), fill=COLOR_ORANGE)
+    d.rectangle((60, 104, 140, 110), fill=COLOR_ORANGE)
+    text = _strip_emoji(headline).upper()
+    for size in (96, 88, 80, 72, 64):
+        f = font(size, "Black")
+        words, lines, line = text.split(), [], ""
+        for w in words:
+            t = f"{line} {w}".strip()
+            if d.textlength(t, font=f) <= W - 120 or not line:
+                line = t
+            else:
+                lines.append(line)
+                line = w
+        lines.append(line)
+        if len(lines) <= 3:
+            break
+    lh = int(f.size * 1.08)
+    y = H - 110 - lh * len(lines)
+    for i, ln in enumerate(lines):
+        last = i == len(lines) - 1 and len(lines) > 1
+        d.text((58, y + i * lh), ln, font=f, fill=COLOR_ORANGE if last else COLOR_WHITE)
+    size = 112
+    halo = Image.new("RGBA", (size + 16, size + 16), (0, 0, 0, 0))
+    ImageDraw.Draw(halo).ellipse((0, 0, size + 15, size + 15), fill=(0, 0, 0, 120))
+    img.alpha_composite(halo, (W - size - 52, 32))
+    img.alpha_composite(_round_logo(size), (W - size - 44, 40))
+    return img
+
+
 def generate_post_image_pair(news_item: dict, headline: str = "") -> tuple:
     """
     Gera par de imagens para o carrossel de feed (2 slides):
@@ -844,10 +931,7 @@ def generate_post_image_pair(news_item: dict, headline: str = "") -> tuple:
     # Guardar o crop base para reusar no slide 2
     base1_raw = _resize_crop_center(base1.copy(), POST_W, POST_H)
 
-    slide1 = base1_raw.copy()
-    slide1 = _add_gradient_overlay(slide1)
-    slide1 = _add_text_overlay(slide1, display_headline)
-    slide1 = _paste_logo(slide1)
+    slide1 = _cover_art(base1_raw.copy(), display_headline, _kicker(news_item))
     buf1 = io.BytesIO()
     slide1.convert("RGB").save(buf1, format="JPEG", quality=92, optimize=True)
     slide1_url = _upload_image(buf1.getvalue())
@@ -1120,9 +1204,7 @@ def generate_post_image(news_item: dict, headline: str = "") -> Optional[str]:
     # 2. Processar: resize 4:5 + gradiente + headline + logo Morsa
     display_headline = headline if headline else title
     base_img = _resize_crop_center(base_img, POST_W, POST_H)
-    base_img = _add_gradient_overlay(base_img)
-    base_img = _add_text_overlay(base_img, display_headline)
-    final_img = _paste_logo(base_img)
+    final_img = _cover_art(base_img, display_headline, _kicker(news_item))
 
     final_rgb = final_img.convert("RGB")
     buf = io.BytesIO()

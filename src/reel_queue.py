@@ -65,6 +65,17 @@ TIKTOK_VIDEOS = os.environ.get("TIKTOK_VIDEOS", "off") == "on"
 TIKTOK_SLOTS_BRT = ["13:30", "15:00", "16:30", "17:15", "18:00", "19:30", "21:00", "22:30"]
 TIKTOK_THEME_WINDOWS = {"halloween": ("10-24", "10-31"), "natal": ("12-20", "12-25")}
 MIN_GAP_MIN = 90             # intervalo mínimo entre dois reels
+# Plano Morsa (caminho B, aprovado pelo Tulio em 24/11/2026): 30 dias sem repost cru para
+# a conta sair do rótulo de agregador do Instagram (regra de 30/04/2026). Até essa data o
+# fluxo de trailers fica parado e o de cenas só publica vídeo com a pergunta na tela
+# (`ig_hook`). Reel só de segunda a sexta: no histórico, fim de semana rende metade.
+QUARANTINE_UNTIL = os.environ.get("REPOST_QUARANTINE_UNTIL", "2026-12-25")
+REEL_WEEKDAYS_ONLY = os.environ.get("REEL_WEEKDAYS_ONLY", "on") == "on"
+
+
+def _in_quarantine(day=None) -> bool:
+    day = day or datetime.now(BRT).date()
+    return day.isoformat() <= QUARANTINE_UNTIL
 
 
 def use_stream(name: str):
@@ -707,10 +718,14 @@ def is_due() -> tuple[bool, str]:
     queue = load_queue()
     n = len(pending(queue))
     tag = f"[{STREAM}]"
-    if _pick_next(queue) is None:
-        return False, f"{tag} fila sem item para hoje (o Mac precisa abastecer)"
+    if _pick_next(queue, branded_only=True) is None:
+        return False, f"{tag} fila sem item pronto para hoje (o Mac precisa abastecer ou pôr a pergunta na tela)"
     if os.environ.get("REEL_FORCE") == "true":
         return True, f"{tag} forçado manualmente ({n} na fila)"
+    if STREAM == "main" and _in_quarantine(now.date()):
+        return False, f"{tag} trailers parados até {QUARANTINE_UNTIL} (quarentena de repost)"
+    if REEL_WEEKDAYS_ONLY and now.weekday() >= 5 and os.environ.get("REEL_FORCE") != "true":
+        return False, f"{tag} fim de semana, sem reel"
     if now.hour < REEL_SLOT_BRT:
         return False, f"{tag} {now:%H:%M} BRT, antes das {REEL_SLOT_BRT}h"
     if any(q.get("posted_at", "")[:10] == now.date().isoformat() for q in queue):
@@ -724,10 +739,12 @@ def is_due() -> tuple[bool, str]:
     return True, f"{tag} reel devido ({n} na fila)"
 
 
-def _pick_next(queue: list[dict], today=None) -> dict | None:
+def _pick_next(queue: list[dict], today=None, branded_only: bool = False) -> dict | None:
     """Fixo do dia → trailer novo de franquia forte → Short vertical → acervo."""
     today = today or datetime.now(BRT).date()
     todo = pending(queue)
+    if branded_only and STREAM == "cenas" and _in_quarantine(today):
+        todo = [q for q in todo if q.get("ig_hook")]
 
     def days_late(q):
         return (today - datetime.strptime(q["scheduled_for"], "%Y-%m-%d").date()).days
@@ -1061,7 +1078,7 @@ def publish() -> int:
     from posts_log import record_post
 
     queue = load_queue()
-    item = _pick_next(queue)
+    item = _pick_next(queue, branded_only=True)
     try:
         caption = item.get("caption") or _caption(item)
     except CaptionUnavailable as e:
@@ -1211,6 +1228,47 @@ def sync_tiktok() -> dict:
     return stats
 
 
+def brand(days: int = 6, limit: int = 6) -> int:
+    """
+    Põe a pergunta ao fã escrita no vídeo dos próximos reels do Instagram (fluxo atual),
+    sem rebaixar do YouTube. É a transformação mínima exigida na quarentena de repost:
+    sem `ig_hook` o reel não sai. A pergunta é a 1ª linha da legenda quando ela é curta;
+    senão, uma pergunta curta feita pelo modelo a partir do título.
+    """
+    queue = load_queue()
+    done = 0
+    for item in _upcoming(queue, days):
+        if item.get("ig_hook") or done >= limit:
+            continue
+        first = (item.get("caption") or "").split("\n")[0].strip()
+        hook = first if first.endswith("?") and len(first) <= 60 else _hook_text(item)
+        if not hook:
+            logger.warning(f"[{STREAM}] sem pergunta curta para {item['video_id']}; fica para a próxima rodada")
+            continue
+        try:
+            with tempfile.TemporaryDirectory(prefix="morsa_brand_") as tmp:
+                src, out = os.path.join(tmp, "src.mp4"), os.path.join(tmp, f"{item['video_id']}.mp4")
+                subprocess.run(["curl", "-sfL", "-o", src, item["asset_url"]], check=True, timeout=300)
+                y = "250" if item.get("layout") == "vertical" else "260"
+                r = subprocess.run(
+                    ["ffmpeg", "-y", "-i", src, "-i", _render_hook(hook, tmp), "-filter_complex",
+                     f"[0:v][1:v]overlay=0:{y}[v]", "-map", "[v]", "-map", "0:a?",
+                     "-c:v", "libx264", "-preset", "fast", "-crf", "20", "-pix_fmt", "yuv420p",
+                     "-c:a", "copy", "-movflags", "+faststart", out], capture_output=True, text=True)
+                if r.returncode != 0:
+                    raise RuntimeError(r.stderr[-200:])
+                item["asset_url"] = _upload_asset(out)
+        except Exception as e:
+            logger.warning(f"[{STREAM}] pergunta na tela falhou em {item['video_id']}: {str(e)[:150]}")
+            continue
+        item["ig_hook"] = hook
+        done += 1
+        save_queue(queue)
+        logger.info(f"[{STREAM}] {item['video_id']}: {hook}")
+        time.sleep(8)
+    return done
+
+
 def rehook(limit: int = 12) -> int:
     """
     Estende o teste A/B do texto na tela aos vídeos JÁ baixados do TikTok (pedido
@@ -1274,6 +1332,8 @@ def main():
         print(f"{len(todo)} agendados | {len(pending(load_queue()))} na fila do TikTok")
     elif cmd == "backstage":
         logger.info(f"bastidores novos nos planos: {find_backstage()}")
+    elif cmd == "brand":
+        logger.info(f"[{STREAM}] pergunta na tela aplicada em {brand()} reels")
     elif cmd == "rehook":
         logger.info(f"[tiktok] texto na tela aplicado em {rehook()} vídeos já baixados")
     elif cmd == "premap":

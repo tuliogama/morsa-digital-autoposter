@@ -439,6 +439,11 @@ def _stories_section(rows: list[dict], now: datetime) -> list[str]:
     return lines
 
 
+def _per_mille(rows: list[dict], key: str) -> float:
+    vals = [1000 * r[key] / r["reach"] for r in rows if r.get("reach")]
+    return round(statistics.median(vals), 1) if vals else 0
+
+
 def write_report(rows: list[dict], weights: dict, brief: dict, now: datetime,
                  tiktok: list[dict] = None, split: dict = None) -> Path:
     day = _review_day(now)
@@ -464,7 +469,12 @@ def write_report(rows: list[dict], weights: dict, brief: dict, now: datetime,
               f"- Alcance mediano por post de feed: {statistics.median([r['reach'] for r in feed7 if r['reach'] is not None] or [0])}",
               f"- Alcance mediano por reel: {statistics.median([r['reach'] for r in reels7 if r['reach'] is not None] or [0])}",
               f"- Comentários: {sum(r['comments'] for r in last7)} | salvamentos: {sum(r['saved'] for r in last7)}"
-              f" | compartilhamentos: {sum(r['shares'] for r in last7)}", ""]
+              f" | compartilhamentos: {sum(r['shares'] for r in last7)}",
+              # Metas do plano de 24/11/2026: envios por alcance é o sinal que o Instagram mais
+              # usa para mostrar a quem não segue; comentários medianos partem de 0.
+              f"- Envios por mil de alcance (mediana): {_per_mille(last7, 'shares')}"
+              f" | comentários medianos por post: {statistics.median([r['comments'] for r in last7]) if last7 else 0}"
+              f" | meta de 90 dias: 60 interações medianas e 60% do alcance vindo de não seguidores", ""]
     for label, sel in (("Melhores", sorted(last7, key=lambda r: -r["score"])[:5]),
                        ("Piores", sorted(feed7, key=lambda r: r["score"])[:5])):
         lines.append(f"**{label}:**")

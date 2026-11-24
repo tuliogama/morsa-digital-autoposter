@@ -721,10 +721,12 @@ def _categorize(news_item: dict) -> str:
 # Prioridade por categoria (menor = primeiro), pela mediana de likes de 200 posts
 # (ago-out/2026): DC 11 · Marvel 8 · anime 8 · GTA 6 · games 5 · outros 4.
 # Games eram 47% dos posts com o pior retorno; game_niche só entra se faltar pauta.
+# Plano Morsa (24/11/2026): no histórico, Star Wars, Marvel, DC e cinema/nostalgia têm
+# mediana de 60 a 94 interações; GTA, anime e games de notícia, de 7 a 10.
 _CATEGORY_TIER = {
-    "dc": 0, "marvel": 1, "anime_big": 1, "starwars": 1,
-    "movie": 2, "gta": 2, "anime": 3, "game_big": 3,
-    "other": 4, "series": 4, "game_niche": 9,
+    "dc": 0, "marvel": 0, "starwars": 0,
+    "movie": 1, "series": 2, "anime_big": 2,
+    "gta": 3, "game_big": 3, "other": 3, "anime": 4, "game_niche": 9,
 }
 _GAME_CATS = {"gta", "game_big", "game_niche"}
 

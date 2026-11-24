@@ -52,6 +52,9 @@ set +a
   # legendas prontas e checadas, arquivos conferidos, relatório em data/reel_report.md
   python3 src/reel_queue.py audit
 
+  # quarentena de repost (até 25/12/2026): reel do Instagram só sai com a pergunta na tela
+  REEL_STREAM=cenas python3 src/reel_queue.py brand
+
   # teste do texto na tela: aplica a pergunta em metade dos vídeos já baixados
   python3 src/reel_queue.py rehook
 

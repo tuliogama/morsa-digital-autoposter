@@ -140,7 +140,9 @@ def main():
 
     # Pelo menos 1 post de GTA por dia: enquanto a cota não fechou, GTA vai na frente
     gta_first = []
-    if "gta" not in today_cats:
+    # A cota diária de GTA foi desligada no plano de 24/11/2026 (GTA de notícia: mediana 7).
+    # GTA continua entrando pela fila normal; para religar, GTA_DAILY=on.
+    if os.environ.get("GTA_DAILY", "off") == "on" and "gta" not in today_cats:
         try:
             gta_first = _dedup(fetch_gta_news())[:4]
         except Exception as e:

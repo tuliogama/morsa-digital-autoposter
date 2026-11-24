@@ -67,6 +67,8 @@ def _logo(img: Image.Image) -> Image.Image:
 
 
 def _text_slide(bg: Image.Image, text: str, label: str, page: str, big: bool = False) -> Image.Image:
+    from image_generator import _strip_emoji
+    text = _strip_emoji(text)
     img = bg.copy()
     d = ImageDraw.Draw(img)
     d.text((80, 96), label, font=_font(30, "ExtraBold"), fill=ORANGE)
