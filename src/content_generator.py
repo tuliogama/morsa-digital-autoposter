@@ -92,6 +92,9 @@ DADOS DE PERFORMANCE (use para calibrar o tom):
 
 from pt_names import PROMPT_RULE, fix_names
 INSTAGRAM_SYSTEM += PROMPT_RULE
+INSTAGRAM_SYSTEM += """
+MORTE DE PESSOA REAL (regra absoluta, 24/11/2026): se a notícia envolve a morte de ator, diretor ou qualquer pessoa real, diga a morte com clareza e respeito já no hook ou na 1ª frase do corpo. Proibido ironia, "a ironia é cruel", sensacionalismo, "salva esse post" e "marca um amigo". Feche com uma pergunta de memória afetiva sobre o trabalho da pessoa.
+"""
 
 REEL_TRAILER_SYSTEM = """Você é o social media sênior da Morsa Digital — canal brasileiro de cultura pop/nerd/geek com 27k seguidores.
 
@@ -572,6 +575,8 @@ def generate_post(news_item: dict, platform: str, brief: dict = None) -> dict:
         image_headline = _call_groq(
             "Você cria headlines curtos para imagens de posts de Instagram no estilo IGN Brasil. "
             "Sempre em português do Brasil, mesmo que a notícia esteja em inglês. "
+            "O verbo tem que dizer exatamente o que a notícia diz (recusou não é negado; "
+            "confirmado não é rumor). "
             "Máximo 6 palavras. ALL CAPS não necessário. Sem reticências. Sem ponto final. "
             "A frase deve ser completa e fazer sentido sozinha." + PROMPT_RULE,
             f"Crie um headline de imagem para esta notícia: {title}",

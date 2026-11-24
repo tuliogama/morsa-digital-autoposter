@@ -868,8 +868,13 @@ def _cover_art(base, headline: str, kicker: str = "CULTURA POP"):
         return f
 
     d = ImageDraw.Draw(img)
-    d.text((60, 62), kicker.upper(), font=font(28, "ExtraBold"), fill=COLOR_ORANGE)
-    d.rectangle((60, 104, 140, 110), fill=COLOR_ORANGE)
+    kf = font(26, "ExtraBold")
+    kw = d.textlength(kicker.upper(), font=kf)
+    pill = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(pill).rounded_rectangle((44, 50, 44 + kw + 32, 98), 24, fill=(6, 6, 8, 190))
+    img.alpha_composite(pill)
+    d = ImageDraw.Draw(img)
+    d.text((60, 60), kicker.upper(), font=kf, fill=COLOR_ORANGE)
     text = _strip_emoji(headline).upper()
     for size in (96, 88, 80, 72, 64):
         f = font(size, "Black")
@@ -977,14 +982,13 @@ def _make_cta_overlay_slide(base_img: "Image") -> "Image":
     draw = ImageDraw.Draw(img)
 
     def _font(size):
-        bebas = ASSETS / "fonts" / "BebasNeue.ttf"
-        if bebas.exists():
-            try:
-                from PIL import ImageFont
-                return ImageFont.truetype(str(bebas), size)
-            except Exception:
-                pass
         from PIL import ImageFont
+        try:                                   # mesma fonte da capa (_cover_art)
+            f = ImageFont.truetype(str(ASSETS / "fonts" / "Montserrat.ttf"), int(size * 0.78))
+            f.set_variation_by_name("Black")
+            return f
+        except Exception:
+            pass
         for fp in ["/System/Library/Fonts/Helvetica.ttc",
                    "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"]:
             try:
