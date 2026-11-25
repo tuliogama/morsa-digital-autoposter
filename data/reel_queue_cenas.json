@@ -3012,7 +3012,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=HMPWyymWFKc",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/HMPWyymWFKc_ig.mp4",
     "added_at": "2026-10-18T10:49:04.638533-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 39,
     "theme": "bastidores",
@@ -3024,6 +3024,8 @@
     "aprovacao": "aprovado pelo Tulio em 24/11/2026",
     "asset_url_orig": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/HMPWyymWFKc.mp4",
     "hook_override": "Caramelo nos bastidores: qual cena te fez sorrir?",
-    "ig_hook": "Caramelo nos bastidores: qual cena te fez sorrir?"
+    "ig_hook": "Caramelo nos bastidores: qual cena te fez sorrir?",
+    "posted_at": "2026-11-25T11:46:58.581343-03:00",
+    "media_id": "18088661327539000"
   }
 ]
