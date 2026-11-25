@@ -812,10 +812,10 @@
     "plan_order": 33,
     "layout": "vertical",
     "lang": "pt",
-    "caption": "Você lembra dessa cena ou tá descobrindo agora?\n\nVer Joffrey apanhando é daquelas cenas que ficam gravadas na memória.\nÉ o tipo de momento que muda completamente a percepção do personagem.\n\nComenta aí qual foi sua reação quando viu:\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#GameOfThrones #JoffreyBaratheon #HBO #FantasiaSombria #CenasMemoraveis #MorsaDigital",
+    "caption": "Quem mais quer ver esse confronto entre Joffrey e Batman?\n\nA ideia de colocar o rei de Westeros contra o Cavaleiro das Trevas é pura especulação de fã, mas a imagem já rende memes.\nO misto de arrogância do Joffrey com a seriedade do Batman cria uma dinâmica que gera debates até hoje nas redes.\n\nMe conta: quem vence essa luta na sua cabeça?\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#GameOfThrones #Joffrey #Batman #CavaleiroDasTrezas #MorsaDigital",
     "caption_check": "revisar",
     "caption_problems": [
-      "detalhe sem base: Ver Joffrey apanhando é daquelas cenas que ficam gravadas na memória."
+      "checagem indisponível (The read operation timed out)"
     ],
     "asset_url_orig": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/Wrak64LazLI.mp4",
     "hook_override": "O Joffrey mereceu esse tapa?",
@@ -929,7 +929,13 @@
     "lang": "pt",
     "asset_url_orig": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/zL_DdeLeYTc.mp4",
     "hook_override": "Naruto deu a força que ela precisava?",
-    "ig_hook": "Naruto deu a força que ela precisava?"
+    "ig_hook": "Naruto deu a força que ela precisava?",
+    "caption": "Naruto é o único anime que te dá força pra seguir em frente?\n\nA trajetória de dublagem da Úrsula Bezerra, que deu voz ao personagem, tem uma história real por trás das câmeras.\nEla conta os desafios e a experiência de gravar cenas ao lado do próprio irmão.\nÉ o tipo de bastidores que só quem ama a franquia entende.\n\nComenta aí: qual foi o primeiro anime que te fez chorar?\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#Naruto #Jutsu #Anime #MorsaDigital",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "detalhe sem base: Úrsula Bezerra conta como foi sua trajetória dando voz ao Naruto",
+      "detalhe sem base: Ela conta os desafios e a experiência de gravar cenas ao lado do próprio irmão"
+    ]
   },
   {
     "video_id": "tF2ZHFxeh4E",
