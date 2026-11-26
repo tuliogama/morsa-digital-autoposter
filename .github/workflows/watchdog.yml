@@ -26,6 +26,7 @@ jobs:
           sparse-checkout: |
             src/slot_gate.py
             src/reel_queue.py
+            src/pt_names.py
             data/reel_queue.json
             data/reel_queue_cenas.json
           sparse-checkout-cone-mode: false

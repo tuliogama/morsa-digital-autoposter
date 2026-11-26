@@ -42,7 +42,8 @@ jobs:
         run: |
           git config user.name "morsa-bot"
           git config user.email "bot@morsadigital.com"
-          git add data/learned_weights.json data/daily_review data/stories_log.json data/facebook_followers.json data/tiktok_followers.json
+          # só o que existe: um arquivo ausente (ex.: facebook_followers.json) derrubava o passo inteiro
+          for f in data/learned_weights.json data/daily_review data/stories_log.json data/facebook_followers.json data/tiktok_followers.json; do if [ -e "$f" ]; then git add "$f"; fi; done
           git add -f logs/day_brief.json
           git diff --staged --quiet || git commit -m "chore: revisão noturna [skip ci]"
           git pull --rebase origin main
