@@ -2205,17 +2205,23 @@
   "story_id": "18642128914012654",
   "at": "2026-11-25T18:04:25-03:00",
   "insights": {
-   "reach": 13,
-   "views": 23,
+   "reach": 32,
+   "views": 48,
    "replies": 0,
    "shares": 0,
-   "total_interactions": 0,
+   "total_interactions": 1,
    "follows": 0,
    "profile_visits": 0,
-   "swipe_forward": 2,
-   "tap_forward": 16,
-   "tap_exit": 3
+   "swipe_forward": 6,
+   "tap_forward": 31,
+   "tap_exit": 4,
+   "tap_back": 2
   },
-  "insights_at": "2026-11-26T05:57:20-03:00"
+  "insights_at": "2026-11-26T13:43:15-03:00"
+ },
+ {
+  "media_id": "18074461406786039",
+  "story_id": "18105308285378138",
+  "at": "2026-11-26T13:42:19-03:00"
  }
 ]
