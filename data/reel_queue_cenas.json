@@ -807,7 +807,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=Wrak64LazLI",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/Wrak64LazLI_ig.mp4",
     "added_at": "2026-10-07T01:42:28.062912-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 33,
     "layout": "vertical",
@@ -820,7 +820,9 @@
     ],
     "asset_url_orig": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/Wrak64LazLI.mp4",
     "hook_override": "O Joffrey mereceu esse tapa?",
-    "ig_hook": "O Joffrey mereceu esse tapa?"
+    "ig_hook": "O Joffrey mereceu esse tapa?",
+    "posted_at": "2026-11-26T11:02:58.008145-03:00",
+    "media_id": "18074461406786039"
   },
   {
     "video_id": "vcs4yuOWrcs",
