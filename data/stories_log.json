@@ -2224,17 +2224,23 @@
   "story_id": "18105308285378138",
   "at": "2026-11-26T13:42:19-03:00",
   "insights": {
-   "reach": 14,
-   "views": 16,
+   "reach": 19,
+   "views": 22,
    "replies": 0,
    "shares": 0,
    "total_interactions": 0,
    "follows": 0,
    "profile_visits": 0,
-   "tap_back": 1,
+   "swipe_forward": 1,
+   "tap_forward": 13,
    "tap_exit": 5,
-   "tap_forward": 9
+   "tap_back": 1
   },
-  "insights_at": "2026-11-26T17:17:25-03:00"
+  "insights_at": "2026-11-26T19:51:41-03:00"
+ },
+ {
+  "media_id": "17929783587435997",
+  "story_id": "18046180814840081",
+  "at": "2026-11-26T19:51:29-03:00"
  }
 ]
