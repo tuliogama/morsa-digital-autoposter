@@ -812,10 +812,11 @@
     "plan_order": 33,
     "layout": "vertical",
     "lang": "pt",
-    "caption": "Quem mais quer ver esse confronto entre Joffrey e Batman?\n\nA ideia de colocar o rei de Westeros contra o Cavaleiro das Trevas é pura especulação de fã, mas a imagem já rende memes.\nO misto de arrogância do Joffrey com a seriedade do Batman cria uma dinâmica que gera debates até hoje nas redes.\n\nMe conta: quem vence essa luta na sua cabeça?\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#GameOfThrones #Joffrey #Batman #CavaleiroDasTrezas #MorsaDigital",
+    "caption": "Joffrey apanhando nos dois universos: qual versão te impressiona mais?\n\nVer o Rei das Sete Terras levar um fora é o tipo de momento que fica gravado na memória. O contraste entre a rigidez da série e a ação do cinema cria um paralelo divertido para quem acompanha ambos.\n\nComenta aí qual cena você prefere rever.\n\nVídeo: HBO Brasil (canal oficial no YouTube)\n\n#GameOfThrones #Joffrey #Batman #HBO #MorsaDigital",
     "caption_check": "revisar",
     "caption_problems": [
-      "checagem indisponível (The read operation timed out)"
+      "detalhe sem base: Joffrey apanhando nos dois universos",
+      "detalhe sem base: Ver o Rei das Sete Terras levar um fora"
     ],
     "asset_url_orig": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/Wrak64LazLI.mp4",
     "hook_override": "O Joffrey mereceu esse tapa?",
@@ -930,11 +931,11 @@
     "asset_url_orig": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/zL_DdeLeYTc.mp4",
     "hook_override": "Naruto deu a força que ela precisava?",
     "ig_hook": "Naruto deu a força que ela precisava?",
-    "caption": "Naruto é o único anime que te dá força pra seguir em frente?\n\nA trajetória de dublagem da Úrsula Bezerra, que deu voz ao personagem, tem uma história real por trás das câmeras.\nEla conta os desafios e a experiência de gravar cenas ao lado do próprio irmão.\nÉ o tipo de bastidores que só quem ama a franquia entende.\n\nComenta aí: qual foi o primeiro anime que te fez chorar?\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#Naruto #Jutsu #Anime #MorsaDigital",
+    "caption": "Dá pra acreditar que o próprio irmão dublou o Naruto?\n\nImagina a pressão de gravar uma cena ao lado dele.\nParece roteiro de anime, mas é a história real de Úrsula Bezerra.\nEla conta os desafios por trás das câmeras e a força que o personagem deu pra ela.\n\nComenta aí se você lembra dessa performance dela.\n\nVídeo: Netflix Brasil (canal oficial no YouTube)\n\n#Naruto #UrsulaBezerra #Dublagem #Netflix #MorsaDigital",
     "caption_check": "revisar",
     "caption_problems": [
-      "detalhe sem base: Úrsula Bezerra conta como foi sua trajetória dando voz ao Naruto",
-      "detalhe sem base: Ela conta os desafios e a experiência de gravar cenas ao lado do próprio irmão"
+      "detalhe sem base: Dá pra acreditar que o próprio irmão dublou o Naruto?",
+      "detalhe sem base: Imagina a pressão de gravar uma cena ao lado dele."
     ]
   },
   {
@@ -952,7 +953,13 @@
     "kind": "cena",
     "plan_order": 42,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "caption": "Rimuru devorando dragão: você acha que ele tá com fome ou só curtindo?\n\nEssa cena de Rimuru e o dragão é pura satisfação visual.\nNada como ver o slime agir com aquela tranquilidade absurda.\nO contraste entre a ameaça e a reação dele é inigualável.\n\nComenta aí se você já tentou imitar essa coragem.\n\nVídeo: Crunchyroll Brasil (canal oficial no YouTube)\n\n#TenseiShitaraSlimeDattaKen #Rimuru #ThatTimeIGotReincarnatedAsASlime #CrunchyrollBrasil #MorsaDigital",
+    "caption_check": "revisar",
+    "caption_problems": [
+      "detalhe sem base: Rimuru devorando dragão",
+      "detalhe sem base: Rimuru devorando dragão: você acha que ele tá com fome ou só curtindo?"
+    ]
   },
   {
     "video_id": "Ql63IfPSMCw",

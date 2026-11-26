@@ -1,39 +1,22 @@
-# Fila de reels @morsadigital — 25/11/2026 07:34 BRT
+# Fila de reels @morsadigital — 26/11/2026 05:50 BRT
 
 ## cenas — a partir das 11h
 
-91 na fila | legendas ok: 9 | a revisar: 3 | dias sem reel no calendário: 0
-
-### 25/11 — Cenas fofas nos bastidores de Caramelo
-Netflix Brasil · vertical · pt · legenda: ok
-
-```
-Caramelo nos bastidores: qual cena te fez sorrir?
-
-O vira-lata Amendoim, que interpreta o Caramelo, mostrou carisma e muito profissionalismo durante as gravações.
-É o tipo de bastidor que faz a gente gostar ainda mais do filme.
-
-Comenta aí qual foi a sua cena favorita.
-
-Vídeo: Netflix Brasil (canal oficial no YouTube)
-
-#Caramelo #Amendoim #NetflixBrasil #Bastidores #MorsaDigital
-```
+90 na fila | legendas ok: 8 | a revisar: 4 | dias sem reel no calendário: 0
 
 ### 26/11 — JOFFREY APANHANDO EM GAME OF THRONES E BATMAN! 😉
-HBO Brasil · vertical · pt · legenda: revisar (checagem indisponível (The read operation timed out))
+HBO Brasil · vertical · pt · legenda: revisar (detalhe sem base: Joffrey apanhando nos dois universos; detalhe sem base: Ver o Rei das Sete Terras levar um fora)
 
 ```
-Quem mais quer ver esse confronto entre Joffrey e Batman?
+Joffrey apanhando nos dois universos: qual versão te impressiona mais?
 
-A ideia de colocar o rei de Westeros contra o Cavaleiro das Trevas é pura especulação de fã, mas a imagem já rende memes.
-O misto de arrogância do Joffrey com a seriedade do Batman cria uma dinâmica que gera debates até hoje nas redes.
+Ver o Rei das Sete Terras levar um fora é o tipo de momento que fica gravado na memória. O contraste entre a rigidez da série e a ação do cinema cria um paralelo divertido para quem acompanha ambos.
 
-Me conta: quem vence essa luta na sua cabeça?
+Comenta aí qual cena você prefere rever.
 
 Vídeo: HBO Brasil (canal oficial no YouTube)
 
-#GameOfThrones #Joffrey #Batman #CavaleiroDasTrezas #MorsaDigital
+#GameOfThrones #Joffrey #Batman #HBO #MorsaDigital
 ```
 
 ### 27/11 — Tirem suas próprias conclusões 😰 #BatmanCruzadoEncapuzado
@@ -88,27 +71,37 @@ Vídeo: HBO Brasil (canal oficial no YouTube)
 ```
 
 ### 30/11 — FOI O NARUTO QUE DEU A FORÇA QUE ELA PRECISAVA
-Netflix Brasil · vertical · pt · legenda: revisar (detalhe sem base: Úrsula Bezerra conta como foi sua trajetória dando voz ao Naruto; detalhe sem base: Ela conta os desafios e a experiência de gravar cenas ao lado do próprio irmão)
+Netflix Brasil · vertical · pt · legenda: revisar (detalhe sem base: Dá pra acreditar que o próprio irmão dublou o Naruto?; detalhe sem base: Imagina a pressão de gravar uma cena ao lado dele.)
 
 ```
-Naruto é o único anime que te dá força pra seguir em frente?
+Dá pra acreditar que o próprio irmão dublou o Naruto?
 
-A trajetória de dublagem da Úrsula Bezerra, que deu voz ao personagem, tem uma história real por trás das câmeras.
-Ela conta os desafios e a experiência de gravar cenas ao lado do próprio irmão.
-É o tipo de bastidores que só quem ama a franquia entende.
+Imagina a pressão de gravar uma cena ao lado dele.
+Parece roteiro de anime, mas é a história real de Úrsula Bezerra.
+Ela conta os desafios por trás das câmeras e a força que o personagem deu pra ela.
 
-Comenta aí: qual foi o primeiro anime que te fez chorar?
+Comenta aí se você lembra dessa performance dela.
 
 Vídeo: Netflix Brasil (canal oficial no YouTube)
 
-#Naruto #Jutsu #Anime #MorsaDigital
+#Naruto #UrsulaBezerra #Dublagem #Netflix #MorsaDigital
 ```
 
 ### 01/12 — Rimuru devora outro dragão 🐉 I That Time I Got Reincarnated as a Slime 4ª Tempor
-Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
+Crunchyroll Brasil · vertical · pt · legenda: revisar (detalhe sem base: Rimuru devorando dragão; detalhe sem base: Rimuru devorando dragão: você acha que ele tá com fome ou só curtindo?)
 
 ```
-(gerada na hora da publicação)
+Rimuru devorando dragão: você acha que ele tá com fome ou só curtindo?
+
+Essa cena de Rimuru e o dragão é pura satisfação visual.
+Nada como ver o slime agir com aquela tranquilidade absurda.
+O contraste entre a ameaça e a reação dele é inigualável.
+
+Comenta aí se você já tentou imitar essa coragem.
+
+Vídeo: Crunchyroll Brasil (canal oficial no YouTube)
+
+#TenseiShitaraSlimeDattaKen #Rimuru #ThatTimeIGotReincarnatedAsASlime #CrunchyrollBrasil #MorsaDigital
 ```
 
 ### 02/12 — Como esquecer do início de The Last Of Us? 🔥
@@ -755,9 +748,9 @@ HBO Max Brasil · horizontal · pt · legenda: ainda não gerada
 
 ## main — a partir das 13h
 
-134 na fila | legendas ok: 9 | a revisar: 2 | dias sem reel no calendário: 0
+134 na fila | legendas ok: 9 | a revisar: 3 | dias sem reel no calendário: 0
 
-### 25/11 — Grand Theft Auto VI - Trailer de Recursos | PS5
+### 26/11 — Grand Theft Auto VI - Trailer de Recursos | PS5
 PlayStation Brasil · vertical · pt · legenda: ok
 
 ```
@@ -772,7 +765,7 @@ Vídeo: PlayStation Brasil (canal oficial no YouTube)
 #GTA6 #GrandTheftAuto #PlayStation5 #PS5 #Rockstar
 ```
 
-### 26/11 — O MELHOR BATMAN DE TODOS OS TEMPOS
+### 27/11 — O MELHOR BATMAN DE TODOS OS TEMPOS
 Netflix Brasil · vertical · pt · legenda: ok
 
 ```
@@ -788,23 +781,24 @@ Vídeo: Netflix Brasil (canal oficial no YouTube)
 #UmaAventuraLego #BatmanLego #Emmet #LegoMovies #MorsaDigital
 ```
 
-### 27/11 — Michael Jackson PLAGIOU Billy Ocean? | Todo Mundo Odeia O Chris | Paramount Plus
-Paramount+ Brasil · vertical · pt · legenda: revisar (detalhe sem base: plagiou o moonwalk de Billy Ocean)
+### 28/11 — Michael Jackson PLAGIOU Billy Ocean? | Todo Mundo Odeia O Chris | Paramount Plus
+Paramount+ Brasil · vertical · pt · legenda: revisar (detalhe sem base: A cena em que ela acusa o Rei do Pop de plagar o moonwalk do Billy Ocean é pura audácia.)
 
 ```
-Essa acusação da Tonya contra o MJ faz sentido pra você?
+Tonya tem razão ou é só mais uma indireta do MJ?
 
-A audácia de dizer que o Rei do Pop plagiou o moonwalk de Billy Ocean é de cair o queixo.
-Ninguém esperava que a discussão sobre o passo mais icônico da história chegasse a esse ponto.
+A cena em que ela acusa o Rei do Pop de plagar o moonwalk do Billy Ocean é pura audácia.
+É o tipo de piada que só o Chris Rock consegue fazer com tanto deboche.
+Quem mais sentiu um arrepio só de ver essa trocação acontecer?
 
-Comenta aí: você acreditou nessa teoria ou ficou rindo?
+Marca aquele amigo que acha que todo mundo odeia o Chris.
 
 Vídeo: Paramount+ Brasil (canal oficial no YouTube)
 
-#TodoMundoOdeiaOChris #ParamountPlus #ComedyCentral #Humor #MorsaDigital
+#TodoMundoOdeiaOChris #ChrisRock #ParamountPlus #Humor #MorsaDigital
 ```
 
-### 28/11 — O último dia do Peter Dinklage como Tyrion em GOT! 🥹
+### 29/11 — O último dia do Peter Dinklage como Tyrion em GOT! 🥹
 HBO Brasil · vertical · pt · legenda: ok
 
 ```
@@ -820,7 +814,7 @@ Vídeo: HBO Brasil (canal oficial no YouTube)
 #GameOfThrones #TyrionLannister #PeterDinklage #HBO #MorsaDigital
 ```
 
-### 29/11 — 25 ANOS DO BOB ESPONJA | Paramount Plus Brasil
+### 30/11 — 25 ANOS DO BOB ESPONJA | Paramount Plus Brasil
 Paramount+ Brasil · vertical · pt · legenda: ok
 
 ```
@@ -836,85 +830,88 @@ Vídeo: Paramount+ Brasil (canal oficial no YouTube)
 #BobEsponja #BikiniBottom #Nickelodeon #ParamountPlus #MorsaDigital
 ```
 
-### 30/11 — ELLIE CANTANDO TAKE ON ME - THE LAST OF US 2x04
-HBO Max Brasil · vertical · pt · legenda: ainda não gerada
+### 01/12 — ELLIE CANTANDO TAKE ON ME - THE LAST OF US 2x04
+HBO Max Brasil · vertical · pt · legenda: revisar (detalhe sem base: Ellie segurando o violão e cantando Take on Me)
 
 ```
-(gerada na hora da publicação)
+Ellie segurando o violão e cantando Take on Me divide opiniões?
+
+Quem acompanhou The Last of Us sabe que essa performance não é só música.
+É o momento em que a personagem entrega tudo sem precisar de diálogo.
+A voz dela muda o peso da cena de uma forma que fica gravada na memória.
+
+Comenta aí: a música te pegou ou você ficou indiferente?
+
+Vídeo: HBO Max Brasil (canal oficial no YouTube)
+
+#TheLastOfUs #Ellie #TakeOnMe #HBO #MorsaDigital
 ```
 
-### 01/12 — O VERDADEIRO LAPADA SECA! 🖐💥 |  MASHLE: MAGIA E MÚSCULOS (DUBLADO) #shorts
+### 02/12 — O VERDADEIRO LAPADA SECA! 🖐💥 |  MASHLE: MAGIA E MÚSCULOS (DUBLADO) #shorts
 Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 02/12 — A Melhor cena de Todo Mundo em Pânico | Todo Mundo em Pânico I | Paramount Plus 
+### 03/12 — A Melhor cena de Todo Mundo em Pânico | Todo Mundo em Pânico I | Paramount Plus 
 Paramount+ Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 03/12 — Os dubladores de ONE PIECE: A Série visitaram a Laboon no RJ!
+### 04/12 — Os dubladores de ONE PIECE: A Série visitaram a Laboon no RJ!
 Netflix Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 04/12 — Humor global ativado! 😂 Essa cena é engraçada em qualquer idioma. #UmFilmeMinecr
+### 05/12 — Humor global ativado! 😂 Essa cena é engraçada em qualquer idioma. #UmFilmeMinecr
 HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 05/12 — TA CHEGANDO! Cyberpunk: Mercenários 2!
+### 06/12 — TA CHEGANDO! Cyberpunk: Mercenários 2!
 Netflix Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 06/12 — Shrek confronta a fada madrinha 😎
+### 07/12 — Shrek confronta a fada madrinha 😎
 Prime Video Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 07/12 — O Chico Bento chegando para achar o ONE PIECE!
+### 08/12 — O Chico Bento chegando para achar o ONE PIECE!
 Netflix Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 08/12 — Arthur não está nada paciente | Fire Force
+### 09/12 — Arthur não está nada paciente | Fire Force
 Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 09/12 — Aulas de GRAÇA | Todo Mundo Odeia O Chris | Paramount Plus
+### 10/12 — Aulas de GRAÇA | Todo Mundo Odeia O Chris | Paramount Plus
 Paramount+ Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 10/12 — Só usa magia quem não se garante no soco! 👊  |  MASHLE: MAGIA E MÚSCULOS (DUBLAD
+### 11/12 — Só usa magia quem não se garante no soco! 👊  |  MASHLE: MAGIA E MÚSCULOS (DUBLAD
 Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 11/12 — Tentou esconder e se DEU MAL | Todo Mundo Odeia O Chris | Paramount Plus
-Paramount+ Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
@@ -955,22 +952,22 @@ Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
-### 17/12 — Do dia 1 à despedida no set de Stranger Things
+### 17/12 — Tentou esconder e se DEU MAL | Todo Mundo Odeia O Chris | Paramount Plus
+Paramount+ Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 18/12 — Do dia 1 à despedida no set de Stranger Things
 Netflix Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 18/12 — Omni-Man confronta Thragg | Invencível | Prime Video
+### 19/12 — Omni-Man confronta Thragg | Invencível | Prime Video
 Prime Video Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 19/12 — Essa briga entre a Ellie e o Joel 💔 | The Last Of Us
-HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
@@ -1018,36 +1015,36 @@ Disney+ Brasil · horizontal · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
-### 26/12 — Lex roubando a cena é ok, agora Lex roubando cachorro é fim de carreira. #Superm
+### 26/12 — Essa briga entre a Ellie e o Joel 💔 | The Last Of Us
+HBO Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 27/12 — Lex roubando a cena é ok, agora Lex roubando cachorro é fim de carreira. #Superm
 HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 27/12 — Na LATA | Homem-Aranha De Volta Ao Lar | Paramount Plus
+### 28/12 — Na LATA | Homem-Aranha De Volta Ao Lar | Paramount Plus
 Paramount+ Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 28/12 — Stranger Things: Histórias de 85
+### 29/12 — Stranger Things: Histórias de 85
 Netflix Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 29/12 — Aqua passando para abençoar o seu feed! | KONOSUBA: Legend of Crimson (Dublado) 
+### 30/12 — Aqua passando para abençoar o seu feed! | KONOSUBA: Legend of Crimson (Dublado) 
 Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
-
-```
-(gerada na hora da publicação)
-```
-
-### 30/12 — A vida não é fácil | Bob Esponja | Paramount Plus
-Paramount+ Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
@@ -1067,280 +1064,287 @@ Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 (gerada na hora da publicação)
 ```
 
-### 02/01 — O episódio 4 de Stranger Things 5 foi ARTE
+### 02/01 — A vida não é fácil | Bob Esponja | Paramount Plus
+Paramount+ Brasil · vertical · pt · legenda: ainda não gerada
+
+```
+(gerada na hora da publicação)
+```
+
+### 03/01 — O episódio 4 de Stranger Things 5 foi ARTE
 Netflix Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 03/01 — Um DRACARYS já é bom, mas três é melhor ainda! 🔥
+### 04/01 — Um DRACARYS já é bom, mas três é melhor ainda! 🔥
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 04/01 — Freud surtaria tentando analisar isso. A gente só apertou o play. 🙃  #UmFilmeMin
+### 05/01 — Freud surtaria tentando analisar isso. A gente só apertou o play. 🙃  #UmFilmeMin
 HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 05/01 — ✨ O Berserker da Gula, só isso ✨
+### 06/01 — ✨ O Berserker da Gula, só isso ✨
 Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 06/01 — Felicidade PURA | Shrek Para Sempre | Paramount Plus
+### 07/01 — Felicidade PURA | Shrek Para Sempre | Paramount Plus
 Paramount+ Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 07/01 — Qual item de GOT o elenco de The Last Of Us levaria para o apocalipse? 🫢
+### 08/01 — Qual item de GOT o elenco de The Last Of Us levaria para o apocalipse? 🫢
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 08/01 — Emilia prontinha pra corrigir o Subaru 😊 | Re:ZERO -Starting Life in Another Wor
+### 09/01 — Emilia prontinha pra corrigir o Subaru 😊 | Re:ZERO -Starting Life in Another Wor
 Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 09/01 — A CENA MAIS ANGUSTIANTE DE FAMÍLIA SOPRANO! 😮‍💨
+### 10/01 — A CENA MAIS ANGUSTIANTE DE FAMÍLIA SOPRANO! 😮‍💨
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 10/01 — Julius entrou NUMA FRIA | Todo Mundo Odeia O Chris | Paramount Plus
+### 11/01 — Julius entrou NUMA FRIA | Todo Mundo Odeia O Chris | Paramount Plus
 Paramount+ Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 11/01 — Derek: a revelação de Stranger Things 5
+### 12/01 — Derek: a revelação de Stranger Things 5
 Netflix Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 12/01 — PRIMEIRO DIA DE COLIN FARRELL COMO PINGUIM! 😱
+### 13/01 — PRIMEIRO DIA DE COLIN FARRELL COMO PINGUIM! 😱
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 13/01 — JAMES GUNN E JOHN CENA FALANDO SOBRE O BRASIL 🇧🇷 #PACIFICADOR
+### 14/01 — JAMES GUNN E JOHN CENA FALANDO SOBRE O BRASIL 🇧🇷 #PACIFICADOR
 HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 14/01 — Sonho realizado | Todo Mundo Odeia O CHRIS | Paramount Plus
+### 15/01 — Sonho realizado | Todo Mundo Odeia O CHRIS | Paramount Plus
 Paramount+ Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 15/01 — É assim que eles dublaram ONE PIECE: A Série
+### 16/01 — É assim que eles dublaram ONE PIECE: A Série
 Netflix Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 16/01 — E esses bastidores INCRÍVEIS de A Casa Do Dragão? ❄️😱
+### 17/01 — E esses bastidores INCRÍVEIS de A Casa Do Dragão? ❄️😱
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 17/01 — O RETORNO DE JOEL (PEDRO PASCAL) PARA THE LAST OF US
+### 18/01 — O RETORNO DE JOEL (PEDRO PASCAL) PARA THE LAST OF US
 HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 18/01 — Ok... talvez eu goste mais do que deveria dessa versão Kaiju do Kafka! 😳 Anime: 
+### 19/01 — Ok... talvez eu goste mais do que deveria dessa versão Kaiju do Kafka! 😳 Anime: 
 Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 19/01 — Aulas grátis com Brenda | Todo Mundo em Pânico 3 | Paramount Plus
+### 20/01 — Aulas grátis com Brenda | Todo Mundo em Pânico 3 | Paramount Plus
 Paramount+ Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 20/01 — 45 segundos para destruir a autoestima do Capitão Pátria? Nem precisa dizer mais
+### 21/01 — 45 segundos para destruir a autoestima do Capitão Pátria? Nem precisa dizer mais
 Prime Video Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 21/01 — O verdadeiro protagonista do filme de KONOSUBA! #shorts
+### 22/01 — O verdadeiro protagonista do filme de KONOSUBA! #shorts
 Crunchyroll Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 22/01 — A PRIMEIRA CENA DE FAMÍLIA SOPRANO A GENTE NUNCA ESQUECE! 🤌
+### 23/01 — A PRIMEIRA CENA DE FAMÍLIA SOPRANO A GENTE NUNCA ESQUECE! 🤌
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 23/01 — Um pouquinho de como foi filmar Scoobynatural. 👀 #Supernatural
+### 24/01 — Um pouquinho de como foi filmar Scoobynatural. 👀 #Supernatural
 HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 24/01 — O papai não gostou! | Todo Mundo Odeia O Chris | Paramount Plus
+### 25/01 — O papai não gostou! | Todo Mundo Odeia O Chris | Paramount Plus
 Paramount+ Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 25/01 — Esse paralelo do Bill e Frank em The Last Of Us! 💚
+### 26/01 — Esse paralelo do Bill e Frank em The Last Of Us! 💚
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 26/01 — Fala mesmo, Darwin!!! ☝️ #OIncrívelMundoDeGumball
+### 27/01 — Fala mesmo, Darwin!!! ☝️ #OIncrívelMundoDeGumball
 HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 27/01 — O maior SEGREDO | Homem-Aranha: De Volta Ao Lar | Paramount Plus
+### 28/01 — O maior SEGREDO | Homem-Aranha: De Volta Ao Lar | Paramount Plus
 Paramount+ Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 28/01 — Audição da Carice van Houten como Melisandre em GOT! 🔥
+### 29/01 — Audição da Carice van Houten como Melisandre em GOT! 🔥
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 29/01 — Essa cena aqui é 10/10. Jonathan Kent, você é muito DIVO! #Superman
+### 30/01 — Essa cena aqui é 10/10. Jonathan Kent, você é muito DIVO! #Superman
 HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 30/01 — Uma atuação de MILHÕES | Todo Mundo em Pânico | Paramount Plus
+### 31/01 — Uma atuação de MILHÕES | Todo Mundo em Pânico | Paramount Plus
 Paramount+ Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 31/01 — Edit ABSURDO do maldito Peaky Blinder
+### 01/02 — Edit ABSURDO do maldito Peaky Blinder
 Netflix Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 01/02 — burro é psicólogo do shrek?
+### 02/02 — burro é psicólogo do shrek?
 Prime Video Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 02/02 — Joel e Ellie encontram uma girafa em The Last Of Us! 🦒
+### 03/02 — Joel e Ellie encontram uma girafa em The Last Of Us! 🦒
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 03/02 — Mic drop 🔥 Um dos melhores monólogos de GOT.📺: #GameOfThrones
+### 04/02 — Mic drop 🔥 Um dos melhores monólogos de GOT.📺: #GameOfThrones
 HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 04/02 — Como começou a infecção de The Last Of Us? 😔
+### 05/02 — Como começou a infecção de The Last Of Us? 😔
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 05/02 — Essa doeu até em mim | Todo Mundo Odeia o Chris | Paramount Plus
+### 06/02 — Essa doeu até em mim | Todo Mundo Odeia o Chris | Paramount Plus
 Paramount+ Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 06/02 — HÁ 20 ANOS, ESSA CENA DE FAMÍLIA SOPRANO CHOCOU O MUNDO!
+### 07/02 — HÁ 20 ANOS, ESSA CENA DE FAMÍLIA SOPRANO CHOCOU O MUNDO!
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 07/02 — Queria ser amiga DELE! 🥹❤️ #HomemAranhaDeVoltaAoLar
+### 08/02 — Queria ser amiga DELE! 🥹❤️ #HomemAranhaDeVoltaAoLar
 HBO Max Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 08/02 — A arte de fazer uma série como The Last Of Us. ❤️🤌
+### 09/02 — A arte de fazer uma série como The Last Of Us. ❤️🤌
 HBO Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 09/02 — A melhor BATALHA de todas | Todo Mundo em Pânico | Paramount Plus
+### 10/02 — A melhor BATALHA de todas | Todo Mundo em Pânico | Paramount Plus
 Paramount+ Brasil · vertical · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 10/02 — Superman l Trailer Teaser Oficial Dublado
+### 11/02 — Superman l Trailer Teaser Oficial Dublado
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -1355,7 +1359,7 @@ Vídeo: Warner Bros. Pictures Brasil (canal oficial no YouTube)
 #SupermanFilme #DCStudios #JamesGunn #DCU #WarnerBros
 ```
 
-### 11/02 — Demon Slayer: Kimetsu no Yaiba Castelo Infinito | Trailer | Em breve nos cinemas
+### 12/02 — Demon Slayer: Kimetsu no Yaiba Castelo Infinito | Trailer | Em breve nos cinemas
 Sony Pictures Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -1370,7 +1374,7 @@ Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 #DemonSlayer #KimetsuNoYaiba #CasteloInfinito #Ufotable #Animes
 ```
 
-### 12/02 — Remake da trilogia God of War - Teaser de anúncio | PS5
+### 13/02 — Remake da trilogia God of War - Teaser de anúncio | PS5
 PlayStation Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -1385,7 +1389,7 @@ Vídeo: PlayStation Brasil (canal oficial no YouTube)
 #GodofWar #GoWremake #ps5 #ps5games #stateofplay
 ```
 
-### 13/02 — Homem-Aranha: Através do AranhaVerso | Trailer Oficial Dublado
+### 14/02 — Homem-Aranha: Através do AranhaVerso | Trailer Oficial Dublado
 Sony Pictures Brasil · horizontal · pt · legenda: ok
 
 ```
@@ -1400,56 +1404,56 @@ Vídeo: Sony Pictures Brasil (canal oficial no YouTube)
 #SpiderManAcrossTheSpiderVerse #AranhaVerso #SonyPicturesBrasil #Animacao #GeekBR
 ```
 
-### 14/02 — Supergirl l Teaser Trailer Oficial
+### 15/02 — Supergirl l Teaser Trailer Oficial
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 15/02 — CHAINSAW MAN: O FILME - ARCO DA REZE - NOVO TRAILER (Dublado)
+### 16/02 — CHAINSAW MAN: O FILME - ARCO DA REZE - NOVO TRAILER (Dublado)
 Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 16/02 — Mortal Kombat 2 l Trailer Oficial Dublado #2
+### 17/02 — Mortal Kombat 2 l Trailer Oficial Dublado #2
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 17/02 — Thor: Ragnarok - Trailer Oficial | HD
+### 18/02 — Thor: Ragnarok - Trailer Oficial | HD
 Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 18/02 — The Batman - O Morcego e a Gata - Trailer
+### 19/02 — The Batman - O Morcego e a Gata - Trailer
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 19/02 — THE ONE PIECE | Teaser oficial | Netflix
+### 20/02 — THE ONE PIECE | Teaser oficial | Netflix
 Netflix Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 20/02 — Resident Evil Requiem - 4º Trailer | PS5
+### 21/02 — Resident Evil Requiem - 4º Trailer | PS5
 PlayStation Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 21/02 — Quarteto Fantástico: Primeiros Passos | Trailer Oficial 2 Dublado
+### 22/02 — Quarteto Fantástico: Primeiros Passos | Trailer Oficial 2 Dublado
 Marvel Brasil · horizontal · pt · legenda: revisar (trata vídeo antigo como novidade)
 
 ```
@@ -1464,217 +1468,217 @@ Vídeo: Marvel Brasil (canal oficial no YouTube)
 #QuartetoFantástico #PrimeirosPassos #MarvelStudios #Dublado #Relembre #NerdBR
 ```
 
-### 22/02 — The Mandalorian | Trailer Oficial Dublado | Temporada 2 | Disney+
+### 23/02 — The Mandalorian | Trailer Oficial Dublado | Temporada 2 | Disney+
 Disney+ Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 23/02 — Jujutsu Kaisen 0 | Trailer oficial dublado | 28 de abril exclusivamente nos cine
+### 24/02 — Jujutsu Kaisen 0 | Trailer oficial dublado | 28 de abril exclusivamente nos cine
 Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 24/02 — Um Filme Minecraft l Trailer Final
+### 25/02 — Um Filme Minecraft l Trailer Final
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 25/02 — Homem-Aranha: Sem Volta Para Casa | Trailer Oficial Dublado | 16 de dezembro nos
+### 26/02 — Homem-Aranha: Sem Volta Para Casa | Trailer Oficial Dublado | 16 de dezembro nos
 Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 26/02 — The Flash – Trailer Oficial
+### 27/02 — The Flash – Trailer Oficial
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 27/02 — The Boys – Temporada Final Trailer | Prime Video
+### 28/02 — The Boys – Temporada Final Trailer | Prime Video
 Prime Video Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 28/02 — STEEL BALL RUN JoJo’s Bizarre Adventure | Trailer oficial | Netflix
+### 01/03 — STEEL BALL RUN JoJo’s Bizarre Adventure | Trailer oficial | Netflix
 Netflix Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 01/03 — Demolidor: Renascido | Trailer Oficial Dublado | Disney+
+### 02/03 — Demolidor: Renascido | Trailer Oficial Dublado | Disney+
 Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 02/03 — Aquaman 2: O Reino Perdido | Trailer
+### 03/03 — Aquaman 2: O Reino Perdido | Trailer
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 03/03 — Street Fighter | Novo Trailer | DUB | Paramount Pictures Brasil
+### 04/03 — Street Fighter | Novo Trailer | DUB | Paramount Pictures Brasil
 Paramount Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 04/03 — Dragon Ball Daima | Trailer Oficial | Max
+### 05/03 — Dragon Ball Daima | Trailer Oficial | Max
 HBO Max Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 05/03 — Guardiões da Galáxia: Volume 3 | Marvel Studios | Trailer Oficial 2 Dublado
+### 06/03 — Guardiões da Galáxia: Volume 3 | Marvel Studios | Trailer Oficial 2 Dublado
 Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 06/03 — Godzilla e Kong: O Novo Império | Trailer Oficial 2
+### 07/03 — Godzilla e Kong: O Novo Império | Trailer Oficial 2
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 07/03 — Frieren e a Jornada para o Além 2ª Temporada | TRAILER OFICIAL
+### 08/03 — Frieren e a Jornada para o Além 2ª Temporada | TRAILER OFICIAL
 Crunchyroll Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 08/03 — Doutor Estranho no Multiverso da Loucura | Marvel Studios | Trailer Oficial Dubl
+### 09/03 — Doutor Estranho no Multiverso da Loucura | Marvel Studios | Trailer Oficial Dubl
 Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 09/03 — Besouro Azul | Trailer Final Oficial
+### 10/03 — Besouro Azul | Trailer Final Oficial
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 10/03 — The Last of Us Complete - Trailer de Lançamento
+### 11/03 — The Last of Us Complete - Trailer de Lançamento
 PlayStation Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 11/03 — Cavaleiro da Lua | Marvel Studios | Trailer Oficial Dublado | Disney+
+### 12/03 — Cavaleiro da Lua | Marvel Studios | Trailer Oficial Dublado | Disney+
 Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 12/03 — Invencível - Temporada 4 | Teaser Oficial | Prime Video
+### 13/03 — Invencível - Temporada 4 | Teaser Oficial | Prime Video
 Prime Video Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 13/03 — Cena da 2ª temporada: o Bando do Chapéu de Palha vai a Loguetown | ONE PIECE: A 
+### 14/03 — Cena da 2ª temporada: o Bando do Chapéu de Palha vai a Loguetown | ONE PIECE: A 
 Netflix Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 14/03 — Pantera Negra: Wakanda para Sempre | Marvel Studios | Trailer Oficial Dublado
+### 15/03 — Pantera Negra: Wakanda para Sempre | Marvel Studios | Trailer Oficial Dublado
 Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 15/03 — Adão Negro - Trailer Oficial 1
+### 16/03 — Adão Negro - Trailer Oficial 1
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 16/03 — Sonic: O Filme | Trailer Oficial | DUB | Paramount Pictures Brasil
+### 17/03 — Sonic: O Filme | Trailer Oficial | DUB | Paramount Pictures Brasil
 Paramount Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 17/03 — Capitão América: Admirável Mundo Novo | Trailer Oficial Dublado
+### 18/03 — Capitão América: Admirável Mundo Novo | Trailer Oficial Dublado
 Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 18/03 — JUJUTSU KAISEN: Hidden Inventory / Premature Death – The Movie | TRAILER
+### 19/03 — JUJUTSU KAISEN: Hidden Inventory / Premature Death – The Movie | TRAILER
 Crunchyroll Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 19/03 — Guardiões da Galáxia Vol. 2 - TRAILER
+### 20/03 — Guardiões da Galáxia Vol. 2 - TRAILER
 Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 20/03 — SHAZAM! FÚRIA DOS DEUSES - Trailer Oficial 2
+### 21/03 — SHAZAM! FÚRIA DOS DEUSES - Trailer Oficial 2
 Warner Bros. Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 21/03 — Metal Gear Solid Δ: Snake Eater - Trailer da data de lançamento | PS5
+### 22/03 — Metal Gear Solid Δ: Snake Eater - Trailer da data de lançamento | PS5
 PlayStation Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 22/03 — Shang-Chi e a Lenda dos Dez Anéis | Marvel Studios | Trailer 2 Oficial Dublado
+### 23/03 — Shang-Chi e a Lenda dos Dez Anéis | Marvel Studios | Trailer 2 Oficial Dublado
 Marvel Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 23/03 — Dragon Ball Super: Super Hero | Trailer Oficial Dublado | 18 de agosto exclusiva
+### 24/03 — Dragon Ball Super: Super Hero | Trailer Oficial Dublado | 18 de agosto exclusiva
 Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
 (gerada na hora da publicação)
 ```
 
-### 24/03 — Venom: A Última Rodada | Trailer Final Dublado
+### 25/03 — Venom: A Última Rodada | Trailer Final Dublado
 Sony Pictures Brasil · horizontal · pt · legenda: ainda não gerada
 
 ```
