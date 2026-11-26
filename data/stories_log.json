@@ -2205,23 +2205,36 @@
   "story_id": "18642128914012654",
   "at": "2026-11-25T18:04:25-03:00",
   "insights": {
-   "reach": 32,
-   "views": 48,
+   "reach": 35,
+   "views": 53,
    "replies": 0,
    "shares": 0,
    "total_interactions": 1,
    "follows": 0,
    "profile_visits": 0,
-   "swipe_forward": 6,
-   "tap_forward": 31,
-   "tap_exit": 4,
-   "tap_back": 2
+   "tap_back": 2,
+   "tap_exit": 5,
+   "tap_forward": 34,
+   "swipe_forward": 7
   },
-  "insights_at": "2026-11-26T13:43:15-03:00"
+  "insights_at": "2026-11-26T17:17:25-03:00"
  },
  {
   "media_id": "18074461406786039",
   "story_id": "18105308285378138",
-  "at": "2026-11-26T13:42:19-03:00"
+  "at": "2026-11-26T13:42:19-03:00",
+  "insights": {
+   "reach": 14,
+   "views": 16,
+   "replies": 0,
+   "shares": 0,
+   "total_interactions": 0,
+   "follows": 0,
+   "profile_visits": 0,
+   "tap_back": 1,
+   "tap_exit": 5,
+   "tap_forward": 9
+  },
+  "insights_at": "2026-11-26T17:17:25-03:00"
  }
 ]
