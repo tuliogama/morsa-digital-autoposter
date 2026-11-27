@@ -1,6 +1,6 @@
 {
-  "baseline_median": 9.0,
-  "sample": 86,
+  "baseline_median": 9,
+  "sample": 85,
   "categories": {
     "anime_big": {
       "n": 10,
@@ -28,9 +28,9 @@
       "adjust": -1
     },
     "movie": {
-      "n": 6,
-      "median": 5.5,
-      "adjust": 0
+      "n": 5,
+      "median": 5,
+      "adjust": 1
     },
     "other": {
       "n": 13,
@@ -43,5 +43,5 @@
       "adjust": 0
     }
   },
-  "generated_at": "2026-11-26T20:38:43.421239-03:00"
+  "generated_at": "2026-11-27T06:28:58.054585-03:00"
 }
