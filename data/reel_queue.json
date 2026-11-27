@@ -2511,11 +2511,9 @@
     "lang": "pt",
     "plan_order": -994,
     "from_stream": "tiktok",
-    "caption": "Tonya tem razão ou é só mais uma indireta do MJ?\n\nA cena em que ela acusa o Rei do Pop de plagar o moonwalk do Billy Ocean é pura audácia.\nÉ o tipo de piada que só o Chris Rock consegue fazer com tanto deboche.\nQuem mais sentiu um arrepio só de ver essa trocação acontecer?\n\nMarca aquele amigo que acha que todo mundo odeia o Chris.\n\nVídeo: Paramount+ Brasil (canal oficial no YouTube)\n\n#TodoMundoOdeiaOChris #ChrisRock #ParamountPlus #Humor #MorsaDigital",
-    "caption_check": "revisar",
-    "caption_problems": [
-      "detalhe sem base: A cena em que ela acusa o Rei do Pop de plagar o moonwalk do Billy Ocean é pura audácia."
-    ]
+    "caption": "Tonya tinha razão sobre o moonwalk e a audácia do MJ?\n\nTodo mundo sabe que Michael Jackson é o rei do pop, mas quando a Tonya aponta que ele pegou o movimento de outro artista, o choque bate forte. É o tipo de cena que faz você rir e pensar \"cara, ela tem um dedo\".\n\nQual é a sua opinião sobre essa acusação?\n\nVídeo: Paramount+ Brasil (canal oficial no YouTube)\n\n#TodoMundoOdeiaOChris #MikeEddie #TonyaHorne #ParamountPlus #MorsaDigital",
+    "caption_check": "ok",
+    "caption_problems": []
   },
   {
     "video_id": "7PG1SKS7hts",
@@ -2578,10 +2576,11 @@
     "lang": "pt",
     "plan_order": -991,
     "from_stream": "tiktok",
-    "caption": "Ellie segurando o violão e cantando Take on Me divide opiniões?\n\nQuem acompanhou The Last of Us sabe que essa performance não é só música.\nÉ o momento em que a personagem entrega tudo sem precisar de diálogo.\nA voz dela muda o peso da cena de uma forma que fica gravada na memória.\n\nComenta aí: a música te pegou ou você ficou indiferente?\n\nVídeo: HBO Max Brasil (canal oficial no YouTube)\n\n#TheLastOfUs #Ellie #TakeOnMe #HBO #MorsaDigital",
+    "caption": "Ellie cantando Take On Me te pegou de surpresa?\n\nAquela cena de Ellie no episódio 4 da temporada 2 de The Last of Us ainda ecoa na cabeça de muita gente.\nÉ o tipo de momento que não precisa de palavras, só do violão e da voz dela para virar memória imediata.\n\nComenta aí: qual foi a primeira reação de você quando ouviu a música?\n\nVídeo: HBO Max Brasil (canal oficial no YouTube)\n\n#TheLastOfUs #Ellie #TakeOnMe #HBO #MorsaDigital",
     "caption_check": "revisar",
     "caption_problems": [
-      "detalhe sem base: Ellie segurando o violão e cantando Take on Me"
+      "detalhe sem base: Ellie cantando Take On Me",
+      "detalhe sem base: Aquela cena de Ellie no episódio 4 da temporada 2 de The Last of Us"
     ]
   },
   {

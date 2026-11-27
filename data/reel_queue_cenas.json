@@ -972,13 +972,15 @@
     "description": "#TheLastOfUs está disponível na HBO Max.",
     "published": "2026-05-21",
     "youtube_url": "https://www.youtube.com/watch?v=Ql63IfPSMCw",
-    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/Ql63IfPSMCw.mp4",
+    "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/Ql63IfPSMCw_ig.mp4",
     "added_at": "2026-10-07T03:11:14.796892-03:00",
     "posted": false,
     "kind": "cena",
     "plan_order": 43,
     "layout": "vertical",
-    "lang": "pt"
+    "lang": "pt",
+    "asset_url_orig": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/Ql63IfPSMCw.mp4",
+    "ig_hook": "The Last Of Us: como esquecer o início?"
   },
   {
     "video_id": "OjtAiXZ4WwQ",
