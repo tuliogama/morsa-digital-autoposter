@@ -2224,37 +2224,42 @@
   "story_id": "18105308285378138",
   "at": "2026-11-26T13:42:19-03:00",
   "insights": {
-   "reach": 29,
-   "views": 32,
+   "reach": 33,
+   "views": 37,
    "replies": 0,
    "shares": 0,
    "total_interactions": 0,
    "follows": 0,
    "profile_visits": 0,
-   "tap_back": 1,
+   "swipe_forward": 3,
+   "tap_forward": 22,
    "tap_exit": 8,
-   "tap_forward": 19,
-   "swipe_forward": 2
+   "tap_back": 1
   },
-  "insights_at": "2026-11-27T06:28:58-03:00"
+  "insights_at": "2026-11-27T12:35:18-03:00"
  },
  {
   "media_id": "17929783587435997",
   "story_id": "18046180814840081",
   "at": "2026-11-26T19:51:29-03:00",
   "insights": {
-   "reach": 15,
-   "views": 17,
+   "reach": 21,
+   "views": 24,
    "replies": 0,
    "shares": 0,
    "total_interactions": 0,
    "follows": 0,
    "profile_visits": 0,
-   "tap_back": 1,
-   "tap_forward": 13,
+   "swipe_forward": 1,
    "tap_exit": 2,
-   "swipe_forward": 1
+   "tap_forward": 19,
+   "tap_back": 1
   },
-  "insights_at": "2026-11-27T06:28:58-03:00"
+  "insights_at": "2026-11-27T12:35:18-03:00"
+ },
+ {
+  "media_id": "18136510030753611",
+  "story_id": "18120555952799470",
+  "at": "2026-11-27T12:34:26-03:00"
  }
 ]
