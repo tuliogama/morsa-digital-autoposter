@@ -835,7 +835,7 @@
     "youtube_url": "https://www.youtube.com/watch?v=vcs4yuOWrcs",
     "asset_url": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/vcs4yuOWrcs_ig.mp4",
     "added_at": "2026-10-07T01:43:56.740334-03:00",
-    "posted": false,
+    "posted": true,
     "kind": "cena",
     "plan_order": 34,
     "layout": "vertical",
@@ -845,7 +845,9 @@
     "caption_problems": [],
     "asset_url_orig": "https://github.com/tuliogama/morsa-digital-autoposter/releases/download/reel-queue/vcs4yuOWrcs.mp4",
     "hook_override": "Já viu o Batman: Cruzado Encapuzado?",
-    "ig_hook": "Já viu o Batman: Cruzado Encapuzado?"
+    "ig_hook": "Já viu o Batman: Cruzado Encapuzado?",
+    "posted_at": "2026-11-27T14:06:22.549757-03:00",
+    "media_id": "17923393050245952"
   },
   {
     "video_id": "iO4uKziFlUI",
